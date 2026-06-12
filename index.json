@@ -1,0 +1,117 @@
+{
+  "chip": "skillChip",
+  "count": 22,
+  "skills": [
+    {
+      "skill": "ci-codeqc",
+      "skill_sha": "c2e8976e294391223f8a7ae7e9122f7d39a025c06873fe983dde1b627911a196",
+      "file_count": 11
+    },
+    {
+      "skill": "codebaseqc",
+      "skill_sha": "fe41101748d733396a3401c8bc4e6916f3bb03e389347bfc21731e9aa044a6a5",
+      "file_count": 21
+    },
+    {
+      "skill": "cws-addperk",
+      "skill_sha": "3de462fea74a69a6e67649fdabf8e93ddaf6f14f4e68433ff6edaff4cb1ae1da",
+      "file_count": 20
+    },
+    {
+      "skill": "cws-create",
+      "skill_sha": "d49f13d45a2ebd7322626b1adebd39397cad1b23f308562086dca21bbd0ffac7",
+      "file_count": 17
+    },
+    {
+      "skill": "data",
+      "skill_sha": "07c774a8ac38226a5bcd8997328f6759b4ae93ddd0ffb39ee443de8662dd2215",
+      "file_count": 19
+    },
+    {
+      "skill": "datadog",
+      "skill_sha": "f06878543071a0769b0e65745e362ce3491a38cb6e1bef63b3be6fa336303de6",
+      "file_count": 11
+    },
+    {
+      "skill": "docker",
+      "skill_sha": "bdb4aacbafec16e6318f10f7a638d28ea6b949e201156ca12f549cd839ba41bb",
+      "file_count": 16
+    },
+    {
+      "skill": "fs",
+      "skill_sha": "a3cd6e108e4ac11b076d7b4e96cda8098c02caa75374174388ef4e07eec3a4b5",
+      "file_count": 18
+    },
+    {
+      "skill": "git_ops",
+      "skill_sha": "fa0789d771c67194e0daa3b6e649bcffa45bfb7658d3254d0559081e8f5dc46f",
+      "file_count": 16
+    },
+    {
+      "skill": "http",
+      "skill_sha": "4521a91581a50e07265b60a9df6be737dd8ee6036ad4ad6bd43b1101bac6e855",
+      "file_count": 16
+    },
+    {
+      "skill": "jsonschema",
+      "skill_sha": "2251191913d5d3edbcc661db2f39629c6c2a82f8ab472ea52e2edbadf0cc6aee",
+      "file_count": 21
+    },
+    {
+      "skill": "markdown",
+      "skill_sha": "761a37e6d06567edd58a894f5e48bff6aeb3b20aa0c236f3a8ac27d12f5df267",
+      "file_count": 21
+    },
+    {
+      "skill": "net",
+      "skill_sha": "c930aeb3954350f586e1d59a09f4395cc4a89b85f02b6053193dfa79e32cbcd7",
+      "file_count": 17
+    },
+    {
+      "skill": "pdf",
+      "skill_sha": "c97ce2679c434d76b7f1dcc3a1ef76cfba74b05267daee736cbaa9474601ef41",
+      "file_count": 20
+    },
+    {
+      "skill": "pg_ops",
+      "skill_sha": "1be23f3e2fe534e9227110acf86fbca8bc7345dfd0816358cf128c97865b8a80",
+      "file_count": 16
+    },
+    {
+      "skill": "py_qc",
+      "skill_sha": "c66070ed2add98bf29b56e1f2a204a78f7c6e0ad3f31dc27db62b5f1de8b36fc",
+      "file_count": 16
+    },
+    {
+      "skill": "release",
+      "skill_sha": "685e488618e284fd22469d011a2af0d42c19696cf5668a4604e6a5d9a1435525",
+      "file_count": 11
+    },
+    {
+      "skill": "search",
+      "skill_sha": "f15d3ff6f8eabbb8fa1968b8b532589be45b8da6a84bc3ee16726684d5d5404c",
+      "file_count": 18
+    },
+    {
+      "skill": "sec",
+      "skill_sha": "d9d561f33079ff686c414d6e3b53af60d0c631ff598274f4a50ba76ca459e640",
+      "file_count": 18
+    },
+    {
+      "skill": "sqlite",
+      "skill_sha": "7754e5d9a4daf5cbd029fd707eede1871d7454f7fc6b4a52c2882da741769908",
+      "file_count": 17
+    },
+    {
+      "skill": "ssh",
+      "skill_sha": "6144c7bd5227ee31c662d47aa185ee9b4c43cd0b272c5c4a944ac6c1f974ca6d",
+      "file_count": 16
+    },
+    {
+      "skill": "terraform",
+      "skill_sha": "7979c37679360803ad6ad32dfcdf95011367ead7eccce827bb78f20e4d71c857",
+      "file_count": 18
+    }
+  ],
+  "chip_sha": "7b5ba667c52b8dfed236d454a378f106ad611be6158da2930ca6fe233e44a131"
+}
