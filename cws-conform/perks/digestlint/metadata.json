@@ -1,0 +1,19 @@
+{
+  "perk": "digestlint",
+  "skill": "cws-conform",
+  "description": "prove every JSON-object hash routes through cwp.canonical, not ad-hoc json.dumps — the P0-T04 digest-cutover acceptance criterion (F1 / P0-V03)",
+  "rules": [
+    "AST same-expression lint: flags a hashlib hash call (sha*/md5/blake2*/sha3*/new) whose args contain a json.dumps(...) call",
+    "does NOT flag mere file-level co-occurrence — raw-byte hashlib (file/stdout/key hashes) and unrelated json.dumps coexist legitimately",
+    "EXCLUDE skips paths (default infra/cwp — the canonical engine itself); WHITELIST exempts known out-of-scope sites"
+  ],
+  "usage": "Set SCAN_ROOT (dir to scan). Optional EXCLUDE (';'-separated path substrings, default infra/cwp), WHITELIST (';'-separated relpath or relpath:line). Output: digestlint.json. Exit 0 iff no non-whitelisted json.dumps->hash site remains.",
+  "limitation": "Static AST lint — it proves no json.dumps feeds a hash; it does NOT prove the canonical replacement is byte-correct (that is the vectors/crosslang perks, which replay the actual digests cross-language).",
+  "minimal_example": {
+    "perk": "digestlint",
+    "vars": {
+      "SCAN_ROOT": "/path/to/repo",
+      "WHITELIST": "infra/govern/runlog.py:31"
+    }
+  }
+}

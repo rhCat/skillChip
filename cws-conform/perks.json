@@ -32,6 +32,14 @@
       "tools": [
         "cws_crosslang"
       ]
+    },
+    {
+      "id": "digestlint",
+      "summary": "prove every JSON-object hash routes through cwp.canonical, not ad-hoc json.dumps (P0-T04 / F1 / P0-V03)",
+      "destructive": false,
+      "tools": [
+        "cws_digestlint"
+      ]
     }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "_perk": "digestlint",
+  "requires": ["python3"],
+  "vars": {
+    "SCAN_ROOT": "${FIXTURE}",
+    "WHITELIST": "bad.py:5;bad.py:10;bad.py:18"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["digestlint.json"],
+    "json": {
+      "digestlint.json": {
+        "status": "ok",
+        "violations": [],
+        "whitelisted_hits": ["bad.py:10", "bad.py:18", "bad.py:5"]
+      }
+    }
+  }
+}

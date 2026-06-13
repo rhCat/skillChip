@@ -1,0 +1,27 @@
+{
+  "tool": "cws_digestlint",
+  "inputs": {
+    "SCAN_ROOT": {
+      "type": "string",
+      "required": true
+    },
+    "EXCLUDE": {
+      "type": "string",
+      "required": false
+    },
+    "WHITELIST": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "digestlint_out": {
+      "path": "${RECORD_STORE}/digestlint.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/digestlint.json"
+  }
+}
