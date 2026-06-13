@@ -1,0 +1,10 @@
+{
+  "$schema": "cwp-task-v1.1",
+  "task_id": "P0-T02",
+  "title": "fixture dependent task — validator built, dep redeemed => ready",
+  "phase": "P0",
+  "ladder_rung": "SV-1",
+  "depends_on": ["P0-T01"],
+  "validated_by": "cws-modelcheck",
+  "status": "todo"
+}

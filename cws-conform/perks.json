@@ -8,6 +8,14 @@
       "tools": [
         "cws_repin"
       ]
+    },
+    {
+      "id": "doclint",
+      "summary": "structural conformance lint for a spec doc — exists, title, normative, on-topic (P0-V10)",
+      "destructive": false,
+      "tools": [
+        "cws_doclint"
+      ]
     }
   ]
 }

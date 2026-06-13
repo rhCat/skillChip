@@ -1,0 +1,22 @@
+{
+  "_perk": "status",
+  "sequence": [
+    "cws_observe_status"
+  ],
+  "tools": {
+    "cws_observe_status": {
+      "binary": "python3",
+      "params": {
+        "SWARM_DIR": "${SWARM_DIR}"
+      }
+    }
+  },
+  "env": {
+    "SWARM_DIR": "${SWARM_DIR}",
+    "DONE_LEDGER": "${DONE_LEDGER}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

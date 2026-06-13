@@ -1,0 +1,23 @@
+{
+  "_perk": "doclint",
+  "sequence": [
+    "cws_doclint"
+  ],
+  "tools": {
+    "cws_doclint": {
+      "binary": "python3",
+      "params": {
+        "SPEC": "${SPEC}"
+      }
+    }
+  },
+  "env": {
+    "SPEC": "${SPEC}",
+    "MIN_NORMATIVE": "${MIN_NORMATIVE}",
+    "REQUIRE": "${REQUIRE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

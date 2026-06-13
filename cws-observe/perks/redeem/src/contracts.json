@@ -1,0 +1,31 @@
+{
+  "tool": "cws_observe_redeem",
+  "inputs": {
+    "SWARM_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "TASK_ID": {
+      "type": "string",
+      "required": true
+    },
+    "RUN_LEDGER": {
+      "type": "string",
+      "required": true
+    },
+    "DONE_LEDGER": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "redeem_out": {
+      "path": "${RECORD_STORE}/redeem.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/redeem.json"
+  }
+}

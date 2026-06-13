@@ -1,0 +1,20 @@
+{
+  "perk": "redeem",
+  "skill": "cws-observe",
+  "description": "record a task's redemption to the done-ledger, gated on a verified governed validator run",
+  "rules": [
+    "redeem ONLY on evidence — a governed RUN_LEDGER whose every step ran ok with no refusal event",
+    "bind to the right validator: if the evidence carries a task-ledger, its skill must match validated_by",
+    "append a prev-hash-chained entry; never edit a prior entry; idempotent per task_id"
+  ],
+  "usage": "Set SWARM_DIR, TASK_ID, RUN_LEDGER (the governed run-ledger evidencing the validator pass). Optional DONE_LEDGER (defaults to SWARM_DIR/done-ledger.json). Output: redeem.json.",
+  "limitation": "Records that A clean governed validator run passed; full chain re-verification of the evidence is cws-ledgercheck's job, and tightening the validator-identity binding for runs that carry no task-ledger is follow-up.",
+  "minimal_example": {
+    "perk": "redeem",
+    "vars": {
+      "SWARM_DIR": "/path/to/swarm-dir",
+      "TASK_ID": "P0-T17",
+      "RUN_LEDGER": "/path/to/that-validator-run/run-ledger.json"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "tool": "cws_observe_status",
+  "inputs": {
+    "SWARM_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "DONE_LEDGER": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "observe_out": {
+      "path": "${RECORD_STORE}/observe.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/observe.json"
+  }
+}

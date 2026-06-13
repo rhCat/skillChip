@@ -1,0 +1,10 @@
+{
+  "$schema": "cwp-task-v1.1",
+  "task_id": "P0-T17",
+  "title": "fixture task to redeem",
+  "phase": "P0",
+  "ladder_rung": "SV-1",
+  "depends_on": [],
+  "validated_by": "cws-conform",
+  "status": "todo"
+}

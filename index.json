@@ -1,6 +1,6 @@
 {
   "chip": "skillChip",
-  "count": 26,
+  "count": 27,
   "skills": [
     {
       "skill": "ci-codeqc",
@@ -19,8 +19,8 @@
     },
     {
       "skill": "cws-conform",
-      "skill_sha": "57e0d3f0f41c421eed593c247bb8336e42029786a1ed1bb35658fc66cc844ccf",
-      "file_count": 14
+      "skill_sha": "13060a2b8b1cfbabdeec949fb8c185a6e978bb735bd1c13add5032889245e955",
+      "file_count": 21
     },
     {
       "skill": "cws-create",
@@ -41,6 +41,11 @@
       "skill": "cws-mutate",
       "skill_sha": "d5f8cc81e155965f39b62decee633ce8ad4a9b7d6a3d200b4488c632d278082f",
       "file_count": 14
+    },
+    {
+      "skill": "cws-observe",
+      "skill_sha": "27ee8d3e14dd01d0a7bb26fb15113105161376673e0f77fcd0d44ccbe5761396",
+      "file_count": 26
     },
     {
       "skill": "data",
@@ -133,5 +138,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "d00e30865aff762d9473fbae4cd95d632b1db231be8d0d742da082fe9b8932a9"
+  "chip_sha": "dcc0cb50727e0f60058629ecc0425d6457880e0954764ec994245ac6cc32374b"
 }

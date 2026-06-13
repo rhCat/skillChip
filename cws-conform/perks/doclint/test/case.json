@@ -1,0 +1,15 @@
+{
+  "_perk": "doclint",
+  "requires": ["python3"],
+  "vars": {
+    "SPEC": "${FIXTURE}/sample.md",
+    "MIN_NORMATIVE": "2",
+    "REQUIRE": "key-id;fail closed"
+  },
+  "expect": {
+    "outputs": ["doclint.json"],
+    "contains": {
+      "doclint.json": ["\"status\": \"ok\"", "\"normative_count\": 2", "\"missing_required\": []"]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "skill": "cws-observe",
+  "skill_sha": "27ee8d3e14dd01d0a7bb26fb15113105161376673e0f77fcd0d44ccbe5761396",
+  "file_count": 26,
+  "files": {
+    "SKILL.md": "d1f72905d7d2188d0b7a23c7a01ee95c139f1ce718e23b045f279b820d434e41",
+    "blueprint.drawio": "01b70aadacd26e5ffac88da7a797a39b75bf8bcfb717e40dcb02ec81e47e44c0",
+    "blueprint.json": "1afed31a9afbc09960db6a1c399ccde6e9823ae3a56dcc736a231c5ffa6afb03",
+    "blueprint.svg": "8b57a5746de11c5e961b09e7929b1cc0859b57b78f23c05933b77d83c21bbb8f",
+    "ledger.json": "286801d82b535b1222e38e10042e4f759aa68c6d7e55e1170e64a06e100dc26f",
+    "perks.json": "36ed63b954995879dd9cd2ee3da77ad58b6bb7c63fd71923bce5fd3d556db76b",
+    "perks/redeem/manifesto.json": "339ca40c9ca45d57135556648ff58a48685f3e3f31a81ccdee638ec52471bafd",
+    "perks/redeem/metadata.json": "07d90f570293d0a2f1249c1dc3bb48cb2d8fb562ff4cfafb01e560734e1c6958",
+    "perks/redeem/src/contracts.json": "9a3db0f7a7d07565615d01db36103418158efff11913f48f9161bdd00617b3e0",
+    "perks/redeem/src/cws_observe_redeem.py": "0279545ec0d8beee516b9df4246bc7da84b6ccf685e42320b80402e496eb3f72",
+    "perks/redeem/src/cws_observe_redeem.sh": "be3ecf23328dc4a1e401be70b06dfecf3401d9cff67f5fda552034baf1600407",
+    "perks/redeem/test/case.json": "c3c7569a52d10204774f832340d77f6151c353dad07027ee8be13a0c1b98c57e",
+    "perks/redeem/test/fixture/evidence/run-ledger.json": "8a0f3d10cef02269d2cd0df097970f284b14b96f1bcf4f2df6568746bb86d46c",
+    "perks/redeem/test/fixture/evidence/task-ledger.json": "4278dfda41a44188c338b09867e45443cadcf4086f93e64f516eec4218447122",
+    "perks/redeem/test/fixture/swarm/P0-T17.json": "3de96807be8b495eb7b01f9270fc72c6c37e3b5a933b4d9848e8ae4fa8b3768b",
+    "perks/status/manifesto.json": "6e5da1600e60975b8b360730dd91d2459c15812b901e523c32918e89434fe5b6",
+    "perks/status/metadata.json": "cfe25805cfbf42a1d198e4ade86a98f7b319d5e7e901993d042b9499ff7f8da7",
+    "perks/status/src/contracts.json": "84c4102cc7ac28505cceb6f8dcbfa255d464b93ba710d05eb3e37d51c80cb9e1",
+    "perks/status/src/cws_observe_status.py": "dc0833aeb660bf1f85b86431c76aff590e13c73f6b47462cad512d08f6f6fdcf",
+    "perks/status/src/cws_observe_status.sh": "c1aed69c991108ce6442a88d2a0374013bde56eda7fb9d987600fb569a9a7242",
+    "perks/status/test/case.json": "3e1b89e2f9db23750759aa956f449ae37a5ecd9eac841b76d2c22aa4711a191b",
+    "perks/status/test/fixture/swarm/P0-T01.json": "a1f12801563f0cddf4ec6f5f5852b132a19f545b2612d7b4a72d8a8884862c1b",
+    "perks/status/test/fixture/swarm/P0-T02.json": "206b65b8a4db4d9d6a105ccafed46c6c3d860294aaa461c2513b0ebd0babe847",
+    "perks/status/test/fixture/swarm/P0-T03.json": "3a68922ec668e4a045846f868b0f880d05abdb1bbaa23f12955d5f3252aa5f6b",
+    "perks/status/test/fixture/swarm/_swarm_manifest.json": "b8c428cba385842d4e17b018fe198ebf216af0f780449ced5ced85d7bab9053a",
+    "perks/status/test/fixture/swarm/done-ledger.json": "317ba92f1fa9cffdb1879608aecbe21a7427b8227ee736852013f7b2b54948ba"
+  }
+}

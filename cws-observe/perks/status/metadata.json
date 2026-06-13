@@ -1,0 +1,18 @@
+{
+  "perk": "status",
+  "skill": "cws-observe",
+  "description": "report a task-DAG's progress against the plan — by redemption, with a milestone roll-up",
+  "rules": [
+    "read-only — never writes to the swarm or the done-ledger",
+    "done = a pass entry in the chain-verified done-ledger; the task's own status field is an untrusted hint",
+    "validator availability is read from the live chip, so the picture updates as validators get built"
+  ],
+  "usage": "Set SWARM_DIR (the dir of P*-T*.json + _swarm_manifest.json). Optional DONE_LEDGER (defaults to SWARM_DIR/done-ledger.json). Output: observe.json with per-task state, counts, next_pullable, and milestones.",
+  "limitation": "Tracks the structural done-state; it does not re-run the validators (that is redeem's evidence + the validators themselves). A task whose validator is not yet built reads 'blocked:validator'.",
+  "minimal_example": {
+    "perk": "status",
+    "vars": {
+      "SWARM_DIR": "/path/to/swarm-dir"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_schema": "task-ledger TEMPLATE for cws-observe — set perk, fill record_store + the vars the perk's manifesto declares. The LLM outputs ONLY these fields.",
+  "skill": "cws-observe",
+  "perk": "status",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "SWARM_DIR": "<dir of P*-T*.json + _swarm_manifest.json>",
+    "DONE_LEDGER": "<path to the done-ledger (perk=redeem); defaults to SWARM_DIR/done-ledger.json>",
+    "TASK_ID": "<task to redeem (perk=redeem)>",
+    "RUN_LEDGER": "<the governed run-ledger evidencing the validator pass (perk=redeem)>"
+  }
+}
