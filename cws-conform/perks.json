@@ -40,6 +40,14 @@
       "tools": [
         "cws_digestlint"
       ]
+    },
+    {
+      "id": "interop",
+      "summary": "prove cwp <-> cosign/sigstore DSSE interop at the Ed25519ph layer, both directions (P0-T03)",
+      "destructive": false,
+      "tools": [
+        "cws_interop"
+      ]
     }
   ]
 }

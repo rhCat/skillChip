@@ -1,0 +1,23 @@
+{
+  "tool": "cws_interop",
+  "inputs": {
+    "COSIGN_ENVELOPE": {
+      "type": "string",
+      "required": true
+    },
+    "COSIGN_PUB": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "interop_out": {
+      "path": "${RECORD_STORE}/interop.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/interop.json"
+  }
+}
