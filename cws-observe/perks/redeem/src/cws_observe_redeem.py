@@ -18,11 +18,19 @@ import os
 import sys
 import time
 
+# locate the cyberware repo root so we can import the shared, schema-aware ledger-digest helper
+_root = os.environ.get("CYBERWARE_ROOT")
+if not (_root and os.path.isdir(os.path.join(_root, "infra", "govern"))):
+    _d = os.path.dirname(os.path.abspath(__file__))
+    while _d != os.path.dirname(_d) and not os.path.isdir(os.path.join(_d, "infra", "govern")):
+        _d = os.path.dirname(_d)
+    _root = _d
+if os.path.isdir(os.path.join(_root, "infra", "govern")):
+    sys.path.insert(0, _root)
+
+from infra.cwp import ledger  # noqa: E402
+
 REFUSAL_EVENTS = {"tamper_refused", "oversight_refused"}
-
-
-def _canon(obj):
-    return json.dumps(obj, sort_keys=True).encode()
 
 
 def run_ledger_passed(rl):
@@ -93,27 +101,59 @@ def main() -> int:
     if validator and ran_skill and ran_skill != validator:
         return refuse(f"evidence is from '{ran_skill}', but {task_id} is validated_by '{validator}'")
 
-    led = json.load(open(done_ledger_path)) if os.path.isfile(done_ledger_path) else {"chain": "done-ledger", "entries": []}
+    # Decision-4 migration: redemptions append to the NEW canonical chain (major 2), NEVER to frozen v1.
+    # Standard swarm: done-ledger.json (frozen v1) + a sibling done-ledger-v2.json. A path NOT named
+    # done-ledger.json (test/standalone) IS itself the v2 chain.
+    v1_path = done_ledger_path
+    if os.path.basename(v1_path) == "done-ledger.json":
+        v2_path = os.path.join(os.path.dirname(os.path.abspath(v1_path)), "done-ledger-v2.json")
+    else:
+        v2_path = v1_path
+
+    # idempotency spans BOTH chains — a task already redeemed in frozen v1 is not re-appended to v2.
+    already = set()
+    if v2_path != v1_path and os.path.isfile(v1_path):
+        for e in json.load(open(v1_path)).get("entries", []):
+            if e.get("verdict") == "pass":
+                already.add(e.get("task_id"))
+
+    if os.path.isfile(v2_path):
+        led = json.load(open(v2_path))
+    else:
+        # mint the v2 chain with a genesis cross-referencing frozen v1's EXACT head (decision 4: never a
+        # rewrite — v1 stays as signed; v2 is bound to it, so any later edit of v1 breaks status' chain).
+        genesis = {"type": "genesis", "schema": ledger.CURRENT_MAJOR, "prev": "0" * 64}
+        if v2_path != v1_path and os.path.isfile(v1_path):
+            v1 = json.load(open(v1_path))
+            v1_entries, v1_schema = v1.get("entries", []), v1.get("schema", 1)
+            genesis.update({"supersedes": v1.get("chain", "done-ledger"),
+                            "supersedes_file": os.path.basename(v1_path),
+                            "supersedes_schema": v1_schema,
+                            "supersedes_head": ledger.head_of(v1_entries, v1_schema),
+                            "supersedes_count": len(v1_entries)})
+        led = {"chain": "done-ledger-v2", "schema": ledger.CURRENT_MAJOR, "entries": [genesis]}
+
     entries = led.setdefault("entries", [])
-    if any(e.get("task_id") == task_id and e.get("verdict") == "pass" for e in entries):
+    for e in entries:
+        if e.get("verdict") == "pass":
+            already.add(e.get("task_id"))
+    if task_id in already:
         json.dump({"task_id": task_id, "verdict": "pass", "note": "already redeemed"}, open(out, "w"), indent=2)
         print(json.dumps({"tool": "cws_observe_redeem", "task_id": task_id, "verdict": "pass",
                           "note": "already redeemed", "report": out}))
         return 0
 
-    prev = "0" * 64
-    if entries:
-        last = entries[-1]
-        prev = hashlib.sha256(_canon({k: last[k] for k in last if k != "prev"})).hexdigest()
+    schema = led.get("schema", ledger.CURRENT_MAJOR)
+    prev = ledger.head_of(entries, schema)
     entry = {"seq": len(entries) + 1, "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
              "task_id": task_id, "validator": validator, "verdict": "pass",
              "evidence_sha": hashlib.sha256(open(run_ledger_path, "rb").read()).hexdigest(), "prev": prev}
     entries.append(entry)
-    os.makedirs(os.path.dirname(os.path.abspath(done_ledger_path)), exist_ok=True)
-    json.dump(led, open(done_ledger_path, "w"), indent=2)
+    os.makedirs(os.path.dirname(os.path.abspath(v2_path)), exist_ok=True)
+    json.dump(led, open(v2_path, "w"), indent=2)
 
     json.dump({"task_id": task_id, "validator": validator, "verdict": "pass", "seq": entry["seq"],
-               "evidence_sha": entry["evidence_sha"], "done_ledger": done_ledger_path}, open(out, "w"), indent=2)
+               "evidence_sha": entry["evidence_sha"], "done_ledger": v2_path}, open(out, "w"), indent=2)
     print(json.dumps({"tool": "cws_observe_redeem", "task_id": task_id, "validator": validator,
                       "verdict": "pass", "seq": entry["seq"], "report": out}))
     return 0

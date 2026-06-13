@@ -19,7 +19,6 @@ Exit 0 normally (incomplete progress is the normal state); nonzero only if the d
 """
 from __future__ import annotations
 import glob
-import hashlib
 import json
 import os
 import sys
@@ -35,28 +34,50 @@ if os.path.isdir(os.path.join(_root, "infra", "govern")):
     sys.path.insert(0, _root)
 
 from infra import registry  # noqa: E402
+from infra.cwp import ledger  # noqa: E402
 
 
-def _canon(obj):
-    return json.dumps(obj, sort_keys=True).encode()
+def _verify_chain(entries, schema):
+    """Verify a prev-hash chain under `schema`. Returns (redeemed_task_ids:set, ok:bool)."""
+    redeemed, prev, ok = set(), "0" * 64, True
+    for e in entries:
+        if e.get("prev") != prev:
+            ok = False
+        prev = ledger.link_digest(ledger.link_of(e), schema)
+        if e.get("verdict") == "pass":
+            redeemed.add(e.get("task_id"))
+    return redeemed, ok
 
 
 def read_done_ledger(path):
     """Return (redeemed_task_ids:set, chain_status:str). The done-ledger is a prev-hash chain; a broken
-    link means the progress record itself was tampered with."""
+    link means the progress record itself was tampered with. Reads the v1 chain at `path` (schema major
+    recorded in the chain; absent => major 1, the frozen original) AND a v2 chain at the sibling
+    done-ledger-v2.json if present (inflight.md decision 4: a schema migration is a NEW chain carrying a
+    cross-reference to the old one — never a rewrite — and verifiers support majors N and N-1). The v2
+    genesis MUST cross-reference v1's exact head, so any alteration of frozen v1 breaks the chain."""
     if not path or not os.path.isfile(path):
         return set(), "absent"
-    led = json.load(open(path))
-    entries = led.get("entries", [])
-    redeemed, prev = set(), "0" * 64
-    chain = "ok"
-    for e in entries:
-        link = {k: e[k] for k in e if k != "prev"}
-        if e.get("prev") != prev:
+    v1 = json.load(open(path))
+    v1_entries = v1.get("entries", [])
+    v1_schema = v1.get("schema", 1)
+    redeemed, ok = _verify_chain(v1_entries, v1_schema)
+    chain = "ok" if ok else "broken"
+
+    v2path = os.path.join(os.path.dirname(os.path.abspath(path)), "done-ledger-v2.json")
+    if os.path.isfile(v2path):
+        v2 = json.load(open(v2path))
+        v2_entries = v2.get("entries", [])
+        v2_schema = v2.get("schema", ledger.CURRENT_MAJOR)
+        g = v2_entries[0] if v2_entries else None
+        if not g or g.get("type") != "genesis":
+            chain = "broken"                                       # a v2 chain must open with a genesis record
+        elif g.get("supersedes_head") != ledger.head_of(v1_entries, v1_schema):
+            chain = "broken"                                       # genesis cross-ref doesn't match v1's head
+        r2, ok2 = _verify_chain(v2_entries, v2_schema)
+        if not ok2:
             chain = "broken"
-        prev = hashlib.sha256(_canon(link)).hexdigest()
-        if e.get("verdict") == "pass":
-            redeemed.add(e.get("task_id"))
+        redeemed |= r2
     return redeemed, chain
 
 
