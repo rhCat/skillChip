@@ -4,139 +4,139 @@
   "skills": [
     {
       "skill": "ci-codeqc",
-      "skill_sha": "c2e8976e294391223f8a7ae7e9122f7d39a025c06873fe983dde1b627911a196",
+      "skill_sha": "e3c4fb4aef18127aef3cc96a4636e9a1d42f58c711cdbc772d4663bc2e9d0998",
       "file_count": 11
     },
     {
       "skill": "codebaseqc",
-      "skill_sha": "fe41101748d733396a3401c8bc4e6916f3bb03e389347bfc21731e9aa044a6a5",
+      "skill_sha": "2a9563d99eb0d740c5dafa95a69079a429e85f570cb8b7952467c1867d3c9321",
       "file_count": 21
     },
     {
       "skill": "cws-addperk",
-      "skill_sha": "3de462fea74a69a6e67649fdabf8e93ddaf6f14f4e68433ff6edaff4cb1ae1da",
+      "skill_sha": "85481aa9b4e550778ca8390692c65edfbde48d06a67b9484f95313498664c64f",
       "file_count": 20
     },
     {
       "skill": "cws-conform",
-      "skill_sha": "4f2b982065031feba6ae8844c9e90e7834612c8c301d88f8ec158c67c6d769b9",
+      "skill_sha": "25d30cccc5d24d9233d25b50802d25293d5ace81a97c19e90bab43145bbf6a12",
       "file_count": 43
     },
     {
       "skill": "cws-create",
-      "skill_sha": "d49f13d45a2ebd7322626b1adebd39397cad1b23f308562086dca21bbd0ffac7",
+      "skill_sha": "b17a12392839755df73541c3ff79782d5ffe69a64b1c14178327bafd6d7de77a",
       "file_count": 17
     },
     {
       "skill": "cws-ledgercheck",
-      "skill_sha": "e8f84ba1fe1bc6003ae652dcabb7489b70c58df9b264253f789c8488354290f3",
+      "skill_sha": "d06daafe39720246c2eaa3e0c41a17a6f6e8e7c547df2f0e79bd05bed249b65b",
       "file_count": 13
     },
     {
       "skill": "cws-modelcheck",
-      "skill_sha": "17f347ecba0ee982574accc917276b5ffe7ecd3d67fd9be523776d58caef4e7d",
+      "skill_sha": "449ca707a2ae98a417bd425b200c90728d1f3867240a0bf4b31bd1aceac19f0d",
       "file_count": 22
     },
     {
       "skill": "cws-mutate",
-      "skill_sha": "d5f8cc81e155965f39b62decee633ce8ad4a9b7d6a3d200b4488c632d278082f",
+      "skill_sha": "bf25ff57944755ef1d7ab35ee0accffcf9e2b1819f1af11c0f1f862cefe7ef01",
       "file_count": 14
     },
     {
       "skill": "cws-observe",
-      "skill_sha": "fe4d62e414339a1919dae5505ab910a37dd684da00ea6fe6eb12a8c1179d36b5",
+      "skill_sha": "e5260cbfa3c9d9064d30f317eca8cf10738acec32e1626b5ebdc0b492a0d6e6c",
       "file_count": 26
     },
     {
       "skill": "data",
-      "skill_sha": "07c774a8ac38226a5bcd8997328f6759b4ae93ddd0ffb39ee443de8662dd2215",
+      "skill_sha": "9f3d45f219dc41a59a9a07bbb1e935e3f7553bc98575095ffdd970b53d563ec3",
       "file_count": 19
     },
     {
       "skill": "datadog",
-      "skill_sha": "f06878543071a0769b0e65745e362ce3491a38cb6e1bef63b3be6fa336303de6",
+      "skill_sha": "0e7964412beb35ec1c8e819d93424208d0ef7f0c2b12e603930bc3b1e3f584a5",
       "file_count": 11
     },
     {
       "skill": "docker",
-      "skill_sha": "bdb4aacbafec16e6318f10f7a638d28ea6b949e201156ca12f549cd839ba41bb",
+      "skill_sha": "dab2a1bc0f3b37e064abb54f651863e5969476e4b50192611f089c4e2db24459",
       "file_count": 16
     },
     {
       "skill": "fs",
-      "skill_sha": "a3cd6e108e4ac11b076d7b4e96cda8098c02caa75374174388ef4e07eec3a4b5",
+      "skill_sha": "417843081f1891b17a55ddc4fda84800bc78eaf2d352fac9e43bb83bcdda2f1a",
       "file_count": 18
     },
     {
       "skill": "git_ops",
-      "skill_sha": "fa0789d771c67194e0daa3b6e649bcffa45bfb7658d3254d0559081e8f5dc46f",
+      "skill_sha": "e19544acc43c1ff1713acd63ed94dc082b2b41c1a89bc90987b0ed30743c0dc5",
       "file_count": 16
     },
     {
       "skill": "http",
-      "skill_sha": "4521a91581a50e07265b60a9df6be737dd8ee6036ad4ad6bd43b1101bac6e855",
+      "skill_sha": "a80eb06b3a9dc85e13e7bf2e77cce8ac3c5f6e0bc58fb61fd9be76c7ae718de0",
       "file_count": 16
     },
     {
       "skill": "jsonschema",
-      "skill_sha": "2251191913d5d3edbcc661db2f39629c6c2a82f8ab472ea52e2edbadf0cc6aee",
+      "skill_sha": "4665e37c53444ed6008359be553d5fa56da74217aab4dc26b13b3c1403d161a3",
       "file_count": 21
     },
     {
       "skill": "markdown",
-      "skill_sha": "761a37e6d06567edd58a894f5e48bff6aeb3b20aa0c236f3a8ac27d12f5df267",
+      "skill_sha": "d7ce0c56621784af884bc1a35402bb83df4a376e3c03f3c29bbc08f5fe0edb0f",
       "file_count": 21
     },
     {
       "skill": "net",
-      "skill_sha": "c930aeb3954350f586e1d59a09f4395cc4a89b85f02b6053193dfa79e32cbcd7",
+      "skill_sha": "178d6abd022541fbaacb866907dd9357ca89a1109765a4071e78473f23ac5972",
       "file_count": 17
     },
     {
       "skill": "pdf",
-      "skill_sha": "c97ce2679c434d76b7f1dcc3a1ef76cfba74b05267daee736cbaa9474601ef41",
+      "skill_sha": "6182ce0d6291eb61611ad361c8e47fd36536321bc637b28cc3fdee8e6f6c2ed5",
       "file_count": 20
     },
     {
       "skill": "pg_ops",
-      "skill_sha": "1be23f3e2fe534e9227110acf86fbca8bc7345dfd0816358cf128c97865b8a80",
+      "skill_sha": "692d6375c3ca60e612997c3ae54c05628f34938de8c70b63f41a522ab8887407",
       "file_count": 16
     },
     {
       "skill": "py_qc",
-      "skill_sha": "c66070ed2add98bf29b56e1f2a204a78f7c6e0ad3f31dc27db62b5f1de8b36fc",
+      "skill_sha": "791495fc5055e0307db4f67741ba525ae4eeb083a019e60a20fa0aba8c8ee105",
       "file_count": 16
     },
     {
       "skill": "release",
-      "skill_sha": "685e488618e284fd22469d011a2af0d42c19696cf5668a4604e6a5d9a1435525",
+      "skill_sha": "b6ff2be2ca9b18cca4d7268eeefb9e9dc61f049d5095a0800ab3067fbbf00b62",
       "file_count": 11
     },
     {
       "skill": "search",
-      "skill_sha": "f15d3ff6f8eabbb8fa1968b8b532589be45b8da6a84bc3ee16726684d5d5404c",
+      "skill_sha": "44e65aac72e4db36b9c1f4e3a705b6f96b13f95f3bde9773915bea56e7efc70a",
       "file_count": 18
     },
     {
       "skill": "sec",
-      "skill_sha": "d9d561f33079ff686c414d6e3b53af60d0c631ff598274f4a50ba76ca459e640",
+      "skill_sha": "2662c65d8c5ebb405890545cf214880fbfa4858d8ea72b4e4515d6dbec37377e",
       "file_count": 18
     },
     {
       "skill": "sqlite",
-      "skill_sha": "7754e5d9a4daf5cbd029fd707eede1871d7454f7fc6b4a52c2882da741769908",
+      "skill_sha": "f5e30a9b3753bf32a8cd0a9073e4c9c8dd4b48f86a5b53fb9009b711745b17c0",
       "file_count": 17
     },
     {
       "skill": "ssh",
-      "skill_sha": "6144c7bd5227ee31c662d47aa185ee9b4c43cd0b272c5c4a944ac6c1f974ca6d",
+      "skill_sha": "6ef88c85baa8e94349897b93c53997d654d21a033f712729ae224fc7e25695f6",
       "file_count": 16
     },
     {
       "skill": "terraform",
-      "skill_sha": "7979c37679360803ad6ad32dfcdf95011367ead7eccce827bb78f20e4d71c857",
+      "skill_sha": "5d54fa53a79fee7d128c6d15a8e5445240dfefd6e342b26d7d574616778ba522",
       "file_count": 18
     }
   ],
-  "chip_sha": "60d22614549a83a8ef2f1b103af5ccbe86047898bf5b022c0e062a2a0708ffce"
+  "chip_sha": "ccb515db6f8ee7951fba6fb29e52e755897585796c6dbf1cf044d52e636871e3"
 }
