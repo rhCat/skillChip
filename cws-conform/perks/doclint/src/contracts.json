@@ -1,0 +1,27 @@
+{
+  "tool": "cws_doclint",
+  "inputs": {
+    "SPEC": {
+      "type": "string",
+      "required": true
+    },
+    "MIN_NORMATIVE": {
+      "type": "string",
+      "required": false
+    },
+    "REQUIRE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "doclint_out": {
+      "path": "${RECORD_STORE}/doclint.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/doclint.json"
+  }
+}

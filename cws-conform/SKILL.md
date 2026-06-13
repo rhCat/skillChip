@@ -1,7 +1,7 @@
 ---
 skill: cws-conform
 name: CWP Conformance
-perks: [repin]
+perks: [repin, doclint]
 ---
 
 # cws-conform — CWP Conformance (SV-1)
@@ -26,15 +26,18 @@ executor run-ledger.
 | perk | tool | nature |
 |---|---|---|
 | `repin` | `cws_repin` | observe drift vs committed pins, regenerate indexes + manifest, record the chip_sha transition — writes to `TARGET_CHIP`'s index files |
+| `doclint` | `cws_doclint` | structural conformance lint for a spec doc — exists, title, normative, on-topic (P0-V10) — read-only / safe |
 
 - **`repin`** — set `TARGET_CHIP` (a chip dir: skill dirs each with a `perks.json`). Output: `repin.json`.
+- **`doclint`** — set `SPEC` (a `.md`) + optional `MIN_NORMATIVE` / `REQUIRE`. Output: `doclint.json`. This
+  is what redeems the P0 spec tranche (`spec/keys.md`, `privacy.md`, `time.md`, `inflight.md`, …).
 
 ## Scope (buildable now vs the full SV-1 surface)
-This is the canonical re-pin under the current sha256 scheme — the part that exists today (it composes
-`infra/tool/skill_index`). The plan's other two cws-conform perks need infra that is still to be built:
-`vectors` (replay the >=250 golden-vector corpus through `infra/cwp`) and `crosslang` (diff the verdict
-stream against the independent Go verifier, the V-EXT external anchor) land with `spec/vectors/`,
-`infra/cwp/`, and the Go verifier (plan P0).
+`repin` is the canonical re-pin under the current sha256 scheme; `doclint` is the structural spec lint
+(plan P0-V10) — both compose tooling that exists today (`infra/tool/skill_index`; a Markdown parse). The
+remaining cws-conform perks need infra still to be built: `vectors` (replay the >=250 golden-vector corpus
+through `infra/cwp`) and `crosslang` (diff the verdict stream against the independent Go verifier, the
+V-EXT external anchor) land with `spec/vectors/`, `infra/cwp/`, and the Go verifier (plan P0).
 
 ## How to use it
 Pick `repin`, copy `ledger.json` → `task-ledger.json`, set `TARGET_CHIP` + `record_store`, then validate
