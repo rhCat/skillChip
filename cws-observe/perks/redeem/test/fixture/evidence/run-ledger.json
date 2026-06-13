@@ -1,0 +1,6 @@
+{
+  "script": "run.sh",
+  "runs": [
+    {"ts": "2026-06-12T00:00:01Z", "step": "1", "status": "ok", "exit": 0, "seconds": 0.1, "stdout_sha": "abcd1234abcd1234", "stdout_tail": "[step 1] cws_repin"}
+  ]
+}

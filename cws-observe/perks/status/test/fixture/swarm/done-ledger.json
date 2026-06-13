@@ -1,0 +1,14 @@
+{
+  "chain": "done-ledger",
+  "entries": [
+    {
+      "seq": 1,
+      "ts": "2026-06-12T00:00:00Z",
+      "task_id": "P0-T01",
+      "validator": "cws-conform",
+      "verdict": "pass",
+      "evidence_sha": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+      "prev": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ]
+}

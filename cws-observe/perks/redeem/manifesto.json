@@ -1,0 +1,25 @@
+{
+  "_perk": "redeem",
+  "sequence": [
+    "cws_observe_redeem"
+  ],
+  "tools": {
+    "cws_observe_redeem": {
+      "binary": "python3",
+      "params": {
+        "TASK_ID": "${TASK_ID}",
+        "RUN_LEDGER": "${RUN_LEDGER}"
+      }
+    }
+  },
+  "env": {
+    "SWARM_DIR": "${SWARM_DIR}",
+    "TASK_ID": "${TASK_ID}",
+    "RUN_LEDGER": "${RUN_LEDGER}",
+    "DONE_LEDGER": "${DONE_LEDGER}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

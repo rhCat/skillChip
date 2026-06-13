@@ -1,0 +1,21 @@
+{
+  "skill": "cws-observe",
+  "perks": [
+    {
+      "id": "status",
+      "summary": "report DAG progress against the plan by redemption (+ milestone roll-up)",
+      "destructive": false,
+      "tools": [
+        "cws_observe_status"
+      ]
+    },
+    {
+      "id": "redeem",
+      "summary": "record a task's redemption to the done-ledger, gated on a verified governed run",
+      "destructive": false,
+      "tools": [
+        "cws_observe_redeem"
+      ]
+    }
+  ]
+}

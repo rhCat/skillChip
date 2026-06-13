@@ -1,0 +1,8 @@
+{
+  "$schema": "cwp-swarm-manifest-v1.1",
+  "program": "fixture",
+  "milestones": [
+    {"id": "M1", "rung": "SV-1", "gate_tasks": ["P0-T01"], "promise_outward": "the root is redeemed"},
+    {"id": "M2", "rung": "SV-1", "gate_tasks": ["P0-T02"], "promise_outward": "the dependent is redeemed"}
+  ]
+}

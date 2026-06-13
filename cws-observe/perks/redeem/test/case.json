@@ -1,0 +1,17 @@
+{
+  "_perk": "redeem",
+  "requires": ["python3"],
+  "vars": {
+    "SWARM_DIR": "${FIXTURE}/swarm",
+    "TASK_ID": "P0-T17",
+    "RUN_LEDGER": "${FIXTURE}/evidence/run-ledger.json",
+    "DONE_LEDGER": "${RECORD}/done-ledger.json"
+  },
+  "expect": {
+    "outputs": ["redeem.json", "done-ledger.json"],
+    "contains": {
+      "redeem.json": ["\"verdict\": \"pass\"", "\"task_id\": \"P0-T17\""],
+      "done-ledger.json": ["\"task_id\": \"P0-T17\"", "\"verdict\": \"pass\""]
+    }
+  }
+}
