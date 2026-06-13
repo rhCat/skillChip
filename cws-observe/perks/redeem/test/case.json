@@ -8,10 +8,10 @@
     "DONE_LEDGER": "${RECORD}/done-ledger.json"
   },
   "expect": {
-    "outputs": ["redeem.json", "done-ledger.json"],
+    "outputs": ["redeem.json", "done-ledger-v2.json"],
     "contains": {
       "redeem.json": ["\"verdict\": \"pass\"", "\"task_id\": \"P0-T17\""],
-      "done-ledger.json": ["\"task_id\": \"P0-T17\"", "\"verdict\": \"pass\""]
+      "done-ledger-v2.json": ["\"task_id\": \"P0-T17\"", "\"verdict\": \"pass\"", "\"type\": \"genesis\""]
     }
   }
 }
