@@ -1,0 +1,20 @@
+{
+  "perk": "interop",
+  "skill": "cws-conform",
+  "description": "prove cwp <-> cosign/sigstore DSSE interop at the Ed25519ph layer, both directions (P0-T03)",
+  "rules": [
+    "cosign/sigstore sign DSSE with Ed25519ph (HashEdDSA over SHA-512 of the PAE), not pure Ed25519",
+    "cwp native signatures stay pure Ed25519; the ph gap is bridged via OpenSSL (infra/cwp/cosign.py)",
+    "direction A: cwp.verify_ph accepts a REAL cosign envelope (fixture) and rejects tamper",
+    "direction B: cwp.sign_ph output verifies under the Go anchor's ed25519ph mode — cosign's own engine"
+  ],
+  "usage": "Set COSIGN_ENVELOPE (a real cosign attest-blob DSSE envelope) + COSIGN_PUB (its Ed25519 public-key PEM). Output: interop.json. Exit 0 iff cwp verifies cosign's output (and rejects tamper) AND cwp's ph output verifies under the Go ed25519ph anchor.",
+  "limitation": "cosign's CLI verify-blob-attestation --key cannot verify a key-based ed25519ph attestation (it fails on cosign's OWN output — an upstream cosign limitation), so direction B uses the Go anchor (crypto/ed25519.VerifyWithOptions{SHA512}), which IS cosign's verification primitive, rather than the cosign CLI. Requires openssl>=3.4 (for ed25519ph) + the go toolchain.",
+  "minimal_example": {
+    "perk": "interop",
+    "vars": {
+      "COSIGN_ENVELOPE": "/path/to/cosign_envelope.json",
+      "COSIGN_PUB": "/path/to/cosign_pub.pem"
+    }
+  }
+}

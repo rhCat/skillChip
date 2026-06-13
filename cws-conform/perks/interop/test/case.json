@@ -1,0 +1,19 @@
+{
+  "_perk": "interop",
+  "requires": ["openssl", "go"],
+  "vars": {
+    "COSIGN_ENVELOPE": "${FIXTURE}/cosign_envelope.json",
+    "COSIGN_PUB": "${FIXTURE}/cosign_pub.pem"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["interop.json"],
+    "json": {
+      "interop.json": {
+        "status": "ok",
+        "cosign_to_cwp": {"accepts_real_cosign": true, "rejects_tamper": true},
+        "cwp_to_cosign_engine": {"go_ed25519ph_verifies": true}
+      }
+    }
+  }
+}
