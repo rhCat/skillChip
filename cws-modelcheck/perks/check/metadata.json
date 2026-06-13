@@ -1,0 +1,18 @@
+{
+  "perk": "check",
+  "skill": "cws-modelcheck",
+  "description": "check a blueprint/workflow for abstract deadlock — structural + EMPIRICAL (TLC)",
+  "rules": [
+    "read-only — reads the blueprint, writes only the certificate",
+    "the structural check always runs; TLC adds EMPIRICAL only when TLA2TOOLS_JAR + java are present",
+    "TLC absence is recorded honestly as empirical: skipped — never silently treated as a pass"
+  ],
+  "usage": "Set TARGET_BLUEPRINT (path to a blueprint.json / workflow.json). Output: modelcheck.json with {structural, empirical, status}.",
+  "limitation": "EMPIRICAL (TLC) + structural today. SYMBOLIC (Apalache) and AXIOMATIC (TLAPS) certificate classes, and the settlement-lifecycle money perk, arrive with those checkers (plan P4).",
+  "minimal_example": {
+    "perk": "check",
+    "vars": {
+      "TARGET_BLUEPRINT": "/path/to/blueprint.json"
+    }
+  }
+}

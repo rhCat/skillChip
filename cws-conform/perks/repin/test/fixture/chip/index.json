@@ -1,0 +1,12 @@
+{
+  "chip": "skillChip",
+  "count": 1,
+  "skills": [
+    {
+      "skill": "demoskill",
+      "skill_sha": "0cad07f59414f246061590dd6330b940457974c133dc45d49b11738149b7d107",
+      "file_count": 2
+    }
+  ],
+  "chip_sha": "37beb666b737165144b89619639d85fb15f2b05c5030a2f2268494e24adf703f"
+}

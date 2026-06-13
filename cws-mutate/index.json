@@ -1,0 +1,21 @@
+{
+  "skill": "cws-mutate",
+  "skill_sha": "d5f8cc81e155965f39b62decee633ce8ad4a9b7d6a3d200b4488c632d278082f",
+  "file_count": 14,
+  "files": {
+    "SKILL.md": "1c0a32772db037ffaff061330e0a6af65eb4200e3c5005cf11059452747d4d56",
+    "blueprint.drawio": "f9ac740c83e0b8f2d9061ee03b8333039277db433c9575e11947be0605fd056d",
+    "blueprint.json": "8484347dc95896063ce5bc811ca90156431bb50651214d93b36a904593037f81",
+    "blueprint.svg": "40f9fca10073c31cce133bcf27e60e80e3353b056dedef08f3a0551b056e55fd",
+    "ledger.json": "7c1ed8910200657a317f47d71dbccbb5f3818b92f9d8e5746dfa71c8a31ca2b6",
+    "perks.json": "ce45d42fab767496ddaac4279dcd9adb5f582a3c4385b8add27761b2743b287f",
+    "perks/mutate/manifesto.json": "60e38f042cae357f44e3746355241712b7f86a2aa48e161339cba2800460be7f",
+    "perks/mutate/metadata.json": "29ce723da4ad3171a315040fc61812556d27a5be9d62cb4dfc75c635b642d4f4",
+    "perks/mutate/src/contracts.json": "ac8259e1b3b591a70e042ad83339be93733cddda4e10a715d1c91f61cd1a58eb",
+    "perks/mutate/src/cws_mutate.py": "3c2658f7dbc6e8ecc3b552d6cd8608bcd5d8b1efc78074f40f7980e575f48da2",
+    "perks/mutate/src/cws_mutate.sh": "db449724e99db049fb5bda51cd773731feefa5be28351011adacab43a4ba8bf9",
+    "perks/mutate/test/case.json": "debef61fac47eb9e5cf1aaa9f0f412b7894cf06d38af35e539c7adff62fcbb7b",
+    "perks/mutate/test/fixture/check_gate.py": "71b4ff991b162670017b05f25fccd2c08babbe6c21e6528b12e2928f751e88d6",
+    "perks/mutate/test/fixture/gate.py": "24c645b5ea709104c8da2425a7218829bd9237b7256b0dca3a91faf3ce613254"
+  }
+}

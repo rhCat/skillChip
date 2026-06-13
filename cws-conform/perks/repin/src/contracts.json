@@ -1,0 +1,19 @@
+{
+  "tool": "cws_repin",
+  "inputs": {
+    "TARGET_CHIP": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "repin_out": {
+      "path": "${RECORD_STORE}/repin.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/repin.json"
+  }
+}

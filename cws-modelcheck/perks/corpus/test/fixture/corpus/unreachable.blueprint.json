@@ -1,0 +1,18 @@
+{
+  "$schema": "lpp/v0.2.0",
+  "id": "unreachable",
+  "_defect": "ONLY an unreachable state: 'orphan' has an outgoing edge (not a sink) but nothing leads to it from entry; 'done' is a reachable terminal (so no-terminal does not fire).",
+  "entry_state": "ready",
+  "states": {
+    "ready": {},
+    "orphan": {},
+    "done": {}
+  },
+  "terminal_states": {
+    "done": {}
+  },
+  "transitions": [
+    {"from": "ready", "to": "done", "trigger": "GO"},
+    {"from": "orphan", "to": "done", "trigger": "GO"}
+  ]
+}

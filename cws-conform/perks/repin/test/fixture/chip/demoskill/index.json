@@ -1,0 +1,9 @@
+{
+  "skill": "demoskill",
+  "skill_sha": "0cad07f59414f246061590dd6330b940457974c133dc45d49b11738149b7d107",
+  "file_count": 2,
+  "files": {
+    "SKILL.md": "60a9b24676bf47a4701882a1c3a5a5a2df3da86d75b93336a95baf4792eea80d",
+    "perks.json": "5eb72eb07351cc52eb21f9de6320f3f2e530409227ab4ec158bc4f90e36cf54e"
+  }
+}

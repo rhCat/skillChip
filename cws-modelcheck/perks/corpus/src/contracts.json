@@ -1,0 +1,19 @@
+{
+  "tool": "cws_corpus",
+  "inputs": {
+    "CORPUS_DIR": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "corpus_out": {
+      "path": "${RECORD_STORE}/corpus.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/corpus.json"
+  }
+}

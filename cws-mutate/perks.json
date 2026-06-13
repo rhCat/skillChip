@@ -1,0 +1,13 @@
+{
+  "skill": "cws-mutate",
+  "perks": [
+    {
+      "id": "mutate",
+      "summary": "mutate a gate's source, run its test slice, score the survivors (V-MUT)",
+      "destructive": false,
+      "tools": [
+        "cws_mutate"
+      ]
+    }
+  ]
+}

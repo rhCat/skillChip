@@ -1,0 +1,15 @@
+{
+  "_perk": "mutate",
+  "requires": ["python3"],
+  "vars": {
+    "PROJECT_DIR": "${FIXTURE}",
+    "TARGET": "gate.py",
+    "TEST_CMD": "python3 check_gate.py"
+  },
+  "expect": {
+    "outputs": ["mutate.json"],
+    "contains": {
+      "mutate.json": ["\"mutation_score\": 1.0", "\"survived\": []"]
+    }
+  }
+}

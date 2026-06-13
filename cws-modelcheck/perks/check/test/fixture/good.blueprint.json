@@ -1,0 +1,15 @@
+{
+  "$schema": "lpp/v0.2.0",
+  "id": "good",
+  "entry_state": "ready",
+  "states": {
+    "ready": {},
+    "done": {}
+  },
+  "terminal_states": {
+    "done": {}
+  },
+  "transitions": [
+    {"from": "ready", "to": "done", "trigger": "GO"}
+  ]
+}

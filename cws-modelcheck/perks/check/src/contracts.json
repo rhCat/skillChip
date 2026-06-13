@@ -1,0 +1,19 @@
+{
+  "tool": "cws_check",
+  "inputs": {
+    "TARGET_BLUEPRINT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "modelcheck_out": {
+      "path": "${RECORD_STORE}/modelcheck.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/modelcheck.json"
+  }
+}

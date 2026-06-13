@@ -1,0 +1,21 @@
+{
+  "skill": "cws-conform",
+  "skill_sha": "57e0d3f0f41c421eed593c247bb8336e42029786a1ed1bb35658fc66cc844ccf",
+  "file_count": 14,
+  "files": {
+    "SKILL.md": "dcefd218b8e2c3f90a9925ff85cea4a594a1142a301b0d21a3f8fd8d97e55938",
+    "blueprint.drawio": "05c303e3f9834dd8e9968e1b18136bfea78ff296edee9fcbb234cff857ce6448",
+    "blueprint.json": "f7dfa5b5eafb5cae5f5038d1b848aece5b36b1cec502b3c518d7d65f89cafe5f",
+    "blueprint.svg": "5a6982f192bc04fa2072c7aa71d78d33de1512d1a5ca3411349f92227513dcb4",
+    "ledger.json": "8aa417ecd0841c2bc9606da375394a22e1f0078c482f0f49e56f98fd0d148e72",
+    "perks.json": "f923c9fbe9b36da68aa00782334aa9b8432e1929b44f143d161c8e1fe35285b5",
+    "perks/repin/manifesto.json": "a39f39383ab4abb61f7c83133077efb216395f08a1f098564560ee993b828a9f",
+    "perks/repin/metadata.json": "74928ed7ba8a4724ae61e16b10bd077afc7c3a874b168c5d65126afc49389fd3",
+    "perks/repin/src/contracts.json": "a7a976987131ecdcb8bdb5dd73258a87ba67286f3540ba12ccd9e321446791dd",
+    "perks/repin/src/cws_repin.py": "39730964f654b8fca38cdc534350d4a6723bd0bc0f33487d07c4a723c376be22",
+    "perks/repin/src/cws_repin.sh": "8b8b3912e7591c37570b8e2c5538a61679c312cf9dd9d8876495a7403ebb6c98",
+    "perks/repin/test/case.json": "6a414ff1eb645fd84bcd80914544685747d8eacf503fd7600d0598973e0b2854",
+    "perks/repin/test/fixture/chip/demoskill/SKILL.md": "60a9b24676bf47a4701882a1c3a5a5a2df3da86d75b93336a95baf4792eea80d",
+    "perks/repin/test/fixture/chip/demoskill/perks.json": "5eb72eb07351cc52eb21f9de6320f3f2e530409227ab4ec158bc4f90e36cf54e"
+  }
+}

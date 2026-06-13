@@ -1,0 +1,20 @@
+{
+  "_perk": "corpus",
+  "requires": ["python3"],
+  "vars": {
+    "CORPUS_DIR": "${FIXTURE}/corpus"
+  },
+  "expect": {
+    "outputs": ["corpus.json"],
+    "contains": {
+      "corpus.json": [
+        "\"status\": \"ok\"",
+        "\"missed\": []",
+        "\"caught\": 3",
+        "deadlock: non-terminal state",
+        "unreachable:",
+        "no terminal state reachable"
+      ]
+    }
+  }
+}

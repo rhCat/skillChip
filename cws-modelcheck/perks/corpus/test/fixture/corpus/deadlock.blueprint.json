@@ -1,0 +1,18 @@
+{
+  "$schema": "lpp/v0.2.0",
+  "id": "deadlock",
+  "_defect": "ONLY a non-terminal sink: 'done' is a reachable terminal (so no-terminal does not fire) and every state is reachable (so unreachable does not fire); 'stuck' is the lone non-terminal sink.",
+  "entry_state": "ready",
+  "states": {
+    "ready": {},
+    "stuck": {},
+    "done": {}
+  },
+  "terminal_states": {
+    "done": {}
+  },
+  "transitions": [
+    {"from": "ready", "to": "done", "trigger": "OK"},
+    {"from": "ready", "to": "stuck", "trigger": "OOPS"}
+  ]
+}

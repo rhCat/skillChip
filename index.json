@@ -1,6 +1,6 @@
 {
   "chip": "skillChip",
-  "count": 22,
+  "count": 26,
   "skills": [
     {
       "skill": "ci-codeqc",
@@ -18,9 +18,29 @@
       "file_count": 20
     },
     {
+      "skill": "cws-conform",
+      "skill_sha": "57e0d3f0f41c421eed593c247bb8336e42029786a1ed1bb35658fc66cc844ccf",
+      "file_count": 14
+    },
+    {
       "skill": "cws-create",
       "skill_sha": "d49f13d45a2ebd7322626b1adebd39397cad1b23f308562086dca21bbd0ffac7",
       "file_count": 17
+    },
+    {
+      "skill": "cws-ledgercheck",
+      "skill_sha": "e8f84ba1fe1bc6003ae652dcabb7489b70c58df9b264253f789c8488354290f3",
+      "file_count": 13
+    },
+    {
+      "skill": "cws-modelcheck",
+      "skill_sha": "17f347ecba0ee982574accc917276b5ffe7ecd3d67fd9be523776d58caef4e7d",
+      "file_count": 22
+    },
+    {
+      "skill": "cws-mutate",
+      "skill_sha": "d5f8cc81e155965f39b62decee633ce8ad4a9b7d6a3d200b4488c632d278082f",
+      "file_count": 14
     },
     {
       "skill": "data",
@@ -113,5 +133,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "7b5ba667c52b8dfed236d454a378f106ad611be6158da2930ca6fe233e44a131"
+  "chip_sha": "d00e30865aff762d9473fbae4cd95d632b1db231be8d0d742da082fe9b8932a9"
 }

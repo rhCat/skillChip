@@ -1,0 +1,13 @@
+{
+  "skill": "cws-ledgercheck",
+  "perks": [
+    {
+      "id": "verify",
+      "summary": "verify a run-ledger's structural + ordering integrity (SV-2 precursor)",
+      "destructive": false,
+      "tools": [
+        "cws_ledgerverify"
+      ]
+    }
+  ]
+}

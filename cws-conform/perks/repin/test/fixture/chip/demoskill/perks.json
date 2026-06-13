@@ -1,0 +1,11 @@
+{
+  "skill": "demoskill",
+  "perks": [
+    {
+      "id": "noop",
+      "summary": "a minimal skill so the fixture chip has something to pin",
+      "destructive": false,
+      "tools": ["noop"]
+    }
+  ]
+}

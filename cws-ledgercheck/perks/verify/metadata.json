@@ -1,0 +1,18 @@
+{
+  "perk": "verify",
+  "skill": "cws-ledgercheck",
+  "description": "verify a run-ledger's structural + ordering integrity (the SV-2 'verify' act)",
+  "rules": [
+    "read-only — walks the target ledger, never writes to it",
+    "a recorded refusal/waiver is evidence, not corruption (meta-rule M4)",
+    "a gap in the ok-step prefix is named as an out-of-band run"
+  ],
+  "usage": "Set TARGET_LEDGER (path to a run-ledger.json). Output: ledgercheck.json with {records, bad_records, chain}.",
+  "limitation": "Verifies the structural chain that exists today (executor run-ledger). Cryptographic prev/HMAC chain checks (the torture / crashloop perks) arrive with Ledger-v2 (plan P1).",
+  "minimal_example": {
+    "perk": "verify",
+    "vars": {
+      "TARGET_LEDGER": "/path/to/record_store/run-ledger.json"
+    }
+  }
+}

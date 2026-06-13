@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for cws-modelcheck — set perk, fill record_store + the vars the perk's manifesto declares. The LLM outputs ONLY these fields.",
+  "skill": "cws-modelcheck",
+  "perk": "check",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "TARGET_BLUEPRINT": "<path to a blueprint.json to check (perk=check)>",
+    "CORPUS_DIR": "<path to a dir of known-bad blueprints (perk=corpus)>"
+  }
+}

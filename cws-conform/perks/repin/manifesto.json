@@ -1,0 +1,21 @@
+{
+  "_perk": "repin",
+  "sequence": [
+    "cws_repin"
+  ],
+  "tools": {
+    "cws_repin": {
+      "binary": "python3",
+      "params": {
+        "TARGET_CHIP": "${TARGET_CHIP}"
+      }
+    }
+  },
+  "env": {
+    "TARGET_CHIP": "${TARGET_CHIP}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

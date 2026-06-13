@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for cws-conform — set perk, fill record_store + the vars the perk's manifesto declares. The LLM outputs ONLY these fields.",
+  "skill": "cws-conform",
+  "perk": "repin",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "TARGET_CHIP": "<path to the chip dir to re-pin>"
+  }
+}

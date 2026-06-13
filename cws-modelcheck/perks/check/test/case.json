@@ -1,0 +1,13 @@
+{
+  "_perk": "check",
+  "requires": ["python3"],
+  "vars": {
+    "TARGET_BLUEPRINT": "${FIXTURE}/good.blueprint.json"
+  },
+  "expect": {
+    "outputs": ["modelcheck.json"],
+    "contains": {
+      "modelcheck.json": ["\"status\": \"ok\"", "\"structural\": []"]
+    }
+  }
+}

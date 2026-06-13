@@ -1,0 +1,13 @@
+{
+  "_schema": "task-ledger TEMPLATE for cws-mutate — set perk, fill record_store + the vars the perk's manifesto declares. The LLM outputs ONLY these fields.",
+  "skill": "cws-mutate",
+  "perk": "mutate",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PROJECT_DIR": "<project dir to copy into a sandbox>",
+    "TARGET": "<file within PROJECT_DIR to mutate>",
+    "TEST_CMD": "<the test slice; nonzero exit = mutant killed>",
+    "THRESHOLD": "0.90",
+    "MAX_MUTANTS": "50"
+  }
+}
