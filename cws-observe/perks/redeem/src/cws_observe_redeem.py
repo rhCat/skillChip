@@ -26,11 +26,25 @@ def _canon(obj):
 
 
 def run_ledger_passed(rl):
-    """A governed run-ledger evidences a clean pass iff it has >=1 step record, EVERY step record is ok,
-    and no refusal event was recorded."""
+    """A governed run-ledger evidences a clean pass. Two accepted shapes:
+    - govd provenance ledger (the audit plane): `{decision:"allow", events:[{type:"step_result",status:"ok"},...]}`
+      — every step_result ok, no refusal, decision allowed. This is the dashboard-visible, value-free record.
+    - executor run-ledger (local channel): `{runs:[{step,status:"ok",...}]}` — every step record ok, no refusal."""
+    if isinstance(rl, dict) and "events" in rl:                 # govd provenance ledger
+        if rl.get("decision") != "allow":
+            return False, f"govd decision is {rl.get('decision')!r}, not allow"
+        evs = rl["events"]
+        if any(e.get("type") in REFUSAL_EVENTS for e in evs):
+            return False, "a refusal event is recorded (tamper/oversight)"
+        results = [e for e in evs if e.get("type") == "step_result"]
+        if not results:
+            return False, "no step_result events — nothing ran"
+        if not all(e.get("status") == "ok" for e in results):
+            return False, f"step(s) {[e.get('step') for e in results if e.get('status') != 'ok']} did not finish ok"
+        return True, "ok"
     runs = (rl or {}).get("runs")
     if not isinstance(runs, list):
-        return False, "run-ledger has no runs[]"
+        return False, "run-ledger has neither govd events[] nor executor runs[]"
     steps = [r for r in runs if "step" in r and "event" not in r]
     if any(r.get("event") in REFUSAL_EVENTS for r in runs):
         return False, "a refusal event is recorded (tamper/oversight)"
@@ -64,16 +78,20 @@ def main() -> int:
 
     if not os.path.isfile(run_ledger_path):
         return refuse(f"run-ledger not found: {run_ledger_path}")
-    passed, why = run_ledger_passed(json.load(open(run_ledger_path)))
+    evidence = json.load(open(run_ledger_path))
+    passed, why = run_ledger_passed(evidence)
     if not passed:
         return refuse(f"evidence does not show a clean pass: {why}")
 
-    # bind the evidence to the right validator when the run carries identity (a sibling task-ledger.json)
-    sib = os.path.join(os.path.dirname(os.path.abspath(run_ledger_path)), "task-ledger.json")
-    if os.path.isfile(sib):
-        ran_skill = json.load(open(sib)).get("skill")
-        if validator and ran_skill and ran_skill != validator:
-            return refuse(f"evidence is from '{ran_skill}', but {task_id} is validated_by '{validator}'")
+    # bind the evidence to the right validator: a govd ledger carries `skill` directly; an executor
+    # run-ledger carries identity in a sibling task-ledger.json.
+    ran_skill = evidence.get("skill") if "events" in evidence else None
+    if ran_skill is None:
+        sib = os.path.join(os.path.dirname(os.path.abspath(run_ledger_path)), "task-ledger.json")
+        if os.path.isfile(sib):
+            ran_skill = json.load(open(sib)).get("skill")
+    if validator and ran_skill and ran_skill != validator:
+        return refuse(f"evidence is from '{ran_skill}', but {task_id} is validated_by '{validator}'")
 
     led = json.load(open(done_ledger_path)) if os.path.isfile(done_ledger_path) else {"chain": "done-ledger", "entries": []}
     entries = led.setdefault("entries", [])
