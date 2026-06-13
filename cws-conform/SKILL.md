@@ -1,7 +1,7 @@
 ---
 skill: cws-conform
 name: CWP Conformance
-perks: [repin, doclint, vectors, crosslang]
+perks: [repin, doclint, vectors, crosslang, digestlint]
 ---
 
 # cws-conform — CWP Conformance (SV-1)
@@ -29,8 +29,12 @@ executor run-ledger.
 | `doclint` | `cws_doclint` | structural conformance lint for a spec doc — exists, title, normative, on-topic (P0-V10) — read-only / safe |
 | `vectors` | `cws_vectors` | replay the golden vector corpus (canonical + digest + sig verdicts) → conformance verdict (P0-T07/T17) — read-only / safe |
 | `crosslang` | `cws_crosslang` | diff the independent Go verifier vs canonical.py+sign.py over the corpus — the external anchor (P0-T08) — needs the go toolchain |
+| `digestlint` | `cws_digestlint` | prove every JSON-object hash routes through `cwp.canonical`, not ad-hoc `json.dumps` — the digest-cutover gate (P0-T04 / F1 / P0-V03) — read-only / safe |
 
 - **`repin`** — set `TARGET_CHIP` (a chip dir: skill dirs each with a `perks.json`). Output: `repin.json`.
+- **`digestlint`** — set `SCAN_ROOT` (a dir) + optional `EXCLUDE` (default `infra/cwp`) / `WHITELIST`
+  (`relpath:line` exemptions). Output: `digestlint.json`. AST same-expression lint: no `json.dumps` may
+  feed a hash outside `infra/cwp`. This is what redeems the P0-T04 digest cutover.
 - **`doclint`** — set `SPEC` (a `.md`) + optional `MIN_NORMATIVE` / `REQUIRE`. Output: `doclint.json`. This
   is what redeems the P0 spec tranche (`spec/keys.md`, `privacy.md`, `time.md`, `inflight.md`, …).
 
