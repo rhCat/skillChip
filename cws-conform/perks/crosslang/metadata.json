@@ -1,0 +1,13 @@
+{
+  "perk": "crosslang",
+  "skill": "cws-conform",
+  "description": "diff the independent Go verifier against canonical.py + sign.py over the corpus — the external anchor (P0-T08)",
+  "rules": [
+    "the Go impl must reproduce canonical bytes + digests + sig verdicts exactly — a single diff fails",
+    "builds verifiers/go fresh; requires the go toolchain",
+    "this is meta-rule M3: correctness anchored by an independently-written second implementation"
+  ],
+  "usage": "Set CORPUS (+ optional SIG_CORPUS). Output: crosslang.json {total, diffs, match}.",
+  "limitation": "Requires the cyberware repo (verifiers/go) reachable via CYBERWARE_ROOT or repo-root ascent, and the go toolchain. Cosign DSSE interop (P0-T03) is a separate external anchor.",
+  "minimal_example": {"perk": "crosslang", "vars": {"CORPUS": "spec/vectors/corpus.json", "SIG_CORPUS": "spec/vectors/signatures.json"}}
+}

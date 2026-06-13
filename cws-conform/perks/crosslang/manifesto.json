@@ -1,0 +1,7 @@
+{
+  "_perk": "crosslang",
+  "sequence": ["cws_crosslang"],
+  "tools": {"cws_crosslang": {"binary": "python3", "params": {"CORPUS": "${CORPUS}"}}},
+  "env": {"CORPUS": "${CORPUS}", "SIG_CORPUS": "${SIG_CORPUS}", "RECORD_STORE": "${record_store}"},
+  "requires": ["python3", "go"]
+}

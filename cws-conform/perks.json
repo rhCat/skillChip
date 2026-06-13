@@ -11,7 +11,7 @@
     },
     {
       "id": "doclint",
-      "summary": "structural conformance lint for a spec doc — exists, title, normative, on-topic (P0-V10)",
+      "summary": "structural conformance lint for a spec doc \u2014 exists, title, normative, on-topic (P0-V10)",
       "destructive": false,
       "tools": [
         "cws_doclint"
@@ -23,6 +23,14 @@
       "destructive": false,
       "tools": [
         "cws_vectors"
+      ]
+    },
+    {
+      "id": "crosslang",
+      "summary": "diff the independent Go verifier vs canonical.py+sign.py over the corpus (P0-T08, external anchor)",
+      "destructive": false,
+      "tools": [
+        "cws_crosslang"
       ]
     }
   ]
