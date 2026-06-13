@@ -1,0 +1,9 @@
+{
+  "_perk": "vectors",
+  "requires": ["python3"],
+  "vars": {"CORPUS": "${FIXTURE}/corpus.json", "MIN_TOTAL": "4"},
+  "expect": {
+    "outputs": ["conformance.json"],
+    "contains": {"conformance.json": ["\"failed\": 0", "\"total\": 4", "\"status\""]}
+  }
+}

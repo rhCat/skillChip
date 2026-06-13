@@ -1,14 +1,14 @@
 {
   "skill": "cws-conform",
-  "skill_sha": "13060a2b8b1cfbabdeec949fb8c185a6e978bb735bd1c13add5032889245e955",
-  "file_count": 21,
+  "skill_sha": "ebf45f22cd23da40ae16fb0d153137212dc6442054cc5caec6a10ac6c6ee7590",
+  "file_count": 28,
   "files": {
-    "SKILL.md": "90e29f05f99a73f08e568914cb04c336a154bc0499b9711768222b84c06c4397",
+    "SKILL.md": "34723a1470dd6f8e3df4dbdc3e67cc6ac83854c59d4b8930803d9a6cdfe37955",
     "blueprint.drawio": "05c303e3f9834dd8e9968e1b18136bfea78ff296edee9fcbb234cff857ce6448",
     "blueprint.json": "f7dfa5b5eafb5cae5f5038d1b848aece5b36b1cec502b3c518d7d65f89cafe5f",
     "blueprint.svg": "5a6982f192bc04fa2072c7aa71d78d33de1512d1a5ca3411349f92227513dcb4",
     "ledger.json": "8aa417ecd0841c2bc9606da375394a22e1f0078c482f0f49e56f98fd0d148e72",
-    "perks.json": "b0e7ee7d2aa5f8b8b4fdc584d4dbf347b5eaa0f8a9523ada198ced1c8d7032fd",
+    "perks.json": "9e082ba8eb2db94156134d5c8030caed58228b2424e1d83b24ca989d4af00ed5",
     "perks/doclint/manifesto.json": "edad4de5886c0ae65613f373596341b3a72424cd26f20f7b526133e01c09cfb5",
     "perks/doclint/metadata.json": "3a9a68f01f9d0a9e02048fa9d10c060edbceeeaef253a415a477fa31e5b7ce71",
     "perks/doclint/src/contracts.json": "8f6e0a665b4f1f503476c30ba54b01c66933afcadb8aedf1bc323857adab717f",
@@ -23,6 +23,13 @@
     "perks/repin/src/cws_repin.sh": "8b8b3912e7591c37570b8e2c5538a61679c312cf9dd9d8876495a7403ebb6c98",
     "perks/repin/test/case.json": "6a414ff1eb645fd84bcd80914544685747d8eacf503fd7600d0598973e0b2854",
     "perks/repin/test/fixture/chip/demoskill/SKILL.md": "60a9b24676bf47a4701882a1c3a5a5a2df3da86d75b93336a95baf4792eea80d",
-    "perks/repin/test/fixture/chip/demoskill/perks.json": "5eb72eb07351cc52eb21f9de6320f3f2e530409227ab4ec158bc4f90e36cf54e"
+    "perks/repin/test/fixture/chip/demoskill/perks.json": "5eb72eb07351cc52eb21f9de6320f3f2e530409227ab4ec158bc4f90e36cf54e",
+    "perks/vectors/manifesto.json": "3d9a2d66e6a4490f6e667000eb319525008d85770d7032d7b8eac4e0f4c02c06",
+    "perks/vectors/metadata.json": "00ae4d7e2859f774e84f3c1ef2e73d07ea42b751d84704d1e88776c219e3aef9",
+    "perks/vectors/src/contracts.json": "aee089ee69fa7eda4c79e7bb31395ebba624d807bfb97e5fc7bf7a7901e01dbb",
+    "perks/vectors/src/cws_vectors.py": "0f158890772a410ff79cb740192a13d33d0d94a2f18e59f184f36066fe85f94e",
+    "perks/vectors/src/cws_vectors.sh": "377f5180527c79d51b7e70225f7447e52795627025e7713816227e94ac0904e4",
+    "perks/vectors/test/case.json": "cf2a21331fed903871976367340b5912dea5c8770c02ff42f3dfe9e6419bd054",
+    "perks/vectors/test/fixture/corpus.json": "2bf0f5976141cb28f0d0eb9d3faba2f89e3a0f37b58ef9ae81bf3a44cf7cdeae"
   }
 }

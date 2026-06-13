@@ -1,0 +1,13 @@
+{
+  "perk": "vectors",
+  "skill": "cws-conform",
+  "description": "replay the golden vector corpus through canonical-bytes + signing; emit a conformance verdict (P0-T07/T17)",
+  "rules": [
+    "every canonicalization vector must canonicalize + digest without error",
+    "every signature vector's DSSE verdict must match its declared expectation",
+    "pass requires failed == 0 AND total >= MIN_TOTAL (default 250)"
+  ],
+  "usage": "Set CORPUS (canonicalization vectors) + optional SIG_CORPUS (signature vectors) + MIN_TOTAL. Output: conformance.json.",
+  "limitation": "Validates the local canonical/sign path; the independent Go reproduction is the crosslang perk. The published es6 number corpus (P0-T02) and cosign DSSE interop (P0-T03) are external anchors handled separately.",
+  "minimal_example": {"perk": "vectors", "vars": {"CORPUS": "spec/vectors/corpus.json", "SIG_CORPUS": "spec/vectors/signatures.json"}}
+}
