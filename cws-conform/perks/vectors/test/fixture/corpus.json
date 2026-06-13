@@ -1,0 +1,6 @@
+[
+  {"name": "lit_obj", "input": {"x": 1, "a": 2}},
+  {"name": "str_euro", "input": "€✓"},
+  {"name": "flt_edge", "input": 1e30},
+  {"name": "nest_deep", "input": {"k": [1, {"z": true}, null]}}
+]

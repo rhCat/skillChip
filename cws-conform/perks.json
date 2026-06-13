@@ -16,6 +16,14 @@
       "tools": [
         "cws_doclint"
       ]
+    },
+    {
+      "id": "vectors",
+      "summary": "replay the golden vector corpus through canonical-bytes + signing; emit a conformance verdict (P0-T07/T17)",
+      "destructive": false,
+      "tools": [
+        "cws_vectors"
+      ]
     }
   ]
 }
