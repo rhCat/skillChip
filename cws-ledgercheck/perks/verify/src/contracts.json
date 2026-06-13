@@ -1,0 +1,19 @@
+{
+  "tool": "cws_ledgerverify",
+  "inputs": {
+    "TARGET_LEDGER": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "ledgercheck_out": {
+      "path": "${RECORD_STORE}/ledgercheck.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/ledgercheck.json"
+  }
+}

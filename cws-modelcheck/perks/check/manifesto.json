@@ -1,0 +1,21 @@
+{
+  "_perk": "check",
+  "sequence": [
+    "cws_check"
+  ],
+  "tools": {
+    "cws_check": {
+      "binary": "python3",
+      "params": {
+        "TARGET_BLUEPRINT": "${TARGET_BLUEPRINT}"
+      }
+    }
+  },
+  "env": {
+    "TARGET_BLUEPRINT": "${TARGET_BLUEPRINT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

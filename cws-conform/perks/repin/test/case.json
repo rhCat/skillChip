@@ -1,0 +1,13 @@
+{
+  "_perk": "repin",
+  "requires": ["python3"],
+  "vars": {
+    "TARGET_CHIP": "${FIXTURE}/chip"
+  },
+  "expect": {
+    "outputs": ["repin.json"],
+    "contains": {
+      "repin.json": ["\"status\": \"green\"", "\"drift_count\": 0", "\"changed\": false"]
+    }
+  }
+}

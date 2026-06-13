@@ -1,0 +1,20 @@
+{
+  "perk": "mutate",
+  "skill": "cws-mutate",
+  "description": "mutation-test a gate — mutate its source, run its test slice, score the survivors",
+  "rules": [
+    "operate on a sandbox COPY of PROJECT_DIR — never the live tree",
+    "the baseline TEST_CMD must pass on un-mutated code or the score is rejected as undefined",
+    "a surviving mutant is a hole in the gate: it is listed by id in mutate.json"
+  ],
+  "usage": "Set PROJECT_DIR (copied to a sandbox), TARGET (file within it to mutate), TEST_CMD (the test slice; nonzero exit = mutant killed). Optional THRESHOLD (default 0.90), MAX_MUTANTS (default 50). Output: mutate.json.",
+  "limitation": "Single-token operator mutations on Python source (comparisons, boolean ops, +/-, True/False) over the WHOLE target file — not a full AST mutation engine, and not scoped to a function. Against a CLI-bearing module (one with __main__/argparse/print) the score is diluted by mutants in non-gate lines, so point TARGET at the tightest module containing the gate and read the survived[] ids (token@byte-offset) to see exactly which mutants lived. Function/line-range scoping is future work.",
+  "minimal_example": {
+    "perk": "mutate",
+    "vars": {
+      "PROJECT_DIR": "/path/to/project",
+      "TARGET": "infra/govern/oversight.py",
+      "TEST_CMD": "python3 -m pytest tests/test_oversight.py -q"
+    }
+  }
+}

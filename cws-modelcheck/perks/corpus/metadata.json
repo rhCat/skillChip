@@ -1,0 +1,18 @@
+{
+  "perk": "corpus",
+  "skill": "cws-modelcheck",
+  "description": "run a corpus of known-bad blueprints; assert the checker catches each defect",
+  "rules": [
+    "every case in CORPUS_DIR is known-bad — each MUST be detected",
+    "a missed case is a hole in the checker, named in corpus.json",
+    "an empty corpus is a failure — there is nothing to prove"
+  ],
+  "usage": "Set CORPUS_DIR (a dir of known-bad *.json blueprints). Output: corpus.json with {cases, caught, missed}.",
+  "limitation": "Detects the structural defect classes composer.structural covers (non-terminal sink, unreachable state, no reachable terminal). The richer >=6-defect workflow corpus (compensation cycle, retry livelock, par mutual-wait) lands with the workflow algebra (plan P4).",
+  "minimal_example": {
+    "perk": "corpus",
+    "vars": {
+      "CORPUS_DIR": "/path/to/known-bad-blueprints"
+    }
+  }
+}

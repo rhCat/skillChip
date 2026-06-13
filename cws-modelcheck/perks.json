@@ -1,0 +1,21 @@
+{
+  "skill": "cws-modelcheck",
+  "perks": [
+    {
+      "id": "check",
+      "summary": "check a blueprint for abstract deadlock — structural + EMPIRICAL (TLC)",
+      "destructive": false,
+      "tools": [
+        "cws_check"
+      ]
+    },
+    {
+      "id": "corpus",
+      "summary": "run a known-bad blueprint corpus; assert each defect is caught",
+      "destructive": false,
+      "tools": [
+        "cws_corpus"
+      ]
+    }
+  ]
+}

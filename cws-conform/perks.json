@@ -1,0 +1,13 @@
+{
+  "skill": "cws-conform",
+  "perks": [
+    {
+      "id": "repin",
+      "summary": "re-pin a chip's authenticity (indexes + manifest) and record the chip_sha transition (SV-1)",
+      "destructive": false,
+      "tools": [
+        "cws_repin"
+      ]
+    }
+  ]
+}

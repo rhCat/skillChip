@@ -1,0 +1,20 @@
+{
+  "skill": "cws-ledgercheck",
+  "skill_sha": "e8f84ba1fe1bc6003ae652dcabb7489b70c58df9b264253f789c8488354290f3",
+  "file_count": 13,
+  "files": {
+    "SKILL.md": "ced2c6f4e644c4a2714f8cd59e3e3c9ca1bebb322c07e3842724a174ac43bf7a",
+    "blueprint.drawio": "1fdebb79ad36d8ba6f100d0ee9fc6206951a828962716f0107a6b1fb870e5559",
+    "blueprint.json": "b4b01f5dd65b83cf9d995a8efa9c0b7520d7eaa3f4d409482d636291620b8c41",
+    "blueprint.svg": "141454389fa46bac937a0b4c914a33d18935f56d4604f9c167fe8a092898f196",
+    "ledger.json": "0d425235cedcab596e29325f018a18cda6d123ab31b742e638d21d3ad6ca7e13",
+    "perks.json": "a24961a7295b45559c665571d51680f6b9f00dd31e2d5f37c14735d0b624c005",
+    "perks/verify/manifesto.json": "0322fcf3fbb3364fbae1aa12fed744ffb97a983839a6d4106d6762258d6e8b07",
+    "perks/verify/metadata.json": "f4a81a42ebc264abbad898e7f975610e38108b6829d1a2e00653c8665c046a04",
+    "perks/verify/src/contracts.json": "7050cf4ff839318d53c4810a6f4c0e3cba97d716e11bd0e3cf984cda8854b812",
+    "perks/verify/src/cws_ledgerverify.py": "f04b92127ee0da7075bdd3d0b15d2327fb627e6a32920653ffa2b9a7d64151ec",
+    "perks/verify/src/cws_ledgerverify.sh": "00ce62fdb6baf36aae2635dbac6a090371f98d07028f4150c27c522a0f987645",
+    "perks/verify/test/case.json": "d75e196b8a0f844e669ecb693af300c10db2154e7daadbe649db5d47603de432",
+    "perks/verify/test/fixture/run-ledger.json": "a59df07e3e91cb2d7eb368f847750ddda6e20c34e4d85c127b4b6832e009ef61"
+  }
+}

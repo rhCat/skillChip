@@ -1,0 +1,21 @@
+{
+  "_perk": "verify",
+  "sequence": [
+    "cws_ledgerverify"
+  ],
+  "tools": {
+    "cws_ledgerverify": {
+      "binary": "python3",
+      "params": {
+        "TARGET_LEDGER": "${TARGET_LEDGER}"
+      }
+    }
+  },
+  "env": {
+    "TARGET_LEDGER": "${TARGET_LEDGER}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "script": "run.sh",
+  "runs": [
+    {"ts": "2026-06-12T00:00:01Z", "step": "1", "status": "ok", "exit": 0, "seconds": 0.12, "stdout_sha": "a1b2c3d4e5f60718", "stdout_tail": "[step 1] tool_a"},
+    {"ts": "2026-06-12T00:00:02Z", "event": "oversight_waived", "rules": ["rm_rf"], "sha": "0011223344556677"},
+    {"ts": "2026-06-12T00:00:03Z", "step": "2", "status": "ok", "exit": 0, "seconds": 0.08, "stdout_sha": "f6f5f4f3f2f1f0ff", "stdout_tail": "[step 2] tool_b"}
+  ]
+}

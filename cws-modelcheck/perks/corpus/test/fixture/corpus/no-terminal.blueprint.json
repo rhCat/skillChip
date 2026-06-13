@@ -1,0 +1,15 @@
+{
+  "$schema": "lpp/v0.2.0",
+  "id": "no-terminal",
+  "_defect": "ONLY no-reachable-terminal: ready<->spin is a live cycle (no sinks), both states are reachable (no unreachable), and NO terminal state is declared — so the run can never terminate.",
+  "entry_state": "ready",
+  "states": {
+    "ready": {},
+    "spin": {}
+  },
+  "terminal_states": {},
+  "transitions": [
+    {"from": "ready", "to": "spin", "trigger": "GO"},
+    {"from": "spin", "to": "ready", "trigger": "BACK"}
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "_perk": "corpus",
+  "sequence": [
+    "cws_corpus"
+  ],
+  "tools": {
+    "cws_corpus": {
+      "binary": "python3",
+      "params": {
+        "CORPUS_DIR": "${CORPUS_DIR}"
+      }
+    }
+  },
+  "env": {
+    "CORPUS_DIR": "${CORPUS_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "_perk": "verify",
+  "requires": ["python3"],
+  "vars": {
+    "TARGET_LEDGER": "${FIXTURE}/run-ledger.json"
+  },
+  "expect": {
+    "outputs": ["ledgercheck.json"],
+    "contains": {
+      "ledgercheck.json": ["\"chain\": \"ok\"", "\"bad_records\": []"]
+    }
+  }
+}

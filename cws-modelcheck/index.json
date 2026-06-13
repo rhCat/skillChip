@@ -1,0 +1,29 @@
+{
+  "skill": "cws-modelcheck",
+  "skill_sha": "17f347ecba0ee982574accc917276b5ffe7ecd3d67fd9be523776d58caef4e7d",
+  "file_count": 22,
+  "files": {
+    "SKILL.md": "6d0dd80c6985341111d5b5aad2d5552b0ae2d7ab83d6e1bbaf6e7cf04715862f",
+    "blueprint.drawio": "d15cec7716a0589224724cd8a0e070c5a188837e5aba2203f152104696bc838f",
+    "blueprint.json": "c5379c48ab32a94ab7b692f59758f8f7f3846a8b8cdf806eec4a6d5dbbca52c3",
+    "blueprint.svg": "bc0b9f71ec5d8ad1d9f7e6244a374cab4c3042c5564cd711d61a2ddecc62220b",
+    "ledger.json": "99b554140065ebcc0aacee1b0c86d4e3f387979ca15fd82a7ae189b6615126ec",
+    "perks.json": "66aa63629bea11228a0d20dfd712d3d0fafa2d513e2b45c88861d6edc742a379",
+    "perks/check/manifesto.json": "0e9a21476e9da17bf705f73336381800f5f0492facb2977aacc9c5d5888d1f21",
+    "perks/check/metadata.json": "04af349149c10ef2998c1b7037f039adb1db9526ce4471b02b420d3ec1231cdf",
+    "perks/check/src/contracts.json": "49d95e33ed9e3dff0c3c262146562ae96b3f6fe32d9483c7a9f6b2d808103221",
+    "perks/check/src/cws_check.py": "73a16a68a679ad58421b22ae9bec609b34562e77a582cadd624ad93a0b1fc63c",
+    "perks/check/src/cws_check.sh": "e741dd94e07bcb76981afe395773b092e44221ba85ae39a87ba5d95d18748de0",
+    "perks/check/test/case.json": "32464686e6a13e2349d6ab1f9203c479d9ab6f1565f8f5b4e568b0ec74240294",
+    "perks/check/test/fixture/good.blueprint.json": "c2111adc73d7248df9b49cff1e6cb0046e981c1fa7b76cce399bfe006c5f0b09",
+    "perks/corpus/manifesto.json": "00b3b67b45230b518d63d762c81b02b66400c4f2fe9e3e44d43802d233a63d5d",
+    "perks/corpus/metadata.json": "021509427ea8ae5d65f7e6ba2ce3e83465756c03f9349f4009b2b4a1e72d954f",
+    "perks/corpus/src/contracts.json": "0f46b2d6cbadc5a4d9366f8af5d6b7923cc8d3fd7a1c528d178447c4480df94f",
+    "perks/corpus/src/cws_corpus.py": "9f894a118ea2a38dbbdd729ac8b756e511d06b17733746eb4994d0e75ff7d63e",
+    "perks/corpus/src/cws_corpus.sh": "02038c2e38721e20bd48800d3a48e9919d07f2b0fef65205fbf133d5b2d79aae",
+    "perks/corpus/test/case.json": "8d794b23def2f2dd9eed0c24e79458028c95c9db48bb1dea64dcde47af2dbd49",
+    "perks/corpus/test/fixture/corpus/deadlock.blueprint.json": "c462bf0c2f2ae31919eb872373f39c7c77936bb27eae3c11e1c5bf264335b67c",
+    "perks/corpus/test/fixture/corpus/no-terminal.blueprint.json": "31f8cc75c4634f562a387ddff2bf6b0df7dfa9e4981df0c8cb0fbda98062cf4e",
+    "perks/corpus/test/fixture/corpus/unreachable.blueprint.json": "c771807f025198a5c1a2b11ed024b4ec8893cd81414eff4e38018c6f56c24472"
+  }
+}
