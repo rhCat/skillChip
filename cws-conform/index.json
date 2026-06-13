@@ -1,6 +1,6 @@
 {
   "skill": "cws-conform",
-  "skill_sha": "ebf45f22cd23da40ae16fb0d153137212dc6442054cc5caec6a10ac6c6ee7590",
+  "skill_sha": "31765259f9b52b755e860bef0bc3c26338219b72872d144c4814a7753bfc7232",
   "file_count": 28,
   "files": {
     "SKILL.md": "34723a1470dd6f8e3df4dbdc3e67cc6ac83854c59d4b8930803d9a6cdfe37955",
@@ -27,7 +27,7 @@
     "perks/vectors/manifesto.json": "3d9a2d66e6a4490f6e667000eb319525008d85770d7032d7b8eac4e0f4c02c06",
     "perks/vectors/metadata.json": "00ae4d7e2859f774e84f3c1ef2e73d07ea42b751d84704d1e88776c219e3aef9",
     "perks/vectors/src/contracts.json": "aee089ee69fa7eda4c79e7bb31395ebba624d807bfb97e5fc7bf7a7901e01dbb",
-    "perks/vectors/src/cws_vectors.py": "0f158890772a410ff79cb740192a13d33d0d94a2f18e59f184f36066fe85f94e",
+    "perks/vectors/src/cws_vectors.py": "3fa9c30ae3b62446425f0a1e33a28f1c05133b86518db9fc865a69f29e883ce5",
     "perks/vectors/src/cws_vectors.sh": "377f5180527c79d51b7e70225f7447e52795627025e7713816227e94ac0904e4",
     "perks/vectors/test/case.json": "cf2a21331fed903871976367340b5912dea5c8770c02ff42f3dfe9e6419bd054",
     "perks/vectors/test/fixture/corpus.json": "2bf0f5976141cb28f0d0eb9d3faba2f89e3a0f37b58ef9ae81bf3a44cf7cdeae"

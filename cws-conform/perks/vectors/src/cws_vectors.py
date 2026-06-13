@@ -28,7 +28,8 @@ from infra.cwp import canonical  # noqa: E402
 # vector-name prefix → the plan's P0-T07 coverage category
 CATS = [("ctrl_", "unicode"), ("str_", "unicode"), ("sort_", "unicode"),
         ("flt_", "number-format"), ("sweep_", "number-format"), ("int_", "number-format"), ("rfc", "number-format"),
-        ("nest_", "nesting"), ("lit_", "digests"), ("rec_", "digests"), ("chip_", "chip"), ("sig_", "signatures")]
+        ("nest_", "nesting"), ("lit_", "digests"), ("rec_", "digests"), ("chip_", "chip"),
+        ("sig_", "signatures"), ("pub_", "published")]
 
 
 def _cover(name):
@@ -50,8 +51,10 @@ def main() -> int:
     for vec in corpus:
         covers.add(_cover(vec["name"]))
         try:
-            canonical.canonicalize(vec["input"])
+            got = canonical.canonicalize(vec["input"])
             canonical.digest(vec["input"])
+            if "expected" in vec and got != vec["expected"]:  # a published vector carries external-truth output
+                failed.append({"name": vec["name"], "err": f"canonical != published expected: {got!r}"})
         except Exception as e:                                # a vector that won't canonicalize is a conformance failure
             failed.append({"name": vec["name"], "err": str(e)})
     if sig_corpus:
