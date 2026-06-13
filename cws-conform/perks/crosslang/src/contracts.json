@@ -1,0 +1,6 @@
+{
+  "tool": "cws_crosslang",
+  "inputs": {"CORPUS": {"type": "string", "required": true}, "SIG_CORPUS": {"type": "string", "required": false}},
+  "outputs": {"crosslang_out": {"path": "${RECORD_STORE}/crosslang.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/crosslang.json"}
+}

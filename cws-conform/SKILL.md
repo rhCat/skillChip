@@ -1,7 +1,7 @@
 ---
 skill: cws-conform
 name: CWP Conformance
-perks: [repin, doclint, vectors]
+perks: [repin, doclint, vectors, crosslang]
 ---
 
 # cws-conform — CWP Conformance (SV-1)
@@ -28,6 +28,7 @@ executor run-ledger.
 | `repin` | `cws_repin` | observe drift vs committed pins, regenerate indexes + manifest, record the chip_sha transition — writes to `TARGET_CHIP`'s index files |
 | `doclint` | `cws_doclint` | structural conformance lint for a spec doc — exists, title, normative, on-topic (P0-V10) — read-only / safe |
 | `vectors` | `cws_vectors` | replay the golden vector corpus (canonical + digest + sig verdicts) → conformance verdict (P0-T07/T17) — read-only / safe |
+| `crosslang` | `cws_crosslang` | diff the independent Go verifier vs canonical.py+sign.py over the corpus — the external anchor (P0-T08) — needs the go toolchain |
 
 - **`repin`** — set `TARGET_CHIP` (a chip dir: skill dirs each with a `perks.json`). Output: `repin.json`.
 - **`doclint`** — set `SPEC` (a `.md`) + optional `MIN_NORMATIVE` / `REQUIRE`. Output: `doclint.json`. This

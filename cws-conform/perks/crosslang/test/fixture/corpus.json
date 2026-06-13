@@ -1,0 +1,7 @@
+[
+  {"name": "lit_obj", "input": {"b": 2, "a": 1}},
+  {"name": "str_euro", "input": "€✓中"},
+  {"name": "flt_edge", "input": 1e21},
+  {"name": "int_big", "input": 1000000000000000000000000000000},
+  {"name": "nest", "input": {"k": [1, true, null, {"z": 0.002}]}}
+]

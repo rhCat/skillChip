@@ -1,0 +1,6 @@
+{
+  "_perk": "crosslang",
+  "requires": ["python3", "go"],
+  "vars": {"CORPUS": "${FIXTURE}/corpus.json"},
+  "expect": {"outputs": ["crosslang.json"], "contains": {"crosslang.json": ["\"match\": true", "\"diffs\": []"]}}
+}
