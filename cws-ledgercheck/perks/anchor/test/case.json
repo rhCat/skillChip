@@ -1,0 +1,9 @@
+{
+  "_perk": "anchor",
+  "requires": ["python3", "go"],
+  "vars": {"CHAIN_CORPUS": "${FIXTURE}/chain-corpus.json"},
+  "expect": {
+    "outputs": ["anchor.json"],
+    "contains": {"anchor.json": ["\"match\": true", "\"diffs\": []"]}
+  }
+}

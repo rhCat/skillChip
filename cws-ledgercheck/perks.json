@@ -8,6 +8,14 @@
       "tools": [
         "cws_ledgerverify"
       ]
+    },
+    {
+      "id": "anchor",
+      "summary": "external Go cold-verify anchor — the independent Go chain verifier reproduces verify_chain verdict-for-verdict over a corpus (P1-T04, SV-2)",
+      "destructive": false,
+      "tools": [
+        "cws_ledgeranchor"
+      ]
     }
   ]
 }

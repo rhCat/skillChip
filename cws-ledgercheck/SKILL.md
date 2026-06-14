@@ -1,17 +1,21 @@
 ---
 skill: cws-ledgercheck
 name: Ledger Integrity
-perks: [verify]
+perks: [verify, anchor]
 ---
 
 # cws-ledgercheck — Ledger Integrity (SV-2)
 
-Prove the audit substrate is tamper-evident: that the run-ledger is a sound provenance chain, not a log
-someone trusts. This is the rung where evidence becomes independently re-verifiable. The `verify` perk
-walks the executor's `run-ledger.json` (the format `infra/govern/executor.py` writes) and checks its
-invariants — structure, per-step provenance hashes, recognised refusal/waiver events (a recorded refusal
-is evidence, meta-rule M4), and **ordering**: the `ok` step records must form a contiguous prefix `1..N`;
-a gap means a step ran out of band, which the chain should never contain.
+Prove the audit substrate is tamper-evident: that a ledger is a sound provenance chain, not a log someone
+trusts. This is the rung where evidence becomes independently re-verifiable. `verify` handles two shapes:
+a **Ledger-v2 cryptographic chain** (JSONL / list / `{entries}`) is RE-VERIFIED by recomputing every
+record's `prev` as the prior link's RFC-8785 digest (`infra.cwp.ledger.verify_chain`) — a tampered field,
+a transplanted genesis, or a deleted record (seq gap) breaks the recompute and the offending record is
+named; and the executor's structural **`run-ledger.json`** (the format `infra/govern/executor.py` writes)
+is checked for per-step provenance hashes, recognised refusal/waiver events (a recorded refusal is
+evidence, meta-rule M4), and **ordering** (the `ok` step records form a contiguous prefix `1..N`).
+`anchor` runs the INDEPENDENT Go chain verifier (`verifiers/go chain`) and proves it reproduces
+`verify_chain` verdict-for-verdict over a corpus — the external anchor (meta-rule M3) for the chain.
 
 The recursive twist the plan promises at SV-2 — the checker verifies the ledger of its *own* verification
 run — falls out for free: `verify` runs through the executor, so its own run-ledger can be fed back to a
@@ -26,16 +30,20 @@ provenance hash, an ordering gap). A nonzero exit means the chain is broken. LOG
 ## Perks
 | perk | tool | nature |
 |---|---|---|
-| `verify` | `cws_ledgerverify` | walk a run-ledger; assert structure + ordering — read-only / safe |
+| `verify` | `cws_ledgerverify` | recompute a Ledger-v2 prev-chain (tamper/transplant/deletion-evident) or check a structural run-ledger — read-only / safe |
+| `anchor` | `cws_ledgeranchor` | build + run the independent Go chain verifier; prove it reproduces `verify_chain` over a corpus (needs `go`) |
 
-- **`verify`** — set `TARGET_LEDGER` (path to a `run-ledger.json`). Output: `ledgercheck.json`.
+- **`verify`** — set `TARGET_LEDGER` (a v2 chain — JSONL/list/`{entries}` — or a `run-ledger.json`).
+  Optional `EXPECT_RUN_ID`/`EXPECT_PLAN_SHA` (out-of-band) certify non-transplant; `LEDGER_ALLOW_LEGACY`
+  opts into auditing a v1 chain. Output: `ledgercheck.json`.
+- **`anchor`** — set `CHAIN_CORPUS` (named v2 chains with `expect_ok`). Output: `anchor.json`.
 
 ## Scope (buildable now vs the full SV-2 surface)
-Today's run-ledger is a **structural** chain (sequential, recorded, gap-evident) — not yet the
-cryptographic `seq`/`prev`/HMAC chain of **Ledger-v2** (plan P1). `verify` checks what exists now; the
-`torture` (N concurrent governed writers) and `crashloop` (kill-9 at write offsets) perks — and the
-Merkle-checkpoint verification — arrive when Ledger-v2 lands, and the external Go chain-checker becomes
-this skill's anchor then.
+`verify` recomputes the cryptographic `seq`/`prev` chain of **Ledger-v2** (P1-T01) and `anchor` provides
+the external Go cold-verify (P1-T04). Without an out-of-band expected origin the chain is proven only
+internally consistent — a chain re-linked under a new genesis would verify clean — which the signed Go
+anchor closes. The `torture` (N concurrent governed writers) and `crashloop` (kill-9 at write offsets)
+perks, and Merkle-checkpoint verification, arrive with durability (P1-T02 / P1-T09).
 
 ## How to use it
 Pick `verify`, copy `ledger.json` → `task-ledger.json`, set `TARGET_LEDGER` + `record_store`, then

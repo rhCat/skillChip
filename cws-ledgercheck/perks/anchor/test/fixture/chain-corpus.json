@@ -1,0 +1,133 @@
+[
+  {
+    "name": "sound",
+    "schema": 2,
+    "entries": [
+      {
+        "type": "genesis",
+        "schema": 2,
+        "seq": 0,
+        "run_id": "run-A",
+        "plan_sha": "plan-1",
+        "prev": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "task_id": "T1",
+        "verdict": "pass",
+        "evidence_sha": "a",
+        "seq": 1,
+        "prev": "dedbf61c5be04d754503e72ccd5114b1386fcfde0502ca0e98727ce292c88bef"
+      },
+      {
+        "task_id": "T2",
+        "verdict": "pass",
+        "evidence_sha": "b",
+        "seq": 2,
+        "prev": "a43cdfc93959758e7e012754ff56081788a5a3de0fd1407c36c0f7cfe6cc94cb"
+      }
+    ],
+    "expect_run_id": "run-A",
+    "expect_plan_sha": "plan-1",
+    "expect_ok": true
+  },
+  {
+    "name": "single-bit-tamper",
+    "schema": 2,
+    "entries": [
+      {
+        "type": "genesis",
+        "schema": 2,
+        "seq": 0,
+        "run_id": "run-A",
+        "plan_sha": "plan-1",
+        "prev": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "task_id": "T1",
+        "verdict": "pass",
+        "evidence_sha": "MUTATED",
+        "seq": 1,
+        "prev": "dedbf61c5be04d754503e72ccd5114b1386fcfde0502ca0e98727ce292c88bef"
+      },
+      {
+        "task_id": "T2",
+        "verdict": "pass",
+        "evidence_sha": "b",
+        "seq": 2,
+        "prev": "a43cdfc93959758e7e012754ff56081788a5a3de0fd1407c36c0f7cfe6cc94cb"
+      }
+    ],
+    "expect_ok": false
+  },
+  {
+    "name": "genesis-transplant",
+    "schema": 2,
+    "entries": [
+      {
+        "type": "genesis",
+        "schema": 2,
+        "seq": 0,
+        "run_id": "run-A",
+        "plan_sha": "plan-1",
+        "prev": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "task_id": "T1",
+        "verdict": "pass",
+        "evidence_sha": "a",
+        "seq": 1,
+        "prev": "dedbf61c5be04d754503e72ccd5114b1386fcfde0502ca0e98727ce292c88bef"
+      },
+      {
+        "task_id": "T2",
+        "verdict": "pass",
+        "evidence_sha": "b",
+        "seq": 2,
+        "prev": "a43cdfc93959758e7e012754ff56081788a5a3de0fd1407c36c0f7cfe6cc94cb"
+      }
+    ],
+    "expect_run_id": "IMPOSTOR",
+    "expect_plan_sha": "x",
+    "expect_ok": false
+  },
+  {
+    "name": "deleted-record-seq-gap",
+    "schema": 2,
+    "entries": [
+      {
+        "type": "genesis",
+        "schema": 2,
+        "seq": 0,
+        "run_id": "run-A",
+        "plan_sha": "plan-1",
+        "prev": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "task_id": "T2",
+        "verdict": "pass",
+        "evidence_sha": "b",
+        "seq": 2,
+        "prev": "dedbf61c5be04d754503e72ccd5114b1386fcfde0502ca0e98727ce292c88bef"
+      }
+    ],
+    "expect_ok": false
+  },
+  {
+    "name": "headless-no-genesis",
+    "schema": 2,
+    "entries": [
+      {
+        "type": "step",
+        "task_id": "evil",
+        "seq": 0,
+        "prev": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      {
+        "task_id": "evil2",
+        "seq": 1,
+        "prev": "7fe43509260155deaad02513806cf145cb424aab9c047cfa60d697a58ee81cd8"
+      }
+    ],
+    "expect_ok": false
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "tool": "cws_ledgeranchor",
+  "inputs": {
+    "CHAIN_CORPUS": {"type": "string", "required": true}
+  },
+  "outputs": {
+    "anchor_out": {"path": "${RECORD_STORE}/anchor.json", "type": "file"}
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/anchor.json"
+  }
+}
