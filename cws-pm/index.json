@@ -1,0 +1,17 @@
+{
+  "skill": "cws-pm",
+  "skill_sha": "27ebce9dd73987dd92f9dc26a7aa37b787a8e42196344c45940433940d1a9160",
+  "file_count": 10,
+  "files": {
+    "SKILL.md": "a77b98008a8f6a393bdd3c4d812c1abeb604b3ccbc255ead73cd66494464d1f6",
+    "blueprint.json": "6cbab838f2998188192e1e233e18c026716c861d4676592169d9070906374fa3",
+    "perks.json": "35270e479056d57050dd442c5d67aba4fefb597393b3e7d7c66a3ce54f0002df",
+    "perks/run/manifesto.json": "b502d88d1475cd8fb33972a4e32f45513ea3a7c7da1ffedf80165da18638ac30",
+    "perks/run/metadata.json": "b7cb29e1e033a3cb0fe6a9392c3a3a7980d0c099ec87ea154a605b9bbcc6ce7f",
+    "perks/run/src/contracts.json": "b4b98afe6dffe7ce327ceb33b0f189a24b2c6e23f8dea6e7abc4de2059ecc54e",
+    "perks/run/src/cws_pm.py": "96ae6667d1f35d7f06ece439857a0e4c98856f0600a8a6b66935635035d6ea66",
+    "perks/run/src/cws_pm.sh": "9031c360a08ec6dc856beabeeb2fb099b890bcb954fbdc87f85adbe4ce9ab369",
+    "perks/run/test/case.json": "0f0d12c4c0deea894730a659a2e96ff5119762db8aa8f1c7130dd76fc9d8e4ae",
+    "perks/run/test/fixture/playbook.json": "b4babe9f0440e213d216292dc82f776979cd0de06f153ee54f8953e9af29fc2d"
+  }
+}
