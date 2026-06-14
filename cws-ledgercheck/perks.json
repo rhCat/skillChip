@@ -3,7 +3,7 @@
   "perks": [
     {
       "id": "verify",
-      "summary": "verify a run-ledger's structural + ordering integrity (SV-2 precursor)",
+      "summary": "verify a ledger — Ledger-v2 cryptographic prev-chain recompute (tamper/transplant) + structural run-ledger integrity (SV-2)",
       "destructive": false,
       "tools": [
         "cws_ledgerverify"

@@ -13,6 +13,9 @@
   },
   "env": {
     "TARGET_LEDGER": "${TARGET_LEDGER}",
+    "EXPECT_RUN_ID": "${EXPECT_RUN_ID}",
+    "EXPECT_PLAN_SHA": "${EXPECT_PLAN_SHA}",
+    "LEDGER_ALLOW_LEGACY": "${LEDGER_ALLOW_LEGACY}",
     "RECORD_STORE": "${record_store}"
   },
   "requires": [

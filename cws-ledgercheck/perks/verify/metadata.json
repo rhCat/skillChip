@@ -1,14 +1,15 @@
 {
   "perk": "verify",
   "skill": "cws-ledgercheck",
-  "description": "verify a run-ledger's structural + ordering integrity (the SV-2 'verify' act)",
+  "description": "verify a ledger — Ledger-v2 cryptographic prev-chain recompute + structural run-ledger integrity (the SV-2 'verify' act)",
   "rules": [
     "read-only — walks the target ledger, never writes to it",
-    "a recorded refusal/waiver is evidence, not corruption (meta-rule M4)",
-    "a gap in the ok-step prefix is named as an out-of-band run"
+    "a Ledger-v2 chain (JSONL / list / {entries}) is re-verified cryptographically: each prev is recomputed as the prior link's digest (infra.cwp.ledger.verify_chain); tamper or a transplanted genesis is NAMED",
+    "a structural run-ledger ({script, runs}) is checked for step provenance + 1..N ordering",
+    "a recorded refusal/waiver is evidence, not corruption (meta-rule M4)"
   ],
-  "usage": "Set TARGET_LEDGER (path to a run-ledger.json). Output: ledgercheck.json with {records, bad_records, chain}.",
-  "limitation": "Verifies the structural chain that exists today (executor run-ledger). Cryptographic prev/HMAC chain checks (the torture / crashloop perks) arrive with Ledger-v2 (plan P1).",
+  "usage": "Set TARGET_LEDGER (a Ledger-v2 chain — JSONL/list/{entries} — or an executor run-ledger.json). Output: ledgercheck.json with {mode, records, bad_records, chain}.",
+  "limitation": "Recomputes the prev-hash chain (RFC-8785 form, Go-anchored). Concurrency/crash durability (the torture / crashloop perks) arrives with P1-T02/P1-T09.",
   "minimal_example": {
     "perk": "verify",
     "vars": {
