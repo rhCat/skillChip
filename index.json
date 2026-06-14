@@ -1,6 +1,6 @@
 {
   "chip": "skillChip",
-  "count": 29,
+  "count": 30,
   "skills": [
     {
       "skill": "ci-codeqc",
@@ -51,6 +51,11 @@
       "skill": "cws-pm",
       "skill_sha": "ce807db0435a73ce0e04d03ec61de4605083ad2deea7e230e101bcf1607fe042",
       "file_count": 10
+    },
+    {
+      "skill": "cws-redteam-sw",
+      "skill_sha": "15a4666c8dc907c26fc24ab240b0797ffd4f31240bc7b7f92696be1d32e7ed69",
+      "file_count": 22
     },
     {
       "skill": "data",
@@ -148,5 +153,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "d551f8e2a0b0112749d9951154c2a368e66807c6aa9c1503ed28b16a55e4aa74"
+  "chip_sha": "60241c6e0edc821ab1e140f0d84cb2d6906ccd884cd84b2e25d074770203dba8"
 }

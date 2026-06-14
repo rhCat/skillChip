@@ -1,0 +1,14 @@
+{
+  "tool": "rt_tamper_script",
+  "inputs": {},
+  "outputs": {
+    "redteam_out": {
+      "path": "${RECORD_STORE}/redteam.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/redteam.json"
+  }
+}

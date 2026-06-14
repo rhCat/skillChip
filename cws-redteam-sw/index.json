@@ -1,0 +1,29 @@
+{
+  "skill": "cws-redteam-sw",
+  "skill_sha": "15a4666c8dc907c26fc24ab240b0797ffd4f31240bc7b7f92696be1d32e7ed69",
+  "file_count": 22,
+  "files": {
+    "SKILL.md": "294d4f03d12710426575d39bd713442dd9caa1c59a507616f747ee1a3b12f60e",
+    "blueprint.json": "f6babe1bd03b038743a8d36eebbfa83a698573eb6af7fad7f518ec291ada168d",
+    "ledger.json": "3d3c0673151735f6be2ba7c1c36008adab453f515a6b166740165b1c2334524a",
+    "perks.json": "8089b6808f87a56f899724d8205bb5356e56e502c77507fa3e41f6359aeebd4d",
+    "perks/rt-ledger-tamper/manifesto.json": "2975e1386205e4901ec5a041c0a29d5eae03ddf3feade59268d861eca85f32e3",
+    "perks/rt-ledger-tamper/metadata.json": "2263df87cdf081149adaf38505af1cffb808cfc5b71b2006a64f76aa428945a7",
+    "perks/rt-ledger-tamper/src/contracts.json": "174cc5482f482db3b57e2e41d581e590dc17361e74b78e9bb8e7de6bdd46e38b",
+    "perks/rt-ledger-tamper/src/rt_ledger_tamper.py": "698af9d942ec43f288403fa21d2b682943ab4fad38502f5ee3a67dc8fa246b6c",
+    "perks/rt-ledger-tamper/src/rt_ledger_tamper.sh": "9f5cb59d435f9577d1f09f303bc16626d19a72d88c37530c5ad1411257442a7b",
+    "perks/rt-ledger-tamper/test/case.json": "5e84dbd8f81de93ce32374f3c2d8154eba358ca63b5e51dcb081f139519949df",
+    "perks/rt-snippet-toctou/manifesto.json": "c4fa585b3700663f684f93ef5c89b0582c6e8f2d02d2b9555993e6db0dabc4b3",
+    "perks/rt-snippet-toctou/metadata.json": "7e5669634d6db9f90c570a12f0df98f0dc8f66f8f8f71a3dd09b0d98860ce215",
+    "perks/rt-snippet-toctou/src/contracts.json": "1ba01f435627cf02b5af72997ee908193cbc087005917d34a25a155f5e484391",
+    "perks/rt-snippet-toctou/src/rt_snippet_toctou.py": "13ec2edbeea01296557ecefbe515c891e8a0ca4feefb579ce50616cb6cde6515",
+    "perks/rt-snippet-toctou/src/rt_snippet_toctou.sh": "c7f89a6294e6d4ff444d4b76dde84e21d5da3ff507f177ca6def20f04aa039ea",
+    "perks/rt-snippet-toctou/test/case.json": "2f7a99a2809c9e95cebe9aaeffc7a47668638e4c0c62df83be5783d95eef4683",
+    "perks/rt-tamper-script/manifesto.json": "f63a15aeb97af4a2be39ff7d61a487c7e34e0acfb4ef4c52adeb1b16f9981e63",
+    "perks/rt-tamper-script/metadata.json": "885d7278d970fc5a54ccbd1600cb67a789ce6b2c5fca8075240f16d435ce57e5",
+    "perks/rt-tamper-script/src/contracts.json": "e597bb435037172824573ead2a0f9e378d818e2ebac300e22cc5834818b11057",
+    "perks/rt-tamper-script/src/rt_tamper_script.py": "4ff1bde0a8e443819e87b00f75bc9cb6d58c47a8c4496b3c65316721bc79ae8a",
+    "perks/rt-tamper-script/src/rt_tamper_script.sh": "bdded33b2f57ebbd27f485b44b5ee46aebd00e0405e5253e21be901d9a08f542",
+    "perks/rt-tamper-script/test/case.json": "d6aa153b362f8031a53c102743d0f53bb433aa5cd1f46782e3b26ffc266a3d2f"
+  }
+}
