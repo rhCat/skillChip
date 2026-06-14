@@ -1,6 +1,7 @@
 {
   "_perk": "interop",
   "requires": ["openssl", "go"],
+  "requires_cmd": ["d=$(mktemp -d); openssl genpkey -algorithm ed25519 -out $d/k 2>/dev/null && echo x > $d/m && openssl pkeyutl -sign -inkey $d/k -rawin -in $d/m -pkeyopt instance:ed25519ph >/dev/null 2>&1; r=$?; rm -rf $d; exit $r"],
   "vars": {
     "COSIGN_ENVELOPE": "${FIXTURE}/cosign_envelope.json",
     "COSIGN_PUB": "${FIXTURE}/cosign_pub.pem"
