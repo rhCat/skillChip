@@ -3,7 +3,7 @@
   "perks": [
     {
       "id": "rt-tamper-script",
-      "summary": "adversarial: edit a compiled script after the executor snapshots it \u2014 the tamper gate (exit 4) must refuse (software-tier SV-1/SV-2)",
+      "summary": "adversarial: edit a compiled script after the executor snapshots it \u2014 the tamper gate (exit 4) must refuse (software-tier SV-1/SV-2/SV-3-spine)",
       "destructive": false,
       "tools": [
         "rt_tamper_script"
@@ -11,7 +11,7 @@
     },
     {
       "id": "rt-snippet-toctou",
-      "summary": "adversarial: mutate a perk porter after blessing \u2014 the per-step snippet check (exit 8) must refuse (software-tier SV-1/SV-2)",
+      "summary": "adversarial: mutate a perk porter after blessing \u2014 the per-step snippet check (exit 8) must refuse (software-tier SV-1/SV-2/SV-3-spine)",
       "destructive": false,
       "tools": [
         "rt_snippet_toctou"
@@ -19,10 +19,34 @@
     },
     {
       "id": "rt-ledger-tamper",
-      "summary": "adversarial: tamper a Ledger-v2 record \u2014 the chain verifier (verify_chain) must refuse (software-tier SV-1/SV-2)",
+      "summary": "adversarial: tamper a Ledger-v2 record \u2014 the chain verifier (verify_chain) must refuse (software-tier SV-1/SV-2/SV-3-spine)",
       "destructive": false,
       "tools": [
         "rt_ledger_tamper"
+      ]
+    },
+    {
+      "id": "rt-grant-replay",
+      "summary": "adversarial: replay a spent grant nonce \u2014 the grant verifier must refuse (replay) (software-tier SV-1/SV-2/SV-3-spine)",
+      "destructive": false,
+      "tools": [
+        "rt_grant_replay"
+      ]
+    },
+    {
+      "id": "rt-grant-expired",
+      "summary": "adversarial: present an expired grant \u2014 the verifier must refuse (expired), +-60s skew (software-tier SV-1/SV-2/SV-3-spine)",
+      "destructive": false,
+      "tools": [
+        "rt_grant_expired"
+      ]
+    },
+    {
+      "id": "rt-grant-forged",
+      "summary": "adversarial: tamper a signed grant claim \u2014 the verifier must refuse (bad_signature), offline (software-tier SV-1/SV-2/SV-3-spine)",
+      "destructive": false,
+      "tools": [
+        "rt_grant_forged"
       ]
     }
   ]

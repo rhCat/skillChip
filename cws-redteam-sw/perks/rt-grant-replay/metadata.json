@@ -1,0 +1,17 @@
+{
+  "perk": "rt-grant-replay",
+  "skill": "cws-redteam-sw",
+  "description": "adversarial: replay a spent grant nonce; confirm the grant verifier REFUSES it (SV-3 spine, software tier).",
+  "rules": [
+    "mounts a real attack on the Ed25519-DSSE grant verifier (infra.exec.grants, P2-T01)",
+    "asserts the verifier REFUSES the attack with the expected reason (M4 \u2014 a refusal is evidence)",
+    "oracle: a clean grant must be ACCEPTED, so the perk goes RED if the verifier goes no-op",
+    "exit 0 iff the boundary held"
+  ],
+  "usage": "No inputs. Output: redteam.json {attack, clean_accepted, refused, boundary_held}.",
+  "limitation": "Software-tier (the signed-grant crypto). The kernel enforcement of the grant (exod, P2-T02) is Linux-only and not built yet.",
+  "minimal_example": {
+    "perk": "rt-grant-replay",
+    "vars": {}
+  }
+}
