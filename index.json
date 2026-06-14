@@ -54,8 +54,8 @@
     },
     {
       "skill": "cws-redteam-sw",
-      "skill_sha": "15a4666c8dc907c26fc24ab240b0797ffd4f31240bc7b7f92696be1d32e7ed69",
-      "file_count": 22
+      "skill_sha": "1a2583728aebdc36d88c92cc860cdd4f67bce539b8a8e637861f122249f532af",
+      "file_count": 40
     },
     {
       "skill": "data",
@@ -153,5 +153,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "60241c6e0edc821ab1e140f0d84cb2d6906ccd884cd84b2e25d074770203dba8"
+  "chip_sha": "3c33559fbbd9f66aec0628100affe50a82a5e0b2b1e6696640687ca1a5322d38"
 }

@@ -1,7 +1,7 @@
 ---
 skill: cws-redteam-sw
 name: Software-tier red-team corpus
-perks: [rt-tamper-script, rt-snippet-toctou, rt-ledger-tamper]
+perks: [rt-tamper-script, rt-snippet-toctou, rt-ledger-tamper, rt-grant-replay, rt-grant-expired, rt-grant-forged]
 ---
 
 # cws-redteam-sw — Software-tier red-team corpus (SV-1 / SV-2)
@@ -26,6 +26,9 @@ goes silently no-op. The pass is *"the boundary held — it failed the attack on
 | `rt-tamper-script` | `rt_tamper_script` | edit a compiled script after the snapshot → executor tamper check (exit 4) |
 | `rt-snippet-toctou` | `rt_snippet_toctou` | mutate a perk porter after blessing → per-step snippet check (exit 8) |
 | `rt-ledger-tamper` | `rt_ledger_tamper` | flip a Ledger-v2 record → `chainverify.verify_chain` |
+| `rt-grant-replay` | `rt_grant_replay` | replay a spent grant nonce → `grants.verify_grant` (replay) |
+| `rt-grant-expired` | `rt_grant_expired` | present an expired grant → `grants.verify_grant` (expired, ±60s skew) |
+| `rt-grant-forged` | `rt_grant_forged` | tamper a signed grant claim → `grants.verify_grant` (bad_signature, offline) |
 
 Each perk takes no inputs and writes `redteam.json` (`{attack, clean_accepted, refused, boundary_held}`);
 exit 0 iff the boundary held.
