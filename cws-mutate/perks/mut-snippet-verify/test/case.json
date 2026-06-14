@@ -1,0 +1,7 @@
+{
+  "_perk": "mut-snippet-verify",
+  "skip": "pinned to the live repo target (infra/govern/snippetverify.py); proven by the governed drive (mutation_score 1.0) + python3 -m pytest tests/test_snippetverify.py -q -p no:cacheprovider in the suite",
+  "requires": ["python3"],
+  "vars": {"PROJECT_DIR": "<repo root>", "THRESHOLD": "0.90"},
+  "expect": {"outputs": ["mutate.json"], "contains": {"mutate.json": ["\"mutation_score\": 1.0"]}}
+}

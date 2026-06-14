@@ -1,0 +1,12 @@
+{
+  "tool": "cws_chainverify",
+  "inputs": {
+    "PROJECT_DIR": {"type": "string", "required": true},
+    "TARGET": {"type": "string", "required": false},
+    "TEST_CMD": {"type": "string", "required": false},
+    "THRESHOLD": {"type": "string", "required": false},
+    "MAX_MUTANTS": {"type": "string", "required": false}
+  },
+  "outputs": {"mutate_out": {"path": "${RECORD_STORE}/mutate.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/mutate.json"}
+}
