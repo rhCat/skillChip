@@ -1,0 +1,14 @@
+{
+  "perk": "torture",
+  "skill": "cws-ledgercheck",
+  "description": "concurrency/durability torture for the Ledger-v2 chain — N concurrent durable_append writers must serialize into ONE valid prev-hash chain, zero lost (P1-T09, SV-2)",
+  "rules": [
+    "spawns WORKERS processes each doing APPENDS_PER durable_append calls to one chain file",
+    "passes iff zero lost, every line parses, verify_chain ok, contiguous seq (a single serialized chain)",
+    "destructive: spawns processes + writes a chain file under the record store",
+    "run THROUGH the executor so its own run-ledger can be re-verified by cws-ledgercheck/verify (the recursive SV-2 act)"
+  ],
+  "usage": "Optional WORKERS (default 8), APPENDS_PER (default 200), CHAIN_PATH (default RECORD_STORE/torture-chain.jsonl). Output: torture.json with {entry_count, lost, verify_chain_ok, seqs_contiguous, status}.",
+  "limitation": "Concurrent-append torture; the kill-9 crash variant is exercised by infra.cwp.torture.run_crash_torture (P1-T02) and the unit suite.",
+  "minimal_example": {"perk": "torture", "vars": {"WORKERS": "8", "APPENDS_PER": "200"}}
+}

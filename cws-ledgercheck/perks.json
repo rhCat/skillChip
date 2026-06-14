@@ -16,6 +16,14 @@
       "tools": [
         "cws_ledgeranchor"
       ]
+    },
+    {
+      "id": "torture",
+      "summary": "concurrency/durability torture — N concurrent durable_append writers must serialize into ONE valid prev-hash chain, zero lost (P1-T09, SV-2)",
+      "destructive": true,
+      "tools": [
+        "cws_torture"
+      ]
     }
   ]
 }

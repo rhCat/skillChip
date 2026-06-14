@@ -1,0 +1,10 @@
+{
+  "tool": "cws_torture",
+  "inputs": {
+    "WORKERS": {"type": "string", "required": false},
+    "APPENDS_PER": {"type": "string", "required": false},
+    "CHAIN_PATH": {"type": "string", "required": false}
+  },
+  "outputs": {"torture_out": {"path": "${RECORD_STORE}/torture.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/torture.json"}
+}

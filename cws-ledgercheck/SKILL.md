@@ -1,7 +1,7 @@
 ---
 skill: cws-ledgercheck
 name: Ledger Integrity
-perks: [verify, anchor]
+perks: [verify, anchor, torture]
 ---
 
 # cws-ledgercheck — Ledger Integrity (SV-2)
@@ -32,6 +32,7 @@ provenance hash, an ordering gap). A nonzero exit means the chain is broken. LOG
 |---|---|---|
 | `verify` | `cws_ledgerverify` | recompute a Ledger-v2 prev-chain (tamper/transplant/deletion-evident) or check a structural run-ledger — read-only / safe |
 | `anchor` | `cws_ledgeranchor` | build + run the independent Go chain verifier; prove it reproduces `verify_chain` over a corpus (needs `go`) |
+| `torture` | `cws_torture` | N concurrent `durable_append` writers must serialize into ONE valid chain, zero lost — destructive (spawns processes + writes a chain) |
 
 - **`verify`** — set `TARGET_LEDGER` (a v2 chain — JSONL/list/`{entries}` — or a `run-ledger.json`).
   Optional `EXPECT_RUN_ID`/`EXPECT_PLAN_SHA` (out-of-band) certify non-transplant; `LEDGER_ALLOW_LEGACY`
