@@ -29,7 +29,7 @@
     },
     {
       "skill": "cws-ledgercheck",
-      "skill_sha": "73a09d136571547087320e2cb6bfd15c004af75020a2f5f264079349083fc8cf",
+      "skill_sha": "73e7f853c96eae0be5a0494d197393761f43ace81c470538041f264e7658c0cb",
       "file_count": 20
     },
     {
@@ -148,5 +148,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "0049c4814f0fa556177034c94438398c593ffac32315c75b3132c7bacebe5f5e"
+  "chip_sha": "4546f54c7969ebee9053d30dbe5cb3a491a65cc2384c376adbcae05a1fb0f1dc"
 }

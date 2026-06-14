@@ -33,7 +33,7 @@ if os.path.isdir(os.path.join(_root, "infra", "cwp")):
 
 from infra.cwp import ledger as _ledger  # noqa: E402
 
-EVENT_KINDS = {"tamper_refused", "oversight_refused", "oversight_waived"}
+EVENT_KINDS = {"tamper_refused", "oversight_refused", "oversight_waived", "snippet_refused"}
 
 
 def _is_chain(ledger):
