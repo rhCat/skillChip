@@ -1,0 +1,29 @@
+{
+  "skill": "cws-redteam-sw",
+  "perks": [
+    {
+      "id": "rt-tamper-script",
+      "summary": "adversarial: edit a compiled script after the executor snapshots it \u2014 the tamper gate (exit 4) must refuse (software-tier SV-1/SV-2)",
+      "destructive": false,
+      "tools": [
+        "rt_tamper_script"
+      ]
+    },
+    {
+      "id": "rt-snippet-toctou",
+      "summary": "adversarial: mutate a perk porter after blessing \u2014 the per-step snippet check (exit 8) must refuse (software-tier SV-1/SV-2)",
+      "destructive": false,
+      "tools": [
+        "rt_snippet_toctou"
+      ]
+    },
+    {
+      "id": "rt-ledger-tamper",
+      "summary": "adversarial: tamper a Ledger-v2 record \u2014 the chain verifier (verify_chain) must refuse (software-tier SV-1/SV-2)",
+      "destructive": false,
+      "tools": [
+        "rt_ledger_tamper"
+      ]
+    }
+  ]
+}

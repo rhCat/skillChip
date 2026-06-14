@@ -1,0 +1,17 @@
+{
+  "perk": "rt-snippet-toctou",
+  "skill": "cws-redteam-sw",
+  "description": "adversarial red-team: mutate a perk porter after blessing \u2014 the per-step snippet check (exit 8) must refuse. Software tier (SV-1/SV-2), NOT the SV-3 kernel boundary.",
+  "rules": [
+    "mounts a real attack in a throwaway sandbox (never touches the live tree)",
+    "asserts the boundary (infra.govern.snippetverify via executor) REFUSES the attack \u2014 a recorded refusal is evidence (M4)",
+    "carries an ORACLE: a clean control must be ACCEPTED, so the perk goes RED if the gate goes silently no-op",
+    "exit 0 iff the boundary held; nonzero iff the attack got through (a breach)"
+  ],
+  "usage": "No inputs. Output: redteam.json with {attack, clean_accepted, refused, boundary_held}.",
+  "limitation": "Software-trust boundary only. The SV-3 kernel corpus (scan-disabled, over exod/sandbox) is the kernel cws-redteam (P2-T08), gated on the exod subject.",
+  "minimal_example": {
+    "perk": "rt-snippet-toctou",
+    "vars": {}
+  }
+}

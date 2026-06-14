@@ -1,0 +1,18 @@
+{
+  "_perk": "rt-tamper-script",
+  "sequence": [
+    "rt_tamper_script"
+  ],
+  "tools": {
+    "rt_tamper_script": {
+      "binary": "python3",
+      "params": {}
+    }
+  },
+  "env": {
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}
