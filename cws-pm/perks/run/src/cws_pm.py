@@ -60,54 +60,59 @@ def main() -> int:
     stop_on_fail = os.environ.get("STOP_ON_FAIL", "").lower() in ("1", "true", "yes")
 
     redeemed = _redeemed(swarm) if swarm else set()
-    results, counts = [], {"redeemed": 0, "skipped": 0, "failed": 0, "blocked": 0, "dry": 0}
+    results = []
+    counts = {"already_redeemed": 0, "redeemed": 0, "ran": 0,
+              "blocked_deps": 0, "blocked_validator": 0, "failed": 0, "dry": 0}
+
+    def deps_of(tid):
+        p = os.path.join(swarm, f"{tid}.json")
+        return json.load(open(p)).get("depends_on", []) if (swarm and tid and os.path.isfile(p)) else []
 
     for st in steps:
         tid, skill, perk = st.get("task_id"), st.get("skill"), st.get("perk")
         rec = {"task_id": tid, "skill": skill, "perk": perk}
-        if not os.path.isdir(os.path.join(registry.SKILLCHIP, skill or "")):
-            rec["status"] = "error"; rec["detail"] = f"unknown skill: {skill}"; counts["failed"] += 1
-            results.append(rec)
-            if stop_on_fail:
-                break
-            continue
+        # --- TRACK: classify each task against the plan before driving anything ---
         if tid and tid in redeemed:
-            rec["status"] = "skipped"; rec["detail"] = "already redeemed"; counts["skipped"] += 1
-            results.append(rec); continue
+            rec["status"] = "redeemed"; rec["detail"] = "already redeemed"
+            counts["already_redeemed"] += 1; results.append(rec); continue
+        if not os.path.isdir(os.path.join(registry.SKILLCHIP, skill or "")):
+            rec["status"] = "blocked:validator"; rec["detail"] = f"validator not built: {skill}"
+            counts["blocked_validator"] += 1; results.append(rec); continue
+        unmet = [d for d in deps_of(tid) if d not in redeemed]
+        if unmet:
+            rec["status"] = "blocked:deps"; rec["detail"] = f"deps not redeemed: {unmet}"
+            counts["blocked_deps"] += 1; results.append(rec); continue
         if dry:
-            rec["status"] = "dry"; rec["detail"] = "would fire"; counts["dry"] += 1
+            rec["status"] = "dry"; rec["detail"] = "ready — would fire"; counts["dry"] += 1
             results.append(rec); continue
-
-        rs = os.path.join(store, f"step-{tid or skill}")
-        os.makedirs(rs, exist_ok=True)
+        # --- DRIVE: this task is ready -> fire its validator through govd, then redeem on that run ---
+        rs = os.path.join(store, f"step-{tid or skill}"); os.makedirs(rs, exist_ok=True)
         r = govd_client.run_governed(govd, {"skill": skill, "perk": perk, "record_store": rs, "vars": st.get("vars", {})})
-        if r.get("decision") != "allow" or r.get("error"):
-            rec["status"] = "blocked"; rec["detail"] = r.get("error") or f"decision={r.get('decision')}"
-            counts["blocked"] += 1; results.append(rec)
+        if r.get("decision") != "allow" or r.get("error") or \
+           any(s.get("exit") not in (0, None) for s in r.get("results", [])):
+            rec["status"] = "failed"; rec["detail"] = r.get("error") or f"decision={r.get('decision')} steps={r.get('results')}"
+            counts["failed"] += 1; results.append(rec)
             if stop_on_fail:
                 break
             continue
-        if any(s.get("exit") not in (0, None) for s in r.get("results", [])):
-            rec["status"] = "failed"; rec["detail"] = f"steps={r.get('results')}"; counts["failed"] += 1
-            results.append(rec)
-            if stop_on_fail:
-                break
-            continue
-        rec["status"] = "ran"; rec["run_id"] = r.get("run_id")
+        rec["status"] = "ran"; rec["run_id"] = r.get("run_id"); counts["ran"] += 1
         if st.get("redeem") and tid and swarm:                # redeem on THIS governed run's own ledger
             evidence = os.path.join(govd_root, r["run_id"], "ledger.json")
             govd_client.run_governed(govd, {"skill": "cws-observe", "perk": "redeem",
                  "record_store": os.path.join(rs, "redeem"),
                  "vars": {"SWARM_DIR": swarm, "TASK_ID": tid, "RUN_LEDGER": evidence, "DONE_LEDGER": done_ledger}})
-            redj = json.load(open(os.path.join(rs, "redeem", "redeem.json"))) if os.path.isfile(os.path.join(rs, "redeem", "redeem.json")) else {}
+            rp = os.path.join(rs, "redeem", "redeem.json")
+            redj = json.load(open(rp)) if os.path.isfile(rp) else {}
             if redj.get("verdict") == "pass":
-                rec["status"] = "redeemed"; counts["redeemed"] += 1
+                rec["status"] = "redeemed"; counts["ran"] -= 1; counts["redeemed"] += 1
+                redeemed.add(tid)                            # so a downstream ready task cascades this run
             else:
                 rec["redeem"] = redj.get("verdict"); rec["detail"] = redj.get("reason", "")
         results.append(rec)
 
-    status = "ok" if counts["failed"] == 0 and counts["blocked"] == 0 else "fail"
-    report = {"status": status, "dry_run": dry, "total": len(steps), "counts": counts, "steps": results}
+    status = "ok" if counts["failed"] == 0 else "fail"     # blocked is a tracked state, not a failure
+    report = {"status": status, "dry_run": dry, "total": len(steps), "redeemed_total": len(redeemed),
+              "counts": counts, "steps": results}
     json.dump(report, open(out, "w"), indent=2)
     print(json.dumps({"tool": "cws_pm", "status": status, "counts": counts, "report": out}))
     return 0 if status == "ok" else 1

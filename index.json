@@ -49,7 +49,7 @@
     },
     {
       "skill": "cws-pm",
-      "skill_sha": "27ebce9dd73987dd92f9dc26a7aa37b787a8e42196344c45940433940d1a9160",
+      "skill_sha": "c3bab4fb38c113c8c8adafdc9e487a09381b722d414e61d4a7980e9674a1a582",
       "file_count": 10
     },
     {
@@ -148,5 +148,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "c1fafca037ed0826006ac1c2f4032def801f2ebeeecf77af5dc2b924899097a0"
+  "chip_sha": "95298c03ea70868d27fd309a22f15cc74d432a80cadce637bc2dd16f24a6ac8f"
 }
