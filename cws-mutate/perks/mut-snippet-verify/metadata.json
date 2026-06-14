@@ -1,0 +1,14 @@
+{
+  "perk": "mut-snippet-verify",
+  "skill": "cws-mutate",
+  "description": "R3 mutation gate pinned to the per-step snippet TOCTOU check (P1-T05) — TARGET=infra/govern/snippetverify.py, mutation_score must stay >= 0.90 (P1-T10, SV-2)",
+  "rules": [
+    "TARGET and TEST_CMD are PINNED in the manifesto (a standing enforcement surface, not caller-chosen)",
+    "passes iff the test slice kills >= THRESHOLD (default 0.90) of single-token mutants of the target",
+    "PROJECT_DIR (the repo root) flows from the task-ledger; the engine sandboxes a copy and restores it",
+    "the target is a prose-clean executable core so survivors are real, killable comparisons"
+  ],
+  "usage": "Set PROJECT_DIR (repo root); optional THRESHOLD, MAX_MUTANTS. Output: mutate.json with {mutation_score, killed, survived}.",
+  "limitation": "Pinned to the live repo target, so it has no hermetic fixture self-test; exercised by the governed drive (score 1.0) and by python3 -m pytest tests/test_snippetverify.py -q -p no:cacheprovider in the suite.",
+  "minimal_example": {"perk": "mut-snippet-verify", "vars": {"PROJECT_DIR": "/path/to/cyberware"}}
+}

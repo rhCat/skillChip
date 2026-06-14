@@ -1,7 +1,7 @@
 ---
 skill: cws-mutate
 name: Mutation Testing
-perks: [mutate]
+perks: [mutate, mut-chain-verifier, mut-snippet-verify]
 ---
 
 # cws-mutate — Mutation Testing (V-MUT)
@@ -28,9 +28,15 @@ tokens), or `mutation_score < threshold` (survivors listed by id). LOGS TO CHECK
 | perk | tool | nature |
 |---|---|---|
 | `mutate` | `cws_mutate` | mutate a target, run a test slice, score survivors — read-only / safe (operates on a sandbox copy) |
+| `mut-chain-verifier` | `cws_chainverify` | R3 gate PINNED to `infra/cwp/chainverify.py` (the Ledger-v2 chain verifier) — score ≥ 0.90 |
+| `mut-snippet-verify` | `cws_snippetverify` | R3 gate PINNED to `infra/govern/snippetverify.py` (per-step snippet TOCTOU) — score ≥ 0.90 |
 
 - **`mutate`** — set `PROJECT_DIR` (copied to a sandbox), `TARGET` (file within it), `TEST_CMD` (the
   slice; nonzero exit = killed). Optional `THRESHOLD` (default `0.90`), `MAX_MUTANTS` (default `50`).
+- **`mut-chain-verifier` / `mut-snippet-verify`** (P1-T10, SV-2) — the standing R3 gates: `TARGET` +
+  `TEST_CMD` are PINNED in the manifesto to a prose-clean executable core + its mutation-pinning slice, so
+  the perk encodes which enforcement surface it protects. Set only `PROJECT_DIR` (the repo root). Both
+  measure a real **1.0** today.
 
 > Mutation is **whole-file**: against a CLI-bearing module (`__main__`/argparse/print) the score is
 > diluted by mutants outside the gate's decision logic, so point `TARGET` at the tightest module that

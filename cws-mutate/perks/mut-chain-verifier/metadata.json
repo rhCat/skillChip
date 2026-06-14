@@ -1,0 +1,14 @@
+{
+  "perk": "mut-chain-verifier",
+  "skill": "cws-mutate",
+  "description": "R3 mutation gate pinned to the Ledger-v2 chain verifier (P1-T01/T04) — TARGET=infra/cwp/chainverify.py, mutation_score must stay >= 0.90 (P1-T10, SV-2)",
+  "rules": [
+    "TARGET and TEST_CMD are PINNED in the manifesto (a standing enforcement surface, not caller-chosen)",
+    "passes iff the test slice kills >= THRESHOLD (default 0.90) of single-token mutants of the target",
+    "PROJECT_DIR (the repo root) flows from the task-ledger; the engine sandboxes a copy and restores it",
+    "the target is a prose-clean executable core so survivors are real, killable comparisons"
+  ],
+  "usage": "Set PROJECT_DIR (repo root); optional THRESHOLD, MAX_MUTANTS. Output: mutate.json with {mutation_score, killed, survived}.",
+  "limitation": "Pinned to the live repo target, so it has no hermetic fixture self-test; exercised by the governed drive (score 1.0) and by python3 -m pytest tests/test_chainverify.py -q -p no:cacheprovider in the suite.",
+  "minimal_example": {"perk": "mut-chain-verifier", "vars": {"PROJECT_DIR": "/path/to/cyberware"}}
+}

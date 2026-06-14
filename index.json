@@ -39,8 +39,8 @@
     },
     {
       "skill": "cws-mutate",
-      "skill_sha": "bf25ff57944755ef1d7ab35ee0accffcf9e2b1819f1af11c0f1f862cefe7ef01",
-      "file_count": 14
+      "skill_sha": "18f8de51552d549dda0e8802d3363954e07cc273c8048cde328fbe0e433fd961",
+      "file_count": 26
     },
     {
       "skill": "cws-observe",
@@ -148,5 +148,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "a1f81e9144a23d82f1af472232df7a2f464caf52c057d03a49418f603a4d7d57"
+  "chip_sha": "d551f8e2a0b0112749d9951154c2a368e66807c6aa9c1503ed28b16a55e4aa74"
 }
