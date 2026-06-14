@@ -1,0 +1,12 @@
+{
+  "tool": "harden_verify",
+  "inputs": {
+    "LOCK": {"type": "string", "required": true},
+    "DEPS_LOCK": {"type": "string", "required": false},
+    "SBOM": {"type": "string", "required": false},
+    "WHEELHOUSE": {"type": "string", "required": false},
+    "DOCKERFILE": {"type": "string", "required": false}
+  },
+  "outputs": {"harden_out": {"path": "${RECORD_STORE}/harden.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/harden.json"}
+}

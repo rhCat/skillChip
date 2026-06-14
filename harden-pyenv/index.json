@@ -1,0 +1,21 @@
+{
+  "skill": "harden-pyenv",
+  "skill_sha": "e0acda4676099f5c70d33903c1edcdb92b4a66cfee10006c052ee69595488444",
+  "file_count": 14,
+  "files": {
+    "SKILL.md": "aced74ebe4c4dcaa72574196ff79d5ec02cad57135c21648bd5e14820d9b2327",
+    "blueprint.json": "281d8bda887001d014ea26036b16d5ff53d921ca1adad50061ab98b8ba94f4f1",
+    "perks.json": "5490b23cbf0b6dbf6babbdf62dbd0552fa19ba9f27d648eb8443d8fe636c7fb5",
+    "perks/verify/manifesto.json": "4d5ece88229f8858dca330f7a5e68687e38aacb1fff7fb1120bef8b316417052",
+    "perks/verify/metadata.json": "396ff5adfb18404a64a26d8d8b5548e596649cdf14bdada3a3a481416f8ddca1",
+    "perks/verify/src/contracts.json": "fa8bf728fb74985b8eabe2a5ea831505f3d33cbe799ed7f4687f1af3b077c7b3",
+    "perks/verify/src/harden_verify.py": "8592476dbd91b13a25acf1ca1c30ae6d56e82ee20ff2f8a15d59a385ebfc6f20",
+    "perks/verify/src/harden_verify.sh": "9a96532a2ab28d84a7ea0134c1ac4c7a3978e852800eb2c0a6c25f627bcf3563",
+    "perks/verify/test/case.json": "1353799230b7b8c3f99c279fa1a5ff253651374f44569db0d513bb46a1f82443",
+    "perks/verify/test/fixture/Dockerfile.compute": "cefcc1ebbd80b6c73e47e56c524dc61fdefd51c9c020141bf6d33c6fe6c2e129",
+    "perks/verify/test/fixture/deps.lock.json": "85ca8b2e3a302c5a82f9537e15b9d62ce89324e4e5579002b47792093a6451ca",
+    "perks/verify/test/fixture/requirements.lock": "3573842284bec019775b6de9d242ea8e4919f589f57b37c749c68a90c67e2849",
+    "perks/verify/test/fixture/sbom.cdx.json": "5d63babd090ceaeea43de4748dcdfc737a1bfee7d2190929b4fb3339b804f8b5",
+    "perks/verify/test/fixture/wheelhouse/SHA256SUMS": "064c95351b9c5e9584ce2da3ae641cc8ecf9a4e8788f18aad83cd61855f44bbf"
+  }
+}

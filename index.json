@@ -1,6 +1,6 @@
 {
   "chip": "skillChip",
-  "count": 27,
+  "count": 28,
   "skills": [
     {
       "skill": "ci-codeqc",
@@ -73,6 +73,11 @@
       "file_count": 16
     },
     {
+      "skill": "harden-pyenv",
+      "skill_sha": "e0acda4676099f5c70d33903c1edcdb92b4a66cfee10006c052ee69595488444",
+      "file_count": 14
+    },
+    {
       "skill": "http",
       "skill_sha": "a80eb06b3a9dc85e13e7bf2e77cce8ac3c5f6e0bc58fb61fd9be76c7ae718de0",
       "file_count": 16
@@ -138,5 +143,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "f7e99ba84ca44a60cf63f65a77aa12401fba2ccbd6ed7e8376eeffc43e6a1fde"
+  "chip_sha": "1d3e81727d5db7570054f4e6527486de7d72209e689d7d6d9019685aba321ddb"
 }

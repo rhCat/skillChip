@@ -1,0 +1,10 @@
+{
+  "_perk": "verify",
+  "sequence": ["harden_verify"],
+  "tools": {"harden_verify": {"binary": "python3", "params": {"LOCK": "${LOCK}"}}},
+  "env": {
+    "LOCK": "${LOCK}", "DEPS_LOCK": "${DEPS_LOCK}", "SBOM": "${SBOM}",
+    "WHEELHOUSE": "${WHEELHOUSE}", "DOCKERFILE": "${DOCKERFILE}", "RECORD_STORE": "${record_store}"
+  },
+  "requires": ["python3"]
+}
