@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""cws_ledgerverify — verify a ledger is a sound provenance chain. Two shapes, the right check for each:
+"""cws_ledgerverify — verify a ledger is a sound provenance chain. Three shapes, the right check for each:
 
   * Ledger-v2 CRYPTOGRAPHIC chain (P1-T01) — a JSONL file (one record per line), a JSON list, or a
     {schema, entries:[…]} object whose records carry `prev`/`seq`. Each record's `prev` is RECOMPUTED as
@@ -13,6 +13,11 @@
     structure, step provenance (exit + stdout_sha), recorded refusals as evidence (meta-rule M4), and a
     contiguous 1..N ordering. (The cryptographic chain above is the durable provenance; this is the
     per-run execution log.)
+
+  * govd PROVENANCE ledger — the {decision, events:[…]} record a GOVERNED run writes (the audit plane):
+    events is a non-empty list of typed records, each step_result carrying a status; a recorded refusal is
+    evidence (M4). This is what lets verify check the ledger of its OWN governed run — the recursive
+    SV-2 act (P1-T09).
 
 Reads TARGET_LEDGER + RECORD_STORE from env; writes RECORD_STORE/ledgercheck.json + one structured JSON
 line. Exit 0 iff the ledger is sound, nonzero otherwise.
@@ -87,6 +92,28 @@ def verify_structural(ledger):
     return len(runs), bad
 
 
+def verify_govd(ledger):
+    """Verify a govd PROVENANCE ledger ({decision, events:[…]}) — the run-ledger a governed run writes.
+    Checks structural integrity (it is a sound record), not whether the run passed: events is a non-empty
+    list of typed records and every step_result carries a status. A recorded refusal is evidence, not
+    corruption (meta-rule M4). This is what lets verify check the ledger of its OWN governed run (P1-T09)."""
+    events = ledger.get("events")
+    if not isinstance(events, list):
+        return 0, ["govd ledger 'events' is missing or not a list"]
+    bad = []
+    if not events:
+        bad.append("govd ledger has no events — nothing recorded")
+    for i, e in enumerate(events):
+        if not isinstance(e, dict):
+            bad.append(f"event[{i}] is not an object")
+            continue
+        if not e.get("type"):
+            bad.append(f"event[{i}] has no 'type'")
+        if e.get("type") == "step_result" and "status" not in e:
+            bad.append(f"event[{i}] (step_result) has no 'status'")
+    return len(events), bad
+
+
 def verify(ledger, schema=None, expect_run_id=None, expect_plan_sha=None, allow_legacy=False):
     """Dispatch by shape. Returns (records, bad, mode); empty `bad` means the ledger is sound.
 
@@ -105,6 +132,8 @@ def verify(ledger, schema=None, expect_run_id=None, expect_plan_sha=None, allow_
                 f"chain-v{sch}-refused"
         _ok, problems = _ledger.verify_chain(entries, sch, expect_run_id, expect_plan_sha)
         return len(entries), problems, f"chain-v{sch}"
+    if isinstance(ledger, dict) and "events" in ledger:          # govd provenance ledger (a governed run)
+        return (*verify_govd(ledger), "govd")
     return (*verify_structural(ledger), "structural")
 
 

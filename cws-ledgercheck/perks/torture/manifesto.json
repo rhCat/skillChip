@@ -1,0 +1,7 @@
+{
+  "_perk": "torture",
+  "sequence": ["cws_torture"],
+  "tools": {"cws_torture": {"binary": "python3", "params": {"WORKERS": "${WORKERS}"}}},
+  "env": {"WORKERS": "${WORKERS}", "APPENDS_PER": "${APPENDS_PER}", "CHAIN_PATH": "${CHAIN_PATH}", "RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}

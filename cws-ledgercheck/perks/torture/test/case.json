@@ -1,0 +1,9 @@
+{
+  "_perk": "torture",
+  "requires": ["python3"],
+  "vars": {"WORKERS": "4", "APPENDS_PER": "25"},
+  "expect": {
+    "outputs": ["torture.json"],
+    "contains": {"torture.json": ["\"status\": \"ok\"", "\"verify_chain_ok\": true", "\"lost\": 0"]}
+  }
+}
