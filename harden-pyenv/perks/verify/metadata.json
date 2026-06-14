@@ -1,0 +1,15 @@
+{
+  "perk": "verify",
+  "skill": "harden-pyenv",
+  "description": "prove the compute environment is hardened — pinned + hashed deps, deps.lock.json matches, CycloneDX SBOM emitted, wheelhouse manifest present, the compute Dockerfile tag/checksum-pinned, osv clean/waivered (P0-T14)",
+  "rules": [
+    "every requirement is version== AND --hash= pinned (0 unpinned)",
+    "deps.lock.json is hash-pinned and its lock_sha256 matches the lock byte-for-byte (not stale)",
+    "a CycloneDX SBOM with components exists; the wheelhouse carries a SHA256SUMS manifest",
+    "the compute Dockerfile base is tag/digest-pinned (not :latest) and every fetched toolchain is SHA256-pinned",
+    "if osv-scanner is on PATH, the lock scans clean (else recorded as not-run)"
+  ],
+  "usage": "Set LOCK (requirements.lock) + optional DEPS_LOCK, SBOM, WHEELHOUSE (a dir with SHA256SUMS), DOCKERFILE. Output: harden.json. Exit 0 iff the environment is hardened.",
+  "limitation": "Static artifact verification — it proves the pins/SBOM/Dockerfile are present and self-consistent, not that the built image's running versions match (that is the image build + the smoke test). osv depth depends on osv-scanner being installed.",
+  "minimal_example": {"perk": "verify", "vars": {"LOCK": "infra/pyenv/requirements.lock", "DEPS_LOCK": "infra/pyenv/deps.lock.json", "SBOM": "infra/pyenv/sbom.cdx.json", "WHEELHOUSE": "vendor/wheelhouse", "DOCKERFILE": "infra/pyenv/Dockerfile.compute"}}
+}

@@ -1,0 +1,11 @@
+{
+  "skill": "harden-pyenv",
+  "perks": [
+    {
+      "id": "verify",
+      "summary": "prove the compute env is hardened: pinned+hashed deps, deps.lock matches, SBOM, wheelhouse manifest, pinned Dockerfile, osv (P0-T14)",
+      "destructive": false,
+      "tools": ["harden_verify"]
+    }
+  ]
+}

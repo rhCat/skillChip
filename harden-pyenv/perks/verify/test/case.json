@@ -1,0 +1,21 @@
+{
+  "_perk": "verify",
+  "requires": ["python3"],
+  "vars": {
+    "LOCK": "${FIXTURE}/requirements.lock",
+    "DEPS_LOCK": "${FIXTURE}/deps.lock.json",
+    "SBOM": "${FIXTURE}/sbom.cdx.json",
+    "WHEELHOUSE": "${FIXTURE}/wheelhouse",
+    "DOCKERFILE": "${FIXTURE}/Dockerfile.compute"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["harden.json"],
+    "json": {
+      "harden.json": {
+        "status": "ok", "unpinned_imports": 0, "sbom_emitted": true,
+        "deps_lock_matches": true, "wheelhouse_pinned": true, "dockerfile_pinned": true
+      }
+    }
+  }
+}

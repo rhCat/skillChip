@@ -1,0 +1,15 @@
+{
+  "schema": "cyberware-deps-lock-v1",
+  "python": "3.12",
+  "source": "requirements.lock",
+  "packages": [
+    {
+      "name": "foo",
+      "version": "1.0.0",
+      "hashes": [
+        "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+      ]
+    }
+  ],
+  "lock_sha256": "3573842284bec019775b6de9d242ea8e4919f589f57b37c749c68a90c67e2849"
+}
