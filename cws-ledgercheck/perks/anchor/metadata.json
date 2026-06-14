@@ -1,0 +1,17 @@
+{
+  "perk": "anchor",
+  "skill": "cws-ledgercheck",
+  "description": "external Go cold-verify anchor for the Ledger-v2 chain — proves the independent Go verifier reproduces verify_chain verdict-for-verdict (P1-T04, SV-2 meta-rule M3)",
+  "rules": [
+    "builds + runs the independent Go chain verifier (verifiers/go `chain`)",
+    "Go and Python verify_chain must agree on EVERY chain in the corpus — a divergence fails the gate",
+    "the corpus must exercise both poles (>=1 sound chain cold-verified, >=1 corrupt chain caught and named)",
+    "requires the `go` toolchain (skipped where absent; the codeqc CI job installs it / the compute image ships it)"
+  ],
+  "usage": "Set CHAIN_CORPUS (a corpus of named v2 chains, each {name, schema, entries, expect_run_id?, expect_plan_sha?, expect_ok?}). Output: anchor.json with {go_cold_verified, go_caught, match, diffs}.",
+  "limitation": "Anchors the cryptographic prev-chain recompute; durability (torture/crashloop) arrives with P1-T02/P1-T09.",
+  "minimal_example": {
+    "perk": "anchor",
+    "vars": {"CHAIN_CORPUS": "/path/to/chain-corpus.json"}
+  }
+}
