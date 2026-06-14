@@ -1,6 +1,6 @@
 {
   "skill": "cws-conform",
-  "skill_sha": "e4d2441ab0216336673695105f5091571c0855056af9b67f2ccaded37a1de53a",
+  "skill_sha": "f9af278553ce4919bcca7799a8e4bf0caccd04703c27f62a0181033c8fe32f54",
   "file_count": 51,
   "files": {
     "SKILL.md": "9d38b4b67791b4a56a3a3a179ded5884b2ff42f1ac5e6ef47140cef86f7d2569",
@@ -36,7 +36,7 @@
     "perks/interop/src/contracts.json": "bf03d674f329244b21137c8d735b5cb4f3bd6297fdeb41ba757701d188dea570",
     "perks/interop/src/cws_interop.py": "283ae5fc9ead612db077e3dac734cfed577744136baf1b5099a3a605c183551c",
     "perks/interop/src/cws_interop.sh": "80544cc8731d2ac1fbc48921a44e8bd9a5b595b45b5dd64208ed44014c72ed9b",
-    "perks/interop/test/case.json": "2348c1f0ff3e525f8b7018822d0205b4ef6ba13adc4d1a087c5d83c1e65c734d",
+    "perks/interop/test/case.json": "0f63613804808bb25d3f8f400d928e1dda7a16f636dbab3075cc8ff836101de4",
     "perks/interop/test/fixture/cosign_envelope.json": "ec31247423c6da2c700a31856c41cc5831feb1d4f77d2c61c76b1b7935d2772b",
     "perks/interop/test/fixture/cosign_pub.pem": "f879df1872351c98ba2a25096ec096369331a58bd29e43c68c2614f9a3c23548",
     "perks/repin/manifesto.json": "a39f39383ab4abb61f7c83133077efb216395f08a1f098564560ee993b828a9f",
