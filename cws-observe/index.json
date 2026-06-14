@@ -1,6 +1,6 @@
 {
   "skill": "cws-observe",
-  "skill_sha": "8c62b2ba68a867b1bce9bbf5eb4a415d5683606d5be8dd5b4031ce74ea7feda4",
+  "skill_sha": "888d2f31a80f9c1f0fb178775844d475c5e5fcd21daabb61b79986c6fbb639eb",
   "file_count": 26,
   "files": {
     "SKILL.md": "d1f72905d7d2188d0b7a23c7a01ee95c139f1ce718e23b045f279b820d434e41",
@@ -12,7 +12,7 @@
     "perks/redeem/manifesto.json": "339ca40c9ca45d57135556648ff58a48685f3e3f31a81ccdee638ec52471bafd",
     "perks/redeem/metadata.json": "07d90f570293d0a2f1249c1dc3bb48cb2d8fb562ff4cfafb01e560734e1c6958",
     "perks/redeem/src/contracts.json": "9a3db0f7a7d07565615d01db36103418158efff11913f48f9161bdd00617b3e0",
-    "perks/redeem/src/cws_observe_redeem.py": "3ae2dc4926415ae2f3b4a674523c5bea955e08fbc3aaa66d049e8aa7bfca3dad",
+    "perks/redeem/src/cws_observe_redeem.py": "c4263b556055c2a9a1f6e5ef406c432171c4e850347d3416106ef1644efd0091",
     "perks/redeem/src/cws_observe_redeem.sh": "be3ecf23328dc4a1e401be70b06dfecf3401d9cff67f5fda552034baf1600407",
     "perks/redeem/test/case.json": "3157ee3eab090e894d6987437d8dfae9f776e6ab9296ec83635bb6b0768b21c8",
     "perks/redeem/test/fixture/evidence/run-ledger.json": "8a0f3d10cef02269d2cd0df097970f284b14b96f1bcf4f2df6568746bb86d46c",

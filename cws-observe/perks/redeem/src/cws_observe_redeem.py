@@ -150,7 +150,7 @@ def main() -> int:
              "evidence_sha": hashlib.sha256(open(run_ledger_path, "rb").read()).hexdigest(), "prev": prev}
     entries.append(entry)
     os.makedirs(os.path.dirname(os.path.abspath(v2_path)), exist_ok=True)
-    json.dump(led, open(v2_path, "w"), indent=2)
+    ledger.write_object_atomic(v2_path, led)               # crash-atomic snapshot — the done-ledger dogfoods P1-T02 durability
 
     json.dump({"task_id": task_id, "validator": validator, "verdict": "pass", "seq": entry["seq"],
                "evidence_sha": entry["evidence_sha"], "done_ledger": v2_path}, open(out, "w"), indent=2)
