@@ -1,7 +1,7 @@
 ---
 skill: cws-redteam
 name: Kernel red-team corpus
-perks: [rt-fs-escape, rt-write-rofs, rt-write-outside, rt-net-egress, rt-sysrq-reboot, rt-proc-sys-write, rt-mount, rt-device-raw, rt-forged-status, rt-grant-replay, rt-grant-expired, rt-grant-wrong-run, rt-grant-forged, rt-no-capability]
+perks: [rt-fs-escape, rt-write-rofs, rt-write-outside, rt-net-egress, rt-sysrq-reboot, rt-proc-sys-write, rt-mount, rt-device-raw, rt-forged-status, rt-grant-replay, rt-grant-expired, rt-grant-wrong-run, rt-grant-forged, rt-no-capability, rt-cap-mismatch]
 ---
 
 # cws-redteam — Kernel red-team corpus (V-RED, the M3 / SV-3 gate)
@@ -21,6 +21,7 @@ accepting everything, fails the corpus instead of passing it). 14 behaviours (�
 |---|---|---|
 | **sandbox** | rt-fs-escape · rt-write-rofs · rt-write-outside · rt-net-egress · rt-sysrq-reboot · rt-proc-sys-write · rt-mount · rt-device-raw | a hostile command run by exod inside the sandbox is blocked by the kernel (exod's SIGNED status is `error`, not `ok`) |
 | **channel** | rt-forged-status · rt-grant-replay · rt-grant-expired · rt-grant-wrong-run · rt-grant-forged · rt-no-capability | a forged status, or a replayed / expired / cross-run / tampered / capability-less grant, is refused on exod's channel |
+| **capability** | rt-cap-mismatch | a sandbox materialized wider than its capability manifest (an ungranted bind) is refused (P2-T06); pure construction-time logic, no kernel needed |
 
 The attack logic lives in `infra/exec/redteam.py` (the shared corpus), exercised by `tests/test_redteam.py`.
 Each perk's `src/rt_*.py` PINS exactly one behaviour (the `ATTACK` is baked, not a runtime arg), so the

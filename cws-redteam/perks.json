@@ -112,6 +112,14 @@
       "tools": [
         "rt_no_capability"
       ]
+    },
+    {
+      "id": "rt-cap-mismatch",
+      "summary": "adversarial: a sandbox materialized wider than its capability manifest (ungranted bind) must REFUSE it (P2-T06)",
+      "destructive": false,
+      "tools": [
+        "rt_cap_mismatch"
+      ]
     }
   ]
 }

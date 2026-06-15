@@ -1,0 +1,17 @@
+{
+  "_perk": "rt-cap-mismatch",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "redteam.json"
+    ],
+    "contains": {
+      "redteam.json": [
+        "\"held\": true"
+      ]
+    }
+  }
+}
