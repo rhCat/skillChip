@@ -1,0 +1,21 @@
+{
+  "_perk": "bwrap-overhead",
+  "requires": [
+    "python3",
+    "bwrap"
+  ],
+  "vars": {
+    "N": "20"
+  },
+  "expect": {
+    "outputs": [
+      "bench.json"
+    ],
+    "contains": {
+      "bench.json": [
+        "\"within\": true",
+        "\"backend\": \"bwrap\""
+      ]
+    }
+  }
+}

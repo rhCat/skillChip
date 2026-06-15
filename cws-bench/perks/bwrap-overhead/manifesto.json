@@ -1,0 +1,19 @@
+{
+  "_perk": "bwrap-overhead",
+  "sequence": [
+    "bench_bwrap_overhead"
+  ],
+  "tools": {
+    "bench_bwrap_overhead": {
+      "binary": "python3",
+      "params": {}
+    }
+  },
+  "env": {
+    "N": "${N}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}
