@@ -1,7 +1,7 @@
 ---
 skill: cws-mutate
 name: Mutation Testing
-perks: [mutate, mut-chain-verifier, mut-snippet-verify]
+perks: [mutate, mut-chain-verifier, mut-snippet-verify, mut-grant-verify]
 ---
 
 # cws-mutate — Mutation Testing (V-MUT)
@@ -30,6 +30,7 @@ tokens), or `mutation_score < threshold` (survivors listed by id). LOGS TO CHECK
 | `mutate` | `cws_mutate` | mutate a target, run a test slice, score survivors — read-only / safe (operates on a sandbox copy) |
 | `mut-chain-verifier` | `cws_chainverify` | R3 gate PINNED to `infra/cwp/chainverify.py` (the Ledger-v2 chain verifier) — score ≥ 0.90 |
 | `mut-snippet-verify` | `cws_snippetverify` | R3 gate PINNED to `infra/govern/snippetverify.py` (per-step snippet TOCTOU) — score ≥ 0.90 |
+| `mut-grant-verify` | `cws_grantverify` | R3 gate PINNED to `infra/exec/grantverify.py` (Ed25519-DSSE grant verifier, SV-3 spine) — score ≥ 0.90 |
 
 - **`mutate`** — set `PROJECT_DIR` (copied to a sandbox), `TARGET` (file within it), `TEST_CMD` (the
   slice; nonzero exit = killed). Optional `THRESHOLD` (default `0.90`), `MAX_MUTANTS` (default `50`).

@@ -1,0 +1,1 @@
+{"_perk":"mut-grant-verify","skip":"pinned to the live repo target (infra/exec/grantverify.py); proven by the governed drive (mutation_score 1.0) + tests/test_grantverify.py in the suite","requires":["python3"],"vars":{"PROJECT_DIR":"<repo root>"},"expect":{"outputs":["mutate.json"],"contains":{"mutate.json":["\"mutation_score\": 1.0"]}}}
