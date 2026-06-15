@@ -1,0 +1,5 @@
+{
+  "perk": "rt-proc-sys-write",
+  "summary": "adversarial: rewrite a global kernel sysctl (/proc/sys masked) \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+  "destructive": false
+}

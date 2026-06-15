@@ -1,6 +1,6 @@
 {
   "skill": "cws-observe",
-  "skill_sha": "888d2f31a80f9c1f0fb178775844d475c5e5fcd21daabb61b79986c6fbb639eb",
+  "skill_sha": "bb38dc0d0366af7bc8a79e32c59c38f071477e56c28dc99081bf15bc6ae01bbb",
   "file_count": 26,
   "files": {
     "SKILL.md": "d1f72905d7d2188d0b7a23c7a01ee95c139f1ce718e23b045f279b820d434e41",
@@ -26,7 +26,7 @@
     "perks/status/test/case.json": "3e1b89e2f9db23750759aa956f449ae37a5ecd9eac841b76d2c22aa4711a191b",
     "perks/status/test/fixture/swarm/P0-T01.json": "a1f12801563f0cddf4ec6f5f5852b132a19f545b2612d7b4a72d8a8884862c1b",
     "perks/status/test/fixture/swarm/P0-T02.json": "206b65b8a4db4d9d6a105ccafed46c6c3d860294aaa461c2513b0ebd0babe847",
-    "perks/status/test/fixture/swarm/P0-T03.json": "3a68922ec668e4a045846f868b0f880d05abdb1bbaa23f12955d5f3252aa5f6b",
+    "perks/status/test/fixture/swarm/P0-T03.json": "ee69641ef6bab5637fc42e505b0b815c4acc0181c832cc92e81c9134d892fcbf",
     "perks/status/test/fixture/swarm/_swarm_manifest.json": "b8c428cba385842d4e17b018fe198ebf216af0f780449ced5ced85d7bab9053a",
     "perks/status/test/fixture/swarm/done-ledger.json": "317ba92f1fa9cffdb1879608aecbe21a7427b8227ee736852013f7b2b54948ba"
   }

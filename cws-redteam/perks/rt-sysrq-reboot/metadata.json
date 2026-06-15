@@ -1,0 +1,5 @@
+{
+  "perk": "rt-sysrq-reboot",
+  "summary": "adversarial: reboot the host via /proc/sysrq-trigger \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+  "destructive": false
+}

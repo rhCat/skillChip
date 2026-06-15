@@ -3,8 +3,8 @@
   "task_id": "P0-T03",
   "title": "fixture task whose validator is not built yet => blocked:validator",
   "phase": "P0",
-  "ladder_rung": "SV-3",
+  "ladder_rung": "SV-6",
   "depends_on": [],
-  "validated_by": "cws-redteam",
+  "validated_by": "cws-settle-sim",
   "status": "todo"
 }
