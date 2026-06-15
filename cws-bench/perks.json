@@ -1,0 +1,13 @@
+{
+  "skill": "cws-bench",
+  "perks": [
+    {
+      "id": "bwrap-overhead",
+      "summary": "measure per-step bwrap overhead from exod's attested meters (P2-T07); p95 must be <= 100ms (P2-T09 bwrap budget)",
+      "destructive": false,
+      "tools": [
+        "bench_bwrap_overhead"
+      ]
+    }
+  ]
+}

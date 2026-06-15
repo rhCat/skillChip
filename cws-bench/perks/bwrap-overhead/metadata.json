@@ -1,0 +1,5 @@
+{
+  "perk": "bwrap-overhead",
+  "summary": "measure per-step bwrap overhead from exod's attested meters; p95 must be <= 100ms",
+  "destructive": false
+}
