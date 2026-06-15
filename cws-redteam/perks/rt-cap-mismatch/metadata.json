@@ -1,0 +1,5 @@
+{
+  "perk": "rt-cap-mismatch",
+  "summary": "adversarial: a sandbox materialized wider than its capability manifest (ungranted bind) must REFUSE (P2-T06)",
+  "destructive": false
+}
