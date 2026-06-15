@@ -1,0 +1,1 @@
+{"_perk":"mut-grant-verify","sequence":["cws_grantverify"],"tools":{"cws_grantverify":{"binary":"python3","params":{"PROJECT_DIR":"${PROJECT_DIR}"}}},"env":{"PROJECT_DIR":"${PROJECT_DIR}","THRESHOLD":"${THRESHOLD}","MAX_MUTANTS":"${MAX_MUTANTS}","RECORD_STORE":"${record_store}"},"requires":["python3"]}

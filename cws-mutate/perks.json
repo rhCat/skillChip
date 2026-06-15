@@ -11,7 +11,7 @@
     },
     {
       "id": "mut-chain-verifier",
-      "summary": "R3 mutation gate PINNED to infra/cwp/chainverify.py (Ledger-v2 chain verifier) — score must stay >= 0.90 (P1-T10, SV-2)",
+      "summary": "R3 mutation gate PINNED to infra/cwp/chainverify.py (Ledger-v2 chain verifier) \u2014 score must stay >= 0.90 (P1-T10, SV-2)",
       "destructive": false,
       "tools": [
         "cws_chainverify"
@@ -19,10 +19,18 @@
     },
     {
       "id": "mut-snippet-verify",
-      "summary": "R3 mutation gate PINNED to infra/govern/snippetverify.py (per-step snippet TOCTOU) — score must stay >= 0.90 (P1-T10, SV-2)",
+      "summary": "R3 mutation gate PINNED to infra/govern/snippetverify.py (per-step snippet TOCTOU) \u2014 score must stay >= 0.90 (P1-T10, SV-2)",
       "destructive": false,
       "tools": [
         "cws_snippetverify"
+      ]
+    },
+    {
+      "id": "mut-grant-verify",
+      "summary": "R3 mutation gate PINNED to infra/exec/grantverify.py (the Ed25519-DSSE grant verifier) \u2014 score >= 0.90 (SV-3 spine)",
+      "destructive": false,
+      "tools": [
+        "cws_grantverify"
       ]
     }
   ]
