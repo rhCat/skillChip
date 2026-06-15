@@ -1,0 +1,5 @@
+{
+  "perk": "rt-grant-wrong-run",
+  "summary": "adversarial: reuse a grant minted for another run \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+  "destructive": false
+}

@@ -1,0 +1,18 @@
+{
+  "_perk": "rt-write-outside",
+  "requires": [
+    "python3",
+    "bwrap"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "redteam.json"
+    ],
+    "contains": {
+      "redteam.json": [
+        "\"held\": true"
+      ]
+    }
+  }
+}

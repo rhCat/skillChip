@@ -1,0 +1,5 @@
+{
+  "perk": "rt-no-capability",
+  "summary": "adversarial: run under a grant that authorizes no capability \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+  "destructive": false
+}

@@ -1,0 +1,117 @@
+{
+  "skill": "cws-redteam",
+  "perks": [
+    {
+      "id": "rt-fs-escape",
+      "summary": "adversarial: read a host file outside the sandbox binds \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_fs_escape"
+      ]
+    },
+    {
+      "id": "rt-write-rofs",
+      "summary": "adversarial: write to a read-only system path (EROFS) \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_write_rofs"
+      ]
+    },
+    {
+      "id": "rt-write-outside",
+      "summary": "adversarial: write outside the single writable workspace \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_write_outside"
+      ]
+    },
+    {
+      "id": "rt-net-egress",
+      "summary": "adversarial: open a TCP connection to the network (no egress) \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_net_egress"
+      ]
+    },
+    {
+      "id": "rt-sysrq-reboot",
+      "summary": "adversarial: reboot the host via /proc/sysrq-trigger \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_sysrq_reboot"
+      ]
+    },
+    {
+      "id": "rt-proc-sys-write",
+      "summary": "adversarial: rewrite a global kernel sysctl (/proc/sys masked) \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_proc_sys_write"
+      ]
+    },
+    {
+      "id": "rt-mount",
+      "summary": "adversarial: gain a mount without CAP_SYS_ADMIN over the host \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_mount"
+      ]
+    },
+    {
+      "id": "rt-device-raw",
+      "summary": "adversarial: read raw kernel/device memory (/dev/mem) \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_device_raw"
+      ]
+    },
+    {
+      "id": "rt-forged-status",
+      "summary": "adversarial: forge a step-result not signed by exod \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_forged_status"
+      ]
+    },
+    {
+      "id": "rt-grant-replay",
+      "summary": "adversarial: replay a spent capability grant \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_grant_replay"
+      ]
+    },
+    {
+      "id": "rt-grant-expired",
+      "summary": "adversarial: present an expired grant \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_grant_expired"
+      ]
+    },
+    {
+      "id": "rt-grant-wrong-run",
+      "summary": "adversarial: reuse a grant minted for another run \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_grant_wrong_run"
+      ]
+    },
+    {
+      "id": "rt-grant-forged",
+      "summary": "adversarial: tamper a signed grant's claim \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_grant_forged"
+      ]
+    },
+    {
+      "id": "rt-no-capability",
+      "summary": "adversarial: run under a grant that authorizes no capability \u2014 the kernel/channel boundary must REFUSE it (exit 0 iff held)",
+      "destructive": false,
+      "tools": [
+        "rt_no_capability"
+      ]
+    }
+  ]
+}
