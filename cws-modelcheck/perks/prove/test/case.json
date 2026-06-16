@@ -1,0 +1,19 @@
+{
+  "_perk": "prove",
+  "requires": [
+    "python3",
+    "tlapm",
+    "apalache-mc"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "modelcheck.json"
+    ],
+    "contains": {
+      "modelcheck.json": [
+        "\"ok\": true"
+      ]
+    }
+  }
+}

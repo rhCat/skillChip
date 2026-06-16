@@ -3,7 +3,7 @@
   "perks": [
     {
       "id": "check",
-      "summary": "check a blueprint for abstract deadlock — structural + EMPIRICAL (TLC)",
+      "summary": "check a blueprint for abstract deadlock \u2014 structural + EMPIRICAL (TLC)",
       "destructive": false,
       "tools": [
         "cws_check"
@@ -15,6 +15,38 @@
       "destructive": false,
       "tools": [
         "cws_corpus"
+      ]
+    },
+    {
+      "id": "prove",
+      "summary": "check workflow safety with all 3 provers (P4-T01/T04/T05/T08): corpus dual-check + 3 certs",
+      "destructive": false,
+      "tools": [
+        "cws_prove"
+      ]
+    },
+    {
+      "id": "saga",
+      "summary": "failure-as-transitions + saga compensation, model AND execution (P4-T02)",
+      "destructive": false,
+      "tools": [
+        "cws_saga"
+      ]
+    },
+    {
+      "id": "algebra",
+      "summary": "workflow algebra: seq/par compose into a finite product automaton within budget (P4-T03)",
+      "destructive": false,
+      "tools": [
+        "cws_algebra"
+      ]
+    },
+    {
+      "id": "workflow",
+      "summary": "the plan verifies the plan \u2014 the engine pipeline as a deadlock-free workflow (P4-T09)",
+      "destructive": false,
+      "tools": [
+        "cws_workflow"
       ]
     }
   ]
