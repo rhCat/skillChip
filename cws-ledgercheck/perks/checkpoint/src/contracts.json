@@ -1,0 +1,14 @@
+{
+  "tool": "cws_checkpoint",
+  "inputs": {},
+  "outputs": {
+    "checkpoint_out": {
+      "path": "${RECORD_STORE}/checkpoint.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/checkpoint.json"
+  }
+}

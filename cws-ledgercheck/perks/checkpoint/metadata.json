@@ -1,0 +1,5 @@
+{
+  "perk": "checkpoint",
+  "summary": "Merkle-checkpoint drill (P1-T03): window-bounded cold-verify (<=2s/1M) + forged-checkpoint detection by audit",
+  "destructive": false
+}

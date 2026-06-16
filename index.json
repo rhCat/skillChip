@@ -34,8 +34,8 @@
     },
     {
       "skill": "cws-ledgercheck",
-      "skill_sha": "878267f5b1d0047ef8f73ba487cedfaba48303825f649ce86770cca64ab28d4e",
-      "file_count": 32
+      "skill_sha": "64b437c480a4fe2cebbbac9e423bdaa512dd63c8ffe1db940c3c3b07581c4254",
+      "file_count": 38
     },
     {
       "skill": "cws-modelcheck",
@@ -163,5 +163,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "b10f88974e01204dce93195f72291868cfe7c242852de6204dd80219ae00ad94"
+  "chip_sha": "93b06c39721f3dc1cd19b080b115c4d18f3223724e9cd1a7ea7acbba5158aeb8"
 }

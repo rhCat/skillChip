@@ -1,0 +1,20 @@
+{
+  "_perk": "checkpoint",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "N": "5500"
+  },
+  "expect": {
+    "outputs": [
+      "checkpoint.json"
+    ],
+    "contains": {
+      "checkpoint.json": [
+        "\"ok\": true",
+        "\"within_budget\": true"
+      ]
+    }
+  }
+}
