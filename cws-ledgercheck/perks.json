@@ -3,7 +3,7 @@
   "perks": [
     {
       "id": "verify",
-      "summary": "verify a ledger — Ledger-v2 cryptographic prev-chain recompute (tamper/transplant) + structural run-ledger integrity (SV-2)",
+      "summary": "verify a ledger \u2014 Ledger-v2 cryptographic prev-chain recompute (tamper/transplant) + structural run-ledger integrity (SV-2)",
       "destructive": false,
       "tools": [
         "cws_ledgerverify"
@@ -11,7 +11,7 @@
     },
     {
       "id": "anchor",
-      "summary": "external Go cold-verify anchor — the independent Go chain verifier reproduces verify_chain verdict-for-verdict over a corpus (P1-T04, SV-2)",
+      "summary": "external Go cold-verify anchor \u2014 the independent Go chain verifier reproduces verify_chain verdict-for-verdict over a corpus (P1-T04, SV-2)",
       "destructive": false,
       "tools": [
         "cws_ledgeranchor"
@@ -19,10 +19,18 @@
     },
     {
       "id": "torture",
-      "summary": "concurrency/durability torture — N concurrent durable_append writers must serialize into ONE valid prev-hash chain, zero lost (P1-T09, SV-2)",
+      "summary": "concurrency/durability torture \u2014 N concurrent durable_append writers must serialize into ONE valid prev-hash chain, zero lost (P1-T09, SV-2)",
       "destructive": true,
       "tools": [
         "cws_torture"
+      ]
+    },
+    {
+      "id": "erasure",
+      "summary": "crypto-shredding erasure drill (P1-T07) \u2014 destroy a DEK, chain still verifies, subject fields unrecoverable",
+      "destructive": false,
+      "tools": [
+        "cws_erasure"
       ]
     }
   ]

@@ -1,0 +1,5 @@
+{
+  "perk": "erasure",
+  "summary": "crypto-shredding erasure drill (P1-T07): destroy a DEK -> chain still verifies, subject fields unrecoverable, others unaffected",
+  "destructive": false
+}
