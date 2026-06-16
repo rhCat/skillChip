@@ -1,0 +1,5 @@
+{
+  "perk": "keystore",
+  "summary": "KeyStore seam contract (P0-T15) \u2014 both backends (file + PKCS#11 stub) pass one suite; seam_real + HSM non-export",
+  "destructive": false
+}

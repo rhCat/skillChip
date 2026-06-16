@@ -1,0 +1,14 @@
+{
+  "tool": "cws_keystore",
+  "inputs": {},
+  "outputs": {
+    "keystore_out": {
+      "path": "${RECORD_STORE}/keystore.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/keystore.json"
+  }
+}
