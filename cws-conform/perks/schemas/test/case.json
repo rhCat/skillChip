@@ -1,0 +1,18 @@
+{
+  "_perk": "schemas",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "schemas.json"
+    ],
+    "contains": {
+      "schemas.json": [
+        "\"ok\": true",
+        "\"coverage\": 1.0"
+      ]
+    }
+  }
+}

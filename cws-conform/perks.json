@@ -48,6 +48,14 @@
       "tools": [
         "cws_interop"
       ]
+    },
+    {
+      "id": "schemas",
+      "summary": "validate CWP messages against the 2020-12 JSON Schemas (P0-T05)",
+      "destructive": false,
+      "tools": [
+        "cws_schemas"
+      ]
     }
   ]
 }
