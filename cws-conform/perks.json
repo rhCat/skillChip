@@ -56,6 +56,14 @@
       "tools": [
         "cws_schemas"
       ]
+    },
+    {
+      "id": "keystore",
+      "summary": "KeyStore adapter seam contract (P0-T15) \u2014 file + PKCS#11 stub, one suite",
+      "destructive": false,
+      "tools": [
+        "cws_keystore"
+      ]
     }
   ]
 }

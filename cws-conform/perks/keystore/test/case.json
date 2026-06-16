@@ -1,0 +1,18 @@
+{
+  "_perk": "keystore",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "keystore.json"
+    ],
+    "contains": {
+      "keystore.json": [
+        "\"ok\": true",
+        "\"both_backends_pass\": true"
+      ]
+    }
+  }
+}

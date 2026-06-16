@@ -1,7 +1,7 @@
 ---
 skill: cws-conform
 name: CWP Conformance
-perks: [repin, doclint, vectors, crosslang, digestlint, interop, schemas]
+perks: [repin, doclint, vectors, crosslang, digestlint, interop, schemas, keystore]
 ---
 
 # cws-conform — CWP Conformance (SV-1)
