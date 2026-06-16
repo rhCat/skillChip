@@ -1,0 +1,20 @@
+{
+  "_perk": "erasure",
+  "sequence": [
+    "cws_erasure"
+  ],
+  "tools": {
+    "cws_erasure": {
+      "binary": "python3",
+      "params": {}
+    }
+  },
+  "env": {
+    "N": "${N}",
+    "SHRED_INDEX": "${SHRED_INDEX}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}
