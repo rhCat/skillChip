@@ -1,0 +1,19 @@
+{
+  "_perk": "labeling",
+  "sequence": [
+    "cws_labeling"
+  ],
+  "tools": {
+    "cws_labeling": {
+      "binary": "python3",
+      "params": {}
+    }
+  },
+  "env": {
+    "SPEC_DIR": "${SPEC_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

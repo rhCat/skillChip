@@ -1,0 +1,5 @@
+{
+  "perk": "labeling",
+  "summary": "truth-in-labeling doc lint (P0-T16) \u2014 no enforcement claim without a criterion-id reference",
+  "destructive": false
+}
