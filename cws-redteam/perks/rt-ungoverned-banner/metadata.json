@@ -1,0 +1,5 @@
+{
+  "perk": "rt-ungoverned-banner",
+  "summary": "adversarial: the legacy in-process path must announce [UNGOVERNED-BOUNDARY] every run + stay distinct from governed (P2-T11)",
+  "destructive": false
+}
