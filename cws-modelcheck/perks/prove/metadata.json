@@ -1,0 +1,5 @@
+{
+  "perk": "prove",
+  "summary": "check workflow safety with all 3 provers (P4-T01/T04/T05/T08): corpus dual-check + 3 certs",
+  "destructive": false
+}

@@ -1,0 +1,5 @@
+{
+  "perk": "algebra",
+  "summary": "workflow algebra: seq/par compose into a finite product automaton within budget (P4-T03)",
+  "destructive": false
+}
