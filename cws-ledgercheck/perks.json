@@ -32,6 +32,14 @@
       "tools": [
         "cws_erasure"
       ]
+    },
+    {
+      "id": "checkpoint",
+      "summary": "Merkle-checkpoint drill (P1-T03) \u2014 window-bounded cold-verify + forged-checkpoint audit",
+      "destructive": false,
+      "tools": [
+        "cws_checkpoint"
+      ]
     }
   ]
 }

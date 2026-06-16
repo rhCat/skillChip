@@ -1,0 +1,20 @@
+{
+  "_perk": "checkpoint",
+  "sequence": [
+    "cws_checkpoint"
+  ],
+  "tools": {
+    "cws_checkpoint": {
+      "binary": "python3",
+      "params": {}
+    }
+  },
+  "env": {
+    "N": "${N}",
+    "INTERVAL": "${INTERVAL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}
