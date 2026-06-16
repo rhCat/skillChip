@@ -1,0 +1,19 @@
+{
+  "_perk": "schemas",
+  "sequence": [
+    "cws_schemas"
+  ],
+  "tools": {
+    "cws_schemas": {
+      "binary": "python3",
+      "params": {}
+    }
+  },
+  "env": {
+    "SCHEMAS_DIR": "${SCHEMAS_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

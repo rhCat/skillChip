@@ -1,0 +1,5 @@
+{
+  "perk": "schemas",
+  "summary": "validate the CWP message corpus against the 2020-12 schemas (P0-T05) \u2014 100% valid + negatives rejected",
+  "destructive": false
+}
