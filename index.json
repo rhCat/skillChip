@@ -24,8 +24,8 @@
     },
     {
       "skill": "cws-conform",
-      "skill_sha": "3012276defc0259534e6508e323279603ec9f59e9dfda6708cc907f909ae9708",
-      "file_count": 63
+      "skill_sha": "0921837983f577bab9aed890cacdceae621990cc00ba677192cc7dc5e63cb6f6",
+      "file_count": 69
     },
     {
       "skill": "cws-create",
@@ -163,5 +163,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "435261e824d7a8616a3a079bf87bfd5224af2308c58f3ac62d27aae70930f858"
+  "chip_sha": "18fef9f636077e8f50d36d435be98e6ed15487fd0164c288273c747f6427a047"
 }

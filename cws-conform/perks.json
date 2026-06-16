@@ -64,6 +64,14 @@
       "tools": [
         "cws_keystore"
       ]
+    },
+    {
+      "id": "labeling",
+      "summary": "truth-in-labeling doc lint (P0-T16) \u2014 enforcement claims must cite a criterion-id",
+      "destructive": false,
+      "tools": [
+        "cws_labeling"
+      ]
     }
   ]
 }
