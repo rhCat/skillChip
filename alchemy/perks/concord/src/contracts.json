@@ -1,0 +1,14 @@
+{
+  "tool": "alchemy_concord",
+  "inputs": {},
+  "outputs": {
+    "concord_out": {
+      "path": "${RECORD_STORE}/concord.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/concord.json"
+  }
+}

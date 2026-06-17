@@ -1,0 +1,26 @@
+{
+  "schema": "cyberware-alchemy-deps-lock-v1",
+  "doc": "Pinned external concordance engines wrapped by the alchemy skill (P3-T08), file-mode (no warehouse). These are git checkouts/binaries, not pip wheels, so they are pinned here by commit SHA rather than in infra/pyenv/deps.lock.json. The alchemy perks SKIP (requires_cmd probe) where these checkouts are absent (e.g. CI).",
+  "external_subjects": [
+    {
+      "name": "alembic",
+      "commit": "4b5dfc1285f3bc189dad4613a08746b39a0efb4c",
+      "role": "declared-blueprint engine + citrinitas-phase2 (the Citrinitas gate, P3-T09)",
+      "path_default": "~/hunyuan/alembic",
+      "invoke": "target/release/alembic <src> --synthesize --json; target/release/citrinitas-phase2 --synthesis <j> --output <o>"
+    },
+    {
+      "name": "putrefactio",
+      "commit": "9ce1eec60d5b714d1d376a1734e4eb8e424ace6f",
+      "role": "typestate extractor (extract) + leaf-map (classify) + conservation laws (conserve)",
+      "path_default": "~/hunyuan/putrefactio",
+      "invoke": "python3 -m python_typestate_extractor <dir>"
+    },
+    {
+      "name": "laws",
+      "commit": "9ce1eec60d5b714d1d376a1734e4eb8e424ace6f",
+      "role": "conservation laws (B1_acquire_release_balance et al.) \u2014 vendored in putrefactio/laws at the same commit",
+      "path_default": "~/hunyuan/putrefactio/laws"
+    }
+  ]
+}

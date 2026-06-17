@@ -1,7 +1,12 @@
 {
   "chip": "skillChip",
-  "count": 33,
+  "count": 34,
   "skills": [
+    {
+      "skill": "alchemy",
+      "skill_sha": "1c58ffef8a1bce6394075a93fd5bc240fc9e41e9e74fceeb20a11b241ab454d7",
+      "file_count": 30
+    },
     {
       "skill": "ci-codeqc",
       "skill_sha": "e3c4fb4aef18127aef3cc96a4636e9a1d42f58c711cdbc772d4663bc2e9d0998",
@@ -69,8 +74,8 @@
     },
     {
       "skill": "cws-release",
-      "skill_sha": "20f7326947d372986b0e0c54d1b841d043df7ffbaa93699eaf9ff809bfc6b879",
-      "file_count": 76
+      "skill_sha": "029b7650e8cba675e152083b984b54101729a662f29f600f06316e3e66bcdf8d",
+      "file_count": 82
     },
     {
       "skill": "data",
@@ -168,5 +173,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "afe7f5771bf8d2cfd7b657e2549d2547208630eb67e8b800a503e86f27d9ca49"
+  "chip_sha": "7eb2737990dd0d5b59748ea25c0213045f3699e29906a227676150341f867881"
 }
