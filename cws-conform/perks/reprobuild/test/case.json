@@ -1,0 +1,20 @@
+{
+  "_perk": "reprobuild",
+  "requires": [
+    "python3",
+    "go"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "reprobuild.json"
+    ],
+    "contains": {
+      "reprobuild.json": [
+        "\"ok\": true",
+        "\"byte_identical\": true",
+        "\"tamper_detected\": true"
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_perk": "reprobuild",
+  "sequence": [
+    "cws_reprobuild"
+  ],
+  "tools": {
+    "cws_reprobuild": {
+      "binary": "python3",
+      "params": {}
+    }
+  },
+  "env": {
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "go"
+  ]
+}

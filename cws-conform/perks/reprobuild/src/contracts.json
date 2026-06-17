@@ -1,0 +1,14 @@
+{
+  "tool": "cws_reprobuild",
+  "inputs": {},
+  "outputs": {
+    "reprobuild_out": {
+      "path": "${RECORD_STORE}/reprobuild.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/reprobuild.json"
+  }
+}
