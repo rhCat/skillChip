@@ -1,0 +1,14 @@
+{
+  "tool": "cws_release_inflight",
+  "inputs": {},
+  "outputs": {
+    "inflight_out": {
+      "path": "${RECORD_STORE}/inflight.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/inflight.json"
+  }
+}

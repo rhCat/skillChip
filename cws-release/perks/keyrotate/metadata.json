@@ -1,0 +1,5 @@
+{
+  "perk": "keyrotate",
+  "summary": "key-rotation drill (P3-T06) \u2014 cross-signed record, overlap honored, post-revocation old-key grant refuses",
+  "destructive": false
+}

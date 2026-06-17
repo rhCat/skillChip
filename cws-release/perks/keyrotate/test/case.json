@@ -1,0 +1,19 @@
+{
+  "_perk": "keyrotate",
+  "requires": [
+    "python3",
+    "openssl"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "keyrotate.json"
+    ],
+    "contains": {
+      "keyrotate.json": [
+        "\"ok\": true",
+        "\"post_revocation_old_key_grant_refuses\": true"
+      ]
+    }
+  }
+}

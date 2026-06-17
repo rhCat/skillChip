@@ -1,0 +1,5 @@
+{
+  "perk": "inflight",
+  "summary": "revocation-in-flight (P3-T13) \u2014 boundary halt lets the in-progress step finish then refuses; critical kills immediately",
+  "destructive": false
+}
