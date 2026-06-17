@@ -1,0 +1,5 @@
+{
+  "perk": "dispute",
+  "summary": "dispute lifecycle (P6-T12) \u2014 bond + m-of-n WebAuthn resolution + clawback/forfeit + reputation, all ledgered & zero-sum",
+  "destructive": false
+}

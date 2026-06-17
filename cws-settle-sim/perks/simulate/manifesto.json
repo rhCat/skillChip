@@ -1,0 +1,18 @@
+{
+  "_perk": "simulate",
+  "sequence": [
+    "settle_simulate"
+  ],
+  "tools": {
+    "settle_simulate": {
+      "binary": "python3",
+      "params": {}
+    }
+  },
+  "env": {
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

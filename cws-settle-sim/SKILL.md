@@ -1,7 +1,7 @@
 ---
 skill: cws-settle-sim
 name: Settlement simulator (the money's lifecycle)
-perks: [floatban, zerosum, quote, settle]
+perks: [floatban, zerosum, quote, settle, manipulate, dispute, simulate, capstone]
 ---
 
 # cws-settle-sim — the SV-6 settlement validator (M6, "the work pays for the work")
@@ -17,6 +17,10 @@ P3): each perk validates one money-cone task against its acceptance, on REAL run
 | `zerosum` | P6-T02 | **double-entry reward ledger** — every posting set balances (per-currency zero); an unbalanced set is refused; a **10k-settlement storm** stays globally zero-sum with **escrow zero at every terminal state**; a Merkle **balance root** is committed. |
 | `quote` | P6-T04 | **signed funded quote** — govd signs a **plan-bound** quote whose breakdown sums to the amount **exactly**; a priced grant is admitted only with a **funded** quote; tampered / unfunded / plan-mismatched quotes are refused. |
 | `settle` | P6-T05 | **settlement engine** — a **dual-signed**, **validation:pass**, **quote-bound** receipt settles atomically (escrow drained to zero, posting balanced, ledger zero-sum, dispute holdback parked); a mutant receipt (signature stripped / verdict flipped / unbound) settles **nothing**. Funding is **per-quote** (escrow keyed by `quote_sha`, so one quote's funds never satisfy another) and settlement is **idempotent** (a re-funded `quote_sha` cannot pay out twice). |
+| `manipulate` | P6-T11 | **FMV manipulation resistance** — the index is a trimmed, control-capped, volume-weighted median; 20% adversarial volume at an extreme price moves it **<2%**; sub-admission markets are provisional; sybils under one controller collapse to one. |
+| `dispute` | P6-T12 | **dispute lifecycle** — bond → **m-of-n WebAuthn** resolution (reusing the P3 approval artifact) → clawback from holdback (upheld) or bond forfeit (rejected) + reputation delta, all ledgered & zero-sum; <m approvals or a tampered approval does not resolve. |
+| `simulate` | P6-T18 | **the authoring** — storm + manipulate + dispute together: zero-sum exact, index drift <2% @ 20% adversarial, dispute lifecycle complete. |
+| `capstone` | P6-T21 | **the ladder closes** — cyberware's real redeemed milestones settle as internal-credit bounties (zero-sum), seed the first FMV index, and the plan's completion is a **dual-signed, TSA-anchored** receipt that verifies **offline end-to-end**. |
 
 ## Scope / residuals (stated honestly)
 The two value-integrity guards above — **per-quote escrow** and the **spent-quote idempotency guard** — were
