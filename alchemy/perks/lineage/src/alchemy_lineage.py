@@ -7,12 +7,12 @@ import sys
 _root = os.environ.get("CYBERWARE_ROOT")
 if not _root:
     _d = os.path.dirname(os.path.abspath(__file__))
-    while _d != os.path.dirname(_d) and not os.path.isdir(os.path.join(_d, "infra", "infra")):
+    while _d != os.path.dirname(_d) and not os.path.isdir(os.path.join(_d, "infra", "settle")):
         _d = os.path.dirname(_d)
     _root = _d
 sys.path.insert(0, _root)
 
-from infra.infra import royalties  # noqa: E402
+from infra.settle import royalties  # noqa: E402
 
 
 def main():

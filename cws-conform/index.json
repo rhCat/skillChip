@@ -1,6 +1,6 @@
 {
   "skill": "cws-conform",
-  "skill_sha": "bb6cf4e9a0749c2fd393610f3e750464f8a6fa16b61c735e126b08976d404dfd",
+  "skill_sha": "0415466f3cf80ccc470ba78cef6104c0f4ad9088470785873b7e86eb323643f7",
   "file_count": 75,
   "files": {
     "SKILL.md": "17d94ddf876d135f780078d44df629a822b46a647d2bc95c22aaeb2117a1238a",
@@ -8,7 +8,7 @@
     "blueprint.json": "f7dfa5b5eafb5cae5f5038d1b848aece5b36b1cec502b3c518d7d65f89cafe5f",
     "blueprint.svg": "5a6982f192bc04fa2072c7aa71d78d33de1512d1a5ca3411349f92227513dcb4",
     "ledger.json": "8aa417ecd0841c2bc9606da375394a22e1f0078c482f0f49e56f98fd0d148e72",
-    "perks.json": "9075b63c007b3a8809166562256b51c89db70018201bddb774eafa6113bbc8a3",
+    "perks.json": "34d12feb525180c3b253e6de0be8782c4bcaeb829ab97e5c93a84cdaee7df378",
     "perks/crosslang/manifesto.json": "e75b18000a5cdb2003d702c0296c5e61d2764b35ea7bf08bf35bb4aeeba6af80",
     "perks/crosslang/metadata.json": "dfc66575e9f59e9030056fc0721414d8329854a3c00fe892f63be7a521725f54",
     "perks/crosslang/src/contracts.json": "9f36325ebd685e76f08859fd61638065bee14bfe3f1805c2fc3f1783fac9ae52",

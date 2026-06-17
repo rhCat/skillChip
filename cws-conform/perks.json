@@ -2,32 +2,8 @@
   "skill": "cws-conform",
   "perks": [
     {
-      "id": "repin",
-      "summary": "re-pin a chip's authenticity (indexes + manifest) and record the chip_sha transition (SV-1)",
-      "destructive": false,
-      "tools": [
-        "cws_repin"
-      ]
-    },
-    {
-      "id": "doclint",
-      "summary": "structural conformance lint for a spec doc \u2014 exists, title, normative, on-topic (P0-V10)",
-      "destructive": false,
-      "tools": [
-        "cws_doclint"
-      ]
-    },
-    {
-      "id": "vectors",
-      "summary": "replay the golden vector corpus through canonical-bytes + signing; emit a conformance verdict (P0-T07/T17)",
-      "destructive": false,
-      "tools": [
-        "cws_vectors"
-      ]
-    },
-    {
       "id": "crosslang",
-      "summary": "diff the independent Go verifier vs canonical.py+sign.py over the corpus (P0-T08, external anchor)",
+      "summary": "TODO",
       "destructive": false,
       "tools": [
         "cws_crosslang"
@@ -35,31 +11,31 @@
     },
     {
       "id": "digestlint",
-      "summary": "prove every JSON-object hash routes through cwp.canonical, not ad-hoc json.dumps (P0-T04 / F1 / P0-V03)",
+      "summary": "TODO",
       "destructive": false,
       "tools": [
         "cws_digestlint"
       ]
     },
     {
+      "id": "doclint",
+      "summary": "TODO",
+      "destructive": false,
+      "tools": [
+        "cws_doclint"
+      ]
+    },
+    {
       "id": "interop",
-      "summary": "prove cwp <-> cosign/sigstore DSSE interop at the Ed25519ph layer, both directions (P0-T03)",
+      "summary": "TODO",
       "destructive": false,
       "tools": [
         "cws_interop"
       ]
     },
     {
-      "id": "schemas",
-      "summary": "validate CWP messages against the 2020-12 JSON Schemas (P0-T05)",
-      "destructive": false,
-      "tools": [
-        "cws_schemas"
-      ]
-    },
-    {
       "id": "keystore",
-      "summary": "KeyStore adapter seam contract (P0-T15) \u2014 file + PKCS#11 stub, one suite",
+      "summary": "KeyStore seam contract (P0-T15) \u2014 both backends (file + PKCS#11 stub) pass one suite; seam_real + HSM non-export",
       "destructive": false,
       "tools": [
         "cws_keystore"
@@ -67,10 +43,42 @@
     },
     {
       "id": "labeling",
-      "summary": "truth-in-labeling doc lint (P0-T16) \u2014 enforcement claims must cite a criterion-id",
+      "summary": "truth-in-labeling doc lint (P0-T16) \u2014 no enforcement claim without a criterion-id reference",
       "destructive": false,
       "tools": [
         "cws_labeling"
+      ]
+    },
+    {
+      "id": "repin",
+      "summary": "TODO",
+      "destructive": false,
+      "tools": [
+        "cws_repin"
+      ]
+    },
+    {
+      "id": "reprobuild",
+      "summary": "reproducible engine build (P0-T13) \u2014 dual-builder byte-identical Go anchor; diffoscope-empty; tamper-discriminating",
+      "destructive": false,
+      "tools": [
+        "cws_reprobuild"
+      ]
+    },
+    {
+      "id": "schemas",
+      "summary": "validate the CWP message corpus against the 2020-12 schemas (P0-T05) \u2014 100% valid + negatives rejected",
+      "destructive": false,
+      "tools": [
+        "cws_schemas"
+      ]
+    },
+    {
+      "id": "vectors",
+      "summary": "TODO",
+      "destructive": false,
+      "tools": [
+        "cws_vectors"
       ]
     }
   ]
