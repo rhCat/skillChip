@@ -1,14 +1,14 @@
 {
   "skill": "alchemy",
-  "skill_sha": "8a0603c30ae4c78748bb5ff6a6d07520c87e556c1161047860c9b2b373381d12",
+  "skill_sha": "fedd9c09eb532e0a9de34adc5de4d867a2a9ac833160fa5c2c27b6b073144599",
   "file_count": 36,
   "files": {
     "SKILL.md": "0716d62d02221ecc7de607b83731fb1ebe38a0b260d019738eee05fa02a39598",
     "blueprint.json": "a0a2a2841b4394e18e8624c47351e82bffaf6cebd865c1038d0e34316d58f481",
-    "declared/chip-cfgs.json": "c69c6a460cc1f615473f6534b3c67b7c58c4a3ff72c86ef533eb26a5833b2f6d",
+    "declared/chip-cfgs.json": "fbabcaaabb57ce4478ccad63561110c35524fec4ea41277713496b88ed2035dc",
     "deps.lock": "9ea14c4cd49e004d75130fd743668880641dcc33f5ca956c72d7c0d784b24a10",
     "ledger.json": "17a428d553222758a6de53a10a33bc1757fbe3b487a91120a811334eaa6eda67",
-    "perks.json": "b7e5611199a73c13889b82859d7026bb91b7ce0f392fc3f5b0af084064c716e9",
+    "perks.json": "a1e235296b499553411bef1ca44be695aaeffc2f2eeb9aca6e53b0b42a3d2b62",
     "perks/classify/manifesto.json": "5d722522a91b2315bbf7f108ccd71223b42423e2fd65a866ee56c14c6c0bfb34",
     "perks/classify/metadata.json": "434a5bd70118fc9f0656d0ad1af922a8c287899d36379a0a4ded1e950ef3adcc",
     "perks/classify/src/alchemy_classify.py": "e9c7e0f1bbdab23e985a47f278c2a90faa3e9333cf18128b40207aec6f21efb1",
@@ -35,7 +35,7 @@
     "perks/extract/test/case.json": "2f305ccfd36b119784879f25fc48c2030ec168417b9108e519e93a1ee661ad8d",
     "perks/lineage/manifesto.json": "2a63c04790cdf145c368d6d8dbe1335ae8e681db0e7c7f39a937e07a1521708a",
     "perks/lineage/metadata.json": "b9b212e302d7a6b7d2c4f200b61b43669579b07917b5f7add5d506a63da71267",
-    "perks/lineage/src/alchemy_lineage.py": "d3069214207ece281592396103eb0ba207b89c66d6968651d9239c05878508f6",
+    "perks/lineage/src/alchemy_lineage.py": "10fac72bfa4439efff3341394b5d268998136ce7d51f0d09a79fb29647d580af",
     "perks/lineage/src/alchemy_lineage.sh": "394004c09d5ea440f59455e09fe6e727d238ea0c422d0f1a85ba0b23341734f4",
     "perks/lineage/src/contracts.json": "51e00330cced20127481295456a18776182fef2a271b7b1c15666d6007163ead",
     "perks/lineage/test/case.json": "e1c20cc834ffb63207d8f89bf9faa708846f4c64601e93fdeffb831015d7c26c"

@@ -4,7 +4,7 @@
   "skills": [
     {
       "skill": "alchemy",
-      "skill_sha": "8a0603c30ae4c78748bb5ff6a6d07520c87e556c1161047860c9b2b373381d12",
+      "skill_sha": "fedd9c09eb532e0a9de34adc5de4d867a2a9ac833160fa5c2c27b6b073144599",
       "file_count": 36
     },
     {
@@ -29,7 +29,7 @@
     },
     {
       "skill": "cws-conform",
-      "skill_sha": "bb6cf4e9a0749c2fd393610f3e750464f8a6fa16b61c735e126b08976d404dfd",
+      "skill_sha": "0415466f3cf80ccc470ba78cef6104c0f4ad9088470785873b7e86eb323643f7",
       "file_count": 75
     },
     {
@@ -74,12 +74,12 @@
     },
     {
       "skill": "cws-release",
-      "skill_sha": "029b7650e8cba675e152083b984b54101729a662f29f600f06316e3e66bcdf8d",
+      "skill_sha": "2e2d3ad1b4b6fac8482b640eb791e578fec5030b8bbaccbcee028880cf0916cc",
       "file_count": 82
     },
     {
       "skill": "cws-settle-sim",
-      "skill_sha": "9517cc564b633766a9584ef42eb9bec03dd37f0caae3b7a4401872acd1ff7cc4",
+      "skill_sha": "47a465effd99565d22cb600b0a8b367d74f9306765465350f5c8597859c7dded",
       "file_count": 52
     },
     {
@@ -178,5 +178,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "40690903467af5d2425987b066a36c286f032ef54174f48bd5c352d1199d21af"
+  "chip_sha": "395ef679671e2085a5117b10a344cb3724a6463f5d833bff3da25da3c3aa8934"
 }

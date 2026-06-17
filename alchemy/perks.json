@@ -2,24 +2,8 @@
   "skill": "alchemy",
   "perks": [
     {
-      "id": "extract",
-      "summary": "TODO",
-      "destructive": false,
-      "tools": [
-        "alchemy_extract"
-      ]
-    },
-    {
-      "id": "conserve",
-      "summary": "TODO",
-      "destructive": false,
-      "tools": [
-        "alchemy_conserve"
-      ]
-    },
-    {
       "id": "classify",
-      "summary": "TODO",
+      "summary": "classify \u2014 every resource CALL mapped to a named family; an exotic CALL raises unnamed",
       "destructive": false,
       "tools": [
         "alchemy_classify"
@@ -27,10 +11,34 @@
     },
     {
       "id": "concord",
-      "summary": "TODO",
+      "summary": "concord \u2014 extracted CFG contained in the declared blueprint (stmt* vocab); diff stored; tamper caught",
       "destructive": false,
       "tools": [
         "alchemy_concord"
+      ]
+    },
+    {
+      "id": "conserve",
+      "summary": "conservation \u2014 acquire/release balance (B1 law); a real leak raises unexplained_defects",
+      "destructive": false,
+      "tools": [
+        "alchemy_conserve"
+      ]
+    },
+    {
+      "id": "extract",
+      "summary": "L++ emitted per snippet core \u2014 the pinned putrefactio typestate extractor (file-mode, no warehouse)",
+      "destructive": false,
+      "tools": [
+        "alchemy_extract"
+      ]
+    },
+    {
+      "id": "lineage",
+      "summary": "ancestor royalties (P6-T19) \u2014 a verified-tier publish pays the alchemy lineage through the reward ledger; a blocked subject pays nothing",
+      "destructive": false,
+      "tools": [
+        "alchemy_lineage"
       ]
     }
   ]
