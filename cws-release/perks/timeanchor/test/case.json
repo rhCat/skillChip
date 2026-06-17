@@ -1,0 +1,19 @@
+{
+  "_perk": "timeanchor",
+  "requires": [
+    "python3",
+    "openssl"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "timeanchor.json"
+    ],
+    "contains": {
+      "timeanchor.json": [
+        "\"ok\": true",
+        "\"absence_blocks_settlement\": true"
+      ]
+    }
+  }
+}

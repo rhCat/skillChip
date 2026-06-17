@@ -1,7 +1,7 @@
 ---
 skill: cws-release
 name: Release transparency
-perks: [sign, transparency, engine, publish, revoke, manifestlint, approval]
+perks: [sign, transparency, engine, publish, revoke, manifestlint, approval, inflight, feedtiers, keyrotate, receipts, timeanchor]
 ---
 
 # cws-release — Release transparency (V-EXT, the M4 / SV-4 layer)
@@ -23,6 +23,11 @@ pinned root + the publisher's offline key.
 | `revoke` | P3-T03 | **signed revocation feed** — a monotonic, publisher-signed `{seq, expires, revoked[]}` names what must no longer run. A revoked artifact is refused; a feed older than `max_age` is **`feed_stale`** and **fails closed** (a consumer that cannot refresh stops trusting it — this bounds revocation latency); a replayed older feed is **`rollback`**; a forged feed is **`bad_signature`**. |
 | `manifestlint` | P3-T10 | **publish-time manifest lint** — what a perk actually does must match what it declares. Extracts the binaries its porter scripts invoke, the egress they reach, and the capabilities it grants, and refuses to publish on any drift: **undeclared binary**, **undeclared egress**, or **capability mismatch** — catching 100% of these (how a benign-looking skill smuggles a binary, a callback host, or a writable path). |
 | `approval` | P3-T04 | **WebAuthn approval for destructive grants** — the challenge is `sha256(JCS(doc))`, binding a hardware approval to one canonical doc; verified **fully offline** from the stored assertion + COSE key (no live authenticator). A different doc, a flipped signature, a cleared User-Verified bit, or a wrong origin are each refused, and a destructive grant without a verified approval does not proceed. |
+| `inflight` | P3-T13 | **revocation-in-flight** — the in-flight runner consults the signed feed at each step boundary; an ordinary revocation lets the in-progress step finish then refuses the next (boundary halt), a **critical** revocation aborts the in-progress step immediately (one step sooner). |
+| `feedtiers` | P3-T12 | **feed availability tiers + grace** — through a feed outage, read-only proceeds to **grace-2** while **destructive refuses**; past grace-2 everything fails closed; a forged feed refuses at every tier; presenting a fresh feed re-converges with no ledger surgery. |
+| `keyrotate` | P3-T06 | **key-rotation drill** — a **cross-signed** rotation record (old + new keys); during the overlap a grant from either key verifies; once the old key is revoked an old-key grant is refused while the new key still works. |
+| `receipts` | P3-T14 | **finalized receipts** — two independent **Ed25519-DSSE** signatures over one **in-toto** statement; a single signature, a tampered statement, or two signatures from one key do not pass as finalized. |
+| `timeanchor` | P3-T07 | **TSA time anchors** — a high-value receipt is settlement-eligible only with a TSA token that **verifies offline** against the receipt digest; absence, a tampered token, or a token bound to a different receipt block settlement. |
 
 ## Coming (the rest of the M4 cone)
 The Citrinitas publish gate (P3-T09) depends on the `alchemy` validator (concordance, P3-T08), which is not

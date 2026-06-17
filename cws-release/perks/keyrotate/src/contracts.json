@@ -1,0 +1,14 @@
+{
+  "tool": "cws_release_keyrotate",
+  "inputs": {},
+  "outputs": {
+    "keyrotate_out": {
+      "path": "${RECORD_STORE}/keyrotate.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/keyrotate.json"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "perk": "timeanchor",
+  "summary": "TSA time anchors (P3-T07) \u2014 high-value receipts need an offline-verifiable TSA token; absence blocks settlement",
+  "destructive": false
+}

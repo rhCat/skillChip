@@ -1,0 +1,5 @@
+{
+  "perk": "receipts",
+  "summary": "finalized receipts (P3-T14) \u2014 dual Ed25519-DSSE over one in-toto statement; single/tampered rejected",
+  "destructive": false
+}

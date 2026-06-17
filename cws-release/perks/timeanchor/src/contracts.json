@@ -1,0 +1,14 @@
+{
+  "tool": "cws_release_timeanchor",
+  "inputs": {},
+  "outputs": {
+    "timeanchor_out": {
+      "path": "${RECORD_STORE}/timeanchor.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/timeanchor.json"
+  }
+}

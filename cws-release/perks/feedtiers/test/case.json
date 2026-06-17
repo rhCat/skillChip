@@ -1,0 +1,19 @@
+{
+  "_perk": "feedtiers",
+  "requires": [
+    "python3",
+    "openssl"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "feedtiers.json"
+    ],
+    "contains": {
+      "feedtiers.json": [
+        "\"ok\": true",
+        "\"expired_fails_closed\": true"
+      ]
+    }
+  }
+}

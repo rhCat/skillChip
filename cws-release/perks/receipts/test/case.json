@@ -1,0 +1,19 @@
+{
+  "_perk": "receipts",
+  "requires": [
+    "python3",
+    "openssl"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "receipts.json"
+    ],
+    "contains": {
+      "receipts.json": [
+        "\"ok\": true",
+        "\"dual_signed_and_consumable\": true"
+      ]
+    }
+  }
+}

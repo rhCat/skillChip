@@ -1,0 +1,5 @@
+{
+  "perk": "feedtiers",
+  "summary": "feed availability tiers (P3-T12) \u2014 read-only proceeds to grace-2, destructive refuses, expired fails closed, recovery re-converges",
+  "destructive": false
+}

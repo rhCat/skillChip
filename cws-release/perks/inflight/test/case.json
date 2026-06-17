@@ -1,0 +1,19 @@
+{
+  "_perk": "inflight",
+  "requires": [
+    "python3",
+    "openssl"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "inflight.json"
+    ],
+    "contains": {
+      "inflight.json": [
+        "\"ok\": true",
+        "\"critical_kills_immediately\": true"
+      ]
+    }
+  }
+}
