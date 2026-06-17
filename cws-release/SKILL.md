@@ -1,7 +1,7 @@
 ---
 skill: cws-release
 name: Release transparency
-perks: [sign]
+perks: [sign, transparency]
 ---
 
 # cws-release — Release transparency (V-EXT, the M4 / SV-4 layer)
@@ -17,9 +17,10 @@ published artifact and nothing else.* This skill gates the release pipeline.
 The core is `infra/cwp/release.py`; the perk's hermetic self-test signs with an ephemeral key so it runs
 in CI (needs only openssl/ed25519ph), while a real release uses the committed pinned root + the publisher's
 offline key.
+| `transparency` | P3-T02 | **offline transparency** — every release becomes a leaf in a Merkle log whose head is a **publisher-signed tree head** (Ed25519ph). A release ships a self-contained **inclusion proof**; a verifier recomputes the Merkle root from leaf + audit path and checks the signed head against the **pinned root** — **no live Rekor is contacted**. An unsigned/forged head, a tampered leaf, or a wrong index all fail offline. Shares the audited Merkle primitive with Ledger-v2 checkpoints. |
 
 ## Coming (the rest of the M4 cone)
-`transparency` (P3-T02, Rekor inclusion proofs, offline-verifiable) · `engine` (P3-T05, engine attestation +
+`engine` (P3-T05, engine attestation +
 mutual handshake) · `publish` (P3-T15, dual-signed release receipts). The Citrinitas publish gate (P3-T09)
 depends on the `alchemy` validator (concordance), which is not built yet; full M4 closure also needs P0-T13
 (reproducible build, diffoscope).

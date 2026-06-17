@@ -1,0 +1,5 @@
+{
+  "perk": "transparency",
+  "summary": "offline transparency proofs (P3-T02) \u2014 Merkle log + publisher-signed tree head; inclusion proof verifies offline vs the pinned root, no live Rekor",
+  "destructive": false
+}
