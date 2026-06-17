@@ -1,0 +1,14 @@
+{
+  "tool": "alchemy_conserve",
+  "inputs": {},
+  "outputs": {
+    "conserve_out": {
+      "path": "${RECORD_STORE}/conserve.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/conserve.json"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "tool": "alchemy_classify",
+  "inputs": {},
+  "outputs": {
+    "classify_out": {
+      "path": "${RECORD_STORE}/classify.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/classify.json"
+  }
+}

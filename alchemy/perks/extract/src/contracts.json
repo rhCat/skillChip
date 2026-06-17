@@ -1,0 +1,14 @@
+{
+  "tool": "alchemy_extract",
+  "inputs": {},
+  "outputs": {
+    "extract_out": {
+      "path": "${RECORD_STORE}/extract.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/extract.json"
+  }
+}

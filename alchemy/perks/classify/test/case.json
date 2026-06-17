@@ -1,0 +1,21 @@
+{
+  "_perk": "classify",
+  "requires": [
+    "python3"
+  ],
+  "requires_cmd": [
+    "test -d /Users/ruihe/hunyuan/putrefactio/tools/typestate-extractors/python-typestate-extractor"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "classify.json"
+    ],
+    "contains": {
+      "classify.json": [
+        "\"ok\": true",
+        "\"clean_unnamed\": 0"
+      ]
+    }
+  }
+}

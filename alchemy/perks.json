@@ -1,0 +1,37 @@
+{
+  "skill": "alchemy",
+  "perks": [
+    {
+      "id": "extract",
+      "summary": "TODO",
+      "destructive": false,
+      "tools": [
+        "alchemy_extract"
+      ]
+    },
+    {
+      "id": "conserve",
+      "summary": "TODO",
+      "destructive": false,
+      "tools": [
+        "alchemy_conserve"
+      ]
+    },
+    {
+      "id": "classify",
+      "summary": "TODO",
+      "destructive": false,
+      "tools": [
+        "alchemy_classify"
+      ]
+    },
+    {
+      "id": "concord",
+      "summary": "TODO",
+      "destructive": false,
+      "tools": [
+        "alchemy_concord"
+      ]
+    }
+  ]
+}
