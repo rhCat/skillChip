@@ -1,0 +1,21 @@
+{
+  "_perk": "capstone",
+  "requires": [
+    "python3"
+  ],
+  "requires_cmd": [
+    "openssl version >/dev/null 2>&1"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "capstone.json"
+    ],
+    "contains": {
+      "capstone.json": [
+        "\"ok\": true",
+        "\"THE_LADDER_CLOSES\": true"
+      ]
+    }
+  }
+}

@@ -1,7 +1,7 @@
 ---
 skill: alchemy
 name: Concordance (the alchemy ancestor)
-perks: [extract, conserve, classify, concord]
+perks: [extract, conserve, classify, concord, lineage]
 ---
 
 # alchemy — concordance validation (P3-T08, the SV-4 ancestor)
@@ -18,6 +18,7 @@ skill is graded against. No warehouse / postgres dependency; the engines run on 
 | `extract` | P3-T08 | **L++ per snippet core** — `python -m python_typestate_extractor <dir>` emits a typestate blueprint (gates / actions / transitions over a `stmt*` block vocabulary) per function. |
 | `conserve` | P3-T08 | **conservation** — acquire/release imbalance per resource family vs the `B1_acquire_release_balance` law; `unexplained_defects` = unbalanced families. A clean subject → 0; a real leak (acquire without release) raises it. |
 | `classify` | P3-T08 | **classification** — every resource CALL mapped to a named family via the leaf-map; `unnamed` = a CALL with no family. A clean subject → 0; an exotic CALL raises it. |
+| `lineage` | P6-T19 | **ancestor royalties** — a verified-tier publish (the Citrinitas gate admits it) pays a royalty to the `alchemy:lineage` account through the reward ledger; a blocked subject pays nothing. |
 | `concord` | P3-T08 | **concordance** — the extracted CFG is structurally **contained** in a declared blueprint (the stored diff names any missing state / violating edge). A contained subject passes; an injected undeclared edge is caught. This is **set-containment over the `stmt*` block-order model** — not full control-flow-graph equivalence (see Scope). |
 
 ## Scope (stated honestly)

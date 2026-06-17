@@ -1,0 +1,14 @@
+{
+  "tool": "settle_capstone",
+  "inputs": {},
+  "outputs": {
+    "capstone_out": {
+      "path": "${RECORD_STORE}/capstone.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/capstone.json"
+  }
+}

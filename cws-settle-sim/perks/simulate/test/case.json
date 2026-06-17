@@ -1,0 +1,19 @@
+{
+  "_perk": "simulate",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "simulate.json"
+    ],
+    "contains": {
+      "simulate.json": [
+        "\"ok\": true",
+        "\"zero_sum_exact\": true",
+        "\"dispute_lifecycle_complete\": true"
+      ]
+    }
+  }
+}
