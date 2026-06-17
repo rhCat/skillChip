@@ -1,0 +1,14 @@
+{
+  "tool": "cws_release_engine",
+  "inputs": {},
+  "outputs": {
+    "engine_out": {
+      "path": "${RECORD_STORE}/engine.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/engine.json"
+  }
+}

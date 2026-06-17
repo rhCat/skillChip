@@ -69,8 +69,8 @@
     },
     {
       "skill": "cws-release",
-      "skill_sha": "8da00a05570b9dbcc37de104adccfafc581568b057d72d2cc308c8ebf977a45c",
-      "file_count": 16
+      "skill_sha": "07258e9a2e92bb8402a6a73f88d6f4a88e19afcd27a76888d29aa5c99d123d84",
+      "file_count": 22
     },
     {
       "skill": "data",
@@ -168,5 +168,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "9853b8778dfdef39f9bda139bb646cfc2e770e7f5df0e337ff2b5a805546a33a"
+  "chip_sha": "f0454c9ff807925faa0ef9f23dcb981a91aa9295e96a0f90a07f7460cf37d1a6"
 }

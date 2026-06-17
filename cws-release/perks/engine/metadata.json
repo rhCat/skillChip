@@ -1,0 +1,5 @@
+{
+  "perk": "engine",
+  "summary": "engine attestation + mutual handshake (P3-T05) \u2014 publisher-signed engine digest; 1-byte tamper on either side \u2192 engine_unattested; health matches signed release",
+  "destructive": false
+}
