@@ -1,0 +1,22 @@
+{
+  "_perk": "quote",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "quote.json"
+    ],
+    "contains": {
+      "quote.json": [
+        "\"ok\": true",
+        "\"breakdown_balances\": true",
+        "\"plan_mismatch_refused\": true"
+      ]
+    }
+  },
+  "requires_cmd": [
+    "openssl version >/dev/null 2>&1"
+  ]
+}

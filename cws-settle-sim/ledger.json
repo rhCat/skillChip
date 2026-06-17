@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for cws-settle-sim \u2014 set perk, fill record_store + the vars the perk's manifesto declares.",
+  "skill": "cws-settle-sim",
+  "perk": "floatban",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "INPUT": "<value>"
+  }
+}

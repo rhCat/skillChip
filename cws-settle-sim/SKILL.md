@@ -1,0 +1,33 @@
+---
+skill: cws-settle-sim
+name: Settlement simulator (the money's lifecycle)
+perks: [floatban, zerosum, quote, settle]
+---
+
+# cws-settle-sim — the SV-6 settlement validator (M6, "the work pays for the work")
+
+cws-settle-sim grades the settlement substrate (`infra/settle/`) — the money's lifecycle from type to ledger
+to quote to engine. It is built **incrementally** alongside the P6 cone (as `cws-release` was grown through
+P3): each perk validates one money-cone task against its acceptance, on REAL runs.
+
+## Perks
+| perk | task | what |
+|---|---|---|
+| `floatban` | P6-T01 | **Money type + float-ban** — `infra/settle/money.py` is exact decimal at scale 4, **HALF_EVEN**, and **refuses binary floats** at construction; a `split` re-sums to the total **exactly** (largest-remainder). The float-ban AST lint finds **0** float intrusions in `infra/settle` (and fires on a seed, so the 0 is a real verdict). |
+| `zerosum` | P6-T02 | **double-entry reward ledger** — every posting set balances (per-currency zero); an unbalanced set is refused; a **10k-settlement storm** stays globally zero-sum with **escrow zero at every terminal state**; a Merkle **balance root** is committed. |
+| `quote` | P6-T04 | **signed funded quote** — govd signs a **plan-bound** quote whose breakdown sums to the amount **exactly**; a priced grant is admitted only with a **funded** quote; tampered / unfunded / plan-mismatched quotes are refused. |
+| `settle` | P6-T05 | **settlement engine** — a **dual-signed**, **validation:pass**, **quote-bound** receipt settles atomically (escrow drained to zero, posting balanced, ledger zero-sum, dispute holdback parked); a mutant receipt (signature stripped / verdict flipped / unbound) settles **nothing**. Funding is **per-quote** (escrow keyed by `quote_sha`, so one quote's funds never satisfy another) and settlement is **idempotent** (a re-funded `quote_sha` cannot pay out twice). |
+
+## Scope / residuals (stated honestly)
+The two value-integrity guards above — **per-quote escrow** and the **spent-quote idempotency guard** — were
+added after an adversarial review found that a global escrow pool let one funding satisfy a distinct quote,
+and that a re-funded quote could double-pay while staying zero-sum (conservation alone cannot catch a
+double-pay). Both now have explicit regression checks. Known honestly-scoped residuals: the demo is
+**single-currency** (the invariants are currency-generic); `Money(Decimal(<float>))` is a soft-leak the
+scale-4 quantization neutralizes and the float-ban lint keeps `infra/settle` literal-free; and
+`release_holdback` has no dispute-window timer or auth yet (it stays balanced and cannot exceed the held
+amount) — the timed/authorized release is downstream P6 work.
+
+## Coming (the rest of the M6 cone)
+`storm` / `manipulate` / `dispute` (P6-T18, the formal authoring) and the downstream P6 market tasks. These
+close **SV-6 — the ladder's top rung**.

@@ -1,0 +1,14 @@
+{
+  "tool": "settle_floatban",
+  "inputs": {},
+  "outputs": {
+    "floatban_out": {
+      "path": "${RECORD_STORE}/floatban.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/floatban.json"
+  }
+}

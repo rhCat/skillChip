@@ -1,0 +1,22 @@
+{
+  "_perk": "settle",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "settle.json"
+    ],
+    "contains": {
+      "settle.json": [
+        "\"ok\": true",
+        "\"sig_stripped_rejected\": true",
+        "\"verdict_flipped_rejected\": true"
+      ]
+    }
+  },
+  "requires_cmd": [
+    "openssl version >/dev/null 2>&1"
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "perk": "floatban",
+  "summary": "Money type + float-ban (P6-T01) \u2014 scale-4 HALF_EVEN, float refused, splits exact; 0 float intrusions in infra/settle",
+  "destructive": false
+}

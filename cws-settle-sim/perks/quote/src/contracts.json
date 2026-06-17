@@ -1,0 +1,14 @@
+{
+  "tool": "settle_quote",
+  "inputs": {},
+  "outputs": {
+    "quote_out": {
+      "path": "${RECORD_STORE}/quote.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/quote.json"
+  }
+}
