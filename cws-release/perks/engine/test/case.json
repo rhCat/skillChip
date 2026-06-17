@@ -1,0 +1,20 @@
+{
+  "_perk": "engine",
+  "requires": [
+    "python3",
+    "openssl"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "engine.json"
+    ],
+    "contains": {
+      "engine.json": [
+        "\"ok\": true",
+        "\"tamper_local_unattested\": true",
+        "\"health_matches_signed_release\": true"
+      ]
+    }
+  }
+}
