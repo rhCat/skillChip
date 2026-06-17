@@ -1,0 +1,5 @@
+{
+  "perk": "publish",
+  "summary": "governed release receipt (P3-T15) \u2014 dual-signed chip + engine with stored transparency proof; any leg tamper fails closed",
+  "destructive": false
+}

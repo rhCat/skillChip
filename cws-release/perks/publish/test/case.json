@@ -1,0 +1,20 @@
+{
+  "_perk": "publish",
+  "requires": [
+    "python3",
+    "openssl"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "publish.json"
+    ],
+    "contains": {
+      "publish.json": [
+        "\"ok\": true",
+        "\"governed_release_verifies\": true",
+        "\"rekor_proof_stored\": true"
+      ]
+    }
+  }
+}
