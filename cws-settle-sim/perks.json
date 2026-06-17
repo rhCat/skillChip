@@ -1,0 +1,13 @@
+{
+  "skill": "cws-settle-sim",
+  "perks": [
+    {
+      "id": "floatban",
+      "summary": "TODO",
+      "destructive": false,
+      "tools": [
+        "settle_floatban"
+      ]
+    }
+  ]
+}

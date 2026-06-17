@@ -1,0 +1,5 @@
+{
+  "perk": "settle",
+  "summary": "settlement engine (P6-T05) \u2014 dual-sig+validation:pass+quote-bound \u2192 atomic balanced settle, escrow zeroed; mutant receipts (sig stripped / verdict flipped / unbound) rejected",
+  "destructive": false
+}

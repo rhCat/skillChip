@@ -1,0 +1,18 @@
+{
+  "_perk": "quote",
+  "sequence": [
+    "settle_quote"
+  ],
+  "tools": {
+    "settle_quote": {
+      "binary": "python3",
+      "params": {}
+    }
+  },
+  "env": {
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

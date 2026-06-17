@@ -1,0 +1,5 @@
+{
+  "perk": "zerosum",
+  "summary": "reward ledger double-entry (P6-T02) \u2014 every posting set balanced; 10k storm globally zero-sum; escrow zero at terminal; balance-root checkpoints",
+  "destructive": false
+}
