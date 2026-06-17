@@ -1,0 +1,5 @@
+{
+  "perk": "reprobuild",
+  "summary": "reproducible engine build (P0-T13) \u2014 dual-builder byte-identical Go anchor; diffoscope-empty; tamper-discriminating",
+  "destructive": false
+}
