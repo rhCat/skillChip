@@ -1,0 +1,13 @@
+{
+  "skill": "cws-release",
+  "perks": [
+    {
+      "id": "sign",
+      "summary": "TODO",
+      "destructive": false,
+      "tools": [
+        "cws_release_sign"
+      ]
+    }
+  ]
+}

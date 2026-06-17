@@ -1,0 +1,5 @@
+{
+  "perk": "sign",
+  "summary": "publisher signing (P3-T01) \u2014 cosign over the chip manifest; tri-layer refusal (chipfetch/govd/exod) vs the pinned TUF root",
+  "destructive": false
+}

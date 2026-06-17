@@ -1,0 +1,25 @@
+---
+skill: cws-release
+name: Release transparency
+perks: [sign]
+---
+
+# cws-release — Release transparency (V-EXT, the M4 / SV-4 layer)
+
+The SV-4 promise: *skills and the engine are signed, publicly logged, and revocable; what runs is the
+published artifact and nothing else.* This skill gates the release pipeline.
+
+## Perks
+| perk | task | what |
+|---|---|---|
+| `sign` | P3-T01 | **publisher signing** — the chip release manifest (`chip_sha` + per-skill `skill_sha`) is signed with the publisher Ed25519ph key (cosign-shaped) and verified against a **pinned TUF root** (`spec/tuf/publisher-root.pub`). An unsigned or tampered release is refused at all three entry points — **chipfetch · govd boot · exod run** (the tri-layer refusal). Exit 0 iff the signed release passes + unsigned/tampered are refused + the root is pinned. |
+
+The core is `infra/cwp/release.py`; the perk's hermetic self-test signs with an ephemeral key so it runs
+in CI (needs only openssl/ed25519ph), while a real release uses the committed pinned root + the publisher's
+offline key.
+
+## Coming (the rest of the M4 cone)
+`transparency` (P3-T02, Rekor inclusion proofs, offline-verifiable) · `engine` (P3-T05, engine attestation +
+mutual handshake) · `publish` (P3-T15, dual-signed release receipts). The Citrinitas publish gate (P3-T09)
+depends on the `alchemy` validator (concordance), which is not built yet; full M4 closure also needs P0-T13
+(reproducible build, diffoscope).

@@ -1,0 +1,19 @@
+{
+  "_perk": "sign",
+  "requires": [
+    "python3",
+    "openssl"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "release.json"
+    ],
+    "contains": {
+      "release.json": [
+        "\"ok\": true",
+        "\"tampered_refused_all_layers\": true"
+      ]
+    }
+  }
+}
