@@ -4,7 +4,7 @@
   "skills": [
     {
       "skill": "alchemy",
-      "skill_sha": "fedd9c09eb532e0a9de34adc5de4d867a2a9ac833160fa5c2c27b6b073144599",
+      "skill_sha": "8a7912f22bc9158db2ba63b2223cd8f41162a7cf030ef48924289bb4e4f9d659",
       "file_count": 36
     },
     {
@@ -183,5 +183,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "2ec64b692589acdd3bd08e0efd7158398d07c30ccfac13ba08c428412d3117fc"
+  "chip_sha": "319573df678a6e0fb37f9d5530453da326d9b5c1a2c0b4db44ca9fde72c7a07a"
 }
