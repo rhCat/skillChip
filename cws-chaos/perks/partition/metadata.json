@@ -1,0 +1,5 @@
+{
+  "perk": "partition",
+  "summary": "partition drill (P2-T10) \u2014 govd<->exod partition: running step completes, next refuses closed, WS resume idempotent (zero dup)",
+  "destructive": false
+}

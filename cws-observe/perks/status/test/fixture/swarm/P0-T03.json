@@ -1,10 +1,10 @@
 {
   "$schema": "cwp-task-v1.1",
   "task_id": "P0-T03",
-  "title": "fixture task whose validator (cws-chaos) is not built yet => blocked:validator",
+  "title": "fixture task whose validator (a synthetic never-built name) is not in the chip => blocked:validator",
   "phase": "P0",
   "ladder_rung": "SV-6",
   "depends_on": [],
-  "validated_by": "cws-chaos",
+  "validated_by": "cws-fixture-unbuilt",
   "status": "todo"
 }

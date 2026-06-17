@@ -1,0 +1,14 @@
+{
+  "tool": "chaos_crash",
+  "inputs": {},
+  "outputs": {
+    "crash_out": {
+      "path": "${RECORD_STORE}/crash.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/crash.json"
+  }
+}

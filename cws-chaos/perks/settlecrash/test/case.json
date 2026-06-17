@@ -1,0 +1,22 @@
+{
+  "_perk": "settlecrash",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "settlecrash.json"
+    ],
+    "contains": {
+      "settlecrash.json": [
+        "\"ok\": true",
+        "\"all_or_nothing\": true",
+        "\"replay_exactly_once\": true"
+      ]
+    }
+  },
+  "requires_cmd": [
+    "openssl version >/dev/null 2>&1"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "_perk": "crash",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "crash.json"
+    ],
+    "contains": {
+      "crash.json": [
+        "\"ok\": true",
+        "\"orphan_reaped\": true",
+        "\"step_records_error\": true"
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_perk": "partition",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "partition.json"
+    ],
+    "contains": {
+      "partition.json": [
+        "\"ok\": true",
+        "\"next_refused_closed\": true",
+        "\"ws_resume_idempotent\": true"
+      ]
+    }
+  }
+}

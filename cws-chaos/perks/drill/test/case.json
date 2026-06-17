@@ -1,0 +1,22 @@
+{
+  "_perk": "drill",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "chaos.json"
+    ],
+    "contains": {
+      "chaos.json": [
+        "\"ok\": true",
+        "\"partition\": true",
+        "\"crash_exod\": true"
+      ]
+    }
+  },
+  "requires_cmd": [
+    "openssl version >/dev/null 2>&1"
+  ]
+}

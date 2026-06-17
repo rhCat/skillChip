@@ -1,0 +1,14 @@
+{
+  "tool": "chaos_drill",
+  "inputs": {},
+  "outputs": {
+    "drill_out": {
+      "path": "${RECORD_STORE}/chaos.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/chaos.json"
+  }
+}
