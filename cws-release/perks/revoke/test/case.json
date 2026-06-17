@@ -1,0 +1,20 @@
+{
+  "_perk": "revoke",
+  "requires": [
+    "python3",
+    "openssl"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "revoke.json"
+    ],
+    "contains": {
+      "revoke.json": [
+        "\"ok\": true",
+        "\"rollback_refused\": true",
+        "\"stale_feed_fails_closed\": true"
+      ]
+    }
+  }
+}

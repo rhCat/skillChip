@@ -1,0 +1,5 @@
+{
+  "perk": "approval",
+  "summary": "WebAuthn approval (P3-T04) \u2014 destructive grants carry a doc-bound (challenge=sha256(JCS)) hardware approval, verified offline",
+  "destructive": false
+}
