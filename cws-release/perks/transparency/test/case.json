@@ -1,0 +1,20 @@
+{
+  "_perk": "transparency",
+  "requires": [
+    "python3",
+    "openssl"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "transparency.json"
+    ],
+    "contains": {
+      "transparency.json": [
+        "\"ok\": true",
+        "\"valid_verifies_offline\": true",
+        "\"forged_sth_refused\": true"
+      ]
+    }
+  }
+}
