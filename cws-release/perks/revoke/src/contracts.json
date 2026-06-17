@@ -1,0 +1,14 @@
+{
+  "tool": "cws_release_revoke",
+  "inputs": {},
+  "outputs": {
+    "revoke_out": {
+      "path": "${RECORD_STORE}/revoke.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/revoke.json"
+  }
+}

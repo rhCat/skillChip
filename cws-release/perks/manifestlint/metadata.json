@@ -1,0 +1,5 @@
+{
+  "perk": "manifestlint",
+  "summary": "publish-time manifest lint (P3-T10) \u2014 catches undeclared binary/egress + capability mismatch (100% of seeded defects)",
+  "destructive": false
+}

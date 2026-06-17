@@ -1,0 +1,14 @@
+{
+  "tool": "cws_release_manifestlint",
+  "inputs": {},
+  "outputs": {
+    "manifestlint_out": {
+      "path": "${RECORD_STORE}/manifestlint.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/manifestlint.json"
+  }
+}

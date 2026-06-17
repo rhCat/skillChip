@@ -1,0 +1,14 @@
+{
+  "tool": "cws_release_approval",
+  "inputs": {},
+  "outputs": {
+    "approval_out": {
+      "path": "${RECORD_STORE}/approval.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/approval.json"
+  }
+}

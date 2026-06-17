@@ -1,0 +1,5 @@
+{
+  "perk": "revoke",
+  "summary": "signed revocation feed (P3-T03) \u2014 monotonic {seq,expires,revoked[]}; revoked refused, stale fails closed, rollback refused",
+  "destructive": false
+}

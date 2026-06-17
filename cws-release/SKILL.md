@@ -1,7 +1,7 @@
 ---
 skill: cws-release
 name: Release transparency
-perks: [sign, transparency, engine, publish]
+perks: [sign, transparency, engine, publish, revoke, manifestlint, approval]
 ---
 
 # cws-release — Release transparency (V-EXT, the M4 / SV-4 layer)
@@ -20,6 +20,9 @@ published artifact and nothing else.* This skill gates the release pipeline.
 The cores are `infra/cwp/{release,translog,engineattest,publish}.py`; each perk's hermetic self-test signs
 with an ephemeral key so it runs in CI (needs only openssl/ed25519ph), while a real release uses the committed
 pinned root + the publisher's offline key.
+| `revoke` | P3-T03 | **signed revocation feed** — a monotonic, publisher-signed `{seq, expires, revoked[]}` names what must no longer run. A revoked artifact is refused; a feed older than `max_age` is **`feed_stale`** and **fails closed** (a consumer that cannot refresh stops trusting it — this bounds revocation latency); a replayed older feed is **`rollback`**; a forged feed is **`bad_signature`**. |
+| `manifestlint` | P3-T10 | **publish-time manifest lint** — what a perk actually does must match what it declares. Extracts the binaries its porter scripts invoke, the egress they reach, and the capabilities it grants, and refuses to publish on any drift: **undeclared binary**, **undeclared egress**, or **capability mismatch** — catching 100% of these (how a benign-looking skill smuggles a binary, a callback host, or a writable path). |
+| `approval` | P3-T04 | **WebAuthn approval for destructive grants** — the challenge is `sha256(JCS(doc))`, binding a hardware approval to one canonical doc; verified **fully offline** from the stored assertion + COSE key (no live authenticator). A different doc, a flipped signature, a cleared User-Verified bit, or a wrong origin are each refused, and a destructive grant without a verified approval does not proceed. |
 
 ## Coming (the rest of the M4 cone)
 The Citrinitas publish gate (P3-T09) depends on the `alchemy` validator (concordance, P3-T08), which is not

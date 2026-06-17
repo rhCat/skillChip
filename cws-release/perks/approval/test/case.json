@@ -1,0 +1,19 @@
+{
+  "_perk": "approval",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "approval.json"
+    ],
+    "contains": {
+      "approval.json": [
+        "\"ok\": true",
+        "\"tampered_signature_refused\": true",
+        "\"destructive_without_approval_refused\": true"
+      ]
+    }
+  }
+}
