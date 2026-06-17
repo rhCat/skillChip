@@ -1,0 +1,5 @@
+{
+  "perk": "drill",
+  "summary": "all V-CHAOS drills (P2-T10) \u2014 partition (next refuses closed + idempotent resume) + crash-exod (orphan reaped, error recorded, resumable) + settle-crash atomicity",
+  "destructive": false
+}

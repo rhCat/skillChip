@@ -1,0 +1,5 @@
+{
+  "perk": "settlecrash",
+  "summary": "settle-engine crash atomicity (P6-T17) \u2014 crash mid-posting-set is all-or-nothing, replays exactly once, conservation holds through the crash",
+  "destructive": false
+}

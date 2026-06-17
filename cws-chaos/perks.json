@@ -1,0 +1,13 @@
+{
+  "skill": "cws-chaos",
+  "perks": [
+    {
+      "id": "drill",
+      "summary": "TODO",
+      "destructive": false,
+      "tools": [
+        "chaos_drill"
+      ]
+    }
+  ]
+}

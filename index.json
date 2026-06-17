@@ -1,6 +1,6 @@
 {
   "chip": "skillChip",
-  "count": 35,
+  "count": 36,
   "skills": [
     {
       "skill": "alchemy",
@@ -26,6 +26,11 @@
       "skill": "cws-bench",
       "skill_sha": "772604086c0b9b995406e9066f87ef6d750e94093d1db0a3bd0449443474979d",
       "file_count": 10
+    },
+    {
+      "skill": "cws-chaos",
+      "skill_sha": "d0b6108031f454c97ed8ff501bac04b08307a21ed4357f1b67ad2943b66fda38",
+      "file_count": 28
     },
     {
       "skill": "cws-conform",
@@ -54,7 +59,7 @@
     },
     {
       "skill": "cws-observe",
-      "skill_sha": "c1943c80ea0ed239379e88bb6c75eb47c0d195c542ba2205b3bc9d515fa552b1",
+      "skill_sha": "2fc35bae32752c51d5888304e04d0d0f1af7fbba111fe3f6f181a4be21ab9390",
       "file_count": 26
     },
     {
@@ -178,5 +183,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "395ef679671e2085a5117b10a344cb3724a6463f5d833bff3da25da3c3aa8934"
+  "chip_sha": "2ec64b692589acdd3bd08e0efd7158398d07c30ccfac13ba08c428412d3117fc"
 }
