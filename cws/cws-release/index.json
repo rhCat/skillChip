@@ -1,9 +1,9 @@
 {
   "skill": "cws-release",
-  "skill_sha": "28970beed6b2f76e3d95b380f017d858c7d8794dd8d210f641658e1e2cf3c85f",
+  "skill_sha": "4cd946f90d22e36f3b8b26adc3df4d6267bd314f1d6bde3c18e343cebe173098",
   "file_count": 82,
   "files": {
-    "SKILL.md": "46f232f0aebcbf88afd863629a57739f064b5ad2d036cdd2a7bbf5d9ac99946b",
+    "SKILL.md": "ef236050de1f751fc9a0b3c05bc94ab23eb5a537f9d0911e0f1d36b000362e08",
     "blueprint.json": "d68550f3cbbd17a400b7fda9ec79ca637a586eea36fad10c9a1aacbbcff8b92b",
     "ledger.json": "4e71767c6eb44770bde38ef1e35ba43af9686c2230613d77a95510722002650c",
     "perks.json": "17bc07a509072067971959f0c279787cabc92053004a17d0e44a8962d06cdedc",

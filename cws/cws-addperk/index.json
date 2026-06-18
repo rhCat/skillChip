@@ -1,6 +1,6 @@
 {
   "skill": "cws-addperk",
-  "skill_sha": "85481aa9b4e550778ca8390692c65edfbde48d06a67b9484f95313498664c64f",
+  "skill_sha": "7bea7db7fbcdd993823ae2bd09ca9673e1865720f36d23fd96a9e111e79af84b",
   "file_count": 20,
   "files": {
     "SKILL.md": "c94867e0c5221cd4a1d895176368236ba571aca25e4910473982b93fd625e74a",
@@ -12,14 +12,14 @@
     "perks/apply/manifesto.json": "017f57f2701e47a52b914a84029c5c31678a8461162a832550ba70bdc02bc5e3",
     "perks/apply/metadata.json": "d58a93b256fe874621c1b1b641c5739efc40c413c4492963bfc1a28674ffb59a",
     "perks/apply/src/addperk_branch.sh": "58bed8eba8beadfd2a7934abda91e3749a4a5d8b9c1deb81198d2ec412f7ac65",
-    "perks/apply/src/addperk_formulate.py": "e9ef0f876ced26906f1d66eeb6bf172d1dbfb5cfde910b37432fe19cbe686063",
+    "perks/apply/src/addperk_formulate.py": "e4cc082f29c0bf0fdd594f99d8d1341fd3a6f081e5740f3c9c065bb680bccdae",
     "perks/apply/src/addperk_formulate.sh": "342e3f7465a98c9ebfbd968c75ac58fc51756a3aa2bd0e1a8a0b53e233b73ee5",
     "perks/apply/src/addperk_pr.sh": "9f17fffb37648f58a1031e6a68c18a56b369f05a1beae8a0193d0074c4ce1a75",
     "perks/apply/src/contracts.json": "06516a7b084447d0e5017f03c934a3002d76bc7f3e622558bcd5b87747864285",
     "perks/apply/test/case.json": "5d3257ad4ac54d21272f01b76fbfc45d5d186524634ce4fc3af998ef081428a9",
     "perks/evaluate/manifesto.json": "d31e03ae6c1f3084227729153f7696bcf61019d0ed891dbcdf344d53ca8a8885",
     "perks/evaluate/metadata.json": "2f70fc20a2a709aebeff857e4cd3974837113a6a1e1fc3e5b8f9a94eff00baec",
-    "perks/evaluate/src/addperk_eval.py": "fb93f550491183c602b26878b9ca3f780a7d04c171fbdeede252bcc75f99d7e9",
+    "perks/evaluate/src/addperk_eval.py": "19ade9be43c60ede4567e615d45037efdfd6370fb0fdb06d54ed4e0b3fe59146",
     "perks/evaluate/src/addperk_eval.sh": "89ed4227914815f7f86e3b9678e985db1e81f960fdc054a3ab877b7752613381",
     "perks/evaluate/src/contracts.json": "269aa2bcb4b89b30fe3af34de20443b05bed36d89ce180f8c3c9e15bf2e79d03",
     "perks/evaluate/test/case.json": "d55065c8fe3bcb79c50b30c093ec61754d8c20e4e06d156f7a12b13ca8546302"

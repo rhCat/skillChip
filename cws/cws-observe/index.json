@@ -1,6 +1,6 @@
 {
   "skill": "cws-observe",
-  "skill_sha": "2fc35bae32752c51d5888304e04d0d0f1af7fbba111fe3f6f181a4be21ab9390",
+  "skill_sha": "e2f8b78cf776e8d3c34e823a84b548ca99d0677381f167effd2aefbc98450e36",
   "file_count": 26,
   "files": {
     "SKILL.md": "d1f72905d7d2188d0b7a23c7a01ee95c139f1ce718e23b045f279b820d434e41",
@@ -21,7 +21,7 @@
     "perks/status/manifesto.json": "6e5da1600e60975b8b360730dd91d2459c15812b901e523c32918e89434fe5b6",
     "perks/status/metadata.json": "cfe25805cfbf42a1d198e4ade86a98f7b319d5e7e901993d042b9499ff7f8da7",
     "perks/status/src/contracts.json": "84c4102cc7ac28505cceb6f8dcbfa255d464b93ba710d05eb3e37d51c80cb9e1",
-    "perks/status/src/cws_observe_status.py": "d8dfef98af7e288a903b824ab8b2602b994e63795bad124a9b9cb29116e871ee",
+    "perks/status/src/cws_observe_status.py": "006f55e0dbc82d70a96f590821aa6ef43031b017acf74541fb00840127c7e7c0",
     "perks/status/src/cws_observe_status.sh": "c1aed69c991108ce6442a88d2a0374013bde56eda7fb9d987600fb569a9a7242",
     "perks/status/test/case.json": "3e1b89e2f9db23750759aa956f449ae37a5ecd9eac841b76d2c22aa4711a191b",
     "perks/status/test/fixture/swarm/P0-T01.json": "a1f12801563f0cddf4ec6f5f5852b132a19f545b2612d7b4a72d8a8884862c1b",

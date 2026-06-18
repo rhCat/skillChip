@@ -12,9 +12,17 @@ import subprocess
 import sys
 
 
-def chip_root() -> str:
-    here = os.path.dirname(os.path.abspath(__file__))
-    return os.path.abspath(os.path.join(here, "..", "..", "..", ".."))
+# Resolve the cyberware repo so we can resolve a skill's dir via the registry (flat OR source-grouped).
+_root = os.environ.get("CYBERWARE_ROOT")
+if not (_root and os.path.isdir(os.path.join(_root, "infra", "govern"))):
+    _d = os.path.dirname(os.path.abspath(__file__))
+    while _d != os.path.dirname(_d) and not os.path.isdir(os.path.join(_d, "infra", "govern")):
+        _d = os.path.dirname(_d)
+    _root = _d
+if os.path.isdir(os.path.join(_root, "infra", "govern")):
+    sys.path.insert(0, _root)
+
+from infra import registry  # noqa: E402
 
 
 def sh_stub(tool: str, desc: str) -> str:
@@ -52,14 +60,14 @@ def porter(tool: str) -> str:
 
 def main() -> int:
     """Scaffold + validate + commit the new perk."""
-    root = chip_root()
     skill = os.environ["SKILL"]
     perk = os.environ["PERK"]
     desc = os.environ["PERK_DESC"]
     tool = os.environ.get("TOOL") or f"{skill}_{perk}"
     binary = os.environ.get("BINARY") or "bash"
     store = os.environ["RECORD_STORE"].rstrip("/")
-    sdir = os.path.join(root, skill)
+    chip = registry.SKILLCHIP                       # the chip repo (a git submodule) — git ops run here
+    sdir = registry.skill_dir(skill)                # the skill's dir wherever it lives (any source)
     pdir = os.path.join(sdir, "perks", perk)
     src = os.path.join(pdir, "src")
     os.makedirs(src, exist_ok=True)
@@ -94,14 +102,14 @@ def main() -> int:
     ledger = {"skill": skill, "perk": perk, "record_store": "/tmp/" + skill + "_" + perk + "_chk", "vars": {"INPUT": "x"}}
     lf = os.path.join(store, "validate.ledger")
     json.dump(ledger, open(lf, "w"))
-    comp = subprocess.run([sys.executable, os.path.join(root, "infra", "composer.py"), "--ledger", lf],
-                          capture_output=True, text=True)
+    comp = subprocess.run([sys.executable, "-m", "infra.govern.composer", "--ledger", lf],
+                          cwd=_root, capture_output=True, text=True)
     composes = "OK" in comp.stdout
-    subprocess.run(["git", "-C", root, "add", skill], check=False)
-    subprocess.run(["git", "-C", root, "commit", "-m", f"perk: add {skill}/{perk}", "--no-verify"],
+    subprocess.run(["git", "-C", chip, "add", os.path.relpath(sdir, chip)], check=False)
+    subprocess.run(["git", "-C", chip, "commit", "-m", f"perk: add {skill}/{perk}", "--no-verify"],
                    capture_output=True, text=True)
     result = {"tool": "addperk_formulate", "status": "ok", "skill": skill, "perk": perk,
-              "perk_dir": os.path.relpath(pdir, root), "tool_file": tool + (".py" if is_py else ".sh"),
+              "perk_dir": os.path.relpath(pdir, chip), "tool_file": tool + (".py" if is_py else ".sh"),
               "composes": composes, "report": os.path.join(store, "formulate.json")}
     json.dump(result, open(os.path.join(store, "formulate.json"), "w"), indent=2)
     print(json.dumps(result))
