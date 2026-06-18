@@ -10,3 +10,31 @@ Vendored into cyberware as the `skillChip/` git submodule; the engine locates it
 or the bundled default. Swap the chip, same engine governs a different feed-stock.
 
 Generated/maintained with cyberware's `infra.tool` (`skill_index`, `scaffold`, `visualize`, `skilltest`).
+
+## The cartridge model — the manifest is the load set
+
+`index.json` is **authoritative**: what loads is what the manifest *declares* (its `skills[]` roster +
+`chip_sha`), not whatever directory happens to sit on disk. A skill is loadable only if it is **permitted**
+(in the manifest) **and present** (on disk) — so a stray dir scaffolded into the tree never loads, never
+enters the manifest, and never pollutes discovery. The manifest carries `"version"` and `"cartridge"`
+(`false` for this full dev feed-stock; `true` for a compiled cut).
+
+Roster membership is changed **explicitly**, never auto-absorbed:
+
+```sh
+python3 -m infra.tool.skill_index --chip                 # re-pin the permitted roster (refresh shas)
+python3 -m infra.tool.skill_index --chip --add <skill>   # permit a new skill (must be present)
+python3 -m infra.tool.skill_index --chip --remove <skill>
+python3 -m infra.tool.skill_index --chip --scan          # seed a fresh chip's roster from disk (bootstrap)
+python3 -m infra.tool.skill_index --check                # files match indexes + manifest
+```
+
+**Compile a cartridge** — cut a standalone chip of exactly the skills you declare (one = a single-skill
+cartridge), with a fresh root manifest; govd then needs only that skill + the root `chip_sha`:
+
+```sh
+python3 -m infra.tool.cartridge --compile cws-release --out /path/to/cartridge   # one skill (or several)
+python3 -m infra.tool.cartridge --verify /path/to/cartridge                      # present + permitted + sha
+```
+
+An undeclared dir in a compiled cartridge cannot ride along — it is not in the cartridge's manifest.

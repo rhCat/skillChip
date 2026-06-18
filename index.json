@@ -1,5 +1,7 @@
 {
   "chip": "skillChip",
+  "version": 1,
+  "cartridge": false,
   "count": 36,
   "skills": [
     {
