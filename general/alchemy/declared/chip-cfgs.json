@@ -1,10 +1,18 @@
 {
-  "alchemy/perks/classify/src/alchemy_classify.py": {
+  "cws/cws-addperk/perks/apply/src/addperk_formulate.py": {
     "edges": [
       [
         "stmt0",
-        "stmt1"
-      ],
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "exit"
+    ]
+  },
+  "cws/cws-addperk/perks/evaluate/src/addperk_eval.py": {
+    "edges": [
       [
         "stmt1",
         "stmt2"
@@ -15,6 +23,10 @@
       ],
       [
         "stmt3",
+        "stmt4"
+      ],
+      [
+        "stmt4",
         "stmt5"
       ],
       [
@@ -23,283 +35,130 @@
       ],
       [
         "stmt6",
-        "exit"
-      ]
-    ],
-    "states": [
-      "stmt0",
-      "stmt1",
-      "stmt2",
-      "stmt3",
-      "stmt5",
-      "stmt6",
-      "exit"
-    ]
-  },
-  "alchemy/perks/concord/src/alchemy_concord.py": {
-    "edges": [
-      [
-        "stmt0",
-        "stmt1"
+        "stmt7"
       ],
       [
-        "stmt1",
-        "stmt2"
+        "stmt7",
+        "stmt8"
       ],
       [
-        "stmt2",
-        "stmt3"
+        "stmt8",
+        "stmt9"
       ],
       [
-        "stmt3",
-        "stmt5"
+        "stmt9",
+        "stmt10"
       ],
       [
-        "stmt5",
-        "stmt6"
+        "stmt10",
+        "stmt11"
       ],
       [
-        "stmt6",
-        "exit"
-      ]
-    ],
-    "states": [
-      "stmt0",
-      "stmt1",
-      "stmt2",
-      "stmt3",
-      "stmt5",
-      "stmt6",
-      "exit"
-    ]
-  },
-  "alchemy/perks/conserve/src/alchemy_conserve.py": {
-    "edges": [
-      [
-        "stmt0",
-        "stmt1"
+        "stmt11",
+        "stmt12"
       ],
       [
-        "stmt1",
-        "stmt2"
+        "stmt12",
+        "stmt15"
       ],
       [
-        "stmt2",
-        "stmt3"
+        "stmt15",
+        "stmt16"
       ],
       [
-        "stmt3",
-        "stmt5"
+        "stmt16",
+        "stmt17"
       ],
       [
-        "stmt5",
-        "stmt6"
+        "stmt17",
+        "stmt18"
       ],
       [
-        "stmt6",
-        "exit"
-      ]
-    ],
-    "states": [
-      "stmt0",
-      "stmt1",
-      "stmt2",
-      "stmt3",
-      "stmt5",
-      "stmt6",
-      "exit"
-    ]
-  },
-  "alchemy/perks/extract/src/alchemy_extract.py": {
-    "edges": [
-      [
-        "stmt0",
-        "stmt1"
+        "stmt18",
+        "stmt19"
       ],
       [
-        "stmt1",
-        "stmt2"
+        "stmt19",
+        "stmt20"
       ],
       [
-        "stmt2",
-        "stmt3"
+        "stmt20",
+        "stmt21"
       ],
       [
-        "stmt3",
-        "stmt5"
+        "stmt21",
+        "stmt22"
       ],
       [
-        "stmt5",
-        "stmt6"
+        "stmt22",
+        "stmt23"
       ],
       [
-        "stmt6",
-        "exit"
-      ]
-    ],
-    "states": [
-      "stmt0",
-      "stmt1",
-      "stmt2",
-      "stmt3",
-      "stmt5",
-      "stmt6",
-      "exit"
-    ]
-  },
-  "alchemy/perks/lineage/src/alchemy_lineage.py": {
-    "edges": [
-      [
-        "stmt0",
-        "stmt1"
+        "stmt23",
+        "stmt25"
       ],
       [
-        "stmt1",
-        "stmt2"
+        "stmt25",
+        "stmt26"
       ],
       [
-        "stmt2",
-        "stmt3"
+        "stmt26",
+        "stmt27"
       ],
       [
-        "stmt3",
-        "stmt5"
+        "stmt27",
+        "stmt31"
       ],
       [
-        "stmt5",
-        "stmt6"
+        "stmt31",
+        "stmt32"
       ],
       [
-        "stmt6",
-        "exit"
-      ]
-    ],
-    "states": [
-      "stmt0",
-      "stmt1",
-      "stmt2",
-      "stmt3",
-      "stmt5",
-      "stmt6",
-      "exit"
-    ]
-  },
-  "codebaseqc/perks/audit/src/cbqc_contract.py": {
-    "edges": [
-      [
-        "stmt1",
-        "stmt3"
+        "stmt32",
+        "stmt33"
       ],
       [
-        "stmt3",
-        "stmt5"
+        "stmt33",
+        "stmt34"
       ],
       [
-        "stmt5",
-        "stmt6"
-      ],
-      [
-        "stmt6",
-        "exit"
-      ]
-    ],
-    "states": [
-      "stmt1",
-      "stmt3",
-      "stmt5",
-      "stmt6",
-      "exit"
-    ]
-  },
-  "codebaseqc/perks/audit/src/cbqc_coverage.py": {
-    "edges": [
-      [
-        "stmt1",
-        "stmt3"
-      ],
-      [
-        "stmt3",
-        "stmt5"
-      ],
-      [
-        "stmt5",
-        "stmt6"
-      ],
-      [
-        "stmt6",
-        "exit"
-      ]
-    ],
-    "states": [
-      "stmt1",
-      "stmt3",
-      "stmt5",
-      "stmt6",
-      "exit"
-    ]
-  },
-  "codebaseqc/perks/audit/src/cbqc_usage.py": {
-    "edges": [
-      [
-        "stmt1",
-        "stmt3"
-      ],
-      [
-        "stmt3",
-        "stmt5"
-      ],
-      [
-        "stmt5",
-        "stmt6"
-      ],
-      [
-        "stmt6",
-        "exit"
-      ]
-    ],
-    "states": [
-      "stmt1",
-      "stmt3",
-      "stmt5",
-      "stmt6",
-      "exit"
-    ]
-  },
-  "cws-addperk/perks/apply/src/addperk_formulate.py": {
-    "edges": [
-      [
-        "stmt0",
-        "stmt1"
-      ],
-      [
-        "stmt1",
-        "exit"
-      ]
-    ],
-    "states": [
-      "stmt0",
-      "stmt1",
-      "exit"
-    ]
-  },
-  "cws-addperk/perks/evaluate/src/addperk_eval.py": {
-    "edges": [
-      [
-        "stmt1",
-        "stmt2"
-      ],
-      [
-        "stmt2",
+        "stmt34",
         "exit"
       ]
     ],
     "states": [
       "stmt1",
       "stmt2",
+      "stmt3",
+      "stmt4",
+      "stmt5",
+      "stmt6",
+      "stmt7",
+      "stmt8",
+      "stmt9",
+      "stmt10",
+      "stmt11",
+      "stmt12",
+      "stmt15",
+      "stmt16",
+      "stmt17",
+      "stmt18",
+      "stmt19",
+      "stmt20",
+      "stmt21",
+      "stmt22",
+      "stmt23",
+      "stmt25",
+      "stmt26",
+      "stmt27",
+      "stmt31",
+      "stmt32",
+      "stmt33",
+      "stmt34",
       "exit"
     ]
   },
-  "cws-bench/perks/bwrap-overhead/src/bench_bwrap_overhead.py": {
+  "cws/cws-bench/perks/bwrap-overhead/src/bench_bwrap_overhead.py": {
     "edges": [
       [
         "stmt0",
@@ -341,7 +200,7 @@
       "exit"
     ]
   },
-  "cws-chaos/perks/crash/src/chaos_crash.py": {
+  "cws/cws-chaos/perks/crash/src/chaos_crash.py": {
     "edges": [
       [
         "stmt0",
@@ -378,7 +237,7 @@
       "exit"
     ]
   },
-  "cws-chaos/perks/drill/src/chaos_drill.py": {
+  "cws/cws-chaos/perks/drill/src/chaos_drill.py": {
     "edges": [
       [
         "stmt0",
@@ -415,7 +274,7 @@
       "exit"
     ]
   },
-  "cws-chaos/perks/partition/src/chaos_partition.py": {
+  "cws/cws-chaos/perks/partition/src/chaos_partition.py": {
     "edges": [
       [
         "stmt0",
@@ -452,7 +311,7 @@
       "exit"
     ]
   },
-  "cws-chaos/perks/settlecrash/src/chaos_settlecrash.py": {
+  "cws/cws-chaos/perks/settlecrash/src/chaos_settlecrash.py": {
     "edges": [
       [
         "stmt0",
@@ -489,7 +348,7 @@
       "exit"
     ]
   },
-  "cws-conform/perks/crosslang/src/cws_crosslang.py": {
+  "cws/cws-conform/perks/crosslang/src/cws_crosslang.py": {
     "edges": [
       [
         "stmt0",
@@ -646,7 +505,7 @@
       "exit"
     ]
   },
-  "cws-conform/perks/digestlint/src/cws_digestlint.py": {
+  "cws/cws-conform/perks/digestlint/src/cws_digestlint.py": {
     "edges": [
       [
         "stmt1",
@@ -688,7 +547,7 @@
       "exit"
     ]
   },
-  "cws-conform/perks/doclint/src/cws_doclint.py": {
+  "cws/cws-conform/perks/doclint/src/cws_doclint.py": {
     "edges": [
       [
         "stmt0",
@@ -810,7 +669,7 @@
       "exit"
     ]
   },
-  "cws-conform/perks/interop/src/cws_interop.py": {
+  "cws/cws-conform/perks/interop/src/cws_interop.py": {
     "edges": [
       [
         "stmt1",
@@ -852,7 +711,7 @@
       "exit"
     ]
   },
-  "cws-conform/perks/keystore/src/cws_keystore.py": {
+  "cws/cws-conform/perks/keystore/src/cws_keystore.py": {
     "edges": [
       [
         "stmt0",
@@ -889,7 +748,7 @@
       "exit"
     ]
   },
-  "cws-conform/perks/labeling/src/cws_labeling.py": {
+  "cws/cws-conform/perks/labeling/src/cws_labeling.py": {
     "edges": [
       [
         "stmt0",
@@ -931,7 +790,7 @@
       "exit"
     ]
   },
-  "cws-conform/perks/repin/src/cws_repin.py": {
+  "cws/cws-conform/perks/repin/src/cws_repin.py": {
     "edges": [
       [
         "stmt0",
@@ -1033,7 +892,7 @@
       "exit"
     ]
   },
-  "cws-conform/perks/reprobuild/src/cws_reprobuild.py": {
+  "cws/cws-conform/perks/reprobuild/src/cws_reprobuild.py": {
     "edges": [
       [
         "stmt0",
@@ -1070,7 +929,7 @@
       "exit"
     ]
   },
-  "cws-conform/perks/schemas/src/cws_schemas.py": {
+  "cws/cws-conform/perks/schemas/src/cws_schemas.py": {
     "edges": [
       [
         "stmt0",
@@ -1112,7 +971,7 @@
       "exit"
     ]
   },
-  "cws-conform/perks/vectors/src/cws_vectors.py": {
+  "cws/cws-conform/perks/vectors/src/cws_vectors.py": {
     "edges": [
       [
         "stmt0",
@@ -1129,7 +988,7 @@
       "exit"
     ]
   },
-  "cws-create/perks/evaluate/src/cws_evaluate.py": {
+  "cws/cws-create/perks/evaluate/src/cws_evaluate.py": {
     "edges": [
       [
         "stmt1",
@@ -1146,7 +1005,7 @@
       "exit"
     ]
   },
-  "cws-ledgercheck/perks/anchor/src/cws_ledgeranchor.py": {
+  "cws/cws-ledgercheck/perks/anchor/src/cws_ledgeranchor.py": {
     "edges": [
       [
         "stmt0",
@@ -1168,7 +1027,7 @@
       "exit"
     ]
   },
-  "cws-ledgercheck/perks/checkpoint/src/cws_checkpoint.py": {
+  "cws/cws-ledgercheck/perks/checkpoint/src/cws_checkpoint.py": {
     "edges": [
       [
         "stmt0",
@@ -1215,7 +1074,7 @@
       "exit"
     ]
   },
-  "cws-ledgercheck/perks/erasure/src/cws_erasure.py": {
+  "cws/cws-ledgercheck/perks/erasure/src/cws_erasure.py": {
     "edges": [
       [
         "stmt0",
@@ -1262,7 +1121,7 @@
       "exit"
     ]
   },
-  "cws-ledgercheck/perks/torture/src/cws_torture.py": {
+  "cws/cws-ledgercheck/perks/torture/src/cws_torture.py": {
     "edges": [
       [
         "stmt0",
@@ -1334,7 +1193,7 @@
       "exit"
     ]
   },
-  "cws-ledgercheck/perks/verify/src/cws_ledgerverify.py": {
+  "cws/cws-ledgercheck/perks/verify/src/cws_ledgerverify.py": {
     "edges": [
       [
         "stmt1",
@@ -1351,7 +1210,7 @@
       "exit"
     ]
   },
-  "cws-modelcheck/perks/check/src/cws_check.py": {
+  "cws/cws-modelcheck/perks/check/src/cws_check.py": {
     "edges": [
       [
         "stmt0",
@@ -1383,7 +1242,7 @@
       "exit"
     ]
   },
-  "cws-modelcheck/perks/corpus/src/cws_corpus.py": {
+  "cws/cws-modelcheck/perks/corpus/src/cws_corpus.py": {
     "edges": [
       [
         "stmt0",
@@ -1475,7 +1334,7 @@
       "exit"
     ]
   },
-  "cws-mutate/perks/mut-chain-verifier/src/cws_chainverify.py": {
+  "cws/cws-mutate/perks/mut-chain-verifier/src/cws_chainverify.py": {
     "edges": [
       [
         "stmt1",
@@ -1507,7 +1366,7 @@
       "exit"
     ]
   },
-  "cws-mutate/perks/mut-grant-verify/src/cws_grantverify.py": {
+  "cws/cws-mutate/perks/mut-grant-verify/src/cws_grantverify.py": {
     "edges": [
       [
         "stmt1",
@@ -1539,7 +1398,7 @@
       "exit"
     ]
   },
-  "cws-mutate/perks/mut-snippet-verify/src/cws_snippetverify.py": {
+  "cws/cws-mutate/perks/mut-snippet-verify/src/cws_snippetverify.py": {
     "edges": [
       [
         "stmt1",
@@ -1571,7 +1430,7 @@
       "exit"
     ]
   },
-  "cws-mutate/perks/mutate/src/cws_mutate.py": {
+  "cws/cws-mutate/perks/mutate/src/cws_mutate.py": {
     "edges": [
       [
         "stmt1",
@@ -1603,7 +1462,7 @@
       "exit"
     ]
   },
-  "cws-observe/perks/redeem/src/cws_observe_redeem.py": {
+  "cws/cws-observe/perks/redeem/src/cws_observe_redeem.py": {
     "edges": [
       [
         "stmt1",
@@ -1685,7 +1544,7 @@
       "exit"
     ]
   },
-  "cws-observe/perks/status/src/cws_observe_status.py": {
+  "cws/cws-observe/perks/status/src/cws_observe_status.py": {
     "edges": [
       [
         "stmt1",
@@ -1717,7 +1576,7 @@
       "exit"
     ]
   },
-  "cws-pm/perks/run/src/cws_pm.py": {
+  "cws/cws-pm/perks/run/src/cws_pm.py": {
     "edges": [
       [
         "stmt1",
@@ -1744,7 +1603,7 @@
       "exit"
     ]
   },
-  "cws-redteam-sw/perks/rt-grant-expired/src/rt_grant_expired.py": {
+  "cws/cws-redteam-sw/perks/rt-grant-expired/src/rt_grant_expired.py": {
     "edges": [
       [
         "stmt0",
@@ -1771,7 +1630,7 @@
       "exit"
     ]
   },
-  "cws-redteam-sw/perks/rt-grant-forged/src/rt_grant_forged.py": {
+  "cws/cws-redteam-sw/perks/rt-grant-forged/src/rt_grant_forged.py": {
     "edges": [
       [
         "stmt0",
@@ -1798,7 +1657,7 @@
       "exit"
     ]
   },
-  "cws-redteam-sw/perks/rt-grant-replay/src/rt_grant_replay.py": {
+  "cws/cws-redteam-sw/perks/rt-grant-replay/src/rt_grant_replay.py": {
     "edges": [
       [
         "stmt0",
@@ -1825,7 +1684,7 @@
       "exit"
     ]
   },
-  "cws-redteam-sw/perks/rt-ledger-tamper/src/rt_ledger_tamper.py": {
+  "cws/cws-redteam-sw/perks/rt-ledger-tamper/src/rt_ledger_tamper.py": {
     "edges": [
       [
         "stmt0",
@@ -1907,7 +1766,7 @@
       "exit"
     ]
   },
-  "cws-redteam-sw/perks/rt-snippet-toctou/src/rt_snippet_toctou.py": {
+  "cws/cws-redteam-sw/perks/rt-snippet-toctou/src/rt_snippet_toctou.py": {
     "edges": [
       [
         "stmt0",
@@ -1919,7 +1778,7 @@
       "exit"
     ]
   },
-  "cws-redteam-sw/perks/rt-tamper-script/src/rt_tamper_script.py": {
+  "cws/cws-redteam-sw/perks/rt-tamper-script/src/rt_tamper_script.py": {
     "edges": [
       [
         "stmt0",
@@ -1931,49 +1790,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-cap-mismatch/src/rt_cap_mismatch.py": {
-    "edges": [
-      [
-        "stmt0",
-        "stmt1"
-      ],
-      [
-        "stmt1",
-        "stmt2"
-      ],
-      [
-        "stmt2",
-        "stmt3"
-      ],
-      [
-        "stmt3",
-        "stmt4"
-      ],
-      [
-        "stmt4",
-        "stmt6"
-      ],
-      [
-        "stmt6",
-        "stmt7"
-      ],
-      [
-        "stmt7",
-        "exit"
-      ]
-    ],
-    "states": [
-      "stmt0",
-      "stmt1",
-      "stmt2",
-      "stmt3",
-      "stmt4",
-      "stmt6",
-      "stmt7",
-      "exit"
-    ]
-  },
-  "cws-redteam/perks/rt-device-raw/src/rt_device_raw.py": {
+  "cws/cws-redteam/perks/rt-cap-mismatch/src/rt_cap_mismatch.py": {
     "edges": [
       [
         "stmt0",
@@ -2015,7 +1832,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-forged-status/src/rt_forged_status.py": {
+  "cws/cws-redteam/perks/rt-device-raw/src/rt_device_raw.py": {
     "edges": [
       [
         "stmt0",
@@ -2057,7 +1874,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-fs-escape/src/rt_fs_escape.py": {
+  "cws/cws-redteam/perks/rt-forged-status/src/rt_forged_status.py": {
     "edges": [
       [
         "stmt0",
@@ -2099,7 +1916,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-grant-expired/src/rt_grant_expired.py": {
+  "cws/cws-redteam/perks/rt-fs-escape/src/rt_fs_escape.py": {
     "edges": [
       [
         "stmt0",
@@ -2141,7 +1958,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-grant-forged/src/rt_grant_forged.py": {
+  "cws/cws-redteam/perks/rt-grant-expired/src/rt_grant_expired.py": {
     "edges": [
       [
         "stmt0",
@@ -2183,7 +2000,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-grant-replay/src/rt_grant_replay.py": {
+  "cws/cws-redteam/perks/rt-grant-forged/src/rt_grant_forged.py": {
     "edges": [
       [
         "stmt0",
@@ -2225,7 +2042,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-grant-wrong-run/src/rt_grant_wrong_run.py": {
+  "cws/cws-redteam/perks/rt-grant-replay/src/rt_grant_replay.py": {
     "edges": [
       [
         "stmt0",
@@ -2267,7 +2084,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-mount/src/rt_mount.py": {
+  "cws/cws-redteam/perks/rt-grant-wrong-run/src/rt_grant_wrong_run.py": {
     "edges": [
       [
         "stmt0",
@@ -2309,7 +2126,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-net-egress/src/rt_net_egress.py": {
+  "cws/cws-redteam/perks/rt-mount/src/rt_mount.py": {
     "edges": [
       [
         "stmt0",
@@ -2351,7 +2168,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-no-capability/src/rt_no_capability.py": {
+  "cws/cws-redteam/perks/rt-net-egress/src/rt_net_egress.py": {
     "edges": [
       [
         "stmt0",
@@ -2393,7 +2210,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-proc-sys-write/src/rt_proc_sys_write.py": {
+  "cws/cws-redteam/perks/rt-no-capability/src/rt_no_capability.py": {
     "edges": [
       [
         "stmt0",
@@ -2435,7 +2252,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-sysrq-reboot/src/rt_sysrq_reboot.py": {
+  "cws/cws-redteam/perks/rt-proc-sys-write/src/rt_proc_sys_write.py": {
     "edges": [
       [
         "stmt0",
@@ -2477,7 +2294,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-ungoverned-banner/src/rt_ungoverned_banner.py": {
+  "cws/cws-redteam/perks/rt-sysrq-reboot/src/rt_sysrq_reboot.py": {
     "edges": [
       [
         "stmt0",
@@ -2519,7 +2336,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-write-outside/src/rt_write_outside.py": {
+  "cws/cws-redteam/perks/rt-ungoverned-banner/src/rt_ungoverned_banner.py": {
     "edges": [
       [
         "stmt0",
@@ -2561,7 +2378,7 @@
       "exit"
     ]
   },
-  "cws-redteam/perks/rt-write-rofs/src/rt_write_rofs.py": {
+  "cws/cws-redteam/perks/rt-write-outside/src/rt_write_outside.py": {
     "edges": [
       [
         "stmt0",
@@ -2603,7 +2420,49 @@
       "exit"
     ]
   },
-  "cws-release/perks/approval/src/cws_release_approval.py": {
+  "cws/cws-redteam/perks/rt-write-rofs/src/rt_write_rofs.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt4"
+      ],
+      [
+        "stmt4",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "stmt7"
+      ],
+      [
+        "stmt7",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt4",
+      "stmt6",
+      "stmt7",
+      "exit"
+    ]
+  },
+  "cws/cws-release/perks/approval/src/cws_release_approval.py": {
     "edges": [
       [
         "stmt0",
@@ -2640,7 +2499,7 @@
       "exit"
     ]
   },
-  "cws-release/perks/citrinitas/src/cws_release_citrinitas.py": {
+  "cws/cws-release/perks/citrinitas/src/cws_release_citrinitas.py": {
     "edges": [
       [
         "stmt0",
@@ -2682,7 +2541,7 @@
       "exit"
     ]
   },
-  "cws-release/perks/engine/src/cws_release_engine.py": {
+  "cws/cws-release/perks/engine/src/cws_release_engine.py": {
     "edges": [
       [
         "stmt0",
@@ -2719,7 +2578,7 @@
       "exit"
     ]
   },
-  "cws-release/perks/feedtiers/src/cws_release_feedtiers.py": {
+  "cws/cws-release/perks/feedtiers/src/cws_release_feedtiers.py": {
     "edges": [
       [
         "stmt0",
@@ -2756,7 +2615,7 @@
       "exit"
     ]
   },
-  "cws-release/perks/inflight/src/cws_release_inflight.py": {
+  "cws/cws-release/perks/inflight/src/cws_release_inflight.py": {
     "edges": [
       [
         "stmt0",
@@ -2793,7 +2652,7 @@
       "exit"
     ]
   },
-  "cws-release/perks/keyrotate/src/cws_release_keyrotate.py": {
+  "cws/cws-release/perks/keyrotate/src/cws_release_keyrotate.py": {
     "edges": [
       [
         "stmt0",
@@ -2830,7 +2689,7 @@
       "exit"
     ]
   },
-  "cws-release/perks/manifestlint/src/cws_release_manifestlint.py": {
+  "cws/cws-release/perks/manifestlint/src/cws_release_manifestlint.py": {
     "edges": [
       [
         "stmt0",
@@ -2867,7 +2726,7 @@
       "exit"
     ]
   },
-  "cws-release/perks/publish/src/cws_release_publish.py": {
+  "cws/cws-release/perks/publish/src/cws_release_publish.py": {
     "edges": [
       [
         "stmt0",
@@ -2904,7 +2763,7 @@
       "exit"
     ]
   },
-  "cws-release/perks/receipts/src/cws_release_receipts.py": {
+  "cws/cws-release/perks/receipts/src/cws_release_receipts.py": {
     "edges": [
       [
         "stmt0",
@@ -2941,7 +2800,7 @@
       "exit"
     ]
   },
-  "cws-release/perks/revoke/src/cws_release_revoke.py": {
+  "cws/cws-release/perks/revoke/src/cws_release_revoke.py": {
     "edges": [
       [
         "stmt0",
@@ -2978,7 +2837,7 @@
       "exit"
     ]
   },
-  "cws-release/perks/sign/src/cws_release_sign.py": {
+  "cws/cws-release/perks/sign/src/cws_release_sign.py": {
     "edges": [
       [
         "stmt0",
@@ -3015,7 +2874,7 @@
       "exit"
     ]
   },
-  "cws-release/perks/timeanchor/src/cws_release_timeanchor.py": {
+  "cws/cws-release/perks/timeanchor/src/cws_release_timeanchor.py": {
     "edges": [
       [
         "stmt0",
@@ -3052,7 +2911,7 @@
       "exit"
     ]
   },
-  "cws-release/perks/transparency/src/cws_release_transparency.py": {
+  "cws/cws-release/perks/transparency/src/cws_release_transparency.py": {
     "edges": [
       [
         "stmt0",
@@ -3089,7 +2948,7 @@
       "exit"
     ]
   },
-  "cws-settle-sim/perks/capstone/src/settle_capstone.py": {
+  "cws/cws-settle-sim/perks/capstone/src/settle_capstone.py": {
     "edges": [
       [
         "stmt0",
@@ -3126,7 +2985,7 @@
       "exit"
     ]
   },
-  "cws-settle-sim/perks/dispute/src/settle_dispute.py": {
+  "cws/cws-settle-sim/perks/dispute/src/settle_dispute.py": {
     "edges": [
       [
         "stmt0",
@@ -3163,7 +3022,7 @@
       "exit"
     ]
   },
-  "cws-settle-sim/perks/floatban/src/settle_floatban.py": {
+  "cws/cws-settle-sim/perks/floatban/src/settle_floatban.py": {
     "edges": [
       [
         "stmt0",
@@ -3210,7 +3069,7 @@
       "exit"
     ]
   },
-  "cws-settle-sim/perks/manipulate/src/settle_manipulate.py": {
+  "cws/cws-settle-sim/perks/manipulate/src/settle_manipulate.py": {
     "edges": [
       [
         "stmt0",
@@ -3247,7 +3106,7 @@
       "exit"
     ]
   },
-  "cws-settle-sim/perks/quote/src/settle_quote.py": {
+  "cws/cws-settle-sim/perks/quote/src/settle_quote.py": {
     "edges": [
       [
         "stmt0",
@@ -3284,7 +3143,7 @@
       "exit"
     ]
   },
-  "cws-settle-sim/perks/settle/src/settle_engine.py": {
+  "cws/cws-settle-sim/perks/settle/src/settle_engine.py": {
     "edges": [
       [
         "stmt0",
@@ -3321,7 +3180,7 @@
       "exit"
     ]
   },
-  "cws-settle-sim/perks/simulate/src/settle_simulate.py": {
+  "cws/cws-settle-sim/perks/simulate/src/settle_simulate.py": {
     "edges": [
       [
         "stmt0",
@@ -3373,7 +3232,7 @@
       "exit"
     ]
   },
-  "cws-settle-sim/perks/zerosum/src/settle_zerosum.py": {
+  "cws/cws-settle-sim/perks/zerosum/src/settle_zerosum.py": {
     "edges": [
       [
         "stmt0",
@@ -3410,7 +3269,273 @@
       "exit"
     ]
   },
-  "data/perks/csv2json/src/data_csv2json.py": {
+  "general/alchemy/perks/classify/src/alchemy_classify.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "exit"
+    ]
+  },
+  "general/alchemy/perks/concord/src/alchemy_concord.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "exit"
+    ]
+  },
+  "general/alchemy/perks/conserve/src/alchemy_conserve.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "exit"
+    ]
+  },
+  "general/alchemy/perks/extract/src/alchemy_extract.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "exit"
+    ]
+  },
+  "general/alchemy/perks/lineage/src/alchemy_lineage.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "exit"
+    ]
+  },
+  "general/codebaseqc/perks/audit/src/cbqc_contract.py": {
+    "edges": [
+      [
+        "stmt1",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt1",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "exit"
+    ]
+  },
+  "general/codebaseqc/perks/audit/src/cbqc_coverage.py": {
+    "edges": [
+      [
+        "stmt1",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt1",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "exit"
+    ]
+  },
+  "general/codebaseqc/perks/audit/src/cbqc_usage.py": {
+    "edges": [
+      [
+        "stmt1",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt1",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "exit"
+    ]
+  },
+  "general/data/perks/csv2json/src/data_csv2json.py": {
     "edges": [
       [
         "stmt1",
@@ -3457,7 +3582,7 @@
       "exit"
     ]
   },
-  "harden-pyenv/perks/verify/src/harden_verify.py": {
+  "general/harden-pyenv/perks/verify/src/harden_verify.py": {
     "edges": [
       [
         "stmt1",
@@ -3504,7 +3629,7 @@
       "exit"
     ]
   },
-  "jsonschema/perks/infer/src/js_infer.py": {
+  "general/jsonschema/perks/infer/src/js_infer.py": {
     "edges": [
       [
         "stmt1",
@@ -3536,7 +3661,7 @@
       "exit"
     ]
   },
-  "jsonschema/perks/validate/src/js_validate.py": {
+  "general/jsonschema/perks/validate/src/js_validate.py": {
     "edges": [
       [
         "stmt1",
@@ -3568,7 +3693,7 @@
       "exit"
     ]
   },
-  "markdown/perks/links/src/md_links.py": {
+  "general/markdown/perks/links/src/md_links.py": {
     "edges": [
       [
         "stmt1",
@@ -3585,7 +3710,7 @@
       "exit"
     ]
   },
-  "markdown/perks/toc/src/md_toc.py": {
+  "general/markdown/perks/toc/src/md_toc.py": {
     "edges": [
       [
         "stmt1",
@@ -3602,7 +3727,7 @@
       "exit"
     ]
   },
-  "net/perks/dns/src/net_dns.py": {
+  "general/net/perks/dns/src/net_dns.py": {
     "edges": [
       [
         "stmt1",
@@ -3654,7 +3779,7 @@
       "exit"
     ]
   },
-  "pdf/perks/extract/src/pdf_extract.py": {
+  "general/pdf/perks/extract/src/pdf_extract.py": {
     "edges": [
       [
         "stmt1",
@@ -3681,7 +3806,7 @@
       "exit"
     ]
   },
-  "pdf/perks/info/src/pdf_info.py": {
+  "general/pdf/perks/info/src/pdf_info.py": {
     "edges": [
       [
         "stmt1",

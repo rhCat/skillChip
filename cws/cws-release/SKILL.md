@@ -28,7 +28,7 @@ pinned root + the publisher's offline key.
 | `keyrotate` | P3-T06 | **key-rotation drill** — a **cross-signed** rotation record (old + new keys); during the overlap a grant from either key verifies; once the old key is revoked an old-key grant is refused while the new key still works. |
 | `receipts` | P3-T14 | **finalized receipts** — two independent **Ed25519-DSSE** signatures over one **in-toto** statement; a single signature, a tampered statement, or two signatures from one key do not pass as finalized. |
 | `timeanchor` | P3-T07 | **TSA time anchors** — a high-value receipt is settlement-eligible only with a TSA token that **verifies offline** against the receipt digest; absence, a tampered token, or a token bound to a different receipt block settlement. |
-| `citrinitas` | P3-T09 | **Citrinitas publish gate** — verified-tier admission requires the [`alchemy`](../alchemy/SKILL.md) verbs (extract + conserve + classify + concord). A seeded **conservation defect**, **unnamed shape**, or **CFG mismatch** each **blocks** publish with its named reason, and **chip-wide concord** passes for every modeled porter. |
+| `citrinitas` | P3-T09 | **Citrinitas publish gate** — verified-tier admission requires the [`alchemy`](../../general/alchemy/SKILL.md) verbs (extract + conserve + classify + concord). A seeded **conservation defect**, **unnamed shape**, or **CFG mismatch** each **blocks** publish with its named reason, and **chip-wide concord** passes for every modeled porter. |
 
 ## Coming (the rest of the M4 cone)
 The Citrinitas publish gate (P3-T09) depends on the `alchemy` validator (concordance, P3-T08), which is not

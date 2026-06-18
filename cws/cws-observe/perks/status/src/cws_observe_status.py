@@ -104,7 +104,7 @@ def main() -> int:
 
     def validator_built(t):
         v = t.get("validated_by")
-        return bool(v) and os.path.isdir(os.path.join(registry.SKILLCHIP, v))
+        return bool(v) and os.path.isfile(os.path.join(registry.skill_dir(v), "perks.json"))
 
     state = {}
     for tid, t in tasks.items():
@@ -120,7 +120,7 @@ def main() -> int:
     counts = {s: sum(1 for v in state.values() if v == s)
               for s in ("redeemed", "ready", "blocked:deps", "blocked:validator")}
     validators = sorted({t.get("validated_by") for t in tasks.values() if t.get("validated_by")})
-    available = sorted(v for v in validators if os.path.isdir(os.path.join(registry.SKILLCHIP, v)))
+    available = sorted(v for v in validators if os.path.isfile(os.path.join(registry.skill_dir(v), "perks.json")))
     missing = sorted(set(validators) - set(available))
 
     # a milestone's closure is the transitive dependency cone of its gate task(s): the milestone is

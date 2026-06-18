@@ -18,10 +18,17 @@ EXEC = ["run", "build", "fetch", "query", "deploy", "compile", "test", "lint", "
         "copy", "move", "apply", "install", "start", "stop", "publish", "load", "watch", "notify", "dump", "patch"]
 
 
-def chip_root() -> str:
-    """The skillChip root (the cartridge this tool lives on), relative to this snippet."""
-    here = os.path.dirname(os.path.abspath(__file__))
-    return os.path.abspath(os.path.join(here, "..", "..", "..", ".."))
+# Resolve the cyberware repo so we can resolve a skill's dir via the registry (flat OR source-grouped).
+_root = os.environ.get("CYBERWARE_ROOT")
+if not (_root and os.path.isdir(os.path.join(_root, "infra", "govern"))):
+    _d = os.path.dirname(os.path.abspath(__file__))
+    while _d != os.path.dirname(_d) and not os.path.isdir(os.path.join(_d, "infra", "govern")):
+        _d = os.path.dirname(_d)
+    _root = _d
+if os.path.isdir(os.path.join(_root, "infra", "govern")):
+    sys.path.insert(0, _root)
+
+from infra import registry  # noqa: E402
 
 
 def main() -> int:
@@ -30,7 +37,7 @@ def main() -> int:
     perk = os.environ["PERK"]
     desc = os.environ["PERK_DESC"]
     store = os.environ["RECORD_STORE"].rstrip("/")
-    sdir = os.path.join(chip_root(), skill)
+    sdir = registry.skill_dir(skill)               # the skill's dir wherever it lives (any source)
     perks_json = os.path.join(sdir, "perks.json")
     existing = [p["id"] for p in json.load(open(perks_json)).get("perks", [])] if os.path.isfile(perks_json) else []
     exists = perk in existing

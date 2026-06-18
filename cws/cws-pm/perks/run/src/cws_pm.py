@@ -292,7 +292,7 @@ def main() -> int:
         if tid and tid in redeemed:
             rec["status"] = "redeemed"; rec["detail"] = "already redeemed"
             counts["already_redeemed"] += 1; results.append(rec); continue
-        if not os.path.isdir(os.path.join(registry.SKILLCHIP, skill or "")):
+        if not os.path.isdir(registry.skill_dir(skill or "")):
             rec["status"] = "blocked:validator"; rec["detail"] = f"validator not built: {skill}"
             counts["blocked_validator"] += 1; results.append(rec); continue
         unmet = [d for d in deps_of(tid) if d not in redeemed]
