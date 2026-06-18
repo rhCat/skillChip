@@ -1,6 +1,6 @@
 {
   "skill": "cws-addperk",
-  "skill_sha": "7bea7db7fbcdd993823ae2bd09ca9673e1865720f36d23fd96a9e111e79af84b",
+  "skill_sha": "6bc037f41c7073f23c62c3e5780cd6b8b15ee393b5b5c17f82c3ea56ada09d35",
   "file_count": 20,
   "files": {
     "SKILL.md": "c94867e0c5221cd4a1d895176368236ba571aca25e4910473982b93fd625e74a",
@@ -11,10 +11,10 @@
     "perks.json": "32ec46687120dc49384823844654acec19bb7758662d26865209d286210dfb7f",
     "perks/apply/manifesto.json": "017f57f2701e47a52b914a84029c5c31678a8461162a832550ba70bdc02bc5e3",
     "perks/apply/metadata.json": "d58a93b256fe874621c1b1b641c5739efc40c413c4492963bfc1a28674ffb59a",
-    "perks/apply/src/addperk_branch.sh": "58bed8eba8beadfd2a7934abda91e3749a4a5d8b9c1deb81198d2ec412f7ac65",
+    "perks/apply/src/addperk_branch.sh": "c952573b7d33394f669a1f92cfbb61fd7eb7cbc98c774b66ddd3aff70dd403c7",
     "perks/apply/src/addperk_formulate.py": "e4cc082f29c0bf0fdd594f99d8d1341fd3a6f081e5740f3c9c065bb680bccdae",
     "perks/apply/src/addperk_formulate.sh": "342e3f7465a98c9ebfbd968c75ac58fc51756a3aa2bd0e1a8a0b53e233b73ee5",
-    "perks/apply/src/addperk_pr.sh": "9f17fffb37648f58a1031e6a68c18a56b369f05a1beae8a0193d0074c4ce1a75",
+    "perks/apply/src/addperk_pr.sh": "fcf6c3e1dcc218c4c2729943e893a041c243e668f1f65f570cd02da65b24c407",
     "perks/apply/src/contracts.json": "06516a7b084447d0e5017f03c934a3002d76bc7f3e622558bcd5b87747864285",
     "perks/apply/test/case.json": "5d3257ad4ac54d21272f01b76fbfc45d5d186524634ce4fc3af998ef081428a9",
     "perks/evaluate/manifesto.json": "d31e03ae6c1f3084227729153f7696bcf61019d0ed891dbcdf344d53ca8a8885",

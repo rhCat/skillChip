@@ -1,6 +1,6 @@
 {
   "skill": "cws-create",
-  "skill_sha": "b17a12392839755df73541c3ff79782d5ffe69a64b1c14178327bafd6d7de77a",
+  "skill_sha": "30a6adeee79757a1bfa26a34275d22961d060c435c6194c44f62494406b0378d",
   "file_count": 17,
   "files": {
     "SKILL.md": "c1e94fe5bb91c8aeb7b384737ca98bcec7881c8b7951c973fc155bfdf448ebab",
@@ -18,7 +18,7 @@
     "perks/scaffold/manifesto.json": "15a7cd54dab18684b3068619a2d7b37bd120289b66cfd98e766a43fcc5097c83",
     "perks/scaffold/metadata.json": "6aad44e7515fdcdb1e9b06960dc71ff33162c1f011bd082f77a34838c12b3226",
     "perks/scaffold/src/contracts.json": "18b78cb332e1a2440fde376cb09ee0b6209686eb4f17b394c839a44976bc0d10",
-    "perks/scaffold/src/cws_scaffold.sh": "0b638c85ac26ce052c325456dc6fce5619acfac465f8c4f80ea7374437cfb05c",
+    "perks/scaffold/src/cws_scaffold.sh": "9869ebd6f19ef33b7995b759fce243f02683e6623e27f61527d64ea99faf546b",
     "perks/scaffold/test/case.json": "87b707d8e6a9e675c93597e475f89abfc448888b0eadd34ceec1afc55bfae1de"
   }
 }

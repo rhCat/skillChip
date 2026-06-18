@@ -3,7 +3,14 @@
 set -uo pipefail
 : "${NEW_SKILL:?}" "${NEW_NAME:?}" "${PERKS:?}" "${RECORD_STORE:?}"
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO="$(cd "$HERE/../../../../.." && pwd)"
+# the cyberware repo root (carries infra/) — env override, else walk UP to the infra/tool marker. A fixed-depth
+# ".." walk is fragile: the source-subfolder layout (cws/<skill>) shifts the depth, so resolve it structurally.
+REPO="${CYBERWARE_ROOT:-}"
+if [ -z "$REPO" ] || [ ! -d "$REPO/infra/tool" ]; then
+  REPO="$HERE"
+  while [ "$REPO" != "/" ] && [ ! -d "$REPO/infra/tool" ]; do REPO="$(dirname "$REPO")"; done
+fi
+[ -d "$REPO/infra/tool" ] || { printf '{"tool":"cws_scaffold","status":"fail","error":"cyberware repo root (infra/) not found"}\n'; exit 1; }
 OUT="${RECORD_STORE%/}/scaffold.log"
 ARGS=""
 for p in $PERKS; do ARGS="$ARGS --perk $p"; done   # PERKS = space-separated <pid>:<tool>[:<binary>]

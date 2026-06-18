@@ -21,7 +21,7 @@
     },
     {
       "skill": "cws-addperk",
-      "skill_sha": "7bea7db7fbcdd993823ae2bd09ca9673e1865720f36d23fd96a9e111e79af84b",
+      "skill_sha": "6bc037f41c7073f23c62c3e5780cd6b8b15ee393b5b5c17f82c3ea56ada09d35",
       "file_count": 20
     },
     {
@@ -41,7 +41,7 @@
     },
     {
       "skill": "cws-create",
-      "skill_sha": "b17a12392839755df73541c3ff79782d5ffe69a64b1c14178327bafd6d7de77a",
+      "skill_sha": "30a6adeee79757a1bfa26a34275d22961d060c435c6194c44f62494406b0378d",
       "file_count": 17
     },
     {
@@ -185,5 +185,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "644747e39d97ded9315135f1ccadc04b511b09e7ab9507d7c2f8edcf0dadf65a"
+  "chip_sha": "74e6f0fd2dc767cfea95795f4e04e9715f61a943dd10cf14aa7c2d759c4a9b56"
 }
