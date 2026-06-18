@@ -1,12 +1,12 @@
 {
   "skill": "cws-chaos",
-  "skill_sha": "d0b6108031f454c97ed8ff501bac04b08307a21ed4357f1b67ad2943b66fda38",
+  "skill_sha": "fff1b90341313b06e1829d3c1f0134f0cf5d8ca4bdf77ef750c3fc34dc2a79b9",
   "file_count": 28,
   "files": {
     "SKILL.md": "4ef6fa8e223c3ca2dadc1a7530bee1b0957b5e64b549324d356356ab197dc421",
-    "blueprint.json": "0a7094deb5cf965eb10b480dcc01ab4f1c16d24ce1e48fc9c8fe99278e7e7458",
+    "blueprint.json": "06fc49f0e29ac1fc66db99d602c18427847f1f88889f6b8542c5e522d5b7f8c5",
     "ledger.json": "2958e59500f30ccee3d9d862f1fb726c1bb170061387c651d6dd085a721fa4f4",
-    "perks.json": "5534ac6d060aa89928523041441ee60c9f2d6ad26d4272c991714725f1dfbdda",
+    "perks.json": "53024a6d070901ac798ab5cc7e17bb454e276e340c619bd1dec7a060abe6e6be",
     "perks/crash/manifesto.json": "e1b42035127adae05c8a8e1b86c89e4f77481a17cf353bd5d7854d566e1f7a3e",
     "perks/crash/metadata.json": "ad0ccc38bb3a172b38b8e41d7828dfeecaade7aa7504728b3a30da412d0aa631",
     "perks/crash/src/chaos_crash.py": "5cddf35c397824a39b3071cd6892e368b40a7e64cc4a2117a4e3dd54a139b959",

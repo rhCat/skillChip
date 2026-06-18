@@ -9,5 +9,12 @@
   ],
   "usage": "Set CORPUS (canonicalization vectors) + optional SIG_CORPUS (signature vectors) + MIN_TOTAL. Output: conformance.json.",
   "limitation": "Validates the local canonical/sign path; the independent Go reproduction is the crosslang perk. The published es6 number corpus (P0-T02) and cosign DSSE interop (P0-T03) are external anchors handled separately.",
-  "minimal_example": {"perk": "vectors", "vars": {"CORPUS": "spec/vectors/corpus.json", "SIG_CORPUS": "spec/vectors/signatures.json"}}
+  "minimal_example": {
+    "perk": "vectors",
+    "vars": {
+      "CORPUS": "spec/vectors/corpus.json",
+      "SIG_CORPUS": "spec/vectors/signatures.json"
+    }
+  },
+  "summary": "replay the golden vector corpus (canonical + digest + sig verdicts) \u2192 conformance verdict (P0-T07/T17)"
 }

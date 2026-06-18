@@ -2,7 +2,7 @@
   "$schema": "lpp/v0.2.0",
   "id": "cws-bench",
   "name": "Sandbox + channel overhead meter",
-  "description": "Sandbox + channel overhead meter \u2014 TODO describe what this skill does. Perk-agnostic lifecycle (ready \u2192 prepared \u2192 verified \u2192 executed); the perk supplies the concrete, contract-bound how. LOOK OUT FOR each tool's structured JSON; LOGS TO CHECK: the per-tool output + the executor run-ledger.",
+  "description": "Sandbox + channel overhead meter \u2014 meter sandbox + channel overhead against the V-BENCH budgets. Perk-agnostic lifecycle (ready \u2192 prepared \u2192 verified \u2192 executed); the perk supplies the concrete, contract-bound how. LOOK OUT FOR each tool's structured JSON; LOGS TO CHECK: the per-tool output + the executor run-ledger.",
   "entry_state": "ready",
   "states": {
     "ready": {

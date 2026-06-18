@@ -3,7 +3,7 @@
   "perks": [
     {
       "id": "crosslang",
-      "summary": "TODO",
+      "summary": "diff the independent Go verifier vs canonical.py + sign.py over the golden corpus \u2014 the external anchor (P0-T08); needs the go toolchain",
       "destructive": false,
       "tools": [
         "cws_crosslang"
@@ -11,7 +11,7 @@
     },
     {
       "id": "digestlint",
-      "summary": "TODO",
+      "summary": "prove every JSON-object hash routes through cwp.canonical, not ad-hoc json.dumps \u2014 the digest-cutover gate (P0-T04 / F1 / P0-V03)",
       "destructive": false,
       "tools": [
         "cws_digestlint"
@@ -19,7 +19,7 @@
     },
     {
       "id": "doclint",
-      "summary": "TODO",
+      "summary": "structural conformance lint for a spec doc \u2014 exists, title, normative, on-topic (P0-V10)",
       "destructive": false,
       "tools": [
         "cws_doclint"
@@ -27,7 +27,7 @@
     },
     {
       "id": "interop",
-      "summary": "TODO",
+      "summary": "prove cwp \u2194 cosign/sigstore DSSE interop at the Ed25519ph layer, both directions (P0-T03); needs openssl\u22653.4 + go",
       "destructive": false,
       "tools": [
         "cws_interop"
@@ -51,7 +51,7 @@
     },
     {
       "id": "repin",
-      "summary": "TODO",
+      "summary": "observe drift vs committed pins, regenerate indexes + manifest, record the chip_sha transition",
       "destructive": false,
       "tools": [
         "cws_repin"
@@ -75,7 +75,7 @@
     },
     {
       "id": "vectors",
-      "summary": "TODO",
+      "summary": "replay the golden vector corpus (canonical + digest + sig verdicts) \u2192 conformance verdict (P0-T07/T17)",
       "destructive": false,
       "tools": [
         "cws_vectors"

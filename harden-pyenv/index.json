@@ -1,10 +1,11 @@
 {
   "skill": "harden-pyenv",
-  "skill_sha": "e0acda4676099f5c70d33903c1edcdb92b4a66cfee10006c052ee69595488444",
-  "file_count": 14,
+  "skill_sha": "c3122aebdb13be09e1dfd2c684a5331fb03d4aa2787761cb9a65ed060566a7e0",
+  "file_count": 15,
   "files": {
     "SKILL.md": "aced74ebe4c4dcaa72574196ff79d5ec02cad57135c21648bd5e14820d9b2327",
     "blueprint.json": "281d8bda887001d014ea26036b16d5ff53d921ca1adad50061ab98b8ba94f4f1",
+    "ledger.json": "b737afe2fbb17f681a89ed23192f2bb1dd84156d0376ac3b866d3d6af2d2c025",
     "perks.json": "5490b23cbf0b6dbf6babbdf62dbd0552fa19ba9f27d648eb8443d8fe636c7fb5",
     "perks/verify/manifesto.json": "4d5ece88229f8858dca330f7a5e68687e38aacb1fff7fb1120bef8b316417052",
     "perks/verify/metadata.json": "396ff5adfb18404a64a26d8d8b5548e596649cdf14bdada3a3a481416f8ddca1",

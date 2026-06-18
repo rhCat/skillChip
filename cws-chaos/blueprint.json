@@ -2,7 +2,7 @@
   "$schema": "lpp/v0.2.0",
   "id": "cws-chaos",
   "name": "Chaos drills (partition, crash, settle-atomicity)",
-  "description": "Chaos drills (partition, crash, settle-atomicity) \u2014 TODO describe what this skill does. Perk-agnostic lifecycle (ready \u2192 prepared \u2192 verified \u2192 executed); the perk supplies the concrete, contract-bound how. LOOK OUT FOR each tool's structured JSON; LOGS TO CHECK: the per-tool output + the executor run-ledger.",
+  "description": "Chaos drills (partition, crash, settle-atomicity) \u2014 inject partition / crash-exod / settle-engine-crash faults and assert the V-CHAOS recovery invariants. Perk-agnostic lifecycle (ready \u2192 prepared \u2192 verified \u2192 executed); the perk supplies the concrete, contract-bound how. LOOK OUT FOR each tool's structured JSON; LOGS TO CHECK: the per-tool output + the executor run-ledger.",
   "entry_state": "ready",
   "states": {
     "ready": {

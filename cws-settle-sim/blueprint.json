@@ -2,7 +2,7 @@
   "$schema": "lpp/v0.2.0",
   "id": "cws-settle-sim",
   "name": "Settlement simulator (the money's lifecycle)",
-  "description": "Settlement simulator (the money's lifecycle) \u2014 TODO describe what this skill does. Perk-agnostic lifecycle (ready \u2192 prepared \u2192 verified \u2192 executed); the perk supplies the concrete, contract-bound how. LOOK OUT FOR each tool's structured JSON; LOGS TO CHECK: the per-tool output + the executor run-ledger.",
+  "description": "Settlement simulator (the money's lifecycle) \u2014 grade the settlement substrate \u2014 the money's lifecycle from type to ledger to quote to engine to market (the SV-6 validator). Perk-agnostic lifecycle (ready \u2192 prepared \u2192 verified \u2192 executed); the perk supplies the concrete, contract-bound how. LOOK OUT FOR each tool's structured JSON; LOGS TO CHECK: the per-tool output + the executor run-ledger.",
   "entry_state": "ready",
   "states": {
     "ready": {
