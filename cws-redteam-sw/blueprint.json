@@ -2,7 +2,7 @@
   "$schema": "lpp/v0.2.0",
   "id": "cws-redteam-sw",
   "name": "Software-tier red-team corpus",
-  "description": "Software-tier red-team corpus \u2014 TODO describe what this skill does. Perk-agnostic lifecycle (ready \u2192 prepared \u2192 verified \u2192 executed); the perk supplies the concrete, contract-bound how. LOOK OUT FOR each tool's structured JSON; LOGS TO CHECK: the per-tool output + the executor run-ledger.",
+  "description": "Software-tier red-team corpus \u2014 prove the software-tier guards refuse a corpus of malicious inputs (SV-1 / SV-2). Perk-agnostic lifecycle (ready \u2192 prepared \u2192 verified \u2192 executed); the perk supplies the concrete, contract-bound how. LOOK OUT FOR each tool's structured JSON; LOGS TO CHECK: the per-tool output + the executor run-ledger.",
   "entry_state": "ready",
   "states": {
     "ready": {

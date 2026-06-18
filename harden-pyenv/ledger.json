@@ -1,0 +1,7 @@
+{
+  "_schema": "task-ledger TEMPLATE for harden-pyenv \u2014 set perk, fill record_store + the vars the perk's manifesto declares.",
+  "skill": "harden-pyenv",
+  "perk": "verify",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {}
+}

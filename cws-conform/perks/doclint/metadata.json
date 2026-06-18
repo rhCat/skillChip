@@ -1,19 +1,20 @@
 {
   "perk": "doclint",
   "skill": "cws-conform",
-  "description": "structural conformance lint for a spec doc — exists, has a title, carries normative statements, covers required topics (P0-V10)",
+  "description": "structural conformance lint for a spec doc \u2014 exists, has a title, carries normative statements, covers required topics (P0-V10)",
   "rules": [
-    "read-only — reads the spec, writes only the lint report",
+    "read-only \u2014 reads the spec, writes only the lint report",
     "a normative statement is an RFC-2119 keyword (MUST / MUST NOT / SHALL / SHALL NOT / REQUIRED)",
     "REQUIRE pins topic coverage; MIN_NORMATIVE pins that the spec actually decides something"
   ],
   "usage": "Set SPEC (path to a .md). Optional MIN_NORMATIVE (default 1), REQUIRE (';'-separated substrings each of which must appear). Output: doclint.json.",
-  "limitation": "Structural lint only — it checks the spec exists and is normatively non-empty and on-topic, not that each MUST maps to a criterion ID (the full truth-in-labeling cross-ref) nor cross-language conformance (the vectors perk, which needs infra/cwp).",
+  "limitation": "Structural lint only \u2014 it checks the spec exists and is normatively non-empty and on-topic, not that each MUST maps to a criterion ID (the full truth-in-labeling cross-ref) nor cross-language conformance (the vectors perk, which needs infra/cwp).",
   "minimal_example": {
     "perk": "doclint",
     "vars": {
       "SPEC": "/path/to/spec/inflight.md",
       "MIN_NORMATIVE": "5"
     }
-  }
+  },
+  "summary": "structural conformance lint for a spec doc \u2014 exists, title, normative, on-topic (P0-V10)"
 }

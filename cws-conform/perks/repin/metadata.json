@@ -3,9 +3,9 @@
   "skill": "cws-conform",
   "description": "regenerate a chip's per-skill indexes + manifest under canonical hashing; record the old->new chip_sha transition",
   "rules": [
-    "operate on TARGET_CHIP — point it at a chip copy, never re-pin the live chip in place by accident",
-    "observe drift against the COMMITTED index BEFORE regenerating — pre_drift is the falsifiable signal",
-    "the transition (old_chip_sha -> new_chip_sha) is the SV-1 evidence — record it"
+    "operate on TARGET_CHIP \u2014 point it at a chip copy, never re-pin the live chip in place by accident",
+    "observe drift against the COMMITTED index BEFORE regenerating \u2014 pre_drift is the falsifiable signal",
+    "the transition (old_chip_sha -> new_chip_sha) is the SV-1 evidence \u2014 record it"
   ],
   "usage": "Set TARGET_CHIP (a chip dir: skill dirs each with a perks.json). Output: repin.json with {pre_drift, old_chip_sha, new_chip_sha, status}. Exit nonzero iff the committed pins were stale.",
   "limitation": "Canonical re-pinning under the current sha256 scheme. The cross-language golden-vector replay (the vectors perk) and the independent Go verifier diff (the crosslang perk) arrive with infra/cwp + the Go verifier (plan P0).",
@@ -14,5 +14,6 @@
     "vars": {
       "TARGET_CHIP": "/path/to/skillChip"
     }
-  }
+  },
+  "summary": "observe drift vs committed pins, regenerate indexes + manifest, record the chip_sha transition"
 }

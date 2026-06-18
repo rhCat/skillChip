@@ -1,10 +1,10 @@
 {
   "skill": "cws-bench",
-  "skill_sha": "772604086c0b9b995406e9066f87ef6d750e94093d1db0a3bd0449443474979d",
+  "skill_sha": "fd97b0ce879e11d9a058bec8f31f4a6a84fa07aa543c25cbb82b38058e3f59e0",
   "file_count": 10,
   "files": {
     "SKILL.md": "69404c94217d1e6f1bded0f8878c3374858ba72c342b67d0f1cca278a947fb42",
-    "blueprint.json": "7ba04fa685d330fc078a427d53ae8fde064859518642db2a779239a2e06fd936",
+    "blueprint.json": "5ffe1c7d358abd9d13f48737689ff08ebdcf303334d35a38deae685f4c4eb8fc",
     "ledger.json": "fd8ac5a2f96f6492895cd49aa5857512b859c697fc00b75e6969987628754cac",
     "perks.json": "27d3c4ed84abe5e275a64d7357bac740c35b180f9c3175ea331a8850fc6fc460",
     "perks/bwrap-overhead/manifesto.json": "a38f62fea2b16fc082a8e485cb186c6bf1766a6f492a4d3988180a257a435e7a",

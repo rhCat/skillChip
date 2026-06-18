@@ -1,10 +1,11 @@
 {
   "skill": "cws-pm",
-  "skill_sha": "ce807db0435a73ce0e04d03ec61de4605083ad2deea7e230e101bcf1607fe042",
-  "file_count": 10,
+  "skill_sha": "c27fca2c0d1a684d474e17eeeab308a0df88cea5ee76009cc71eca683eeb712d",
+  "file_count": 11,
   "files": {
     "SKILL.md": "a77b98008a8f6a393bdd3c4d812c1abeb604b3ccbc255ead73cd66494464d1f6",
     "blueprint.json": "6cbab838f2998188192e1e233e18c026716c861d4676592169d9070906374fa3",
+    "ledger.json": "aee7cd1f2a7fa79f29907a0db121add16c952915c2cb5155681e4dba835f2e7e",
     "perks.json": "35270e479056d57050dd442c5d67aba4fefb597393b3e7d7c66a3ce54f0002df",
     "perks/run/manifesto.json": "b502d88d1475cd8fb33972a4e32f45513ea3a7c7da1ffedf80165da18638ac30",
     "perks/run/metadata.json": "b7cb29e1e033a3cb0fe6a9392c3a3a7980d0c099ec87ea154a605b9bbcc6ce7f",

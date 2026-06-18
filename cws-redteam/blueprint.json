@@ -2,7 +2,7 @@
   "$schema": "lpp/v0.2.0",
   "id": "cws-redteam",
   "name": "Kernel red-team corpus",
-  "description": "Kernel red-team corpus \u2014 TODO describe what this skill does. Perk-agnostic lifecycle (ready \u2192 prepared \u2192 verified \u2192 executed); the perk supplies the concrete, contract-bound how. LOOK OUT FOR each tool's structured JSON; LOGS TO CHECK: the per-tool output + the executor run-ledger.",
+  "description": "Kernel red-team corpus \u2014 prove the kernel-enforced execution boundary refuses a corpus of escape attempts \u2014 the M3 / SV-3 gate. Perk-agnostic lifecycle (ready \u2192 prepared \u2192 verified \u2192 executed); the perk supplies the concrete, contract-bound how. LOOK OUT FOR each tool's structured JSON; LOGS TO CHECK: the per-tool output + the executor run-ledger.",
   "entry_state": "ready",
   "states": {
     "ready": {

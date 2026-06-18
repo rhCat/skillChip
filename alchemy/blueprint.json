@@ -2,7 +2,7 @@
   "$schema": "lpp/v0.2.0",
   "id": "alchemy",
   "name": "Concordance (the alchemy ancestor)",
-  "description": "Concordance (the alchemy ancestor) \u2014 TODO describe what this skill does. Perk-agnostic lifecycle (ready \u2192 prepared \u2192 verified \u2192 executed); the perk supplies the concrete, contract-bound how. LOOK OUT FOR each tool's structured JSON; LOGS TO CHECK: the per-tool output + the executor run-ledger.",
+  "description": "Concordance (the alchemy ancestor) \u2014 grade extracted code structure as conserved, named, and concordant with its declared blueprint \u2014 the SV-4 concordance ancestor. Perk-agnostic lifecycle (ready \u2192 prepared \u2192 verified \u2192 executed); the perk supplies the concrete, contract-bound how. LOOK OUT FOR each tool's structured JSON; LOGS TO CHECK: the per-tool output + the executor run-ledger.",
   "entry_state": "ready",
   "states": {
     "ready": {

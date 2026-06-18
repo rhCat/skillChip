@@ -4,7 +4,7 @@
   "skills": [
     {
       "skill": "alchemy",
-      "skill_sha": "8a7912f22bc9158db2ba63b2223cd8f41162a7cf030ef48924289bb4e4f9d659",
+      "skill_sha": "acb3b96b9b2c64f8df9a6870d9c98a71d7a0445809e2e68cbfd5b2999c42837c",
       "file_count": 36
     },
     {
@@ -24,17 +24,17 @@
     },
     {
       "skill": "cws-bench",
-      "skill_sha": "772604086c0b9b995406e9066f87ef6d750e94093d1db0a3bd0449443474979d",
+      "skill_sha": "fd97b0ce879e11d9a058bec8f31f4a6a84fa07aa543c25cbb82b38058e3f59e0",
       "file_count": 10
     },
     {
       "skill": "cws-chaos",
-      "skill_sha": "d0b6108031f454c97ed8ff501bac04b08307a21ed4357f1b67ad2943b66fda38",
+      "skill_sha": "fff1b90341313b06e1829d3c1f0134f0cf5d8ca4bdf77ef750c3fc34dc2a79b9",
       "file_count": 28
     },
     {
       "skill": "cws-conform",
-      "skill_sha": "0415466f3cf80ccc470ba78cef6104c0f4ad9088470785873b7e86eb323643f7",
+      "skill_sha": "6230b8bf3df0a695c69105dcb933ac3d058d13fefb09cfbade6e3ec906882b5d",
       "file_count": 75
     },
     {
@@ -64,27 +64,27 @@
     },
     {
       "skill": "cws-pm",
-      "skill_sha": "ce807db0435a73ce0e04d03ec61de4605083ad2deea7e230e101bcf1607fe042",
-      "file_count": 10
+      "skill_sha": "c27fca2c0d1a684d474e17eeeab308a0df88cea5ee76009cc71eca683eeb712d",
+      "file_count": 11
     },
     {
       "skill": "cws-redteam",
-      "skill_sha": "b2d894d4781dae93395f52e89058fc7ba8db5e3e6cf5272bf8b420ee6ed38bad",
+      "skill_sha": "962b7227c73730ee5679db9adb03ff9bb8470338019babf30b877c59d72103f4",
       "file_count": 100
     },
     {
       "skill": "cws-redteam-sw",
-      "skill_sha": "1a2583728aebdc36d88c92cc860cdd4f67bce539b8a8e637861f122249f532af",
+      "skill_sha": "7d1f7c9b045a089b6ebcd0abf7bd8b24afb180f20a7a053aa246c309fe2da7f4",
       "file_count": 40
     },
     {
       "skill": "cws-release",
-      "skill_sha": "2e2d3ad1b4b6fac8482b640eb791e578fec5030b8bbaccbcee028880cf0916cc",
+      "skill_sha": "28970beed6b2f76e3d95b380f017d858c7d8794dd8d210f641658e1e2cf3c85f",
       "file_count": 82
     },
     {
       "skill": "cws-settle-sim",
-      "skill_sha": "47a465effd99565d22cb600b0a8b367d74f9306765465350f5c8597859c7dded",
+      "skill_sha": "4856d5883b8c972de8b47bae728df395c640a307918df02d4ba3105ef64c7548",
       "file_count": 52
     },
     {
@@ -114,8 +114,8 @@
     },
     {
       "skill": "harden-pyenv",
-      "skill_sha": "e0acda4676099f5c70d33903c1edcdb92b4a66cfee10006c052ee69595488444",
-      "file_count": 14
+      "skill_sha": "c3122aebdb13be09e1dfd2c684a5331fb03d4aa2787761cb9a65ed060566a7e0",
+      "file_count": 15
     },
     {
       "skill": "http",
@@ -183,5 +183,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "319573df678a6e0fb37f9d5530453da326d9b5c1a2c0b4db44ca9fde72c7a07a"
+  "chip_sha": "0aec54f4f8e73a91e3f1fe6c5ead34be01f57bf763c3aca647f230afec6974ae"
 }
