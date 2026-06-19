@@ -60,6 +60,12 @@ def read_done_ledger(path):
         return set(), "absent"
     v1 = json.load(open(path))
     v1_entries = v1.get("entries", [])
+    # Fail loud on the v2-as-v1 misinvocation: a v2 chain's genesis carries `supersedes_head` (its cross-ref to
+    # v1's head) — the v1 chain never does. If that shows up as the FIRST entry of the file handed in as the v1
+    # path, the caller passed done-ledger-v2.json where done-ledger.json belongs, which would otherwise mis-read
+    # as a broken chain. Pass the v1 path; the sibling v2 is auto-discovered below.
+    if v1_entries and "supersedes_head" in v1_entries[0]:
+        return set(), "misinvoked:v2-as-v1"
     v1_schema = v1.get("schema", 1)
     redeemed, ok = _verify_chain(v1_entries, v1_schema)
     chain = "ok" if ok else "broken"
@@ -160,7 +166,10 @@ def main() -> int:
     print(json.dumps({"tool": "cws_observe_status", "total": len(tasks), "redeemed": counts["redeemed"],
                       "ready": counts["ready"], "blocked_validator": counts["blocked:validator"],
                       "done_ledger_chain": chain, "report": out}))
-    return 1 if chain == "broken" else 0
+    if chain == "misinvoked:v2-as-v1":
+        sys.stderr.write("cws-observe: DONE_LEDGER points at a v2 ledger (its genesis carries supersedes_head); "
+                         "pass the v1 done-ledger.json — the sibling done-ledger-v2.json is auto-discovered.\n")
+    return 1 if chain in ("broken", "misinvoked:v2-as-v1") else 0
 
 
 if __name__ == "__main__":
