@@ -1,0 +1,11 @@
+{
+  "_perk": "validate-atlas",
+  "requires": ["python3"],
+  "vars": { "ATLAS": "${FIXTURE}/pet-atlas.png" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["atlas-validation.json"],
+    "nonempty": ["atlas-validation.json"],
+    "json": { "atlas-validation.json": { "ok": true, "width": 1536, "height": 1872 } }
+  }
+}

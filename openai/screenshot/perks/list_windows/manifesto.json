@@ -1,0 +1,22 @@
+{
+  "_perk": "list_windows",
+  "sequence": [
+    "list_windows"
+  ],
+  "tools": {
+    "list_windows": {
+      "binary": "bash",
+      "params": {
+        "SHOT_APP": "${SHOT_APP}"
+      }
+    }
+  },
+  "env": {
+    "SHOT_APP": "${SHOT_APP}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

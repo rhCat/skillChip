@@ -1,0 +1,18 @@
+{
+  "perk": "contact-sheet",
+  "skill": "hatch-pet",
+  "description": "Render a labeled QA contact-sheet PNG from a Codex pet atlas: every cell scaled onto a checkerboard with row labels, frame counts, and used/unused outlines.",
+  "rules": [
+    "local-only — reads the atlas, writes a contact-sheet image",
+    "default scale 0.5; override with SCALE (float as string)",
+    "contact sheet written to record_store as contact-sheet.png"
+  ],
+  "usage": "Set ATLAS (path to the atlas PNG/WebP); optionally SCALE. Output: contact-sheet.png.",
+  "limitation": "Visualization only; does not validate or modify the atlas. Requires Pillow (PIL); without it the porter writes a placeholder file.",
+  "minimal_example": {
+    "perk": "contact-sheet",
+    "vars": {
+      "ATLAS": "./pet-atlas.png"
+    }
+  }
+}

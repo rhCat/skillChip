@@ -1,0 +1,31 @@
+{
+  "tool": "install_skill",
+  "inputs": {
+    "REPO": {
+      "type": "string",
+      "required": true
+    },
+    "SKILL_PATH": {
+      "type": "string",
+      "required": true
+    },
+    "REF": {
+      "type": "string",
+      "required": true
+    },
+    "DEST": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "install_log": {
+      "path": "${RECORD_STORE}/install.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/install.log"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "skill": "plugin-creator",
+  "skill_sha": "3adf32d0283e08e15c75d89cf415087e07fc947fa5a5064e6a0b4d02af32d46a",
+  "file_count": 19,
+  "files": {
+    "LICENSE.txt": "b87a529a13d5294f97bb847936a82f39e4f8adae2425a3a5fb5f1a7b75d43e6a",
+    "SKILL.md": "a042d295b0dc72161e245cd031b823c0fb9e5a41b09a745752e55557934b6c93",
+    "blueprint.drawio": "7a3d71ff40a4f26a7432848ac46e9ebdad19cbc563a8b67df734e981f0c325c7",
+    "blueprint.json": "42a110cc65e164e2d3bf3972e7255b3ab6590e6634a88609541c9be81ce1a119",
+    "blueprint.svg": "3e304c3b2b624aeeddd1ee3ddff394b7f0be51f56802bcc341c8bb5356df966b",
+    "ledger.json": "5a32e85214575dc9e1e09491f3d7cb5dd3c4dae5b9bfa21a5fec8704477c3444",
+    "perks.json": "71167c8aa2717f6eaf427667da53d5bc4b74a352aed2a78df9cf1530c2a904c0",
+    "perks/marketplace/manifesto.json": "556c0ec271d19c5ca5ed08ddb11c22eb43a255cba3dc47870b569cd8f1f68021",
+    "perks/marketplace/metadata.json": "9b4a12031d0b1e7e484b37070ffcda9536c314db9b8c6e5b89dad07ba8211008",
+    "perks/marketplace/src/contracts.json": "61ab2fd40cca79eb3ad148f1f20713f5e6f12ad5b0ec261d5a7fdc37e80a8f99",
+    "perks/marketplace/src/create_basic_plugin.py": "63ce72d2854c07a42382115c471cfcd42a743be3b84f398fa2d4cdb2fca13362",
+    "perks/marketplace/src/register_marketplace.sh": "b81ea0096e0f68889b5e3a567b1668b04e40652003b313088f1259b03b161b55",
+    "perks/marketplace/test/case.json": "35b1cc78551707d5cfe49ff6c32fd55b5ed1d7b0b52cd540de0bc0e9e981b5ee",
+    "perks/scaffold/manifesto.json": "8dbd954021f263df21f1f3c24cff3c7c50cf410bd1138593c5b75d91c70594d5",
+    "perks/scaffold/metadata.json": "3db3c64a0b72b06f3db2fde9d13825ad7d36d582595304b7b7b35bb882872ef4",
+    "perks/scaffold/src/contracts.json": "a9d694ea553fc70307ca4035e05c543ed093cc5ed39626bcec3e98f234ef4209",
+    "perks/scaffold/src/create_basic_plugin.py": "63ce72d2854c07a42382115c471cfcd42a743be3b84f398fa2d4cdb2fca13362",
+    "perks/scaffold/src/scaffold_plugin.sh": "1d6d24b36677b8d1422ce149cb96ab3fa2a72eea41b4019761e087c1de2cdd95",
+    "perks/scaffold/test/case.json": "b47f0415bf01558c19c4b37bd541c6f9e271bf9f721a0a1a7ac24698f6f4d733"
+  }
+}

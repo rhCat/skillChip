@@ -1,0 +1,23 @@
+{
+  "tool": "resolve_latest_model",
+  "inputs": {
+    "LATEST_MODEL_SOURCE": {
+      "type": "string",
+      "required": true
+    },
+    "LATEST_MODEL_BASE_URL": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "latest_model_out": {
+      "path": "${RECORD_STORE}/latest-model.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/latest-model.json"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "tool": "init_skill",
+  "inputs": {
+    "SKILL_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "OUTPUT_PATH": {
+      "type": "string",
+      "required": true
+    },
+    "RESOURCES": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "init_out": {
+      "path": "${RECORD_STORE}/init.out",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/init.out"
+  }
+}

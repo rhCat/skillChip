@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for gh-fix-ci — set perk, fill record_store + the vars the perk declares.",
+  "skill": "gh-fix-ci",
+  "perk": "inspect",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "REPO_DIR": "<path inside the target git repo, e.g. .>",
+    "PR": "<PR number or URL; optional, defaults to current branch PR>"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "skill": "imagegen",
+  "perks": [
+    {
+      "id": "generate",
+      "summary": "generate a new raster image from a prompt via the GPT Image CLI (local-output)",
+      "destructive": false,
+      "tools": [
+        "img_generate"
+      ]
+    },
+    {
+      "id": "edit",
+      "summary": "edit an existing image (inpaint/transform/background) via the GPT Image CLI (local-output)",
+      "destructive": false,
+      "tools": [
+        "img_edit"
+      ]
+    },
+    {
+      "id": "generate-batch",
+      "summary": "generate many images concurrently from a JSONL prompt file via the GPT Image CLI (local-output)",
+      "destructive": false,
+      "tools": [
+        "img_generate_batch"
+      ]
+    }
+  ]
+}

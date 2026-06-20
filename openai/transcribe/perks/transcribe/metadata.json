@@ -1,0 +1,20 @@
+{
+  "perk": "transcribe",
+  "skill": "transcribe",
+  "description": "Transcribe audio file(s) to text / json / diarized_json via the OpenAI API and write the transcript to a file under record_store.",
+  "rules": [
+    "calls the OpenAI audio transcription API; requires the openai SDK installed and OPENAI_API_KEY exported",
+    "defaults to gpt-4o-mini-transcribe with response-format text for fast transcription",
+    "diarized_json + known-speaker references require model gpt-4o-transcribe-diarize (max 4 speakers)",
+    "the transcript is written to record_store as transcript.txt; degrades to an empty result when the SDK or key is absent",
+    "local-only: writes a transcript file, does not push to or mutate any remote service"
+  ],
+  "usage": "Set AUDIO (audio file path). Optional: MODEL, RESPONSE_FORMAT (text|json|diarized_json), LANGUAGE, KNOWN_SPEAKER (NAME=PATH). Output: transcript.txt.",
+  "limitation": "Live API call: needs the openai SDK + OPENAI_API_KEY and network. Offline (no SDK/key) it emits an empty transcript. Audio must be <= 25MB.",
+  "minimal_example": {
+    "perk": "transcribe",
+    "vars": {
+      "AUDIO": "audio.wav"
+    }
+  }
+}

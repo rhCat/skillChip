@@ -1,0 +1,22 @@
+{
+  "perk": "install",
+  "skill": "skill-installer",
+  "description": "download a skill from a GitHub repo and install it into $CODEX_HOME/skills (destructive)",
+  "rules": [
+    "destructive — writes a new skill tree onto the local filesystem",
+    "downloads via zip (codeload), falling back to git sparse-checkout (HTTPS then SSH)",
+    "aborts if the destination skill directory already exists",
+    "install log to record_store"
+  ],
+  "usage": "Set REPO (owner/repo), SKILL_PATH (skill subdir in repo), REF (branch/tag), DEST (destination skills dir, e.g. $CODEX_HOME/skills). Output: install.log.",
+  "limitation": "Destructive: copies a skill into the destination skills dir. Reaches the GitHub API/git; degrades to a recorded error offline.",
+  "minimal_example": {
+    "perk": "install",
+    "vars": {
+      "REPO": "openai/skills",
+      "SKILL_PATH": "skills/.experimental/some-skill",
+      "REF": "main",
+      "DEST": "~/.codex/skills"
+    }
+  }
+}

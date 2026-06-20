@@ -1,0 +1,13 @@
+{
+  "skill": "gh-fix-ci",
+  "perks": [
+    {
+      "id": "inspect",
+      "summary": "inspect failing GitHub PR checks, fetch GitHub Actions logs, extract a failure snippet (read-only)",
+      "destructive": false,
+      "tools": [
+        "inspect_pr_checks"
+      ]
+    }
+  ]
+}

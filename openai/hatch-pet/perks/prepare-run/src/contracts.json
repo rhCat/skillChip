@@ -1,0 +1,27 @@
+{
+  "tool": "prepare_run",
+  "inputs": {
+    "PET_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "PET_NOTES": {
+      "type": "string",
+      "required": false
+    },
+    "STYLE_PRESET": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "jobs_out": {
+      "path": "${RECORD_STORE}/run/imagegen-jobs.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/run/imagegen-jobs.json"
+  }
+}

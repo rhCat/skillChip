@@ -1,0 +1,27 @@
+{
+  "tool": "mtc_migrate",
+  "inputs": {
+    "SOURCE": {
+      "type": "string",
+      "required": true
+    },
+    "TARGET": {
+      "type": "string",
+      "required": true
+    },
+    "MIGRATE_FLAGS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "mtc_migrate_out": {
+      "path": "${RECORD_STORE}/migrate.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/migrate.txt"
+  }
+}

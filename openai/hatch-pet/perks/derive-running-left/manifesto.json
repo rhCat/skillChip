@@ -1,0 +1,25 @@
+{
+  "_perk": "derive-running-left",
+  "sequence": [
+    "derive_running_left"
+  ],
+  "tools": {
+    "derive_running_left": {
+      "binary": "python3",
+      "params": {
+        "RUN_DIR": "${RUN_DIR}",
+        "DECISION_NOTE": "${DECISION_NOTE}",
+        "FORCE": "${FORCE}"
+      }
+    }
+  },
+  "env": {
+    "RUN_DIR": "${RUN_DIR}",
+    "DECISION_NOTE": "${DECISION_NOTE}",
+    "FORCE": "${FORCE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

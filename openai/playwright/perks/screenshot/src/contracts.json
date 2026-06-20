@@ -1,0 +1,23 @@
+{
+  "tool": "pw_screenshot",
+  "inputs": {
+    "PW_REF": {
+      "type": "string",
+      "required": false
+    },
+    "PW_SESSION": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "pw_screenshot_out": {
+      "path": "${RECORD_STORE}/screenshot.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/screenshot.json"
+  }
+}

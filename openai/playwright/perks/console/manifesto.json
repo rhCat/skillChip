@@ -1,0 +1,22 @@
+{
+  "_perk": "console",
+  "sequence": [
+    "pw_console"
+  ],
+  "tools": {
+    "pw_console": {
+      "binary": "bash",
+      "params": {
+        "PW_LEVEL": "${PW_LEVEL}"
+      }
+    }
+  },
+  "env": {
+    "PW_LEVEL": "${PW_LEVEL}",
+    "PW_SESSION": "${PW_SESSION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

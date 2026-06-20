@@ -1,0 +1,23 @@
+{
+  "_perk": "doctor",
+  "sequence": [
+    "mtc_doctor"
+  ],
+  "tools": {
+    "mtc_doctor": {
+      "binary": "python3",
+      "params": {
+        "SOURCE": "${SOURCE}",
+        "TARGET": "${TARGET}"
+      }
+    }
+  },
+  "env": {
+    "SOURCE": "${SOURCE}",
+    "TARGET": "${TARGET}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

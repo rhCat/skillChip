@@ -1,0 +1,19 @@
+{
+  "tool": "validate_atlas",
+  "inputs": {
+    "ATLAS": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "atlas_validation_out": {
+      "path": "${RECORD_STORE}/atlas-validation.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/atlas-validation.json"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_perk": "plan",
+  "requires": ["python3"],
+  "vars": { "SOURCE": "${FIXTURE}/.claude", "TARGET": "${RECORD}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["plan.txt"],
+    "nonempty": ["plan.txt"],
+    "contains": { "plan.txt": "Migration plan" }
+  }
+}

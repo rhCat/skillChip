@@ -1,0 +1,19 @@
+{
+  "perk": "derive-running-left",
+  "skill": "hatch-pet",
+  "description": "Conditionally derive the running-left row by framewise-horizontal-mirroring the approved running-right strip (preserving frame order), then mark the running-left job complete in the run's imagegen job manifest with a recorded mirror decision.",
+  "rules": [
+    "local-only — mutates <RUN_DIR>/imagegen-jobs.json and writes <RUN_DIR>/decoded/running-left.png",
+    "requires running-right job complete and running-left configured for conditional mirroring (mirror_policy.may_derive_from == running-right)",
+    "DECISION_NOTE must explain why mirroring is acceptable; FORCE=1 replaces an existing running-left.png; a JSON result is captured to record_store/derive-result.json"
+  ],
+  "usage": "Set RUN_DIR (a prepared run dir with a complete running-right) and DECISION_NOTE; optionally FORCE=1. Output: derive-result.json (and run-dir decoded/running-left.png).",
+  "limitation": "Operates on an existing run folder; not a generator. Refuses to run without confirmation/decision note, or if running-right is not complete or running-left is not mirror-eligible. Requires Pillow (PIL).",
+  "minimal_example": {
+    "perk": "derive-running-left",
+    "vars": {
+      "RUN_DIR": "./run",
+      "DECISION_NOTE": "Symmetric mascot; mirroring preserves identity and props."
+    }
+  }
+}

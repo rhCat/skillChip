@@ -1,0 +1,13 @@
+{
+  "_perk": "init",
+  "requires": ["python3"],
+  "vars": {
+    "SKILL_NAME": "demo-skill",
+    "OUTPUT_PATH": "${FIXTURE}"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["init.out"],
+    "nonempty": ["init.out"]
+  }
+}

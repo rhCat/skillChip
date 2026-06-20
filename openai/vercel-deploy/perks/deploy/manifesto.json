@@ -1,0 +1,21 @@
+{
+  "_perk": "deploy",
+  "sequence": [
+    "vercel_deploy"
+  ],
+  "tools": {
+    "vercel_deploy": {
+      "binary": "bash",
+      "params": {
+        "PROJECT_PATH": "${PROJECT_PATH}"
+      }
+    }
+  },
+  "env": {
+    "PROJECT_PATH": "${PROJECT_PATH}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

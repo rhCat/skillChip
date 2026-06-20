@@ -1,0 +1,11 @@
+{
+  "_perk": "scan",
+  "requires": ["python3"],
+  "vars": { "SOURCE": "${FIXTURE}/.claude" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["scan.txt"],
+    "nonempty": ["scan.txt"],
+    "contains": { "scan.txt": "inventory" }
+  }
+}

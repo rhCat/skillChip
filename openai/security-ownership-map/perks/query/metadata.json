@@ -1,0 +1,20 @@
+{
+  "perk": "query",
+  "skill": "security-ownership-map",
+  "description": "Return bounded JSON slices over a built ownership-map dir (people/files/person/file/cochange/tag/summary/communities/community; read-only).",
+  "rules": [
+    "read-only — only reads CSV/JSON artifacts in DATA_DIR",
+    "DATA_DIR must be a dir already produced by the build perk (people.csv/files.csv/edges.csv/summary.json)",
+    "QUERY_ARGS selects the subcommand + filters, e.g. `files --tag auth --bus-factor-max 1`",
+    "result JSON is written to record_store/query.json"
+  ],
+  "usage": "Set DATA_DIR (a built ownership-map dir) and QUERY_ARGS (the query_ownership.py subcommand + flags). Output: query.json.",
+  "limitation": "Read-only. cochange/community subcommands require artifacts produced with co-change / communities enabled at build time.",
+  "minimal_example": {
+    "perk": "query",
+    "vars": {
+      "DATA_DIR": "ownership-map-out",
+      "QUERY_ARGS": "files --tag auth --bus-factor-max 1"
+    }
+  }
+}

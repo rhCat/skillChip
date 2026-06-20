@@ -1,0 +1,23 @@
+{
+  "_perk": "extract",
+  "sequence": [
+    "pw_extract"
+  ],
+  "tools": {
+    "pw_extract": {
+      "binary": "bash",
+      "params": {
+        "PW_EXPR": "${PW_EXPR}"
+      }
+    }
+  },
+  "env": {
+    "PW_EXPR": "${PW_EXPR}",
+    "PW_REF": "${PW_REF}",
+    "PW_SESSION": "${PW_SESSION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

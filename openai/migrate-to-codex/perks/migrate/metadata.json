@@ -1,0 +1,22 @@
+{
+  "perk": "migrate",
+  "skill": "migrate-to-codex",
+  "description": "Migrate a Claude source tree into Codex artifacts: AGENTS.md, .codex/config.toml, .agents/skills, .codex/agents, .codex/hooks.json, plus the migration report.",
+  "rules": [
+    "DESTRUCTIVE: writes and overwrites generated Codex artifacts under TARGET",
+    "with MIGRATE_FLAGS=--replace it also deletes orphaned generated skills/subagents",
+    "does not edit Claude source files (.claude/, .mcp.json, .claude.json)",
+    "pass MIGRATE_FLAGS=--dry-run to preview without writing; --mcp/--skills/--subagents to scope surfaces",
+    "report output written to record_store"
+  ],
+  "usage": "Set SOURCE (Claude source root) and TARGET (Codex root). Optional MIGRATE_FLAGS (e.g. --dry-run, --mcp, --skills, --subagents, --replace). Output: migrate.txt.",
+  "limitation": "Mutates the local Codex target filesystem (declared destructive). The vendored CLI imports tomllib and needs Python 3.11+ to run; on older Python it writes nothing and degrades gracefully. Never deploys to a remote.",
+  "minimal_example": {
+    "perk": "migrate",
+    "vars": {
+      "SOURCE": "~/.claude/",
+      "TARGET": "~/.codex/",
+      "MIGRATE_FLAGS": "--dry-run"
+    }
+  }
+}

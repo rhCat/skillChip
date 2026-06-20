@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for skill-creator — set perk, fill record_store + the vars the perk declares.",
+  "skill": "skill-creator",
+  "perk": "init",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "SKILL_NAME": "<hyphen-case skill name>",
+    "OUTPUT_PATH": "<dir under which the skill folder is created>"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "tool": "mtc_doctor",
+  "inputs": {
+    "SOURCE": {
+      "type": "string",
+      "required": true
+    },
+    "TARGET": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "mtc_doctor_out": {
+      "path": "${RECORD_STORE}/doctor.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/doctor.txt"
+  }
+}

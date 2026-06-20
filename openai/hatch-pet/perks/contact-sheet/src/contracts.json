@@ -1,0 +1,23 @@
+{
+  "tool": "contact_sheet",
+  "inputs": {
+    "ATLAS": {
+      "type": "string",
+      "required": true
+    },
+    "SCALE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "contact_sheet_out": {
+      "path": "${RECORD_STORE}/contact-sheet.png",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/contact-sheet.png"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_perk": "detect-framework",
+  "requires": ["bash"],
+  "vars": { "PROJECT_PATH": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["framework.json"],
+    "nonempty": ["framework.json"],
+    "json": { "framework.json": { "status": "ok", "framework": "nextjs" } }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "perk": "generate-batch",
+  "skill": "imagegen",
+  "description": "Generate many images concurrently from a JSONL prompt file via the GPT Image fallback CLI (image_gen.py generate-batch).",
+  "rules": [
+    "local-output only: writes images into record_store/batch + a request preview under record_store; never pushes to a remote",
+    "porter runs the CLI in --dry-run --no-augment so it validates every job and resolves output paths offline (no OPENAI_API_KEY, no network)",
+    "INPUT is a JSONL file: one prompt string or job object per line; blank lines and #-comments are skipped; max 500 jobs",
+    "a real (non-dry-run) batch requires OPENAI_API_KEY and the openai SDK; the porter degrades gracefully when they are absent"
+  ],
+  "usage": "Set INPUT (path to the JSONL job file), required. Optional: MODEL, SIZE, QUALITY, CONCURRENCY. Outputs go to record_store/batch; the preview is batch.json.",
+  "limitation": "The vendored porter only previews each job (--dry-run). Producing real pixels needs OPENAI_API_KEY + the openai SDK and is not performed by this governed porter.",
+  "minimal_example": {
+    "perk": "generate-batch",
+    "vars": {
+      "INPUT": "./jobs.jsonl"
+    }
+  }
+}

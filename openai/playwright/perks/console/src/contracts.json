@@ -1,0 +1,23 @@
+{
+  "tool": "pw_console",
+  "inputs": {
+    "PW_LEVEL": {
+      "type": "string",
+      "required": false
+    },
+    "PW_SESSION": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "pw_console_out": {
+      "path": "${RECORD_STORE}/console.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/console.json"
+  }
+}

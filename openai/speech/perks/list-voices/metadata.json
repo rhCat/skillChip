@@ -1,0 +1,16 @@
+{
+  "perk": "list-voices",
+  "skill": "speech",
+  "description": "list the built-in OpenAI TTS voices (read-only, no API)",
+  "rules": [
+    "read-only",
+    "no network and no OPENAI_API_KEY required",
+    "voice list written to record_store"
+  ],
+  "usage": "No vars. Output: voices.txt (one voice name per line).",
+  "limitation": "Read-only: lists built-in voices only. Custom voices are out of scope.",
+  "minimal_example": {
+    "perk": "list-voices",
+    "vars": {}
+  }
+}

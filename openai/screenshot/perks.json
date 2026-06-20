@@ -1,0 +1,29 @@
+{
+  "skill": "screenshot",
+  "perks": [
+    {
+      "id": "capture",
+      "summary": "capture a desktop/app/window/region screenshot to a PNG file (read-only)",
+      "destructive": false,
+      "tools": [
+        "take_screenshot"
+      ]
+    },
+    {
+      "id": "list_windows",
+      "summary": "list matching on-screen window ids before capturing (read-only, macOS)",
+      "destructive": false,
+      "tools": [
+        "list_windows"
+      ]
+    },
+    {
+      "id": "check_permissions",
+      "summary": "preflight macOS Screen Recording permission (checks/requests, records status)",
+      "destructive": false,
+      "tools": [
+        "check_permissions"
+      ]
+    }
+  ]
+}

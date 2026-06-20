@@ -1,0 +1,21 @@
+{
+  "perk": "console",
+  "skill": "playwright",
+  "description": "dump the page's console messages, optionally filtered by level (read-only)",
+  "rules": [
+    "read-only — reads captured console messages, mutates nothing",
+    "runs `playwright-cli console [PW_LEVEL]` via the bundled npx wrapper",
+    "PW_LEVEL filters (e.g. warning, error); empty dumps all levels",
+    "degrades gracefully: records when a live browser is not requested/available",
+    "console dump written to record_store"
+  ],
+  "usage": "Optional PW_LEVEL filters by level (e.g. warning); optional PW_SESSION isolates the session. Output: console.json.",
+  "limitation": "Needs npx + @playwright/cli + an already-open page to read real console output; offline it records the unreachable state and still emits valid output.",
+  "minimal_example": {
+    "perk": "console",
+    "vars": {
+      "PW_LEVEL": "warning",
+      "PW_SESSION": "demo"
+    }
+  }
+}

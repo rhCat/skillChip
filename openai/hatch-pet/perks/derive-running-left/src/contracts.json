@@ -1,0 +1,27 @@
+{
+  "tool": "derive_running_left",
+  "inputs": {
+    "RUN_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "DECISION_NOTE": {
+      "type": "string",
+      "required": true
+    },
+    "FORCE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "derive_result_out": {
+      "path": "${RECORD_STORE}/derive-result.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/derive-result.json"
+  }
+}

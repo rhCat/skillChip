@@ -1,0 +1,19 @@
+{
+  "tool": "pw_network",
+  "inputs": {
+    "PW_SESSION": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "pw_network_out": {
+      "path": "${RECORD_STORE}/network.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/network.json"
+  }
+}

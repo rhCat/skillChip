@@ -1,0 +1,16 @@
+{
+  "perk": "check_permissions",
+  "skill": "screenshot",
+  "description": "preflight macOS Screen Recording permission (checks/requests, records status)",
+  "rules": [
+    "records status only — writes one status object (permissions.json) under record_store; mutates no user data",
+    "macOS-only live; the live check may pop one system prompt to request Screen Recording",
+    "off macOS records not_applicable; swift absent records unavailable; in a sandbox records blocked"
+  ],
+  "usage": "No vars. Run before window/app capture on macOS. Output: permissions.json (screen_recording: granted|not_granted|unavailable|blocked|not_applicable).",
+  "limitation": "Only the live macOS path (swift + outside a sandbox) yields granted/not_granted; otherwise it records why the check could not run.",
+  "minimal_example": {
+    "perk": "check_permissions",
+    "vars": {}
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "speak_batch",
+  "inputs": {
+    "JOBS_JSONL": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "batch_out": {
+      "path": "${RECORD_STORE}/batch.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/batch.json"
+  }
+}

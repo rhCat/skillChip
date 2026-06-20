@@ -1,0 +1,33 @@
+{
+  "skill": "speech",
+  "skill_sha": "c5ba22becfe1cc2c9b63c8877df905f23dff23025a3e725d27fd73843721fee4",
+  "file_count": 26,
+  "files": {
+    "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+    "SKILL.md": "87051ec7123c2c1e08493dadb65994bc17bf7a71d8db7c24ff34515405fef3bc",
+    "blueprint.drawio": "34e620a6ce3a89886326f106a617560e0b63c635c5c4a756f47f1a5c46a736d3",
+    "blueprint.json": "ff9447e6260f018c14de4da25d8cb0d09f6eff73a1d0f7d48e8f0a8219a8f8b6",
+    "blueprint.svg": "bc1da237e89d8dc8ed6edc6fd15fc7c177da5aaab8a99462f6791fa98dd7955c",
+    "ledger.json": "9f791dd5bbdba067db17fb3072aa565349b0bec4ad2371610249c925e7a2bd4d",
+    "perks.json": "6190c434d5bc9622be62a6d54c34500e66538ba1c06684d08decc1f8a35b1699",
+    "perks/list-voices/manifesto.json": "ba639aa724142cf5de608ac8942e38e93e03c35c898345f5fd68b19cb054ded9",
+    "perks/list-voices/metadata.json": "e471c17c6fbbc8043aa54f9c4b5cc1ea97145852081431bad015927b57bc540c",
+    "perks/list-voices/src/contracts.json": "8629d9e41d3c13c9f2fe3074752fd97a5625edf30cc391066d67d0c6b10af61d",
+    "perks/list-voices/src/list_voices.sh": "9445cd7f5d2cec7b857ae1f9fbd618c63da3c58b17bc0da6ff491d85954416e9",
+    "perks/list-voices/src/text_to_speech.py": "0000014efdf1194512c017ffa0d0574ae65881f6a1340b7ed822053b6e3d3c44",
+    "perks/list-voices/test/case.json": "fe53c2b1fa426185d9d68b9941c06871aa1786ad9c062da298c756144f97e05a",
+    "perks/speak-batch/manifesto.json": "9bd4f3c5919c2c62590fee3db9ee90e3cc4015751c677a0c5b5033b01f90d424",
+    "perks/speak-batch/metadata.json": "3ecfaea875ed7f566a3dc609f47a16ac236d33e65aa76118f875eda65385c680",
+    "perks/speak-batch/src/contracts.json": "6962eda125244ac22c32bd67147383a51c5b8317a0668a2452bc5799d0b4e434",
+    "perks/speak-batch/src/speak_batch.sh": "fe3f1bb8354078b1df9069919f6d7a7556360fff1f7c12b01e303eaadd03d294",
+    "perks/speak-batch/src/text_to_speech.py": "0000014efdf1194512c017ffa0d0574ae65881f6a1340b7ed822053b6e3d3c44",
+    "perks/speak-batch/test/case.json": "ceb613dea5756736080e7508ec2bdcbfd8bfa75ca6e4ced7b78e48f3b5c9e693",
+    "perks/speak-batch/test/fixture/jobs.jsonl": "8812a992200fcaf5d7ab591dc56f86fb24c3843fd324c0e09b7cbdf7dc2a7ae8",
+    "perks/speak/manifesto.json": "700aba789f770103aac48a816f9dd6dc4cd4a4504fe5b9c58ebe95e283b60836",
+    "perks/speak/metadata.json": "1a5c120d2cecc5f0bdf564ae9322ce4807b293c0221e775acdfa2c9436297d54",
+    "perks/speak/src/contracts.json": "b0d737e2b58f293202e75b700c242e76fa207dbdbbe2e390d1e4694fd3bc16a5",
+    "perks/speak/src/speak.sh": "a1ecdfbb31303a9a1579a593822f44e4915797572803cdce70d34e2ac2157a04",
+    "perks/speak/src/text_to_speech.py": "0000014efdf1194512c017ffa0d0574ae65881f6a1340b7ed822053b6e3d3c44",
+    "perks/speak/test/case.json": "625905fe028e86972b929a0b8ba8a3d932fee4317cb6a1026675cca437a89fc6"
+  }
+}

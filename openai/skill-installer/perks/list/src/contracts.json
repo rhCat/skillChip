@@ -1,0 +1,27 @@
+{
+  "tool": "list_skills",
+  "inputs": {
+    "REPO": {
+      "type": "string",
+      "required": true
+    },
+    "SKILL_PATH": {
+      "type": "string",
+      "required": true
+    },
+    "REF": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "skills_out": {
+      "path": "${RECORD_STORE}/skills.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/skills.json"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_perk": "list_windows",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "SHOT_APP": ""
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["windows.txt"],
+    "nonempty": ["windows.txt"]
+  }
+}

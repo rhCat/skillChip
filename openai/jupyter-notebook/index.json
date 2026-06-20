@@ -1,0 +1,22 @@
+{
+  "skill": "jupyter-notebook",
+  "skill_sha": "74479be0f54741076e8a846413581c9eedeb3d07238d6baeb6353ec3fc3c1d01",
+  "file_count": 15,
+  "files": {
+    "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+    "SKILL.md": "a05f249bcc4bd00b22bbfdfc0eafb9e05bd67d54b9ce8d8297e5a4541ab225ed",
+    "blueprint.drawio": "88b3f21dcc2c6c5b7d738d0a7c0e491add3ad49edfc5c8bfd88fc8732721cd37",
+    "blueprint.json": "7bdae3246abb822c0e839b16eeba89b6a27c56a515874669dedc1014da74f9c7",
+    "blueprint.svg": "5368d96e043055a5d088fcdc827a59b72df1ec18f39a77af8160d3e6697f8dee",
+    "ledger.json": "d1a129f437e04a0a7145ec5c218cde0dc31258ce93f214770175b29c757f813e",
+    "perks.json": "c0f192877cc6320db894e06db008feb6d8ded824468da1d60acf2537a8a59706",
+    "perks/scaffold/manifesto.json": "cf2de5fb473b997cbb69fbbcc0b68f2ec943926a354987ac389cd572d59664ae",
+    "perks/scaffold/metadata.json": "88acbf2d54afd363c59f680a15a5aa167716bd681745c13f3ebc329e1a121501",
+    "perks/scaffold/src/assets/experiment-template.ipynb": "25f85914103cd84244e20ef378f59097479c72481cd18d3a931354d107c3f300",
+    "perks/scaffold/src/assets/tutorial-template.ipynb": "704a809c09c7c9e6e5c437860df95524412b50c58571a14204610d73e0744765",
+    "perks/scaffold/src/contracts.json": "e75ac70970783e78733566ad2fcd166bddcf90244415102eb0d50dd7e23123bc",
+    "perks/scaffold/src/new_notebook.py": "a004e2ea3115edb24313928be0be6d1dc07e571d7ca6c1b24375f0569c616d2f",
+    "perks/scaffold/src/new_notebook.sh": "3fd777de6a74ac171942a651bd00725d25858d799b66e8e535ad830c7ea8e975",
+    "perks/scaffold/test/case.json": "fa159df9f503f7d31ee14539d7c71089dc988eee40f0605b4abbc8b31b1adab5"
+  }
+}

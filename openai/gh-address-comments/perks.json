@@ -1,0 +1,13 @@
+{
+  "skill": "gh-address-comments",
+  "perks": [
+    {
+      "id": "fetch-comments",
+      "summary": "fetch all conversation comments + reviews + inline review threads for the open PR on the current branch (read-only)",
+      "destructive": false,
+      "tools": [
+        "fetch_comments"
+      ]
+    }
+  ]
+}

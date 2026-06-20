@@ -1,0 +1,11 @@
+{
+  "_perk": "validate",
+  "requires": ["python3"],
+  "vars": { "TARGET": "${FIXTURE}/.codex" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["validate.txt"],
+    "nonempty": ["validate.txt"],
+    "contains": { "validate.txt": "Validation report" }
+  }
+}

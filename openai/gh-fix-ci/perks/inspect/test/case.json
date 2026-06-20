@@ -1,0 +1,10 @@
+{
+  "_perk": "inspect",
+  "requires": ["python3", "bash"],
+  "vars": { "REPO_DIR": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["checks.json"],
+    "nonempty": ["checks.json"]
+  }
+}

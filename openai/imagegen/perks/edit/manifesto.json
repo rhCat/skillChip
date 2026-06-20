@@ -1,0 +1,31 @@
+{
+  "_perk": "edit",
+  "sequence": [
+    "img_edit"
+  ],
+  "tools": {
+    "img_edit": {
+      "binary": "python3",
+      "params": {
+        "PROMPT": "${PROMPT}",
+        "IMAGE": "${IMAGE}",
+        "MASK": "${MASK}",
+        "MODEL": "${MODEL}",
+        "SIZE": "${SIZE}",
+        "INPUT_FIDELITY": "${INPUT_FIDELITY}"
+      }
+    }
+  },
+  "env": {
+    "PROMPT": "${PROMPT}",
+    "IMAGE": "${IMAGE}",
+    "MASK": "${MASK}",
+    "MODEL": "${MODEL}",
+    "SIZE": "${SIZE}",
+    "INPUT_FIDELITY": "${INPUT_FIDELITY}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

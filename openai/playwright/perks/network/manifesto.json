@@ -1,0 +1,21 @@
+{
+  "_perk": "network",
+  "sequence": [
+    "pw_network"
+  ],
+  "tools": {
+    "pw_network": {
+      "binary": "bash",
+      "params": {
+        "PW_SESSION": "${PW_SESSION}"
+      }
+    }
+  },
+  "env": {
+    "PW_SESSION": "${PW_SESSION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

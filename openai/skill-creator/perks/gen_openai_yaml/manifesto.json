@@ -1,0 +1,25 @@
+{
+  "_perk": "gen_openai_yaml",
+  "sequence": [
+    "gen_openai_yaml"
+  ],
+  "tools": {
+    "gen_openai_yaml": {
+      "binary": "python3",
+      "params": {
+        "SKILL_DIR": "${SKILL_DIR}",
+        "NAME": "${NAME}",
+        "INTERFACE": "${INTERFACE}"
+      }
+    }
+  },
+  "env": {
+    "SKILL_DIR": "${SKILL_DIR}",
+    "NAME": "${NAME}",
+    "INTERFACE": "${INTERFACE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for imagegen — set perk, fill record_store + the vars the perk declares.",
+  "skill": "imagegen",
+  "perk": "generate",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PROMPT": "<text prompt for the image>"
+  }
+}

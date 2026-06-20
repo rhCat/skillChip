@@ -1,0 +1,20 @@
+{
+  "perk": "speak",
+  "skill": "speech",
+  "description": "preview a single TTS request payload from text (dry-run; no audio rendered without OPENAI_API_KEY + network)",
+  "rules": [
+    "runs the bundled CLI in --dry-run (deterministic, offline; no openai package needed)",
+    "input text must be <= 4096 characters",
+    "voice must be a built-in voice; instructions only apply to gpt-4o-mini TTS models",
+    "live audio rendering requires OPENAI_API_KEY + network and is performed outside the governed run",
+    "request payload written to record_store"
+  ],
+  "usage": "Set INPUT_TEXT (verbatim text). Optional: VOICE (default cedar), INSTRUCTIONS (style spec). Output: speak.json.",
+  "limitation": "Governed run is dry-run only: it materializes the exact request payload, it does not call the API or write audio.",
+  "minimal_example": {
+    "perk": "speak",
+    "vars": {
+      "INPUT_TEXT": "Welcome to the demo."
+    }
+  }
+}

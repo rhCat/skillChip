@@ -1,0 +1,29 @@
+{
+  "_perk": "generate-batch",
+  "sequence": [
+    "img_generate_batch"
+  ],
+  "tools": {
+    "img_generate_batch": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}",
+        "MODEL": "${MODEL}",
+        "SIZE": "${SIZE}",
+        "QUALITY": "${QUALITY}",
+        "CONCURRENCY": "${CONCURRENCY}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "MODEL": "${MODEL}",
+    "SIZE": "${SIZE}",
+    "QUALITY": "${QUALITY}",
+    "CONCURRENCY": "${CONCURRENCY}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

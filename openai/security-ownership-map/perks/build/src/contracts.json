@@ -1,0 +1,19 @@
+{
+  "tool": "build_map",
+  "inputs": {
+    "REPO": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "build_summary": {
+      "path": "${RECORD_STORE}/summary.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/summary.json"
+  }
+}

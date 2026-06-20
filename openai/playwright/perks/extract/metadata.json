@@ -1,0 +1,21 @@
+{
+  "perk": "extract",
+  "skill": "playwright",
+  "description": "evaluate a JS expression against the page (or a ref) to extract data (read-only)",
+  "rules": [
+    "read-only — evaluates an expression and returns its value; mutates nothing",
+    "runs `playwright-cli eval <PW_EXPR> [PW_REF]` via the bundled npx wrapper",
+    "PW_REF binds the expression to one element (e.g. `el => el.textContent`)",
+    "degrades gracefully: records when a live browser is not requested/available",
+    "extracted value written to record_store"
+  ],
+  "usage": "Set PW_EXPR (a JS expression like `document.title`); optional PW_REF binds it to an element; optional PW_SESSION isolates the session. Output: extract.json.",
+  "limitation": "Needs npx + @playwright/cli + an already-open page to evaluate against the live DOM; offline it records the unreachable state and still emits valid output. Prefer explicit eval over run-code.",
+  "minimal_example": {
+    "perk": "extract",
+    "vars": {
+      "PW_EXPR": "document.title",
+      "PW_SESSION": "demo"
+    }
+  }
+}

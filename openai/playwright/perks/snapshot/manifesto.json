@@ -1,0 +1,21 @@
+{
+  "_perk": "snapshot",
+  "sequence": [
+    "pw_snapshot"
+  ],
+  "tools": {
+    "pw_snapshot": {
+      "binary": "bash",
+      "params": {
+        "PW_SESSION": "${PW_SESSION}"
+      }
+    }
+  },
+  "env": {
+    "PW_SESSION": "${PW_SESSION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

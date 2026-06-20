@@ -1,0 +1,18 @@
+{
+  "perk": "inspect-frames",
+  "skill": "hatch-pet",
+  "description": "Inspect extracted Codex pet frames before atlas composition: per-frame geometry (192x208), non-transparent area, bbox, cell-edge bleed, chroma-adjacent pixels, extraction method, and small/large outliers. Read-only QA.",
+  "rules": [
+    "read-only — reads frame dirs, writes only a JSON report",
+    "checks all 9 expected rows; a frames-root missing rows reports errors but still writes the report",
+    "report written to record_store as frames-inspection.json"
+  ],
+  "usage": "Set FRAMES_ROOT (the dir of per-state frame folders, e.g. extract-frames output). Output: frames-inspection.json (ok, errors, warnings, per-row frame stats).",
+  "limitation": "Read-only QA; does not modify frames. The core exits non-zero when it finds issues, but the porter still records the report (exit 0). Requires Pillow (PIL).",
+  "minimal_example": {
+    "perk": "inspect-frames",
+    "vars": {
+      "FRAMES_ROOT": "./frames"
+    }
+  }
+}

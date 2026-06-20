@@ -1,0 +1,23 @@
+{
+  "tool": "query_map",
+  "inputs": {
+    "DATA_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "QUERY_ARGS": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "query_out": {
+      "path": "${RECORD_STORE}/query.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/query.json"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "tool": "take_screenshot",
+  "inputs": {
+    "SHOT_MODE": {
+      "type": "string",
+      "required": false
+    },
+    "SHOT_APP": {
+      "type": "string",
+      "required": false
+    },
+    "SHOT_REGION": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "shot": {
+      "path": "${RECORD_STORE}/screenshot.png",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/screenshot.png"
+  }
+}

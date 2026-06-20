@@ -1,0 +1,23 @@
+{
+  "_perk": "extract-frames",
+  "sequence": [
+    "extract_frames"
+  ],
+  "tools": {
+    "extract_frames": {
+      "binary": "python3",
+      "params": {
+        "DECODED_DIR": "${DECODED_DIR}",
+        "STATES": "${STATES}"
+      }
+    }
+  },
+  "env": {
+    "DECODED_DIR": "${DECODED_DIR}",
+    "STATES": "${STATES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

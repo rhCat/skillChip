@@ -1,0 +1,26 @@
+{
+  "_perk": "capture",
+  "sequence": [
+    "take_screenshot"
+  ],
+  "tools": {
+    "take_screenshot": {
+      "binary": "bash",
+      "params": {
+        "SHOT_MODE": "${SHOT_MODE}",
+        "SHOT_APP": "${SHOT_APP}",
+        "SHOT_REGION": "${SHOT_REGION}"
+      }
+    }
+  },
+  "env": {
+    "SHOT_MODE": "${SHOT_MODE}",
+    "SHOT_APP": "${SHOT_APP}",
+    "SHOT_REGION": "${SHOT_REGION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

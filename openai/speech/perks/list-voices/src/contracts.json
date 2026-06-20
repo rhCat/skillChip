@@ -1,0 +1,14 @@
+{
+  "tool": "list_voices",
+  "inputs": {},
+  "outputs": {
+    "voices_out": {
+      "path": "${RECORD_STORE}/voices.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/voices.txt"
+  }
+}

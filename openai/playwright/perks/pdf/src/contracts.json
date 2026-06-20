@@ -1,0 +1,19 @@
+{
+  "tool": "pw_pdf",
+  "inputs": {
+    "PW_SESSION": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "pw_pdf_out": {
+      "path": "${RECORD_STORE}/pdf.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pdf.json"
+  }
+}

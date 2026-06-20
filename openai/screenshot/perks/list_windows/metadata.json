@@ -1,0 +1,19 @@
+{
+  "perk": "list_windows",
+  "skill": "screenshot",
+  "description": "list matching on-screen window ids before capturing (read-only, macOS)",
+  "rules": [
+    "read-only — writes one text report (windows.txt) under record_store",
+    "each row is: id<TAB>owner<TAB>name<TAB>WxH+X+Y",
+    "SHOT_APP filters by app name (substring); empty lists all matching windows",
+    "macOS-only live; off macOS or offline the core runs in CODEX_SCREENSHOT_TEST_MODE and emits a fixture listing"
+  ],
+  "usage": "Optionally set SHOT_APP (app-name substring). Output: windows.txt.",
+  "limitation": "Live window enumeration is macOS-only and needs swift + Screen Recording permission. With those absent it degrades to a deterministic fixture listing.",
+  "minimal_example": {
+    "perk": "list_windows",
+    "vars": {
+      "SHOT_APP": ""
+    }
+  }
+}

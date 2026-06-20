@@ -1,0 +1,20 @@
+{
+  "perk": "inspect",
+  "skill": "gh-fix-ci",
+  "description": "Inspect failing GitHub PR checks, fetch GitHub Actions logs for actionable failures, and extract a failure snippet to a JSON report (read-only).",
+  "rules": [
+    "read-only: only reads PR/check/run state and logs; never pushes or mutates the repo",
+    "GitHub Actions only: a check whose detailsUrl is not a GH Actions run is labelled external and only its URL is reported",
+    "requires gh authenticated for the repo host (gh auth status) and a live GitHub PR",
+    "report (checks.json) is written under record_store"
+  ],
+  "usage": "Set REPO_DIR (path inside the target git repo, e.g. '.'). Optionally set PR (number or URL; defaults to the current branch PR), MAX_LINES, CONTEXT. Output: checks.json.",
+  "limitation": "Not hermetic: needs the gh CLI authenticated against a live GitHub repo + the GitHub Actions API. When gh is absent or the repo/PR is unreachable, the porter degrades to an empty report and still exits 0. External (non-GH-Actions) providers like Buildkite are out of scope.",
+  "minimal_example": {
+    "perk": "inspect",
+    "vars": {
+      "REPO_DIR": ".",
+      "PR": "123"
+    }
+  }
+}

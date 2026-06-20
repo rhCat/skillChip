@@ -1,0 +1,10 @@
+{
+  "_perk": "screenshot",
+  "requires": ["bash"],
+  "vars": { "PW_SESSION": "demo" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["screenshot.json"],
+    "nonempty": ["screenshot.json"]
+  }
+}

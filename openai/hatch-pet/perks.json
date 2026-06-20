@@ -1,0 +1,69 @@
+{
+  "skill": "hatch-pet",
+  "perks": [
+    {
+      "id": "prepare-run",
+      "summary": "init a Codex pet run folder: prompts, layout guides, chroma key, and imagegen job manifest",
+      "destructive": false,
+      "tools": [
+        "prepare_run"
+      ]
+    },
+    {
+      "id": "extract-frames",
+      "summary": "chroma-key + slice generated row strips into 192x208 sprite frames + frames-manifest",
+      "destructive": false,
+      "tools": [
+        "extract_frames"
+      ]
+    },
+    {
+      "id": "inspect-frames",
+      "summary": "inspect extracted pet frames for geometry/alpha/chroma issues (read-only QA report)",
+      "destructive": false,
+      "tools": [
+        "inspect_frames"
+      ]
+    },
+    {
+      "id": "validate-atlas",
+      "summary": "validate a composed 8x9 pet atlas (size, alpha, used/unused cells) (read-only QA report)",
+      "destructive": false,
+      "tools": [
+        "validate_atlas"
+      ]
+    },
+    {
+      "id": "compose-atlas",
+      "summary": "compose/normalize a Codex pet atlas PNG (+WebP) from frames or a source atlas",
+      "destructive": false,
+      "tools": [
+        "compose_atlas"
+      ]
+    },
+    {
+      "id": "contact-sheet",
+      "summary": "render a labeled QA contact sheet PNG from a pet atlas",
+      "destructive": false,
+      "tools": [
+        "contact_sheet"
+      ]
+    },
+    {
+      "id": "render-previews",
+      "summary": "render per-state animated GIF QA previews from extracted frames",
+      "destructive": false,
+      "tools": [
+        "render_previews"
+      ]
+    },
+    {
+      "id": "derive-running-left",
+      "summary": "mirror an approved running-right strip into running-left and update the run job manifest",
+      "destructive": false,
+      "tools": [
+        "derive_running_left"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "_perk": "screenshot",
+  "sequence": [
+    "pw_screenshot"
+  ],
+  "tools": {
+    "pw_screenshot": {
+      "binary": "bash",
+      "params": {
+        "PW_REF": "${PW_REF}"
+      }
+    }
+  },
+  "env": {
+    "PW_REF": "${PW_REF}",
+    "PW_SESSION": "${PW_SESSION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "detect_framework",
+  "inputs": {
+    "PROJECT_PATH": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "framework_out": {
+      "path": "${RECORD_STORE}/framework.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/framework.json"
+  }
+}

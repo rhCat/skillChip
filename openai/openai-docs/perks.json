@@ -1,0 +1,21 @@
+{
+  "skill": "openai-docs",
+  "perks": [
+    {
+      "id": "resolve-latest-model",
+      "summary": "extract latestModelInfo (model id + migration/prompting guide URLs) from a latest-model docs source into normalized JSON (read-only)",
+      "destructive": false,
+      "tools": [
+        "resolve_latest_model"
+      ]
+    },
+    {
+      "id": "fetch-codex-manual",
+      "summary": "fetch + sha256-verify + temp-cache the Codex manual and emit its heading outline (read-only fetch)",
+      "destructive": false,
+      "tools": [
+        "fetch_codex_manual"
+      ]
+    }
+  ]
+}

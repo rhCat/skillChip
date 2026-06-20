@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for hatch-pet — set perk, fill record_store + the vars the perk declares.",
+  "skill": "hatch-pet",
+  "perk": "prepare-run",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PET_NAME": "<user-facing pet name, e.g. Sprout>"
+  }
+}

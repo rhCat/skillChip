@@ -1,0 +1,11 @@
+{
+  "_perk": "validate",
+  "requires": ["python3"],
+  "vars": { "AUDIO": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["payload.json"],
+    "nonempty": ["payload.json"],
+    "contains": { "payload.json": "gpt-4o-mini-transcribe" }
+  }
+}

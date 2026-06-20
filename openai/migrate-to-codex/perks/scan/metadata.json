@@ -1,0 +1,19 @@
+{
+  "perk": "scan",
+  "skill": "migrate-to-codex",
+  "description": "Inventory active and inactive Claude source surfaces before any migration (--scan-only, read-only).",
+  "rules": [
+    "read-only",
+    "never uses --target (inventory only)",
+    "lists instruction files, skills, command sources, and subagents found under SOURCE",
+    "inventory output written to record_store"
+  ],
+  "usage": "Set SOURCE (a Claude source root, optionally containing global/ + project/ subdirs). Output: scan.txt.",
+  "limitation": "Read-only inventory; writes nothing to the Codex target. The vendored CLI imports tomllib and needs Python 3.11+ to run; on older Python it degrades to an empty inventory.",
+  "minimal_example": {
+    "perk": "scan",
+    "vars": {
+      "SOURCE": "~/.claude/"
+    }
+  }
+}

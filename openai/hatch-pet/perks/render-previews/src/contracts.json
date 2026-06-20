@@ -1,0 +1,19 @@
+{
+  "tool": "render_previews",
+  "inputs": {
+    "FRAMES_ROOT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "previews_manifest_out": {
+      "path": "${RECORD_STORE}/previews-manifest.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/previews-manifest.json"
+  }
+}

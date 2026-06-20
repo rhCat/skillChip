@@ -1,0 +1,23 @@
+{
+  "_perk": "contact-sheet",
+  "sequence": [
+    "contact_sheet"
+  ],
+  "tools": {
+    "contact_sheet": {
+      "binary": "python3",
+      "params": {
+        "ATLAS": "${ATLAS}",
+        "SCALE": "${SCALE}"
+      }
+    }
+  },
+  "env": {
+    "ATLAS": "${ATLAS}",
+    "SCALE": "${SCALE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

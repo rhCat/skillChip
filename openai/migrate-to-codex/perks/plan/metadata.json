@@ -1,0 +1,20 @@
+{
+  "perk": "plan",
+  "skill": "migrate-to-codex",
+  "description": "Print the staged Codex migration plan: deploy mode, staged artifact paths, manual-review items, and collisions (--plan, read-only).",
+  "rules": [
+    "read-only",
+    "stages artifacts and prints the plan; never writes target files",
+    "reports planned AGENTS.md / config.toml / skills / subagents and any collisions or orphans",
+    "plan output written to record_store"
+  ],
+  "usage": "Set SOURCE (Claude source root) and TARGET (Codex root). Output: plan.txt.",
+  "limitation": "Dry plan only: no Codex files are written. The vendored CLI imports tomllib and needs Python 3.11+ to run; on older Python it degrades to an empty plan.",
+  "minimal_example": {
+    "perk": "plan",
+    "vars": {
+      "SOURCE": "~/.claude/",
+      "TARGET": "~/.codex/"
+    }
+  }
+}

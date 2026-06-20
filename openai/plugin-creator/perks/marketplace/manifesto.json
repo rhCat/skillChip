@@ -1,0 +1,25 @@
+{
+  "_perk": "marketplace",
+  "sequence": [
+    "register_marketplace"
+  ],
+  "tools": {
+    "register_marketplace": {
+      "binary": "python3",
+      "params": {
+        "PLUGIN_NAME": "${PLUGIN_NAME}",
+        "PLUGIN_PARENT": "${PLUGIN_PARENT}",
+        "MARKETPLACE_PATH": "${MARKETPLACE_PATH}"
+      }
+    }
+  },
+  "env": {
+    "PLUGIN_NAME": "${PLUGIN_NAME}",
+    "PLUGIN_PARENT": "${PLUGIN_PARENT}",
+    "MARKETPLACE_PATH": "${MARKETPLACE_PATH}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

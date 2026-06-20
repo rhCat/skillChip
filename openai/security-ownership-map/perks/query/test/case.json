@@ -1,0 +1,16 @@
+{
+  "_perk": "query",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_DIR": "${FIXTURE}",
+    "QUERY_ARGS": "files --tag auth --bus-factor-max 1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["query.json"],
+    "nonempty": ["query.json"],
+    "contains": {
+      "query.json": "auth/login.py"
+    }
+  }
+}

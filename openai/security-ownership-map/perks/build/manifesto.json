@@ -1,0 +1,21 @@
+{
+  "_perk": "build",
+  "sequence": [
+    "build_map"
+  ],
+  "tools": {
+    "build_map": {
+      "binary": "python3",
+      "params": {
+        "REPO": "${REPO}"
+      }
+    }
+  },
+  "env": {
+    "REPO": "${REPO}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

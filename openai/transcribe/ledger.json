@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for transcribe — set perk, fill record_store + the vars the perk declares.",
+  "skill": "transcribe",
+  "perk": "validate",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "AUDIO": "<audio file path>"
+  }
+}

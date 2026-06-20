@@ -1,0 +1,19 @@
+{
+  "perk": "build",
+  "skill": "security-ownership-map",
+  "description": "Build a security ownership map from git history (people/files/edges CSV + summary.json + co-change graph; read-only).",
+  "rules": [
+    "read-only — only reads `git log` from REPO; never mutates the repo",
+    "output directory is record_store; --out is pointed there",
+    "co-change graph on by default; ignores supernode commits (>50 files) and glue files (lockfiles/.github/editor config)",
+    "community detection + GraphML need networkx; the porter passes --no-communities when networkx is absent so summary.json is still produced"
+  ],
+  "usage": "Set REPO (the git repo dir to analyze). Output: summary.json (plus people.csv/files.csv/edges.csv/cochange_edges.csv, and communities.json/cochange.graph.json when networkx is present) under record_store.",
+  "limitation": "Read-only: analyzes git history only. Communities and GraphML require networkx; without it those artifacts are skipped. Large repos may need --since/--until narrowing.",
+  "minimal_example": {
+    "perk": "build",
+    "vars": {
+      "REPO": "."
+    }
+  }
+}

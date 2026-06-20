@@ -1,0 +1,16 @@
+{
+  "_perk": "generate",
+  "requires": ["python3"],
+  "vars": {
+    "PROMPT": "a red ceramic cube on a white seamless background, studio lighting",
+    "MODEL": "gpt-image-1.5",
+    "SIZE": "1024x1024",
+    "QUALITY": "auto",
+    "N": "1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["generate.json"],
+    "nonempty": ["generate.json"]
+  }
+}

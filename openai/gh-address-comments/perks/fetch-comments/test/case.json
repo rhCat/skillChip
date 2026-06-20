@@ -1,0 +1,10 @@
+{
+  "_perk": "fetch-comments",
+  "requires": ["python3"],
+  "vars": { "REPO_DIR": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["pr_comments.json"],
+    "nonempty": ["pr_comments.json"]
+  }
+}

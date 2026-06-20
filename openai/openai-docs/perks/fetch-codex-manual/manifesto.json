@@ -1,0 +1,23 @@
+{
+  "_perk": "fetch-codex-manual",
+  "sequence": [
+    "fetch_codex_manual"
+  ],
+  "tools": {
+    "fetch_codex_manual": {
+      "binary": "bash",
+      "params": {
+        "MANUAL_URL": "${MANUAL_URL}",
+        "CACHE_DIR": "${CACHE_DIR}"
+      }
+    }
+  },
+  "env": {
+    "MANUAL_URL": "${MANUAL_URL}",
+    "CACHE_DIR": "${CACHE_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

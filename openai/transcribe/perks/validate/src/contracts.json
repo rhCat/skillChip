@@ -1,0 +1,35 @@
+{
+  "tool": "transcribe_validate",
+  "inputs": {
+    "AUDIO": {
+      "type": "string",
+      "required": true
+    },
+    "MODEL": {
+      "type": "string",
+      "required": false
+    },
+    "RESPONSE_FORMAT": {
+      "type": "string",
+      "required": false
+    },
+    "LANGUAGE": {
+      "type": "string",
+      "required": false
+    },
+    "KNOWN_SPEAKER": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "transcribe_validate_out": {
+      "path": "${RECORD_STORE}/payload.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/payload.json"
+  }
+}

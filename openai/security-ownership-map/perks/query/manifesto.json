@@ -1,0 +1,23 @@
+{
+  "_perk": "query",
+  "sequence": [
+    "query_map"
+  ],
+  "tools": {
+    "query_map": {
+      "binary": "python3",
+      "params": {
+        "DATA_DIR": "${DATA_DIR}",
+        "QUERY_ARGS": "${QUERY_ARGS}"
+      }
+    }
+  },
+  "env": {
+    "DATA_DIR": "${DATA_DIR}",
+    "QUERY_ARGS": "${QUERY_ARGS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "perk": "gen_openai_yaml",
+  "skill": "skill-creator",
+  "description": "(re)generate agents/openai.yaml UI metadata for an existing skill dir",
+  "rules": [
+    "local-only: writes <SKILL_DIR>/agents/openai.yaml, no remote or live service",
+    "display_name + short_description derived deterministically from the SKILL.md frontmatter name unless overridden",
+    "short_description must be 25-64 chars or the core errors (porter still records the log)",
+    "stdout log written to record_store"
+  ],
+  "usage": "Set SKILL_DIR (existing skill folder with a SKILL.md). Optional NAME override, optional INTERFACE (one key=value). Output: openai_yaml.out (and <SKILL_DIR>/agents/openai.yaml).",
+  "limitation": "Requires a SKILL.md with valid frontmatter in SKILL_DIR; requires python3 + PyYAML.",
+  "minimal_example": {
+    "perk": "gen_openai_yaml",
+    "vars": {
+      "SKILL_DIR": "/tmp/skills/my-skill"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "perk": "open",
+  "skill": "playwright",
+  "description": "navigate a browser session to a URL (load a page; first step of any flow)",
+  "rules": [
+    "read-only — loads a page, does not mutate any remote service",
+    "runs `playwright-cli open <PW_URL>` via the bundled npx wrapper",
+    "degrades gracefully: records when npx/playwright-cli/browser are unreachable",
+    "result log written to record_store"
+  ],
+  "usage": "Set PW_URL (the page to load). Optional PW_SESSION isolates the browser session. Output: open.json.",
+  "limitation": "Needs npx + @playwright/cli + a launchable browser to truly navigate; offline it records the unreachable state and still emits valid output.",
+  "minimal_example": {
+    "perk": "open",
+    "vars": {
+      "PW_URL": "https://playwright.dev"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_perk": "render-previews",
+  "sequence": [
+    "render_previews"
+  ],
+  "tools": {
+    "render_previews": {
+      "binary": "python3",
+      "params": {
+        "FRAMES_ROOT": "${FRAMES_ROOT}"
+      }
+    }
+  },
+  "env": {
+    "FRAMES_ROOT": "${FRAMES_ROOT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

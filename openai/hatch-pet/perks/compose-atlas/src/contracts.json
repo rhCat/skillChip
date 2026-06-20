@@ -1,0 +1,23 @@
+{
+  "tool": "compose_atlas",
+  "inputs": {
+    "SOURCE_ATLAS": {
+      "type": "string",
+      "required": false
+    },
+    "FRAMES_ROOT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "atlas_out": {
+      "path": "${RECORD_STORE}/atlas.png",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/atlas.png"
+  }
+}

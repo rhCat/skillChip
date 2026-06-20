@@ -1,0 +1,19 @@
+{
+  "tool": "fetch_comments",
+  "inputs": {
+    "REPO_DIR": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "fetch_comments_out": {
+      "path": "${RECORD_STORE}/pr_comments.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pr_comments.json"
+  }
+}

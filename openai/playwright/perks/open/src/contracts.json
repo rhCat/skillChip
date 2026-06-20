@@ -1,0 +1,23 @@
+{
+  "tool": "pw_open",
+  "inputs": {
+    "PW_URL": {
+      "type": "string",
+      "required": true
+    },
+    "PW_SESSION": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "pw_open_out": {
+      "path": "${RECORD_STORE}/open.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/open.json"
+  }
+}

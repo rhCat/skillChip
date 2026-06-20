@@ -1,0 +1,21 @@
+{
+  "_perk": "trace",
+  "sequence": [
+    "pw_trace"
+  ],
+  "tools": {
+    "pw_trace": {
+      "binary": "bash",
+      "params": {
+        "PW_SESSION": "${PW_SESSION}"
+      }
+    }
+  },
+  "env": {
+    "PW_SESSION": "${PW_SESSION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

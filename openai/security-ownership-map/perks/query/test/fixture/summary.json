@@ -1,0 +1,28 @@
+{
+  "generated_at": "2024-06-01T00:00:00+00:00",
+  "repo": "/fixture/repo",
+  "orphaned_sensitive_code": [],
+  "hidden_owners": [
+    {
+      "person": "alice@corp",
+      "name": "Alice",
+      "controls": "67% of auth code",
+      "category": "auth",
+      "share": 0.67
+    }
+  ],
+  "bus_factor_hotspots": [
+    {
+      "path": "auth/login.py",
+      "bus_factor": 1,
+      "last_touch": "2024-06-01T00:00:00+00:00",
+      "sensitivity_tags": ["auth"],
+      "top_owner": "alice@corp"
+    }
+  ],
+  "stats": {
+    "commits": 15,
+    "people": 2,
+    "files": 3
+  }
+}

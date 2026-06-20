@@ -1,0 +1,13 @@
+{
+  "_perk": "scaffold",
+  "requires": ["python3"],
+  "vars": {
+    "KIND": "experiment",
+    "TITLE": "Compare prompt variants"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["notebook.ipynb"],
+    "nonempty": ["notebook.ipynb"]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_perk": "render-previews",
+  "requires": ["python3"],
+  "vars": { "FRAMES_ROOT": "${FIXTURE}/frames" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["previews-manifest.json", "previews/idle.gif"],
+    "nonempty": ["previews-manifest.json", "previews/idle.gif"],
+    "json": { "previews-manifest.json": { "ok": true } }
+  }
+}

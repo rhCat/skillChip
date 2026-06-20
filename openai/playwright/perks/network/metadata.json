@@ -1,0 +1,19 @@
+{
+  "perk": "network",
+  "skill": "playwright",
+  "description": "dump the page's network activity (read-only)",
+  "rules": [
+    "read-only — reads captured network requests, mutates nothing",
+    "runs `playwright-cli network` via the bundled npx wrapper",
+    "degrades gracefully: records when a live browser is not requested/available",
+    "network dump written to record_store"
+  ],
+  "usage": "Optional PW_SESSION isolates the session. Output: network.json.",
+  "limitation": "Needs npx + @playwright/cli + an already-open page to read real network activity; offline it records the unreachable state and still emits valid output.",
+  "minimal_example": {
+    "perk": "network",
+    "vars": {
+      "PW_SESSION": "demo"
+    }
+  }
+}

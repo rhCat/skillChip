@@ -1,0 +1,19 @@
+{
+  "perk": "deploy",
+  "skill": "vercel-deploy",
+  "description": "Package a project (framework detect + tar) and deploy it to Vercel via the claimable deploy endpoint.",
+  "rules": [
+    "destructive: pushes a tarball to a live Vercel endpoint (codex-deploy-skills.vercel.sh)",
+    "requires outbound network",
+    "stages files (excludes node_modules/.git/.env), tars, POSTs, polls the preview URL",
+    "returns JSON with previewUrl + claimUrl in deploy.json"
+  ],
+  "usage": "Set PROJECT_PATH (a project dir or an existing .tgz tarball). Output: deploy.json (previewUrl, claimUrl, deploymentId, projectId).",
+  "limitation": "Deploys as a preview via the claimable endpoint (no account). Needs network; cannot run hermetically. Build polling caps at ~5 minutes.",
+  "minimal_example": {
+    "perk": "deploy",
+    "vars": {
+      "PROJECT_PATH": "."
+    }
+  }
+}

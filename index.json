@@ -2,7 +2,7 @@
   "chip": "skillChip",
   "version": 1,
   "cartridge": false,
-  "count": 203,
+  "count": 219,
   "skills": [
     {
       "skill": "aiq-research",
@@ -275,6 +275,16 @@
       "file_count": 27
     },
     {
+      "skill": "gh-address-comments",
+      "skill_sha": "41aca3125b30ea957a52fbd18129648f27512e830964ffac819e816b5bf72440",
+      "file_count": 14
+    },
+    {
+      "skill": "gh-fix-ci",
+      "skill_sha": "92c7188d5e61108a7a18bc804173892a133a1dc62914a70c6ea21c7b14102b1c",
+      "file_count": 14
+    },
+    {
       "skill": "git_ops",
       "skill_sha": "e19544acc43c1ff1713acd63ed94dc082b2b41c1a89bc90987b0ed30743c0dc5",
       "file_count": 16
@@ -283,6 +293,11 @@
       "skill": "harden-pyenv",
       "skill_sha": "c3122aebdb13be09e1dfd2c684a5331fb03d4aa2787761cb9a65ed060566a7e0",
       "file_count": 15
+    },
+    {
+      "skill": "hatch-pet",
+      "skill_sha": "3c82f5310dd1b4c6e0593a03adf899ac8a58b5afe816033730bbdeb7e2f6abe6",
+      "file_count": 204
     },
     {
       "skill": "holoscan-setup",
@@ -315,6 +330,11 @@
       "file_count": 15
     },
     {
+      "skill": "imagegen",
+      "skill_sha": "09c13f19b6fc00f303119d1c796447d112edc67615f90005b78da23eb75ae61d",
+      "file_count": 27
+    },
+    {
       "skill": "infographics",
       "skill_sha": "fd2400c30dbed7124a840a022f4a7c3e173538203a247cab671ff0d880ad17a7",
       "file_count": 21
@@ -328,6 +348,11 @@
       "skill": "jsonschema",
       "skill_sha": "4665e37c53444ed6008359be553d5fa56da74217aab4dc26b13b3c1403d161a3",
       "file_count": 21
+    },
+    {
+      "skill": "jupyter-notebook",
+      "skill_sha": "74479be0f54741076e8a846413581c9eedeb3d07238d6baeb6353ec3fc3c1d01",
+      "file_count": 15
     },
     {
       "skill": "labarchive-integration",
@@ -373,6 +398,11 @@
       "skill": "medchem",
       "skill_sha": "41bf39da899b0e49b6a95d8a2cb1d7f18879a741778180799f220e985cbcc71b",
       "file_count": 63
+    },
+    {
+      "skill": "migrate-to-codex",
+      "skill_sha": "bc6e8c38f8346a427b89ca62d24cd59b0532a4198c4a8588f275f2407da99968",
+      "file_count": 118
     },
     {
       "skill": "nemo-data-designer-plugin",
@@ -745,6 +775,11 @@
       "file_count": 63
     },
     {
+      "skill": "openai-docs",
+      "skill_sha": "e7ebceabafd71465295579e0a061161e53abcff7d18103ec3727cb5c6c44d0c7",
+      "file_count": 21
+    },
+    {
       "skill": "opentrons-integration",
       "skill_sha": "e9c2c924754bf6e57b104ef89cd278264387e64dd1ce4621caa9849c38b00931",
       "file_count": 35
@@ -788,6 +823,16 @@
       "skill": "physical-ai-video-data-augmentation",
       "skill_sha": "0a08fad1b8b9a98196cb845b38b4a35ff4dc7ba6001d9419a2ac0e982d7a6116",
       "file_count": 48
+    },
+    {
+      "skill": "playwright",
+      "skill_sha": "1c13acd0260e728990e777814ae8ac69b34652e00394dacece00d1a3666cc32b",
+      "file_count": 55
+    },
+    {
+      "skill": "plugin-creator",
+      "skill_sha": "3adf32d0283e08e15c75d89cf415087e07fc947fa5a5064e6a0b4d02af32d46a",
+      "file_count": 19
     },
     {
       "skill": "pptx",
@@ -910,6 +955,11 @@
       "file_count": 39
     },
     {
+      "skill": "screenshot",
+      "skill_sha": "0869de7cd1beb8a7adbab6d6712719d02199243f567714c619c1e6cf52d5564d",
+      "file_count": 34
+    },
+    {
       "skill": "scvelo",
       "skill_sha": "f2acade2c6bbe3404c2be95087382ac2fe76b7eb07e5ff27e1faba57cc11273e",
       "file_count": 72
@@ -925,6 +975,11 @@
       "file_count": 18
     },
     {
+      "skill": "security-ownership-map",
+      "skill_sha": "d376585fd4c3fc922f7b82c3a29e54a8895f9f19e03ded3836b5483091ff20de",
+      "file_count": 34
+    },
+    {
       "skill": "simpy",
       "skill_sha": "832c772f41015940b53191864e51d725578122a43475bc57c64d6f726dabcd80",
       "file_count": 19
@@ -933,6 +988,21 @@
       "skill": "skill-card-generator",
       "skill_sha": "6d2be38e5773e13c1cde3c59e5b0bb0b6d0ee33f0a2dc81a39f60d8ece7a69d9",
       "file_count": 50
+    },
+    {
+      "skill": "skill-creator",
+      "skill_sha": "fea11b43271a0cb7d3438f9a6545e307cba6445a351b7ea6c7a40b1cf3853e2d",
+      "file_count": 29
+    },
+    {
+      "skill": "skill-installer",
+      "skill_sha": "d8a8487a9f10e4d9daeaaebf63354efef56a8f0dfa3df5638383ddb444931897",
+      "file_count": 21
+    },
+    {
+      "skill": "speech",
+      "skill_sha": "c5ba22becfe1cc2c9b63c8877df905f23dff23025a3e725d27fd73843721fee4",
+      "file_count": 26
     },
     {
       "skill": "sqlite",
@@ -990,6 +1060,11 @@
       "file_count": 38
     },
     {
+      "skill": "transcribe",
+      "skill_sha": "5bade365d74c02a5a8e1699dced3d97e3b0f40cf98d9a732ab18a5c41789b6bb",
+      "file_count": 21
+    },
+    {
       "skill": "treatment-plans",
       "skill_sha": "2a062781cdd991dce7b9726b090a55427c4cd5b30d4d2f920ec843d40bb62969",
       "file_count": 49
@@ -998,6 +1073,11 @@
       "skill": "venue-templates",
       "skill_sha": "7e4a4a9cdeb47bf3c7d3f1de636f7dfa798c79c59fbd007be4fcdca954f99b5d",
       "file_count": 45
+    },
+    {
+      "skill": "vercel-deploy",
+      "skill_sha": "d5d032ee34dca6a3a58a8b0e1b3e196b6a0186494f6d3d77a8674818003af29b",
+      "file_count": 21
     },
     {
       "skill": "vss-deploy-detection-tracking-2d",
@@ -1020,5 +1100,5 @@
       "file_count": 39
     }
   ],
-  "chip_sha": "cd8701cd2cd7e0788f4f837640dfecb005e983e75ad750e1322516b22b806bab"
+  "chip_sha": "a9d490dcb8a072ef2f77c875c3965e39abfd545f50e2f3874a959a05edc58d98"
 }

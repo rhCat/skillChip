@@ -1,0 +1,10 @@
+{
+  "_perk": "check_permissions",
+  "requires": ["bash"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["permissions.json"],
+    "nonempty": ["permissions.json"]
+  }
+}

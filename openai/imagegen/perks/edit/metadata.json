@@ -1,0 +1,20 @@
+{
+  "perk": "edit",
+  "skill": "imagegen",
+  "description": "Edit an existing image (inpaint, background replacement, transparency, compositing, transform) via the GPT Image fallback CLI (image_gen.py edit).",
+  "rules": [
+    "local-output only: writes an edited image + a request preview under record_store; never pushes to a remote",
+    "porter runs the CLI in --dry-run --no-augment so it validates the request and resolves output paths offline (no OPENAI_API_KEY, no network)",
+    "IMAGE (the input image to edit) is required; MASK (a PNG with alpha) is optional and scopes the edit region",
+    "a real (non-dry-run) edit requires OPENAI_API_KEY and the openai SDK; the porter degrades gracefully when they are absent"
+  ],
+  "usage": "Set PROMPT and IMAGE (input path), both required. Optional: MASK, MODEL, SIZE, INPUT_FIDELITY. Output: edit.json (request preview / audit).",
+  "limitation": "The vendored porter only previews the request (--dry-run). Producing real pixels needs OPENAI_API_KEY + the openai SDK and is not performed by this governed porter.",
+  "minimal_example": {
+    "perk": "edit",
+    "vars": {
+      "PROMPT": "replace the background with a sunny beach",
+      "IMAGE": "./photo.png"
+    }
+  }
+}

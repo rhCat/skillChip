@@ -1,0 +1,27 @@
+{
+  "tool": "register_marketplace",
+  "inputs": {
+    "PLUGIN_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "PLUGIN_PARENT": {
+      "type": "string",
+      "required": false
+    },
+    "MARKETPLACE_PATH": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "marketplace_out": {
+      "path": "${RECORD_STORE}/marketplace.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/marketplace.json"
+  }
+}

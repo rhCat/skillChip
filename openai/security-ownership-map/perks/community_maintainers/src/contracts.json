@@ -1,0 +1,23 @@
+{
+  "tool": "community_maintainers",
+  "inputs": {
+    "DATA_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "CM_ARGS": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "community_maintainers_out": {
+      "path": "${RECORD_STORE}/community_maintainers.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/community_maintainers.csv"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "_perk": "derive-running-left",
+  "requires": ["python3"],
+  "vars": {
+    "RUN_DIR": "${FIXTURE}/run",
+    "DECISION_NOTE": "Symmetric mascot; mirroring preserves identity and props."
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["derive-result.json"],
+    "nonempty": ["derive-result.json"],
+    "json": { "derive-result.json": { "ok": true, "derived_from": "running-right" } }
+  }
+}

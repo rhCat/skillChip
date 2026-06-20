@@ -1,0 +1,23 @@
+{
+  "_perk": "compose-atlas",
+  "sequence": [
+    "compose_atlas"
+  ],
+  "tools": {
+    "compose_atlas": {
+      "binary": "python3",
+      "params": {
+        "SOURCE_ATLAS": "${SOURCE_ATLAS}",
+        "FRAMES_ROOT": "${FRAMES_ROOT}"
+      }
+    }
+  },
+  "env": {
+    "SOURCE_ATLAS": "${SOURCE_ATLAS}",
+    "FRAMES_ROOT": "${FRAMES_ROOT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

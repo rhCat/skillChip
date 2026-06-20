@@ -1,0 +1,29 @@
+{
+  "skill": "security-ownership-map",
+  "perks": [
+    {
+      "id": "build",
+      "summary": "build the security ownership map from git history (people/files/edges CSV + summary.json + co-change graph; read-only)",
+      "destructive": false,
+      "tools": [
+        "build_map"
+      ]
+    },
+    {
+      "id": "query",
+      "summary": "return bounded JSON slices over a built ownership-map dir (people/files/person/file/cochange/tag/summary/communities; read-only)",
+      "destructive": false,
+      "tools": [
+        "query_map"
+      ]
+    },
+    {
+      "id": "community_maintainers",
+      "summary": "report monthly/quarterly maintainers for a file's co-change community over time (read-only)",
+      "destructive": false,
+      "tools": [
+        "community_maintainers"
+      ]
+    }
+  ]
+}

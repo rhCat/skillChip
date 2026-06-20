@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for plugin-creator — set perk, fill record_store + the vars the perk declares.",
+  "skill": "plugin-creator",
+  "perk": "scaffold",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PLUGIN_NAME": "<plugin name; normalized to lower hyphen-case>",
+    "PLUGIN_PARENT": "<parent dir the <plugin-name> folder is created under>"
+  }
+}

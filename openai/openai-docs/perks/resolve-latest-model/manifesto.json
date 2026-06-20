@@ -1,0 +1,23 @@
+{
+  "_perk": "resolve-latest-model",
+  "sequence": [
+    "resolve_latest_model"
+  ],
+  "tools": {
+    "resolve_latest_model": {
+      "binary": "bash",
+      "params": {
+        "LATEST_MODEL_SOURCE": "${LATEST_MODEL_SOURCE}",
+        "LATEST_MODEL_BASE_URL": "${LATEST_MODEL_BASE_URL}"
+      }
+    }
+  },
+  "env": {
+    "LATEST_MODEL_SOURCE": "${LATEST_MODEL_SOURCE}",
+    "LATEST_MODEL_BASE_URL": "${LATEST_MODEL_BASE_URL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

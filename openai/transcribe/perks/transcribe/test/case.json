@@ -1,0 +1,10 @@
+{
+  "_perk": "transcribe",
+  "requires": ["python3"],
+  "vars": { "AUDIO": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["transcript.txt"],
+    "nonempty": ["transcript.txt"]
+  }
+}

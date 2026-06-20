@@ -1,0 +1,25 @@
+{
+  "_perk": "list",
+  "sequence": [
+    "list_skills"
+  ],
+  "tools": {
+    "list_skills": {
+      "binary": "python3",
+      "params": {
+        "REPO": "${REPO}",
+        "SKILL_PATH": "${SKILL_PATH}",
+        "REF": "${REF}"
+      }
+    }
+  },
+  "env": {
+    "REPO": "${REPO}",
+    "SKILL_PATH": "${SKILL_PATH}",
+    "REF": "${REF}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

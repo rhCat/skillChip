@@ -1,0 +1,18 @@
+{
+  "perk": "validate-atlas",
+  "skill": "hatch-pet",
+  "description": "Validate a composed Codex pet 8x9 spritesheet atlas: dimensions, format, alpha channel, used/unused cell occupancy, and transparent-RGB residue (read-only).",
+  "rules": [
+    "read-only — never writes the atlas, only a JSON report",
+    "expects a 1536x1872 PNG or WebP atlas (8 columns x 9 rows of 192x208 cells)",
+    "report written to record_store as atlas-validation.json"
+  ],
+  "usage": "Set ATLAS (path to the atlas PNG/WebP). Output: atlas-validation.json (ok, errors, warnings, per-cell occupancy).",
+  "limitation": "Read-only QA only. Does not repair or recompose the atlas. Requires Pillow (PIL); without it the porter writes a placeholder report.",
+  "minimal_example": {
+    "perk": "validate-atlas",
+    "vars": {
+      "ATLAS": "./pet-atlas.png"
+    }
+  }
+}

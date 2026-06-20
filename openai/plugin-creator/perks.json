@@ -1,0 +1,21 @@
+{
+  "skill": "plugin-creator",
+  "perks": [
+    {
+      "id": "scaffold",
+      "summary": "scaffold a Codex plugin dir + .codex-plugin/plugin.json (+ optional folders/stubs), local-only",
+      "destructive": false,
+      "tools": [
+        "scaffold_plugin"
+      ]
+    },
+    {
+      "id": "marketplace",
+      "summary": "create/update the repo-root .agents/plugins/marketplace.json entry for a plugin (destructive)",
+      "destructive": true,
+      "tools": [
+        "register_marketplace"
+      ]
+    }
+  ]
+}

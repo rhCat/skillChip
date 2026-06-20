@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for security-ownership-map — set perk, fill record_store + the vars the perk declares.",
+  "skill": "security-ownership-map",
+  "perk": "build",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "REPO": "<git repo dir to analyze>"
+  }
+}

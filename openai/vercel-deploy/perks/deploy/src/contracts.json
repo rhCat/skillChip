@@ -1,0 +1,19 @@
+{
+  "tool": "vercel_deploy",
+  "inputs": {
+    "PROJECT_PATH": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "deploy_out": {
+      "path": "${RECORD_STORE}/deploy.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/deploy.json"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {
+    "community_maintainers": [
+      {
+        "id": 1,
+        "size": 2,
+        "maintainers": [],
+        "bus_factor": 2,
+        "owner_count": 2,
+        "totals": {"touches": 4, "recency_weight": 0.0, "sensitive_weight": 4.0}
+      }
+    ]
+  },
+  "nodes": [
+    {"id": "auth/login.py", "community_id": 1},
+    {"id": "auth/session.py", "community_id": 1},
+    {"id": "docs/readme.py", "community_id": 2}
+  ],
+  "edges": [
+    {"source": "auth/login.py", "target": "auth/session.py", "weight": 0.5, "count": 3}
+  ]
+}

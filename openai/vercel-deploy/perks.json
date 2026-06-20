@@ -1,0 +1,21 @@
+{
+  "skill": "vercel-deploy",
+  "perks": [
+    {
+      "id": "detect-framework",
+      "summary": "detect a project's web framework from its package.json (read-only)",
+      "destructive": false,
+      "tools": [
+        "detect_framework"
+      ]
+    },
+    {
+      "id": "deploy",
+      "summary": "package a project (framework detect + tar) and deploy it to Vercel via the claimable endpoint (destructive, network)",
+      "destructive": true,
+      "tools": [
+        "vercel_deploy"
+      ]
+    }
+  ]
+}

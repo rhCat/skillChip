@@ -1,0 +1,25 @@
+{
+  "_perk": "scaffold",
+  "sequence": [
+    "new_notebook"
+  ],
+  "tools": {
+    "new_notebook": {
+      "binary": "python3",
+      "params": {
+        "KIND": "${KIND}",
+        "TITLE": "${TITLE}",
+        "OUT": "${OUT}"
+      }
+    }
+  },
+  "env": {
+    "KIND": "${KIND}",
+    "TITLE": "${TITLE}",
+    "OUT": "${OUT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

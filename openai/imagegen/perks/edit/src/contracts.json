@@ -1,0 +1,39 @@
+{
+  "tool": "img_edit",
+  "inputs": {
+    "PROMPT": {
+      "type": "string",
+      "required": true
+    },
+    "IMAGE": {
+      "type": "string",
+      "required": true
+    },
+    "MASK": {
+      "type": "string",
+      "required": false
+    },
+    "MODEL": {
+      "type": "string",
+      "required": false
+    },
+    "SIZE": {
+      "type": "string",
+      "required": false
+    },
+    "INPUT_FIDELITY": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "img_edit_out": {
+      "path": "${RECORD_STORE}/edit.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/edit.json"
+  }
+}

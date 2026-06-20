@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for screenshot — set perk, fill record_store + the vars the perk declares.",
+  "skill": "screenshot",
+  "perk": "capture",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "SHOT_MODE": "temp",
+    "SHOT_APP": "",
+    "SHOT_REGION": ""
+  }
+}

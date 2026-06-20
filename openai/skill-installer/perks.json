@@ -1,0 +1,21 @@
+{
+  "skill": "skill-installer",
+  "perks": [
+    {
+      "id": "list",
+      "summary": "list installable skills from a GitHub repo path (read-only, JSON)",
+      "destructive": false,
+      "tools": [
+        "list_skills"
+      ]
+    },
+    {
+      "id": "install",
+      "summary": "download a skill from a GitHub repo and install it into $CODEX_HOME/skills (destructive)",
+      "destructive": true,
+      "tools": [
+        "install_skill"
+      ]
+    }
+  ]
+}

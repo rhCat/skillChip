@@ -1,0 +1,27 @@
+{
+  "tool": "gen_openai_yaml",
+  "inputs": {
+    "SKILL_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "NAME": {
+      "type": "string",
+      "required": false
+    },
+    "INTERFACE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "openai_yaml_out": {
+      "path": "${RECORD_STORE}/openai_yaml.out",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/openai_yaml.out"
+  }
+}

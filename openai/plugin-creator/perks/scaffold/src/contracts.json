@@ -1,0 +1,23 @@
+{
+  "tool": "scaffold_plugin",
+  "inputs": {
+    "PLUGIN_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "PLUGIN_PARENT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "scaffold_out": {
+      "path": "${RECORD_STORE}/scaffold.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/scaffold.json"
+  }
+}

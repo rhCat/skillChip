@@ -1,0 +1,29 @@
+{
+  "skill": "skill-creator",
+  "perks": [
+    {
+      "id": "init",
+      "summary": "scaffold a new skill dir from template (SKILL.md + agents/openai.yaml + optional resource dirs)",
+      "destructive": false,
+      "tools": [
+        "init_skill"
+      ]
+    },
+    {
+      "id": "gen_openai_yaml",
+      "summary": "(re)generate agents/openai.yaml UI metadata for an existing skill dir",
+      "destructive": false,
+      "tools": [
+        "gen_openai_yaml"
+      ]
+    },
+    {
+      "id": "validate",
+      "summary": "validate a skill's SKILL.md frontmatter (name/description/naming rules) — read-only",
+      "destructive": false,
+      "tools": [
+        "validate_skill"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "_perk": "snapshot",
+  "requires": ["bash"],
+  "vars": { "PW_SESSION": "demo" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["snapshot.json"],
+    "nonempty": ["snapshot.json"]
+  }
+}

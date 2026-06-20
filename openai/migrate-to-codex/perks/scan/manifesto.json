@@ -1,0 +1,21 @@
+{
+  "_perk": "scan",
+  "sequence": [
+    "mtc_scan"
+  ],
+  "tools": {
+    "mtc_scan": {
+      "binary": "python3",
+      "params": {
+        "SOURCE": "${SOURCE}"
+      }
+    }
+  },
+  "env": {
+    "SOURCE": "${SOURCE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "tool": "img_generate",
+  "inputs": {
+    "PROMPT": {
+      "type": "string",
+      "required": true
+    },
+    "MODEL": {
+      "type": "string",
+      "required": false
+    },
+    "SIZE": {
+      "type": "string",
+      "required": false
+    },
+    "QUALITY": {
+      "type": "string",
+      "required": false
+    },
+    "N": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "img_generate_out": {
+      "path": "${RECORD_STORE}/generate.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/generate.json"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "perk": "list",
+  "skill": "skill-installer",
+  "description": "list installable skills from a GitHub repo path (read-only, JSON)",
+  "rules": [
+    "read-only — only reads a repo's directory listing via the GitHub contents API",
+    "defaults to openai/skills skills/.curated on ref main",
+    "skills list (JSON, with installed annotation) written to record_store"
+  ],
+  "usage": "Set REPO (owner/repo), SKILL_PATH (repo subdir to list), REF (branch/tag). Output: skills.json.",
+  "limitation": "Read-only: never installs. Reaches the GitHub API; degrades to an empty list offline.",
+  "minimal_example": {
+    "perk": "list",
+    "vars": {
+      "REPO": "openai/skills",
+      "SKILL_PATH": "skills/.curated",
+      "REF": "main"
+    }
+  }
+}

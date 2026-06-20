@@ -1,0 +1,12 @@
+{
+  "_perk": "gen_openai_yaml",
+  "requires": ["python3"],
+  "vars": {
+    "SKILL_DIR": "${FIXTURE}"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["openai_yaml.out"],
+    "nonempty": ["openai_yaml.out"]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "tool": "speak",
+  "inputs": {
+    "INPUT_TEXT": {
+      "type": "string",
+      "required": true
+    },
+    "VOICE": {
+      "type": "string",
+      "required": false
+    },
+    "INSTRUCTIONS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "speak_out": {
+      "path": "${RECORD_STORE}/speak.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/speak.json"
+  }
+}

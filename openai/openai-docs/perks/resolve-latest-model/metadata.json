@@ -1,0 +1,20 @@
+{
+  "perk": "resolve-latest-model",
+  "skill": "openai-docs",
+  "description": "Extract the latestModelInfo block (model id + migration/prompting guide URLs) from a latest-model docs source into normalized JSON.",
+  "rules": [
+    "read-only — reads a docs source, never mutates a remote service",
+    "source may be a local path, a file:// URL, or an https URL (developer-docs)",
+    "absolute migration/prompting guide URLs are resolved against LATEST_MODEL_BASE_URL",
+    "output written to record_store as latest-model.json"
+  ],
+  "usage": "Set LATEST_MODEL_SOURCE (latest-model.md path / file:// URL / https URL) and optional LATEST_MODEL_BASE_URL (default https://developers.openai.com). Output: latest-model.json.",
+  "limitation": "Requires node to actually parse; degrades to an empty artifact if node is absent or the source cannot be read. https sources need live network; local/file:// sources run fully offline.",
+  "minimal_example": {
+    "perk": "resolve-latest-model",
+    "vars": {
+      "LATEST_MODEL_SOURCE": "./latest-model.md",
+      "LATEST_MODEL_BASE_URL": "https://developers.openai.com"
+    }
+  }
+}

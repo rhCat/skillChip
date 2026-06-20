@@ -1,0 +1,10 @@
+{
+  "_perk": "open",
+  "requires": ["bash"],
+  "vars": { "PW_URL": "https://example.com" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["open.json"],
+    "nonempty": ["open.json"]
+  }
+}

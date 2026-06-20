@@ -1,0 +1,20 @@
+{
+  "perk": "snapshot",
+  "skill": "playwright",
+  "description": "capture the accessibility/element-ref snapshot of the current page (read-only)",
+  "rules": [
+    "read-only — inspects the current page, mutates nothing",
+    "runs `playwright-cli snapshot` via the bundled npx wrapper",
+    "snapshot gives stable element refs (e3, e5, ...) for later interactions",
+    "degrades gracefully: records when a live browser is not requested/available",
+    "snapshot text written to record_store"
+  ],
+  "usage": "Optional PW_SESSION isolates the browser session (must match the session you opened). Output: snapshot.json.",
+  "limitation": "Needs npx + @playwright/cli + an already-open page to produce a real snapshot; offline it records the unreachable state and still emits valid output.",
+  "minimal_example": {
+    "perk": "snapshot",
+    "vars": {
+      "PW_SESSION": "demo"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "perk": "scaffold",
+  "skill": "jupyter-notebook",
+  "description": "scaffold a Jupyter notebook (experiment or tutorial) from a bundled template (local-only)",
+  "rules": [
+    "read/local-only — never pushes to a remote, installs, or mutates a live service",
+    "loads a vendored .ipynb template (experiment or tutorial), sets the first markdown title cell",
+    "writes a single notebook file under record_store",
+    "core uses only the Python standard library"
+  ],
+  "usage": "Set KIND (experiment|tutorial) and TITLE. Optionally set OUT (filename under record_store). Output: <OUT or notebook.ipynb>.",
+  "limitation": "Local-only: writes one .ipynb file; it does not execute the notebook. KIND must be 'experiment' or 'tutorial' (defaults to experiment).",
+  "minimal_example": {
+    "perk": "scaffold",
+    "vars": {
+      "KIND": "experiment",
+      "TITLE": "Compare prompt variants",
+      "OUT": "compare-prompt-variants.ipynb"
+    }
+  }
+}

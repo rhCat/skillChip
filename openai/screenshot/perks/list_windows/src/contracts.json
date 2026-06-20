@@ -1,0 +1,19 @@
+{
+  "tool": "list_windows",
+  "inputs": {
+    "SHOT_APP": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "report": {
+      "path": "${RECORD_STORE}/windows.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/windows.txt"
+  }
+}

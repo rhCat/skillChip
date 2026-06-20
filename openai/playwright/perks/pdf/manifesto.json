@@ -1,0 +1,21 @@
+{
+  "_perk": "pdf",
+  "sequence": [
+    "pw_pdf"
+  ],
+  "tools": {
+    "pw_pdf": {
+      "binary": "bash",
+      "params": {
+        "PW_SESSION": "${PW_SESSION}"
+      }
+    }
+  },
+  "env": {
+    "PW_SESSION": "${PW_SESSION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

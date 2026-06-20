@@ -1,0 +1,29 @@
+{
+  "skill": "speech",
+  "perks": [
+    {
+      "id": "list-voices",
+      "summary": "list the built-in OpenAI TTS voices (read-only, no API)",
+      "destructive": false,
+      "tools": [
+        "list_voices"
+      ]
+    },
+    {
+      "id": "speak",
+      "summary": "preview a single TTS request payload from text (dry-run; no audio rendered without OPENAI_API_KEY + network)",
+      "destructive": false,
+      "tools": [
+        "speak"
+      ]
+    },
+    {
+      "id": "speak-batch",
+      "summary": "preview a batch of TTS request payloads from a JSONL file (dry-run; no audio rendered without OPENAI_API_KEY + network)",
+      "destructive": false,
+      "tools": [
+        "speak_batch"
+      ]
+    }
+  ]
+}

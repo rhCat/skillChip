@@ -1,0 +1,16 @@
+{
+  "_perk": "community_maintainers",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_DIR": "${FIXTURE}",
+    "CM_ARGS": "--file auth/login.py --since 2025-01-01 --top 5"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["community_maintainers.csv"],
+    "nonempty": ["community_maintainers.csv"],
+    "contains": {
+      "community_maintainers.csv": "alice@corp"
+    }
+  }
+}

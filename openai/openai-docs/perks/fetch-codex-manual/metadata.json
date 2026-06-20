@@ -1,0 +1,20 @@
+{
+  "perk": "fetch-codex-manual",
+  "skill": "openai-docs",
+  "description": "Fetch the Codex manual, sha256-verify it against the response header, temp-cache it, and emit a heading outline.",
+  "rules": [
+    "read-only fetch — HEAD then GET; never mutates a remote service",
+    "verifies the x-content-sha256 response header matches the fetched body before caching",
+    "writes the manual + outline to a temp cache dir, and the outline/status report to record_store",
+    "needs live network to developers.openai.com"
+  ],
+  "usage": "Optionally set MANUAL_URL (default https://developers.openai.com/codex/codex-manual.md) and CACHE_DIR (default a temp dir). Output: codex-manual-outline.md.",
+  "limitation": "Requires node + live network to actually fetch; degrades to an empty artifact when node or the network is absent. Not hermetic — the real fetch cannot run offline.",
+  "minimal_example": {
+    "perk": "fetch-codex-manual",
+    "vars": {
+      "MANUAL_URL": "https://developers.openai.com/codex/codex-manual.md",
+      "CACHE_DIR": ""
+    }
+  }
+}

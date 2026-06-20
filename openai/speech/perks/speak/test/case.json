@@ -1,0 +1,14 @@
+{
+  "_perk": "speak",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT_TEXT": "Welcome to the demo.",
+    "VOICE": "cedar"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["speak.json"],
+    "nonempty": ["speak.json"],
+    "contains": {"speak.json": "Welcome to the demo."}
+  }
+}

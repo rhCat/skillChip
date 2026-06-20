@@ -1,0 +1,23 @@
+{
+  "tool": "extract_frames",
+  "inputs": {
+    "DECODED_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "STATES": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "frames_manifest_out": {
+      "path": "${RECORD_STORE}/frames/frames-manifest.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/frames/frames-manifest.json"
+  }
+}

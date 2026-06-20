@@ -1,0 +1,25 @@
+{
+  "_perk": "prepare-run",
+  "sequence": [
+    "prepare_run"
+  ],
+  "tools": {
+    "prepare_run": {
+      "binary": "python3",
+      "params": {
+        "PET_NAME": "${PET_NAME}",
+        "PET_NOTES": "${PET_NOTES}",
+        "STYLE_PRESET": "${STYLE_PRESET}"
+      }
+    }
+  },
+  "env": {
+    "PET_NAME": "${PET_NAME}",
+    "PET_NOTES": "${PET_NOTES}",
+    "STYLE_PRESET": "${STYLE_PRESET}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

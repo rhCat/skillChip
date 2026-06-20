@@ -1,0 +1,20 @@
+{
+  "perk": "community_maintainers",
+  "skill": "security-ownership-map",
+  "description": "Report monthly/quarterly maintainers for a file's co-change community over time (read-only).",
+  "rules": [
+    "read-only — reads DATA_DIR artifacts (cochange.graph.json/ownership.graph.json/communities.json + commits.jsonl); reads git log only if commits.jsonl is missing",
+    "locate the community via --file or --community-id in CM_ARGS",
+    "buckets touches by month (default) or quarter; supports recency weighting and bot filtering",
+    "CSV result is written to record_store/community_maintainers.csv"
+  ],
+  "usage": "Set DATA_DIR (a built ownership-map dir with communities + commits.jsonl) and CM_ARGS (e.g. `--file network/card.c --since 2025-01-01 --top 5`). Output: community_maintainers.csv.",
+  "limitation": "Read-only. Requires a community artifact (built with communities enabled). If commits.jsonl is absent, --repo must be supplied in CM_ARGS so git history can be read.",
+  "minimal_example": {
+    "perk": "community_maintainers",
+    "vars": {
+      "DATA_DIR": "ownership-map-out",
+      "CM_ARGS": "--file network/card.c --since 2025-01-01 --top 5"
+    }
+  }
+}

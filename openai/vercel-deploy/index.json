@@ -1,0 +1,28 @@
+{
+  "skill": "vercel-deploy",
+  "skill_sha": "d5d032ee34dca6a3a58a8b0e1b3e196b6a0186494f6d3d77a8674818003af29b",
+  "file_count": 21,
+  "files": {
+    "LICENSE.txt": "e0fad1e120e56b02bb8e65745ff5be6d3234368f2df9d0dd183183879e595fc1",
+    "SKILL.md": "cf3a448bd2103028b9b24a95ac172e56b929168a5a637aae19543e4afed1cba7",
+    "blueprint.drawio": "57c4f1405970f87b4d25d45ee556d595efc9cf8eb40b46bf84adbcbcf0bdca5f",
+    "blueprint.json": "d611ce6495d7fef2e565ed93efbd2065247fdf5b999f5baf17a255ac33939151",
+    "blueprint.svg": "255bf451979e79eb36a4fc59ec55616bf9de10c09c221c70ab6aa71e2565c688",
+    "ledger.json": "abf989b0c2aa2a1379115d6866a09666cf680c1fb5064ffee81229909cdd2937",
+    "perks.json": "8af97a8094a3a56e6d8f724a4390346f215b07fbb7449db5a30dacb7ab17a4b0",
+    "perks/deploy/manifesto.json": "d62b2e72d38b5ed2e70de76186edcaaf886193223daec79fe0ac73019c825abe",
+    "perks/deploy/metadata.json": "b91ec4dcaf4c0146f044b19c64ea27c567af6e6cae8d98c71700fb52c0a34c7d",
+    "perks/deploy/src/contracts.json": "b07e497cc0957d661e555c10acd5c598305816b68f6a9728c2466136316ab537",
+    "perks/deploy/src/deploy.sh": "91f16c6a298c8b70eff7b7722f860e54101be2f23cea75d2e26ec0778006f9b4",
+    "perks/deploy/src/vercel_deploy.sh": "953b18f6c2847bd1570748787f9105dca17b36f1cc490eb700f1d8b47666d4c4",
+    "perks/deploy/test/case.json": "9af4ab742093e589bd38ad351814ac08392d488351a90a48a79584c8f5402c3f",
+    "perks/deploy/test/fixture/index.html": "a452faca1c6e6ded1d1a1a7193eab4877aff2f7f9f9ba20a96afd37149d65370",
+    "perks/detect-framework/manifesto.json": "0bd828eccb53621b2d447a35e34efdfaad471cd37ac4830503c9c9587dce6bcd",
+    "perks/detect-framework/metadata.json": "97542e5a5c978dd6639023afa4915d374bce945d31f536b6ec130db42f6a340d",
+    "perks/detect-framework/src/contracts.json": "037dbb82762265ddd0a12e5ac7463a839f1c4199d29c3d684555b4752d9c5411",
+    "perks/detect-framework/src/deploy.sh": "91f16c6a298c8b70eff7b7722f860e54101be2f23cea75d2e26ec0778006f9b4",
+    "perks/detect-framework/src/detect_framework.sh": "7acdc87d0074cd2a52e5282f4a81cf965a049b2e4355cd5791f0342128d8aff8",
+    "perks/detect-framework/test/case.json": "54cd914998c4fd79b8005ec4c311579c802136c3889052de7d6b031c120d8fd2",
+    "perks/detect-framework/test/fixture/package.json": "a95649baf3831f59cfca4e1e669e5d7dd50b4d7d5c77d96ffd60e36514734b2f"
+  }
+}

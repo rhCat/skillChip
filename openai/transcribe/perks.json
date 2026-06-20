@@ -1,0 +1,21 @@
+{
+  "skill": "transcribe",
+  "perks": [
+    {
+      "id": "validate",
+      "summary": "dry-run a transcription request: validate audio + known-speaker refs and emit the API payload (read-only, no API call)",
+      "destructive": false,
+      "tools": [
+        "transcribe_validate"
+      ]
+    },
+    {
+      "id": "transcribe",
+      "summary": "transcribe audio file(s) to text/json/diarized_json via OpenAI and write the transcript to a file",
+      "destructive": false,
+      "tools": [
+        "transcribe_run"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "perk": "marketplace",
+  "skill": "plugin-creator",
+  "description": "create/update the repo-root .agents/plugins/marketplace.json entry for a plugin (destructive)",
+  "rules": [
+    "destructive — mutates the shared marketplace.json registry that gates Codex UI availability/ordering",
+    "appends a new plugins[] entry, or overwrites the same-named entry only with --force",
+    "writes policy.installation=AVAILABLE, policy.authentication=ON_INSTALL, category=Productivity defaults",
+    "source.path is kept relative as ./plugins/<plugin-name>; existing interface.displayName is preserved"
+  ],
+  "usage": "Set PLUGIN_NAME. Optionally set PLUGIN_PARENT (plugin dir parent) and MARKETPLACE_PATH (defaults under record_store). Output: marketplace.json (the updated registry copy/report).",
+  "limitation": "Destructive: edits a shared registry file. Without --force, a pre-existing entry for the same plugin name aborts the update. Default policy/category values unless overridden.",
+  "minimal_example": {
+    "perk": "marketplace",
+    "vars": {
+      "PLUGIN_NAME": "my-plugin"
+    }
+  }
+}

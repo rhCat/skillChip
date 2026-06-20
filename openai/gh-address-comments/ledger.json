@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for gh-address-comments — set perk, fill record_store + the vars the perk declares.",
+  "skill": "gh-address-comments",
+  "perk": "fetch-comments",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "REPO_DIR": "<git repo dir whose current branch has the open PR>"
+  }
+}

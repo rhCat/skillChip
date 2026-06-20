@@ -1,0 +1,11 @@
+{
+  "_perk": "prepare-run",
+  "requires": ["python3"],
+  "vars": { "PET_NAME": "Sprout" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["run/imagegen-jobs.json", "run/pet_request.json", "run/prompts/base-pet.md"],
+    "nonempty": ["run/imagegen-jobs.json"],
+    "json": { "run/imagegen-jobs.json": { "schema_version": 1 } }
+  }
+}

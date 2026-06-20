@@ -1,0 +1,21 @@
+{
+  "_perk": "open",
+  "sequence": [
+    "pw_open"
+  ],
+  "tools": {
+    "pw_open": {
+      "binary": "bash",
+      "params": {
+        "PW_URL": "${PW_URL}"
+      }
+    }
+  },
+  "env": {
+    "PW_URL": "${PW_URL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

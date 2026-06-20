@@ -1,0 +1,69 @@
+{
+  "skill": "playwright",
+  "perks": [
+    {
+      "id": "open",
+      "summary": "navigate a browser session to a URL (load a page; first step of any flow)",
+      "destructive": false,
+      "tools": [
+        "pw_open"
+      ]
+    },
+    {
+      "id": "snapshot",
+      "summary": "capture the accessibility/element-ref snapshot of the current page (read-only)",
+      "destructive": false,
+      "tools": [
+        "pw_snapshot"
+      ]
+    },
+    {
+      "id": "screenshot",
+      "summary": "render the current page (or a ref) to a screenshot file (read-only artifact)",
+      "destructive": false,
+      "tools": [
+        "pw_screenshot"
+      ]
+    },
+    {
+      "id": "pdf",
+      "summary": "render the current page to a PDF file (read-only artifact)",
+      "destructive": false,
+      "tools": [
+        "pw_pdf"
+      ]
+    },
+    {
+      "id": "extract",
+      "summary": "evaluate a JS expression against the page / a ref to extract data (read-only)",
+      "destructive": false,
+      "tools": [
+        "pw_extract"
+      ]
+    },
+    {
+      "id": "console",
+      "summary": "dump the page's console messages, optionally filtered by level (read-only)",
+      "destructive": false,
+      "tools": [
+        "pw_console"
+      ]
+    },
+    {
+      "id": "network",
+      "summary": "dump the page's network activity (read-only)",
+      "destructive": false,
+      "tools": [
+        "pw_network"
+      ]
+    },
+    {
+      "id": "trace",
+      "summary": "record a Playwright trace around a flow (tracing-start then tracing-stop; artifact)",
+      "destructive": false,
+      "tools": [
+        "pw_trace"
+      ]
+    }
+  ]
+}

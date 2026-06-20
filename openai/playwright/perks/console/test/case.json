@@ -1,0 +1,10 @@
+{
+  "_perk": "console",
+  "requires": ["bash"],
+  "vars": { "PW_LEVEL": "warning", "PW_SESSION": "demo" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["console.json"],
+    "nonempty": ["console.json"]
+  }
+}

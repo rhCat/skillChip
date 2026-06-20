@@ -1,0 +1,21 @@
+{
+  "_perk": "validate-atlas",
+  "sequence": [
+    "validate_atlas"
+  ],
+  "tools": {
+    "validate_atlas": {
+      "binary": "python3",
+      "params": {
+        "ATLAS": "${ATLAS}"
+      }
+    }
+  },
+  "env": {
+    "ATLAS": "${ATLAS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

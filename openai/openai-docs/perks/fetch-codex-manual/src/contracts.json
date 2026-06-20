@@ -1,0 +1,23 @@
+{
+  "tool": "fetch_codex_manual",
+  "inputs": {
+    "MANUAL_URL": {
+      "type": "string",
+      "required": false
+    },
+    "CACHE_DIR": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "codex_manual_outline_out": {
+      "path": "${RECORD_STORE}/codex-manual-outline.md",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/codex-manual-outline.md"
+  }
+}

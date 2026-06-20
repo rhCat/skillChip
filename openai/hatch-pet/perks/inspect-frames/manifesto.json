@@ -1,0 +1,21 @@
+{
+  "_perk": "inspect-frames",
+  "sequence": [
+    "inspect_frames"
+  ],
+  "tools": {
+    "inspect_frames": {
+      "binary": "python3",
+      "params": {
+        "FRAMES_ROOT": "${FRAMES_ROOT}"
+      }
+    }
+  },
+  "env": {
+    "FRAMES_ROOT": "${FRAMES_ROOT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

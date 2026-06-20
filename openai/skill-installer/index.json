@@ -1,0 +1,28 @@
+{
+  "skill": "skill-installer",
+  "skill_sha": "d8a8487a9f10e4d9daeaaebf63354efef56a8f0dfa3df5638383ddb444931897",
+  "file_count": 21,
+  "files": {
+    "LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "SKILL.md": "9fa2758cd8893fcae978f4557fc671519d22ff11b89c176d88a320428f9ca900",
+    "blueprint.drawio": "b4cb2d8383698cb911af2c8383b1ae32a725d26c00c5453ac252e1cbf273d497",
+    "blueprint.json": "6d031aa1f83a9827b52a62648f8b576e3d272a7e16f0f79d293291bab70a573d",
+    "blueprint.svg": "4a5a1c1d6ca7d018d763ce25c1fbfa7faeffeada5f55849d34ba6e7c06e5e915",
+    "ledger.json": "25d53b4076e25e1c0b39d0605dc4b4c00ab1420b2c85b0d0bc3033750dd5cb00",
+    "perks.json": "d91843d529e130c5d76559cf6d33a3d715817c393833ec9a0255f10c9d651471",
+    "perks/install/manifesto.json": "4c46d06c753e8a51dc1f0a39a952c83f2635bbd447e3f9827bf88bab4beb3c6a",
+    "perks/install/metadata.json": "e36138f4d5b88f325e540f5186952fcd3ef9a2c57d11e912ba1a1fde6b59e723",
+    "perks/install/src/contracts.json": "d6ef1bab776639b10f58c605f990517bb746c9613075359d3a8f5e34bd944bb1",
+    "perks/install/src/github_utils.py": "61c1bbe2ae217433b4b6f9f09f21aca4df52c12598068343ade719f706e4859b",
+    "perks/install/src/install-skill-from-github.py": "0fbbd36e8ea294442c0bd48d6f610a2e8656216bfef5c322f1dcf448ef2f09f1",
+    "perks/install/src/install_skill.sh": "cc6ac53f4215be9439d765843e477980262a7f965c29a4d6ecce395cf96696b3",
+    "perks/install/test/case.json": "66ace5b30de74cc382a55e31076aa676ad36cdf6e68d5e82f556f210149f8f90",
+    "perks/list/manifesto.json": "d6da4acea055ddc1eccae9492589a9121d0bc947ce93837fa7aa24bb1a25c796",
+    "perks/list/metadata.json": "e6442301e1de7db75071d372c05ffa4facf20de4bbba909efd28a2ca1f08d9c0",
+    "perks/list/src/contracts.json": "200d8f4c22606004d08b820668099618fd1ebe1f73dde400920fc9c201ce6fe3",
+    "perks/list/src/github_utils.py": "61c1bbe2ae217433b4b6f9f09f21aca4df52c12598068343ade719f706e4859b",
+    "perks/list/src/list-skills.py": "e4e1f78ca3d045827f2a05cfd99fae57cc7c1a1bfeba8704029108834debff35",
+    "perks/list/src/list_skills.sh": "0a7512f97c40bb1ae4a482f75080debbb20026e6c333e19ffa9f23168aafb728",
+    "perks/list/test/case.json": "508d9038647aae6947a32544540d955b751a0f0f8613dafb9ad3270aceb4e0b8"
+  }
+}

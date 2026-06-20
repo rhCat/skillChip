@@ -1,0 +1,27 @@
+{
+  "tool": "pw_extract",
+  "inputs": {
+    "PW_EXPR": {
+      "type": "string",
+      "required": true
+    },
+    "PW_REF": {
+      "type": "string",
+      "required": false
+    },
+    "PW_SESSION": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "pw_extract_out": {
+      "path": "${RECORD_STORE}/extract.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/extract.json"
+  }
+}

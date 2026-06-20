@@ -1,0 +1,11 @@
+{
+  "_perk": "list-voices",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["voices.txt"],
+    "nonempty": ["voices.txt"],
+    "contains": {"voices.txt": "cedar"}
+  }
+}

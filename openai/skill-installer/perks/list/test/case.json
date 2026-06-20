@@ -1,0 +1,10 @@
+{
+  "_perk": "list",
+  "requires": ["python3"],
+  "vars": { "REPO": "openai/skills", "SKILL_PATH": "skills/.curated", "REF": "main" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["skills.json"],
+    "nonempty": ["skills.json"]
+  }
+}

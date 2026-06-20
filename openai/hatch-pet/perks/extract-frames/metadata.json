@@ -1,0 +1,19 @@
+{
+  "perk": "extract-frames",
+  "skill": "hatch-pet",
+  "description": "Extract generated horizontal row strips into 192x208 sprite frames: remove the chroma-key background, slice each strip into its per-state frame count (component-based with slot fallback), and write a frames-manifest.",
+  "rules": [
+    "local-only — reads decoded strips, writes per-state frame PNGs + a manifest",
+    "DECODED_DIR holds <state>.png strips (e.g. idle.png with 6 slots); STATES selects rows (default all)",
+    "chroma key read from <DECODED_DIR>/../pet_request.json or defaults to #00FF00; frames + frames-manifest.json written under record_store/frames"
+  ],
+  "usage": "Set DECODED_DIR (dir of <state>.png strips); optionally STATES (e.g. idle or all). Output: frames/frames-manifest.json and frames/<state>/NN.png.",
+  "limitation": "Only processes states whose strips are present; missing strips error out (porter degrades to a placeholder manifest). Requires Pillow (PIL).",
+  "minimal_example": {
+    "perk": "extract-frames",
+    "vars": {
+      "DECODED_DIR": "./run/decoded",
+      "STATES": "idle"
+    }
+  }
+}

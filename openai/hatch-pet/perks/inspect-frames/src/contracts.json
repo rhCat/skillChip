@@ -1,0 +1,19 @@
+{
+  "tool": "inspect_frames",
+  "inputs": {
+    "FRAMES_ROOT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "frames_inspection_out": {
+      "path": "${RECORD_STORE}/frames-inspection.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/frames-inspection.json"
+  }
+}

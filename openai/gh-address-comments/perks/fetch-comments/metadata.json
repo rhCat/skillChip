@@ -1,0 +1,20 @@
+{
+  "perk": "fetch-comments",
+  "skill": "gh-address-comments",
+  "description": "Fetch all conversation comments + reviews + inline review threads for the open PR on the current branch via `gh api graphql` (read-only, paginated).",
+  "rules": [
+    "read-only — only `gh pr view` + `gh api graphql` queries, never mutates the PR or repo",
+    "resolves the PR from the current branch of REPO_DIR (works for cross-repo PRs via head repo owner/name)",
+    "pages through comments, reviews, and reviewThreads until all cursors are exhausted",
+    "merged result written to record_store as pr_comments.json",
+    "requires an authenticated gh CLI and a branch with an open PR; degrades to {} when gh is absent/unauthenticated"
+  ],
+  "usage": "Set REPO_DIR (the git repo dir whose current branch has the open PR). Output: pr_comments.json.",
+  "limitation": "Needs live GitHub access through an authenticated `gh` CLI and an open PR on the current branch; offline or without `gh` it produces an empty {} artifact.",
+  "minimal_example": {
+    "perk": "fetch-comments",
+    "vars": {
+      "REPO_DIR": "."
+    }
+  }
+}

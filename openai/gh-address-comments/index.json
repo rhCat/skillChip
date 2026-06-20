@@ -1,0 +1,21 @@
+{
+  "skill": "gh-address-comments",
+  "skill_sha": "41aca3125b30ea957a52fbd18129648f27512e830964ffac819e816b5bf72440",
+  "file_count": 14,
+  "files": {
+    "LICENSE.txt": "58d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd",
+    "SKILL.md": "d85cf87a3dc09b4c60613a77000be2cef556dede4f6421be90ebda271b4702e9",
+    "blueprint.drawio": "cefb8615288eec117e342230efdaad07f15f442d86b2afb498b1aa131858f53f",
+    "blueprint.json": "a7a3d640a1fd31c5ca2b457f956788a1a5ffa86c7bad6ea1b25ce9b4dc477bf5",
+    "blueprint.svg": "20e0de250a26cd747463b312892ae30764ad637d81936c1fab98e2a683eee5a9",
+    "ledger.json": "662b3e65f927bd87e1b1b5fd6d9d3d27d47c1ba6226d502c17b0190149fc4205",
+    "perks.json": "591a3af2a4bb73174aa0ae780803d9530200de104d87f38fa3c6202d50f3f7da",
+    "perks/fetch-comments/manifesto.json": "eb7d3d0f99acee77d3ebc0648fa84b084ebde2857ad5a9ab5ea302ccb9f3a228",
+    "perks/fetch-comments/metadata.json": "daf1aca25c9a49a48ca14583e14e771627321922d1fd04cca4df357c13b87243",
+    "perks/fetch-comments/src/contracts.json": "4b274ff46a14a861b9b2ec859f064b4583973ab214efe7a6389df8fe6a938d6a",
+    "perks/fetch-comments/src/fetch_comments.py": "d7bc64f6b26f7482f9ca9dd7c923a5b8b20e1ef13491ae2d9052cd208a7c1ad1",
+    "perks/fetch-comments/src/fetch_comments.sh": "c7ab64eb71799bfe404b9efb885884ce208dddd70369b7becda07f5b92d79cfc",
+    "perks/fetch-comments/test/case.json": "bc189b4db8c243bae7b3de51793926420462c5f57c906dd1345565e08e5fe36f",
+    "perks/fetch-comments/test/fixture/.keep": "1c231f56db098e37bc710d7db5683015530d7ee7576928f505e85ce00172a9ad"
+  }
+}

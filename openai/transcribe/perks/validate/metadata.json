@@ -1,0 +1,19 @@
+{
+  "perk": "validate",
+  "skill": "transcribe",
+  "description": "Dry-run a transcription request: validate the audio file(s) + known-speaker references and emit the OpenAI request payload without calling the API.",
+  "rules": [
+    "read-only — runs the bundled CLI with --dry-run; never contacts the API and needs no OPENAI_API_KEY",
+    "validates audio existence (warns above the 25MB limit) and known-speaker NAME=PATH refs (max 4)",
+    "enforces model/format rules: diarized_json requires gpt-4o-transcribe-diarize; prompt unsupported on transcribe-diarize",
+    "the resolved request payload is written to record_store as payload.json"
+  ],
+  "usage": "Set AUDIO (audio file path). Optional: MODEL, RESPONSE_FORMAT (text|json|diarized_json), LANGUAGE, KNOWN_SPEAKER (NAME=PATH). Output: payload.json.",
+  "limitation": "Dry-run only: builds and prints the payload, never transcribes. Use the transcribe perk for the live call.",
+  "minimal_example": {
+    "perk": "validate",
+    "vars": {
+      "AUDIO": "audio.wav"
+    }
+  }
+}

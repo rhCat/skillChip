@@ -1,0 +1,10 @@
+{
+  "_perk": "extract",
+  "requires": ["bash"],
+  "vars": { "PW_EXPR": "document.title", "PW_SESSION": "demo" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["extract.json"],
+    "nonempty": ["extract.json"]
+  }
+}

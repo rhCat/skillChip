@@ -1,0 +1,11 @@
+{
+  "_perk": "extract-frames",
+  "requires": ["python3"],
+  "vars": { "DECODED_DIR": "${FIXTURE}/decoded", "STATES": "idle" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["frames/frames-manifest.json"],
+    "nonempty": ["frames/frames-manifest.json"],
+    "json": { "frames/frames-manifest.json": { "ok": true } }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for skill-installer — set perk, fill record_store + the vars the perk declares.",
+  "skill": "skill-installer",
+  "perk": "list",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "REPO": "openai/skills",
+    "SKILL_PATH": "skills/.curated",
+    "REF": "main"
+  }
+}

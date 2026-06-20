@@ -1,0 +1,14 @@
+{
+  "tool": "check_permissions",
+  "inputs": {},
+  "outputs": {
+    "report": {
+      "path": "${RECORD_STORE}/permissions.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/permissions.json"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_perk": "migrate",
+  "requires": ["python3"],
+  "vars": { "SOURCE": "${FIXTURE}/.claude", "TARGET": "${RECORD}", "MIGRATE_FLAGS": "--dry-run" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["migrate.txt"],
+    "nonempty": ["migrate.txt"],
+    "contains": { "migrate.txt": "Migration summary" }
+  }
+}

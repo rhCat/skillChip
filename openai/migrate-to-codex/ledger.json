@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for migrate-to-codex — set perk, fill record_store + the vars the perk declares.",
+  "skill": "migrate-to-codex",
+  "perk": "scan",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "SOURCE": "<Claude source root, e.g. ~/.claude/ or ./.claude/>"
+  }
+}

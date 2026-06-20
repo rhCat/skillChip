@@ -1,0 +1,18 @@
+{
+  "perk": "validate",
+  "skill": "skill-creator",
+  "description": "validate a skill's SKILL.md frontmatter (name/description/naming rules) — read-only",
+  "rules": [
+    "read-only: inspects SKILL_DIR/SKILL.md, mutates nothing",
+    "checks frontmatter present, name + description fields, hyphen-case naming, length limits",
+    "verdict line written to record_store"
+  ],
+  "usage": "Set SKILL_DIR (a skill folder containing SKILL.md). Output: validate.out.",
+  "limitation": "Read-only structural check of frontmatter only; does not lint the body or run resources. Requires python3 + PyYAML.",
+  "minimal_example": {
+    "perk": "validate",
+    "vars": {
+      "SKILL_DIR": "/tmp/skills/my-skill"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "perk": "trace",
+  "skill": "playwright",
+  "description": "record a Playwright trace around a flow (tracing-start then tracing-stop; artifact)",
+  "rules": [
+    "read-only — records a diagnostic trace, mutates no remote service",
+    "chained sub-steps: `playwright-cli tracing-start` then `tracing-stop` via the bundled npx wrapper",
+    "runs inside record_store so the trace artifact is contained",
+    "degrades gracefully: records when a live browser is not requested/available",
+    "result log written to record_store"
+  ],
+  "usage": "Optional PW_SESSION isolates the session. Output: trace.json (audit log; the trace artifact lands in record_store when live).",
+  "limitation": "Needs npx + @playwright/cli + an already-open page; the start/stop wrap a flow you drive separately. Offline it records the unreachable state and still emits valid output.",
+  "minimal_example": {
+    "perk": "trace",
+    "vars": {
+      "PW_SESSION": "demo"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_perk": "scaffold",
+  "sequence": [
+    "scaffold_plugin"
+  ],
+  "tools": {
+    "scaffold_plugin": {
+      "binary": "python3",
+      "params": {
+        "PLUGIN_NAME": "${PLUGIN_NAME}",
+        "PLUGIN_PARENT": "${PLUGIN_PARENT}"
+      }
+    }
+  },
+  "env": {
+    "PLUGIN_NAME": "${PLUGIN_NAME}",
+    "PLUGIN_PARENT": "${PLUGIN_PARENT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

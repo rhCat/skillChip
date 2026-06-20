@@ -1,0 +1,14 @@
+{
+  "_perk": "capture",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "SHOT_MODE": "temp",
+    "SHOT_APP": "",
+    "SHOT_REGION": ""
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["screenshot.png"],
+    "nonempty": ["screenshot.png"]
+  }
+}

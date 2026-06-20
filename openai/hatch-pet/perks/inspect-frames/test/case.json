@@ -1,0 +1,11 @@
+{
+  "_perk": "inspect-frames",
+  "requires": ["python3"],
+  "vars": { "FRAMES_ROOT": "${FIXTURE}/frames" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["frames-inspection.json"],
+    "nonempty": ["frames-inspection.json"],
+    "json": { "frames-inspection.json": { "ok": true, "errors": [] } }
+  }
+}

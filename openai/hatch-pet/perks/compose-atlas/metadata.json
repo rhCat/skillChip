@@ -1,0 +1,18 @@
+{
+  "perk": "compose-atlas",
+  "skill": "hatch-pet",
+  "description": "Compose or normalize a Codex pet 8x9 spritesheet atlas (1536x1872) and write a transparent PNG, copying only the used cells per row and zeroing transparent-pixel RGB residue.",
+  "rules": [
+    "local-only — reads frames or a source atlas, writes a normalized atlas PNG",
+    "provide exactly one source: SOURCE_ATLAS (an existing atlas to normalize) or FRAMES_ROOT (per-state frame dirs)",
+    "atlas written to record_store as atlas.png"
+  ],
+  "usage": "Set SOURCE_ATLAS (path to an atlas to normalize) OR FRAMES_ROOT (a dir of per-state frame folders). Output: atlas.png.",
+  "limitation": "Composition only; does not generate art or validate output (use validate-atlas after). Requires Pillow (PIL); without it the porter writes a placeholder file.",
+  "minimal_example": {
+    "perk": "compose-atlas",
+    "vars": {
+      "SOURCE_ATLAS": "./raw-atlas.png"
+    }
+  }
+}

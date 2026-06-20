@@ -1,0 +1,24 @@
+{
+  "_perk": "build",
+  "requires": ["python3", "git"],
+  "setup": [
+    "git init -q",
+    "git config user.email tester@example.com",
+    "git config user.name Tester",
+    "mkdir -p auth crypto",
+    "printf 'login\\n' > auth/login.py",
+    "printf 'tls\\n' > crypto/tls.py",
+    "printf 'doc\\n' > README.md",
+    "git add -A",
+    "git commit -q -m init"
+  ],
+  "vars": { "REPO": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["summary.json", "people.csv", "files.csv", "edges.csv"],
+    "nonempty": ["summary.json"],
+    "json": {
+      "summary.json": { "parameters": { "identity": "author" } }
+    }
+  }
+}

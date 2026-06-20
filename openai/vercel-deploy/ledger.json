@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for vercel-deploy — set perk, fill record_store + the vars the perk declares.",
+  "skill": "vercel-deploy",
+  "perk": "detect-framework",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PROJECT_PATH": "<project dir (containing package.json) to inspect>"
+  }
+}

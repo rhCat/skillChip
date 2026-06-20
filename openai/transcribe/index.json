@@ -1,0 +1,28 @@
+{
+  "skill": "transcribe",
+  "skill_sha": "5bade365d74c02a5a8e1699dced3d97e3b0f40cf98d9a732ab18a5c41789b6bb",
+  "file_count": 21,
+  "files": {
+    "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+    "SKILL.md": "3ef1494c9815b8b8e455b3315314848ecd1e053fa756fe5f4655effab293335c",
+    "blueprint.drawio": "99c42fd26536e4201118971f949a03488a8479761dc876add63518384da7b238",
+    "blueprint.json": "0b07f3f4b0b1851a13dbf44d7932c23636fa7d12a708751b591e221ba8e4dedd",
+    "blueprint.svg": "c14e5f0ca22b2edd80b6b87a3ed52c8b515f53e4c50f124e449978534268a018",
+    "ledger.json": "295689379fbadf748fea188701ed994f90e78e89426e7d627429b9c821094eaa",
+    "perks.json": "00f6229a168371448f53a0f5ca1cb131d252f781c9027596f32948efb1ef8ec8",
+    "perks/transcribe/manifesto.json": "bb78c4563465fab6fe01f4195a1ae0462f7d3c3ea71753fc0e8fc420e6bd3ab2",
+    "perks/transcribe/metadata.json": "8c02f6f3de3d274f028ee03020249ff25b93e85b449b29144b099780f42a6722",
+    "perks/transcribe/src/contracts.json": "42bfdd732d0222bf3a8487292d7477137577dbf8ec8b78751b25d06aa2ad7e74",
+    "perks/transcribe/src/transcribe_diarize.py": "d623b1fed1491b7ca4b7b5b393089165e3581a83d90d5a57868241f1b2a5d951",
+    "perks/transcribe/src/transcribe_run.sh": "e3802d6380669e9d95cc952484cc506b313cae2b62d58a1298ff138807fbb6f5",
+    "perks/transcribe/test/case.json": "9bddcf227acdbca0ad9d0cd194fe236924de73dbc40a9ecc1d19c0e705db0fc2",
+    "perks/transcribe/test/fixture/sample.wav": "aeb852048e35be4391685af966e670f32bb52a5064ce93030911a087d7f115f7",
+    "perks/validate/manifesto.json": "d4f1510527f0f57457ab3d91bf1d3fb0a9bfe742333630bfc982ed094ad631ea",
+    "perks/validate/metadata.json": "0d288d6bf39944b9605567d46a171c47166beb580add51dbdb4acd6deec3f62d",
+    "perks/validate/src/contracts.json": "dec6b6f7ff2b47832e9de280e417811a1e210b917c735ad667707e2ede5bdcab",
+    "perks/validate/src/transcribe_diarize.py": "d623b1fed1491b7ca4b7b5b393089165e3581a83d90d5a57868241f1b2a5d951",
+    "perks/validate/src/transcribe_validate.sh": "a11eab2d94546ecca48a72c069a5bb45b472d4a42962278d13767012490f4dff",
+    "perks/validate/test/case.json": "50e7ff8b3dce37b2341091b585b1e4066f51a74899d3c11d649c4cdb47d3c86d",
+    "perks/validate/test/fixture/sample.wav": "aeb852048e35be4391685af966e670f32bb52a5064ce93030911a087d7f115f7"
+  }
+}

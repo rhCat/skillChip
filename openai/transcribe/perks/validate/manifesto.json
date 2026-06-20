@@ -1,0 +1,29 @@
+{
+  "_perk": "validate",
+  "sequence": [
+    "transcribe_validate"
+  ],
+  "tools": {
+    "transcribe_validate": {
+      "binary": "python3",
+      "params": {
+        "AUDIO": "${AUDIO}",
+        "MODEL": "${MODEL}",
+        "RESPONSE_FORMAT": "${RESPONSE_FORMAT}",
+        "LANGUAGE": "${LANGUAGE}",
+        "KNOWN_SPEAKER": "${KNOWN_SPEAKER}"
+      }
+    }
+  },
+  "env": {
+    "AUDIO": "${AUDIO}",
+    "MODEL": "${MODEL}",
+    "RESPONSE_FORMAT": "${RESPONSE_FORMAT}",
+    "LANGUAGE": "${LANGUAGE}",
+    "KNOWN_SPEAKER": "${KNOWN_SPEAKER}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

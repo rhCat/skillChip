@@ -1,0 +1,19 @@
+{
+  "perk": "scaffold",
+  "skill": "plugin-creator",
+  "description": "scaffold a Codex plugin dir + .codex-plugin/plugin.json (+ optional folders/stubs), local-only",
+  "rules": [
+    "local-only — only writes inside <PLUGIN_PARENT>/<plugin-name>",
+    "always creates .codex-plugin/plugin.json with the full placeholder manifest",
+    "PLUGIN_NAME is normalized to lower hyphen-case and must be <= 64 chars",
+    "a listing of the created tree is written to record_store"
+  ],
+  "usage": "Set PLUGIN_NAME (the plugin name). Optionally set PLUGIN_PARENT (parent dir; defaults to record_store). Output: scaffold.json.",
+  "limitation": "Does not touch the shared marketplace.json (use the marketplace perk). Creates optional folders/stubs only when their flags are wired; the core defaults to the manifest plus base folder.",
+  "minimal_example": {
+    "perk": "scaffold",
+    "vars": {
+      "PLUGIN_NAME": "my-plugin"
+    }
+  }
+}

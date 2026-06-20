@@ -1,0 +1,13 @@
+{
+  "skill": "jupyter-notebook",
+  "perks": [
+    {
+      "id": "scaffold",
+      "summary": "scaffold a Jupyter notebook (experiment or tutorial) from a bundled template (local-only)",
+      "destructive": false,
+      "tools": [
+        "new_notebook"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "_perk": "compose-atlas",
+  "requires": ["python3"],
+  "vars": { "SOURCE_ATLAS": "${FIXTURE}/source-atlas.png" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["atlas.png"],
+    "nonempty": ["atlas.png"]
+  }
+}

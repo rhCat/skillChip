@@ -1,0 +1,29 @@
+{
+  "_perk": "generate",
+  "sequence": [
+    "img_generate"
+  ],
+  "tools": {
+    "img_generate": {
+      "binary": "python3",
+      "params": {
+        "PROMPT": "${PROMPT}",
+        "MODEL": "${MODEL}",
+        "SIZE": "${SIZE}",
+        "QUALITY": "${QUALITY}",
+        "N": "${N}"
+      }
+    }
+  },
+  "env": {
+    "PROMPT": "${PROMPT}",
+    "MODEL": "${MODEL}",
+    "SIZE": "${SIZE}",
+    "QUALITY": "${QUALITY}",
+    "N": "${N}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

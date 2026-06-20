@@ -1,0 +1,21 @@
+{
+  "_perk": "resolve-latest-model",
+  "requires": ["bash", "node"],
+  "vars": {
+    "LATEST_MODEL_SOURCE": "${FIXTURE}/latest-model.md",
+    "LATEST_MODEL_BASE_URL": "https://developers.openai.com"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["latest-model.json"],
+    "nonempty": ["latest-model.json"],
+    "json": {
+      "latest-model.json": {
+        "model": "gpt-5.4",
+        "modelSlug": "gpt-5p4",
+        "migrationGuideUrl": "https://developers.openai.com/api/docs/guides/migrate-to-gpt-5-4.md",
+        "promptingGuideUrl": "https://developers.openai.com/api/docs/guides/gpt-5-4-prompting.md"
+      }
+    }
+  }
+}

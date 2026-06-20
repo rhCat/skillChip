@@ -1,0 +1,19 @@
+{
+  "perk": "validate",
+  "skill": "migrate-to-codex",
+  "description": "Validate an already-migrated Codex target: config.toml, .agents/skills, .codex/agents, and AGENTS.md (--validate-target, read-only).",
+  "rules": [
+    "read-only",
+    "validates an existing Codex target; never writes",
+    "checks config.toml, skill files, agent files, and AGENTS.md files",
+    "validation report written to record_store"
+  ],
+  "usage": "Set TARGET (a migrated Codex root, e.g. ~/.codex/ or ./.codex/). Output: validate.txt.",
+  "limitation": "Read-only validator; writes nothing. The vendored CLI imports tomllib and needs Python 3.11+ to run; on older Python it degrades to an empty report. The real CLI exits 1 on a hard validation error, but the porter degrades gracefully and stays green.",
+  "minimal_example": {
+    "perk": "validate",
+    "vars": {
+      "TARGET": "~/.codex/"
+    }
+  }
+}

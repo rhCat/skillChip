@@ -1,0 +1,20 @@
+{
+  "perk": "speak-batch",
+  "skill": "speech",
+  "description": "preview a batch of TTS request payloads from a JSONL file (dry-run; no audio rendered without OPENAI_API_KEY + network)",
+  "rules": [
+    "runs the bundled CLI in --dry-run (deterministic, offline; no openai package needed)",
+    "one job per JSONL line; per-job overrides supported (model, voice, response_format, speed, instructions, out)",
+    "each job input must be <= 4096 characters; rpm capped at 50",
+    "live audio rendering requires OPENAI_API_KEY + network and is performed outside the governed run",
+    "batch request payloads written to record_store"
+  ],
+  "usage": "Set JOBS_JSONL (path to a JSONL file, one job per line). Output: batch.json.",
+  "limitation": "Governed run is dry-run only: it materializes the per-job request payloads, it does not call the API or write audio.",
+  "minimal_example": {
+    "perk": "speak-batch",
+    "vars": {
+      "JOBS_JSONL": "tmp/speech/jobs.jsonl"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "perk": "capture",
+  "skill": "screenshot",
+  "description": "capture a desktop/app/window/region screenshot to a PNG file (read-only)",
+  "rules": [
+    "read-only — writes exactly one PNG (screenshot.png) under record_store",
+    "SHOT_MODE picks the save mode (temp or default); the porter always pins the file under record_store",
+    "SHOT_APP (macOS) captures matching windows; SHOT_REGION captures an x,y,w,h pixel box",
+    "offline / no display: the core runs in CODEX_SCREENSHOT_TEST_MODE and emits a deterministic fixture PNG"
+  ],
+  "usage": "Set SHOT_MODE (temp|default), optionally SHOT_APP and SHOT_REGION. Output: screenshot.png.",
+  "limitation": "A live capture needs a real display (macOS Screen Recording permission for app/window capture; scrot/gnome-screenshot/import on Linux). Windows is unsupported by this porter. With none present it degrades to a fixture PNG.",
+  "minimal_example": {
+    "perk": "capture",
+    "vars": {
+      "SHOT_MODE": "temp",
+      "SHOT_APP": "",
+      "SHOT_REGION": ""
+    }
+  }
+}

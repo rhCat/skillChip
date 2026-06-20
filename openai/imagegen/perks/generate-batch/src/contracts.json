@@ -1,0 +1,35 @@
+{
+  "tool": "img_generate_batch",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "MODEL": {
+      "type": "string",
+      "required": false
+    },
+    "SIZE": {
+      "type": "string",
+      "required": false
+    },
+    "QUALITY": {
+      "type": "string",
+      "required": false
+    },
+    "CONCURRENCY": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "img_generate_batch_out": {
+      "path": "${RECORD_STORE}/batch.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/batch.json"
+  }
+}

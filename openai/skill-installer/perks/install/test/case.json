@@ -1,0 +1,10 @@
+{
+  "_perk": "install",
+  "requires": ["python3"],
+  "vars": { "REPO": "openai/skills", "SKILL_PATH": "skills/.experimental/example", "REF": "main", "DEST": "${RECORD_STORE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["install.log"],
+    "nonempty": ["install.log"]
+  }
+}

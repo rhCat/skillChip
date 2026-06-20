@@ -1,0 +1,11 @@
+{
+  "_perk": "doctor",
+  "requires": ["python3"],
+  "vars": { "SOURCE": "${FIXTURE}/.claude", "TARGET": "${RECORD}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["doctor.txt"],
+    "nonempty": ["doctor.txt"],
+    "contains": { "doctor.txt": "Migration doctor" }
+  }
+}

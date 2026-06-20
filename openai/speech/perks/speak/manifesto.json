@@ -1,0 +1,25 @@
+{
+  "_perk": "speak",
+  "sequence": [
+    "speak"
+  ],
+  "tools": {
+    "speak": {
+      "binary": "python3",
+      "params": {
+        "INPUT_TEXT": "${INPUT_TEXT}",
+        "VOICE": "${VOICE}",
+        "INSTRUCTIONS": "${INSTRUCTIONS}"
+      }
+    }
+  },
+  "env": {
+    "INPUT_TEXT": "${INPUT_TEXT}",
+    "VOICE": "${VOICE}",
+    "INSTRUCTIONS": "${INSTRUCTIONS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

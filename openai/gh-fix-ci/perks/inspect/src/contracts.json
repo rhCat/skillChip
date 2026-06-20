@@ -1,0 +1,23 @@
+{
+  "tool": "inspect_pr_checks",
+  "inputs": {
+    "REPO_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "PR": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "inspect_pr_checks_out": {
+      "path": "${RECORD_STORE}/checks.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/checks.json"
+  }
+}

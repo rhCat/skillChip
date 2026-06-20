@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for jupyter-notebook — set perk, fill record_store + the vars the perk declares.",
+  "skill": "jupyter-notebook",
+  "perk": "scaffold",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "KIND": "<experiment | tutorial>",
+    "TITLE": "<human-readable notebook title>",
+    "OUT": "<optional output filename under record_store, e.g. my-notebook.ipynb>"
+  }
+}

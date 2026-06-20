@@ -1,0 +1,10 @@
+{
+  "_perk": "contact-sheet",
+  "requires": ["python3"],
+  "vars": { "ATLAS": "${FIXTURE}/pet-atlas.png" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["contact-sheet.png"],
+    "nonempty": ["contact-sheet.png"]
+  }
+}

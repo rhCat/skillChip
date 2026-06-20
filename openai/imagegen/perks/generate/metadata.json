@@ -1,0 +1,19 @@
+{
+  "perk": "generate",
+  "skill": "imagegen",
+  "description": "Generate a new raster image from a text prompt via the GPT Image fallback CLI (image_gen.py generate).",
+  "rules": [
+    "local-output only: writes an image + a request preview under record_store; never pushes to a remote",
+    "porter runs the CLI in --dry-run --no-augment so it validates the request and resolves output paths offline (no OPENAI_API_KEY, no network)",
+    "a real (non-dry-run) render requires OPENAI_API_KEY and the openai SDK; the porter degrades gracefully when they are absent",
+    "MODEL must be a GPT Image model (gpt-image-*); SIZE in {1024x1024,1536x1024,1024x1536,auto}; QUALITY in {low,medium,high,auto}; N in 1..10"
+  ],
+  "usage": "Set PROMPT (required). Optional: MODEL, SIZE, QUALITY, N. Output: generate.json (request preview / audit).",
+  "limitation": "The vendored porter only previews the request (--dry-run). Producing real pixels needs OPENAI_API_KEY + the openai SDK and is not performed by this governed porter.",
+  "minimal_example": {
+    "perk": "generate",
+    "vars": {
+      "PROMPT": "a red ceramic cube on a white seamless background, studio lighting"
+    }
+  }
+}

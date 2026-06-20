@@ -1,0 +1,4 @@
+{
+  "_perk": "deploy",
+  "skip": "live cloud deploy — POSTs a tarball to codex-deploy-skills.vercel.sh and polls the preview URL; needs outbound network and mutates a live service, so it cannot run hermetically offline."
+}

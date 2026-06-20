@@ -1,0 +1,45 @@
+{
+  "skill": "migrate-to-codex",
+  "perks": [
+    {
+      "id": "scan",
+      "summary": "inventory active/inactive Claude source surfaces (--scan-only, read-only)",
+      "destructive": false,
+      "tools": [
+        "mtc_scan"
+      ]
+    },
+    {
+      "id": "plan",
+      "summary": "print the staged Codex migration plan: artifact paths + report rows (--plan, read-only)",
+      "destructive": false,
+      "tools": [
+        "mtc_plan"
+      ]
+    },
+    {
+      "id": "doctor",
+      "summary": "summarize migration readiness, manual-review items, and risks (--doctor, read-only)",
+      "destructive": false,
+      "tools": [
+        "mtc_doctor"
+      ]
+    },
+    {
+      "id": "validate",
+      "summary": "validate an already-migrated Codex target (--validate-target, read-only)",
+      "destructive": false,
+      "tools": [
+        "mtc_validate"
+      ]
+    },
+    {
+      "id": "migrate",
+      "summary": "migrate a Claude source tree into Codex artifacts (writes/overwrites local Codex files, destructive)",
+      "destructive": true,
+      "tools": [
+        "mtc_migrate"
+      ]
+    }
+  ]
+}

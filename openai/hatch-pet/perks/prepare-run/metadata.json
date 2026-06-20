@@ -1,0 +1,18 @@
+{
+  "perk": "prepare-run",
+  "skill": "hatch-pet",
+  "description": "Create a Codex pet run folder with per-state base + row prompts, retry prompts, layout-guide PNGs, an auto-selected chroma key, pet_request.json, and an imagegen job manifest (the deterministic scaffolding that drives downstream generation).",
+  "rules": [
+    "local-only — writes a run folder under record_store; no image generation here (delegated to $imagegen)",
+    "PET_NAME is required; PET_NOTES and STYLE_PRESET (default auto) are optional; reference images are not handled by this porter (prompt-only path)",
+    "run folder + imagegen-jobs.json + pet_request.json + prompts + layout guides written under record_store/run"
+  ],
+  "usage": "Set PET_NAME (and optionally PET_NOTES, STYLE_PRESET). Output: run/imagegen-jobs.json plus run/pet_request.json, run/prompts/, run/references/layout-guides/.",
+  "limitation": "Scaffolding only; does not call the image API. STYLE_PRESET must be one of the script's presets (auto/pixel/plush/clay/sticker/flat-vector/3d-toy/painterly/brand-inspired). Requires Pillow (PIL) to draw layout guides.",
+  "minimal_example": {
+    "perk": "prepare-run",
+    "vars": {
+      "PET_NAME": "Sprout"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_perk": "marketplace",
+  "requires": ["python3"],
+  "vars": { "PLUGIN_NAME": "my-plugin" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["marketplace.json"],
+    "nonempty": ["marketplace.json"]
+  }
+}

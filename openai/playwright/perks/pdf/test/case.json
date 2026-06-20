@@ -1,0 +1,10 @@
+{
+  "_perk": "pdf",
+  "requires": ["bash"],
+  "vars": { "PW_SESSION": "demo" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["pdf.json"],
+    "nonempty": ["pdf.json"]
+  }
+}

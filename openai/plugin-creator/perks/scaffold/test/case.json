@@ -1,0 +1,10 @@
+{
+  "_perk": "scaffold",
+  "requires": ["python3"],
+  "vars": { "PLUGIN_NAME": "my-plugin" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["scaffold.json"],
+    "nonempty": ["scaffold.json"]
+  }
+}

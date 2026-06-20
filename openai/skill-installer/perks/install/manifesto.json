@@ -1,0 +1,27 @@
+{
+  "_perk": "install",
+  "sequence": [
+    "install_skill"
+  ],
+  "tools": {
+    "install_skill": {
+      "binary": "python3",
+      "params": {
+        "REPO": "${REPO}",
+        "SKILL_PATH": "${SKILL_PATH}",
+        "REF": "${REF}",
+        "DEST": "${DEST}"
+      }
+    }
+  },
+  "env": {
+    "REPO": "${REPO}",
+    "SKILL_PATH": "${SKILL_PATH}",
+    "REF": "${REF}",
+    "DEST": "${DEST}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

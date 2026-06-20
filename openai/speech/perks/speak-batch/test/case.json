@@ -1,0 +1,13 @@
+{
+  "_perk": "speak-batch",
+  "requires": ["python3"],
+  "vars": {
+    "JOBS_JSONL": "${FIXTURE}/jobs.jsonl"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["batch.json"],
+    "nonempty": ["batch.json"],
+    "contains": {"batch.json": "Please hold."}
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "perk": "doctor",
+  "skill": "migrate-to-codex",
+  "description": "Summarize migration readiness (high/medium/low), manual-review item count, existing-Codex collisions, and orphaned artifacts (--doctor, read-only).",
+  "rules": [
+    "read-only",
+    "inspects only; never writes target files",
+    "computes a readiness grade from manual-review, collision, and orphan counts",
+    "doctor output written to record_store"
+  ],
+  "usage": "Set SOURCE (Claude source root) and TARGET (Codex root). Output: doctor.txt.",
+  "limitation": "Read-only readiness report; writes nothing. The vendored CLI imports tomllib and needs Python 3.11+ to run; on older Python it degrades to an empty report.",
+  "minimal_example": {
+    "perk": "doctor",
+    "vars": {
+      "SOURCE": "~/.claude/",
+      "TARGET": "~/.codex/"
+    }
+  }
+}

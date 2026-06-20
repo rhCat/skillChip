@@ -1,0 +1,25 @@
+{
+  "_perk": "migrate",
+  "sequence": [
+    "mtc_migrate"
+  ],
+  "tools": {
+    "mtc_migrate": {
+      "binary": "python3",
+      "params": {
+        "SOURCE": "${SOURCE}",
+        "TARGET": "${TARGET}",
+        "MIGRATE_FLAGS": "${MIGRATE_FLAGS}"
+      }
+    }
+  },
+  "env": {
+    "SOURCE": "${SOURCE}",
+    "TARGET": "${TARGET}",
+    "MIGRATE_FLAGS": "${MIGRATE_FLAGS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

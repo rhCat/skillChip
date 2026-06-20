@@ -1,0 +1,21 @@
+{
+  "_perk": "speak-batch",
+  "sequence": [
+    "speak_batch"
+  ],
+  "tools": {
+    "speak_batch": {
+      "binary": "python3",
+      "params": {
+        "JOBS_JSONL": "${JOBS_JSONL}"
+      }
+    }
+  },
+  "env": {
+    "JOBS_JSONL": "${JOBS_JSONL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

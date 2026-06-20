@@ -1,0 +1,21 @@
+{
+  "_perk": "fetch-comments",
+  "sequence": [
+    "fetch_comments"
+  ],
+  "tools": {
+    "fetch_comments": {
+      "binary": "python3",
+      "params": {
+        "REPO_DIR": "${REPO_DIR}"
+      }
+    }
+  },
+  "env": {
+    "REPO_DIR": "${REPO_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

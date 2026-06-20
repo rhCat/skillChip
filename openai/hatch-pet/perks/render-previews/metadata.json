@@ -1,0 +1,18 @@
+{
+  "perk": "render-previews",
+  "skill": "hatch-pet",
+  "description": "Render lightweight animated GIF QA previews from extracted Codex pet frames, one looping GIF per state using the per-state frame durations.",
+  "rules": [
+    "local-only — reads frame dirs, writes one <state>.gif per row plus a JSON manifest",
+    "requires all 9 rows present with their exact frame counts; otherwise the core errors and the porter records a placeholder manifest",
+    "previews written to record_store/previews; manifest written to record_store/previews-manifest.json"
+  ],
+  "usage": "Set FRAMES_ROOT (the dir of per-state frame folders). Output: previews-manifest.json and previews/<state>.gif.",
+  "limitation": "QA visualization only; does not validate frame quality (use inspect-frames). Requires Pillow (PIL); without it or with incomplete rows the porter writes a placeholder manifest.",
+  "minimal_example": {
+    "perk": "render-previews",
+    "vars": {
+      "FRAMES_ROOT": "./frames"
+    }
+  }
+}

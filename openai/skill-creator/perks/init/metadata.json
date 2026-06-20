@@ -1,0 +1,20 @@
+{
+  "perk": "init",
+  "skill": "skill-creator",
+  "description": "scaffold a new skill dir from template (SKILL.md + agents/openai.yaml + optional resource dirs)",
+  "rules": [
+    "local-only: creates files under OUTPUT_PATH/SKILL_NAME, no remote or live service",
+    "skill name normalized to hyphen-case; fails if the target dir already exists",
+    "agents/openai.yaml generated deterministically from the vendored generate_openai_yaml.py sibling",
+    "stdout log written to record_store"
+  ],
+  "usage": "Set SKILL_NAME (hyphen-case) and OUTPUT_PATH (parent dir). Optional RESOURCES (comma list: scripts,references,assets). Output: init.out.",
+  "limitation": "Scaffolding only — does not edit SKILL.md content. Fails if OUTPUT_PATH/SKILL_NAME already exists. Requires python3 + PyYAML for the agents/openai.yaml step.",
+  "minimal_example": {
+    "perk": "init",
+    "vars": {
+      "SKILL_NAME": "my-skill",
+      "OUTPUT_PATH": "/tmp/skills"
+    }
+  }
+}

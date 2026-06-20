@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for openai-docs — set perk, fill record_store + the vars the perk declares.",
+  "skill": "openai-docs",
+  "perk": "resolve-latest-model",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "LATEST_MODEL_SOURCE": "<latest-model.md path, file:// URL, or https URL>",
+    "LATEST_MODEL_BASE_URL": "https://developers.openai.com"
+  }
+}

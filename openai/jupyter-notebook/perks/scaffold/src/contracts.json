@@ -1,0 +1,27 @@
+{
+  "tool": "new_notebook",
+  "inputs": {
+    "KIND": {
+      "type": "string",
+      "required": true
+    },
+    "TITLE": {
+      "type": "string",
+      "required": true
+    },
+    "OUT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "notebook_out": {
+      "path": "${RECORD_STORE}/notebook.ipynb",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/notebook.ipynb"
+  }
+}

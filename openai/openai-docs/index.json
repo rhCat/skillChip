@@ -1,0 +1,28 @@
+{
+  "skill": "openai-docs",
+  "skill_sha": "e7ebceabafd71465295579e0a061161e53abcff7d18103ec3727cb5c6c44d0c7",
+  "file_count": 21,
+  "files": {
+    "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
+    "SKILL.md": "f030b85fb67d55e7231d02869dd2c7b7203787c039d9f5264471fffbd97eb829",
+    "blueprint.drawio": "6a32448aec6075dac36507635d9ac37482c5a2ec4451c8710a3675fe2a3aa289",
+    "blueprint.json": "1a8fac38591a64dd06a4b8667166423f95336b9c282d6f5f702f065a30db6078",
+    "blueprint.svg": "8cd0bc71342abba17035c19602102ff1f19e87a3b523f14d8d8c5e74e20bf1b6",
+    "ledger.json": "615e270f8f64180f5e7ddb2c9a475dc6a79f5ca14e96b64ce768e413536c0759",
+    "perks.json": "55e9a79df822123b81c4f3bce9304fd10d24513e8cae834be3ef2cd07ee9f1b6",
+    "perks/fetch-codex-manual/manifesto.json": "98480cfca88d90d0a1bc1efc66b11cd54bb0a616102ecbf04d2f41902e89065f",
+    "perks/fetch-codex-manual/metadata.json": "6466cfd4237537f5fcd99d0d0c042e39d88e8a7d225c114df518866e9fe6959a",
+    "perks/fetch-codex-manual/src/contracts.json": "e1fdbbb960d6bd47f4b1848a34baca46749843aed1d40056da66f5a70288bc9f",
+    "perks/fetch-codex-manual/src/fetch-codex-manual.mjs": "f53eb6d2f286e9efcc397e8bee93a938e37296c90953e4e06e94899ef1b6c363",
+    "perks/fetch-codex-manual/src/fetch_codex_manual.sh": "e1531dcdff748f48362af29f6f4b85399e41f363bf69686e814214dbefc2436e",
+    "perks/fetch-codex-manual/test/case.json": "56efb1b76aa1c3c14ffd2906df0eb4ef061369deafda606aa6cb0cf863263dce",
+    "perks/fetch-codex-manual/test/fixture/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "perks/resolve-latest-model/manifesto.json": "0672287bef8f7a26466a5f80caf2a256ba15f61877eb855ada1bf250f04cb470",
+    "perks/resolve-latest-model/metadata.json": "c0dcb9e1b6346cb05ea2cf589e23bb4affcb815520efc8bae86d3f6a10b46aa6",
+    "perks/resolve-latest-model/src/contracts.json": "25cde80e4ce4e9baecda94452d41caa116b3d0f22172bcc4d609766ec3a97f11",
+    "perks/resolve-latest-model/src/resolve-latest-model-info.js": "3fc420a12ab1a344ac49b852138f599d01e3ac561ec86426ba161f42a03d3e52",
+    "perks/resolve-latest-model/src/resolve_latest_model.sh": "8e5d78581fe0d3d327b818854049af6fc0618b8615ec2461cad102e4fb59ad3d",
+    "perks/resolve-latest-model/test/case.json": "f008ed9c57d4c3e1d1b283b855220c22d9a364dc12a1cd33e67364143847b841",
+    "perks/resolve-latest-model/test/fixture/latest-model.md": "ad64ee2c97cf0772514ee7a41c58f71c7633fca6ad74dd03cc15c1f15de21135"
+  }
+}

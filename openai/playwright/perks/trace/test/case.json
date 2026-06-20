@@ -1,0 +1,10 @@
+{
+  "_perk": "trace",
+  "requires": ["bash"],
+  "vars": { "PW_SESSION": "demo" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["trace.json"],
+    "nonempty": ["trace.json"]
+  }
+}

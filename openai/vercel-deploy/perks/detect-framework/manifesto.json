@@ -1,0 +1,21 @@
+{
+  "_perk": "detect-framework",
+  "sequence": [
+    "detect_framework"
+  ],
+  "tools": {
+    "detect_framework": {
+      "binary": "bash",
+      "params": {
+        "PROJECT_PATH": "${PROJECT_PATH}"
+      }
+    }
+  },
+  "env": {
+    "PROJECT_PATH": "${PROJECT_PATH}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

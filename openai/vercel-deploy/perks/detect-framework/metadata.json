@@ -1,0 +1,18 @@
+{
+  "perk": "detect-framework",
+  "skill": "vercel-deploy",
+  "description": "Resolve a project's Vercel framework slug from its package.json (read-only).",
+  "rules": [
+    "read-only",
+    "inspects PROJECT_PATH/package.json only — never packages or uploads",
+    "reuses the vendored deploy.sh detect_framework() matcher; emits framework.json"
+  ],
+  "usage": "Set PROJECT_PATH (a project dir containing package.json, or a package.json path). Output: framework.json.",
+  "limitation": "Read-only: only detects. Returns \"null\" when no package.json is present or no known framework dependency matches.",
+  "minimal_example": {
+    "perk": "detect-framework",
+    "vars": {
+      "PROJECT_PATH": "."
+    }
+  }
+}

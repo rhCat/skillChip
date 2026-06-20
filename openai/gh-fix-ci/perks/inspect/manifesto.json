@@ -1,0 +1,24 @@
+{
+  "_perk": "inspect",
+  "sequence": [
+    "inspect_pr_checks"
+  ],
+  "tools": {
+    "inspect_pr_checks": {
+      "binary": "bash",
+      "params": {
+        "REPO_DIR": "${REPO_DIR}",
+        "PR": "${PR}"
+      }
+    }
+  },
+  "env": {
+    "REPO_DIR": "${REPO_DIR}",
+    "PR": "${PR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "tool": "transcribe_run",
+  "inputs": {
+    "AUDIO": {
+      "type": "string",
+      "required": true
+    },
+    "MODEL": {
+      "type": "string",
+      "required": false
+    },
+    "RESPONSE_FORMAT": {
+      "type": "string",
+      "required": false
+    },
+    "LANGUAGE": {
+      "type": "string",
+      "required": false
+    },
+    "KNOWN_SPEAKER": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "transcribe_run_out": {
+      "path": "${RECORD_STORE}/transcript.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/transcript.txt"
+  }
+}

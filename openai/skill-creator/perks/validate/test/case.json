@@ -1,0 +1,12 @@
+{
+  "_perk": "validate",
+  "requires": ["python3"],
+  "vars": {
+    "SKILL_DIR": "${FIXTURE}"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["validate.out"],
+    "nonempty": ["validate.out"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for playwright — set perk, fill record_store + the vars the perk declares.",
+  "skill": "playwright",
+  "perk": "open",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PW_URL": "<url to open, e.g. https://playwright.dev>"
+  }
+}

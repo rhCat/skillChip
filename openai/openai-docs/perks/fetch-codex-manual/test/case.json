@@ -1,0 +1,13 @@
+{
+  "_perk": "fetch-codex-manual",
+  "requires": ["bash"],
+  "vars": {
+    "MANUAL_URL": "https://developers.openai.com/codex/codex-manual.md",
+    "CACHE_DIR": "${FIXTURE}"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["codex-manual-outline.md"],
+    "nonempty": ["codex-manual-outline.md"]
+  }
+}
