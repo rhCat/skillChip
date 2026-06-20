@@ -1,0 +1,31 @@
+{
+  "_perk": "serve",
+  "sequence": [
+    "deploy_serve"
+  ],
+  "tools": {
+    "deploy_serve": {
+      "binary": "docker",
+      "params": {
+        "CONTEXT_DIR": "${CONTEXT_DIR}",
+        "IMAGE": "${IMAGE}",
+        "NAME": "${NAME}",
+        "PORT": "${PORT}",
+        "VOLUME": "${VOLUME}",
+        "TOKEN_FILE": "${TOKEN_FILE}"
+      }
+    }
+  },
+  "env": {
+    "CONTEXT_DIR": "${CONTEXT_DIR}",
+    "IMAGE": "${IMAGE}",
+    "NAME": "${NAME}",
+    "PORT": "${PORT}",
+    "VOLUME": "${VOLUME}",
+    "TOKEN_FILE": "${TOKEN_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "docker"
+  ]
+}

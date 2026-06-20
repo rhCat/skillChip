@@ -1,0 +1,39 @@
+{
+  "tool": "deploy_serve",
+  "inputs": {
+    "CONTEXT_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "IMAGE": {
+      "type": "string",
+      "required": false
+    },
+    "NAME": {
+      "type": "string",
+      "required": false
+    },
+    "PORT": {
+      "type": "string",
+      "required": false
+    },
+    "VOLUME": {
+      "type": "string",
+      "required": false
+    },
+    "TOKEN_FILE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "deploy_serve_out": {
+      "path": "${RECORD_STORE}/deploy.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/deploy.json"
+  }
+}

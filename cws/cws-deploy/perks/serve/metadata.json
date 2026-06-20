@@ -1,0 +1,19 @@
+{
+  "perk": "serve",
+  "skill": "cws-deploy",
+  "description": "build the govd image (if absent) + (re)create + run the container, then wait for /health",
+  "rules": [
+    "builds the image only when it is not already present",
+    "replaces any existing container by the same NAME (stop + rm, then run fresh)",
+    "binds the data volume so the provenance ledger persists across restarts",
+    "deploy report + build log to record_store"
+  ],
+  "usage": "Set CONTEXT_DIR (repo root with the Dockerfile). Optional IMAGE (cyberware:local), NAME (cyberware), PORT (5773), VOLUME (cyberware-govd), TOKEN_FILE (path to a file holding GOVD_MONITOR_TOKEN — read via cat at runtime, never a plaintext var). Output: deploy.json.",
+  "limitation": "Needs a running Docker daemon. Destructive: removes any prior container by the same NAME (the data volume is preserved).",
+  "minimal_example": {
+    "perk": "serve",
+    "vars": {
+      "CONTEXT_DIR": "."
+    }
+  }
+}

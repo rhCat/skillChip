@@ -1,0 +1,21 @@
+{
+  "_perk": "down",
+  "sequence": [
+    "deploy_down"
+  ],
+  "tools": {
+    "deploy_down": {
+      "binary": "docker",
+      "params": {
+        "NAME": "${NAME}"
+      }
+    }
+  },
+  "env": {
+    "NAME": "${NAME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "docker"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "_schema": "task-ledger TEMPLATE for cws-deploy — set perk, fill record_store + the vars the perk declares.",
+  "skill": "cws-deploy",
+  "perk": "serve",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "CONTEXT_DIR": "<repo root that holds the Dockerfile>",
+    "IMAGE": "cyberware:local",
+    "NAME": "cyberware",
+    "PORT": "5773",
+    "VOLUME": "cyberware-govd",
+    "TOKEN_FILE": ""
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "skill": "cws-deploy",
+  "skill_sha": "7b3fb068de70284b0fbad7f3dabe20c0489504fcb65c0c5ba374543c568f1bd8",
+  "file_count": 19,
+  "files": {
+    "SKILL.md": "0157bbc30099720b67e770e3743eee887b5c38da90089348727169f4ffec5c1b",
+    "blueprint.json": "d2aa3c526c358ba78cef8875124d1b4a686b824cb87f2f5fc3e7bcaa27a3fda4",
+    "ledger.json": "9582bcd003bcdaa5c6e20dabd14c594aa631a2b1a3ce63ed1cfd60873e0e0d30",
+    "perks.json": "f1cdd8955b152cf5d33aff9db2cf609a3f953fb5c42c1c242778dc50f468f010",
+    "perks/down/manifesto.json": "e89fb53bc7bfbd0c4406c376e90275d2695223e09d89960876980f2cc7ec0147",
+    "perks/down/metadata.json": "1e9aeab8d405f2b6ea8c86dd55686ad383155a90463439af7c8339c54cdb8de0",
+    "perks/down/src/contracts.json": "7c5e82a68f3cf738e33ee51e63c8193dc36da05c3512041be2364d7f865e98e0",
+    "perks/down/src/deploy_down.sh": "c9c0bc10f5c59d6ed5da57c72c4cc8f96cd14bf17216b3053cd04081ac553282",
+    "perks/down/test/case.json": "6ca3fc9d32126480db84613df112840e3199976ba21c1fc50a662a77fcac175c",
+    "perks/serve/manifesto.json": "9ca605995508219d49f8a19e72bd49d519b331ee85481c40e108a813733560ca",
+    "perks/serve/metadata.json": "ca62c3beac18bb6889476a788c718920d4984c788be0bf07a66a18e1708261c1",
+    "perks/serve/src/contracts.json": "e41b2a644d74218971e9c6aa3dce2674e3908fd91e34990f7edfdb516b705faa",
+    "perks/serve/src/deploy_serve.sh": "db428493b8824fb97baabdb961dd25e233faff87e8f31238b36b6a1f79840d26",
+    "perks/serve/test/case.json": "b6cba9b0a8a4fb0a00ff443e40e99ca673c14718ee3997376c2c8ff662ec9fd5",
+    "perks/status/manifesto.json": "3e86a5a34d63638585e1e8d5eae61f2e42a16b3d9079cc63c6fc3f4f99f319b6",
+    "perks/status/metadata.json": "7d75530f89d09bc8fce380cca8a90a3746963ba157b1d2cff8bcb132a4692d2f",
+    "perks/status/src/contracts.json": "bd068d8b7feb67122f45ca105ea966d11647655e92be7ca0639789b4bc62dcaf",
+    "perks/status/src/deploy_status.sh": "6563fccd594d27051220d38df5ea8d85a7ae44b665ecc80f8c237fc22b012d67",
+    "perks/status/test/case.json": "88db92dabd309fc36e62b755f35adee8d9d03681b804a54d1e05c12a4f97a137"
+  }
+}

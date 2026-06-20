@@ -1,0 +1,16 @@
+{
+  "perk": "down",
+  "skill": "cws-deploy",
+  "description": "stop + remove the govd container (the data volume is preserved)",
+  "rules": [
+    "stop then remove the container by NAME (no -f)",
+    "the data volume is NOT removed — the provenance ledger survives",
+    "teardown report to record_store"
+  ],
+  "usage": "Optional NAME (cyberware). Output: down.json. The data volume is left intact for the next serve.",
+  "limitation": "Needs a running Docker daemon. Destructive: removes the container (volume preserved).",
+  "minimal_example": {
+    "perk": "down",
+    "vars": {}
+  }
+}
