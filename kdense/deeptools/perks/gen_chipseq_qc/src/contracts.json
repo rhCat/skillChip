@@ -1,0 +1,31 @@
+{
+  "tool": "gen_chipseq_qc",
+  "inputs": {
+    "INPUT_BAM": {
+      "type": "string",
+      "required": false
+    },
+    "CHIP_BAMS": {
+      "type": "string",
+      "required": false
+    },
+    "GENOME_SIZE": {
+      "type": "string",
+      "required": false
+    },
+    "THREADS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "workflow_out": {
+      "path": "${RECORD_STORE}/chipseq_qc.sh",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/chipseq_qc.sh"
+  }
+}

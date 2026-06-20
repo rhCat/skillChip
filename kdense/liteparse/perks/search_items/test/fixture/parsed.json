@@ -1,0 +1,18 @@
+{
+  "text": "Materials and Methods\nResults follow.",
+  "pages": [
+    {
+      "page_num": 1,
+      "width": 612.0,
+      "height": 792.0,
+      "text": "Materials and Methods Results follow.",
+      "text_items": [
+        {"text": "Materials", "x": 72.0, "y": 100.0, "width": 60.0, "height": 14.0, "font_name": "Times-Bold", "font_size": 12.0, "confidence": null},
+        {"text": "and", "x": 136.0, "y": 100.0, "width": 24.0, "height": 14.0, "font_name": "Times-Bold", "font_size": 12.0, "confidence": null},
+        {"text": "Methods", "x": 164.0, "y": 100.0, "width": 56.0, "height": 14.0, "font_name": "Times-Bold", "font_size": 12.0, "confidence": null},
+        {"text": "Results", "x": 72.0, "y": 140.0, "width": 48.0, "height": 12.0, "font_name": "Times-Roman", "font_size": 11.0, "confidence": null},
+        {"text": "follow.", "x": 124.0, "y": 140.0, "width": 40.0, "height": 12.0, "font_name": "Times-Roman", "font_size": 11.0, "confidence": null}
+      ]
+    }
+  ]
+}

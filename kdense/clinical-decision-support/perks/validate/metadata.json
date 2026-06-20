@@ -1,0 +1,18 @@
+{
+  "perk": "validate",
+  "skill": "clinical-decision-support",
+  "description": "Lint a clinical decision support document (.tex/.md/.txt) for required sections, evidence citations, GRADE recommendation grading, statistical-reporting completeness, biomarker nomenclature, and potential HIPAA identifiers; write a validation report.",
+  "rules": [
+    "read-only — reads one document, writes only the validation report under record_store",
+    "the porter never propagates the core's non-zero exit (errors/warnings still produce a report)",
+    "output is validation_report.txt"
+  ],
+  "usage": "Set DOC (path to the document to lint). Output: validation_report.txt.",
+  "limitation": "Heuristic regex checks only — HIPAA and citation detection are best-effort, not a compliance guarantee. Pure Python stdlib.",
+  "minimal_example": {
+    "perk": "validate",
+    "vars": {
+      "DOC": "cohort_analysis.tex"
+    }
+  }
+}

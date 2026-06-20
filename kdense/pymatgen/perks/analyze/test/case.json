@@ -1,0 +1,12 @@
+{
+  "_perk": "analyze",
+  "requires": ["python3"],
+  "vars": {
+    "STRUCTURE_FILE": "${FIXTURE}/POSCAR"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["analyze.log"],
+    "nonempty": ["analyze.log"]
+  }
+}

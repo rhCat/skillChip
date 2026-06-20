@@ -1,0 +1,27 @@
+{
+  "tool": "classify",
+  "inputs": {
+    "DATA_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "TARGET_COL": {
+      "type": "string",
+      "required": false
+    },
+    "TEST_SIZE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "classify_out": {
+      "path": "${RECORD_STORE}/classification.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/classification.json"
+  }
+}

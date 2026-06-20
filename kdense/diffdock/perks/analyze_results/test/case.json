@@ -1,0 +1,15 @@
+{
+  "_perk": "analyze_results",
+  "requires": ["python3"],
+  "vars": {
+    "RESULTS_DIR": "${FIXTURE}",
+    "TOP": "",
+    "THRESHOLD": "",
+    "BEST": ""
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["summary.csv"],
+    "nonempty": ["summary.csv"]
+  }
+}

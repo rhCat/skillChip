@@ -1,0 +1,20 @@
+{
+  "perk": "reduce_dimensions",
+  "skill": "scanpy",
+  "description": "Compute PCA, the kNN neighborhood graph, and a UMAP (and optionally t-SNE) embedding on a normalized object. Writes a PCA variance-ratio elbow plot to help choose the number of PCs.",
+  "rules": [
+    "input should be a normalized object (optionally HVG-subset / scaled)",
+    "read-only input — writes a new reduced.h5ad + variance/colored plots under record_store",
+    "USE_REP lets the graph be built from a custom obsm key (e.g. X_pca_harmony from batch_correct)",
+    "COLOR is a space-separated list of obs/var keys to color the UMAP"
+  ],
+  "usage": "Set INPUT. Optional: N_COMPS, N_PCS, N_NEIGHBORS, USE_REP, TSNE=1, COLOR, NO_PLOTS=1. Output: reduced.h5ad.",
+  "limitation": "Requires scanpy installed; without it the porter writes a {} placeholder reduced.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "reduce_dimensions",
+    "vars": {
+      "INPUT": "normalized.h5ad",
+      "N_PCS": "40"
+    }
+  }
+}

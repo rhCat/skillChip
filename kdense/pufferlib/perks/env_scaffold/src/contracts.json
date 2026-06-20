@@ -1,0 +1,23 @@
+{
+  "tool": "env_scaffold",
+  "inputs": {
+    "GRID_SIZE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "env_scaffold_py": {
+      "path": "${RECORD_STORE}/env_scaffold.py",
+      "type": "file"
+    },
+    "env_scaffold_log": {
+      "path": "${RECORD_STORE}/env_scaffold.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/env_scaffold.log"
+  }
+}

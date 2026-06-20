@@ -1,0 +1,4 @@
+{
+  "factors": {"temp_C": [20, 40, 60], "catalyst": ["A", "B"]},
+  "seed": 1
+}

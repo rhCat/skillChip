@@ -1,0 +1,19 @@
+{
+  "tool": "validate",
+  "inputs": {
+    "PPTX_PATH": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "validate_out": {
+      "path": "${RECORD_STORE}/validate.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/validate.log"
+  }
+}

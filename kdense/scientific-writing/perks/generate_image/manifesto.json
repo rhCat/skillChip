@@ -1,0 +1,28 @@
+{
+  "_perk": "generate_image",
+  "sequence": [
+    "generate_image"
+  ],
+  "tools": {
+    "generate_image": {
+      "binary": "python3",
+      "params": {
+        "PROMPT": "${PROMPT}",
+        "OUTPUT_NAME": "${OUTPUT_NAME}",
+        "MODEL": "${MODEL}",
+        "INPUT_IMAGE": "${INPUT_IMAGE}"
+      }
+    }
+  },
+  "env": {
+    "PROMPT": "${PROMPT}",
+    "OUTPUT_NAME": "${OUTPUT_NAME}",
+    "MODEL": "${MODEL}",
+    "INPUT_IMAGE": "${INPUT_IMAGE}",
+    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "extract_structure",
+  "inputs": {
+    "PDF_PATH": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "extract_structure_out": {
+      "path": "${RECORD_STORE}/structure.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/structure.json"
+  }
+}

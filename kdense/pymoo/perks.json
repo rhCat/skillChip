@@ -1,0 +1,45 @@
+{
+  "skill": "pymoo",
+  "perks": [
+    {
+      "id": "single_objective",
+      "summary": "single-objective optimization with a Genetic Algorithm on a benchmark problem (read-only)",
+      "destructive": false,
+      "tools": [
+        "pymoo_single_objective"
+      ]
+    },
+    {
+      "id": "multi_objective",
+      "summary": "multi-objective optimization with NSGA-II, obtaining a Pareto front on a bi-objective benchmark (read-only)",
+      "destructive": false,
+      "tools": [
+        "pymoo_multi_objective"
+      ]
+    },
+    {
+      "id": "many_objective",
+      "summary": "many-objective optimization with NSGA-III using reference directions on a 4+ objective benchmark (read-only)",
+      "destructive": false,
+      "tools": [
+        "pymoo_many_objective"
+      ]
+    },
+    {
+      "id": "custom_problem",
+      "summary": "define and solve custom unconstrained + constrained ElementwiseProblems with NSGA-II (read-only)",
+      "destructive": false,
+      "tools": [
+        "pymoo_custom_problem"
+      ]
+    },
+    {
+      "id": "decision_making",
+      "summary": "select a preferred solution from a Pareto front via pseudo-weights MCDM (read-only)",
+      "destructive": false,
+      "tools": [
+        "pymoo_decision_making"
+      ]
+    }
+  ]
+}

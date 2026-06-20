@@ -1,0 +1,23 @@
+{
+  "_perk": "validate_presentation",
+  "sequence": [
+    "validate_presentation"
+  ],
+  "tools": {
+    "validate_presentation": {
+      "binary": "python3",
+      "params": {
+        "DECK_PATH": "${DECK_PATH}",
+        "DURATION": "${DURATION}"
+      }
+    }
+  },
+  "env": {
+    "DECK_PATH": "${DECK_PATH}",
+    "DURATION": "${DURATION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "tool": "journal_export",
+  "inputs": {
+    "DATA_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "JOURNAL": {
+      "type": "string",
+      "required": false
+    },
+    "FIGURE_TYPE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "journal_manifest": {
+      "path": "${RECORD_STORE}/journal_export.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/journal_export.json"
+  }
+}

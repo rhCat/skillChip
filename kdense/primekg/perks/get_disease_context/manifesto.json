@@ -1,0 +1,23 @@
+{
+  "_perk": "get_disease_context",
+  "sequence": [
+    "get_disease_context"
+  ],
+  "tools": {
+    "get_disease_context": {
+      "binary": "python3",
+      "params": {
+        "PRIMEKG_CSV": "${PRIMEKG_CSV}",
+        "DISEASE_NAME": "${DISEASE_NAME}"
+      }
+    }
+  },
+  "env": {
+    "PRIMEKG_CSV": "${PRIMEKG_CSV}",
+    "DISEASE_NAME": "${DISEASE_NAME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

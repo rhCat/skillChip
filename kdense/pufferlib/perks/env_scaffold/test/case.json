@@ -1,0 +1,10 @@
+{
+  "_perk": "env_scaffold",
+  "requires": ["python3"],
+  "vars": { "GRID_SIZE": "8" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["env_scaffold.py", "env_scaffold.log"],
+    "nonempty": ["env_scaffold.py", "env_scaffold.log"]
+  }
+}

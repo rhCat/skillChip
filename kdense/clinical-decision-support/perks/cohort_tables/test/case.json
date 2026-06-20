@@ -1,0 +1,13 @@
+{
+  "_perk": "cohort_tables",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT_CSV": "${FIXTURE}/cohort.csv",
+    "GROUP_COL": "group"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["table1_baseline.csv"],
+    "nonempty": ["table1_baseline.csv"]
+  }
+}

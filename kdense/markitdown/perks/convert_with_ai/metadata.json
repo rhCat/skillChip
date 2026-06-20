@@ -1,0 +1,21 @@
+{
+  "perk": "convert_with_ai",
+  "skill": "markitdown",
+  "description": "Convert one file to Markdown with AI-enhanced image descriptions, calling an OpenRouter vision model (default anthropic/claude-opus-4.5) for embedded images.",
+  "rules": [
+    "writes a single Markdown file into record_store/converted.md plus a summary",
+    "INPUT_FILE must be an existing file",
+    "OPENROUTER_API_KEY required for the AI image-description step",
+    "PROMPT_TYPE one of scientific|presentation|general|data_viz|medical (default general); CUSTOM_PROMPT overrides it",
+    "requires the markitdown and openai Python libraries"
+  ],
+  "usage": "Set INPUT_FILE. Optional MODEL, PROMPT_TYPE, CUSTOM_PROMPT, OPENROUTER_API_KEY. Output: converted.md + convert_with_ai_summary.json.",
+  "limitation": "Needs the markitdown + openai libraries AND network access to OpenRouter with a valid OPENROUTER_API_KEY. Without them the porter records a structured 'missing dependency' note and produces no Markdown.",
+  "minimal_example": {
+    "perk": "convert_with_ai",
+    "vars": {
+      "INPUT_FILE": "./slides.pptx",
+      "PROMPT_TYPE": "scientific"
+    }
+  }
+}

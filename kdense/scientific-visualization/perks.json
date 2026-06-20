@@ -1,0 +1,37 @@
+{
+  "skill": "scientific-visualization",
+  "perks": [
+    {
+      "id": "export-figure",
+      "summary": "render a plot from a data file and save it in publication formats (PDF/PNG/EPS/SVG/TIFF) at correct DPI",
+      "destructive": false,
+      "tools": [
+        "figure_export"
+      ]
+    },
+    {
+      "id": "export-journal",
+      "summary": "render a plot and export it with a specific journal's required formats + DPI (nature/science/cell/plos/acs/ieee)",
+      "destructive": false,
+      "tools": [
+        "journal_export"
+      ]
+    },
+    {
+      "id": "check-size",
+      "summary": "check whether a figure's width/height (inches) complies with a journal's column-width + max-height specs (read-only report)",
+      "destructive": false,
+      "tools": [
+        "size_check"
+      ]
+    },
+    {
+      "id": "make-style",
+      "summary": "emit a publication-quality matplotlib .mplstyle template (fonts, spines, ticks, Okabe-Ito color cycle, savefig DPI)",
+      "destructive": false,
+      "tools": [
+        "style_template"
+      ]
+    }
+  ]
+}

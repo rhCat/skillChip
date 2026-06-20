@@ -1,0 +1,23 @@
+{
+  "tool": "gene_analysis",
+  "inputs": {
+    "GENE": {
+      "type": "string",
+      "required": true
+    },
+    "SPECIES": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "gene_analysis_log": {
+      "path": "${RECORD_STORE}/gene_analysis.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/gene_analysis.log"
+  }
+}

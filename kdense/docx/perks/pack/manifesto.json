@@ -1,0 +1,23 @@
+{
+  "_perk": "pack",
+  "sequence": [
+    "docx_pack"
+  ],
+  "tools": {
+    "docx_pack": {
+      "binary": "bash",
+      "params": {
+        "UNPACKED_DIR": "${UNPACKED_DIR}"
+      }
+    }
+  },
+  "env": {
+    "UNPACKED_DIR": "${UNPACKED_DIR}",
+    "ORIGINAL_DOCX": "${ORIGINAL_DOCX}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

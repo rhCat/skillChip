@@ -1,0 +1,12 @@
+{
+  "_schema": "task-ledger TEMPLATE for deepchem — set perk, fill record_store + the vars the perk declares.",
+  "skill": "deepchem",
+  "perk": "predict_solubility",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "DATA_CSV": "<path to SMILES CSV, or empty to use the Delaney/ESOL benchmark>",
+    "SMILES_COL": "smiles",
+    "TARGET_COL": "solubility",
+    "PREDICT_SMILES": "CCO c1ccccc1"
+  }
+}

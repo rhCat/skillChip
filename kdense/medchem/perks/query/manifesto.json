@@ -1,0 +1,23 @@
+{
+  "_perk": "query",
+  "sequence": [
+    "mc_query"
+  ],
+  "tools": {
+    "mc_query": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}",
+        "QUERY": "${QUERY}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "QUERY": "${QUERY}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

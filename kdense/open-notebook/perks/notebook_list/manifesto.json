@@ -1,0 +1,24 @@
+{
+  "_perk": "notebook_list",
+  "sequence": [
+    "notebook_list"
+  ],
+  "tools": {
+    "notebook_list": {
+      "binary": "bash",
+      "params": {
+        "OPEN_NOTEBOOK_URL": "${OPEN_NOTEBOOK_URL}",
+        "NB_ARCHIVED": "${NB_ARCHIVED}"
+      }
+    }
+  },
+  "env": {
+    "OPEN_NOTEBOOK_URL": "${OPEN_NOTEBOOK_URL}",
+    "NB_ARCHIVED": "${NB_ARCHIVED}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

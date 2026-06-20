@@ -1,0 +1,23 @@
+{
+  "tool": "market_visuals",
+  "inputs": {
+    "TOPIC": {
+      "type": "string",
+      "required": true
+    },
+    "ALL": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "market_visuals_out": {
+      "path": "${RECORD_STORE}/market_visuals_manifest.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/market_visuals_manifest.txt"
+  }
+}

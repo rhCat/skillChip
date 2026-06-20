@@ -1,0 +1,10 @@
+{
+  "_perk": "generate_schematic",
+  "requires": ["python3"],
+  "vars": { "PROMPT": "simple block diagram of a data pipeline" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["generate_schematic_summary.json"],
+    "nonempty": ["generate_schematic_summary.json"]
+  }
+}

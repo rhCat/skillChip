@@ -1,0 +1,28 @@
+{
+  "skill": "infographics",
+  "skill_sha": "fd2400c30dbed7124a840a022f4a7c3e173538203a247cab671ff0d880ad17a7",
+  "file_count": 21,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "208d1e0e3384d62a5b4adb77f869bef8b49764f9c975bfc2a034ba551443f775",
+    "blueprint.drawio": "98ce5cdbf70a1767d0f43d71bb77f5bd9ae337d637bddbda0055e96b736bcab3",
+    "blueprint.json": "5f7bf73a5f251259575ac814758e1550eab371de9d4d086e52726e811284b7eb",
+    "blueprint.svg": "fb72edc9c27b2f3bb74ce444231045d3374f18b2206563f9c58a0362318eaabb",
+    "ledger.json": "7019737a970817a90242032d4009f113b29dbc1b45909a4d4b7d8defae07160b",
+    "perks.json": "1a71bcf82816c109ad3510a571c4f2d968ae7ea18cd06ceb0799c87ab9f56c53",
+    "perks/generate/manifesto.json": "14ec14e05e941652ff40b17c45454da498a834089d9fb215b6143eaa07cf8c77",
+    "perks/generate/metadata.json": "30f9c4d856539ccf93cdfb5e381351d568d63b9450b4f226b2c393103e5773bb",
+    "perks/generate/src/contracts.json": "21c1cccd82da803aa34c43646a083b9a923b90b19398bb870e22185674420c06",
+    "perks/generate/src/generate_infographic.py": "7820f1a7a4ef0792ceeafc53f1a9a0a0d992566e3ddf2b89eb3181b4213a3715",
+    "perks/generate/src/generate_infographic.sh": "bae6e73471bcebef40b68ed87462b3070f9e4ebdde65d61e6f766aef56a80651",
+    "perks/generate/src/generate_infographic_ai.py": "aebaa064e5b60bddad1e284c7670a901ac26bde2ac231fcff230789b70a2ca37",
+    "perks/generate/test/case.json": "828de6aada6c3e0b4583c08413868ed784d0f2dde5bdd5d78e009a39dbe46516",
+    "perks/list_options/manifesto.json": "8bde228ccb27dad3fcc3c8d36030bbfd5e8827c5d9c431c9e27ada948dd2eb4c",
+    "perks/list_options/metadata.json": "70c9fb9b37f987894a7559a855661f79aa95388c00b4278a1af5cce88bb1b9dc",
+    "perks/list_options/src/contracts.json": "360430f6e64a0cf3d828236f0410437b60e62a0fc81079808d474e73bcc40ee2",
+    "perks/list_options/src/generate_infographic.py": "7820f1a7a4ef0792ceeafc53f1a9a0a0d992566e3ddf2b89eb3181b4213a3715",
+    "perks/list_options/src/generate_infographic_ai.py": "aebaa064e5b60bddad1e284c7670a901ac26bde2ac231fcff230789b70a2ca37",
+    "perks/list_options/src/list_options.sh": "f885b32ad91eebf6677192cfab6a78982efb32155fb02295532f46f439d77de0",
+    "perks/list_options/test/case.json": "b8e3a39614e340d0a148f4686a3806fa9ab1752a9dca29ccc209b73230d868d0"
+  }
+}

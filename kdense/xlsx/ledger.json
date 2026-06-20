@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for xlsx — set perk, fill record_store + the vars the perk declares.",
+  "skill": "xlsx",
+  "perk": "recalc",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "XLSX_FILE": "<path to .xlsx/.xlsm workbook>"
+  }
+}

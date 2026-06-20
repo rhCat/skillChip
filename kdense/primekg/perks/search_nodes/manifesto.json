@@ -1,0 +1,25 @@
+{
+  "_perk": "search_nodes",
+  "sequence": [
+    "search_nodes"
+  ],
+  "tools": {
+    "search_nodes": {
+      "binary": "python3",
+      "params": {
+        "PRIMEKG_CSV": "${PRIMEKG_CSV}",
+        "NAME_QUERY": "${NAME_QUERY}",
+        "NODE_TYPE": "${NODE_TYPE}"
+      }
+    }
+  },
+  "env": {
+    "PRIMEKG_CSV": "${PRIMEKG_CSV}",
+    "NAME_QUERY": "${NAME_QUERY}",
+    "NODE_TYPE": "${NODE_TYPE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "_perk": "gen_chipseq_qc",
+  "sequence": [
+    "gen_chipseq_qc"
+  ],
+  "tools": {
+    "gen_chipseq_qc": {
+      "binary": "python3",
+      "params": {
+        "INPUT_BAM": "${INPUT_BAM}",
+        "CHIP_BAMS": "${CHIP_BAMS}",
+        "GENOME_SIZE": "${GENOME_SIZE}",
+        "THREADS": "${THREADS}"
+      }
+    }
+  },
+  "env": {
+    "INPUT_BAM": "${INPUT_BAM}",
+    "CHIP_BAMS": "${CHIP_BAMS}",
+    "GENOME_SIZE": "${GENOME_SIZE}",
+    "THREADS": "${THREADS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

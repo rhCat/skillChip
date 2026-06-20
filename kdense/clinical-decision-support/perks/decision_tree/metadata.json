@@ -1,0 +1,18 @@
+{
+  "perk": "decision_tree",
+  "skill": "clinical-decision-support",
+  "description": "Render a clinical decision algorithm into a TikZ/LaTeX flowchart from a JSON spec (nodes: start/decision/action with yes/no targets and urgency styling), or generate the built-in example algorithm.",
+  "rules": [
+    "read-only — reads one JSON spec, writes a single .tex under record_store",
+    "no SPEC_JSON (or empty) generates the built-in example chest-pain algorithm",
+    "output is clinical_algorithm.tex (TikZ); compile downstream with pdflatex"
+  ],
+  "usage": "Set SPEC_JSON (path to a decision-tree JSON spec; omit for the example). Output: clinical_algorithm.tex.",
+  "limitation": "JSON layout is a simple vertical listing — complex trees may need manual TikZ positioning. Pure Python stdlib (pyyaml only needed for YAML input, which this perk does not use).",
+  "minimal_example": {
+    "perk": "decision_tree",
+    "vars": {
+      "SPEC_JSON": ""
+    }
+  }
+}

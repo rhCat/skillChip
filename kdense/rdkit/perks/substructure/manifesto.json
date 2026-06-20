@@ -1,0 +1,23 @@
+{
+  "_perk": "substructure",
+  "sequence": [
+    "rd_substructure"
+  ],
+  "tools": {
+    "rd_substructure": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}",
+        "PATTERN": "${PATTERN}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "PATTERN": "${PATTERN}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "_perk": "notebook_create",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "OPEN_NOTEBOOK_URL": "http://127.0.0.1:5999",
+    "NB_NAME": "skilltest notebook",
+    "NB_DESCRIPTION": "offline skilltest fixture"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["notebook.json"],
+    "nonempty": ["notebook.json"]
+  }
+}

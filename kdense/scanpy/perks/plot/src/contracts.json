@@ -1,0 +1,23 @@
+{
+  "tool": "plot",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "KIND": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "plot_log": {
+      "path": "${RECORD_STORE}/plot.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/plot.log"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "_perk": "process_identifications",
+  "sequence": [
+    "process_identifications"
+  ],
+  "tools": {
+    "process_identifications": {
+      "binary": "bash",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "FASTA": "${FASTA}",
+    "FDR": "${FDR}",
+    "MIN_LENGTH": "${MIN_LENGTH}",
+    "MAX_LENGTH": "${MAX_LENGTH}",
+    "BEST_PER_SPECTRUM": "${BEST_PER_SPECTRUM}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

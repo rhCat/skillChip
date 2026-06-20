@@ -1,0 +1,19 @@
+{
+  "perk": "generate-template",
+  "skill": "clinical-reports",
+  "description": "Emit a blank clinical-report template (case_report, soap_note, h_and_p, discharge_summary, consult_note, radiology, pathology, lab, sae, csr) into the record store.",
+  "rules": [
+    "non-interactive — selects a template by TEMPLATE_TYPE (the script's --type) and copies it",
+    "the 12 template markdown files are vendored under src/assets; the porter reconstructs the layout the core expects",
+    "valid TEMPLATE_TYPE values: case_report, soap_note, h_and_p, discharge_summary, consult_note, radiology, pathology, lab, sae, csr",
+    "template markdown written to record_store as template.md"
+  ],
+  "usage": "Set TEMPLATE_TYPE (one of the values above). Output: template.md.",
+  "limitation": "Copies a static template; no field-filling. An unknown TEMPLATE_TYPE yields a minimal placeholder. Requires python3 (stdlib only).",
+  "minimal_example": {
+    "perk": "generate-template",
+    "vars": {
+      "TEMPLATE_TYPE": "soap_note"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_perk": "simulate",
+  "requires": ["python3"],
+  "vars": { "PROTOCOL_FILE": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["simulate.log"],
+    "nonempty": ["simulate.log"]
+  }
+}

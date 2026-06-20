@@ -1,0 +1,20 @@
+{
+  "perk": "schematic",
+  "skill": "venue-templates",
+  "description": "Generate a publication-quality scientific schematic from a natural-language description using the OpenRouter image API, with smart iterative quality refinement keyed to the target document type.",
+  "rules": [
+    "requires OPENROUTER_API_KEY and network access — calls the OpenRouter LLM image service",
+    "requires the Python 'requests' library (and optionally 'python-dotenv')",
+    "iterations are clamped to a maximum of 2 by the core",
+    "rendered image written to record_store as schematic.png"
+  ],
+  "usage": "Set PROMPT (the diagram description). Optionally set DOC_TYPE (journal|conference|poster|presentation|report|grant|thesis|preprint|default) and ITERATIONS (1-2). Requires OPENROUTER_API_KEY in env. Output: schematic.png.",
+  "limitation": "Cannot run offline: needs OPENROUTER_API_KEY, network egress to OpenRouter, and the requests library. Without them the porter writes an empty marker and the contract's image output is not produced.",
+  "minimal_example": {
+    "perk": "schematic",
+    "vars": {
+      "PROMPT": "CONSORT participant flow diagram",
+      "DOC_TYPE": "journal"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for neuropixels-analysis — set perk, fill record_store + the vars the perk declares.",
+  "skill": "neuropixels-analysis",
+  "perk": "explore",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "DATA_PATH": "<SpikeGLX/OpenEphys recording dir>",
+    "STREAM_NAME": "imec0.ap"
+  }
+}

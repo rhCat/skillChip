@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for iso-13485-certification — set perk, fill record_store + the vars the perk declares.",
+  "skill": "iso-13485-certification",
+  "perk": "gap-analysis",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "DOCS_DIR": "<directory of existing QMS documents to gap-analyze>"
+  }
+}

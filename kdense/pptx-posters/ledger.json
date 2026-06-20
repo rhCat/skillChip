@@ -1,0 +1,13 @@
+{
+  "_schema": "task-ledger TEMPLATE for pptx-posters — set perk, fill record_store + the vars the perk declares.",
+  "skill": "pptx-posters",
+  "perk": "schematic",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PROMPT": "<natural-language description of the diagram to generate>",
+    "OUTPUT_NAME": "<output image filename, e.g. hero.png>",
+    "DOC_TYPE": "poster",
+    "ITERATIONS": "2",
+    "OPENROUTER_API_KEY": "<OpenRouter API key>"
+  }
+}

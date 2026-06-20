@@ -1,0 +1,27 @@
+{
+  "tool": "biomarker_classifier",
+  "inputs": {
+    "INPUT_CSV": {
+      "type": "string",
+      "required": false
+    },
+    "BIOMARKER": {
+      "type": "string",
+      "required": false
+    },
+    "THRESHOLD": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "classified_out": {
+      "path": "${RECORD_STORE}/classified_data.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/classified_data.csv"
+  }
+}

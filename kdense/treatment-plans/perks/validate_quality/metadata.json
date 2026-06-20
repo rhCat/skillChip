@@ -1,0 +1,19 @@
+{
+  "perk": "validate_quality",
+  "skill": "treatment-plans",
+  "description": "Validate treatment-plan content quality against SMART goals, evidence-based practice, patient-centered care, safety/risk, and medication documentation, plus ICD-10 codes, timeframes, measurable metrics, and readability. Read-only.",
+  "rules": [
+    "read-only: never modifies the input plan",
+    "input is a .tex (or .txt) treatment plan",
+    "stdlib only (re, argparse) — no third-party deps",
+    "full quality report written to record_store/quality.txt"
+  ],
+  "usage": "Set PLAN_FILE to a .tex treatment plan. Output: quality.txt.",
+  "limitation": "Heuristic regex scoring — it cannot judge true clinical accuracy. The core exits non-zero when quality <70%; the porter still records the report.",
+  "minimal_example": {
+    "perk": "validate_quality",
+    "vars": {
+      "PLAN_FILE": "./my_plan.tex"
+    }
+  }
+}

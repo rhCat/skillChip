@@ -1,0 +1,26 @@
+{
+  "_perk": "annotate",
+  "sequence": [
+    "annotate"
+  ],
+  "tools": {
+    "annotate": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "CLUSTER_KEY": "${CLUSTER_KEY}",
+    "MAPPING": "${MAPPING}",
+    "LABEL_KEY": "${LABEL_KEY}",
+    "MARKERS": "${MARKERS}",
+    "NO_PLOTS": "${NO_PLOTS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

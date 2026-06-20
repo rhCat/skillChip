@@ -1,0 +1,31 @@
+{
+  "tool": "filter_counts",
+  "inputs": {
+    "COUNTS": {
+      "type": "string",
+      "required": true
+    },
+    "METADATA": {
+      "type": "string",
+      "required": true
+    },
+    "MIN_COUNTS": {
+      "type": "string",
+      "required": false
+    },
+    "CONDITION_COL": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "filtered_counts": {
+      "path": "${RECORD_STORE}/filtered_counts.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/filtered_counts.csv"
+  }
+}

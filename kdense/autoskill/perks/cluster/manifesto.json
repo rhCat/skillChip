@@ -1,0 +1,27 @@
+{
+  "_perk": "cluster",
+  "sequence": [
+    "cluster"
+  ],
+  "tools": {
+    "cluster": {
+      "binary": "cluster.sh",
+      "params": {
+        "INPUT": "${INPUT}",
+        "IDLE_GAP_MINUTES": "${IDLE_GAP_MINUTES}",
+        "MIN_SESSION_MINUTES": "${MIN_SESSION_MINUTES}",
+        "MIN_CLUSTER_SIZE": "${MIN_CLUSTER_SIZE}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "IDLE_GAP_MINUTES": "${IDLE_GAP_MINUTES}",
+    "MIN_SESSION_MINUTES": "${MIN_SESSION_MINUTES}",
+    "MIN_CLUSTER_SIZE": "${MIN_CLUSTER_SIZE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

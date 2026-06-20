@@ -1,0 +1,25 @@
+{
+  "_perk": "render_plot",
+  "sequence": [
+    "plot_render"
+  ],
+  "tools": {
+    "plot_render": {
+      "binary": "python3",
+      "params": {
+        "PLOT_TYPE": "${PLOT_TYPE}",
+        "PLOT_STYLE": "${PLOT_STYLE}",
+        "PLOT_OUT": "${PLOT_OUT}"
+      }
+    }
+  },
+  "env": {
+    "PLOT_TYPE": "${PLOT_TYPE}",
+    "PLOT_STYLE": "${PLOT_STYLE}",
+    "PLOT_OUT": "${PLOT_OUT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

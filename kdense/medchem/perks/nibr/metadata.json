@@ -1,0 +1,18 @@
+{
+  "perk": "nibr",
+  "skill": "medchem",
+  "description": "Apply the NIBR (Novartis) screening-deck curation filter to every molecule and write pass/severity/reasons columns (renamed passes_nibr / nibr_status). Compounds with severity >= 10 are excluded by default per the NIBR paper.",
+  "rules": [
+    "read-only — parses molecules and writes a results CSV; mutates nothing remote",
+    "INPUT may be .csv/.tsv (smiles column), .sdf, or .txt (one SMILES per line)",
+    "results written to record_store/nibr.csv"
+  ],
+  "usage": "Set INPUT (molecule file). Output: nibr.csv.",
+  "limitation": "Requires the medchem + datamol + rdkit + pandas stack (Python >=3.9); when absent the porter degrades gracefully and writes a stub so governance still runs offline.",
+  "minimal_example": {
+    "perk": "nibr",
+    "vars": {
+      "INPUT": "mols.txt"
+    }
+  }
+}

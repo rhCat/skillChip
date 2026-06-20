@@ -1,0 +1,35 @@
+{
+  "tool": "dicom_to_image",
+  "inputs": {
+    "DICOM_IN": {
+      "type": "string",
+      "required": true
+    },
+    "IMG_OUT": {
+      "type": "string",
+      "required": false
+    },
+    "IMG_FORMAT": {
+      "type": "string",
+      "required": false
+    },
+    "APPLY_WINDOWING": {
+      "type": "string",
+      "required": false
+    },
+    "FRAME": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "image_out": {
+      "path": "${RECORD_STORE}/image.png",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/image.png"
+  }
+}

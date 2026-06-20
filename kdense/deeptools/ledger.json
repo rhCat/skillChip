@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for deeptools — set perk, fill record_store + the vars the perk declares.",
+  "skill": "deeptools",
+  "perk": "validate",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "BAM_FILES": "<space-separated BAM paths, or empty>",
+    "BIGWIG_FILES": "<space-separated bigWig paths, or empty>",
+    "BED_FILES": "<space-separated BED paths, or empty>"
+  }
+}

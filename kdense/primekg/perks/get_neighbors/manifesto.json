@@ -1,0 +1,25 @@
+{
+  "_perk": "get_neighbors",
+  "sequence": [
+    "get_neighbors"
+  ],
+  "tools": {
+    "get_neighbors": {
+      "binary": "python3",
+      "params": {
+        "PRIMEKG_CSV": "${PRIMEKG_CSV}",
+        "NODE_ID": "${NODE_ID}",
+        "RELATION_TYPE": "${RELATION_TYPE}"
+      }
+    }
+  },
+  "env": {
+    "PRIMEKG_CSV": "${PRIMEKG_CSV}",
+    "NODE_ID": "${NODE_ID}",
+    "RELATION_TYPE": "${RELATION_TYPE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

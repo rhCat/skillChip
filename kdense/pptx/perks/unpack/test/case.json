@@ -1,0 +1,12 @@
+{
+  "_perk": "unpack",
+  "requires": ["python3"],
+  "vars": {
+    "PPTX_FILE": "${FIXTURE}/sample.pptx"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["unpack.log"],
+    "nonempty": ["unpack.log"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_perk": "clean",
+  "requires": ["python3"],
+  "vars": {
+    "UNPACKED_DIR": "${FIXTURE}/unpacked"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["clean.txt"],
+    "nonempty": ["clean.txt"]
+  }
+}

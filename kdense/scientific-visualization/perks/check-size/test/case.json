@@ -1,0 +1,17 @@
+{
+  "_perk": "check-size",
+  "requires": ["bash", "python3"],
+  "vars": {
+    "WIDTH_IN": "3.5",
+    "HEIGHT_IN": "2.5",
+    "JOURNAL": "nature"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["size_check.json"],
+    "nonempty": ["size_check.json"],
+    "contains": {
+      "size_check.json": "compliant"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "tool": "synthesize",
+  "inputs": {
+    "MATCHES": {
+      "type": "string",
+      "required": true
+    },
+    "CONFIG": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "verdicts": {
+      "path": "${RECORD_STORE}/verdicts.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/verdicts.json"
+  }
+}

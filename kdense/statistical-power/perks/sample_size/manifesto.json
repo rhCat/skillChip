@@ -1,0 +1,37 @@
+{
+  "_perk": "sample_size",
+  "sequence": [
+    "power_sample_size"
+  ],
+  "tools": {
+    "power_sample_size": {
+      "binary": "bash",
+      "params": {
+        "TEST": "${TEST}",
+        "EFFECT_SIZE": "${EFFECT_SIZE}",
+        "ALPHA": "${ALPHA}",
+        "POWER": "${POWER}"
+      }
+    }
+  },
+  "env": {
+    "TEST": "${TEST}",
+    "EFFECT_SIZE": "${EFFECT_SIZE}",
+    "ALPHA": "${ALPHA}",
+    "POWER": "${POWER}",
+    "ALTERNATIVE": "${ALTERNATIVE}",
+    "RATIO": "${RATIO}",
+    "K_GROUPS": "${K_GROUPS}",
+    "PROP1": "${PROP1}",
+    "PROP2": "${PROP2}",
+    "PROP0": "${PROP0}",
+    "DOF": "${DOF}",
+    "DF_NUM": "${DF_NUM}",
+    "K_TOTAL": "${K_TOTAL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

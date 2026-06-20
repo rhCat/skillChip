@@ -1,0 +1,69 @@
+{
+  "skill": "pptx",
+  "perks": [
+    {
+      "id": "extract",
+      "summary": "extract text/markdown from a .pptx via markitdown (read-only)",
+      "destructive": false,
+      "tools": [
+        "extract"
+      ]
+    },
+    {
+      "id": "thumbnail",
+      "summary": "render a labeled JPEG thumbnail grid of all slides (read-only)",
+      "destructive": false,
+      "tools": [
+        "thumbnail"
+      ]
+    },
+    {
+      "id": "render_pdf",
+      "summary": "convert a .pptx to PDF via headless LibreOffice (read-only)",
+      "destructive": false,
+      "tools": [
+        "render_pdf"
+      ]
+    },
+    {
+      "id": "unpack",
+      "summary": "unpack a .pptx into a pretty-printed XML directory for editing",
+      "destructive": false,
+      "tools": [
+        "unpack"
+      ]
+    },
+    {
+      "id": "pack",
+      "summary": "pack an unpacked XML directory back into a .pptx (with validation + auto-repair)",
+      "destructive": false,
+      "tools": [
+        "pack"
+      ]
+    },
+    {
+      "id": "add_slide",
+      "summary": "add a slide to an unpacked dir by duplicating a slide or instantiating a layout",
+      "destructive": false,
+      "tools": [
+        "add_slide"
+      ]
+    },
+    {
+      "id": "clean",
+      "summary": "remove unreferenced/orphaned files from an unpacked .pptx directory",
+      "destructive": false,
+      "tools": [
+        "clean"
+      ]
+    },
+    {
+      "id": "validate",
+      "summary": "validate an unpacked dir or .pptx against OOXML XSD schemas (read-only)",
+      "destructive": false,
+      "tools": [
+        "validate"
+      ]
+    }
+  ]
+}

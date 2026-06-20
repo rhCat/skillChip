@@ -1,0 +1,13 @@
+{
+  "_perk": "validate_csv",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT_CSV": "${FIXTURE}/batch_input.csv",
+    "BASE_DIR": ""
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["validation_report.txt"],
+    "nonempty": ["validation_report.txt"]
+  }
+}

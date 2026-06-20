@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for citation-management — set perk, fill record_store + the vars the perk declares.",
+  "skill": "citation-management",
+  "perk": "format_bibtex",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "BIB_FILE": "<path to a .bib file to format>"
+  }
+}

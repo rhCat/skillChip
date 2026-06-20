@@ -1,0 +1,29 @@
+{
+  "skill": "gget",
+  "perks": [
+    {
+      "id": "gene_analysis",
+      "summary": "comprehensive single-gene analysis (search -> info -> seq -> archs4 -> opentargets); writes CSV/FASTA reports (read-only queries)",
+      "destructive": false,
+      "tools": [
+        "gene_analysis"
+      ]
+    },
+    {
+      "id": "sequence_analysis",
+      "summary": "batch sequence analysis from a FASTA: BLAST each sequence + MUSCLE multiple alignment; writes CSV/AFA reports (read-only queries)",
+      "destructive": false,
+      "tools": [
+        "sequence_analysis"
+      ]
+    },
+    {
+      "id": "enrichment",
+      "summary": "Enrichr ontology/pathway enrichment over a gene list across 5 databases + expression summary; writes CSV reports (read-only queries)",
+      "destructive": false,
+      "tools": [
+        "enrichment"
+      ]
+    }
+  ]
+}

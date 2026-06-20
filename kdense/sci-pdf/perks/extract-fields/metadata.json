@@ -1,0 +1,18 @@
+{
+  "perk": "extract-fields",
+  "skill": "sci-pdf",
+  "description": "Extract fillable form-field metadata (field_id, type, page, rect, and checkbox/radio/choice options) from a PDF AcroForm to JSON. Wraps pypdf.",
+  "rules": [
+    "read-only — opens the PDF, never writes it back",
+    "sorted by page then top-left position; fields whose location can't be resolved are dropped with a note",
+    "needs pypdf at runtime; absent -> empty {} output + exit 0"
+  ],
+  "usage": "Set PDF_PATH (input .pdf). Output: form_fields.json (a JSON array of field dicts).",
+  "limitation": "Only finds fillable AcroForm fields; non-fillable forms yield an empty array (use extract-structure instead). Requires pypdf.",
+  "minimal_example": {
+    "perk": "extract-fields",
+    "vars": {
+      "PDF_PATH": "form.pdf"
+    }
+  }
+}

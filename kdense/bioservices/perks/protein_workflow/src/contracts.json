@@ -1,0 +1,23 @@
+{
+  "tool": "protein_workflow",
+  "inputs": {
+    "PROTEIN": {
+      "type": "string",
+      "required": true
+    },
+    "NCBI_EMAIL": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "protein_report": {
+      "path": "${RECORD_STORE}/protein_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/protein_report.txt"
+  }
+}

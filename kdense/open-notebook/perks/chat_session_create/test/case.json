@@ -1,0 +1,14 @@
+{
+  "_perk": "chat_session_create",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "OPEN_NOTEBOOK_URL": "http://127.0.0.1:5999",
+    "NOTEBOOK_ID": "notebook:skilltest",
+    "SESSION_TITLE": "skilltest session"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["chat_session.json"],
+    "nonempty": ["chat_session.json"]
+  }
+}

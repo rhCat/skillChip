@@ -1,0 +1,31 @@
+{
+  "tool": "generate_pdf",
+  "inputs": {
+    "REVIEW_MD": {
+      "type": "string",
+      "required": true
+    },
+    "CITATION_STYLE": {
+      "type": "string",
+      "required": false
+    },
+    "TOC": {
+      "type": "string",
+      "required": false
+    },
+    "NUMBER_SECTIONS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "pdf_run_log": {
+      "path": "${RECORD_STORE}/run.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/run.log"
+  }
+}

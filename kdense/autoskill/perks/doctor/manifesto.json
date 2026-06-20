@@ -1,0 +1,23 @@
+{
+  "_perk": "doctor",
+  "sequence": [
+    "doctor"
+  ],
+  "tools": {
+    "doctor": {
+      "binary": "doctor.sh",
+      "params": {
+        "CONFIG": "${CONFIG}",
+        "SKILLS_DIR": "${SKILLS_DIR}"
+      }
+    }
+  },
+  "env": {
+    "CONFIG": "${CONFIG}",
+    "SKILLS_DIR": "${SKILLS_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

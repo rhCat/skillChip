@@ -1,0 +1,27 @@
+{
+  "tool": "check_linearity",
+  "inputs": {
+    "DATA_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "X_COL": {
+      "type": "string",
+      "required": true
+    },
+    "Y_COL": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "linearity_report": {
+      "path": "${RECORD_STORE}/linearity.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/linearity.json"
+  }
+}

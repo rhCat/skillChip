@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for scientific-slides — set perk, fill record_store + the vars the perk declares.",
+  "skill": "scientific-slides",
+  "perk": "slides_to_pdf",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "IMAGES_DIR": "<dir of slide images to combine, sorted by filename>"
+  }
+}

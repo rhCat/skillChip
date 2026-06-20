@@ -1,0 +1,14 @@
+{
+  "_perk": "multi_objective",
+  "requires": ["python3"],
+  "vars": {
+    "PROBLEM": "zdt1",
+    "POP_SIZE": "100",
+    "N_GEN": "200"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["multi_objective.txt"],
+    "nonempty": ["multi_objective.txt"]
+  }
+}

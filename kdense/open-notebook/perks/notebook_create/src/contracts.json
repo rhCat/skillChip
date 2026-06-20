@@ -1,0 +1,27 @@
+{
+  "tool": "notebook_create",
+  "inputs": {
+    "OPEN_NOTEBOOK_URL": {
+      "type": "string",
+      "required": true
+    },
+    "NB_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "NB_DESCRIPTION": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "notebook_out": {
+      "path": "${RECORD_STORE}/notebook.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/notebook.json"
+  }
+}

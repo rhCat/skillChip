@@ -1,0 +1,20 @@
+{
+  "perk": "schematic",
+  "skill": "scholar-evaluation",
+  "description": "Generate a publication-quality scientific schematic from a natural-language description via the OpenRouter image API (Nano Banana 2), with a smart iterative Gemini quality review keyed to the target document type.",
+  "rules": [
+    "requires OPENROUTER_API_KEY (secret) — the core exits 1 without it",
+    "requires the requests library and outbound network to https://openrouter.ai",
+    "DOC_TYPE picks the quality threshold (journal/conference/poster/presentation/report/grant/thesis/preprint/default); max 2 refinement iterations",
+    "writes the final PNG plus per-iteration images and a *_review_log.json under record_store/figures"
+  ],
+  "usage": "Set PROMPT (the diagram description) and optionally DOC_TYPE (default: default). Export OPENROUTER_API_KEY. Output: figures/schematic.png and a review log.",
+  "limitation": "Not offline-capable: needs a network, an OPENROUTER_API_KEY, and the requests package. With any of those absent the porter still emits a status sidecar but no real image. Image content is non-deterministic.",
+  "minimal_example": {
+    "perk": "schematic",
+    "vars": {
+      "PROMPT": "Evaluation framework decision tree for ScholarEval dimensions",
+      "DOC_TYPE": "journal"
+    }
+  }
+}

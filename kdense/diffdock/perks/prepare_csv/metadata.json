@@ -1,0 +1,18 @@
+{
+  "perk": "prepare_csv",
+  "skill": "diffdock",
+  "description": "Generate a DiffDock batch-input CSV template with the required columns (complex_name, protein_path, ligand_description, protein_sequence) and example protein-ligand rows.",
+  "rules": [
+    "writes a single template CSV to record_store",
+    "NUM_EXAMPLES controls how many example rows (default 3, max 3 distinct examples)",
+    "requires pandas; degrades to an empty artifact if pandas is absent"
+  ],
+  "usage": "Optionally set NUM_EXAMPLES (default 3). Output: batch_template.csv.",
+  "limitation": "Produces a template only — it does not dock anything. Example SMILES/sequences are placeholders to be replaced with real data.",
+  "minimal_example": {
+    "perk": "prepare_csv",
+    "vars": {
+      "NUM_EXAMPLES": "3"
+    }
+  }
+}

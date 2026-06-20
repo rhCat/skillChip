@@ -1,0 +1,23 @@
+{
+  "_perk": "counts_from_star",
+  "sequence": [
+    "counts_from_star"
+  ],
+  "tools": {
+    "counts_from_star": {
+      "binary": "python3",
+      "params": {
+        "QUANT_DIR": "${QUANT_DIR}",
+        "STRANDEDNESS": "${STRANDEDNESS}"
+      }
+    }
+  },
+  "env": {
+    "QUANT_DIR": "${QUANT_DIR}",
+    "STRANDEDNESS": "${STRANDEDNESS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

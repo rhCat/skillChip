@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for rdkit — set perk, fill record_store + the vars the perk declares.",
+  "skill": "rdkit",
+  "perk": "properties",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "INPUT": "<molecule file: .sdf/.mol or .smi/.smiles/.txt (SMILES, no title line)>"
+  }
+}

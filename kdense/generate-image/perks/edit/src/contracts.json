@@ -1,0 +1,31 @@
+{
+  "tool": "edit_image",
+  "inputs": {
+    "PROMPT": {
+      "type": "string",
+      "required": true
+    },
+    "INPUT_IMAGE": {
+      "type": "string",
+      "required": true
+    },
+    "MODEL": {
+      "type": "string",
+      "required": false
+    },
+    "OUTPUT_NAME": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "edited_image": {
+      "path": "${RECORD_STORE}/edited_image.png",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/edited_image.png"
+  }
+}

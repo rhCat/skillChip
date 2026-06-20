@@ -1,0 +1,12 @@
+{
+  "_schema": "task-ledger TEMPLATE for pydeseq2 — set perk, fill record_store + the vars the perk declares.",
+  "skill": "pydeseq2",
+  "perk": "filter",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "COUNTS": "<path to counts CSV (genes x samples)>",
+    "METADATA": "<path to metadata CSV (samples x variables)>",
+    "MIN_COUNTS": "10",
+    "CONDITION_COL": "condition"
+  }
+}

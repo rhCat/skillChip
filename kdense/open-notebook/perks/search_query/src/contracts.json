@@ -1,0 +1,31 @@
+{
+  "tool": "search_query",
+  "inputs": {
+    "OPEN_NOTEBOOK_URL": {
+      "type": "string",
+      "required": true
+    },
+    "SEARCH_QUERY": {
+      "type": "string",
+      "required": true
+    },
+    "SEARCH_TYPE": {
+      "type": "string",
+      "required": false
+    },
+    "SEARCH_LIMIT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "search_results_out": {
+      "path": "${RECORD_STORE}/search_results.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/search_results.json"
+  }
+}

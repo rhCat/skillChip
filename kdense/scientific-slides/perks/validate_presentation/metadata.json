@@ -1,0 +1,19 @@
+{
+  "perk": "validate_presentation",
+  "skill": "scientific-slides",
+  "description": "Lint a finished deck (PDF, PPTX/PPT, or TEX) for common issues: slide count vs. talk duration, file size, slide dimensions/aspect ratio, small fonts and bullet overload (PPTX), and LaTeX compilation (TEX).",
+  "rules": [
+    "read-only on the input deck; writes a text report under record_store",
+    "PDF analysis needs PyPDF2; PPTX analysis needs python-pptx; TEX compilation needs pdflatex",
+    "DURATION (minutes) is optional — enables slide-count-vs-duration guidance"
+  ],
+  "usage": "Set DECK_PATH (the .pdf/.pptx/.tex file); optionally DURATION in minutes. Output: validation_report.txt.",
+  "limitation": "TEX validation shells out to pdflatex (absent here → reported as a failed compile, not a crash). Missing PyPDF2/python-pptx degrade to warnings, still exit 0.",
+  "minimal_example": {
+    "perk": "validate_presentation",
+    "vars": {
+      "DECK_PATH": "./presentation.pdf",
+      "DURATION": "15"
+    }
+  }
+}

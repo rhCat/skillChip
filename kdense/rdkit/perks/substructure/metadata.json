@@ -1,0 +1,20 @@
+{
+  "perk": "substructure",
+  "skill": "rdkit",
+  "description": "Filter a molecule library by an include substructure pattern and write a per-molecule match report (Index, SMILES, Status, Matches). PATTERN is interpreted as SMARTS first, then SMILES; each molecule is tagged included / no_match (excluded when an exclusion pattern matches). The core script also ships named pattern libraries (functional-groups, rings, pains, privileged) for richer filtering.",
+  "rules": [
+    "read-only — parses molecules and writes a match-report CSV; mutates nothing remote",
+    "INPUT may be .sdf/.mol or .smi/.smiles/.txt (one SMILES per line, no title line)",
+    "PATTERN is a SMARTS (or SMILES) substructure query applied as an inclusion filter",
+    "match report written to record_store/report.csv"
+  ],
+  "usage": "Set INPUT (molecule file) and PATTERN (SMARTS/SMILES). Output: report.csv.",
+  "limitation": "Requires the rdkit library (Python >=3.9); when absent the porter degrades gracefully and writes a stub so governance still runs offline. An invalid PATTERN that parses as neither SMARTS nor SMILES yields no inclusion filter.",
+  "minimal_example": {
+    "perk": "substructure",
+    "vars": {
+      "INPUT": "mols.smi",
+      "PATTERN": "c1ccccc1"
+    }
+  }
+}

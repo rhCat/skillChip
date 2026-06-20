@@ -1,0 +1,10 @@
+{
+  "_perk": "export_gnps",
+  "requires": ["python3", "bash"],
+  "vars": { "CONSENSUS": "${FIXTURE}/study.consensusXML", "MZML": "${FIXTURE}/s1.mzML" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["gnps_export.mgf"],
+    "nonempty": ["gnps_export.mgf"]
+  }
+}

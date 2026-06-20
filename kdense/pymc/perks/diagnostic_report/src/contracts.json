@@ -1,0 +1,23 @@
+{
+  "tool": "diagnostic_report",
+  "inputs": {
+    "IDATA": {
+      "type": "string",
+      "required": true
+    },
+    "VAR_NAMES": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "report_out": {
+      "path": "${RECORD_STORE}/report.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/report.json"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for gget — set perk, fill record_store + the vars the perk declares.",
+  "skill": "gget",
+  "perk": "gene_analysis",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "GENE": "<gene symbol, e.g. ACE2>",
+    "SPECIES": "homo_sapiens"
+  }
+}

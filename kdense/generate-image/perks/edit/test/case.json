@@ -1,0 +1,15 @@
+{
+  "_perk": "edit",
+  "requires": ["python3"],
+  "vars": {
+    "PROMPT": "Make the background blue",
+    "INPUT_IMAGE": "${FIXTURE}/input.png",
+    "MODEL": "google/gemini-3.1-flash-image-preview",
+    "OUTPUT_NAME": "edited_image.png"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["edited_image.png"],
+    "nonempty": ["edited_image.png"]
+  }
+}

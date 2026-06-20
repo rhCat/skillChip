@@ -1,0 +1,26 @@
+{
+  "_perk": "check-size",
+  "sequence": [
+    "size_check"
+  ],
+  "tools": {
+    "size_check": {
+      "binary": "bash",
+      "params": {
+        "WIDTH_IN": "${WIDTH_IN}",
+        "HEIGHT_IN": "${HEIGHT_IN}",
+        "JOURNAL": "${JOURNAL}"
+      }
+    }
+  },
+  "env": {
+    "WIDTH_IN": "${WIDTH_IN}",
+    "HEIGHT_IN": "${HEIGHT_IN}",
+    "JOURNAL": "${JOURNAL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "tool": "generate_image",
+  "inputs": {
+    "PROMPT": {
+      "type": "string",
+      "required": true
+    },
+    "OUTPUT_NAME": {
+      "type": "string",
+      "required": false
+    },
+    "MODEL": {
+      "type": "string",
+      "required": false
+    },
+    "INPUT_IMAGE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "image_out": {
+      "path": "${RECORD_STORE}/image.audit.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/image.audit.json"
+  }
+}

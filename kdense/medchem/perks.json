@@ -1,0 +1,69 @@
+{
+  "skill": "medchem",
+  "perks": [
+    {
+      "id": "rules",
+      "summary": "apply medicinal-chemistry drug-likeness rules (rule_of_five, rule_of_cns, rule_of_veber, ...) to a molecule library; writes a per-rule pass/fail table (read-only)",
+      "destructive": false,
+      "tools": [
+        "mc_rules"
+      ]
+    },
+    {
+      "id": "common_alerts",
+      "summary": "apply the ChEMBL-derived common structural alerts filter; writes pass_filter/status/reasons columns (read-only)",
+      "destructive": false,
+      "tools": [
+        "mc_common_alerts"
+      ]
+    },
+    {
+      "id": "nibr",
+      "summary": "apply the NIBR (Novartis) screening-deck curation filter; writes pass/severity/reasons columns (read-only)",
+      "destructive": false,
+      "tools": [
+        "mc_nibr"
+      ]
+    },
+    {
+      "id": "alerts",
+      "summary": "apply named alert catalogs (pains, brenk, tox, zinc, ...) returning a per-catalog pass mask (read-only)",
+      "destructive": false,
+      "tools": [
+        "mc_alerts"
+      ]
+    },
+    {
+      "id": "lilly",
+      "summary": "apply the Eli Lilly demerit filter (max-demerits threshold); requires the optional lilly-medchem-rules binaries (read-only)",
+      "destructive": false,
+      "tools": [
+        "mc_lilly"
+      ]
+    },
+    {
+      "id": "complexity",
+      "summary": "filter by molecular-complexity percentile against ZINC-15 thresholds (bertz, sas, qed, whitlock, ...) (read-only)",
+      "destructive": false,
+      "tools": [
+        "mc_complexity"
+      ]
+    },
+    {
+      "id": "query",
+      "summary": "evaluate a medchem query-language expression (MATCHRULE/HASALERT/HASPROP/HASGROUP/HASSUBSTRUCTURE) into a per-molecule pass mask (read-only)",
+      "destructive": false,
+      "tools": [
+        "mc_query"
+      ]
+    },
+    {
+      "id": "groups",
+      "summary": "detect chemical-group / curated-substructure matches (privileged_scaffolds, warheads, rings_in_drugs, ...) per molecule (read-only)",
+      "destructive": false,
+      "tools": [
+        "mc_groups"
+      ]
+    }
+  ]
+}

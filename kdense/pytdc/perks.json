@@ -1,0 +1,37 @@
+{
+  "skill": "pytdc",
+  "perks": [
+    {
+      "id": "load_split",
+      "summary": "load a TDC dataset (single_pred/multi_pred/generation) and write a train/valid/test split via the chosen method (scaffold/random/cold_drug/cold_target)",
+      "destructive": false,
+      "tools": [
+        "tdc_load_split"
+      ]
+    },
+    {
+      "id": "evaluate",
+      "summary": "score predictions against ground truth with a standardized TDC metric (ROC-AUC, PR-AUC, RMSE, MAE, R2, Spearman, Pearson, ...)",
+      "destructive": false,
+      "tools": [
+        "tdc_evaluate"
+      ]
+    },
+    {
+      "id": "benchmark",
+      "summary": "run a TDC benchmark group's evaluate protocol (5-seed) over a predictions file and report per-dataset mean +/- std",
+      "destructive": false,
+      "tools": [
+        "tdc_benchmark"
+      ]
+    },
+    {
+      "id": "oracle_score",
+      "summary": "score a list of SMILES with a TDC molecular oracle (QED, SA, LogP, GSK3B, DRD2, JNK3, ...) for molecular optimization",
+      "destructive": false,
+      "tools": [
+        "tdc_oracle_score"
+      ]
+    }
+  ]
+}

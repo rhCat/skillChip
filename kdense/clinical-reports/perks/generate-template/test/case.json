@@ -1,0 +1,10 @@
+{
+  "_perk": "generate-template",
+  "requires": ["python3"],
+  "vars": { "TEMPLATE_TYPE": "soap_note" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["template.md"],
+    "nonempty": ["template.md"]
+  }
+}

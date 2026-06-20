@@ -1,0 +1,13 @@
+{
+  "_perk": "notebook_list",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "OPEN_NOTEBOOK_URL": "http://127.0.0.1:5999",
+    "NB_ARCHIVED": "false"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["notebooks.json"],
+    "nonempty": ["notebooks.json"]
+  }
+}

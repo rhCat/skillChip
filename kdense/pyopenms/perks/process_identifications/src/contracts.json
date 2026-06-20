@@ -1,0 +1,39 @@
+{
+  "tool": "process_identifications",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "FASTA": {
+      "type": "string",
+      "required": false
+    },
+    "FDR": {
+      "type": "string",
+      "required": false
+    },
+    "MIN_LENGTH": {
+      "type": "string",
+      "required": false
+    },
+    "MAX_LENGTH": {
+      "type": "string",
+      "required": false
+    },
+    "BEST_PER_SPECTRUM": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "filtered": {
+      "path": "${RECORD_STORE}/filtered.idXML",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/filtered.idXML"
+  }
+}

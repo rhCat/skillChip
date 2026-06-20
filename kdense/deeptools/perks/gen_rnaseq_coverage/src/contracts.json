@@ -1,0 +1,23 @@
+{
+  "tool": "gen_rnaseq_coverage",
+  "inputs": {
+    "RNASEQ_BAM": {
+      "type": "string",
+      "required": false
+    },
+    "THREADS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "workflow_out": {
+      "path": "${RECORD_STORE}/rnaseq_coverage.sh",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/rnaseq_coverage.sh"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_perk": "check-boxes",
+  "requires": ["python3"],
+  "vars": { "FIELDS_JSON": "${FIXTURE}/fields.json" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["check_boxes.txt"],
+    "nonempty": ["check_boxes.txt"],
+    "contains": { "check_boxes.txt": "SUCCESS: All bounding boxes are valid" }
+  }
+}

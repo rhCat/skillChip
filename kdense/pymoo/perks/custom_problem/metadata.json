@@ -1,0 +1,21 @@
+{
+  "perk": "custom_problem",
+  "skill": "pymoo",
+  "description": "define and solve custom unconstrained + constrained ElementwiseProblems with NSGA-II (read-only)",
+  "rules": [
+    "read-only — solves user-defined problems and writes a report; mutates nothing remote or live",
+    "runs the vendored custom_problem_example.py core (two ElementwiseProblems, NSGA-II) via python3",
+    "forces MPLBACKEND=Agg so the Scatter plots never block",
+    "captures stdout (solution counts, feasibility, objective-space ranges) to record_store/custom_problem.txt",
+    "requires the pymoo package at run time; degrades to an empty {} report if it is absent"
+  ],
+  "usage": "Set POP_SIZE, N_GEN. Output: custom_problem.txt.",
+  "limitation": "The vendored core defines its own bi-objective unconstrained and constrained problems; vars document intent. Needs the pymoo library installed to produce real results.",
+  "minimal_example": {
+    "perk": "custom_problem",
+    "vars": {
+      "POP_SIZE": "100",
+      "N_GEN": "200"
+    }
+  }
+}

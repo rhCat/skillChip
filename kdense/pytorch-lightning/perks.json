@@ -1,0 +1,29 @@
+{
+  "skill": "pytorch-lightning",
+  "perks": [
+    {
+      "id": "scaffold_module",
+      "summary": "scaffold a complete LightningModule (training/validation/test/predict steps + configure_optimizers) boilerplate",
+      "destructive": false,
+      "tools": [
+        "scaffold_module"
+      ]
+    },
+    {
+      "id": "scaffold_datamodule",
+      "summary": "scaffold a complete LightningDataModule (prepare_data/setup + train/val/test/predict dataloaders) boilerplate",
+      "destructive": false,
+      "tools": [
+        "scaffold_datamodule"
+      ]
+    },
+    {
+      "id": "trainer_setup",
+      "summary": "emit ready-to-use Trainer configurations (basic, debug, single-GPU, DDP, FSDP, DeepSpeed, reproducible, etc.)",
+      "destructive": false,
+      "tools": [
+        "trainer_setup"
+      ]
+    }
+  ]
+}

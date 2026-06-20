@@ -1,0 +1,31 @@
+{
+  "tool": "analyze_results",
+  "inputs": {
+    "RESULTS_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "TOP": {
+      "type": "string",
+      "required": false
+    },
+    "THRESHOLD": {
+      "type": "string",
+      "required": false
+    },
+    "BEST": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "summary_csv": {
+      "path": "${RECORD_STORE}/summary.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/summary.csv"
+  }
+}

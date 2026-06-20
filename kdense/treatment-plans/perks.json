@@ -1,0 +1,45 @@
+{
+  "skill": "treatment-plans",
+  "perks": [
+    {
+      "id": "check_completeness",
+      "summary": "check a LaTeX treatment plan for the 10 required sections, SMART goals, HIPAA notice, signature, and leftover placeholders (read-only)",
+      "destructive": false,
+      "tools": [
+        "check_completeness"
+      ]
+    },
+    {
+      "id": "validate_quality",
+      "summary": "validate treatment-plan content quality: SMART goals, evidence, patient-centeredness, safety, medication, ICD-10, timeframes, metrics (read-only)",
+      "destructive": false,
+      "tools": [
+        "validate_quality"
+      ]
+    },
+    {
+      "id": "generate_timeline",
+      "summary": "extract treatment phases / appointments / milestones from a plan and render a text (or matplotlib) timeline",
+      "destructive": false,
+      "tools": [
+        "generate_timeline"
+      ]
+    },
+    {
+      "id": "generate_template",
+      "summary": "copy a specialty LaTeX treatment-plan template (general/rehab/mental-health/chronic/perioperative/pain) to the record store",
+      "destructive": false,
+      "tools": [
+        "generate_template"
+      ]
+    },
+    {
+      "id": "generate_schematic",
+      "summary": "generate an AI scientific schematic (Nano Banana 2 via OpenRouter) from a natural-language description",
+      "destructive": false,
+      "tools": [
+        "generate_schematic"
+      ]
+    }
+  ]
+}

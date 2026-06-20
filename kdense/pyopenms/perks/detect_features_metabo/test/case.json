@@ -1,0 +1,10 @@
+{
+  "_perk": "detect_features_metabo",
+  "requires": ["python3", "bash"],
+  "vars": { "INPUT": "${FIXTURE}/sample.mzML" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["features.featureXML"],
+    "nonempty": ["features.featureXML"]
+  }
+}

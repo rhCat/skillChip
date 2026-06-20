@@ -1,0 +1,10 @@
+{
+  "_perk": "batch_convert",
+  "requires": ["python3"],
+  "vars": { "INPUT_DIR": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["convert_summary.json"],
+    "nonempty": ["convert_summary.json"]
+  }
+}

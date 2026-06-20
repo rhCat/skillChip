@@ -1,0 +1,19 @@
+{
+  "tool": "compound_xref",
+  "inputs": {
+    "COMPOUND": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "xref_report": {
+      "path": "${RECORD_STORE}/compound_xref.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/compound_xref.txt"
+  }
+}

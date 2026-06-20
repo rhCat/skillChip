@@ -1,0 +1,11 @@
+{
+  "_perk": "check-deidentification",
+  "requires": ["python3"],
+  "vars": { "REPORT_FILE": "${FIXTURE}/report.md" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["deidentification.json"],
+    "nonempty": ["deidentification.json"],
+    "json": { "deidentification.json": { "status": "COMPLIANT" } }
+  }
+}

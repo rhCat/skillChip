@@ -1,0 +1,21 @@
+{
+  "_perk": "create-entry",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "LA_CONFIG": "${FIXTURE}/config.yaml",
+    "LA_NBID": "12345",
+    "LA_TITLE": "Experiment Results",
+    "LA_CONTENT": "PCR amplification successful"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "create_entry.json"
+    ],
+    "nonempty": [
+      "create_entry.json"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "perk": "topics",
+  "skill": "hugging-science",
+  "description": "List the 17 known Hugging Science topic slugs (offline — no network).",
+  "rules": [
+    "read-only",
+    "no network — slugs are a hard-coded list in fetch_catalog.py",
+    "output written to record_store/topics.txt"
+  ],
+  "usage": "No vars. Output: topics.txt (one slug per line plus the live-list hint).",
+  "limitation": "Slugs are best-effort/static; if a slug 404s later, use the `raw` perk to refetch llms.txt for the live list.",
+  "minimal_example": {
+    "perk": "topics",
+    "vars": {}
+  }
+}

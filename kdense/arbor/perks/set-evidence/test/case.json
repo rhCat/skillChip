@@ -1,0 +1,17 @@
+{
+  "_perk": "set-evidence",
+  "requires": ["python3"],
+  "vars": {
+    "NODE": "n1",
+    "DEV_SCORE": "70.0",
+    "RESULT": "K=5 dossier aggregation recovers minority-rollout answers",
+    "INSIGHT": "Aggregation beats majority vote when correct answers are rare",
+    "BRANCH_REF": "wt/n1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["set_evidence.txt"],
+    "nonempty": ["set_evidence.txt"],
+    "contains": { "set_evidence.txt": "Wrote evidence to n1" }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_perk": "cycle",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["cycle.txt"],
+    "nonempty": ["cycle.txt"],
+    "contains": { "cycle.txt": "Cycle 1/" }
+  }
+}

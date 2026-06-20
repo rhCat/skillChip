@@ -1,0 +1,19 @@
+{
+  "perk": "doi_to_bibtex",
+  "skill": "citation-management",
+  "description": "convert one or more DOIs to BibTeX via CrossRef content negotiation (doi.org)",
+  "rules": [
+    "read-only — BibTeX written to record_store as references.bib",
+    "DOI may hold one DOI or several space-separated DOIs",
+    "DOI_FILE (optional) points to a file with one DOI per line",
+    "reaches doi.org over the network; porter degrades gracefully (writes {} and exits 0) when offline"
+  ],
+  "usage": "Set DOI (one or space-separated DOIs) and/or DOI_FILE. Output: references.bib.",
+  "limitation": "Requires network access to doi.org/CrossRef. Rate-limited (0.5s between requests). Failed DOIs are skipped.",
+  "minimal_example": {
+    "perk": "doi_to_bibtex",
+    "vars": {
+      "DOI": "10.1038/s41586-021-03819-2"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "tool": "setup_config",
+  "inputs": {
+    "LA_API_URL": {
+      "type": "string",
+      "required": true
+    },
+    "LA_ACCESS_KEY_ID": {
+      "type": "string",
+      "required": true
+    },
+    "LA_ACCESS_PASSWORD": {
+      "type": "string",
+      "required": true
+    },
+    "LA_USER_EMAIL": {
+      "type": "string",
+      "required": true
+    },
+    "LA_USER_EXTERNAL_PASSWORD": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "setup_config_out": {
+      "path": "${RECORD_STORE}/setup_config.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/setup_config.json"
+  }
+}

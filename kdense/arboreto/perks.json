@@ -1,0 +1,21 @@
+{
+  "skill": "arboreto",
+  "perks": [
+    {
+      "id": "grnboost2",
+      "summary": "infer a gene regulatory network from an expression matrix via GRNBoost2 (gradient boosting); writes a TF–target–importance TSV (read-only, local)",
+      "destructive": false,
+      "tools": [
+        "grnboost2"
+      ]
+    },
+    {
+      "id": "genie3",
+      "summary": "infer a gene regulatory network from an expression matrix via GENIE3 (random forest); writes a TF–target–importance TSV (read-only, local)",
+      "destructive": false,
+      "tools": [
+        "genie3"
+      ]
+    }
+  ]
+}

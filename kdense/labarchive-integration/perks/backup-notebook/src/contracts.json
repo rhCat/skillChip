@@ -1,0 +1,31 @@
+{
+  "tool": "backup_notebook",
+  "inputs": {
+    "LA_CONFIG": {
+      "type": "string",
+      "required": true
+    },
+    "LA_NBID": {
+      "type": "string",
+      "required": true
+    },
+    "LA_BACKUP_JSON": {
+      "type": "string",
+      "required": false
+    },
+    "LA_NO_ATTACHMENTS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "backup_notebook_out": {
+      "path": "${RECORD_STORE}/backup_notebook.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/backup_notebook.json"
+  }
+}

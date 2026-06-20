@@ -1,0 +1,21 @@
+{
+  "perk": "plot",
+  "skill": "scanpy",
+  "description": "Render a common single-cell plot from a processed AnnData object: umap/tsne/pca (colored by obs columns and/or genes), violin, or dotplot/matrixplot/heatmap/tracksplot/stacked_violin grouped by an obs column.",
+  "rules": [
+    "read-only input — writes a figure into record_store/figures and a plot.log marker under record_store",
+    "KIND selects the plot type; embeddings need COLOR and/or GENES; violin needs GENES (or obs keys via COLOR); dotplot/etc. need GENES and GROUPBY",
+    "COLOR and GENES are space-separated lists; USE_RAW uses adata.raw normalized log values",
+    "genes absent from the data are skipped"
+  ],
+  "usage": "Set INPUT and KIND (umap|tsne|pca|violin|dotplot|matrixplot|heatmap|tracksplot|stacked_violin). Optional: COLOR, GENES, GROUPBY, USE_RAW=1. Output: plot.log (+ figures/<kind>.png).",
+  "limitation": "Requires scanpy installed; without it the porter writes a placeholder plot.log and still passes. The figure filename depends on KIND, so the deterministic contract artifact is plot.log.",
+  "minimal_example": {
+    "perk": "plot",
+    "vars": {
+      "INPUT": "annotated.h5ad",
+      "KIND": "umap",
+      "COLOR": "leiden cell_type"
+    }
+  }
+}

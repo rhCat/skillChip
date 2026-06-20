@@ -1,0 +1,33 @@
+{
+  "_perk": "train_gnn",
+  "sequence": [
+    "train_gnn"
+  ],
+  "tools": {
+    "train_gnn": {
+      "binary": "python3",
+      "params": {
+        "MODEL": "${MODEL}",
+        "DATASET": "${DATASET}",
+        "DATA_CSV": "${DATA_CSV}",
+        "TASK_TYPE": "${TASK_TYPE}",
+        "TARGETS": "${TARGETS}",
+        "SMILES_COL": "${SMILES_COL}",
+        "EPOCHS": "${EPOCHS}"
+      }
+    }
+  },
+  "env": {
+    "MODEL": "${MODEL}",
+    "DATASET": "${DATASET}",
+    "DATA_CSV": "${DATA_CSV}",
+    "TASK_TYPE": "${TASK_TYPE}",
+    "TARGETS": "${TARGETS}",
+    "SMILES_COL": "${SMILES_COL}",
+    "EPOCHS": "${EPOCHS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "_perk": "mde",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "TEST": "t_ind",
+    "NOBS1": "30",
+    "POWER": "0.80",
+    "ALPHA": "0.05"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["mde.json"],
+    "nonempty": ["mde.json"]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "perk": "custom_env",
+  "skill": "stable-baselines3",
+  "description": "Instantiate the custom Gymnasium environment template (a grid-world CustomEnv) and validate it with SB3's check_env for structure and observation/action-space conformance.",
+  "rules": [
+    "read-only — only instantiates an in-process env and writes the check report under record_store",
+    "wraps the vendored custom_env_template.py:CustomEnv unchanged and runs stable_baselines3.common.env_checker.check_env",
+    "GRID_SIZE controls the template grid-world size passed to CustomEnv",
+    "needs stable-baselines3 >= 2.8 (Python 3.10+) and gymnasium present to actually run check_env; degrades gracefully otherwise"
+  ],
+  "usage": "Set GRID_SIZE (positive int, e.g. 5). Output: check_env.json (validation status + any check_env warnings/errors).",
+  "limitation": "Validates the bundled template CustomEnv only; adapt the vendored custom_env_template.py for a different env. Heavy science libs and Python 3.10+ are required to validate; without them the porter records the libs are absent and writes an empty-but-present report.",
+  "minimal_example": {
+    "perk": "custom_env",
+    "vars": {
+      "GRID_SIZE": "5"
+    }
+  }
+}

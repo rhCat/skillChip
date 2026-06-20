@@ -1,0 +1,19 @@
+{
+  "tool": "counts_from_featurecounts",
+  "inputs": {
+    "COUNTS_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "counts_matrix": {
+      "path": "${RECORD_STORE}/counts/counts.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/counts/counts.csv"
+  }
+}

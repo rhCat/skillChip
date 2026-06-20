@@ -1,0 +1,20 @@
+{
+  "perk": "enrichment",
+  "skill": "gget",
+  "description": "Enrichment analysis pipeline via gget: run gget enrichr over a gene list across 5 databases (pathway/ontology/transcription/diseases_drugs/celltypes), write per-database CSVs + a summary, then attach ARCHS4 tissue-expression for the first genes. Writes CSVs under record_store (read-only remote queries).",
+  "rules": [
+    "read-only — only queries Enrichr + ARCHS4 and writes local files",
+    "needs network and an installed gget package (plus pandas); with gget absent the porter degrades gracefully and still writes a non-empty report",
+    "all outputs land under record_store (the porter runs the vendored core there)",
+    "plotting is disabled by default (the porter passes --no-plot) to stay headless"
+  ],
+  "usage": "Set GENE_LIST (path to a file with one gene symbol per line, or a CSV with genes in the first column) and SPECIES (default human; also mouse/fly/yeast/worm/fish). Output: enrichment.log (run log) plus enrichment_<db>.csv per database, enrichment_summary.csv, and enrichment_expression.csv.",
+  "limitation": "Requires gget + pandas + network for real enrichment results; offline it only produces the run log. Per-database failures are warned and skipped. Output prefix is fixed to 'enrichment'.",
+  "minimal_example": {
+    "perk": "enrichment",
+    "vars": {
+      "GENE_LIST": "/abs/path/genes.txt",
+      "SPECIES": "human"
+    }
+  }
+}

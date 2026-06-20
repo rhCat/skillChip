@@ -1,0 +1,19 @@
+{
+  "_perk": "make-style",
+  "sequence": [
+    "style_template"
+  ],
+  "tools": {
+    "style_template": {
+      "binary": "bash",
+      "params": {}
+    }
+  },
+  "env": {
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

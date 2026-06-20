@@ -1,0 +1,20 @@
+{
+  "perk": "notebook_create",
+  "skill": "open-notebook",
+  "description": "Create a notebook on the Open Notebook server (POST /api/notebooks).",
+  "rules": [
+    "remote-mutating: creates a notebook resource on the live server",
+    "writes the created notebook JSON to record_store/notebook.json",
+    "degrades gracefully (status=unreachable, exit 0) when the server is down"
+  ],
+  "usage": "Set OPEN_NOTEBOOK_URL and NB_NAME (NB_DESCRIPTION optional). Output: notebook.json.",
+  "limitation": "Requires a reachable Open Notebook server with the requests package; no AI provider needed for creation. No update/delete here.",
+  "minimal_example": {
+    "perk": "notebook_create",
+    "vars": {
+      "OPEN_NOTEBOOK_URL": "http://localhost:5055",
+      "NB_NAME": "Cancer Genomics Research",
+      "NB_DESCRIPTION": "Literature review on tumor mutational burden"
+    }
+  }
+}

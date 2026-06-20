@@ -1,0 +1,19 @@
+{
+  "perk": "check-compliance",
+  "skill": "clinical-reports",
+  "description": "Check a clinical report for HIPAA / ICH-GCP / FDA regulatory markers (consent, IRB approval, study IDs, safety reporting) (read-only).",
+  "rules": [
+    "read-only — never edits the input report",
+    "groups checks by regulation: hipaa (consent statement, de-identification), gcp (IRB approval, protocol, informed consent), fda (study ID, safety reporting)",
+    "each check is a boolean presence test over the file content",
+    "JSON report written to record_store"
+  ],
+  "usage": "Set REPORT_FILE (a clinical/trial report .md). Output: compliance.json.",
+  "limitation": "Presence-of-keyword heuristic only; confirms that compliance language exists, not that the study is compliant. Requires python3 (stdlib only).",
+  "minimal_example": {
+    "perk": "check-compliance",
+    "vars": {
+      "REPORT_FILE": "./trial_report.md"
+    }
+  }
+}

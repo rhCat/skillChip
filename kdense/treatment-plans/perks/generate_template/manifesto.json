@@ -1,0 +1,21 @@
+{
+  "_perk": "generate_template",
+  "sequence": [
+    "generate_template"
+  ],
+  "tools": {
+    "generate_template": {
+      "binary": "python3",
+      "params": {
+        "TEMPLATE_TYPE": "${TEMPLATE_TYPE}"
+      }
+    }
+  },
+  "env": {
+    "TEMPLATE_TYPE": "${TEMPLATE_TYPE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

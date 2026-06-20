@@ -1,0 +1,13 @@
+{
+  "_perk": "survival",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT_CSV": "${FIXTURE}/survival.csv",
+    "TITLE": "PFS by PD-L1 Status"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["survival_statistics.txt"],
+    "nonempty": ["survival_statistics.txt"]
+  }
+}

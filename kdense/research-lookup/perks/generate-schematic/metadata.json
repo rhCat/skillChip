@@ -1,0 +1,22 @@
+{
+  "perk": "generate-schematic",
+  "skill": "research-lookup",
+  "description": "Render a publication-quality scientific schematic from a natural-language description using Nano Banana 2 with smart iterative refinement and a Gemini quality review, via OpenRouter. Writes the generated image to record_store.",
+  "rules": [
+    "read-only — produces a local image file; never mutates a remote service",
+    "prompt text is transmitted to openrouter.ai (OPENROUTER_API_KEY)",
+    "DOC_TYPE sets the quality threshold (journal 8.5 .. presentation 6.5; default 7.5)",
+    "iterations capped at 2 by the vendored wrapper",
+    "no API key / no network -> porter writes a placeholder output file so the contract holds"
+  ],
+  "usage": "Set PROMPT (required). Optional DOC_TYPE (journal|conference|poster|presentation|report|grant|thesis|preprint|default), OUTPUT_NAME (default schematic.png). Output: ${RECORD_STORE}/${OUTPUT_NAME}.",
+  "limitation": "Requires OPENROUTER_API_KEY, the 'requests' package, and network access to generate a real image. Generation + quality review can take tens of seconds per iteration. Without these, only a placeholder file is written.",
+  "minimal_example": {
+    "perk": "generate-schematic",
+    "vars": {
+      "PROMPT": "CONSORT participant flow diagram",
+      "DOC_TYPE": "journal",
+      "OUTPUT_NAME": "consort.png"
+    }
+  }
+}

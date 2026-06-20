@@ -1,0 +1,23 @@
+{
+  "tool": "inspect_ms_data",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "SPECTRA_CSV": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "inspect_out": {
+      "path": "${RECORD_STORE}/inspect.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/inspect.txt"
+  }
+}

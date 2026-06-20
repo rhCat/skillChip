@@ -1,0 +1,21 @@
+{
+  "_perk": "prepare_csv",
+  "sequence": [
+    "prepare_csv"
+  ],
+  "tools": {
+    "prepare_csv": {
+      "binary": "python3",
+      "params": {
+        "NUM_EXAMPLES": "${NUM_EXAMPLES}"
+      }
+    }
+  },
+  "env": {
+    "NUM_EXAMPLES": "${NUM_EXAMPLES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

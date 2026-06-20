@@ -1,0 +1,35 @@
+{
+  "tool": "schematic",
+  "inputs": {
+    "PROMPT": {
+      "type": "string",
+      "required": true
+    },
+    "OUTPUT_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "DOC_TYPE": {
+      "type": "string",
+      "required": false
+    },
+    "ITERATIONS": {
+      "type": "string",
+      "required": false
+    },
+    "OPENROUTER_API_KEY": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "schematic_out": {
+      "path": "${RECORD_STORE}/schematic.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/schematic.log"
+  }
+}

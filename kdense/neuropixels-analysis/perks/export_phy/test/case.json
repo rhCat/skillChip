@@ -1,0 +1,12 @@
+{
+  "_perk": "export_phy",
+  "requires": ["python3"],
+  "vars": {
+    "ANALYZER_DIR": "${FIXTURE}"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["export_phy_report.txt"],
+    "nonempty": ["export_phy_report.txt"]
+  }
+}

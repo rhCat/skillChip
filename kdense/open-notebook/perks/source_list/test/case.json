@@ -1,0 +1,14 @@
+{
+  "_perk": "source_list",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "OPEN_NOTEBOOK_URL": "http://127.0.0.1:5999",
+    "NOTEBOOK_ID": "notebook:skilltest",
+    "SOURCE_LIMIT": "20"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["sources.json"],
+    "nonempty": ["sources.json"]
+  }
+}

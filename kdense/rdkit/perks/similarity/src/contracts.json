@@ -1,0 +1,31 @@
+{
+  "tool": "rd_similarity",
+  "inputs": {
+    "QUERY": {
+      "type": "string",
+      "required": true
+    },
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "METHOD": {
+      "type": "string",
+      "required": false
+    },
+    "THRESHOLD": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "rd_similarity_out": {
+      "path": "${RECORD_STORE}/hits.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/hits.csv"
+  }
+}

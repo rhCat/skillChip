@@ -1,0 +1,31 @@
+{
+  "tool": "forecast_csv",
+  "inputs": {
+    "INPUT_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "HORIZON": {
+      "type": "string",
+      "required": true
+    },
+    "DATE_COL": {
+      "type": "string",
+      "required": false
+    },
+    "VALUE_COLS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "forecasts_out": {
+      "path": "${RECORD_STORE}/forecasts.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/forecasts.json"
+  }
+}

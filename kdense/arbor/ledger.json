@@ -1,0 +1,16 @@
+{
+  "_schema": "task-ledger TEMPLATE for arbor — set perk, fill record_store + the vars the perk declares.",
+  "skill": "arbor",
+  "perk": "init",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "OBJECTIVE": "<natural-language research objective>",
+    "DEV_EVAL": "<command/description of the development evaluator>",
+    "TEST_EVAL": "<command/description of the held-out test evaluator>",
+    "MATERIAL": "<path/ref to the initial artifact M_0>",
+    "METRIC_DIRECTION": "max",
+    "BRANCHING": "3",
+    "MAX_DEPTH": "2",
+    "BUDGET": "12"
+  }
+}

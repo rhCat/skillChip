@@ -1,0 +1,30 @@
+{
+  "_perk": "set-evidence",
+  "sequence": [
+    "arbor_set_evidence"
+  ],
+  "tools": {
+    "arbor_set_evidence": {
+      "binary": "python3",
+      "params": {
+        "NODE": "${NODE}",
+        "DEV_SCORE": "${DEV_SCORE}",
+        "RESULT": "${RESULT}",
+        "INSIGHT": "${INSIGHT}",
+        "BRANCH_REF": "${BRANCH_REF}"
+      }
+    }
+  },
+  "env": {
+    "NODE": "${NODE}",
+    "DEV_SCORE": "${DEV_SCORE}",
+    "RESULT": "${RESULT}",
+    "INSIGHT": "${INSIGHT}",
+    "BRANCH_REF": "${BRANCH_REF}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

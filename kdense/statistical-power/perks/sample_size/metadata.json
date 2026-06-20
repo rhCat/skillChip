@@ -1,0 +1,22 @@
+{
+  "perk": "sample_size",
+  "skill": "statistical-power",
+  "description": "Closed-form a priori sample-size calculation: solve for required n given effect size, alpha, and target power.",
+  "rules": [
+    "read-only: computes a number, mutates no external state",
+    "TEST selects the solver: t_ind, t_paired, t_one, anova, two_proportions, one_proportion, correlation, chi2, linear_regression",
+    "per-group tests (t_ind, two_proportions) return n PER GROUP; anova/chi2/regression return total n",
+    "effect size must be supplied on a defensible basis (SESOI > shrunk pilot > convention) - the script does not invent one"
+  ],
+  "usage": "Set TEST and the effect inputs it needs (EFFECT_SIZE, or PROP1/PROP2 for proportions; K_GROUPS for anova; DOF for chi2; DF_NUM for regression). Optional ALPHA (default 0.05), POWER (default 0.80), ALTERNATIVE, RATIO. Output: sample_size.json.",
+  "limitation": "Closed-form only - no formula exists for GLMs, mixed models, or cluster designs; use the simulate_power perk for those. Returns analyzed n, not enrolled n (inflate separately for dropout).",
+  "minimal_example": {
+    "perk": "sample_size",
+    "vars": {
+      "TEST": "t_ind",
+      "EFFECT_SIZE": "0.5",
+      "POWER": "0.80",
+      "ALPHA": "0.05"
+    }
+  }
+}

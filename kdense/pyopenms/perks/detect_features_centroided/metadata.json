@@ -1,0 +1,18 @@
+{
+  "perk": "detect_features_centroided",
+  "skill": "pyopenms",
+  "description": "Peptide/centroided feature detection on peak-picked LC-MS data using FeatureFinderAlgorithmPicked (the modern replacement for the removed FeatureFinderCentroided). Writes a featureXML and a CSV table.",
+  "rules": [
+    "writes features.featureXML and features.csv under record_store",
+    "tunable via MZ_TOL_PPM, CHARGE_LOW, CHARGE_HIGH, MIN_SPECTRA",
+    "input must be centroided (peak-picked) mzML"
+  ],
+  "usage": "Set INPUT (centroided mzML). Optional MZ_TOL_PPM/CHARGE_LOW/CHARGE_HIGH/MIN_SPECTRA. Output: features.featureXML (+ features.csv).",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) to produce real content; if absent the porter still creates features.featureXML and records the reason.",
+  "minimal_example": {
+    "perk": "detect_features_centroided",
+    "vars": {
+      "INPUT": "centroided.mzML"
+    }
+  }
+}

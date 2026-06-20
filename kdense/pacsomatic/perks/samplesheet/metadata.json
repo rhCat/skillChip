@@ -1,0 +1,23 @@
+{
+  "perk": "samplesheet",
+  "skill": "pacsomatic",
+  "description": "Build the pacsomatic-compatible samplesheet CSV (patient,sample,status,bam,pbi) for a matched tumor/normal pair. Tumor row status=1, normal row status=0.",
+  "rules": [
+    "read-only — writes samplesheet.csv only, never executes the pipeline",
+    "two rows: tumor (status 1) then normal (status 0), sharing the same patient id",
+    "columns are fixed: patient,sample,status,bam,pbi (pbi optional, blank when unset)",
+    "output written under record_store"
+  ],
+  "usage": "Set PATIENT_ID, TUMOR_SAMPLE_ID, NORMAL_SAMPLE_ID, TUMOR_BAM, NORMAL_BAM (optional TUMOR_PBI, NORMAL_PBI). Output: samplesheet.csv.",
+  "limitation": "Does not validate that BAM files exist or that ids are space-free; use the dry-run perk for full input validation.",
+  "minimal_example": {
+    "perk": "samplesheet",
+    "vars": {
+      "PATIENT_ID": "P001",
+      "TUMOR_SAMPLE_ID": "P001_T",
+      "NORMAL_SAMPLE_ID": "P001_N",
+      "TUMOR_BAM": "/data/P001_T.bam",
+      "NORMAL_BAM": "/data/P001_N.bam"
+    }
+  }
+}

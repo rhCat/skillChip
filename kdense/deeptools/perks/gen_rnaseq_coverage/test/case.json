@@ -1,0 +1,16 @@
+{
+  "_perk": "gen_rnaseq_coverage",
+  "requires": ["python3"],
+  "vars": {
+    "RNASEQ_BAM": "rnaseq.bam",
+    "THREADS": "4"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["rnaseq_coverage.sh"],
+    "nonempty": ["rnaseq_coverage.sh"],
+    "contains": {
+      "rnaseq_coverage.sh": "RNA-seq Coverage Workflow"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "perk": "edit",
+  "skill": "generate-image",
+  "description": "edit an existing image with a text instruction via an OpenRouter image model",
+  "rules": [
+    "read-only — only requests a render, mutates no remote/live service",
+    "requires OPENROUTER_API_KEY and network access to openrouter.ai",
+    "INPUT_IMAGE is encoded as base64 and sent with the editing PROMPT (enables edit mode)",
+    "supported input formats: PNG, JPEG, GIF, WebP",
+    "edited PNG is written under record_store (the input image is not modified in place)"
+  ],
+  "usage": "Set PROMPT (editing instruction) and INPUT_IMAGE (path to the source image). Optional: MODEL, OUTPUT_NAME. Set OPENROUTER_API_KEY. Output: the named PNG under record_store.",
+  "limitation": "Network + valid OpenRouter API key required to actually render. Offline or without a key, the porter still produces the output file so the contract holds, but it will be empty/placeholder. Only gemini-3.1-flash-image-preview and flux.2-pro support editing.",
+  "minimal_example": {
+    "perk": "edit",
+    "vars": {
+      "PROMPT": "Make the background blue",
+      "INPUT_IMAGE": "photo.png",
+      "MODEL": "google/gemini-3.1-flash-image-preview",
+      "OUTPUT_NAME": "edited_image.png"
+    }
+  }
+}

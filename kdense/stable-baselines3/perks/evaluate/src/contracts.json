@@ -1,0 +1,27 @@
+{
+  "tool": "sb3_evaluate",
+  "inputs": {
+    "MODEL_PATH": {
+      "type": "string",
+      "required": true
+    },
+    "ENV_ID": {
+      "type": "string",
+      "required": true
+    },
+    "N_EVAL_EPISODES": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "sb3_evaluate_out": {
+      "path": "${RECORD_STORE}/evaluation.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/evaluation.json"
+  }
+}

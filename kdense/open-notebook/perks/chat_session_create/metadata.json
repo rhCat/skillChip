@@ -1,0 +1,21 @@
+{
+  "perk": "chat_session_create",
+  "skill": "open-notebook",
+  "description": "Create a chat session inside a notebook (POST /api/chat/sessions).",
+  "rules": [
+    "remote-mutating: creates a chat-session resource on the live server",
+    "MODEL_OVERRIDE optional — pins a specific model for the session",
+    "writes the created session JSON to record_store/chat_session.json",
+    "degrades gracefully (status=unreachable, exit 0) when the server is down"
+  ],
+  "usage": "Set OPEN_NOTEBOOK_URL, NOTEBOOK_ID, and SESSION_TITLE (MODEL_OVERRIDE optional). Output: chat_session.json.",
+  "limitation": "Requires a reachable Open Notebook server. Sending messages is a separate perk (chat_send).",
+  "minimal_example": {
+    "perk": "chat_session_create",
+    "vars": {
+      "OPEN_NOTEBOOK_URL": "http://localhost:5055",
+      "NOTEBOOK_ID": "notebook:abc123",
+      "SESSION_TITLE": "TMB Discussion"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "tool": "rd_substructure",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "PATTERN": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "rd_substructure_out": {
+      "path": "${RECORD_STORE}/report.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/report.csv"
+  }
+}

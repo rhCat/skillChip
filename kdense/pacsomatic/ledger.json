@@ -1,0 +1,13 @@
+{
+  "_schema": "task-ledger TEMPLATE for pacsomatic — set perk, fill record_store + the vars the perk declares.",
+  "skill": "pacsomatic",
+  "perk": "samplesheet",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PATIENT_ID": "<patient id, no spaces>",
+    "TUMOR_SAMPLE_ID": "<tumor sample id, no spaces>",
+    "NORMAL_SAMPLE_ID": "<normal sample id, no spaces>",
+    "TUMOR_BAM": "<tumor BAM path>",
+    "NORMAL_BAM": "<normal BAM path>"
+  }
+}

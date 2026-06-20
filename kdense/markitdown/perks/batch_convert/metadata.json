@@ -1,0 +1,19 @@
+{
+  "perk": "batch_convert",
+  "skill": "markitdown",
+  "description": "Batch convert a directory of files (PDF/DOCX/PPTX/XLSX/HTML/images) to Markdown using MarkItDown, in parallel.",
+  "rules": [
+    "read-only inputs; writes Markdown files into record_store/markdown",
+    "INPUT_DIR must be an existing directory",
+    "EXTENSIONS optional (space-separated, e.g. '.pdf .docx'); defaults to common formats",
+    "requires the markitdown Python library to actually convert"
+  ],
+  "usage": "Set INPUT_DIR (directory of source files). Optional EXTENSIONS, RECURSIVE=1. Output: markdown/ dir + summary written to convert_summary.json.",
+  "limitation": "Needs the markitdown library installed; without it the porter records a structured 'lib missing' note and produces no Markdown. No network.",
+  "minimal_example": {
+    "perk": "batch_convert",
+    "vars": {
+      "INPUT_DIR": "./papers"
+    }
+  }
+}

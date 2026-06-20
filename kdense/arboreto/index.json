@@ -1,0 +1,28 @@
+{
+  "skill": "arboreto",
+  "skill_sha": "19287e70238b7f5014d17ce6d1c37997444d5df3421e3a017cc31f5af54956c6",
+  "file_count": 21,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "3cc91cc53041d631effdad24f23be6885a02a1b3d87cd23782ffff5e0840a90d",
+    "blueprint.drawio": "0c46d5da5af4b6a32e26b8c8f4a0fafa4da25b71523747318a54b6161427af66",
+    "blueprint.json": "0db29e9cfb52a4940eab8536efafc6237e6531331b32625ffdf288d535c8c42e",
+    "blueprint.svg": "3c93bc141e36372261404c8fddb776dfe3e98c6f7dc2bae0eb41b7d05e6bc35c",
+    "ledger.json": "f5653847ddd1639dd8f172e5461fa0ed45e147d3f78f0461a803a586a2d0d7c0",
+    "perks.json": "8e77ea0cc50cdf9a5efbcf4d2df2ca504c40cabc0739b0a17d72862beb29b9b5",
+    "perks/genie3/manifesto.json": "4bcbaf11368eb1ff47dff728b1cd29650b82d5a431ef2dd34cf8ab44f1fe36cc",
+    "perks/genie3/metadata.json": "6b59bf687ba29b6bc959e0a6b82dd12241187cad0e65b9fa05c1579a8d347638",
+    "perks/genie3/src/basic_grn_inference.py": "f6a6c70fa54595c747878e3fccbca0c11e4a5848520b7638d82497c3740aaea1",
+    "perks/genie3/src/contracts.json": "e30c2a5dbc3d2d280860aa6a3fc80acdcfbbfc9d0ffd032c6b2ef6aad0ec5422",
+    "perks/genie3/src/genie3.sh": "4fcebef47b1a41b76fc0e37df49a59c31706a5d76b054cd0dda8c8f80f39832b",
+    "perks/genie3/test/case.json": "98b94c676d78384fd17e7a1893db2bb899e5d352ff66b5ccec726e79731ee77d",
+    "perks/genie3/test/fixture/expression.tsv": "b78ed2032d995ffe194f878eae443c7bcf1750c3f2816922f6ca82159be6ca88",
+    "perks/grnboost2/manifesto.json": "70042fe71dc12a003024c1469fe2472e5e7fd1b58fa1e574ba08a1dfe2b55373",
+    "perks/grnboost2/metadata.json": "de7d90b97bc57a0b63529600ec736bd6ad17ec9bd1dd2c7654de123bf7641252",
+    "perks/grnboost2/src/basic_grn_inference.py": "f6a6c70fa54595c747878e3fccbca0c11e4a5848520b7638d82497c3740aaea1",
+    "perks/grnboost2/src/contracts.json": "70b982c399311a11fe0e98a1898f15a76e69f3948aa4a7274eaad5d31e61f400",
+    "perks/grnboost2/src/grnboost2.sh": "94a6aa0d64addf11940b5de84ada2dd597584c0b0f122178d9f7a3a9bdcea0f3",
+    "perks/grnboost2/test/case.json": "ff9f1bbef9b07bd80bb73e1c7a296ed26bba4760143e1d1d0d1141a5f79d93e8",
+    "perks/grnboost2/test/fixture/expression.tsv": "b78ed2032d995ffe194f878eae443c7bcf1750c3f2816922f6ca82159be6ca88"
+  }
+}

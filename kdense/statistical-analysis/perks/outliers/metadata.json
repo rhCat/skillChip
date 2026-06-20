@@ -1,0 +1,22 @@
+{
+  "perk": "outliers",
+  "skill": "statistical-analysis",
+  "description": "Detect outliers in one numeric CSV column by IQR or z-score (+ box/scatter figure).",
+  "rules": [
+    "read-only — input CSV is never mutated",
+    "METHOD is 'iqr' (default, threshold 1.5) or 'zscore' (threshold 3 typical)",
+    "reports outlier indices, values, count, percent, and the lower/upper bounds",
+    "JSON report + PNG figure written to record_store"
+  ],
+  "usage": "Set DATA_CSV, VALUE_COL, and optionally METHOD ('iqr'|'zscore') + THRESHOLD. Output: outliers.json + outliers.png.",
+  "limitation": "Single column only; NaNs dropped. Indices are positions within the cleaned column, not original CSV row numbers. Requires numpy/scipy/pandas/matplotlib present; degrades to an empty report otherwise.",
+  "minimal_example": {
+    "perk": "outliers",
+    "vars": {
+      "DATA_CSV": "./data.csv",
+      "VALUE_COL": "score",
+      "METHOD": "iqr",
+      "THRESHOLD": "1.5"
+    }
+  }
+}

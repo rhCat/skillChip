@@ -1,0 +1,30 @@
+{
+  "_perk": "simulate_power",
+  "sequence": [
+    "simulate_power"
+  ],
+  "tools": {
+    "simulate_power": {
+      "binary": "bash",
+      "params": {
+        "DESIGN": "${DESIGN}",
+        "N": "${N}",
+        "N_SIMS": "${N_SIMS}",
+        "EFFECT": "${EFFECT}"
+      }
+    }
+  },
+  "env": {
+    "DESIGN": "${DESIGN}",
+    "N": "${N}",
+    "N_SIMS": "${N_SIMS}",
+    "EFFECT": "${EFFECT}",
+    "ALPHA": "${ALPHA}",
+    "SEED": "${SEED}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "tool": "mc_complexity",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "COMPLEXITY": {
+      "type": "string",
+      "required": true
+    },
+    "COMPLEXITY_METHOD": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "mc_complexity_out": {
+      "path": "${RECORD_STORE}/complexity.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/complexity.csv"
+  }
+}

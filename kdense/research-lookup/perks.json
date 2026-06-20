@@ -1,0 +1,21 @@
+{
+  "skill": "research-lookup",
+  "perks": [
+    {
+      "id": "research-lookup",
+      "summary": "route a research query to the Parallel Chat API (default) or Perplexity sonar-pro-search (academic), writing a cited report to record_store",
+      "destructive": false,
+      "tools": [
+        "research_lookup"
+      ]
+    },
+    {
+      "id": "generate-schematic",
+      "summary": "render a publication-quality scientific schematic from a natural-language description (Nano Banana 2 via OpenRouter), writing the image to record_store",
+      "destructive": false,
+      "tools": [
+        "generate_schematic"
+      ]
+    }
+  ]
+}

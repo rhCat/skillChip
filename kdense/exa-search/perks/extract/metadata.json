@@ -1,0 +1,21 @@
+{
+  "perk": "extract",
+  "skill": "exa-search",
+  "description": "Fetch + extract content from one or more URLs via Exa /contents and write to JSON",
+  "rules": [
+    "read-only (fetches via the Exa API; mutates nothing remote)",
+    "requires the exa-py SDK, an EXA_API_KEY, and internet access",
+    "URLS is whitespace-separated; all are batched into one /contents call",
+    "sets the x-exa-integration tracking header — do not remove",
+    "results written to record_store as extract.json"
+  ],
+  "usage": "Set URLS (one or more whitespace-separated URLs) and EXA_API_KEY. Optional: HIGHLIGHTS=1 to return passages instead of full text. Output: extract.json.",
+  "limitation": "Read-only retrieval only. Needs network + a valid EXA_API_KEY; degrades to an empty {} report when the SDK or key is absent. Individual URLs may fail (paywall/robots/timeout).",
+  "minimal_example": {
+    "perk": "extract",
+    "vars": {
+      "URLS": "https://arxiv.org/abs/2401.04088",
+      "EXA_API_KEY": "exa-..."
+    }
+  }
+}

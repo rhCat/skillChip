@@ -1,0 +1,25 @@
+{
+  "_perk": "multi_objective",
+  "sequence": [
+    "pymoo_multi_objective"
+  ],
+  "tools": {
+    "pymoo_multi_objective": {
+      "binary": "python3",
+      "params": {
+        "PROBLEM": "${PROBLEM}",
+        "POP_SIZE": "${POP_SIZE}",
+        "N_GEN": "${N_GEN}"
+      }
+    }
+  },
+  "env": {
+    "PROBLEM": "${PROBLEM}",
+    "POP_SIZE": "${POP_SIZE}",
+    "N_GEN": "${N_GEN}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

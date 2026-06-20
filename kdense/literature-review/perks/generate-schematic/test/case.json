@@ -1,0 +1,14 @@
+{
+  "_perk": "generate-schematic",
+  "requires": ["python3"],
+  "vars": {
+    "PROMPT": "PRISMA flow diagram for a systematic review",
+    "DOC_TYPE": "journal",
+    "ITERATIONS": "2"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["run.log"],
+    "nonempty": ["run.log"]
+  }
+}

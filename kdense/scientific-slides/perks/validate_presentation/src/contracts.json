@@ -1,0 +1,23 @@
+{
+  "tool": "validate_presentation",
+  "inputs": {
+    "DECK_PATH": {
+      "type": "string",
+      "required": true
+    },
+    "DURATION": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "validation_report": {
+      "path": "${RECORD_STORE}/validation_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/validation_report.txt"
+  }
+}

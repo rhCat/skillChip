@@ -1,0 +1,18 @@
+{
+  "perk": "extract-structure",
+  "skill": "sci-pdf",
+  "description": "Extract the visual structure of a non-fillable PDF — text labels with coordinates, long horizontal lines (row boundaries), and small square rects (checkboxes) — to JSON. Wraps pdfplumber.",
+  "rules": [
+    "read-only — opens the PDF, never writes it back",
+    "lines kept only if wider than half the page; rects kept only if ~5-15pt squares",
+    "needs pdfplumber at runtime; absent -> empty {} output + exit 0"
+  ],
+  "usage": "Set PDF_PATH (input .pdf). Output: structure.json (pages, labels, lines, checkboxes, row_boundaries).",
+  "limitation": "Heuristic geometry extraction for non-fillable forms; tuned thresholds may miss unusual layouts. Requires pdfplumber.",
+  "minimal_example": {
+    "perk": "extract-structure",
+    "vars": {
+      "PDF_PATH": "scanned_form.pdf"
+    }
+  }
+}

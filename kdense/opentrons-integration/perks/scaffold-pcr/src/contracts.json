@@ -1,0 +1,14 @@
+{
+  "tool": "ot_scaffold_pcr",
+  "inputs": {},
+  "outputs": {
+    "ot_scaffold_pcr_out": {
+      "path": "${RECORD_STORE}/pcr_setup.py",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pcr_setup.py"
+  }
+}

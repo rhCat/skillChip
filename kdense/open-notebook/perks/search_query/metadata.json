@@ -1,0 +1,22 @@
+{
+  "perk": "search_query",
+  "skill": "open-notebook",
+  "description": "Search the knowledge base with full-text or vector (semantic) search (POST /api/search).",
+  "rules": [
+    "read-only: queries the server, mutates nothing",
+    "SEARCH_TYPE is 'vector' (semantic) or 'text' (full-text); default vector",
+    "writes the search results JSON to record_store/search_results.json",
+    "degrades gracefully (status=unreachable, exit 0) when the server is down"
+  ],
+  "usage": "Set OPEN_NOTEBOOK_URL and SEARCH_QUERY (SEARCH_TYPE, SEARCH_LIMIT optional). Output: search_results.json.",
+  "limitation": "Requires a reachable Open Notebook server; vector search needs an embedding provider configured server-side.",
+  "minimal_example": {
+    "perk": "search_query",
+    "vars": {
+      "OPEN_NOTEBOOK_URL": "http://localhost:5055",
+      "SEARCH_QUERY": "tumor mutational burden immunotherapy",
+      "SEARCH_TYPE": "vector",
+      "SEARCH_LIMIT": "10"
+    }
+  }
+}

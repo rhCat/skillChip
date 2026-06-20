@@ -1,0 +1,19 @@
+{
+  "perk": "check-system",
+  "skill": "timesfm-forecasting",
+  "description": "Mandatory TimesFM preflight: check RAM, GPU/VRAM, disk space, Python version, and timesfm/torch install for the chosen model version; emit a machine-readable verdict (read-only).",
+  "rules": [
+    "read-only — inspects the host only, never loads the model or touches the network",
+    "MODEL_VERSION is one of v2.5 (default), v2.0, v1.0",
+    "writes the JSON report to record_store as system_check.json",
+    "the porter ignores the checker's non-zero FAIL exit; the JSON verdict carries pass/fail"
+  ],
+  "usage": "Set MODEL_VERSION (v2.5 | v2.0 | v1.0). Output: system_check.json with per-check status and a recommended per_core_batch_size.",
+  "limitation": "GPU/VRAM detection needs torch installed; without torch the GPU check reports 'unknown' but does not fail. Pure stdlib otherwise.",
+  "minimal_example": {
+    "perk": "check-system",
+    "vars": {
+      "MODEL_VERSION": "v2.5"
+    }
+  }
+}

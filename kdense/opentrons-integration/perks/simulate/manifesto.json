@@ -1,0 +1,21 @@
+{
+  "_perk": "simulate",
+  "sequence": [
+    "ot_simulate"
+  ],
+  "tools": {
+    "ot_simulate": {
+      "binary": "python3",
+      "params": {
+        "PROTOCOL_FILE": "${PROTOCOL_FILE}"
+      }
+    }
+  },
+  "env": {
+    "PROTOCOL_FILE": "${PROTOCOL_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

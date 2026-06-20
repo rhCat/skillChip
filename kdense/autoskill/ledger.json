@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for autoskill — set perk, fill record_store + the vars the perk declares.",
+  "skill": "autoskill",
+  "perk": "doctor",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "CONFIG": "<path to autoskill config.yaml>",
+    "SKILLS_DIR": "<path to the skills/ directory>"
+  }
+}

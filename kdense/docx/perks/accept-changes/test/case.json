@@ -1,0 +1,10 @@
+{
+  "_perk": "accept-changes",
+  "requires": ["bash", "python3"],
+  "vars": { "DOCX_FILE": "${FIXTURE}/sample.docx" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["accept_changes.log"],
+    "nonempty": ["accept_changes.log"]
+  }
+}

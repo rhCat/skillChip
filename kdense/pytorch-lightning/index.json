@@ -1,0 +1,32 @@
+{
+  "skill": "pytorch-lightning",
+  "skill_sha": "69d2b5cc578a615926d3bbff295f229c8f388c21e4bae0aa4a4ea267a59c9456",
+  "file_count": 25,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "a233d1f900fa09b5e2b1e4dbd6dd23b78c5d696683a9e736773ff602c71720ed",
+    "blueprint.drawio": "56b8386e21f18b503f6592d3bda17d8fa8b76ea79e2fd085e1d04e42b9278a8b",
+    "blueprint.json": "107d1b3fc74784680d4ccef2d6f305fca01edcd156d44f3180e4d57ed6a91144",
+    "blueprint.svg": "f228f999c558e5f8371646e1b449fb6709d989a3bc7f3008e9748e211e578c66",
+    "ledger.json": "7f26686dbcb8496ee7085e3faddea761445766429e6d59fe4c47882dbefc70a4",
+    "perks.json": "2a693e10158e178673014b690d3ed4af757a13b350c1d2ea408c3f60962a1e1e",
+    "perks/scaffold_datamodule/manifesto.json": "80e223a8542298d15cb433dfc57a0ad60cb2519cb0a94c782755a977365bd35c",
+    "perks/scaffold_datamodule/metadata.json": "e335fd272102aa1cdfdd201e642d16d2d2c1d997bb6f07e873abc0d40d3dc33d",
+    "perks/scaffold_datamodule/src/contracts.json": "0f122aa48c710c7fe8b1c9288415acf9adb735148f512366c4a7ba57bca01d2d",
+    "perks/scaffold_datamodule/src/scaffold_datamodule.sh": "4e3fd55bd05705a4ec2aa849f5d865b0bab19d703b223e3521a1e5d114777656",
+    "perks/scaffold_datamodule/src/template_datamodule.py": "82d1601800fa17a80250b640b4df530ebd78bb852316bc75c6441b1d592c80cf",
+    "perks/scaffold_datamodule/test/case.json": "c69146a9e5dc46478f299f438b887d25d489e8be0cd0293a7117c3e46980495c",
+    "perks/scaffold_module/manifesto.json": "80e4ba23967589d45493fbbd4397b3cef091e9e51d02dcba4359fce4b397b004",
+    "perks/scaffold_module/metadata.json": "64f3430c2eba8c49e6a918879d8655b697656d4df5187f8817e492ce6a0f1504",
+    "perks/scaffold_module/src/contracts.json": "836ae3a32999bd9595f79427546e6a74b777f740d2996790ce99e63dfa733a67",
+    "perks/scaffold_module/src/scaffold_module.sh": "55d141f3ed0f21711e0c8201ff8c598ab424184409c3a59fb9885704bd5af284",
+    "perks/scaffold_module/src/template_lightning_module.py": "0337c694bc33f2de5bd93af0221b78d0ffcad3841ca1f540b78eb3a309e9d1c2",
+    "perks/scaffold_module/test/case.json": "06d6952136c618033e791ecd12d59776707cdc5f59994a2b1f04b55aaa892489",
+    "perks/trainer_setup/manifesto.json": "69fcd0adcdc801ff731b8ce25285db70b1ef77a1648167cbdf1640c048e25fe4",
+    "perks/trainer_setup/metadata.json": "4578b8c201f7002110b3f8b64e1b0754132cdf4739632eef8792fd4f4d64ef44",
+    "perks/trainer_setup/src/contracts.json": "3fd87a3d806b80da99599015f61270ea32b682fe9165a45d2d113354aa8f136f",
+    "perks/trainer_setup/src/quick_trainer_setup.py": "a2bf7df7ea87d341b6caa282d16a0970a123ed7b17c7bbcaaf6b6b3df77aec4b",
+    "perks/trainer_setup/src/trainer_setup.sh": "c0229ae3aced14eb37b4b2115577c7ea51b994545a742b3549956cdbc5965bd7",
+    "perks/trainer_setup/test/case.json": "edf2e898bc41033c1cb3b772ddb954563f10bdbaea01040e937d63e900fe525c"
+  }
+}

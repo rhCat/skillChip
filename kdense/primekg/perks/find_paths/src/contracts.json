@@ -1,0 +1,31 @@
+{
+  "tool": "find_paths",
+  "inputs": {
+    "PRIMEKG_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "START_NODE_ID": {
+      "type": "string",
+      "required": true
+    },
+    "END_NODE_ID": {
+      "type": "string",
+      "required": true
+    },
+    "MAX_DEPTH": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "find_paths_out": {
+      "path": "${RECORD_STORE}/find_paths.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/find_paths.json"
+  }
+}

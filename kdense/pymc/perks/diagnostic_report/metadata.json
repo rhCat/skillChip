@@ -1,0 +1,22 @@
+{
+  "perk": "diagnostic_report",
+  "skill": "pymc",
+  "description": "Full MCMC diagnostic report from a saved PyMC/ArviZ InferenceData .nc file: trace, rank, autocorrelation, energy, and ESS-evolution plots plus a summary-statistics CSV.",
+  "rules": [
+    "read-only on the input — never mutates it or any remote/live service",
+    "input is a netCDF InferenceData file written by idata.to_netcdf(...)",
+    "plots + summary CSV are written under record_store/diagnostics/",
+    "requires arviz + matplotlib (+ pymc) importable for real output; absent libs produce a graceful {} stub",
+    "matplotlib runs headless (Agg backend) — no window is opened",
+    "a JSON manifest of the produced artifacts is written to record_store as report.json"
+  ],
+  "usage": "Set IDATA (path to a .nc InferenceData file). Optional VAR_NAMES (comma-separated). Outputs: report.json (manifest) + record_store/diagnostics/ (plots + summary_statistics.csv).",
+  "limitation": "Read-only report. Needs arviz/matplotlib/pymc + the netCDF backend to render plots; offline it writes an empty JSON stub and no plots.",
+  "minimal_example": {
+    "perk": "diagnostic_report",
+    "vars": {
+      "IDATA": "idata.nc",
+      "VAR_NAMES": "alpha,beta,sigma"
+    }
+  }
+}

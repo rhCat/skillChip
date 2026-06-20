@@ -1,0 +1,27 @@
+{
+  "tool": "loo_reliability",
+  "inputs": {
+    "MODELS_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "MODELS": {
+      "type": "string",
+      "required": false
+    },
+    "THRESHOLD": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "loo_reliability_out": {
+      "path": "${RECORD_STORE}/loo_reliability.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/loo_reliability.json"
+  }
+}

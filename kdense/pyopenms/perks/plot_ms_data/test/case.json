@@ -1,0 +1,10 @@
+{
+  "_perk": "plot_ms_data",
+  "requires": ["python3", "bash"],
+  "vars": { "KIND": "tic", "INPUT": "${FIXTURE}/sample.mzML" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["plot.png"],
+    "nonempty": ["plot.png"]
+  }
+}

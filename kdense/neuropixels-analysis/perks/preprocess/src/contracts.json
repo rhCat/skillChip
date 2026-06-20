@@ -1,0 +1,35 @@
+{
+  "tool": "preprocess_recording",
+  "inputs": {
+    "DATA_PATH": {
+      "type": "string",
+      "required": true
+    },
+    "FORMAT": {
+      "type": "string",
+      "required": false
+    },
+    "STREAM_NAME": {
+      "type": "string",
+      "required": false
+    },
+    "FREQ_MIN": {
+      "type": "number",
+      "required": false
+    },
+    "FREQ_MAX": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "outputs": {
+    "preprocess_report": {
+      "path": "${RECORD_STORE}/preprocess_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/preprocess_report.txt"
+  }
+}

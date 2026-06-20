@@ -1,0 +1,26 @@
+{
+  "perk": "submit",
+  "skill": "pacsomatic",
+  "description": "DESTRUCTIVE. Prepare artifacts then execute or submit the generated launch script via run_pacsomatic.py --run: local/none runs `bash <script>`; lsf submits `bsub < <script>`; slurm `sbatch <script>`; pbs/sge `qsub <script>`. Launches the real nf-core/pacsomatic pipeline and/or enqueues a real scheduler job.",
+  "rules": [
+    "destructive — executes the pipeline locally or submits a job to a live scheduler",
+    "requires a resolvable nextflow runtime; scheduler executors additionally require the matching submit binary (bsub/sbatch/qsub) on PATH",
+    "exactly one reference mode: provide FASTA or GENOME; local BAMs must exist",
+    "in --run mode missing nextflow/java/scheduler tools are HARD failures (not warnings)",
+    "writes submit.log plus the artifact set; the detected scheduler job id is echoed when parseable"
+  ],
+  "usage": "Set PATIENT_ID, TUMOR_SAMPLE_ID, NORMAL_SAMPLE_ID, TUMOR_BAM, NORMAL_BAM, one of FASTA or GENOME, and PROFILE/EXECUTOR. Output: submit.log.",
+  "limitation": "Cannot run hermetically: needs nextflow + the container/conda runtime, and a live scheduler for non-local executors. Use the dry-run perk to validate offline first.",
+  "minimal_example": {
+    "perk": "submit",
+    "vars": {
+      "PATIENT_ID": "P001",
+      "TUMOR_SAMPLE_ID": "P001_T",
+      "NORMAL_SAMPLE_ID": "P001_N",
+      "TUMOR_BAM": "/data/P001_T.bam",
+      "NORMAL_BAM": "/data/P001_N.bam",
+      "GENOME": "GRCh38",
+      "EXECUTOR": "slurm"
+    }
+  }
+}

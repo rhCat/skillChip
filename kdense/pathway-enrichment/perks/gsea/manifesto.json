@@ -1,0 +1,37 @@
+{
+  "_perk": "gsea",
+  "sequence": [
+    "run_gsea"
+  ],
+  "tools": {
+    "run_gsea": {
+      "binary": "python3",
+      "params": {
+        "DESEQ2": "${DESEQ2}",
+        "RNK": "${RNK}",
+        "LIBRARIES": "${LIBRARIES}",
+        "ORGANISM": "${ORGANISM}",
+        "FDR": "${FDR}",
+        "SEED": "${SEED}",
+        "MIN_SIZE": "${MIN_SIZE}",
+        "MAX_SIZE": "${MAX_SIZE}",
+        "PERMUTATIONS": "${PERMUTATIONS}"
+      }
+    }
+  },
+  "env": {
+    "DESEQ2": "${DESEQ2}",
+    "RNK": "${RNK}",
+    "LIBRARIES": "${LIBRARIES}",
+    "ORGANISM": "${ORGANISM}",
+    "FDR": "${FDR}",
+    "SEED": "${SEED}",
+    "MIN_SIZE": "${MIN_SIZE}",
+    "MAX_SIZE": "${MAX_SIZE}",
+    "PERMUTATIONS": "${PERMUTATIONS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

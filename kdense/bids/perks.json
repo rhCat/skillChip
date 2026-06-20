@@ -1,0 +1,21 @@
+{
+  "skill": "bids",
+  "perks": [
+    {
+      "id": "update_schema",
+      "summary": "fetch the BIDS schema.json from upstream and write references/bids_schema.json (read-only network fetch)",
+      "destructive": false,
+      "tools": [
+        "update_schema"
+      ]
+    },
+    {
+      "id": "update_beps",
+      "summary": "fetch the current BEPs listing (beps.yml) from bids-website and write references/beps.yml (read-only network fetch)",
+      "destructive": false,
+      "tools": [
+        "update_beps"
+      ]
+    }
+  ]
+}

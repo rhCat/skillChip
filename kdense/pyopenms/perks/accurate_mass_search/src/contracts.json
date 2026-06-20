@@ -1,0 +1,35 @@
+{
+  "tool": "accurate_mass_search",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "NEGATIVE": {
+      "type": "string",
+      "required": false
+    },
+    "PPM": {
+      "type": "string",
+      "required": false
+    },
+    "DB_MAPPING": {
+      "type": "string",
+      "required": false
+    },
+    "DB_STRUCT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "mztab": {
+      "path": "${RECORD_STORE}/annotations.mzTab",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/annotations.mzTab"
+  }
+}

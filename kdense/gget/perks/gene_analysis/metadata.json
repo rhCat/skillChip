@@ -1,0 +1,20 @@
+{
+  "perk": "gene_analysis",
+  "skill": "gget",
+  "description": "Comprehensive single-gene analysis via gget: search -> info -> seq (nucleotide + protein) -> archs4 tissue/correlation -> opentargets diseases/drugs. Writes CSV + FASTA reports under record_store (read-only remote queries).",
+  "rules": [
+    "read-only — only queries remote databases (Ensembl, UniProt, NCBI, ARCHS4, OpenTargets) and writes local files",
+    "needs network and an installed gget package; with gget absent the porter degrades gracefully and still writes a non-empty report",
+    "all outputs land under record_store (the porter runs the vendored core there)",
+    "no remote mutation, no install — gget setup / alphafold are out of scope"
+  ],
+  "usage": "Set GENE (gene symbol, e.g. ACE2) and SPECIES (default homo_sapiens). Output: gene_analysis.log (run log) plus gget CSV/FASTA files (<gene>_info.csv, <gene>_nucleotide.fasta, <gene>_protein.fasta, <gene>_tissue_expression.csv, <gene>_correlated_genes.csv, <gene>_diseases.csv, <gene>_drugs.csv).",
+  "limitation": "Requires gget + network to produce real biological results; offline it only produces the run log. Processes one gene per run. Per-step gget failures are warned and skipped, not fatal.",
+  "minimal_example": {
+    "perk": "gene_analysis",
+    "vars": {
+      "GENE": "ACE2",
+      "SPECIES": "homo_sapiens"
+    }
+  }
+}

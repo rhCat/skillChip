@@ -1,0 +1,12 @@
+{
+  "_schema": "task-ledger TEMPLATE for arboreto — set perk, fill record_store + the vars the perk declares.",
+  "skill": "arboreto",
+  "perk": "grnboost2",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "EXPRESSION_FILE": "<TSV expression matrix, genes as columns, observations as rows>",
+    "TF_FILE": "<optional TSV/TXT of transcription-factor names, one per line; empty = all genes>",
+    "SEED": "777",
+    "LIMIT": ""
+  }
+}

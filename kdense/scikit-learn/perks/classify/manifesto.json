@@ -1,0 +1,24 @@
+{
+  "_perk": "classify",
+  "sequence": [
+    "classify"
+  ],
+  "tools": {
+    "classify": {
+      "binary": "bash",
+      "params": {
+        "DATA_CSV": "${DATA_CSV}"
+      }
+    }
+  },
+  "env": {
+    "DATA_CSV": "${DATA_CSV}",
+    "TARGET_COL": "${TARGET_COL}",
+    "TEST_SIZE": "${TEST_SIZE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "_perk": "lilly",
+  "sequence": [
+    "mc_lilly"
+  ],
+  "tools": {
+    "mc_lilly": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}",
+        "LILLY_MAX": "${LILLY_MAX}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "LILLY_MAX": "${LILLY_MAX}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

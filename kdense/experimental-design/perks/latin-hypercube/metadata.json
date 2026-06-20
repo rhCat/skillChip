@@ -1,0 +1,24 @@
+{
+  "perk": "latin-hypercube",
+  "skill": "experimental-design",
+  "description": "Space-filling Latin-hypercube sample over continuous factor ranges, for computer experiments / simulations where even coverage of a high-dimensional space is wanted with few points; returned in real units.",
+  "rules": [
+    "read-only — reads a JSON spec, writes a CSV; mutates no live service",
+    "seeded — the sample is reproducible from SPEC_JSON.seed (pyDOE3 lhs uses the numpy global RNG)",
+    "each factor needs a (low, high) range",
+    "needs python3 + pyDOE3 + numpy + pandas"
+  ],
+  "usage": "Set SPEC_JSON to a JSON file with keys: factors (required dict {name:[low,high]}), n_samples (required int), criterion (str, default 'maximin'), seed (int), randomize (bool, default false). Output: experimental_runs.csv under record_store.",
+  "limitation": "Designed for continuous factors and simulation/computer experiments, not for categorical levels or physical replication. When pyDOE3 is absent the porter writes an empty {} artifact.",
+  "minimal_example": {
+    "perk": "latin-hypercube",
+    "vars": {
+      "SPEC_JSON": "spec.json"
+    },
+    "spec.json": {
+      "factors": {"temp_C": [20, 60], "conc_mM": [1, 10], "pH": [6, 8]},
+      "n_samples": 8,
+      "seed": 1
+    }
+  }
+}

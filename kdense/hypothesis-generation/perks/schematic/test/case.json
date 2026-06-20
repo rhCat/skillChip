@@ -1,0 +1,14 @@
+{
+  "_perk": "schematic",
+  "requires": ["python3"],
+  "vars": {
+    "SCHEMATIC_PROMPT": "Hypothesis framework diagram showing three competing mechanistic explanations",
+    "DOC_TYPE": "journal",
+    "ITERATIONS": "2"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["schematic.json"],
+    "nonempty": ["schematic.json"]
+  }
+}

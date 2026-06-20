@@ -1,0 +1,5 @@
+{
+  "n": 10,
+  "arms": ["treatment", "control"],
+  "seed": 1
+}

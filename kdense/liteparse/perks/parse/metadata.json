@@ -1,0 +1,20 @@
+{
+  "perk": "parse",
+  "skill": "liteparse",
+  "description": "Parse one document/PDF to layout-preserved text or structured bbox JSON via the liteparse engine (lit parse).",
+  "rules": [
+    "read-only — never mutates the input file",
+    "FORMAT is 'text' (layout-preserved) or 'json' (per-page text_items with bounding boxes)",
+    "all processing is local; no cloud API or network call",
+    "output written under record_store as parse.<txt|json>"
+  ],
+  "usage": "Set INPUT_FILE (a PDF or convertible document) and FORMAT (text|json). Output: parse.txt or parse.json.",
+  "limitation": "Requires the liteparse package (PyPI liteparse==2.0.0) at runtime; when absent the porter writes a graceful placeholder so the contract still holds. Office/image inputs additionally need LibreOffice/ImageMagick.",
+  "minimal_example": {
+    "perk": "parse",
+    "vars": {
+      "INPUT_FILE": "paper.pdf",
+      "FORMAT": "json"
+    }
+  }
+}

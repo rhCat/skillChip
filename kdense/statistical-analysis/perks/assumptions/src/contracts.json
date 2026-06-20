@@ -1,0 +1,31 @@
+{
+  "tool": "assumption_check",
+  "inputs": {
+    "DATA_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "VALUE_COL": {
+      "type": "string",
+      "required": true
+    },
+    "GROUP_COL": {
+      "type": "string",
+      "required": false
+    },
+    "ALPHA": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "assumptions_report": {
+      "path": "${RECORD_STORE}/assumptions.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/assumptions.json"
+  }
+}

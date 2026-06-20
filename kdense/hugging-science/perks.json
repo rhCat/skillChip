@@ -1,0 +1,45 @@
+{
+  "skill": "hugging-science",
+  "perks": [
+    {
+      "id": "topics",
+      "summary": "list the known Hugging Science topic slugs (offline, no network)",
+      "destructive": false,
+      "tools": [
+        "hs_topics"
+      ]
+    },
+    {
+      "id": "topic",
+      "summary": "fetch + parse one topic file (filter by section/tag), markdown or JSON",
+      "destructive": false,
+      "tools": [
+        "hs_topic"
+      ]
+    },
+    {
+      "id": "all",
+      "summary": "fetch + parse the full catalog (llms-full.txt), all domains",
+      "destructive": false,
+      "tools": [
+        "hs_all"
+      ]
+    },
+    {
+      "id": "search",
+      "summary": "substring search across the full catalog, markdown or JSON",
+      "destructive": false,
+      "tools": [
+        "hs_search"
+      ]
+    },
+    {
+      "id": "raw",
+      "summary": "dump a raw catalog index file (llms.txt or llms-full.txt) untouched",
+      "destructive": false,
+      "tools": [
+        "hs_raw"
+      ]
+    }
+  ]
+}

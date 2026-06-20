@@ -1,0 +1,20 @@
+{
+  "perk": "benchmark",
+  "skill": "pytdc",
+  "description": "Run a TDC benchmark group's evaluate protocol (5-seed) over a predictions file and report per-dataset mean +/- std.",
+  "rules": [
+    "read-only — evaluates a local per-seed predictions payload against the group's protocol",
+    "predictions payload is JSON keyed by dataset -> seed -> list of predictions (seeds 1..5)",
+    "PyTDC fetches the benchmark group on first use; degrades gracefully (skipped report) when tdc/network is absent",
+    "per-dataset {mean, std} is written to record_store as bench.json"
+  ],
+  "usage": "Set TDC_GROUP (e.g. admet_group) and TDC_PRED (path to a JSON predictions file: {dataset: {seed: [preds]}}); optional TDC_PATH (group cache dir, defaults to record_store/data). Output: bench.json.",
+  "limitation": "Read-only. Requires the PyTDC package and network access to fetch the benchmark group; offline it emits a skipped report. The 5-seed protocol (seeds 1-5) and the group's fixed splits must be respected for leaderboard-valid results.",
+  "minimal_example": {
+    "perk": "benchmark",
+    "vars": {
+      "TDC_GROUP": "admet_group",
+      "TDC_PRED": "/abs/path/bench_preds.json"
+    }
+  }
+}

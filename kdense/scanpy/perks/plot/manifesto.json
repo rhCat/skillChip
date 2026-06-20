@@ -1,0 +1,27 @@
+{
+  "_perk": "plot",
+  "sequence": [
+    "plot"
+  ],
+  "tools": {
+    "plot": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}",
+        "KIND": "${KIND}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "KIND": "${KIND}",
+    "COLOR": "${COLOR}",
+    "GENES": "${GENES}",
+    "GROUPBY": "${GROUPBY}",
+    "USE_RAW": "${USE_RAW}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

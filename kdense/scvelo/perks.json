@@ -1,0 +1,69 @@
+{
+  "skill": "scvelo",
+  "perks": [
+    {
+      "id": "load",
+      "summary": "load a velocyto .loom (optionally merge a processed .h5ad for UMAP/clusters) into a single .h5ad with spliced/unspliced layers",
+      "destructive": false,
+      "tools": [
+        "load"
+      ]
+    },
+    {
+      "id": "preprocess",
+      "summary": "filter_and_normalize + neighbors + moments (first/second-order) on spliced/unspliced layers, write a moments-ready .h5ad",
+      "destructive": false,
+      "tools": [
+        "preprocess"
+      ]
+    },
+    {
+      "id": "velocity",
+      "summary": "fit RNA velocity (stochastic/deterministic/dynamical recover_dynamics) + velocity_graph, write a velocity-annotated .h5ad",
+      "destructive": false,
+      "tools": [
+        "velocity"
+      ]
+    },
+    {
+      "id": "latent_time",
+      "summary": "compute shared latent time from the dynamical model (adds obs['latent_time']) and write the updated .h5ad",
+      "destructive": false,
+      "tools": [
+        "latent_time"
+      ]
+    },
+    {
+      "id": "velocity_pseudotime",
+      "summary": "compute velocity_pseudotime + velocity_confidence + velocity_length per cell, write the updated .h5ad",
+      "destructive": false,
+      "tools": [
+        "velocity_pseudotime"
+      ]
+    },
+    {
+      "id": "driver_genes",
+      "summary": "rank_velocity_genes per cluster group (min_corr filter) and export the per-group driver-gene table as CSV",
+      "destructive": false,
+      "tools": [
+        "driver_genes"
+      ]
+    },
+    {
+      "id": "plot_embedding",
+      "summary": "render a velocity embedding plot (stream / grid / arrows) on a basis (umap) coloured by a group key, to PNG",
+      "destructive": false,
+      "tools": [
+        "plot_embedding"
+      ]
+    },
+    {
+      "id": "run_workflow",
+      "summary": "end-to-end RNA velocity pipeline in one command: preprocess -> velocity -> graph -> latent time -> confidence -> pseudotime -> driver genes -> figures -> .h5ad",
+      "destructive": false,
+      "tools": [
+        "run_workflow"
+      ]
+    }
+  ]
+}

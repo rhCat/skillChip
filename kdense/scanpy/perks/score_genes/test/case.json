@@ -1,0 +1,13 @@
+{
+  "_perk": "score_genes",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.csv",
+    "GENE_SETS": "${FIXTURE}/signatures.json"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["scored.h5ad"],
+    "nonempty": ["scored.h5ad"]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_perk": "latin-hypercube",
+  "sequence": [
+    "latin_hypercube"
+  ],
+  "tools": {
+    "latin_hypercube": {
+      "binary": "python3",
+      "params": {
+        "SPEC_JSON": "${SPEC_JSON}"
+      }
+    }
+  },
+  "env": {
+    "SPEC_JSON": "${SPEC_JSON}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

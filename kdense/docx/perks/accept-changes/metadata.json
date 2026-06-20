@@ -1,0 +1,18 @@
+{
+  "perk": "accept-changes",
+  "skill": "docx",
+  "description": "Accept all tracked changes in a .docx via LibreOffice (headless soffice macro), writing a clean copy with no redlines.",
+  "rules": [
+    "copies the input to a new accepted.docx under record_store, then accepts changes on the copy",
+    "never mutates the source .docx",
+    "drives LibreOffice headless via a one-shot AcceptAllTrackedChanges Basic macro"
+  ],
+  "usage": "Set DOCX_FILE (a .docx with tracked changes). Outputs: accepted.docx and accept_changes.log.",
+  "limitation": "Requires LibreOffice (soffice) on PATH. If soffice is absent the porter records that and exits 0 without producing a cleaned document (degraded).",
+  "minimal_example": {
+    "perk": "accept-changes",
+    "vars": {
+      "DOCX_FILE": "redlined.docx"
+    }
+  }
+}

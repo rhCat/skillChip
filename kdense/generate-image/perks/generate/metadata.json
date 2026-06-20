@@ -1,0 +1,21 @@
+{
+  "perk": "generate",
+  "skill": "generate-image",
+  "description": "generate a new image from a text prompt via an OpenRouter image model",
+  "rules": [
+    "read-only — only requests a render, mutates no remote/live service",
+    "requires OPENROUTER_API_KEY and network access to openrouter.ai",
+    "default model is google/gemini-3.1-flash-image-preview",
+    "output PNG is written under record_store"
+  ],
+  "usage": "Set PROMPT (text description). Optional: MODEL, OUTPUT_NAME. Set OPENROUTER_API_KEY. Output: the named PNG under record_store.",
+  "limitation": "Network + valid OpenRouter API key required to actually render. Offline or without a key, the porter still produces the output file so the contract holds, but it will be empty/placeholder.",
+  "minimal_example": {
+    "perk": "generate",
+    "vars": {
+      "PROMPT": "A beautiful sunset over mountains",
+      "MODEL": "google/gemini-3.1-flash-image-preview",
+      "OUTPUT_NAME": "generated_image.png"
+    }
+  }
+}

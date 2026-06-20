@@ -1,0 +1,43 @@
+{
+  "tool": "train_gnn",
+  "inputs": {
+    "MODEL": {
+      "type": "string",
+      "required": false
+    },
+    "DATASET": {
+      "type": "string",
+      "required": false
+    },
+    "DATA_CSV": {
+      "type": "string",
+      "required": false
+    },
+    "TASK_TYPE": {
+      "type": "string",
+      "required": false
+    },
+    "TARGETS": {
+      "type": "string",
+      "required": false
+    },
+    "SMILES_COL": {
+      "type": "string",
+      "required": false
+    },
+    "EPOCHS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "gnn_report": {
+      "path": "${RECORD_STORE}/gnn_train.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/gnn_train.txt"
+  }
+}

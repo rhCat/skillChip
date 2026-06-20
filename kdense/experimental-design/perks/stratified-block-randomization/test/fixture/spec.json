@@ -1,0 +1,5 @@
+{
+  "strata": {"siteA": 8, "siteB": 6},
+  "arms": ["drug", "placebo"],
+  "seed": 1
+}

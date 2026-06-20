@@ -1,0 +1,23 @@
+{
+  "perk": "match",
+  "skill": "autoskill",
+  "description": "rank each cluster against sibling SKILL.md descriptions via local embeddings (top-k cosine similarity)",
+  "rules": [
+    "read-only — reads cluster summaries and the frontmatter of every */SKILL.md under SKILLS_DIR",
+    "load_skill_descriptions only keeps skills whose frontmatter has both name and description",
+    "top_k_matches embeds each cluster query + each skill description and ranks by cosine similarity",
+    "production embedder is local sentence-transformers (all-MiniLM-L6-v2) — no data egress",
+    "falls back to a deterministic stdlib hashing embedder when sentence-transformers is absent so ranking still runs offline",
+    "matches written to record_store as matches.json"
+  ],
+  "usage": "Set CLUSTERS (clusters.json) and SKILLS_DIR (the skills/ dir). Optional: TOP_K (default 5). Output: matches.json.",
+  "limitation": "Real semantic ranking needs sentence-transformers installed (~80 MB model downloads on first use); the offline fallback embedder is a coarse lexical proxy, not semantic.",
+  "minimal_example": {
+    "perk": "match",
+    "vars": {
+      "CLUSTERS": "./clusters.json",
+      "SKILLS_DIR": "../",
+      "TOP_K": "5"
+    }
+  }
+}

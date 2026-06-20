@@ -1,0 +1,77 @@
+{
+  "skill": "clinical-reports",
+  "perks": [
+    {
+      "id": "validate-case-report",
+      "summary": "validate a case report against CARE guidelines (sections, HIPAA scan, word/reference count) — read-only",
+      "destructive": false,
+      "tools": [
+        "validate_case_report"
+      ]
+    },
+    {
+      "id": "validate-trial-report",
+      "summary": "validate a Clinical Study Report against the ICH-E3 section structure — read-only",
+      "destructive": false,
+      "tools": [
+        "validate_trial_report"
+      ]
+    },
+    {
+      "id": "check-deidentification",
+      "summary": "scan clinical text for the 18 HIPAA identifiers and ages >89 — read-only",
+      "destructive": false,
+      "tools": [
+        "check_deidentification"
+      ]
+    },
+    {
+      "id": "check-compliance",
+      "summary": "check a report for HIPAA / ICH-GCP / FDA regulatory markers — read-only",
+      "destructive": false,
+      "tools": [
+        "compliance_checker"
+      ]
+    },
+    {
+      "id": "validate-terminology",
+      "summary": "flag Do-Not-Use / ambiguous abbreviations and detect ICD-10 codes — read-only",
+      "destructive": false,
+      "tools": [
+        "terminology_validator"
+      ]
+    },
+    {
+      "id": "extract-clinical-data",
+      "summary": "parse demographics, vital signs and medications from a report into JSON — read-only",
+      "destructive": false,
+      "tools": [
+        "extract_clinical_data"
+      ]
+    },
+    {
+      "id": "format-adverse-events",
+      "summary": "convert an adverse-event CSV into a per-arm markdown summary table",
+      "destructive": false,
+      "tools": [
+        "format_adverse_events"
+      ]
+    },
+    {
+      "id": "generate-template",
+      "summary": "emit a blank clinical-report template (case_report, soap_note, csr, sae, ...) to the record store",
+      "destructive": false,
+      "tools": [
+        "generate_report_template"
+      ]
+    },
+    {
+      "id": "generate-schematic",
+      "summary": "AI-generate a publication-quality schematic (CONSORT, timeline) via OpenRouter — needs API key + network",
+      "destructive": false,
+      "tools": [
+        "generate_schematic"
+      ]
+    }
+  ]
+}

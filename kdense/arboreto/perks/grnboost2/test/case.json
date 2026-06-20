@@ -1,0 +1,15 @@
+{
+  "_perk": "grnboost2",
+  "requires": ["python3"],
+  "vars": {
+    "EXPRESSION_FILE": "${FIXTURE}/expression.tsv",
+    "TF_FILE": "",
+    "SEED": "777",
+    "LIMIT": ""
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["network.tsv"],
+    "nonempty": ["network.tsv"]
+  }
+}

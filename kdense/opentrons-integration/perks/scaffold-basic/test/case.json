@@ -1,0 +1,11 @@
+{
+  "_perk": "scaffold-basic",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["basic_protocol.py"],
+    "nonempty": ["basic_protocol.py"],
+    "contains": { "basic_protocol.py": "def run(protocol: protocol_api.ProtocolContext)" }
+  }
+}

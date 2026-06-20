@@ -1,0 +1,10 @@
+{
+  "_perk": "check-fillable",
+  "requires": ["python3"],
+  "vars": { "PDF_PATH": "${FIXTURE}/mini.pdf" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["check_fillable.txt"],
+    "nonempty": ["check_fillable.txt"]
+  }
+}

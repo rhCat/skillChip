@@ -1,0 +1,10 @@
+{
+  "_perk": "check_env",
+  "requires": ["python3"],
+  "vars": { "VERBOSE": "" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["setup_check.txt"],
+    "nonempty": ["setup_check.txt"]
+  }
+}

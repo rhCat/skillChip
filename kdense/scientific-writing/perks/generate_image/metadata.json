@@ -1,0 +1,20 @@
+{
+  "perk": "generate_image",
+  "skill": "scientific-writing",
+  "description": "Generate a new image from a natural-language prompt, or edit a provided input image, via an OpenRouter image model (default google/gemini-3.1-flash-image-preview).",
+  "rules": [
+    "read-only with respect to local state; calls the OpenRouter API over the network",
+    "requires OPENROUTER_API_KEY (or a .env with it); without it (or offline) the porter degrades and writes an empty placeholder output",
+    "if INPUT_IMAGE is set the prompt is treated as an edit instruction on that image; otherwise it generates a new image",
+    "output PNG is written under record_store"
+  ],
+  "usage": "Set PROMPT (image description or edit instruction), OUTPUT_NAME (e.g. image.png), optional MODEL (OpenRouter model id), optional INPUT_IMAGE (path to edit), and OPENROUTER_API_KEY. Output: ${RECORD_STORE}/${OUTPUT_NAME}.",
+  "limitation": "Needs OPENROUTER_API_KEY and network access to produce a real image; offline it only creates an empty placeholder. python3 must have the requests library for live generation.",
+  "minimal_example": {
+    "perk": "generate_image",
+    "vars": {
+      "PROMPT": "Photorealistic illustration of a laboratory bench with microscope",
+      "OUTPUT_NAME": "image.png"
+    }
+  }
+}

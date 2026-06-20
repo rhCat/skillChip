@@ -1,0 +1,23 @@
+{
+  "_perk": "groups",
+  "sequence": [
+    "mc_groups"
+  ],
+  "tools": {
+    "mc_groups": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}",
+        "GROUPS": "${GROUPS}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "GROUPS": "${GROUPS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

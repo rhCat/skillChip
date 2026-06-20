@@ -1,0 +1,20 @@
+{
+  "perk": "counts_from_star",
+  "skill": "bulk-rnaseq",
+  "description": "Combine STAR --quantMode GeneCounts *.ReadsPerGene.out.tab files into a gene x sample integer counts matrix, selecting the column for the chosen strandedness (unstranded=1, forward=2, reverse=3) and skipping STAR's first 4 summary rows. Writes counts.csv (genes x samples) and metadata_template.csv.",
+  "rules": [
+    "local analysis — reads *.ReadsPerGene.out.tab, writes counts.csv + metadata_template.csv under record_store",
+    "strandedness selects the count column; the wrong choice silently halves counts — default 'reverse'",
+    "counts are already integers; all-zero genes are dropped",
+    "needs only python3 + pandas — no aligner or science container required"
+  ],
+  "usage": "Set QUANT_DIR (dir of *.ReadsPerGene.out.tab). Optionally set STRANDEDNESS (unstranded|forward|reverse, default reverse). Output: counts/counts.csv + counts/metadata_template.csv.",
+  "limitation": "STAR GeneCounts mode only. Strandedness must match the library prep; this perk does not infer it.",
+  "minimal_example": {
+    "perk": "counts_from_star",
+    "vars": {
+      "QUANT_DIR": "star/",
+      "STRANDEDNESS": "reverse"
+    }
+  }
+}

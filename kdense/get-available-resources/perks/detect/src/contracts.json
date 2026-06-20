@@ -1,0 +1,19 @@
+{
+  "tool": "detect_resources",
+  "inputs": {
+    "PROBE_PATH": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "resources_out": {
+      "path": "${RECORD_STORE}/.claude_resources.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/.claude_resources.json"
+  }
+}

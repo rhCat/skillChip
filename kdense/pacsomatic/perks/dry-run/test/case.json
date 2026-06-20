@@ -1,0 +1,23 @@
+{
+  "_perk": "dry-run",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "PATIENT_ID": "P001",
+    "TUMOR_SAMPLE_ID": "P001_T",
+    "NORMAL_SAMPLE_ID": "P001_N",
+    "TUMOR_BAM": "${FIXTURE}/tumor.bam",
+    "NORMAL_BAM": "${FIXTURE}/normal.bam",
+    "GENOME": "GRCh38",
+    "PROFILE": "singularity",
+    "EXECUTOR": "local"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["dry_run.log", "samplesheet.csv", "pacsomatic.params.generated.yaml", "run_pacsomatic.local.sh"],
+    "nonempty": ["dry_run.log", "samplesheet.csv"],
+    "contains": {
+      "dry_run.log": ["Pacsomatic Launch Assets Prepared", "Dry run complete"],
+      "samplesheet.csv": ["patient,sample,status,bam,pbi"]
+    }
+  }
+}

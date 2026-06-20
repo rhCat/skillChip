@@ -1,0 +1,37 @@
+{
+  "skill": "diffdock",
+  "perks": [
+    {
+      "id": "check_env",
+      "summary": "diagnose the DiffDock environment — Python, PyTorch/CUDA, PyG, RDKit, ESM, checkpoints (read-only)",
+      "destructive": false,
+      "tools": [
+        "check_env"
+      ]
+    },
+    {
+      "id": "prepare_csv",
+      "summary": "generate a DiffDock batch-input CSV template with example protein-ligand rows",
+      "destructive": false,
+      "tools": [
+        "prepare_csv"
+      ]
+    },
+    {
+      "id": "validate_csv",
+      "summary": "validate a DiffDock batch CSV — required columns, file paths, SMILES (RDKit optional)",
+      "destructive": false,
+      "tools": [
+        "validate_csv"
+      ]
+    },
+    {
+      "id": "analyze_results",
+      "summary": "parse pose-confidence scores from a DiffDock output dir, rank/classify, export summary CSV",
+      "destructive": false,
+      "tools": [
+        "analyze_results"
+      ]
+    }
+  ]
+}

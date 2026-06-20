@@ -1,0 +1,24 @@
+{
+  "_perk": "compare",
+  "sequence": [
+    "compare_models"
+  ],
+  "tools": {
+    "compare_models": {
+      "binary": "bash",
+      "params": {
+        "MODELS_DIR": "${MODELS_DIR}"
+      }
+    }
+  },
+  "env": {
+    "MODELS_DIR": "${MODELS_DIR}",
+    "MODELS": "${MODELS}",
+    "IC": "${IC}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "_perk": "validate",
+  "requires": ["python3"],
+  "vars": {
+    "PDF_FILE": "${FIXTURE}/sample.pdf",
+    "VENUE": "Nature",
+    "CHECKS": "all"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["validation_report.txt"],
+    "nonempty": ["validation_report.txt"]
+  }
+}

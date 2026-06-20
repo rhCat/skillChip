@@ -1,0 +1,26 @@
+{
+  "skill": "matplotlib",
+  "skill_sha": "a929e410e9921c96497bd23f76ecc880c703d8a22b859444627ddf1c65f9e15e",
+  "file_count": 19,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "dced7862293ff6deed0c51ecde87d3b90ee14e4f09ffc34f45192a7eaf181537",
+    "blueprint.drawio": "1fefdda3ad6fdca5bb6afd51fd17c01efad583d57ba21cb88c2f93c320e8e70d",
+    "blueprint.json": "8991700be40344aa8e7e9cf6f660186d6a5f8bef4f31e504f9360fb7dc11829c",
+    "blueprint.svg": "89202bed3768176497b372baa5f9e5d64f173df296e7062230a0cb8eda7303b3",
+    "ledger.json": "ecd9c5c3ebde78fcc2973bb6cb53e6dbc1df7de792a39c98076cd60dbefd227e",
+    "perks.json": "0cd829fe8ffdb14e6b4a6b390e233c9138bf13ec2b1b22d4158aece971310cc2",
+    "perks/configure_style/manifesto.json": "6544eae9ed217f8585fde093e889a9262910aac9d482bcbde6a963c38790b749",
+    "perks/configure_style/metadata.json": "61dfabcee09117c076b9fa57876d3ff24e4f88fed8279d12eca8ff615a826350",
+    "perks/configure_style/src/contracts.json": "f75cf2c84757d06818e5498d84c099e8fd62822276f2925656a4bfbb66bbe3df",
+    "perks/configure_style/src/style_config.sh": "cd73bc1f9cf852434529eeba7b608338237b2df6a8b0929f1204756e0631568c",
+    "perks/configure_style/src/style_configurator.py": "5839cebb22b21f7612c6d169b9f63f20316910d1d7a3f0eb68c2b79cc43e1b0d",
+    "perks/configure_style/test/case.json": "1f9cdbba6c3d2bc533beb1c9bde58c43dfc2b3f34a7385fd182a30ae81e011be",
+    "perks/render_plot/manifesto.json": "1f64e3ac3549ee1eae87da78065d5b214de39b96c5a7afe8a6a5724e11fcd81e",
+    "perks/render_plot/metadata.json": "5c6d4b0a587eadb13680e1d06f762bdcf489e34a140d0c28d20a9963d1967a58",
+    "perks/render_plot/src/contracts.json": "aea9a45ceffcc5a8d946a486f651090f97bbf84785649bbb6cf6135aee7c3189",
+    "perks/render_plot/src/plot_render.sh": "9041c1535361a883a42ef0d9f4c745e7b154bb3dd13a1e786fea8300c7e9e787",
+    "perks/render_plot/src/plot_template.py": "24b362b1c2a96d4eda19ed8f4a913f356029e836069aab564e0cfb4ac2b84a1b",
+    "perks/render_plot/test/case.json": "74eb7a9f77f341ed4a77773ed7eaa93dd00816210338a7f6bd6af14570043675"
+  }
+}

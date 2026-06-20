@@ -1,0 +1,23 @@
+{
+  "tool": "fasttree_infer",
+  "inputs": {
+    "ALIGNED_FASTA": {
+      "type": "string",
+      "required": true
+    },
+    "SEQ_TYPE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "tree": {
+      "path": "${RECORD_STORE}/phylo.tree",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/phylo.tree"
+  }
+}

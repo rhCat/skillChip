@@ -1,0 +1,19 @@
+{
+  "tool": "reduce_dimensions",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "reduced": {
+      "path": "${RECORD_STORE}/reduced.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/reduced.h5ad"
+  }
+}

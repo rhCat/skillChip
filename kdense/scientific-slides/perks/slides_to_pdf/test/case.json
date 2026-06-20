@@ -1,0 +1,10 @@
+{
+  "_perk": "slides_to_pdf",
+  "requires": ["python3"],
+  "vars": { "IMAGES_DIR": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["presentation.pdf"],
+    "nonempty": ["presentation.pdf"]
+  }
+}

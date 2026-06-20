@@ -1,0 +1,19 @@
+{
+  "tool": "prepare_csv",
+  "inputs": {
+    "NUM_EXAMPLES": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "batch_template": {
+      "path": "${RECORD_STORE}/batch_template.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/batch_template.csv"
+  }
+}

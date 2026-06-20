@@ -1,0 +1,21 @@
+{
+  "_perk": "validate-terminology",
+  "sequence": [
+    "terminology_validator"
+  ],
+  "tools": {
+    "terminology_validator": {
+      "binary": "python3",
+      "params": {
+        "REPORT_FILE": "${REPORT_FILE}"
+      }
+    }
+  },
+  "env": {
+    "REPORT_FILE": "${REPORT_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

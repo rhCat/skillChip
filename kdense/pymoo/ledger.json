@@ -1,0 +1,12 @@
+{
+  "_schema": "task-ledger TEMPLATE for pymoo — set perk, fill record_store + the vars the perk declares.",
+  "skill": "pymoo",
+  "perk": "single_objective",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PROBLEM": "sphere",
+    "N_VAR": "10",
+    "POP_SIZE": "100",
+    "N_GEN": "100"
+  }
+}

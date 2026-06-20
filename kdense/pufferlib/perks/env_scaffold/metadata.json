@@ -1,0 +1,19 @@
+{
+  "perk": "env_scaffold",
+  "skill": "pufferlib",
+  "description": "Materialize a custom PufferEnv environment template (single-agent grid-world + multi-agent cooperative navigation) into record_store and, when pufferlib is importable, run its built-in test_environment() self-check.",
+  "rules": [
+    "read-only: writes only under record_store, never mutates a remote service",
+    "the vendored env_template.py is emitted verbatim as the scaffold artifact",
+    "the self-test (test_environment) runs only when pufferlib is importable; otherwise the scaffold is still produced",
+    "GRID_SIZE is recorded in the audit line for reproducibility"
+  ],
+  "usage": "Set GRID_SIZE (grid world side length, e.g. 10). Outputs: env_scaffold.py (the materialized template) and env_scaffold.log (self-test stdout/stderr or the absent-stack note).",
+  "limitation": "The PufferEnv self-test only runs if pufferlib (and numpy) are installed; without them the scaffold is emitted but not exercised. No training is performed.",
+  "minimal_example": {
+    "perk": "env_scaffold",
+    "vars": {
+      "GRID_SIZE": "10"
+    }
+  }
+}

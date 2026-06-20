@@ -1,0 +1,45 @@
+{
+  "skill": "statistical-power",
+  "perks": [
+    {
+      "id": "sample_size",
+      "summary": "closed-form required sample size: solve n for a given effect, alpha, power (read-only)",
+      "destructive": false,
+      "tools": [
+        "power_sample_size"
+      ]
+    },
+    {
+      "id": "achieved_power",
+      "summary": "closed-form achieved power: solve power (1-beta) at a fixed n and effect (read-only)",
+      "destructive": false,
+      "tools": [
+        "power_achieved"
+      ]
+    },
+    {
+      "id": "mde",
+      "summary": "closed-form minimum detectable effect at a fixed n and target power (read-only)",
+      "destructive": false,
+      "tools": [
+        "power_mde"
+      ]
+    },
+    {
+      "id": "power_curve",
+      "summary": "render a power-vs-n curve (PNG) plus the (n, power) arrays as JSON (read-only)",
+      "destructive": false,
+      "tools": [
+        "power_curve"
+      ]
+    },
+    {
+      "id": "simulate_power",
+      "summary": "Monte Carlo power for a no-formula design with a Wilson MC confidence interval (read-only)",
+      "destructive": false,
+      "tools": [
+        "simulate_power"
+      ]
+    }
+  ]
+}

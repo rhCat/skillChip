@@ -1,0 +1,20 @@
+{
+  "perk": "doctor",
+  "skill": "autoskill",
+  "description": "preflight check that config backend is valid, skills dir exists, screenpipe is reachable, and the LLM backend is ready",
+  "rules": [
+    "read-only — only GET health/models probes against loopback endpoints; no writes outside record_store",
+    "checks four lines: config (backend in {local,claude,foundry}), skills_dir (exists), screenpipe (/health 200), llm (LM Studio /models or API key present)",
+    "the captured report is the artifact; offline the network probes report error but the report is still written",
+    "report written to record_store as doctor.txt"
+  ],
+  "usage": "Set CONFIG (config.yaml) and SKILLS_DIR (the skills/ dir). Output: doctor.txt.",
+  "limitation": "An all-passing report needs the screenpipe daemon and the configured LLM backend actually reachable; offline the screenpipe and llm lines read error.",
+  "minimal_example": {
+    "perk": "doctor",
+    "vars": {
+      "CONFIG": "./config.yaml",
+      "SKILLS_DIR": "../"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_perk": "export-figure",
+  "sequence": [
+    "figure_export"
+  ],
+  "tools": {
+    "figure_export": {
+      "binary": "bash",
+      "params": {
+        "DATA_CSV": "${DATA_CSV}",
+        "FORMATS": "${FORMATS}",
+        "DPI": "${DPI}"
+      }
+    }
+  },
+  "env": {
+    "DATA_CSV": "${DATA_CSV}",
+    "FORMATS": "${FORMATS}",
+    "DPI": "${DPI}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

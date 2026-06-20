@@ -1,0 +1,13 @@
+{
+  "_perk": "demo-covariates",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["sales_with_covariates.csv"],
+    "nonempty": ["sales_with_covariates.csv"],
+    "contains": {
+      "sales_with_covariates.csv": "store_id,week,split"
+    }
+  }
+}

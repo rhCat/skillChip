@@ -1,0 +1,13 @@
+{
+  "_perk": "redact",
+  "requires": ["python3"],
+  "vars": { "INPUT": "${FIXTURE}/timeline.json" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["redacted.json"],
+    "nonempty": ["redacted.json"],
+    "contains": {
+      "redacted.json": ["[REDACTED:email]", "[REDACTED:kv_secret]", "[REDACTED:bearer]"]
+    }
+  }
+}

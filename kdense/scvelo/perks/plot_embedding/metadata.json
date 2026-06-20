@@ -1,0 +1,20 @@
+{
+  "perk": "plot_embedding",
+  "skill": "scvelo",
+  "description": "Project RNA velocity onto a 2D embedding (basis, e.g. umap) and render it to PNG. KIND selects the style: stream (velocity_embedding_stream), grid (velocity_embedding_grid), or arrows (velocity_embedding). Uses a non-interactive matplotlib backend.",
+  "rules": [
+    "read-only input — writes a new velocity_embedding.png under record_store",
+    "requires a velocity graph and the embedding basis (e.g. obsm['X_umap'])",
+    "KIND in {stream, grid, arrows}; COLOR is an obs column (e.g. clusters/leiden)"
+  ],
+  "usage": "Set INPUT (velocity .h5ad). Optional: KIND (default stream), BASIS (default umap), COLOR (obs column). Output: velocity_embedding.png.",
+  "limitation": "Requires scvelo + matplotlib installed and a 2D basis present; without scvelo the porter writes a {} placeholder velocity_embedding.png and still passes.",
+  "minimal_example": {
+    "perk": "plot_embedding",
+    "vars": {
+      "INPUT": "velocity.h5ad",
+      "KIND": "stream",
+      "COLOR": "clusters"
+    }
+  }
+}

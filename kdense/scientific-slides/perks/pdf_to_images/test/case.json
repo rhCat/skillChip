@@ -1,0 +1,10 @@
+{
+  "_perk": "pdf_to_images",
+  "requires": ["python3"],
+  "vars": { "PDF_PATH": "${FIXTURE}", "DPI": "72", "IMAGE_FORMAT": "png" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["pdf_to_images.json"],
+    "nonempty": ["pdf_to_images.json"]
+  }
+}

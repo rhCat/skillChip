@@ -1,0 +1,18 @@
+{
+  "perk": "pack",
+  "skill": "pptx",
+  "description": "Pack an unpacked XML directory back into a .pptx: runs the PPTX schema validator with auto-repair (when an original is supplied), condenses XML whitespace, and writes a ZIP-packed .pptx. The output .pptx lands under record_store.",
+  "rules": [
+    "requires defusedxml (XML condensing) and lxml (XSD validation); degrades gracefully when absent",
+    "validation+auto-repair runs only when an --original .pptx is provided; set ORIGINAL_PPTX or leave empty to skip",
+    "the rebuilt .pptx is written to output.pptx under record_store; the pack/validation report is captured to pack.log"
+  ],
+  "usage": "Set UNPACKED_DIR (an edited unpacked tree). Optionally set ORIGINAL_PPTX for validation. Output: output.pptx plus pack.log.",
+  "limitation": "Operates on an already-unpacked directory (run unpack + edits first). Validation is skipped without an original; condensing fails fast on malformed XML.",
+  "minimal_example": {
+    "perk": "pack",
+    "vars": {
+      "UNPACKED_DIR": "unpacked"
+    }
+  }
+}

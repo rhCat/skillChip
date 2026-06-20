@@ -1,0 +1,19 @@
+{
+  "tool": "detect_anomalies",
+  "inputs": {
+    "INPUT_CSV": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "anomaly_detection_out": {
+      "path": "${RECORD_STORE}/anomaly_detection.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/anomaly_detection.json"
+  }
+}

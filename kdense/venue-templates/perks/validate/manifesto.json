@@ -1,0 +1,25 @@
+{
+  "_perk": "validate",
+  "sequence": [
+    "validate_format"
+  ],
+  "tools": {
+    "validate_format": {
+      "binary": "python3",
+      "params": {
+        "PDF_FILE": "${PDF_FILE}",
+        "VENUE": "${VENUE}",
+        "CHECKS": "${CHECKS}"
+      }
+    }
+  },
+  "env": {
+    "PDF_FILE": "${PDF_FILE}",
+    "VENUE": "${VENUE}",
+    "CHECKS": "${CHECKS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

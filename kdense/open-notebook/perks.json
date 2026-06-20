@@ -1,0 +1,69 @@
+{
+  "skill": "open-notebook",
+  "perks": [
+    {
+      "id": "notebook_create",
+      "summary": "create a notebook on the server (POST /api/notebooks) — remote mutation",
+      "destructive": true,
+      "tools": [
+        "notebook_create"
+      ]
+    },
+    {
+      "id": "notebook_list",
+      "summary": "list notebooks (GET /api/notebooks, read-only)",
+      "destructive": false,
+      "tools": [
+        "notebook_list"
+      ]
+    },
+    {
+      "id": "source_add",
+      "summary": "ingest a source from a URL or raw text into a notebook (POST /api/sources) — remote mutation",
+      "destructive": true,
+      "tools": [
+        "source_add"
+      ]
+    },
+    {
+      "id": "source_list",
+      "summary": "list sources, optionally filtered by notebook (GET /api/sources, read-only)",
+      "destructive": false,
+      "tools": [
+        "source_list"
+      ]
+    },
+    {
+      "id": "chat_session_create",
+      "summary": "create a chat session inside a notebook (POST /api/chat/sessions) — remote mutation",
+      "destructive": true,
+      "tools": [
+        "chat_session_create"
+      ]
+    },
+    {
+      "id": "chat_send",
+      "summary": "send a message to a chat session with source/note context (POST /api/chat/execute) — remote mutation",
+      "destructive": true,
+      "tools": [
+        "chat_send"
+      ]
+    },
+    {
+      "id": "search_query",
+      "summary": "search the knowledge base, full-text or vector (POST /api/search, read-only)",
+      "destructive": false,
+      "tools": [
+        "search_query"
+      ]
+    },
+    {
+      "id": "search_ask",
+      "summary": "ask a question and get an AI answer from the knowledge base (POST /api/search/ask/simple, read-only)",
+      "destructive": false,
+      "tools": [
+        "search_ask"
+      ]
+    }
+  ]
+}

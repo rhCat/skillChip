@@ -1,0 +1,25 @@
+{
+  "_perk": "complexity",
+  "sequence": [
+    "mc_complexity"
+  ],
+  "tools": {
+    "mc_complexity": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}",
+        "COMPLEXITY": "${COMPLEXITY}",
+        "COMPLEXITY_METHOD": "${COMPLEXITY_METHOD}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "COMPLEXITY": "${COMPLEXITY}",
+    "COMPLEXITY_METHOD": "${COMPLEXITY_METHOD}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

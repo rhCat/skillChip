@@ -1,0 +1,21 @@
+{
+  "perk": "monitor",
+  "skill": "simpy",
+  "description": "run a SimPy resource-monitoring demo and report utilization/queue/wait stats",
+  "rules": [
+    "read-only",
+    "deterministic — fixed process durations (BASE_DURATION + i), no RNG",
+    "monkey-patches request/release on a capacity-CAPACITY Resource to track queue, utilization, wait time",
+    "report written to record_store/monitor_report.txt; per-event CSV to record_store/monitor_data.csv"
+  ],
+  "usage": "Set NUM_PROCESSES, CAPACITY, BASE_DURATION. Output: monitor_report.txt (+ monitor_data.csv).",
+  "limitation": "Requires the simpy package at run time; when absent the porter writes a placeholder and exits 0. Demonstrates monitoring on a single Resource only.",
+  "minimal_example": {
+    "perk": "monitor",
+    "vars": {
+      "NUM_PROCESSES": "5",
+      "CAPACITY": "2",
+      "BASE_DURATION": "3"
+    }
+  }
+}

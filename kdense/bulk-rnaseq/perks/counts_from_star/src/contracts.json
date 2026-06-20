@@ -1,0 +1,23 @@
+{
+  "tool": "counts_from_star",
+  "inputs": {
+    "QUANT_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "STRANDEDNESS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "counts_matrix": {
+      "path": "${RECORD_STORE}/counts/counts.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/counts/counts.csv"
+  }
+}

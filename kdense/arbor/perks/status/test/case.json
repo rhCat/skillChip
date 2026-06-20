@@ -1,0 +1,11 @@
+{
+  "_perk": "status",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["status.txt"],
+    "nonempty": ["status.txt"],
+    "contains": { "status.txt": "legend:" }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "perk": "search_pubmed",
+  "skill": "citation-management",
+  "description": "search PubMed via NCBI E-utilities (ESearch + EFetch) and export results as JSON",
+  "rules": [
+    "read-only — results written to record_store as pubmed.json",
+    "QUERY uses PubMed syntax (MeSH terms, field tags, Boolean operators)",
+    "LIMIT caps the number of retrieved records (default 100)",
+    "PUB_TYPES is a comma-separated publication-type filter (e.g. 'Review,Clinical Trial')",
+    "NCBI_EMAIL/NCBI_API_KEY env vars are honored to raise Entrez rate limits",
+    "porter degrades gracefully (writes {} and exits 0) when NCBI is unreachable"
+  ],
+  "usage": "Set QUERY. Optionally LIMIT, PUB_TYPES. Output: pubmed.json.",
+  "limitation": "Requires network access to eutils.ncbi.nlm.nih.gov. Rate-limited (3/sec, 10/sec with API key).",
+  "minimal_example": {
+    "perk": "search_pubmed",
+    "vars": {
+      "QUERY": "CRISPR gene editing",
+      "LIMIT": "20"
+    }
+  }
+}

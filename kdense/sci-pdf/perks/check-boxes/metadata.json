@@ -1,0 +1,19 @@
+{
+  "perk": "check-boxes",
+  "skill": "sci-pdf",
+  "description": "Validate a form-fields JSON for geometry problems: overlapping label/entry bounding boxes (same page) and entry boxes too short for their text. Pure Python stdlib — no PDF library.",
+  "rules": [
+    "read-only — consumes a fields JSON, writes a text report",
+    "reports FAILURE per intersection or short entry box; SUCCESS if all valid",
+    "aborts after 20 messages to keep the report bounded",
+    "stdlib only (json, dataclasses) — runs fully offline"
+  ],
+  "usage": "Set FIELDS_JSON (a JSON with a form_fields array, each having label_bounding_box, entry_bounding_box, page_number, description). Output: check_boxes.txt.",
+  "limitation": "Validates geometry described in the JSON only; it never opens the PDF itself.",
+  "minimal_example": {
+    "perk": "check-boxes",
+    "vars": {
+      "FIELDS_JSON": "fields.json"
+    }
+  }
+}

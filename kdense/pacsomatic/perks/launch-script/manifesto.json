@@ -1,0 +1,42 @@
+{
+  "_perk": "launch-script",
+  "sequence": [
+    "build_launch_script"
+  ],
+  "tools": {
+    "build_launch_script": {
+      "binary": "bash",
+      "params": {
+        "SAMPLESHEET": "${SAMPLESHEET}",
+        "OUTDIR": "${OUTDIR}",
+        "FASTA": "${FASTA}",
+        "GENOME": "${GENOME}",
+        "PROFILE": "${PROFILE}",
+        "EXECUTOR": "${EXECUTOR}",
+        "QUEUE": "${QUEUE}",
+        "PROJECT": "${PROJECT}",
+        "CPUS": "${CPUS}",
+        "MEMORY_GB": "${MEMORY_GB}",
+        "WALLTIME": "${WALLTIME}"
+      }
+    }
+  },
+  "env": {
+    "SAMPLESHEET": "${SAMPLESHEET}",
+    "OUTDIR": "${OUTDIR}",
+    "FASTA": "${FASTA}",
+    "GENOME": "${GENOME}",
+    "PROFILE": "${PROFILE}",
+    "EXECUTOR": "${EXECUTOR}",
+    "QUEUE": "${QUEUE}",
+    "PROJECT": "${PROJECT}",
+    "CPUS": "${CPUS}",
+    "MEMORY_GB": "${MEMORY_GB}",
+    "WALLTIME": "${WALLTIME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

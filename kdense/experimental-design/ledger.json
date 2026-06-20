@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for experimental-design — set perk, fill record_store + the vars the perk declares.",
+  "skill": "experimental-design",
+  "perk": "simple-randomization",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "SPEC_JSON": "<path to JSON spec: arms/ratio/n/seed>"
+  }
+}

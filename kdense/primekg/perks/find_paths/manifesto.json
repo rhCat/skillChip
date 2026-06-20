@@ -1,0 +1,27 @@
+{
+  "_perk": "find_paths",
+  "sequence": [
+    "find_paths"
+  ],
+  "tools": {
+    "find_paths": {
+      "binary": "python3",
+      "params": {
+        "PRIMEKG_CSV": "${PRIMEKG_CSV}",
+        "START_NODE_ID": "${START_NODE_ID}",
+        "END_NODE_ID": "${END_NODE_ID}",
+        "MAX_DEPTH": "${MAX_DEPTH}"
+      }
+    }
+  },
+  "env": {
+    "PRIMEKG_CSV": "${PRIMEKG_CSV}",
+    "START_NODE_ID": "${START_NODE_ID}",
+    "END_NODE_ID": "${END_NODE_ID}",
+    "MAX_DEPTH": "${MAX_DEPTH}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

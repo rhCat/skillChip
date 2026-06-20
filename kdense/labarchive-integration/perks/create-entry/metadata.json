@@ -1,0 +1,22 @@
+{
+  "perk": "create-entry",
+  "skill": "labarchive-integration",
+  "description": "Create a new entry (title + optional HTML content) in a LabArchives notebook. DESTRUCTIVE: it writes to the live electronic lab notebook. Plain-text content is wrapped in <p>...</p> by the core.",
+  "rules": [
+    "DESTRUCTIVE — adds an entry to the live remote notebook",
+    "credentials are read from LA_CONFIG (a config.yaml)",
+    "LA_NBID selects the notebook; LA_TITLE is required; LA_CONTENT is optional",
+    "needs the labarchives-py package + network; degrades to {} offline"
+  ],
+  "usage": "Set LA_CONFIG, LA_NBID, LA_TITLE; optionally LA_CONTENT. Output: create_entry.json audit (records the new entry id when the API returns one).",
+  "limitation": "Requires the labarchives-py package, valid credentials, and network. Mutates the remote ELN, so the executor gates it (destructive). Offline the tool writes {} and exits 0.",
+  "minimal_example": {
+    "perk": "create-entry",
+    "vars": {
+      "LA_CONFIG": "/path/to/config.yaml",
+      "LA_NBID": "12345",
+      "LA_TITLE": "Experiment Results",
+      "LA_CONTENT": "PCR amplification successful"
+    }
+  }
+}

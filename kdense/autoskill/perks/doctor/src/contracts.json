@@ -1,0 +1,23 @@
+{
+  "tool": "doctor",
+  "inputs": {
+    "CONFIG": {
+      "type": "string",
+      "required": true
+    },
+    "SKILLS_DIR": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "report": {
+      "path": "${RECORD_STORE}/doctor.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/doctor.txt"
+  }
+}

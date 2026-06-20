@@ -1,0 +1,12 @@
+{
+  "_perk": "inspect",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.csv"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["inspect.txt"],
+    "nonempty": ["inspect.txt"]
+  }
+}

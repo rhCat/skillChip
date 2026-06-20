@@ -1,0 +1,15 @@
+{
+  "_perk": "single_objective",
+  "requires": ["python3"],
+  "vars": {
+    "PROBLEM": "sphere",
+    "N_VAR": "10",
+    "POP_SIZE": "100",
+    "N_GEN": "100"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["single_objective.txt"],
+    "nonempty": ["single_objective.txt"]
+  }
+}

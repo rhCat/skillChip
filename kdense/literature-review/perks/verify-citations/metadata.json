@@ -1,0 +1,20 @@
+{
+  "perk": "verify-citations",
+  "skill": "literature-review",
+  "description": "Extract every DOI from a markdown literature review, resolve each against doi.org and pull metadata from the CrossRef API, then emit a JSON verification report listing verified vs failed DOIs with their bibliographic metadata.",
+  "rules": [
+    "read-only — never edits the source markdown",
+    "DOIs are matched with the pattern 10.\\d{4,}/...",
+    "each DOI is checked against https://doi.org/api/handles and https://api.crossref.org/works",
+    "rate-limited at 0.5s/DOI (built into the core)",
+    "report is written to record_store as citation_report.json"
+  ],
+  "usage": "Set REVIEW_MD (path to the finished review markdown). Output: citation_report.json with total_dois, verified[], failed[], metadata{}.",
+  "limitation": "Requires the requests library and outbound network to doi.org + CrossRef. Offline (or with requests absent) the porter degrades: it still writes a report, but every DOI lands in failed[]. Only the first three authors per work are captured.",
+  "minimal_example": {
+    "perk": "verify-citations",
+    "vars": {
+      "REVIEW_MD": "./my_literature_review.md"
+    }
+  }
+}

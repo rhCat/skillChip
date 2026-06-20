@@ -1,0 +1,15 @@
+{
+  "_perk": "find_paths",
+  "requires": ["python3"],
+  "vars": {
+    "PRIMEKG_CSV": "${FIXTURE}/kg.csv",
+    "START_NODE_ID": "CHEMBL502",
+    "END_NODE_ID": "EFO_0000249",
+    "MAX_DEPTH": "1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["find_paths.json"],
+    "nonempty": ["find_paths.json"]
+  }
+}

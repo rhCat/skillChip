@@ -1,0 +1,10 @@
+{
+  "_perk": "compare",
+  "requires": ["bash", "python3"],
+  "vars": { "MODELS_DIR": "${FIXTURE}", "IC": "loo" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["comparison.json"],
+    "nonempty": ["comparison.json"]
+  }
+}

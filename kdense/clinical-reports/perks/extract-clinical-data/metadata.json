@@ -1,0 +1,19 @@
+{
+  "perk": "extract-clinical-data",
+  "skill": "clinical-reports",
+  "description": "Parse structured clinical data — demographics (age, sex), vital signs (T, BP, HR, RR, SpO2), and medications (drug/dose/route/frequency) — from a report into JSON (read-only).",
+  "rules": [
+    "read-only — never edits the input report",
+    "extracts demographics, vital_signs and medications via regex into a single JSON object",
+    "fields absent from the source are simply omitted (empty sub-objects/lists are valid)",
+    "JSON written to record_store"
+  ],
+  "usage": "Set REPORT_FILE (a SOAP note / H&P / report .md). Output: clinical_data.json.",
+  "limitation": "Regex extraction expects the source's labelled formats (e.g. 'BP: 142/88', '40 mg PO BID'); free-form prose may not match. Requires python3 (stdlib only).",
+  "minimal_example": {
+    "perk": "extract-clinical-data",
+    "vars": {
+      "REPORT_FILE": "./soap_note.md"
+    }
+  }
+}

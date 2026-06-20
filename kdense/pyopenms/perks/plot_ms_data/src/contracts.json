@@ -1,0 +1,31 @@
+{
+  "tool": "plot_ms_data",
+  "inputs": {
+    "KIND": {
+      "type": "string",
+      "required": true
+    },
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "INDEX": {
+      "type": "string",
+      "required": false
+    },
+    "RT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "plot": {
+      "path": "${RECORD_STORE}/plot.png",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/plot.png"
+  }
+}

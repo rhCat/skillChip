@@ -1,0 +1,19 @@
+{
+  "perk": "protein_workflow",
+  "skill": "bioservices",
+  "description": "End-to-end protein characterization: UniProt search, FASTA retrieval, NCBI BLAST similarity, KEGG pathway discovery, PSICQUIC interactions, and QuickGO annotations. Captures the full run as a text report.",
+  "rules": [
+    "read-only — queries UniProt / NCBI BLAST / KEGG / PSICQUIC / QuickGO APIs, writes local files only",
+    "PROTEIN is a protein name or UniProt accession (e.g. ZAP70_HUMAN, P43403)",
+    "BLAST runs only when a contact email resolves from NCBI_EMAIL; otherwise that step is auto-skipped",
+    "the captured run is written to record_store as protein_report.txt"
+  ],
+  "usage": "Set PROTEIN (name or UniProt ID). Optionally set NCBI_EMAIL to enable the BLAST step. Output: protein_report.txt.",
+  "limitation": "Needs the bioservices Python package and internet access to UniProt/NCBI/KEGG/PSICQUIC/QuickGO. BLAST also needs NCBI_EMAIL and can take minutes. Offline / package-absent runs still produce protein_report.txt (degraded, may be empty).",
+  "minimal_example": {
+    "perk": "protein_workflow",
+    "vars": {
+      "PROTEIN": "ZAP70_HUMAN"
+    }
+  }
+}

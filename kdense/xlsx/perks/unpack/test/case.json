@@ -1,0 +1,12 @@
+{
+  "_perk": "unpack",
+  "requires": ["python3"],
+  "vars": {
+    "OFFICE_FILE": "${FIXTURE}/sample.xlsx"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["unpack.json"],
+    "nonempty": ["unpack.json"]
+  }
+}

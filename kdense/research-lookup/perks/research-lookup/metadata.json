@@ -1,0 +1,22 @@
+{
+  "perk": "research-lookup",
+  "skill": "research-lookup",
+  "description": "Route a research query to the best backend and save a cited report: Parallel Chat API (core model) for general research, Perplexity sonar-pro-search for academic paper searches. Auto-routes by query content; FORCE_BACKEND overrides.",
+  "rules": [
+    "read-only — never mutates a remote service",
+    "auto-routes: academic keywords (papers, DOI, pubmed, peer-reviewed) -> perplexity; else -> parallel",
+    "query text is transmitted to api.parallel.ai (PARALLEL_API_KEY) and/or openrouter.ai (OPENROUTER_API_KEY)",
+    "report (text or --json) written to record_store; citations + source URLs + DOIs preserved",
+    "no API key / no network -> porter writes a placeholder output so the contract holds"
+  ],
+  "usage": "Set QUERY (required). Optional FORCE_BACKEND (parallel|perplexity), OUTPUT_NAME (default research.md). Output: ${RECORD_STORE}/${OUTPUT_NAME}.",
+  "limitation": "Requires PARALLEL_API_KEY and/or OPENROUTER_API_KEY plus the 'openai'/'requests' packages and network access to return real results. Parallel core model may take up to 5 minutes. Cannot access proprietary or paywalled databases.",
+  "minimal_example": {
+    "perk": "research-lookup",
+    "vars": {
+      "QUERY": "Recent advances in CRISPR gene editing 2025",
+      "FORCE_BACKEND": "",
+      "OUTPUT_NAME": "research_crispr.md"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "skill": "scientific-writing",
+  "skill_sha": "233cbf27a43be3af5e124a7c74fdf4e520aa32e9af258187997ddf6b129d3a11",
+  "file_count": 20,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "bf9a3f6be09aa6a4c046d0425b1a22e38cf53939ee4d40845740d3c4b0a62e38",
+    "blueprint.drawio": "cdb4c4d1d25201e7287f691c2926f99fcaceb7161862609c3be247b16cd6d8a8",
+    "blueprint.json": "824266dda73cb77288178fee8a56c49b8565435531fb5858328562cdfcaf96f1",
+    "blueprint.svg": "64fe0d61e60b30e0ed480eb82e17ccf65f5d2ee8364bf9d7da1f41e77f5d4f97",
+    "ledger.json": "ebb51cce585663c7817db02e2f7f2f34172b3b06f6a9a49cb1da29144cabe175",
+    "perks.json": "72bfa4a54e010a3a47fccec647e7eedcf6e273db7b95547c1b988612702b2815",
+    "perks/generate_image/manifesto.json": "4d5433af4231bafeff0beb3d186c91722d3f4290ec0db294fea78b7ebefe7948",
+    "perks/generate_image/metadata.json": "b6d1bdba4f62a6790baa45f3dd7d870841c51dda8f2e21041899a407a2746a55",
+    "perks/generate_image/src/contracts.json": "61f4d5c1f2e48339dc2f3ff3b2c1bac4a601c9f8a766489650b2fcdeef5b8a77",
+    "perks/generate_image/src/generate_image.py": "f4aee183b7f192cae34813e53f094d2d14f0ca265189343f018b218415b63d9a",
+    "perks/generate_image/src/generate_image.sh": "2dcbe40c43728fd09628aeb5f1f0438dab0b5377075ce5fce5fc5d04dcb72d00",
+    "perks/generate_image/test/case.json": "7caa78039b82994e3509a766ccb37a6b9dda46a314fa9501b4c4291c50c88463",
+    "perks/generate_schematic/manifesto.json": "70dba8b575ab8303d2b744d3d82a47e17d55cbbb5ba2138f71411e885ffb1c3e",
+    "perks/generate_schematic/metadata.json": "4faaeaac6554646dd51c31b20c1565b4bdd241345d45ab7d52c389949a37cae0",
+    "perks/generate_schematic/src/contracts.json": "9d8251ac8f11742b8f3b7c0f42e4c4a80ad229a176d26cc98ada92f9b77f1006",
+    "perks/generate_schematic/src/generate_schematic.py": "a426ae30ed9185f250245f35c868e6f8aae6096e94a4b8392283dc05f089c041",
+    "perks/generate_schematic/src/generate_schematic.sh": "101de80b3d63bbc3afaeebf6903623ed0bb322ab4d52cada62ffd24207fc6a83",
+    "perks/generate_schematic/src/generate_schematic_ai.py": "0e1708bc163eab7e4440ae7d9d61ed1cd123bdc401499d46cb3df30f1b9f349c",
+    "perks/generate_schematic/test/case.json": "a0f4dbd0bf397872b5b5b92c18d005facff3f277b72b5ac962a157dc633be68e"
+  }
+}

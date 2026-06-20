@@ -1,0 +1,5 @@
+# Program:featureCounts v2.0.6; Command:"featureCounts" "-a" "genes.gtf" "-o" "featurecounts.txt" "ctrl_rep1.bam" "treat_rep1.bam"
+Geneid	Chr	Start	End	Strand	Length	ctrl_rep1.Aligned.sortedByCoord.out.bam	treat_rep1.Aligned.sortedByCoord.out.bam
+ENSG00000001	1	1000	2500	+	1500	760	875
+ENSG00000002	1	4000	4900	-	900	430	482
+ENSG00000003	2	100	600	+	500	0	0

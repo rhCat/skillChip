@@ -1,0 +1,13 @@
+{
+  "_perk": "plots",
+  "requires": ["python3"],
+  "vars": {
+    "RESULTS": "${FIXTURE}/deseq2_results.csv",
+    "ALPHA": "0.05"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["volcano_plot.png", "ma_plot.png"],
+    "nonempty": ["volcano_plot.png", "ma_plot.png"]
+  }
+}

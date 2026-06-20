@@ -1,0 +1,19 @@
+{
+  "perk": "export_phy",
+  "skill": "neuropixels-analysis",
+  "description": "Export a SortingAnalyzer to Phy format for manual curation. Computes missing spike_amplitudes and principal_components extensions as needed, then writes a Phy template-gui directory under record_store.",
+  "rules": [
+    "loads the analyzer from ANALYZER_DIR (a SortingAnalyzer folder)",
+    "writes the Phy export to record_store/phy_export/",
+    "captures the run log to record_store/export_phy_report.txt",
+    "degrades gracefully (still writes the report, exit 0) when spikeinterface is absent"
+  ],
+  "usage": "Set ANALYZER_DIR (a SortingAnalyzer folder, e.g. the analyzer/ produced by the metrics perk). Output: export_phy_report.txt + phy_export/.",
+  "limitation": "Requires spikeinterface (spikeinterface.exporters). Writes only to record_store; the source analyzer is read-only.",
+  "minimal_example": {
+    "perk": "export_phy",
+    "vars": {
+      "ANALYZER_DIR": "/path/to/metrics_out/analyzer"
+    }
+  }
+}

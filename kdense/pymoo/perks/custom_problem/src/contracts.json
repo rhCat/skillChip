@@ -1,0 +1,23 @@
+{
+  "tool": "pymoo_custom_problem",
+  "inputs": {
+    "POP_SIZE": {
+      "type": "string",
+      "required": true
+    },
+    "N_GEN": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "report": {
+      "path": "${RECORD_STORE}/custom_problem.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/custom_problem.txt"
+  }
+}

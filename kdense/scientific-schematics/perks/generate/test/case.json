@@ -1,0 +1,15 @@
+{
+  "_perk": "generate",
+  "requires": ["python3"],
+  "vars": {
+    "PROMPT": "Simple feedforward neural network diagram: input layer (4 nodes), hidden layer (6 nodes), output layer (2 nodes); label all layers",
+    "DOC_TYPE": "default",
+    "ITERATIONS": "2",
+    "OUTPUT_NAME": "schematic.png"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["schematic.png"],
+    "nonempty": ["schematic.png"]
+  }
+}

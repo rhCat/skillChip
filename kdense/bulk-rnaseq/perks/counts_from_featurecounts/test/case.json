@@ -1,0 +1,15 @@
+{
+  "_perk": "counts_from_featurecounts",
+  "requires": ["python3"],
+  "vars": {
+    "COUNTS_FILE": "${FIXTURE}/featurecounts.txt"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["counts/counts.csv", "counts/metadata_template.csv"],
+    "nonempty": ["counts/counts.csv"],
+    "contains": {
+      "counts/counts.csv": ["gene_id", "ENSG00000001", "ctrl_rep1", "760"]
+    }
+  }
+}

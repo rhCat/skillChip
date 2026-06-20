@@ -1,0 +1,21 @@
+{
+  "perk": "render_plot",
+  "skill": "matplotlib",
+  "description": "render a template matplotlib plot (line/scatter/bar/histogram/heatmap/contour/box/violin/3d/all) to an image file",
+  "rules": [
+    "read-only",
+    "forces MPLBACKEND=Agg so plt.show() never blocks",
+    "output image written to record_store",
+    "degrades gracefully when matplotlib is not importable"
+  ],
+  "usage": "Set PLOT_TYPE (line|scatter|bar|histogram|heatmap|contour|box|violin|3d|all). Optional PLOT_STYLE (default or any matplotlib style name) and PLOT_OUT (filename). Output: the rendered image under record_store.",
+  "limitation": "Read-only: renders a demonstration figure from built-in sample data — it does not plot user-supplied datasets. Requires matplotlib (and numpy; scipy for the histogram fit overlay); degrades to a placeholder if matplotlib is absent.",
+  "minimal_example": {
+    "perk": "render_plot",
+    "vars": {
+      "PLOT_TYPE": "line",
+      "PLOT_STYLE": "default",
+      "PLOT_OUT": "plot.png"
+    }
+  }
+}

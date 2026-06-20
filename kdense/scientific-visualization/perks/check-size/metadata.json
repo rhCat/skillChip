@@ -1,0 +1,21 @@
+{
+  "perk": "check-size",
+  "skill": "scientific-visualization",
+  "description": "Report whether a figure of WIDTH_IN x HEIGHT_IN inches complies with a journal's single/double column width (5 mm tolerance) and max height via check_figure_size().",
+  "rules": [
+    "read-only: produces a compliance report only, no figure files",
+    "WIDTH_IN and HEIGHT_IN are figure dimensions in inches; the core converts to mm",
+    "JOURNAL one of nature|science|cell|plos|acs; unknown journals fall back to nature specs",
+    "degrades gracefully (writes a non-empty report, exits 0) when matplotlib is absent"
+  ],
+  "usage": "Set WIDTH_IN and HEIGHT_IN (inches). Optional JOURNAL (default nature). Output: size_check.json with width_mm/height_mm/column_type/compliant.",
+  "limitation": "Only checks dimensions against the built-in spec table; does not inspect DPI, fonts, or colors.",
+  "minimal_example": {
+    "perk": "check-size",
+    "vars": {
+      "WIDTH_IN": "3.5",
+      "HEIGHT_IN": "2.5",
+      "JOURNAL": "nature"
+    }
+  }
+}

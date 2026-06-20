@@ -1,0 +1,23 @@
+{
+  "perk": "forecast-csv",
+  "skill": "timesfm-forecasting",
+  "description": "Load a CSV, run the system preflight, load TimesFM 2.5, forecast every numeric column over HORIZON steps, and write point forecasts plus q10/q20/median/q80/q90 prediction intervals as JSON.",
+  "rules": [
+    "INPUT_CSV and HORIZON are required; DATE_COL and VALUE_COLS are optional",
+    "VALUE_COLS is a comma-separated column list; if empty, all numeric columns are forecast",
+    "real inference requires timesfm + torch installed and ~800 MB of HuggingFace weights",
+    "without timesfm/torch the porter degrades to an empty {} report (exit 0) so the contract holds",
+    "writes forecasts.json to record_store"
+  ],
+  "usage": "Set INPUT_CSV and HORIZON; optionally DATE_COL / VALUE_COLS. Output: forecasts.json mapping each series to forecast + lower_90/lower_80/median/upper_80/upper_90 arrays.",
+  "limitation": "Needs timesfm[torch] and network access for first-run weight download; offline it produces an empty report. Quantile index 0 is the mean (not q0): q10=idx1 ... q90=idx9.",
+  "minimal_example": {
+    "perk": "forecast-csv",
+    "vars": {
+      "INPUT_CSV": "series.csv",
+      "HORIZON": "12",
+      "DATE_COL": "date",
+      "VALUE_COLS": "sales"
+    }
+  }
+}

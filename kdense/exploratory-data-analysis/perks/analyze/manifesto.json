@@ -1,0 +1,21 @@
+{
+  "_perk": "analyze",
+  "sequence": [
+    "eda_analyze"
+  ],
+  "tools": {
+    "eda_analyze": {
+      "binary": "python3",
+      "params": {
+        "DATA_FILE": "${DATA_FILE}"
+      }
+    }
+  },
+  "env": {
+    "DATA_FILE": "${DATA_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

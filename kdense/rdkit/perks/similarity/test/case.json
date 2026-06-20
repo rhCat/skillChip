@@ -1,0 +1,15 @@
+{
+  "_perk": "similarity",
+  "requires": ["python3"],
+  "vars": {
+    "QUERY": "CCO",
+    "INPUT": "${FIXTURE}/db.smi",
+    "METHOD": "morgan",
+    "THRESHOLD": "0.2"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["hits.csv"],
+    "nonempty": ["hits.csv"]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "perk": "counts_from_salmon",
+  "skill": "bulk-rnaseq",
+  "description": "Aggregate per-sample Salmon quant.sf files to a gene-level integer counts matrix via pytximport, using counts_from_abundance='length_scaled_tpm' (the right choice for gene-level DE) and rounding the estimated counts to integers as PyDESeq2 requires. Writes counts.csv (genes x samples) and metadata_template.csv.",
+  "rules": [
+    "local analysis — reads quant output, writes counts.csv + metadata_template.csv under record_store",
+    "estimated (non-integer) Salmon counts are rounded to integers; never emits TPM/FPKM",
+    "requires a tx2gene map (transcript_id -> gene_id); discovers <sample>/quant.sf, falling back to flat *.sf",
+    "needs python3 + pandas + pytximport (uv pip install pytximport); without pytximport the porter degrades gracefully and still records an audit line"
+  ],
+  "usage": "Set QUANT_DIR (dir of per-sample <sample>/quant.sf) and TX2GENE (transcript->gene map TSV/CSV). Output: counts/counts.csv + counts/metadata_template.csv.",
+  "limitation": "Salmon mode only. pytximport must be installed for real counts; offline (lib absent) it produces an empty placeholder so the contract still holds.",
+  "minimal_example": {
+    "perk": "counts_from_salmon",
+    "vars": {
+      "QUANT_DIR": "quant/",
+      "TX2GENE": "tx2gene.tsv"
+    }
+  }
+}

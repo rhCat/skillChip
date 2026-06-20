@@ -1,0 +1,23 @@
+{
+  "_perk": "extract",
+  "sequence": [
+    "exa_extract"
+  ],
+  "tools": {
+    "exa_extract": {
+      "binary": "python3",
+      "params": {
+        "URLS": "${URLS}"
+      }
+    }
+  },
+  "env": {
+    "URLS": "${URLS}",
+    "EXA_API_KEY": "${EXA_API_KEY}",
+    "HIGHLIGHTS": "${HIGHLIGHTS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "_perk": "fill-annotations",
+  "sequence": [
+    "fill_annotations"
+  ],
+  "tools": {
+    "fill_annotations": {
+      "binary": "python3",
+      "params": {
+        "PDF_PATH": "${PDF_PATH}",
+        "FIELDS_JSON": "${FIELDS_JSON}"
+      }
+    }
+  },
+  "env": {
+    "PDF_PATH": "${PDF_PATH}",
+    "FIELDS_JSON": "${FIELDS_JSON}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

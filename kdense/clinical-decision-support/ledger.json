@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for clinical-decision-support — set perk, fill record_store + the vars the perk declares.",
+  "skill": "clinical-decision-support",
+  "perk": "classify",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "INPUT_CSV": "<patient/biomarker CSV>",
+    "BIOMARKER": "<biomarker column name, e.g. pd_l1_tps>",
+    "THRESHOLD": "<binary cut-point, e.g. 50>"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "perk": "stats",
+  "skill": "etetoolkit",
+  "description": "Compute tree statistics: leaf and total-node counts, tree depth + farthest leaf, branch-length mean/min/max, and internal-node support mean/min/max.",
+  "rules": [
+    "read-only — never modifies the input tree",
+    "TREE_FORMAT is the ETE Newick format number (default 0)",
+    "report (stats.txt) is written under record_store"
+  ],
+  "usage": "Set TREE_FILE (input Newick tree) and TREE_FORMAT (Newick format number, default 0). Output: stats.txt.",
+  "limitation": "Requires ete3 for the actual statistics; without it the porter records an ete3-missing note and exits 0. Stdout-only op — no tree file is written.",
+  "minimal_example": {
+    "perk": "stats",
+    "vars": {
+      "TREE_FILE": "tree.nw",
+      "TREE_FORMAT": "0"
+    }
+  }
+}

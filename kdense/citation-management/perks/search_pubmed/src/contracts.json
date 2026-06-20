@@ -1,0 +1,27 @@
+{
+  "tool": "search_pubmed",
+  "inputs": {
+    "QUERY": {
+      "type": "string",
+      "required": true
+    },
+    "LIMIT": {
+      "type": "string",
+      "required": false
+    },
+    "PUB_TYPES": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "search_pubmed_out": {
+      "path": "${RECORD_STORE}/pubmed.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pubmed.json"
+  }
+}

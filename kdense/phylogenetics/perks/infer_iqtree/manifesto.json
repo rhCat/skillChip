@@ -1,0 +1,30 @@
+{
+  "_perk": "infer_iqtree",
+  "sequence": [
+    "iqtree_infer"
+  ],
+  "tools": {
+    "iqtree_infer": {
+      "binary": "bash",
+      "params": {
+        "ALIGNED_FASTA": "${ALIGNED_FASTA}",
+        "SEQ_TYPE": "${SEQ_TYPE}",
+        "BOOTSTRAP": "${BOOTSTRAP}",
+        "THREADS": "${THREADS}",
+        "OUTGROUP": "${OUTGROUP}"
+      }
+    }
+  },
+  "env": {
+    "ALIGNED_FASTA": "${ALIGNED_FASTA}",
+    "SEQ_TYPE": "${SEQ_TYPE}",
+    "BOOTSTRAP": "${BOOTSTRAP}",
+    "THREADS": "${THREADS}",
+    "OUTGROUP": "${OUTGROUP}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

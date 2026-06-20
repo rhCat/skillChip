@@ -1,0 +1,19 @@
+{
+  "tool": "mc_common_alerts",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "mc_common_alerts_out": {
+      "path": "${RECORD_STORE}/common_alerts.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/common_alerts.csv"
+  }
+}

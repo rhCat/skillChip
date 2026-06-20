@@ -1,0 +1,15 @@
+{
+  "_perk": "source_add",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "OPEN_NOTEBOOK_URL": "http://127.0.0.1:5999",
+    "NOTEBOOK_ID": "notebook:skilltest",
+    "SOURCE_TEXT": "CRISPR-Cas9 is a genome editing tool.",
+    "SOURCE_TITLE": "skilltest text source"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["source.json"],
+    "nonempty": ["source.json"]
+  }
+}

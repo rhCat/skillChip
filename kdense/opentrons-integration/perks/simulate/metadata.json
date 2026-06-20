@@ -1,0 +1,19 @@
+{
+  "perk": "simulate",
+  "skill": "opentrons-integration",
+  "description": "Dry-run an Opentrons Protocol API v2 file via opentrons_simulate (read-only, no physical robot).",
+  "rules": [
+    "read-only — never controls a physical robot",
+    "runs the opentrons package simulator (opentrons_simulate) against PROTOCOL_FILE",
+    "simulated run log + any errors are captured to record_store/simulate.log",
+    "if the opentrons package is absent the porter degrades gracefully (writes log, exits 0)"
+  ],
+  "usage": "Set PROTOCOL_FILE (an Opentrons Protocol API v2 .py file). Output: simulate.log.",
+  "limitation": "Requires the opentrons Python package on PATH to actually simulate; without it the run log is empty/degraded. Never executes on hardware.",
+  "minimal_example": {
+    "perk": "simulate",
+    "vars": {
+      "PROTOCOL_FILE": "./my_protocol.py"
+    }
+  }
+}

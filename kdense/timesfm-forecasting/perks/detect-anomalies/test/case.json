@@ -1,0 +1,12 @@
+{
+  "_perk": "detect-anomalies",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT_CSV": "${FIXTURE}/temperature_anomaly.csv"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["anomaly_detection.json"],
+    "nonempty": ["anomaly_detection.json"]
+  }
+}

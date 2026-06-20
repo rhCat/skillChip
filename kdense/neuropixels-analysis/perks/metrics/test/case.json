@@ -1,0 +1,14 @@
+{
+  "_perk": "metrics",
+  "requires": ["python3"],
+  "vars": {
+    "SORTING_DIR": "${FIXTURE}",
+    "PREPROCESSED_DIR": "${FIXTURE}",
+    "CURATION": "allen"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["metrics_report.txt"],
+    "nonempty": ["metrics_report.txt"]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "tool": "load",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "PROCESSED": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "data_h5ad": {
+      "path": "${RECORD_STORE}/data.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/data.h5ad"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "tool": "generate_schematic",
+  "inputs": {
+    "PROMPT": {
+      "type": "string",
+      "required": true
+    },
+    "OUTPUT_NAME": {
+      "type": "string",
+      "required": false
+    },
+    "DOC_TYPE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "schematic_out": {
+      "path": "${RECORD_STORE}/schematic.audit.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/schematic.audit.json"
+  }
+}

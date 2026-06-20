@@ -1,0 +1,22 @@
+{
+  "perk": "aggregate",
+  "skill": "literature-review",
+  "description": "Post-process a combined search-results JSON array: deduplicate by DOI/title, rank by citations/year/relevance, filter by publication year, and format as json, markdown, or bibtex.",
+  "rules": [
+    "read-only",
+    "Python standard library only — no network, no third-party packages",
+    "input is a JSON array of result objects (title/authors/year/doi/citations/...)",
+    "deduplication keys on DOI first, then title",
+    "formatted output is written to record_store as aggregated_results.<ext>"
+  ],
+  "usage": "Set RESULTS_JSON (path to the combined results JSON array). Optional: OUTPUT_FORMAT (json|markdown|bibtex, default markdown), RANK (citations|year|relevance), YEAR_START, YEAR_END, DEDUPLICATE (1 to enable). Output: aggregated_results.<ext>.",
+  "limitation": "Does not perform any database search or web request; it only transforms a results array you already exported. Records lacking the keyed fields are passed through unchanged.",
+  "minimal_example": {
+    "perk": "aggregate",
+    "vars": {
+      "RESULTS_JSON": "./results.json",
+      "OUTPUT_FORMAT": "markdown",
+      "DEDUPLICATE": "1"
+    }
+  }
+}

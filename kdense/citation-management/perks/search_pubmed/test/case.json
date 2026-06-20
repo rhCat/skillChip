@@ -1,0 +1,13 @@
+{
+  "_perk": "search_pubmed",
+  "requires": ["python3"],
+  "vars": {
+    "QUERY": "CRISPR gene editing",
+    "LIMIT": "3"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["pubmed.json"],
+    "nonempty": ["pubmed.json"]
+  }
+}

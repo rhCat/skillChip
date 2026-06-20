@@ -1,0 +1,15 @@
+{
+  "_perk": "many_objective",
+  "requires": ["python3"],
+  "vars": {
+    "PROBLEM": "dtlz2",
+    "N_OBJ": "5",
+    "N_PARTITIONS": "12",
+    "N_GEN": "300"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["many_objective.txt"],
+    "nonempty": ["many_objective.txt"]
+  }
+}

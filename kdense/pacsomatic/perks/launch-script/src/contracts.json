@@ -1,0 +1,59 @@
+{
+  "tool": "build_launch_script",
+  "inputs": {
+    "SAMPLESHEET": {
+      "type": "string",
+      "required": true
+    },
+    "OUTDIR": {
+      "type": "string",
+      "required": true
+    },
+    "FASTA": {
+      "type": "string",
+      "required": false
+    },
+    "GENOME": {
+      "type": "string",
+      "required": false
+    },
+    "PROFILE": {
+      "type": "string",
+      "required": false
+    },
+    "EXECUTOR": {
+      "type": "string",
+      "required": false
+    },
+    "QUEUE": {
+      "type": "string",
+      "required": false
+    },
+    "PROJECT": {
+      "type": "string",
+      "required": false
+    },
+    "CPUS": {
+      "type": "string",
+      "required": false
+    },
+    "MEMORY_GB": {
+      "type": "string",
+      "required": false
+    },
+    "WALLTIME": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "out": {
+      "path": "${RECORD_STORE}/launch_script.sh",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/launch_script.sh"
+  }
+}

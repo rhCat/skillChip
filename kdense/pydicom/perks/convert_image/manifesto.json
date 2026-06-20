@@ -1,0 +1,29 @@
+{
+  "_perk": "convert_image",
+  "sequence": [
+    "dicom_to_image"
+  ],
+  "tools": {
+    "dicom_to_image": {
+      "binary": "python3",
+      "params": {
+        "DICOM_IN": "${DICOM_IN}",
+        "IMG_OUT": "${IMG_OUT}",
+        "IMG_FORMAT": "${IMG_FORMAT}",
+        "APPLY_WINDOWING": "${APPLY_WINDOWING}",
+        "FRAME": "${FRAME}"
+      }
+    }
+  },
+  "env": {
+    "DICOM_IN": "${DICOM_IN}",
+    "IMG_OUT": "${IMG_OUT}",
+    "IMG_FORMAT": "${IMG_FORMAT}",
+    "APPLY_WINDOWING": "${APPLY_WINDOWING}",
+    "FRAME": "${FRAME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

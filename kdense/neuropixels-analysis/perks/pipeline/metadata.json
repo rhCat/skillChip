@@ -1,0 +1,23 @@
+{
+  "perk": "pipeline",
+  "skill": "neuropixels-analysis",
+  "description": "End-to-end Neuropixels pipeline: load (SpikeGLX/OpenEphys auto-detect) -> preprocess (highpass + bad-channel removal + phase-shift + CMR) -> drift check -> motion correction (auto, if drift > 20 um) -> spike sorting -> postprocess (SortingAnalyzer + quality metrics) -> threshold curation -> export (Phy + report + quality_metrics.csv + unit_labels.json + summary.json), all under record_store.",
+  "rules": [
+    "load -> preprocess -> drift -> motion -> sort -> postprocess -> curate -> export is ONE governed sequence",
+    "SORTER is one of kilosort4 | kilosort3 | spykingcircus2 | mountainsort5; CURATION is allen | ibl | strict",
+    "all artifacts (preprocessed/, sorting_*, analyzer/, phy_export/, report/, summary.json) land under record_store",
+    "captures the run log to record_store/pipeline_report.txt",
+    "degrades gracefully (still writes the report, exit 0) when spikeinterface / the sorter is absent"
+  ],
+  "usage": "Set DATA_PATH (raw SpikeGLX/OpenEphys recording dir); optional SORTER (default kilosort4), STREAM_NAME (default imec0.ap), CURATION (default allen). Output: pipeline_report.txt + summary.json + the artifact tree.",
+  "limitation": "Requires spikeinterface and the chosen sorter; kilosort4 needs a CUDA GPU. Heavy/long-running. Writes only to record_store.",
+  "minimal_example": {
+    "perk": "pipeline",
+    "vars": {
+      "DATA_PATH": "/path/to/run_g0",
+      "SORTER": "kilosort4",
+      "STREAM_NAME": "imec0.ap",
+      "CURATION": "allen"
+    }
+  }
+}

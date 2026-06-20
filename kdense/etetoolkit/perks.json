@@ -1,0 +1,61 @@
+{
+  "skill": "etetoolkit",
+  "perks": [
+    {
+      "id": "stats",
+      "summary": "compute tree statistics (leaf/node counts, depth, branch-length + support stats)",
+      "destructive": false,
+      "tools": [
+        "ete_stats"
+      ]
+    },
+    {
+      "id": "convert",
+      "summary": "convert a tree between Newick format specifications (in-format -> out-format)",
+      "destructive": false,
+      "tools": [
+        "ete_convert"
+      ]
+    },
+    {
+      "id": "reroot",
+      "summary": "reroot a tree by named outgroup or midpoint",
+      "destructive": false,
+      "tools": [
+        "ete_reroot"
+      ]
+    },
+    {
+      "id": "prune",
+      "summary": "prune a tree to a set of taxa (optionally preserving branch lengths)",
+      "destructive": false,
+      "tools": [
+        "ete_prune"
+      ]
+    },
+    {
+      "id": "ascii",
+      "summary": "render a tree as ASCII art",
+      "destructive": false,
+      "tools": [
+        "ete_ascii"
+      ]
+    },
+    {
+      "id": "leaves",
+      "summary": "list all leaf names of a tree",
+      "destructive": false,
+      "tools": [
+        "ete_leaves"
+      ]
+    },
+    {
+      "id": "visualize",
+      "summary": "render a tree to PNG/PDF/SVG with layout + styling options",
+      "destructive": false,
+      "tools": [
+        "ete_visualize"
+      ]
+    }
+  ]
+}

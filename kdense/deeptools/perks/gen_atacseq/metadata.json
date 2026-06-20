@@ -1,0 +1,24 @@
+{
+  "perk": "gen_atacseq",
+  "skill": "deeptools",
+  "description": "Generate an ATAC-seq analysis workflow bash script: Tn5 offset correction (alignmentSieve --ATACshift), normalized coverage (bamCoverage RPGC), fragment-size analysis (bamPEFragmentSize), and peak-centered matrix + heatmap (computeMatrix, plotHeatmap).",
+  "rules": [
+    "read-only — emits a bash script template; never runs deepTools or touches sequencing data",
+    "ATAC_BAM is the aligned ATAC-seq BAM; PEAKS_BED is optional peak regions",
+    "all vars optional — unset ones use the generator's safe defaults",
+    "filenames are sanitized (no shell metacharacters, no '..' segments) before interpolation",
+    "generated script written to record_store/atacseq.sh",
+    "--ATACshift filters to properly paired fragments and is equivalent to --shift 4 -5 5 -4"
+  ],
+  "usage": "Optionally set ATAC_BAM, PEAKS_BED, GENOME_SIZE, THREADS. Output: atacseq.sh (a customizable bash workflow to review and run separately).",
+  "limitation": "Produces a template script only. Running it requires deepTools 3.5.6 and samtools installed. The peak matrix/heatmap step is skipped at runtime if PEAKS_BED does not exist. Paths must satisfy the sanitizer pattern [A-Za-z0-9._/-].",
+  "minimal_example": {
+    "perk": "gen_atacseq",
+    "vars": {
+      "ATAC_BAM": "atacseq.bam",
+      "PEAKS_BED": "peaks.bed",
+      "GENOME_SIZE": "2913022398",
+      "THREADS": "8"
+    }
+  }
+}

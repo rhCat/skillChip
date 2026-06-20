@@ -1,0 +1,13 @@
+{
+  "_perk": "check-system",
+  "requires": ["python3"],
+  "vars": { "MODEL_VERSION": "v2.5" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["system_check.json"],
+    "nonempty": ["system_check.json"],
+    "json_has": {
+      "system_check.json": ["model", "passed", "checks"]
+    }
+  }
+}

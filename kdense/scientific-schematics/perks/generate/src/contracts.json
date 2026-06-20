@@ -1,0 +1,31 @@
+{
+  "tool": "generate_schematic",
+  "inputs": {
+    "PROMPT": {
+      "type": "string",
+      "required": true
+    },
+    "DOC_TYPE": {
+      "type": "string",
+      "required": false
+    },
+    "ITERATIONS": {
+      "type": "string",
+      "required": false
+    },
+    "OUTPUT_NAME": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "schematic": {
+      "path": "${RECORD_STORE}/schematic.png",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/schematic.png"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_perk": "predict_solubility",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_CSV": "${FIXTURE}",
+    "SMILES_COL": "smiles",
+    "TARGET_COL": "solubility",
+    "PREDICT_SMILES": "CCO c1ccccc1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["solubility.txt"],
+    "nonempty": ["solubility.txt"]
+  }
+}

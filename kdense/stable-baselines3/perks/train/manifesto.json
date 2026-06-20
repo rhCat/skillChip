@@ -1,0 +1,29 @@
+{
+  "_perk": "train",
+  "sequence": [
+    "sb3_train"
+  ],
+  "tools": {
+    "sb3_train": {
+      "binary": "python3",
+      "params": {
+        "ENV_ID": "${ENV_ID}",
+        "ALGORITHM": "${ALGORITHM}",
+        "POLICY": "${POLICY}",
+        "N_ENVS": "${N_ENVS}",
+        "TOTAL_TIMESTEPS": "${TOTAL_TIMESTEPS}"
+      }
+    }
+  },
+  "env": {
+    "ENV_ID": "${ENV_ID}",
+    "ALGORITHM": "${ALGORITHM}",
+    "POLICY": "${POLICY}",
+    "N_ENVS": "${N_ENVS}",
+    "TOTAL_TIMESTEPS": "${TOTAL_TIMESTEPS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

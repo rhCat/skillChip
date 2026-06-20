@@ -1,0 +1,35 @@
+{
+  "tool": "run_ora",
+  "inputs": {
+    "GENES": {
+      "type": "string",
+      "required": true
+    },
+    "LIBRARIES": {
+      "type": "string",
+      "required": false
+    },
+    "ORGANISM": {
+      "type": "string",
+      "required": false
+    },
+    "FDR": {
+      "type": "string",
+      "required": false
+    },
+    "BACKGROUND": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "ora_results": {
+      "path": "${RECORD_STORE}/ora_results.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/ora_results.csv"
+  }
+}

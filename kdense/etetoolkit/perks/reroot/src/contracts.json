@@ -1,0 +1,27 @@
+{
+  "tool": "ete_reroot",
+  "inputs": {
+    "TREE_FILE": {
+      "type": "string",
+      "required": true
+    },
+    "OUTGROUP": {
+      "type": "string",
+      "required": false
+    },
+    "TREE_FORMAT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "ete_reroot_out": {
+      "path": "${RECORD_STORE}/reroot.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/reroot.log"
+  }
+}

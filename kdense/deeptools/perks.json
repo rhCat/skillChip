@@ -1,0 +1,45 @@
+{
+  "skill": "deeptools",
+  "perks": [
+    {
+      "id": "validate",
+      "summary": "validate BAM/bigWig/BED input files (existence, BAM index, BED format) — read-only",
+      "destructive": false,
+      "tools": [
+        "validate_files"
+      ]
+    },
+    {
+      "id": "gen_chipseq_qc",
+      "summary": "generate a ChIP-seq quality-control workflow bash script (correlation, PCA, coverage, fragment size, fingerprint)",
+      "destructive": false,
+      "tools": [
+        "gen_chipseq_qc"
+      ]
+    },
+    {
+      "id": "gen_chipseq_analysis",
+      "summary": "generate a complete ChIP-seq analysis workflow bash script (bamCoverage, bamCompare, computeMatrix, plotHeatmap/Profile, plotEnrichment)",
+      "destructive": false,
+      "tools": [
+        "gen_chipseq_analysis"
+      ]
+    },
+    {
+      "id": "gen_rnaseq_coverage",
+      "summary": "generate a strand-specific RNA-seq coverage workflow bash script (forward/reverse bamCoverage, CPM)",
+      "destructive": false,
+      "tools": [
+        "gen_rnaseq_coverage"
+      ]
+    },
+    {
+      "id": "gen_atacseq",
+      "summary": "generate an ATAC-seq analysis workflow bash script (Tn5 shift, bamCoverage, fragment size, peak matrix/heatmap)",
+      "destructive": false,
+      "tools": [
+        "gen_atacseq"
+      ]
+    }
+  ]
+}

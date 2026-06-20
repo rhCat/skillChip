@@ -1,0 +1,21 @@
+{
+  "perk": "schematic",
+  "skill": "hypothesis-generation",
+  "description": "Generate a publication-quality scientific schematic (hypothesis framework, mechanistic pathway, experimental-design flowchart, prediction tree) with AI, smart iterative refinement, and an automated quality review. Wraps generate_schematic.py -> generate_schematic_ai.py (Nano Banana 2 image model + Gemini quality review via OpenRouter).",
+  "rules": [
+    "read-only: writes only into RECORD_STORE (the PNG, per-iteration versions, and a review-log JSON)",
+    "network + OPENROUTER_API_KEY required for real generation; absent either, the porter degrades gracefully and still emits the audit JSON",
+    "iterations capped at 1-2 by the core script; regeneration only happens when the review score is below the doc-type threshold",
+    "no figure numbers or captions are baked into the image (added later in LaTeX)"
+  ],
+  "usage": "Set SCHEMATIC_PROMPT (natural-language diagram description). Optional: DOC_TYPE (journal|conference|poster|presentation|report|grant|thesis|preprint|default; default 'default') and ITERATIONS (1-2; default 2). Provide OPENROUTER_API_KEY in env. Outputs under RECORD_STORE: schematic.png, schematic_v*.png, schematic_review_log.json, and schematic.json (audit).",
+  "limitation": "Requires the OpenRouter API (network) and the requests library to produce an actual image. Offline or without OPENROUTER_API_KEY it produces only the audit JSON. Image quality and scores are non-deterministic (model-driven), so content is not hermetically assertable.",
+  "minimal_example": {
+    "perk": "schematic",
+    "vars": {
+      "SCHEMATIC_PROMPT": "Hypothesis framework diagram showing three competing mechanistic explanations",
+      "DOC_TYPE": "journal",
+      "ITERATIONS": "2"
+    }
+  }
+}

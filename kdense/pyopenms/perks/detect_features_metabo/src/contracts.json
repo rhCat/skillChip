@@ -1,0 +1,43 @@
+{
+  "tool": "detect_features_metabo",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "PPM": {
+      "type": "string",
+      "required": false
+    },
+    "NOISE": {
+      "type": "string",
+      "required": false
+    },
+    "CHARGE_LOW": {
+      "type": "string",
+      "required": false
+    },
+    "CHARGE_HIGH": {
+      "type": "string",
+      "required": false
+    },
+    "KEEP_SINGLETONS": {
+      "type": "string",
+      "required": false
+    },
+    "ISO_MODEL": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "features": {
+      "path": "${RECORD_STORE}/features.featureXML",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/features.featureXML"
+  }
+}

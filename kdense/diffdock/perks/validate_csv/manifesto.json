@@ -1,0 +1,23 @@
+{
+  "_perk": "validate_csv",
+  "sequence": [
+    "validate_csv"
+  ],
+  "tools": {
+    "validate_csv": {
+      "binary": "python3",
+      "params": {
+        "INPUT_CSV": "${INPUT_CSV}",
+        "BASE_DIR": "${BASE_DIR}"
+      }
+    }
+  },
+  "env": {
+    "INPUT_CSV": "${INPUT_CSV}",
+    "BASE_DIR": "${BASE_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

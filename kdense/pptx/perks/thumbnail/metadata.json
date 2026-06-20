@@ -1,0 +1,18 @@
+{
+  "perk": "thumbnail",
+  "skill": "pptx",
+  "description": "Render a labeled JPEG thumbnail grid of every slide in a .pptx for quick visual analysis. Each thumbnail is labeled with its XML filename (e.g. slide1.xml); hidden slides show a crossed-out placeholder. Read-only — the deck is not modified; grid image(s) land under record_store.",
+  "rules": [
+    "read-only — never writes back to PPTX_FILE",
+    "requires soffice (LibreOffice) + pdftoppm (Poppler) + Pillow + defusedxml; degrades gracefully when any are absent",
+    "grid JPEG(s) are written under record_store (thumbnails.jpg, or thumbnails-1.jpg ... for large decks)"
+  ],
+  "usage": "Set PPTX_FILE (path to a .pptx). Output: thumbnails.jpg (grid) plus thumbnail.log (run output).",
+  "limitation": "Needs LibreOffice + Poppler for rasterization. Grid is capped at 6 columns; very large decks split into multiple numbered grids.",
+  "minimal_example": {
+    "perk": "thumbnail",
+    "vars": {
+      "PPTX_FILE": "presentation.pptx"
+    }
+  }
+}

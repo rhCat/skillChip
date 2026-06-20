@@ -1,0 +1,15 @@
+{
+  "_perk": "merge",
+  "requires": ["python3"],
+  "vars": {
+    "NODE": "n1",
+    "TEST_SCORE": "67.67",
+    "BRANCH_REF": "wt/n1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["merge.txt"],
+    "nonempty": ["merge.txt"],
+    "contains": { "merge.txt": "MERGE GATE PASSED" }
+  }
+}

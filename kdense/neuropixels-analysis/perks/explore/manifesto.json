@@ -1,0 +1,23 @@
+{
+  "_perk": "explore",
+  "sequence": [
+    "explore_recording"
+  ],
+  "tools": {
+    "explore_recording": {
+      "binary": "python3",
+      "params": {
+        "DATA_PATH": "${DATA_PATH}",
+        "STREAM_NAME": "${STREAM_NAME}"
+      }
+    }
+  },
+  "env": {
+    "DATA_PATH": "${DATA_PATH}",
+    "STREAM_NAME": "${STREAM_NAME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

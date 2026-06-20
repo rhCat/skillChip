@@ -1,0 +1,53 @@
+{
+  "skill": "neuropixels-analysis",
+  "perks": [
+    {
+      "id": "explore",
+      "summary": "inspect a Neuropixels recording (streams, channels, duration, bad channels, signal stats) — read-only",
+      "destructive": false,
+      "tools": [
+        "explore_recording"
+      ]
+    },
+    {
+      "id": "preprocess",
+      "summary": "bandpass-filter, phase-shift, detect/remove bad channels, common-median-reference, and save a preprocessed recording",
+      "destructive": false,
+      "tools": [
+        "preprocess_recording"
+      ]
+    },
+    {
+      "id": "sort",
+      "summary": "run a spike sorter (kilosort4 / spykingcircus2 / mountainsort5 / ...) on a preprocessed recording",
+      "destructive": false,
+      "tools": [
+        "run_sorting"
+      ]
+    },
+    {
+      "id": "metrics",
+      "summary": "build a SortingAnalyzer, compute quality metrics, and apply threshold-based curation (allen/ibl/strict)",
+      "destructive": false,
+      "tools": [
+        "compute_metrics"
+      ]
+    },
+    {
+      "id": "export_phy",
+      "summary": "export a SortingAnalyzer to Phy format for manual curation",
+      "destructive": false,
+      "tools": [
+        "export_to_phy"
+      ]
+    },
+    {
+      "id": "pipeline",
+      "summary": "end-to-end pipeline: load -> preprocess -> drift check -> motion correction -> sort -> postprocess -> curate -> export",
+      "destructive": false,
+      "tools": [
+        "neuropixels_pipeline"
+      ]
+    }
+  ]
+}

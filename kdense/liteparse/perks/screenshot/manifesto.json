@@ -1,0 +1,25 @@
+{
+  "_perk": "screenshot",
+  "sequence": [
+    "lit_screenshot"
+  ],
+  "tools": {
+    "lit_screenshot": {
+      "binary": "python3",
+      "params": {
+        "INPUT_FILE": "${INPUT_FILE}",
+        "TARGET_PAGES": "${TARGET_PAGES}",
+        "DPI": "${DPI}"
+      }
+    }
+  },
+  "env": {
+    "INPUT_FILE": "${INPUT_FILE}",
+    "TARGET_PAGES": "${TARGET_PAGES}",
+    "DPI": "${DPI}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

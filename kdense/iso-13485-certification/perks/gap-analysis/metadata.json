@@ -1,0 +1,19 @@
+{
+  "perk": "gap-analysis",
+  "skill": "iso-13485-certification",
+  "description": "Scan a QMS documentation directory and report which ISO 13485:2016 required procedures and key documents are present vs missing, with a compliance percentage and prioritized recommendations (read-only).",
+  "rules": [
+    "read-only — never writes into DOCS_DIR",
+    "recurses DOCS_DIR; reads .txt/.md content, matches .doc/.docx/.pdf/.odt by filename only",
+    "keyword-matches ISO 13485:2016 documented procedures + key documents (Quality Manual, MDF, Quality Policy, Quality Objectives)",
+    "gap report written to record_store/gap-report.json"
+  ],
+  "usage": "Set DOCS_DIR (the directory of existing QMS documents). Output: gap-report.json.",
+  "limitation": "Keyword/filename matching only — presence, not quality, of documentation. Binary formats (.doc/.docx/.pdf/.odt) are matched by filename, not full-text extraction. Pure stdlib (no external libraries required).",
+  "minimal_example": {
+    "perk": "gap-analysis",
+    "vars": {
+      "DOCS_DIR": "./qms-docs"
+    }
+  }
+}

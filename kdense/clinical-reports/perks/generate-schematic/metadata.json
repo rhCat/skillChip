@@ -1,0 +1,20 @@
+{
+  "perk": "generate-schematic",
+  "skill": "clinical-reports",
+  "description": "AI-generate a publication-quality scientific schematic (CONSORT flow, patient timeline, diagnostic algorithm) from a natural-language prompt via OpenRouter / Nano Banana.",
+  "rules": [
+    "calls a remote LLM image API (OpenRouter) — requires OPENROUTER_API_KEY, the requests library, and network",
+    "DOC_TYPE (optional) sets the quality threshold: journal, conference, poster, presentation, report, grant, thesis, preprint, default",
+    "the image is written to record_store/schematic.png; an audit JSON (status + prompt + image path) is always written to schematic.json",
+    "degrades gracefully offline: with no API key the step still records a schematic.json with status skipped_no_api_key"
+  ],
+  "usage": "Set SCHEMATIC_PROMPT (diagram description) and optionally DOC_TYPE; export OPENROUTER_API_KEY. Outputs: schematic.png (when online) + schematic.json.",
+  "limitation": "Cannot run offline — image generation needs a network call to OpenRouter and the requests package. The audit JSON is produced either way so the contract holds.",
+  "minimal_example": {
+    "perk": "generate-schematic",
+    "vars": {
+      "SCHEMATIC_PROMPT": "CONSORT participant flow diagram for a two-arm RCT",
+      "DOC_TYPE": "journal"
+    }
+  }
+}

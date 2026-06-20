@@ -1,0 +1,19 @@
+{
+  "tool": "docx_extract",
+  "inputs": {
+    "DOCX_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "docx_extract_out": {
+      "path": "${RECORD_STORE}/extracted.md",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/extracted.md"
+  }
+}

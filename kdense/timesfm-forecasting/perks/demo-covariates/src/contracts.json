@@ -1,0 +1,14 @@
+{
+  "tool": "demo_covariates",
+  "inputs": {},
+  "outputs": {
+    "sales_with_covariates_out": {
+      "path": "${RECORD_STORE}/sales_with_covariates.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/sales_with_covariates.csv"
+  }
+}

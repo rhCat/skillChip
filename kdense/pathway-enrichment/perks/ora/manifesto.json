@@ -1,0 +1,29 @@
+{
+  "_perk": "ora",
+  "sequence": [
+    "run_ora"
+  ],
+  "tools": {
+    "run_ora": {
+      "binary": "python3",
+      "params": {
+        "GENES": "${GENES}",
+        "LIBRARIES": "${LIBRARIES}",
+        "ORGANISM": "${ORGANISM}",
+        "FDR": "${FDR}",
+        "BACKGROUND": "${BACKGROUND}"
+      }
+    }
+  },
+  "env": {
+    "GENES": "${GENES}",
+    "LIBRARIES": "${LIBRARIES}",
+    "ORGANISM": "${ORGANISM}",
+    "FDR": "${FDR}",
+    "BACKGROUND": "${BACKGROUND}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

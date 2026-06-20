@@ -1,0 +1,19 @@
+{
+  "perk": "analyze",
+  "skill": "exploratory-data-analysis",
+  "description": "Run the full exploratory-data-analysis pipeline on a scientific data file — detect type, load the format reference, perform format-specific data analysis (shape, dtypes, missing values, summary statistics, sequence/image metrics), and render a comprehensive markdown report.",
+  "rules": [
+    "read-only — reads the input file and writes a report; never mutates the input",
+    "format-specific analysis: tabular (CSV/TSV), arrays (NPY/NPZ), JSON, HDF5, sequences (FASTA/FASTQ), images (TIFF/PNG/JPEG)",
+    "degrades gracefully — when a required science library is absent the error is captured in the report, not raised",
+    "result written to record_store as eda_report.md"
+  ],
+  "usage": "Set DATA_FILE (path to the data file). Output: eda_report.md (full markdown EDA report).",
+  "limitation": "Deep data analysis needs the matching science library (numpy, pandas, biopython, pillow, h5py) for the file type. CSV/TSV/JSON/NPY/NPZ are analysable with numpy + pandas (present here); FASTA/FASTQ need biopython; images need pillow; HDF5 needs h5py. When the library is missing the report still generates but its Data Analysis section records the missing-library error.",
+  "minimal_example": {
+    "perk": "analyze",
+    "vars": {
+      "DATA_FILE": "experiment.csv"
+    }
+  }
+}

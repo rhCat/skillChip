@@ -1,0 +1,31 @@
+{
+  "_perk": "load_split",
+  "sequence": [
+    "tdc_load_split"
+  ],
+  "tools": {
+    "tdc_load_split": {
+      "binary": "python3",
+      "params": {
+        "TDC_PROBLEM": "${TDC_PROBLEM}",
+        "TDC_TASK": "${TDC_TASK}",
+        "TDC_DATASET": "${TDC_DATASET}",
+        "TDC_METHOD": "${TDC_METHOD}",
+        "TDC_SEED": "${TDC_SEED}",
+        "TDC_FRAC": "${TDC_FRAC}"
+      }
+    }
+  },
+  "env": {
+    "TDC_PROBLEM": "${TDC_PROBLEM}",
+    "TDC_TASK": "${TDC_TASK}",
+    "TDC_DATASET": "${TDC_DATASET}",
+    "TDC_METHOD": "${TDC_METHOD}",
+    "TDC_SEED": "${TDC_SEED}",
+    "TDC_FRAC": "${TDC_FRAC}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

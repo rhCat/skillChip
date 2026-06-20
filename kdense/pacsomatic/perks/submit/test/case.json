@@ -1,0 +1,4 @@
+{
+  "_perk": "submit",
+  "skip": "destructive --run: needs a resolvable nextflow runtime (absent) and, for scheduler executors, a live LSF/Slurm/PBS/SGE submit binary (bsub/sbatch/qsub); cannot run hermetically offline. Use the dry-run perk to validate offline."
+}

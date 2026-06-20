@@ -1,0 +1,21 @@
+{
+  "perk": "chat_send",
+  "skill": "open-notebook",
+  "description": "Send a message to a chat session with source/note context and get an AI reply (POST /api/chat/execute).",
+  "rules": [
+    "remote-mutating: appends a message to a live chat session and invokes the configured AI model",
+    "INCLUDE_SOURCES / INCLUDE_NOTES (default true) control which context is attached",
+    "writes the AI response JSON to record_store/chat_response.json",
+    "degrades gracefully (status=unreachable, exit 0) when the server is down"
+  ],
+  "usage": "Set OPEN_NOTEBOOK_URL, SESSION_ID, CHAT_MESSAGE (INCLUDE_SOURCES, INCLUDE_NOTES, MODEL_OVERRIDE optional). Output: chat_response.json.",
+  "limitation": "Requires a reachable Open Notebook server with a configured AI provider; needs an existing SESSION_ID (see chat_session_create).",
+  "minimal_example": {
+    "perk": "chat_send",
+    "vars": {
+      "OPEN_NOTEBOOK_URL": "http://localhost:5055",
+      "SESSION_ID": "chat_session:abc123",
+      "CHAT_MESSAGE": "What are the key biomarkers for immunotherapy response?"
+    }
+  }
+}

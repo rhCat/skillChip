@@ -1,0 +1,10 @@
+{
+  "_perk": "pack",
+  "requires": ["bash", "python3"],
+  "vars": { "UNPACKED_DIR": "${FIXTURE}/unpacked" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["pack.log"],
+    "nonempty": ["pack.log"]
+  }
+}

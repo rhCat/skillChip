@@ -1,0 +1,14 @@
+{
+  "_perk": "query",
+  "requires": ["python3"],
+  "vars": {
+    "VENUE": "Nature",
+    "TEMPLATE_TYPE": "journals",
+    "KEYWORD": ""
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["query.txt"],
+    "nonempty": ["query.txt"]
+  }
+}

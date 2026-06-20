@@ -1,0 +1,31 @@
+{
+  "tool": "pymoo_single_objective",
+  "inputs": {
+    "PROBLEM": {
+      "type": "string",
+      "required": true
+    },
+    "N_VAR": {
+      "type": "string",
+      "required": true
+    },
+    "POP_SIZE": {
+      "type": "string",
+      "required": true
+    },
+    "N_GEN": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "report": {
+      "path": "${RECORD_STORE}/single_objective.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/single_objective.txt"
+  }
+}

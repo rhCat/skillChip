@@ -1,0 +1,19 @@
+{
+  "tool": "extract_fields",
+  "inputs": {
+    "PDF_PATH": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "extract_fields_out": {
+      "path": "${RECORD_STORE}/form_fields.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/form_fields.json"
+  }
+}

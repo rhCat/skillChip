@@ -1,0 +1,14 @@
+{
+  "_perk": "anonymize",
+  "requires": ["python3"],
+  "vars": {
+    "DICOM_IN": "${FIXTURE}/sample.dcm",
+    "PATIENT_ID": "ANON001",
+    "PATIENT_NAME": "Anonymous^Patient"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["anonymized.dcm"],
+    "nonempty": ["anonymized.dcm"]
+  }
+}

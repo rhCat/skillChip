@@ -1,0 +1,16 @@
+{
+  "_perk": "simulate",
+  "requires": ["python3"],
+  "vars": {
+    "SIM_TIME": "50",
+    "NUM_RESOURCES": "2",
+    "ARRIVAL_RATE": "2.0",
+    "SERVICE_TIME_MEAN": "3.0",
+    "RANDOM_SEED": "42"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["sim_stats.txt"],
+    "nonempty": ["sim_stats.txt"]
+  }
+}

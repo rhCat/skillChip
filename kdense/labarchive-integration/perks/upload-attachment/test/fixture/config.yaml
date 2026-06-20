@@ -1,0 +1,5 @@
+api_url: https://api.labarchives.com/api
+access_key_id: demo_key
+access_password: demo_pass
+user_email: user@example.edu
+user_external_password: ext_app_pass

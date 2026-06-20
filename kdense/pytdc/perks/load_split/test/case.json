@@ -1,0 +1,17 @@
+{
+  "_perk": "load_split",
+  "requires": ["python3"],
+  "vars": {
+    "TDC_PROBLEM": "single_pred",
+    "TDC_TASK": "ADME",
+    "TDC_DATASET": "Caco2_Wang",
+    "TDC_METHOD": "scaffold",
+    "TDC_SEED": "42",
+    "TDC_FRAC": "0.7,0.1,0.2"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["split.json"],
+    "nonempty": ["split.json"]
+  }
+}

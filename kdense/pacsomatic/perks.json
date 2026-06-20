@@ -1,0 +1,45 @@
+{
+  "skill": "pacsomatic",
+  "perks": [
+    {
+      "id": "samplesheet",
+      "summary": "build the pacsomatic samplesheet CSV (patient,sample,status,bam,pbi) for a matched tumor/normal pair",
+      "destructive": false,
+      "tools": [
+        "build_samplesheet"
+      ]
+    },
+    {
+      "id": "params",
+      "summary": "write the generated Nextflow params YAML (input/outdir + fasta|genome) for reproducible reruns",
+      "destructive": false,
+      "tools": [
+        "build_params"
+      ]
+    },
+    {
+      "id": "launch-script",
+      "summary": "generate the executor launch script (local/lsf/slurm/pbs/sge headers + nextflow run command)",
+      "destructive": false,
+      "tools": [
+        "build_launch_script"
+      ]
+    },
+    {
+      "id": "dry-run",
+      "summary": "validate inputs + dependencies and write all launch artifacts without executing (run_pacsomatic.py --dry-run)",
+      "destructive": false,
+      "tools": [
+        "dry_run"
+      ]
+    },
+    {
+      "id": "submit",
+      "summary": "execute locally or submit the generated launch script to the scheduler (run_pacsomatic.py --run)",
+      "destructive": true,
+      "tools": [
+        "submit"
+      ]
+    }
+  ]
+}

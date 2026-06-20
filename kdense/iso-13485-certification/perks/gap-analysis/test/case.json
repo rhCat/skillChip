@@ -1,0 +1,11 @@
+{
+  "_perk": "gap-analysis",
+  "requires": ["python3"],
+  "vars": { "DOCS_DIR": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["gap-report.json"],
+    "nonempty": ["gap-report.json"],
+    "content": { "gap-report.json": "compliance_percentage" }
+  }
+}

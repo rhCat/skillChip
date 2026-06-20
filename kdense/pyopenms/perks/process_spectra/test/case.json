@@ -1,0 +1,10 @@
+{
+  "_perk": "process_spectra",
+  "requires": ["python3", "bash"],
+  "vars": { "INPUT": "${FIXTURE}/sample.mzML", "OUT_NAME": "processed.mzML" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["processed.mzML"],
+    "nonempty": ["processed.mzML"]
+  }
+}

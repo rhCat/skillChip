@@ -1,0 +1,47 @@
+{
+  "tool": "arbor_init",
+  "inputs": {
+    "OBJECTIVE": {
+      "type": "string",
+      "required": true
+    },
+    "DEV_EVAL": {
+      "type": "string",
+      "required": true
+    },
+    "TEST_EVAL": {
+      "type": "string",
+      "required": true
+    },
+    "MATERIAL": {
+      "type": "string",
+      "required": false
+    },
+    "METRIC_DIRECTION": {
+      "type": "string",
+      "required": false
+    },
+    "BRANCHING": {
+      "type": "string",
+      "required": false
+    },
+    "MAX_DEPTH": {
+      "type": "string",
+      "required": false
+    },
+    "BUDGET": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "init_report": {
+      "path": "${RECORD_STORE}/init.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/init.txt"
+  }
+}

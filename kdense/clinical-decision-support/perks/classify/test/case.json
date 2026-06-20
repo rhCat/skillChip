@@ -1,0 +1,14 @@
+{
+  "_perk": "classify",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT_CSV": "${FIXTURE}/cohort.csv",
+    "BIOMARKER": "pd_l1_tps",
+    "THRESHOLD": "50"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["classified_data.csv"],
+    "nonempty": ["classified_data.csv"]
+  }
+}

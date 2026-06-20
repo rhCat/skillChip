@@ -1,0 +1,9 @@
+patient_id,pd_l1_tps,tmb,her2_ihc,response
+PT001,55.5,12.3,1+,Yes
+PT002,8.2,5.1,0,No
+PT003,72.0,18.4,3+,Yes
+PT004,0.5,2.1,0,No
+PT005,30.0,7.7,2+,Yes
+PT006,5.0,4.0,1+,No
+PT007,90.0,22.0,3+,Yes
+PT008,1.0,3.3,0,No

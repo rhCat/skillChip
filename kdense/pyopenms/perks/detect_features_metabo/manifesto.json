@@ -1,0 +1,28 @@
+{
+  "_perk": "detect_features_metabo",
+  "sequence": [
+    "detect_features_metabo"
+  ],
+  "tools": {
+    "detect_features_metabo": {
+      "binary": "bash",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "PPM": "${PPM}",
+    "NOISE": "${NOISE}",
+    "CHARGE_LOW": "${CHARGE_LOW}",
+    "CHARGE_HIGH": "${CHARGE_HIGH}",
+    "KEEP_SINGLETONS": "${KEEP_SINGLETONS}",
+    "ISO_MODEL": "${ISO_MODEL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

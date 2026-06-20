@@ -1,0 +1,31 @@
+{
+  "tool": "create_comment",
+  "inputs": {
+    "LA_CONFIG": {
+      "type": "string",
+      "required": true
+    },
+    "LA_NBID": {
+      "type": "string",
+      "required": true
+    },
+    "LA_ENTRY_ID": {
+      "type": "string",
+      "required": true
+    },
+    "LA_COMMENT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "create_comment_out": {
+      "path": "${RECORD_STORE}/create_comment.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/create_comment.json"
+  }
+}

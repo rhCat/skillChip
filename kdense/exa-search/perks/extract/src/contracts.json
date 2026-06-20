@@ -1,0 +1,27 @@
+{
+  "tool": "exa_extract",
+  "inputs": {
+    "URLS": {
+      "type": "string",
+      "required": true
+    },
+    "EXA_API_KEY": {
+      "type": "string",
+      "required": false
+    },
+    "HIGHLIGHTS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "exa_extract_out": {
+      "path": "${RECORD_STORE}/extract.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/extract.json"
+  }
+}

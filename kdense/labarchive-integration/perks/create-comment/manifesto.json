@@ -1,0 +1,27 @@
+{
+  "_perk": "create-comment",
+  "sequence": [
+    "create_comment"
+  ],
+  "tools": {
+    "create_comment": {
+      "binary": "python3",
+      "params": {
+        "LA_CONFIG": "${LA_CONFIG}",
+        "LA_NBID": "${LA_NBID}",
+        "LA_ENTRY_ID": "${LA_ENTRY_ID}",
+        "LA_COMMENT": "${LA_COMMENT}"
+      }
+    }
+  },
+  "env": {
+    "LA_CONFIG": "${LA_CONFIG}",
+    "LA_NBID": "${LA_NBID}",
+    "LA_ENTRY_ID": "${LA_ENTRY_ID}",
+    "LA_COMMENT": "${LA_COMMENT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

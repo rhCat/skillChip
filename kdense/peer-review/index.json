@@ -1,0 +1,22 @@
+{
+  "skill": "peer-review",
+  "skill_sha": "f17c0063afb47e97c76e4571a9a60135ad1afa3e9b1626b64d6666734abc96cb",
+  "file_count": 15,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "82f46580a14658416c4637b1560df614662c00ee2f2fc9cf36c3ecba3e15f140",
+    "blueprint.drawio": "69a1503b84cc6f1b54a290870b4cbcb455a4fd34cacf65b77a8f26cefab13051",
+    "blueprint.json": "134b498b5f5799fc500b34bfb4aa08c5db215d31003cdd3e8c1c22e8f119a7d7",
+    "blueprint.svg": "6c5f42c6be85f65c42dbe68e3410b8be8c9a75e6da5ba5d01e0329d947eb5951",
+    "ledger.json": "7fc524a5b78d787a238492f22f1d590f7668c86733696c306b00cf4ad5e76b0e",
+    "perks.json": "bf2cf0f1b294748adb71127b5bd8b4d15ea42caf9fe1dc395b34ce29234735fc",
+    "perks/schematic/manifesto.json": "6cb1a73d3ef4dd310674e614bd5fcad90616aa9393b92854942fee8467349ef7",
+    "perks/schematic/metadata.json": "e294a0051cfb51cf980ca38f8817696cea2d1bc43ab35d176056d01ab293ce88",
+    "perks/schematic/src/contracts.json": "5dc101bf8cfe9ddce4a0fec4bcebe6f5d94e32ad9861a45cc3187fa42479b8f5",
+    "perks/schematic/src/generate_schematic.py": "a426ae30ed9185f250245f35c868e6f8aae6096e94a4b8392283dc05f089c041",
+    "perks/schematic/src/generate_schematic.sh": "a8b48845ea1fac334828a29ac49e7d51d0e21056040fcb21b8d1a240c16a1bd7",
+    "perks/schematic/src/generate_schematic_ai.py": "0e1708bc163eab7e4440ae7d9d61ed1cd123bdc401499d46cb3df30f1b9f349c",
+    "perks/schematic/test/case.json": "4218b66373f1654dc9682d3de5343134adbe30f0ec579b7b54dbc0916fddb677",
+    "perks/schematic/test/fixture/prompt.txt": "24fc1d686292ad2575314968dee60a327933838caac177c9ce8326f19bf836bf"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "_perk": "screenshot",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT_FILE": "${FIXTURE}/sample.pdf",
+    "TARGET_PAGES": "1",
+    "DPI": "150"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["screenshots.json"],
+    "nonempty": ["screenshots.json"]
+  }
+}

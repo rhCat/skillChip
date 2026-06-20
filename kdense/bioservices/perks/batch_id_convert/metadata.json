@@ -1,0 +1,21 @@
+{
+  "perk": "batch_id_convert",
+  "skill": "bioservices",
+  "description": "Batch-convert biological identifiers between databases via the UniProt mapping service, with automatic chunking and per-ID retry. Writes a CSV mapping table.",
+  "rules": [
+    "read-only — queries the UniProt mapping API, writes local files only",
+    "input is a file of identifiers, one per line (blank lines and '#' comments skipped)",
+    "FROM_DB / TO_DB are UniProt database codes (e.g. UniProtKB_AC-ID, KEGG, GeneID, Ensembl, PDB)",
+    "results written to record_store as mapping_results.csv"
+  ],
+  "usage": "Set ID_FILE (one ID per line), FROM_DB (source code), TO_DB (target code). Output: mapping_results.csv.",
+  "limitation": "Needs the bioservices Python package and internet access to the UniProt mapping API. Offline / package-absent runs still produce mapping_results.csv (degraded, may be empty).",
+  "minimal_example": {
+    "perk": "batch_id_convert",
+    "vars": {
+      "ID_FILE": "ids.txt",
+      "FROM_DB": "UniProtKB_AC-ID",
+      "TO_DB": "KEGG"
+    }
+  }
+}

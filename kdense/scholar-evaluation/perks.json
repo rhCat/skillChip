@@ -1,0 +1,21 @@
+{
+  "skill": "scholar-evaluation",
+  "perks": [
+    {
+      "id": "score",
+      "summary": "compute weighted ScholarEval dimension scores + quality level into a report (read-only, stdlib)",
+      "destructive": false,
+      "tools": [
+        "calculate_scores"
+      ]
+    },
+    {
+      "id": "schematic",
+      "summary": "generate a publication-quality scientific schematic from a text prompt via an LLM image API, with smart iterative quality review",
+      "destructive": false,
+      "tools": [
+        "generate_schematic"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "perk": "review",
+  "skill": "latex-posters",
+  "description": "Read-only quality check of a poster PDF: reports page dimensions (with standard-size detection), page count, file size, font embedding, and image inventory using poppler utilities.",
+  "rules": [
+    "read-only: inspects the PDF, mutates nothing",
+    "uses pdfinfo / pdffonts / pdfimages when present; degrades to warnings if poppler is absent",
+    "writes a human-readable report to record_store/review.txt and always exits 0"
+  ],
+  "usage": "Set POSTER_PDF (path to the poster .pdf). Output: review.txt (the quality-check report).",
+  "limitation": "Full checks (page size, fonts, images) require poppler tools (pdfinfo/pdffonts/pdfimages); absent them, the report still prints the manual-inspection checklist. Does not open or repair the PDF.",
+  "minimal_example": {
+    "perk": "review",
+    "vars": {
+      "POSTER_PDF": "poster.pdf"
+    }
+  }
+}

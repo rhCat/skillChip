@@ -1,0 +1,26 @@
+{
+  "_perk": "source_list",
+  "sequence": [
+    "source_list"
+  ],
+  "tools": {
+    "source_list": {
+      "binary": "bash",
+      "params": {
+        "OPEN_NOTEBOOK_URL": "${OPEN_NOTEBOOK_URL}",
+        "NOTEBOOK_ID": "${NOTEBOOK_ID}",
+        "SOURCE_LIMIT": "${SOURCE_LIMIT}"
+      }
+    }
+  },
+  "env": {
+    "OPEN_NOTEBOOK_URL": "${OPEN_NOTEBOOK_URL}",
+    "NOTEBOOK_ID": "${NOTEBOOK_ID}",
+    "SOURCE_LIMIT": "${SOURCE_LIMIT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

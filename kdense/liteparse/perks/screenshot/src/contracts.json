@@ -1,0 +1,27 @@
+{
+  "tool": "lit_screenshot",
+  "inputs": {
+    "INPUT_FILE": {
+      "type": "string",
+      "required": true
+    },
+    "TARGET_PAGES": {
+      "type": "string",
+      "required": false
+    },
+    "DPI": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "screenshot_manifest": {
+      "path": "${RECORD_STORE}/screenshots.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/screenshots.json"
+  }
+}

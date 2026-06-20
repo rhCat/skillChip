@@ -1,0 +1,93 @@
+{
+  "skill": "arbor",
+  "perks": [
+    {
+      "id": "init",
+      "summary": "initialize a new Arbor AO run — create the hypothesis tree + run config under .arbor/",
+      "destructive": false,
+      "tools": [
+        "arbor_init"
+      ]
+    },
+    {
+      "id": "observe",
+      "summary": "render the Observe projection of current research state (read-only)",
+      "destructive": false,
+      "tools": [
+        "arbor_observe"
+      ]
+    },
+    {
+      "id": "add-node",
+      "summary": "add a pending child hypothesis node under a parent (Ideate)",
+      "destructive": false,
+      "tools": [
+        "arbor_add_node"
+      ]
+    },
+    {
+      "id": "set-status",
+      "summary": "set a node's lifecycle status manually (e.g. mark running before dispatch)",
+      "destructive": false,
+      "tools": [
+        "arbor_set_status"
+      ]
+    },
+    {
+      "id": "set-evidence",
+      "summary": "write an executor's report (dev_score/result/insight/branch_ref) into its node (Backpropagate, leaf)",
+      "destructive": false,
+      "tools": [
+        "arbor_set_evidence"
+      ]
+    },
+    {
+      "id": "propagate",
+      "summary": "abstract a leaf insight upward to ancestor nodes / root global insights (Backpropagate, upward)",
+      "destructive": false,
+      "tools": [
+        "arbor_propagate"
+      ]
+    },
+    {
+      "id": "prune",
+      "summary": "prune a falsified node and its subtree, recording the reason as a negative constraint (Decide)",
+      "destructive": false,
+      "tools": [
+        "arbor_prune"
+      ]
+    },
+    {
+      "id": "merge",
+      "summary": "record a held-out merge-gate decision against the test evaluator; promote M_best only if it improves (Decide)",
+      "destructive": false,
+      "tools": [
+        "arbor_merge"
+      ]
+    },
+    {
+      "id": "cycle",
+      "summary": "increment the coordinator cycle counter and report budget remaining",
+      "destructive": false,
+      "tools": [
+        "arbor_cycle"
+      ]
+    },
+    {
+      "id": "status",
+      "summary": "render the hypothesis tree as an ASCII audit trail (read-only)",
+      "destructive": false,
+      "tools": [
+        "arbor_status"
+      ]
+    },
+    {
+      "id": "validate",
+      "summary": "check hypothesis-tree invariants and report any inconsistencies (read-only)",
+      "destructive": false,
+      "tools": [
+        "arbor_validate"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "skill": "timesfm-forecasting",
+  "perks": [
+    {
+      "id": "check-system",
+      "summary": "preflight check of RAM/GPU/disk/Python/package install for a TimesFM model version (read-only, JSON report)",
+      "destructive": false,
+      "tools": [
+        "check_system"
+      ]
+    },
+    {
+      "id": "forecast-csv",
+      "summary": "forecast every numeric column of a CSV with TimesFM 2.5 — point forecast + quantile prediction intervals to JSON",
+      "destructive": false,
+      "tools": [
+        "forecast_csv"
+      ]
+    },
+    {
+      "id": "detect-anomalies",
+      "summary": "two-phase anomaly detection — linear-detrend Z-score on context + quantile prediction-interval bands on the TimesFM forecast",
+      "destructive": false,
+      "tools": [
+        "detect_anomalies"
+      ]
+    },
+    {
+      "id": "demo-covariates",
+      "summary": "generate synthetic 3-store retail data with exogenous covariates, decompose effects, and emit a CSV + metadata JSON for the XReg workflow",
+      "destructive": false,
+      "tools": [
+        "demo_covariates"
+      ]
+    }
+  ]
+}

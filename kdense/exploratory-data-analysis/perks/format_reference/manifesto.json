@@ -1,0 +1,21 @@
+{
+  "_perk": "format_reference",
+  "sequence": [
+    "eda_format_reference"
+  ],
+  "tools": {
+    "eda_format_reference": {
+      "binary": "python3",
+      "params": {
+        "DATA_FILE": "${DATA_FILE}"
+      }
+    }
+  },
+  "env": {
+    "DATA_FILE": "${DATA_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

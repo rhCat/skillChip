@@ -1,0 +1,11 @@
+patient_id,time,event,group
+PT001,12.3,1,PD-L1-high
+PT002,8.5,1,PD-L1-low
+PT003,18.2,0,PD-L1-high
+PT004,6.1,1,PD-L1-low
+PT005,24.0,0,PD-L1-high
+PT006,4.2,1,PD-L1-low
+PT007,15.7,1,PD-L1-high
+PT008,9.0,1,PD-L1-low
+PT009,21.5,0,PD-L1-high
+PT010,5.5,1,PD-L1-low

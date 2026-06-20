@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for primekg — set perk, fill record_store + the vars the perk declares.",
+  "skill": "primekg",
+  "perk": "search_nodes",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PRIMEKG_CSV": "<absolute path to PrimeKG kg.csv>",
+    "NAME_QUERY": "<substring to search node names for, e.g. Alzheimer>",
+    "NODE_TYPE": "<optional node type filter, e.g. disease | drug | gene/protein>"
+  }
+}

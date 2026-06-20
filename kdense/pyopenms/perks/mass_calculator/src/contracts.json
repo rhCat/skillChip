@@ -1,0 +1,35 @@
+{
+  "tool": "mass_calculator",
+  "inputs": {
+    "PEPTIDE": {
+      "type": "string",
+      "required": false
+    },
+    "FORMULA": {
+      "type": "string",
+      "required": false
+    },
+    "CHARGES": {
+      "type": "string",
+      "required": false
+    },
+    "ISOTOPES": {
+      "type": "string",
+      "required": false
+    },
+    "NEGATIVE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "report": {
+      "path": "${RECORD_STORE}/mass_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/mass_report.txt"
+  }
+}

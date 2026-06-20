@@ -1,0 +1,22 @@
+{
+  "perk": "loo_reliability",
+  "skill": "pymc",
+  "description": "Check LOO-CV reliability via Pareto-k diagnostics across saved PyMC/ArviZ InferenceData .nc files — counts points above the threshold and reports the maximum k per model.",
+  "rules": [
+    "read-only — never mutates inputs or any remote/live service",
+    "each input is a netCDF InferenceData file written with a log_likelihood group",
+    "MODELS_DIR globs *.nc (model name = filename stem); MODELS overrides with a comma list of name=path or path",
+    "THRESHOLD sets the Pareto-k flag cutoff (default 0.7)",
+    "requires arviz (+ pymc) importable for real output; absent libs produce a graceful {} stub",
+    "per-model Pareto-k summary written to record_store as loo_reliability.json"
+  ],
+  "usage": "Set MODELS_DIR (a dir of .nc files) or MODELS (comma list of name=path.nc). Optional THRESHOLD (default 0.7). Output: loo_reliability.json.",
+  "limitation": "Read-only diagnostic. Models must have been fit with log_likelihood. Needs arviz/pymc + the netCDF backend; offline it writes an empty JSON stub. High Pareto-k means prefer WAIC or k-fold CV.",
+  "minimal_example": {
+    "perk": "loo_reliability",
+    "vars": {
+      "MODELS_DIR": "models/",
+      "THRESHOLD": "0.7"
+    }
+  }
+}

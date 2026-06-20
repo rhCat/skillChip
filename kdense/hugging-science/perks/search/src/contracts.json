@@ -1,0 +1,31 @@
+{
+  "tool": "hs_search",
+  "inputs": {
+    "QUERY": {
+      "type": "string",
+      "required": true
+    },
+    "FILTER": {
+      "type": "string",
+      "required": false
+    },
+    "TAG": {
+      "type": "string",
+      "required": false
+    },
+    "FORMAT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "search_out": {
+      "path": "${RECORD_STORE}/search.out",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/search.out"
+  }
+}

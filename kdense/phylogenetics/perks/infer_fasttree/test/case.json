@@ -1,0 +1,13 @@
+{
+  "_perk": "infer_fasttree",
+  "requires": ["python3"],
+  "vars": {
+    "ALIGNED_FASTA": "${FIXTURE}/aligned.fasta",
+    "SEQ_TYPE": "nt"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["phylo.tree"],
+    "nonempty": ["phylo.tree"]
+  }
+}

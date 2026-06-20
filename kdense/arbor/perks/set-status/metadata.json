@@ -1,0 +1,19 @@
+{
+  "perk": "set-status",
+  "skill": "arbor",
+  "description": "set a node's lifecycle status manually (e.g. mark `running` before dispatch)",
+  "rules": [
+    "updates the node's status in record_store/run/.arbor/tree.json",
+    "status must be one of: pending, running, executed, merged, pruned, root",
+    "marking a node running before dispatch keeps the Observe projection accurate"
+  ],
+  "usage": "Set NODE (the node id) and STATUS (one of the valid statuses). Output: set_status.txt. If no run exists in the store, a bootstrap run with a root + one child node (n1) is created first.",
+  "limitation": "Mechanical status flip only — it does not validate workflow ordering or run any evaluation. NODE must reference an existing node id.",
+  "minimal_example": {
+    "perk": "set-status",
+    "vars": {
+      "NODE": "n1",
+      "STATUS": "running"
+    }
+  }
+}

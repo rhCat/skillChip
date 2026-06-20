@@ -1,0 +1,21 @@
+{
+  "skill": "scientific-writing",
+  "perks": [
+    {
+      "id": "generate_schematic",
+      "summary": "generate a publication-quality scientific schematic/diagram from a text prompt with AI quality-review iteration (OpenRouter)",
+      "destructive": false,
+      "tools": [
+        "generate_schematic"
+      ]
+    },
+    {
+      "id": "generate_image",
+      "summary": "generate or edit an illustrative image from a text prompt (optionally an input image) via an OpenRouter image model",
+      "destructive": false,
+      "tools": [
+        "generate_image"
+      ]
+    }
+  ]
+}

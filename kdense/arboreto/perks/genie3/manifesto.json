@@ -1,0 +1,28 @@
+{
+  "_perk": "genie3",
+  "sequence": [
+    "genie3"
+  ],
+  "tools": {
+    "genie3": {
+      "binary": "python3",
+      "params": {
+        "EXPRESSION_FILE": "${EXPRESSION_FILE}",
+        "TF_FILE": "${TF_FILE}",
+        "SEED": "${SEED}",
+        "LIMIT": "${LIMIT}"
+      }
+    }
+  },
+  "env": {
+    "EXPRESSION_FILE": "${EXPRESSION_FILE}",
+    "TF_FILE": "${TF_FILE}",
+    "SEED": "${SEED}",
+    "LIMIT": "${LIMIT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

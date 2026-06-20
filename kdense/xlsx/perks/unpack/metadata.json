@@ -1,0 +1,19 @@
+{
+  "perk": "unpack",
+  "skill": "xlsx",
+  "description": "Unpack an Office workbook (.xlsx/.docx/.pptx) ZIP archive into a pretty-printed XML directory tree for editing.",
+  "rules": [
+    "read-only on the source — extracts the ZIP into a fresh directory, never modifies OFFICE_FILE",
+    "pretty-prints every .xml/.rels file (indented) and escapes smart quotes",
+    "DOCX-only extras: merges adjacent runs with identical formatting and simplifies adjacent tracked changes (no-op for .xlsx)",
+    "unpacked tree written under record_store/unpacked/; a JSON summary is written to unpack.json"
+  ],
+  "usage": "Set OFFICE_FILE (path to the .xlsx/.docx/.pptx). Output: unpack.json (summary) + record_store/unpacked/ (the XML tree).",
+  "limitation": "Requires defusedxml (and, for DOCX run-merging, lxml). Without defusedxml the perk still emits valid JSON but cannot pretty-print. Only .xlsx/.docx/.pptx inputs are accepted.",
+  "minimal_example": {
+    "perk": "unpack",
+    "vars": {
+      "OFFICE_FILE": "model.xlsx"
+    }
+  }
+}

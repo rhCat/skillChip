@@ -1,0 +1,25 @@
+{
+  "_perk": "anonymize",
+  "sequence": [
+    "anonymize_dicom"
+  ],
+  "tools": {
+    "anonymize_dicom": {
+      "binary": "python3",
+      "params": {
+        "DICOM_IN": "${DICOM_IN}",
+        "PATIENT_ID": "${PATIENT_ID}",
+        "PATIENT_NAME": "${PATIENT_NAME}"
+      }
+    }
+  },
+  "env": {
+    "DICOM_IN": "${DICOM_IN}",
+    "PATIENT_ID": "${PATIENT_ID}",
+    "PATIENT_NAME": "${PATIENT_NAME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

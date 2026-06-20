@@ -1,0 +1,10 @@
+{
+  "_perk": "extract-fields",
+  "requires": ["python3"],
+  "vars": { "PDF_PATH": "${FIXTURE}/mini.pdf" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["form_fields.json"],
+    "nonempty": ["form_fields.json"]
+  }
+}

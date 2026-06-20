@@ -1,0 +1,31 @@
+{
+  "tool": "plot_embedding",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "KIND": {
+      "type": "string",
+      "required": false
+    },
+    "BASIS": {
+      "type": "string",
+      "required": false
+    },
+    "COLOR": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "velocity_embedding_png": {
+      "path": "${RECORD_STORE}/velocity_embedding.png",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/velocity_embedding.png"
+  }
+}

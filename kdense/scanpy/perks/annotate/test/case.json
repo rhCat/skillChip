@@ -1,0 +1,13 @@
+{
+  "_perk": "annotate",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.csv",
+    "MAPPING": "${FIXTURE}/celltypes.json"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["annotated.h5ad"],
+    "nonempty": ["annotated.h5ad"]
+  }
+}

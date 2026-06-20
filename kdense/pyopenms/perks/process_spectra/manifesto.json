@@ -1,0 +1,32 @@
+{
+  "_perk": "process_spectra",
+  "sequence": [
+    "process_spectra"
+  ],
+  "tools": {
+    "process_spectra": {
+      "binary": "bash",
+      "params": {
+        "INPUT": "${INPUT}",
+        "OUT_NAME": "${OUT_NAME}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "OUT_NAME": "${OUT_NAME}",
+    "MS_LEVEL": "${MS_LEVEL}",
+    "SMOOTH": "${SMOOTH}",
+    "GAUSSIAN_WIDTH": "${GAUSSIAN_WIDTH}",
+    "PICK": "${PICK}",
+    "SIGNAL_TO_NOISE": "${SIGNAL_TO_NOISE}",
+    "NORMALIZE": "${NORMALIZE}",
+    "THRESHOLD": "${THRESHOLD}",
+    "SN": "${SN}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

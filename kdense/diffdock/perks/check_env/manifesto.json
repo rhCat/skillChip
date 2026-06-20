@@ -1,0 +1,21 @@
+{
+  "_perk": "check_env",
+  "sequence": [
+    "check_env"
+  ],
+  "tools": {
+    "check_env": {
+      "binary": "python3",
+      "params": {
+        "VERBOSE": "${VERBOSE}"
+      }
+    }
+  },
+  "env": {
+    "VERBOSE": "${VERBOSE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

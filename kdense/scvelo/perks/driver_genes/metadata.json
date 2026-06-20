@@ -1,0 +1,19 @@
+{
+  "perk": "driver_genes",
+  "skill": "scvelo",
+  "description": "Rank velocity driver genes per cluster group via scv.tl.rank_velocity_genes(groupby, min_corr) — for each group, the genes whose velocity dynamics best explain its transitions — and export the per-group name table to CSV.",
+  "rules": [
+    "read-only input — writes a new driver_genes.csv under record_store",
+    "requires a velocity graph and the GROUPBY column in adata.obs (e.g. clusters/leiden)",
+    "min_corr filters genes by velocity correlation (default 0.3)"
+  ],
+  "usage": "Set INPUT (velocity .h5ad). Optional: GROUPBY (default clusters), MIN_CORR (default 0.3). Output: driver_genes.csv.",
+  "limitation": "Requires scvelo installed and the GROUPBY column present; without scvelo the porter writes a {} placeholder driver_genes.csv and still passes.",
+  "minimal_example": {
+    "perk": "driver_genes",
+    "vars": {
+      "INPUT": "velocity.h5ad",
+      "GROUPBY": "clusters"
+    }
+  }
+}

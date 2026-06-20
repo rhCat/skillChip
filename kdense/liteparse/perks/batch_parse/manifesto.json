@@ -1,0 +1,27 @@
+{
+  "_perk": "batch_parse",
+  "sequence": [
+    "batch_parse_dir"
+  ],
+  "tools": {
+    "batch_parse_dir": {
+      "binary": "python3",
+      "params": {
+        "INPUT_DIR": "${INPUT_DIR}",
+        "FORMAT": "${FORMAT}",
+        "EXTENSION": "${EXTENSION}",
+        "RECURSIVE": "${RECURSIVE}"
+      }
+    }
+  },
+  "env": {
+    "INPUT_DIR": "${INPUT_DIR}",
+    "FORMAT": "${FORMAT}",
+    "EXTENSION": "${EXTENSION}",
+    "RECURSIVE": "${RECURSIVE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

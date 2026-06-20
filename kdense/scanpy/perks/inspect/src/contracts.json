@@ -1,0 +1,19 @@
+{
+  "tool": "inspect_data",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "inspect_out": {
+      "path": "${RECORD_STORE}/inspect.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/inspect.txt"
+  }
+}

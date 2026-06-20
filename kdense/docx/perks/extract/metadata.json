@@ -1,0 +1,18 @@
+{
+  "perk": "extract",
+  "skill": "docx",
+  "description": "Extract text/markdown from a .docx via pandoc, preserving tracked changes (read-only).",
+  "rules": [
+    "read-only: never mutates the source .docx",
+    "runs pandoc --track-changes=all so insertions/deletions stay visible",
+    "writes extracted.md under record_store"
+  ],
+  "usage": "Set DOCX_FILE (path to the .docx). Output: extracted.md.",
+  "limitation": "Requires pandoc on PATH. If pandoc is absent the porter records that and exits 0 with an empty extraction.",
+  "minimal_example": {
+    "perk": "extract",
+    "vars": {
+      "DOCX_FILE": "report.docx"
+    }
+  }
+}

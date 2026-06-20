@@ -1,0 +1,22 @@
+{
+  "perk": "batch_parse",
+  "skill": "liteparse",
+  "description": "Parse every supported file in a directory to text or JSON using the vendored batch_parse_dir.py wrapper (local, no network).",
+  "rules": [
+    "read-only on inputs — parsed artifacts are written under record_store/parsed",
+    "FORMAT is 'text' or 'json'; output basenames mirror input basenames",
+    "EXTENSION filters to one type (e.g. '.pdf'); empty processes all supported types",
+    "RECURSIVE='1' recurses into subdirectories; a run summary is written under record_store"
+  ],
+  "usage": "Set INPUT_DIR, optional FORMAT (text|json), optional EXTENSION (e.g. .pdf), optional RECURSIVE (1). Output: batch.json summary + parsed/ artifacts.",
+  "limitation": "Requires the liteparse package at runtime (the vendored script imports it); when absent the porter writes a graceful summary so the contract still holds. Office/image inputs need LibreOffice/ImageMagick.",
+  "minimal_example": {
+    "perk": "batch_parse",
+    "vars": {
+      "INPUT_DIR": "./papers",
+      "FORMAT": "json",
+      "EXTENSION": ".pdf",
+      "RECURSIVE": "1"
+    }
+  }
+}

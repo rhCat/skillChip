@@ -1,0 +1,25 @@
+{
+  "_perk": "normality",
+  "sequence": [
+    "check_normality"
+  ],
+  "tools": {
+    "check_normality": {
+      "binary": "python3",
+      "params": {
+        "DATA_CSV": "${DATA_CSV}",
+        "VALUE_COL": "${VALUE_COL}",
+        "ALPHA": "${ALPHA}"
+      }
+    }
+  },
+  "env": {
+    "DATA_CSV": "${DATA_CSV}",
+    "VALUE_COL": "${VALUE_COL}",
+    "ALPHA": "${ALPHA}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

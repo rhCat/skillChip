@@ -1,0 +1,20 @@
+{
+  "perk": "propagate",
+  "skill": "arbor",
+  "description": "abstract a leaf insight upward to ancestor nodes / root global insights (Backpropagate, upward)",
+  "rules": [
+    "appends the abstracted lesson to the immediate parent's insight by default",
+    "TO_ROOT=1 also records it as a global insight on the root (n0)",
+    "insight propagation is the component that drives most of HTR's gains — abstract, don't copy verbatim"
+  ],
+  "usage": "Set NODE (the leaf the lesson came from) and INSIGHT (the direction-level abstraction); set TO_ROOT=1 to also update root global insights. Output: propagate.txt. If no run exists, a bootstrap run with a root + one child node (n1) is created first.",
+  "limitation": "Appends the wording you supply — the abstraction quality is the coordinator's judgment, not the script's. NODE must have at least one ancestor (i.e. not be the root).",
+  "minimal_example": {
+    "perk": "propagate",
+    "vars": {
+      "NODE": "n1",
+      "INSIGHT": "Candidate coverage, not verification, limits this direction",
+      "TO_ROOT": "1"
+    }
+  }
+}

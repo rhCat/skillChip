@@ -1,0 +1,23 @@
+{
+  "tool": "mc_query",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "QUERY": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "mc_query_out": {
+      "path": "${RECORD_STORE}/query.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/query.csv"
+  }
+}

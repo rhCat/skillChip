@@ -1,0 +1,18 @@
+{
+  "perk": "detect_features_metabo",
+  "skill": "pyopenms",
+  "description": "Untargeted metabolomics feature detection on centroided LC-MS data: MassTraceDetection -> ElutionPeakDetection -> FeatureFindingMetabo. Writes a featureXML and a CSV table of detected features.",
+  "rules": [
+    "writes features.featureXML and features.csv under record_store",
+    "tunable via PPM, NOISE, CHARGE_LOW, CHARGE_HIGH, ISO_MODEL",
+    "KEEP_SINGLETONS=1 keeps single-trace features (default removes them)"
+  ],
+  "usage": "Set INPUT (centroided mzML). Optional PPM/NOISE/CHARGE_LOW/CHARGE_HIGH/KEEP_SINGLETONS/ISO_MODEL. Output: features.featureXML (+ features.csv).",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) to produce real content; if absent the porter still creates features.featureXML and records the reason.",
+  "minimal_example": {
+    "perk": "detect_features_metabo",
+    "vars": {
+      "INPUT": "sample.mzML"
+    }
+  }
+}

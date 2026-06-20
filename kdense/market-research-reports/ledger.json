@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for market-research-reports — set perk, fill record_store + the vars the perk declares.",
+  "skill": "market-research-reports",
+  "perk": "visuals",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "TOPIC": "<market topic, e.g. 'Electric Vehicle Charging Infrastructure'>",
+    "ALL": "<optional: '1' to plan the full extended visual set, else empty for core>"
+  }
+}

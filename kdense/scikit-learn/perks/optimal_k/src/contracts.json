@@ -1,0 +1,27 @@
+{
+  "tool": "optimal_k",
+  "inputs": {
+    "DATA_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "K_MIN": {
+      "type": "string",
+      "required": false
+    },
+    "K_MAX": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "optimal_k_out": {
+      "path": "${RECORD_STORE}/optimal_k.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/optimal_k.json"
+  }
+}

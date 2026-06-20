@@ -1,0 +1,26 @@
+{
+  "_perk": "merge",
+  "sequence": [
+    "arbor_merge"
+  ],
+  "tools": {
+    "arbor_merge": {
+      "binary": "python3",
+      "params": {
+        "NODE": "${NODE}",
+        "TEST_SCORE": "${TEST_SCORE}",
+        "BRANCH_REF": "${BRANCH_REF}"
+      }
+    }
+  },
+  "env": {
+    "NODE": "${NODE}",
+    "TEST_SCORE": "${TEST_SCORE}",
+    "BRANCH_REF": "${BRANCH_REF}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "skill": "scientific-slides",
+  "perks": [
+    {
+      "id": "slides_to_pdf",
+      "summary": "combine ordered slide images (PNG/JPG/...) into a single PDF deck (local, Pillow)",
+      "destructive": false,
+      "tools": [
+        "slides_to_pdf"
+      ]
+    },
+    {
+      "id": "pdf_to_images",
+      "summary": "rasterize a presentation PDF into per-slide images for visual review (local, PyMuPDF)",
+      "destructive": false,
+      "tools": [
+        "pdf_to_images"
+      ]
+    },
+    {
+      "id": "validate_presentation",
+      "summary": "validate a PDF/PPTX/TEX deck for slide count vs duration, dimensions, font sizes (local)",
+      "destructive": false,
+      "tools": [
+        "validate_presentation"
+      ]
+    },
+    {
+      "id": "generate_slide_image",
+      "summary": "generate a full slide or visual image from a natural-language prompt via Nano Banana Pro (OpenRouter API)",
+      "destructive": false,
+      "tools": [
+        "generate_slide_image"
+      ]
+    },
+    {
+      "id": "generate_schematic",
+      "summary": "generate a scientific schematic/diagram from a natural-language prompt via Nano Banana 2 (OpenRouter API)",
+      "destructive": false,
+      "tools": [
+        "generate_schematic"
+      ]
+    }
+  ]
+}

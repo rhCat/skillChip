@@ -1,0 +1,23 @@
+{
+  "tool": "mc_groups",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "GROUPS": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "mc_groups_out": {
+      "path": "${RECORD_STORE}/groups.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/groups.csv"
+  }
+}

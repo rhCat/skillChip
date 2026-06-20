@@ -1,0 +1,19 @@
+{
+  "tool": "check_system",
+  "inputs": {
+    "MODEL_VERSION": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "system_check_out": {
+      "path": "${RECORD_STORE}/system_check.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/system_check.json"
+  }
+}

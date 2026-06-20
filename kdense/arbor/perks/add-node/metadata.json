@@ -1,0 +1,19 @@
+{
+  "perk": "add-node",
+  "skill": "arbor",
+  "description": "add a pending child hypothesis node under a parent (the Ideate step)",
+  "rules": [
+    "appends a pending node to record_store/run/.arbor/tree.json",
+    "depth-1 nodes are broad directions; depth-2+ are concrete executable interventions",
+    "warns (non-fatally) if depth exceeds the run's max_depth"
+  ],
+  "usage": "Set PARENT (e.g. n0 for a new direction) and HYPOTHESIS (a falsifiable claim). Output: add_node.txt. If no run exists in the store, an empty bootstrap run with root n0 is created first.",
+  "limitation": "Records a hypothesis only — it does not test it, score it, or dispatch an executor. PARENT must reference an existing node id.",
+  "minimal_example": {
+    "perk": "add-node",
+    "vars": {
+      "PARENT": "n0",
+      "HYPOTHESIS": "Verification, not retrieval, is the bottleneck"
+    }
+  }
+}

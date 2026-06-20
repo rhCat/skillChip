@@ -1,0 +1,27 @@
+{
+  "tool": "ete_prune",
+  "inputs": {
+    "TREE_FILE": {
+      "type": "string",
+      "required": true
+    },
+    "KEEP_TAXA": {
+      "type": "string",
+      "required": true
+    },
+    "TREE_FORMAT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "ete_prune_out": {
+      "path": "${RECORD_STORE}/prune.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/prune.log"
+  }
+}

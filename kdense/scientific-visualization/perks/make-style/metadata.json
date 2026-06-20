@@ -1,0 +1,17 @@
+{
+  "perk": "make-style",
+  "skill": "scientific-visualization",
+  "description": "Write a publication-quality matplotlib .mplstyle template (fonts, hidden top/right spines, tick sizing, Okabe-Ito color cycle, savefig DPI) via create_style_template().",
+  "rules": [
+    "read-only with respect to inputs; only writes under record_store",
+    "takes no input vars — the preset content is fixed (the base publication style)",
+    "the emitted file is usable directly with plt.style.use()",
+    "degrades gracefully (writes a non-empty manifest, exits 0) when matplotlib is absent"
+  ],
+  "usage": "No vars required. Output: publication.mplstyle (the style file) plus style_template.json manifest.",
+  "limitation": "Emits only the single base publication preset; journal-specific overrides are applied at runtime via configure_for_journal, not baked into the file.",
+  "minimal_example": {
+    "perk": "make-style",
+    "vars": {}
+  }
+}

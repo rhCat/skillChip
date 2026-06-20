@@ -1,0 +1,13 @@
+{
+  "_perk": "batch_correct",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.csv",
+    "BATCH_KEY": "sample"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["integrated.h5ad"],
+    "nonempty": ["integrated.h5ad"]
+  }
+}

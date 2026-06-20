@@ -1,0 +1,12 @@
+{
+  "title": "NSCLC Biomarker-Directed First-Line Therapy",
+  "nodes": {
+    "start": {"type": "start", "text": "Advanced NSCLC"},
+    "q1": {"type": "decision", "text": "EGFR mutation?", "yes": "egfr", "no": "q2"},
+    "egfr": {"type": "action", "text": "Osimertinib", "urgency": "routine"},
+    "q2": {"type": "decision", "text": "PD-L1 >= 50%?", "yes": "pembro", "no": "chemoio"},
+    "pembro": {"type": "action", "text": "Pembrolizumab"},
+    "chemoio": {"type": "action", "text": "Chemo + IO"}
+  },
+  "start_node": "start"
+}

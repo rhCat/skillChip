@@ -1,0 +1,20 @@
+{
+  "perk": "subset",
+  "skill": "scanpy",
+  "description": "Subset an AnnData object by cell metadata (keep or drop obs-column values) or by a gene list, useful for isolating a cell type / condition for focused re-analysis. Optionally clears stale PCA/UMAP/neighbors so downstream steps recompute cleanly.",
+  "rules": [
+    "read-only input — writes a new subset.h5ad under record_store",
+    "filter cells by OBS column: provide KEEP or DROP (space-separated values)",
+    "GENES restricts to the listed genes (space-separated); genes absent from the data error out",
+    "RECOMPUTE_HVG drops X_pca/X_umap/X_tsne/neighbors after subsetting"
+  ],
+  "usage": "Set INPUT. Provide OBS + (KEEP|DROP), and/or GENES. Optional: RECOMPUTE_HVG=1. Output: subset.h5ad.",
+  "limitation": "Requires scanpy installed; without it the porter writes a {} placeholder subset.h5ad and still passes. Multi-word obs values must be space-separated tokens.",
+  "minimal_example": {
+    "perk": "subset",
+    "vars": {
+      "INPUT": "annotated.h5ad",
+      "GENES": "CD3D CD14 MS4A1"
+    }
+  }
+}

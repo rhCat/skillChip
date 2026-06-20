@@ -1,0 +1,21 @@
+{
+  "perk": "screenshot",
+  "skill": "liteparse",
+  "description": "Render document pages to PNG files for multimodal agents that must see figures, tables, or handwriting (lit screenshot).",
+  "rules": [
+    "read-only — never mutates the input file",
+    "TARGET_PAGES selects pages (e.g. '1,3,5' or '1-5'); empty renders all",
+    "DPI controls render resolution (default 150; higher is sharper, slower)",
+    "PNGs written under record_store/screenshots; an index manifest is written under record_store"
+  ],
+  "usage": "Set INPUT_FILE, optional TARGET_PAGES (e.g. '1,3,5'), optional DPI. Output: screenshots.json manifest + PNGs under screenshots/.",
+  "limitation": "Requires the liteparse package at runtime; when absent the porter writes a graceful placeholder manifest so the contract still holds. Non-PDF inputs need LibreOffice/ImageMagick.",
+  "minimal_example": {
+    "perk": "screenshot",
+    "vars": {
+      "INPUT_FILE": "paper.pdf",
+      "TARGET_PAGES": "1,3,5",
+      "DPI": "150"
+    }
+  }
+}

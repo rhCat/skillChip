@@ -1,0 +1,23 @@
+{
+  "_perk": "plots",
+  "sequence": [
+    "render_plots"
+  ],
+  "tools": {
+    "render_plots": {
+      "binary": "python3",
+      "params": {
+        "RESULTS": "${RESULTS}",
+        "ALPHA": "${ALPHA}"
+      }
+    }
+  },
+  "env": {
+    "RESULTS": "${RESULTS}",
+    "ALPHA": "${ALPHA}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

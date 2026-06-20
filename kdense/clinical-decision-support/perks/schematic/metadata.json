@@ -1,0 +1,20 @@
+{
+  "perk": "schematic",
+  "skill": "clinical-decision-support",
+  "description": "Generate a publication-quality scientific schematic (clinical decision algorithm, treatment pathway, biomarker stratification tree, CONSORT flow) from a natural-language prompt via OpenRouter / Nano-Banana, with document-type-aware quality thresholds.",
+  "rules": [
+    "writes only a local PNG under record_store — but calls the OpenRouter API (network)",
+    "requires OPENROUTER_API_KEY; absent the key or network the porter records the gap and writes an empty placeholder",
+    "DOC_TYPE selects the quality threshold (journal/conference/poster/presentation/report/grant/thesis/preprint/default)",
+    "output is schematic.png"
+  ],
+  "usage": "Set PROMPT (diagram description), optionally DOC_TYPE, and OPENROUTER_API_KEY. Output: schematic.png.",
+  "limitation": "Not hermetic — needs OPENROUTER_API_KEY and outbound network to openrouter.ai. Capped at 2 refinement iterations by the core.",
+  "minimal_example": {
+    "perk": "schematic",
+    "vars": {
+      "PROMPT": "CONSORT participant flow for a 60-patient HER2+ cohort",
+      "DOC_TYPE": "journal"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_perk": "run_pipeline",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.csv"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["processed.h5ad"],
+    "nonempty": ["processed.h5ad"]
+  }
+}

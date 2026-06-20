@@ -1,0 +1,21 @@
+{
+  "_perk": "list-notebooks",
+  "sequence": [
+    "list_notebooks"
+  ],
+  "tools": {
+    "list_notebooks": {
+      "binary": "python3",
+      "params": {
+        "LA_CONFIG": "${LA_CONFIG}"
+      }
+    }
+  },
+  "env": {
+    "LA_CONFIG": "${LA_CONFIG}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

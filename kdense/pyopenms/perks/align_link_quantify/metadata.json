@@ -1,0 +1,19 @@
+{
+  "perk": "align_link_quantify",
+  "skill": "pyopenms",
+  "description": "End-to-end untargeted quantification across multiple LC-MS samples: detect features (or load featureXML) -> RT alignment (MapAlignmentAlgorithmPoseClustering) -> consensus linking (FeatureGroupingAlgorithmQT) -> consensusXML + a wide quantification matrix CSV.",
+  "rules": [
+    "INPUTS is a space-separated list of 2+ mzML and/or featureXML files",
+    "writes study.consensusXML and study_quant_matrix.csv under record_store",
+    "vendors detect_features_metabo.py for the mzML detection path",
+    "tunable via RT_TOL, MZ_TOL, MZ_UNIT, PPM, NOISE"
+  ],
+  "usage": "Set INPUTS (space-separated mzML/featureXML, 2+). Optional RT_TOL/MZ_TOL/MZ_UNIT/PPM/NOISE. Output: study.consensusXML (+ study_quant_matrix.csv).",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) to produce real content; if absent the porter still creates study.consensusXML and records the reason.",
+  "minimal_example": {
+    "perk": "align_link_quantify",
+    "vars": {
+      "INPUTS": "s1.mzML s2.mzML s3.mzML"
+    }
+  }
+}

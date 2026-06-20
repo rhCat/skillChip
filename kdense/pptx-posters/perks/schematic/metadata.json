@@ -1,0 +1,22 @@
+{
+  "perk": "schematic",
+  "skill": "pptx-posters",
+  "description": "Generate an AI scientific schematic / poster figure from a natural-language prompt using OpenRouter (Nano Banana 2 image generation + Gemini iterative quality review).",
+  "rules": [
+    "local-write — produces an image + review log under record_store; mutates no remote/live service",
+    "calls OpenRouter over the network; requires OPENROUTER_API_KEY and the python3 'requests' library",
+    "DOC_TYPE sets the quality threshold (poster 7.0/10, journal 8.5/10, ...); ITERATIONS capped at 2",
+    "porter degrades gracefully: absent key / network / requests it writes an empty artifact and exits 0"
+  ],
+  "usage": "Set PROMPT (diagram description) and OUTPUT_NAME (image filename, e.g. hero.png). Optional DOC_TYPE (default 'default'), ITERATIONS (default 2). Provide OPENROUTER_API_KEY. Output: <OUTPUT_NAME> + <stem>_review_log.json under record_store.",
+  "limitation": "Non-hermetic: needs OPENROUTER_API_KEY + network + the requests library to actually generate an image. Offline it produces an empty placeholder artifact. ITERATIONS is hard-capped at 2 by the core.",
+  "minimal_example": {
+    "perk": "schematic",
+    "vars": {
+      "PROMPT": "POSTER FORMAT for A0. SIMPLE 3-box workflow: DISCOVER then VALIDATE then APPROVE. Giant bold labels. 60% white space.",
+      "OUTPUT_NAME": "workflow.png",
+      "DOC_TYPE": "poster",
+      "ITERATIONS": "2"
+    }
+  }
+}

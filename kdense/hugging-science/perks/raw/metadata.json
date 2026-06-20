@@ -1,0 +1,19 @@
+{
+  "perk": "raw",
+  "skill": "hugging-science",
+  "description": "Dump a raw Hugging Science index file (llms.txt or llms-full.txt) untouched — the source of truth when slugs drift or you want to grep yourself.",
+  "rules": [
+    "read-only — HTTPS GET against huggingscience.co, no mutation",
+    "NAME required: 'llms' (compact llms.txt) or 'full' (llms-full.txt)",
+    "no parsing — the file is printed verbatim",
+    "output written to record_store/raw.txt"
+  ],
+  "usage": "Set NAME ('llms' or 'full'). Output: raw.txt.",
+  "limitation": "Needs network to reach huggingscience.co; offline the porter records the failure and emits a non-empty file. NAME other than llms/full exits non-zero inside the core (porter still produces the file).",
+  "minimal_example": {
+    "perk": "raw",
+    "vars": {
+      "NAME": "llms"
+    }
+  }
+}

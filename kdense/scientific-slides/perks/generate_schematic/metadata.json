@@ -1,0 +1,19 @@
+{
+  "perk": "generate_schematic",
+  "skill": "scientific-slides",
+  "description": "Generate a scientific schematic/diagram (flowchart, architecture, pathway, etc.) from a natural-language prompt, using Nano Banana 2 via the OpenRouter API with document-type-aware quality gating and smart iteration.",
+  "rules": [
+    "calls the OpenRouter API — requires OPENROUTER_API_KEY in env",
+    "produces one image (schematic.png) under record_store",
+    "DOC_TYPE sets the quality threshold (journal|conference|poster|presentation|report|grant|thesis|preprint|default)"
+  ],
+  "usage": "Set PROMPT (diagram description); optionally DOC_TYPE (default: default). Requires OPENROUTER_API_KEY. Output: schematic.png.",
+  "limitation": "Network + paid API. Offline or without OPENROUTER_API_KEY the porter writes a stub report instead of a real image. Capped at 2 refinement iterations.",
+  "minimal_example": {
+    "perk": "generate_schematic",
+    "vars": {
+      "PROMPT": "CONSORT participant flow diagram",
+      "DOC_TYPE": "presentation"
+    }
+  }
+}

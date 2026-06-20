@@ -1,0 +1,23 @@
+{
+  "perk": "simulate",
+  "skill": "simpy",
+  "description": "run a seeded discrete-event queue simulation and report wait/service/throughput stats",
+  "rules": [
+    "read-only",
+    "deterministic given RANDOM_SEED",
+    "single shared Resource of capacity NUM_RESOURCES; exponential arrivals, Gaussian service",
+    "statistics report written to record_store/sim_stats.txt"
+  ],
+  "usage": "Set SIM_TIME, NUM_RESOURCES, ARRIVAL_RATE, SERVICE_TIME_MEAN, RANDOM_SEED. Output: sim_stats.txt.",
+  "limitation": "Requires the simpy package at run time; when absent the porter writes a placeholder and exits 0. Models one M/M/c-style queue only — not arbitrary topologies.",
+  "minimal_example": {
+    "perk": "simulate",
+    "vars": {
+      "SIM_TIME": "50",
+      "NUM_RESOURCES": "2",
+      "ARRIVAL_RATE": "2.0",
+      "SERVICE_TIME_MEAN": "3.0",
+      "RANDOM_SEED": "42"
+    }
+  }
+}

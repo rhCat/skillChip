@@ -1,0 +1,13 @@
+{
+  "_perk": "counts_from_salmon",
+  "requires": ["python3"],
+  "vars": {
+    "QUANT_DIR": "${FIXTURE}/quant",
+    "TX2GENE": "${FIXTURE}/tx2gene.tsv"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["counts/counts.csv"],
+    "nonempty": ["counts/counts.csv"]
+  }
+}

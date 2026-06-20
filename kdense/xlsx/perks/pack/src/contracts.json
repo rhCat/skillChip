@@ -1,0 +1,23 @@
+{
+  "tool": "pack",
+  "inputs": {
+    "PACK_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "OUT_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "pack_out": {
+      "path": "${RECORD_STORE}/pack.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pack.json"
+  }
+}

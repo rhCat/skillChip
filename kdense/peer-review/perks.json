@@ -1,0 +1,13 @@
+{
+  "skill": "peer-review",
+  "perks": [
+    {
+      "id": "schematic",
+      "summary": "generate a publication-quality scientific schematic from a natural-language description via AI (Nano Banana 2), with iterative quality review by Gemini",
+      "destructive": false,
+      "tools": [
+        "generate_schematic"
+      ]
+    }
+  ]
+}

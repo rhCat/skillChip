@@ -1,0 +1,19 @@
+{
+  "perk": "plot_ms_data",
+  "skill": "pyopenms",
+  "description": "Quick plots for inspecting MS data and results: a single MS spectrum (stick plot) by index or RT, a total ion chromatogram, a 2D feature map (RT vs m/z), or a 2D heatmap of MS1 signal.",
+  "rules": [
+    "KIND in {spectrum, tic, featuremap, map2d}",
+    "writes plot.png under record_store",
+    "INDEX/RT select the spectrum for the 'spectrum' plot"
+  ],
+  "usage": "Set KIND and INPUT. Optional INDEX (spectrum index) or RT (nearest RT) for KIND=spectrum. Output: plot.png.",
+  "limitation": "Requires pyOpenMS 3.5.0 + matplotlib + numpy (Python 3.9+) to produce a real image; if absent the porter still creates plot.png and records the reason.",
+  "minimal_example": {
+    "perk": "plot_ms_data",
+    "vars": {
+      "KIND": "tic",
+      "INPUT": "data.mzML"
+    }
+  }
+}

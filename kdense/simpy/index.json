@@ -1,0 +1,26 @@
+{
+  "skill": "simpy",
+  "skill_sha": "832c772f41015940b53191864e51d725578122a43475bc57c64d6f726dabcd80",
+  "file_count": 19,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "6b3eaa82c99a93b7ab561f14704d56c43d43e5660096a932b27c3508f12195cf",
+    "blueprint.drawio": "d96eb745a38b7e33c369aeaa5bcdd571b56743ac953982caa51c8b3a0a1d83e9",
+    "blueprint.json": "9aa06e79653bda70b68fef605ab8b9a19384a2ea753b181a38457422835ed727",
+    "blueprint.svg": "56326d7132d9976822609ceaa7a3c642ecfca8d61bbb102814cc9c94b29fdc21",
+    "ledger.json": "9ed01231509c16039cfc75b237902c04377892c03739bb337e2326134876b02b",
+    "perks.json": "af6ef1ff2b49457af8bd2d418b71625ab72a1c3f84dfa447e1c3304d6ba55b31",
+    "perks/monitor/manifesto.json": "a1d0571e1ff9f861a76d385efcf511da7ce2d86970b0ae1d3bc73e535bb4cc00",
+    "perks/monitor/metadata.json": "179028e2512bddcb5d74b3076deb8657f5e942530e4ca18ad67b31983f29c6ad",
+    "perks/monitor/src/contracts.json": "431e3e3a42c19fe9a92cc08aae1b6637778da08c8af3a8fb819366b915964204",
+    "perks/monitor/src/resource_monitor.py": "e069449c87109851e8fe0b6d9e899dfef8c37065e420a6d5f661765e58588b86",
+    "perks/monitor/src/simpy_monitor.sh": "53f3ff529c5b9e89e8b45ae479fa1442807ed53e9626f02354c75b07cbf2228f",
+    "perks/monitor/test/case.json": "b34f6c0a1e2fab70916ed7c426bf4134c799e8b17fdb908420492f114db11fa5",
+    "perks/simulate/manifesto.json": "dc6a4e2a372d1286a3e9f6e7ce2c6b4ed580d5b3ea7999a927899336e0aa1600",
+    "perks/simulate/metadata.json": "9e909e1c93ec9422f13ac0b9f03ab29f51f1e7b585eabd21c95ac840514c5e51",
+    "perks/simulate/src/basic_simulation_template.py": "664c2d8427a14f0a9db9e4f9cd3138e1d8f8a83702fa31e99115b6c2d8bd0210",
+    "perks/simulate/src/contracts.json": "5782c9c1de958c12041b6d34e4c82f51d7452b3e6278ee29c1e00112a2dfecbe",
+    "perks/simulate/src/simpy_simulate.sh": "6d35acc505e4b9bba19548565e4841904ddd8c809cfb4d8a3e5da80a63131426",
+    "perks/simulate/test/case.json": "0547debb941902a9e7b3329fadc688639156d97d6997e0d859c2f09bcff22939"
+  }
+}

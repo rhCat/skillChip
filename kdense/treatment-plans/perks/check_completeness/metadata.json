@@ -1,0 +1,19 @@
+{
+  "perk": "check_completeness",
+  "skill": "treatment-plans",
+  "description": "Check a LaTeX treatment plan for the 10 required sections, SMART goal criteria, HIPAA de-identification notice, provider signature, and remaining uncustomized placeholders. Read-only.",
+  "rules": [
+    "read-only: never modifies the input plan",
+    "input is a .tex (or .txt) treatment plan",
+    "stdlib only (re, argparse) — no third-party deps",
+    "full report written to record_store/completeness.txt"
+  ],
+  "usage": "Set PLAN_FILE to a .tex treatment plan. Output: completeness.txt.",
+  "limitation": "Pure regex/section audit — it does not compile LaTeX or judge clinical correctness. The core exits non-zero when <80% of sections are present; the porter still records the report.",
+  "minimal_example": {
+    "perk": "check_completeness",
+    "vars": {
+      "PLAN_FILE": "./my_plan.tex"
+    }
+  }
+}

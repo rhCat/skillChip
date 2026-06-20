@@ -1,0 +1,21 @@
+{
+  "skill": "infographics",
+  "perks": [
+    {
+      "id": "list_options",
+      "summary": "list available infographic types, industry styles, colorblind-safe palettes, and document-type quality thresholds (read-only, offline)",
+      "destructive": false,
+      "tools": [
+        "list_options"
+      ]
+    },
+    {
+      "id": "generate",
+      "summary": "generate a publication-quality infographic via Nano Banana Pro with optional Perplexity research and Gemini iterative quality review (needs OPENROUTER_API_KEY + network)",
+      "destructive": false,
+      "tools": [
+        "generate_infographic"
+      ]
+    }
+  ]
+}

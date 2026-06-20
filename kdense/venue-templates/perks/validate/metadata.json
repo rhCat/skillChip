@@ -1,0 +1,21 @@
+{
+  "perk": "validate",
+  "skill": "venue-templates",
+  "description": "Validate a manuscript PDF against a venue's formatting requirements (page-count limit, margins, fonts) and write a validation report. Page count and font checks use pdfinfo/pdffonts when available.",
+  "rules": [
+    "read-only — inspects the PDF, never modifies it",
+    "pure Python stdlib for orchestration; pdfinfo/pdffonts (poppler-utils) are optional helpers",
+    "degrades gracefully — checks needing absent helpers are skipped, not failed",
+    "VENUE must be one of the known keys (nature, neurips, plos_one, nsf, nih)",
+    "report written to record_store as validation_report.txt"
+  ],
+  "usage": "Set PDF_FILE (path to the manuscript) and VENUE (e.g. Nature, NeurIPS, NSF). Optionally set CHECKS (comma-separated: page-count, margins, fonts, all). Output: validation_report.txt.",
+  "limitation": "Margin checking is informational only (PDF margins are not parsed). Page-count and font checks require poppler-utils (pdfinfo/pdffonts) on PATH; without them those checks are skipped.",
+  "minimal_example": {
+    "perk": "validate",
+    "vars": {
+      "PDF_FILE": "manuscript.pdf",
+      "VENUE": "Nature"
+    }
+  }
+}

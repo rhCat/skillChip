@@ -2,7 +2,7 @@
   "chip": "skillChip",
   "version": 1,
   "cartridge": false,
-  "count": 75,
+  "count": 145,
   "skills": [
     {
       "skill": "aiq-research",
@@ -15,9 +15,54 @@
       "file_count": 36
     },
     {
+      "skill": "arbor",
+      "skill_sha": "1eaac3737f885c0f60e36f6b2fbd3207dbe39646c76b04f28e656b5c894cd08b",
+      "file_count": 73
+    },
+    {
+      "skill": "arboreto",
+      "skill_sha": "19287e70238b7f5014d17ce6d1c37997444d5df3421e3a017cc31f5af54956c6",
+      "file_count": 21
+    },
+    {
+      "skill": "autoskill",
+      "skill_sha": "49913feac4df8c021eb7f1379b0fa15fde9fa2b7683ed04d0cff3e22ad8c04e7",
+      "file_count": 59
+    },
+    {
+      "skill": "bids",
+      "skill_sha": "bf63cb641f19e3cdeb5786bc022681321104564fab85b9b4b486195ed5ae68d3",
+      "file_count": 19
+    },
+    {
+      "skill": "bioservices",
+      "skill_sha": "e41ca6516ff3a79af074fb166e3e82013a2866b39a701941ebcea7fd9f25d61a",
+      "file_count": 32
+    },
+    {
+      "skill": "bulk-rnaseq",
+      "skill_sha": "b42fa90b66ed6d1aeeb30c862e6c70bb4620adb7cb88ff2abbe01ef54d8e7e93",
+      "file_count": 37
+    },
+    {
       "skill": "ci-codeqc",
       "skill_sha": "e3c4fb4aef18127aef3cc96a4636e9a1d42f58c711cdbc772d4663bc2e9d0998",
       "file_count": 11
+    },
+    {
+      "skill": "citation-management",
+      "skill_sha": "ad25b7debcf0e98a4e4486142b42525a3d6779a39775f0047529d4141e3fdeb9",
+      "file_count": 52
+    },
+    {
+      "skill": "clinical-decision-support",
+      "skill_sha": "5749f11c44f948a65a4706dc68e5ecc0fbe793fcc432914e7cf326c7b8cb8f51",
+      "file_count": 49
+    },
+    {
+      "skill": "clinical-reports",
+      "skill_sha": "c4dfaa5ad7fa869fd89abb0ceaa683e7c5db4ef8cf55e053354750686b516283",
+      "file_count": 81
     },
     {
       "skill": "codebaseqc",
@@ -125,9 +170,19 @@
       "file_count": 11
     },
     {
+      "skill": "deepchem",
+      "skill_sha": "44a8ad260cd38ca0af8a0dca6a0ae6bed6d3b4e22b88d3cde464e0505129c592",
+      "file_count": 28
+    },
+    {
       "skill": "deepstream-import-vision-model",
       "skill_sha": "e668150f0476e64c8be90a4c2f3b6fa63107cc37285302d323badde8fba581c2",
       "file_count": 69
+    },
+    {
+      "skill": "deeptools",
+      "skill_sha": "bf8338d4f264862f26f1268c2324636fcb28b7f051485975ba4abf83f80c7dd2",
+      "file_count": 38
     },
     {
       "skill": "dicom-metadata-extract",
@@ -145,9 +200,19 @@
       "file_count": 13
     },
     {
+      "skill": "diffdock",
+      "skill_sha": "4076992131bde01f04d7d065fc13671866bd9d3ee0dd7e8c5cbd28a71dd2a1a4",
+      "file_count": 34
+    },
+    {
       "skill": "docker",
       "skill_sha": "dab2a1bc0f3b37e064abb54f651863e5969476e4b50192611f089c4e2db24459",
       "file_count": 16
+    },
+    {
+      "skill": "docx",
+      "skill_sha": "745ad06961a111a545b4cf9408ed061d637cd40f8bd4f2d031d3b3d57a363c7a",
+      "file_count": 155
     },
     {
       "skill": "dynamo-interconnect-check",
@@ -170,9 +235,44 @@
       "file_count": 12
     },
     {
+      "skill": "etetoolkit",
+      "skill_sha": "fa37b08963bfcb855f308f03e6da47db82419bf69a85c86159c61832af6773dd",
+      "file_count": 56
+    },
+    {
+      "skill": "exa-search",
+      "skill_sha": "3c1e941c487721fb17bf23b34c6a9f0eba0dee55025948b92ec6191f7bdd0d0e",
+      "file_count": 19
+    },
+    {
+      "skill": "experimental-design",
+      "skill_sha": "0f4aa29f803a3863f519ffab7a7901466c563986e7d5b1bfc823e70b624224ae",
+      "file_count": 103
+    },
+    {
+      "skill": "exploratory-data-analysis",
+      "skill_sha": "ac057001ca9fbcf29ce79f516fd4eb7f675f53667ef90c23de733fff27390b77",
+      "file_count": 43
+    },
+    {
       "skill": "fs",
       "skill_sha": "417843081f1891b17a55ddc4fda84800bc78eaf2d352fac9e43bb83bcdda2f1a",
       "file_count": 18
+    },
+    {
+      "skill": "generate-image",
+      "skill_sha": "512e293e1c0fce7b807f1ea0882153ac96caaabf6986cdcb8310e6f41defb5d0",
+      "file_count": 20
+    },
+    {
+      "skill": "get-available-resources",
+      "skill_sha": "3fee1d6196bfa0e6192b1088bc480327a47c56e56fe35cd814d53562bd509e11",
+      "file_count": 14
+    },
+    {
+      "skill": "gget",
+      "skill_sha": "2bdaacb2bab5d1e3ffdf465f81b7a66c31ee5eed846e1b5c07433190d9467d5c",
+      "file_count": 27
     },
     {
       "skill": "git_ops",
@@ -205,14 +305,74 @@
       "file_count": 16
     },
     {
+      "skill": "hugging-science",
+      "skill_sha": "ed7e191debc52407473070cef33d942445b59a1159d614dfeebb89ae3f8042b5",
+      "file_count": 37
+    },
+    {
+      "skill": "hypothesis-generation",
+      "skill_sha": "3e12dd2e1b83210956ba8dd42d8c345a378cfa6909b66861ca91c452ae07527b",
+      "file_count": 15
+    },
+    {
+      "skill": "infographics",
+      "skill_sha": "fd2400c30dbed7124a840a022f4a7c3e173538203a247cab671ff0d880ad17a7",
+      "file_count": 21
+    },
+    {
+      "skill": "iso-13485-certification",
+      "skill_sha": "93b4cfd7dcbfa18a0a75dbeecc5672ae8b0f6fc135bb1b4644865b7f5454673b",
+      "file_count": 14
+    },
+    {
       "skill": "jsonschema",
       "skill_sha": "4665e37c53444ed6008359be553d5fa56da74217aab4dc26b13b3c1403d161a3",
       "file_count": 21
     },
     {
+      "skill": "labarchive-integration",
+      "skill_sha": "8b9ce5e75f31680a5e0612ca043960e75052335e487da53f4430a9a020778f7d",
+      "file_count": 49
+    },
+    {
+      "skill": "latex-posters",
+      "skill_sha": "50c10283f96d4b709f04d9ff3873438edfbdd2343976b0e0188c2334a5bf0046",
+      "file_count": 21
+    },
+    {
+      "skill": "liteparse",
+      "skill_sha": "29ea05dced3ef9001996b91e1b84bf155226a09066c39c700ecc2c9c3b6b5f8e",
+      "file_count": 35
+    },
+    {
+      "skill": "literature-review",
+      "skill_sha": "59418118a40836b9092f096779a33723eba715050ca6b5db1e95c50acab4b50d",
+      "file_count": 35
+    },
+    {
       "skill": "markdown",
       "skill_sha": "d7ce0c56621784af884bc1a35402bb83df4a376e3c03f3c29bbc08f5fe0edb0f",
       "file_count": 21
+    },
+    {
+      "skill": "market-research-reports",
+      "skill_sha": "287860c05ac3ff3fe1b3096712a0298c5e73a8fccd293d1b1608f81a0b286c1f",
+      "file_count": 14
+    },
+    {
+      "skill": "markitdown",
+      "skill_sha": "1ec94fc21b0bb631c643c94a62a31859b573e7f652e059cb57bf37460553bc31",
+      "file_count": 35
+    },
+    {
+      "skill": "matplotlib",
+      "skill_sha": "a929e410e9921c96497bd23f76ecc880c703d8a22b859444627ddf1c65f9e15e",
+      "file_count": 19
+    },
+    {
+      "skill": "medchem",
+      "skill_sha": "41bf39da899b0e49b6a95d8a2cb1d7f18879a741778180799f220e985cbcc71b",
+      "file_count": 63
     },
     {
       "skill": "nemo-data-designer-plugin",
@@ -238,6 +398,11 @@
       "skill": "net",
       "skill_sha": "178d6abd022541fbaacb866907dd9357ca89a1109765a4071e78473f23ac5972",
       "file_count": 17
+    },
+    {
+      "skill": "neuropixels-analysis",
+      "skill_sha": "5b434a13be5518e38b0101351bf401eaae8c8a3616debbb3c257500fbf4e2eef",
+      "file_count": 49
     },
     {
       "skill": "nv-generate-ct-rflow",
@@ -285,14 +450,44 @@
       "file_count": 12
     },
     {
+      "skill": "open-notebook",
+      "skill_sha": "a8350d5d953c4f40878498c1a91ee64f343ebfbacd9e08486b2669186f454d97",
+      "file_count": 63
+    },
+    {
+      "skill": "opentrons-integration",
+      "skill_sha": "e9c2c924754bf6e57b104ef89cd278264387e64dd1ce4621caa9849c38b00931",
+      "file_count": 35
+    },
+    {
+      "skill": "pacsomatic",
+      "skill_sha": "aadc70d7ce3da9fae11b6674d3a474226fc67319876a6e2ac2991a575a0b6027",
+      "file_count": 46
+    },
+    {
+      "skill": "pathway-enrichment",
+      "skill_sha": "d3651e2303679ee20572e65ef658373f3ed2f9e14da54a573297956a219befdf",
+      "file_count": 21
+    },
+    {
       "skill": "pdf",
       "skill_sha": "6182ce0d6291eb61611ad361c8e47fd36536321bc637b28cc3fdee8e6f6c2ed5",
       "file_count": 20
     },
     {
+      "skill": "peer-review",
+      "skill_sha": "f17c0063afb47e97c76e4571a9a60135ad1afa3e9b1626b64d6666734abc96cb",
+      "file_count": 15
+    },
+    {
       "skill": "pg_ops",
       "skill_sha": "692d6375c3ca60e612997c3ae54c05628f34938de8c70b63f41a522ab8887407",
       "file_count": 16
+    },
+    {
+      "skill": "phylogenetics",
+      "skill_sha": "81539a68edbcaa091ae316bb38cd9c6a99da578fe33d70766997250e80f08f0a",
+      "file_count": 47
     },
     {
       "skill": "physical-ai-defect-image-generation",
@@ -305,14 +500,129 @@
       "file_count": 48
     },
     {
+      "skill": "pptx",
+      "skill_sha": "5c71490b69096877798bbb70609f60375e3d95d44d950003c352855df77af867",
+      "file_count": 167
+    },
+    {
+      "skill": "pptx-posters",
+      "skill_sha": "db11593f93aaa1eb9ef0b73eee040a85e19a90fb7b47aebcc136df3685a14dbf",
+      "file_count": 14
+    },
+    {
+      "skill": "primekg",
+      "skill_sha": "5c1ce7eb55542fe9fd250a9467361413bb6cddcc45e5607532ae4f2930530157",
+      "file_count": 39
+    },
+    {
+      "skill": "pufferlib",
+      "skill_sha": "369895397eb3f3ec5e259751162c701c989c361c7e04f323a65db92d34b8cf0d",
+      "file_count": 19
+    },
+    {
       "skill": "py_qc",
       "skill_sha": "791495fc5055e0307db4f67741ba525ae4eeb083a019e60a20fa0aba8c8ee105",
       "file_count": 16
     },
     {
+      "skill": "pydeseq2",
+      "skill_sha": "56af4bbd488a7829a057b5dbd21ef3c70d6832a85aee14d41bc56a5cb1124f82",
+      "file_count": 30
+    },
+    {
+      "skill": "pydicom",
+      "skill_sha": "2ac7a1c6ddbfa61409823727cf35eb35f59c42abe624adb0eb907701193f9524",
+      "file_count": 28
+    },
+    {
+      "skill": "pymatgen",
+      "skill_sha": "25f031301316791504a4da647b4a5d86bb402f2e0b3bf0dc4564e45d4a484a2d",
+      "file_count": 27
+    },
+    {
+      "skill": "pymc",
+      "skill_sha": "2924523025597cec026a7d59cf5804976618abdb2fc374723573034706ae947a",
+      "file_count": 49
+    },
+    {
+      "skill": "pymoo",
+      "skill_sha": "82d70778417a1daa891405f3e1e5f7f12811372647a3be6aec9252d4d3051580",
+      "file_count": 37
+    },
+    {
+      "skill": "pyopenms",
+      "skill_sha": "6267bafec8cbca0dc7a53aaf5f43decb0796850023204564e39fe65676557d85",
+      "file_count": 126
+    },
+    {
+      "skill": "pytdc",
+      "skill_sha": "ab5303cecbedd6a89f16cd4f121d1333357037d105c4c1d3ac8680fbff6038a5",
+      "file_count": 34
+    },
+    {
+      "skill": "pytorch-lightning",
+      "skill_sha": "69d2b5cc578a615926d3bbff295f229c8f388c21e4bae0aa4a4ea267a59c9456",
+      "file_count": 25
+    },
+    {
+      "skill": "rdkit",
+      "skill_sha": "11874ddbbb1e519ff39c0aaa65983de1af375a2c9bcb778420fca5519fbe8bf3",
+      "file_count": 28
+    },
+    {
       "skill": "release",
       "skill_sha": "b6ff2be2ca9b18cca4d7268eeefb9e9dc61f049d5095a0800ab3067fbbf00b62",
       "file_count": 11
+    },
+    {
+      "skill": "research-lookup",
+      "skill_sha": "6a7e4049b05e0664bd48687a674acd9936e222645bcb3e3a8c9930d04099d7f6",
+      "file_count": 20
+    },
+    {
+      "skill": "scanpy",
+      "skill_sha": "e2d966d661bd58c1492ae70ef0ed736de46ab853f0403137f143b8613d007c2c",
+      "file_count": 121
+    },
+    {
+      "skill": "scholar-evaluation",
+      "skill_sha": "309e8db9652d8e2f56f5678eaf6a18190329bd12fed91f21d7ff5f31520618d4",
+      "file_count": 21
+    },
+    {
+      "skill": "sci-pdf",
+      "skill_sha": "0237a66147842e83663da6e644258513f67ed28b4ac456acffe6eb4fa9bbf4f3",
+      "file_count": 67
+    },
+    {
+      "skill": "scientific-schematics",
+      "skill_sha": "900df47a4f6961b6e3dea10cb523902addea61c1e3d80163385637fcf046809d",
+      "file_count": 14
+    },
+    {
+      "skill": "scientific-slides",
+      "skill_sha": "e9f36f272621b169486e5c13d02431b0780c0fd6b6d9630624be0bb99336a047",
+      "file_count": 39
+    },
+    {
+      "skill": "scientific-visualization",
+      "skill_sha": "0c93d2a9e61389e96ed4f86b686a5fe119da6b94aa73dd0d7a663428099e8789",
+      "file_count": 37
+    },
+    {
+      "skill": "scientific-writing",
+      "skill_sha": "233cbf27a43be3af5e124a7c74fdf4e520aa32e9af258187997ddf6b129d3a11",
+      "file_count": 20
+    },
+    {
+      "skill": "scikit-learn",
+      "skill_sha": "07ecb25fe0dd0783ba91c9df0fe5c3fbe78b7b578d701aa5018cb6d15d467b0b",
+      "file_count": 39
+    },
+    {
+      "skill": "scvelo",
+      "skill_sha": "f2acade2c6bbe3404c2be95087382ac2fe76b7eb07e5ff27e1faba57cc11273e",
+      "file_count": 72
     },
     {
       "skill": "search",
@@ -323,6 +633,11 @@
       "skill": "sec",
       "skill_sha": "2662c65d8c5ebb405890545cf214880fbfa4858d8ea72b4e4515d6dbec37377e",
       "file_count": 18
+    },
+    {
+      "skill": "simpy",
+      "skill_sha": "832c772f41015940b53191864e51d725578122a43475bc57c64d6f726dabcd80",
+      "file_count": 19
     },
     {
       "skill": "skill-card-generator",
@@ -338,6 +653,21 @@
       "skill": "ssh",
       "skill_sha": "6ef88c85baa8e94349897b93c53997d654d21a033f712729ae224fc7e25695f6",
       "file_count": 16
+    },
+    {
+      "skill": "stable-baselines3",
+      "skill_sha": "ce6432ac0215325329a0518a34788030e9676b40f667372b358864c36e07ada1",
+      "file_count": 26
+    },
+    {
+      "skill": "statistical-analysis",
+      "skill_sha": "27fc58caa1dc09bd17bcc0301ff486441543c27aee8c4d207098279586535fc6",
+      "file_count": 47
+    },
+    {
+      "skill": "statistical-power",
+      "skill_sha": "b3ca799829eb1f75b33f9034543f3a481db8087077cb6cb1faa78fbf5451cdeb",
+      "file_count": 42
     },
     {
       "skill": "tao-finetune-cosmos-reason",
@@ -365,6 +695,21 @@
       "file_count": 13
     },
     {
+      "skill": "timesfm-forecasting",
+      "skill_sha": "93c74f1db767bbe6d8160428840af96ef92233a90556b2977c1b69f61d563302",
+      "file_count": 38
+    },
+    {
+      "skill": "treatment-plans",
+      "skill_sha": "2a062781cdd991dce7b9726b090a55427c4cd5b30d4d2f920ec843d40bb62969",
+      "file_count": 49
+    },
+    {
+      "skill": "venue-templates",
+      "skill_sha": "7e4a4a9cdeb47bf3c7d3f1de636f7dfa798c79c59fbd007be4fcdca954f99b5d",
+      "file_count": 45
+    },
+    {
       "skill": "vss-deploy-detection-tracking-2d",
       "skill_sha": "05bf9bad5618efad86a7b32a70da72cf3557341e7d2c8559738c89606a80bea1",
       "file_count": 78
@@ -378,7 +723,12 @@
       "skill": "vss-manage-alerts",
       "skill_sha": "a6ed04e76ff560464e68bbc42d179f38b0774ad101df9c3fdc07f455efd01ae0",
       "file_count": 47
+    },
+    {
+      "skill": "xlsx",
+      "skill_sha": "b4f1acdf89272dccb813261f352b252c942ddb20d55328f8426eef0ed6c9972c",
+      "file_count": 39
     }
   ],
-  "chip_sha": "bae8ce91fda00f16e7f1afc8ac7b1580f373a66fe94ac50206341aea6458271c"
+  "chip_sha": "f20caa9f83e435cc45abc194e25cab603ee16b720ff80733830917edbcb90eed"
 }

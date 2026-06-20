@@ -1,0 +1,37 @@
+{
+  "skill": "bulk-rnaseq",
+  "perks": [
+    {
+      "id": "validate_samplesheet",
+      "summary": "validate an nf-core/rnaseq samplesheet (+ optional design metadata) for missing/duplicate FASTQs, strandedness, replication, and batch confounding (read-only)",
+      "destructive": false,
+      "tools": [
+        "validate_samplesheet"
+      ]
+    },
+    {
+      "id": "counts_from_salmon",
+      "summary": "aggregate per-sample Salmon quant.sf to a gene-level integer counts matrix (+ metadata template) via pytximport length_scaled_tpm",
+      "destructive": false,
+      "tools": [
+        "counts_from_salmon"
+      ]
+    },
+    {
+      "id": "counts_from_star",
+      "summary": "combine STAR *.ReadsPerGene.out.tab files into a gene x sample integer counts matrix (+ metadata template) by strandedness column",
+      "destructive": false,
+      "tools": [
+        "counts_from_star"
+      ]
+    },
+    {
+      "id": "counts_from_featurecounts",
+      "summary": "parse a combined featureCounts matrix into a gene x sample integer counts matrix (+ metadata template) for PyDESeq2",
+      "destructive": false,
+      "tools": [
+        "counts_from_featurecounts"
+      ]
+    }
+  ]
+}

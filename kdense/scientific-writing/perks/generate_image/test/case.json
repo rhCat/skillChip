@@ -1,0 +1,13 @@
+{
+  "_perk": "generate_image",
+  "requires": ["python3"],
+  "vars": {
+    "PROMPT": "Photorealistic illustration of a laboratory bench with a microscope",
+    "OUTPUT_NAME": "image.png"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["image.audit.json"],
+    "nonempty": ["image.audit.json"]
+  }
+}

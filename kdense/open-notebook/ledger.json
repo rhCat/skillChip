@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for open-notebook — set perk, fill record_store + the vars the perk declares.",
+  "skill": "open-notebook",
+  "perk": "notebook_list",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "OPEN_NOTEBOOK_URL": "http://localhost:5055"
+  }
+}

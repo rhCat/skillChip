@@ -1,0 +1,21 @@
+{
+  "_perk": "validate_quality",
+  "sequence": [
+    "validate_quality"
+  ],
+  "tools": {
+    "validate_quality": {
+      "binary": "python3",
+      "params": {
+        "PLAN_FILE": "${PLAN_FILE}"
+      }
+    }
+  },
+  "env": {
+    "PLAN_FILE": "${PLAN_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

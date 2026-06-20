@@ -1,0 +1,21 @@
+{
+  "perk": "power_curve",
+  "skill": "statistical-power",
+  "description": "Render a power-vs-sample-size curve (PNG) for a grant / protocol figure and emit the underlying (n, power) arrays as JSON.",
+  "rules": [
+    "read-only: writes only into RECORD_STORE (a PNG figure + a JSON sidecar)",
+    "matplotlib runs headless (Agg backend) - no display required",
+    "TEST + EFFECT_SIZE drive the curve; n sweeps N_START..N_STOP step N_STEP (defaults 5..205 step 5)",
+    "a power curve / sensitivity range is the intended deliverable, not a single n"
+  ],
+  "usage": "Set TEST and EFFECT_SIZE (plus the test's extra params). Optional ALPHA, POWER (target line), ALTERNATIVE, N_START/N_STOP/N_STEP. Outputs: power_curve.png (figure) and power_curve.json (n + power arrays).",
+  "limitation": "Closed-form tests only. The PNG is a planning figure, not a publication-final asset; restyle as needed.",
+  "minimal_example": {
+    "perk": "power_curve",
+    "vars": {
+      "TEST": "t_ind",
+      "EFFECT_SIZE": "0.5",
+      "ALPHA": "0.05"
+    }
+  }
+}

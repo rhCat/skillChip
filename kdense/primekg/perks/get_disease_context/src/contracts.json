@@ -1,0 +1,23 @@
+{
+  "tool": "get_disease_context",
+  "inputs": {
+    "PRIMEKG_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "DISEASE_NAME": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "disease_context_out": {
+      "path": "${RECORD_STORE}/disease_context.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/disease_context.json"
+  }
+}

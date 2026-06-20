@@ -1,0 +1,12 @@
+{
+  "_perk": "properties",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/mols.smi"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["properties.csv"],
+    "nonempty": ["properties.csv"]
+  }
+}

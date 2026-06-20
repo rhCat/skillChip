@@ -1,0 +1,18 @@
+{
+  "perk": "unpack",
+  "skill": "docx",
+  "description": "Unpack a .docx into a pretty-printed XML directory; merges adjacent runs, simplifies redlines, and escapes smart quotes to XML entities so they survive editing.",
+  "rules": [
+    "does not mutate the source .docx; writes a new unpacked/ dir under record_store",
+    "pretty-prints every .xml and .rels part",
+    "DOCX-only post-processing: merge adjacent runs + simplify same-author tracked changes"
+  ],
+  "usage": "Set DOCX_FILE (path to the .docx). Outputs: unpacked/ (XML tree) and unpack.log.",
+  "limitation": "The vendored core imports defusedxml; if absent, the porter records the import error and exits 0 with an empty audit log (degraded). With defusedxml present it fully unpacks.",
+  "minimal_example": {
+    "perk": "unpack",
+    "vars": {
+      "DOCX_FILE": "contract.docx"
+    }
+  }
+}

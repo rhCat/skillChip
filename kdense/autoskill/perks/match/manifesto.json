@@ -1,0 +1,25 @@
+{
+  "_perk": "match",
+  "sequence": [
+    "match_skills"
+  ],
+  "tools": {
+    "match_skills": {
+      "binary": "match_skills.sh",
+      "params": {
+        "CLUSTERS": "${CLUSTERS}",
+        "SKILLS_DIR": "${SKILLS_DIR}",
+        "TOP_K": "${TOP_K}"
+      }
+    }
+  },
+  "env": {
+    "CLUSTERS": "${CLUSTERS}",
+    "SKILLS_DIR": "${SKILLS_DIR}",
+    "TOP_K": "${TOP_K}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

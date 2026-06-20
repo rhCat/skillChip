@@ -1,0 +1,28 @@
+{
+  "skill": "pathway-enrichment",
+  "skill_sha": "d3651e2303679ee20572e65ef658373f3ed2f9e14da54a573297956a219befdf",
+  "file_count": 21,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "6369b3909aefd916f3cde608c27c6b86c0dd71db4a9e973ee20dd5007afe2cc6",
+    "blueprint.drawio": "d62ce54948345e176488ee98b6fea18a98627308717f9d5cd0741cb293280234",
+    "blueprint.json": "7a2253c2fa374c68faea6143c3dcdc33cd4d073675abe1d52856a8b8b0c8f7a3",
+    "blueprint.svg": "2d234924f610bc44ac92e0a41176bd874fd04ce26f574262fe0ec9a110142a78",
+    "ledger.json": "754d855681597470f6a4502f84b42e314df9e61631baa6d25ba22ffaa33aa09f",
+    "perks.json": "5630bc31680774461da1bd97b095e5163515f0b23a8a98db456f51d9de604be4",
+    "perks/gsea/manifesto.json": "c0d602744534556b07f7362aa2490cd3a4821f6c76951cc5be375919c93107b2",
+    "perks/gsea/metadata.json": "88b1fe2d5436b126538a0407223b45fd0c6e6196da0815a7bef2115ea131dc65",
+    "perks/gsea/src/contracts.json": "921298dad96ca06d3e53011952408b0ec22eb8eb7598f9fb383f8678203ebbe5",
+    "perks/gsea/src/run_enrichment.py": "cad916bd1ac630a9cf7570bb71df4a495f57f18565c336b524e0144b2f1596ed",
+    "perks/gsea/src/run_gsea.sh": "9ab2b534e94a3182068bc17ebc59709b71cb47a57c181fb7e491fae84b65cdc2",
+    "perks/gsea/test/case.json": "13effa326e5581a63cd40204fec6160ffa4a7b286ed27b530e79ae851087b5c7",
+    "perks/gsea/test/fixture/ranked_genes.csv": "fb895e124f719b68fe6e23f88bcd4e130fcc2498ff42f124b9ac10da540e8460",
+    "perks/ora/manifesto.json": "58bb5ae586f5dc3ebb764ba50e80a6331f51647591ac556500320d6212823f70",
+    "perks/ora/metadata.json": "21024474247ae3e047a16b1bd993b9cd6f8a41423876de2e68abcdc87c3930f4",
+    "perks/ora/src/contracts.json": "aaad231cc43cb795754c178ab0a1958028c60ae3f54dfe580a426004f4ee269d",
+    "perks/ora/src/run_enrichment.py": "cad916bd1ac630a9cf7570bb71df4a495f57f18565c336b524e0144b2f1596ed",
+    "perks/ora/src/run_ora.sh": "253d0c1a7108426e098df4d5adfc21fb9e0c196bfc082197d3a1f6f569e85e97",
+    "perks/ora/test/case.json": "134dbc3796a50b608f9c21e53bf49bc4e127fbe7da03832a0529f35f327f1e27",
+    "perks/ora/test/fixture/deg_symbols.txt": "4923ebfff31fc5278ebef7b196b0659c4b887721e2acc8bdb416686197c33b3c"
+  }
+}

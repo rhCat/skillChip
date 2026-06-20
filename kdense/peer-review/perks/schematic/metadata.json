@@ -1,0 +1,22 @@
+{
+  "perk": "schematic",
+  "skill": "peer-review",
+  "description": "generate a publication-quality scientific schematic from a natural-language description via AI (Nano Banana 2), with iterative quality review by Gemini",
+  "rules": [
+    "generative: produces an image file + a JSON review log under record_store",
+    "needs OPENROUTER_API_KEY and network access to OpenRouter (offline degrades gracefully)",
+    "max 2 refinement iterations; regenerates only if the quality score is below the doc-type threshold",
+    "DOC_TYPE selects the quality threshold (journal 8.5 .. presentation 6.5; default 7.5)",
+    "does not mutate any remote/live service — read-only with respect to infrastructure"
+  ],
+  "usage": "Set PROMPT (the diagram description), OUTPUT (image filename written under record_store), DOC_TYPE (quality threshold tier), and OPENROUTER_API_KEY. Output: the rendered image + <stem>_review_log.json.",
+  "limitation": "Requires OPENROUTER_API_KEY + network. Without them the op produces no image (the porter still emits an empty audit artifact and exits 0). Iterations are capped at 2.",
+  "minimal_example": {
+    "perk": "schematic",
+    "vars": {
+      "PROMPT": "CONSORT participant flow diagram",
+      "OUTPUT": "consort.png",
+      "DOC_TYPE": "journal"
+    }
+  }
+}

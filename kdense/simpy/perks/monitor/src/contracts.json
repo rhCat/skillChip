@@ -1,0 +1,27 @@
+{
+  "tool": "simpy_monitor",
+  "inputs": {
+    "NUM_PROCESSES": {
+      "type": "number",
+      "required": true
+    },
+    "CAPACITY": {
+      "type": "number",
+      "required": true
+    },
+    "BASE_DURATION": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "outputs": {
+    "simpy_monitor_out": {
+      "path": "${RECORD_STORE}/monitor_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/monitor_report.txt"
+  }
+}

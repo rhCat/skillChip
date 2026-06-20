@@ -1,0 +1,35 @@
+{
+  "tool": "iqtree_infer",
+  "inputs": {
+    "ALIGNED_FASTA": {
+      "type": "string",
+      "required": true
+    },
+    "SEQ_TYPE": {
+      "type": "string",
+      "required": false
+    },
+    "BOOTSTRAP": {
+      "type": "string",
+      "required": false
+    },
+    "THREADS": {
+      "type": "string",
+      "required": false
+    },
+    "OUTGROUP": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "treefile": {
+      "path": "${RECORD_STORE}/phylo.treefile",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/phylo.treefile"
+  }
+}

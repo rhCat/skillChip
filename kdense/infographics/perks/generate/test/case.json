@@ -1,0 +1,14 @@
+{
+  "_perk": "generate",
+  "requires": ["python3"],
+  "vars": {
+    "PROMPT": "3 tips for better sleep",
+    "OUTPUT_NAME": "sleep.png",
+    "INFOGRAPHIC_TYPE": "list"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["generate.log"],
+    "nonempty": ["generate.log"]
+  }
+}

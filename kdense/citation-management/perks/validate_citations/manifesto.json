@@ -1,0 +1,24 @@
+{
+  "_perk": "validate_citations",
+  "sequence": [
+    "validate_citations"
+  ],
+  "tools": {
+    "validate_citations": {
+      "binary": "python3",
+      "params": {
+        "BIB_FILE": "${BIB_FILE}"
+      }
+    }
+  },
+  "env": {
+    "BIB_FILE": "${BIB_FILE}",
+    "VENUE": "${VENUE}",
+    "MIN_COUNT": "${MIN_COUNT}",
+    "MANUSCRIPT": "${MANUSCRIPT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

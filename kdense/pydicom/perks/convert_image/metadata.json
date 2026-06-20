@@ -1,0 +1,22 @@
+{
+  "perk": "convert_image",
+  "skill": "pydicom",
+  "description": "convert a DICOM file's pixel data to a standard image format (PNG/JPEG/TIFF/BMP), normalising grayscale to 8-bit and optionally applying VOI LUT windowing",
+  "rules": [
+    "read-only on the input .dcm",
+    "output image written to record_store (filename from IMG_OUT, default image.png)",
+    "grayscale pixel data is normalised to uint8 (0-255)",
+    "APPLY_WINDOWING=1 applies VOI LUT windowing when WindowCenter is present",
+    "FRAME selects a frame for multi-frame DICOM (default 0)",
+    "degrades gracefully when pydicom/numpy/Pillow are not importable"
+  ],
+  "usage": "Set DICOM_IN (input .dcm). Optional IMG_OUT (filename, default image.png), IMG_FORMAT (PNG|JPEG|TIFF|BMP, default inferred from extension), APPLY_WINDOWING (1 to enable), FRAME (int, default 0). Output: the image under record_store.",
+  "limitation": "Read-only: converts a single frame to a still image. Requires pydicom, numpy and Pillow; compressed transfer syntaxes may need extra decoders (pylibjpeg/gdcm). Degrades to a placeholder if a dependency is absent.",
+  "minimal_example": {
+    "perk": "convert_image",
+    "vars": {
+      "DICOM_IN": "sample.dcm",
+      "IMG_OUT": "image.png"
+    }
+  }
+}

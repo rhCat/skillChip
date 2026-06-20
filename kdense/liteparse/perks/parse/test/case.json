@@ -1,0 +1,13 @@
+{
+  "_perk": "parse",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT_FILE": "${FIXTURE}/sample.pdf",
+    "FORMAT": "json"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["parse.json"],
+    "nonempty": ["parse.json"]
+  }
+}

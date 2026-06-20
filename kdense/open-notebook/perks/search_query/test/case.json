@@ -1,0 +1,15 @@
+{
+  "_perk": "search_query",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "OPEN_NOTEBOOK_URL": "http://127.0.0.1:5999",
+    "SEARCH_QUERY": "tumor mutational burden",
+    "SEARCH_TYPE": "vector",
+    "SEARCH_LIMIT": "5"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["search_results.json"],
+    "nonempty": ["search_results.json"]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_perk": "search_pubmed",
+  "sequence": [
+    "search_pubmed"
+  ],
+  "tools": {
+    "search_pubmed": {
+      "binary": "python3",
+      "params": {
+        "QUERY": "${QUERY}"
+      }
+    }
+  },
+  "env": {
+    "QUERY": "${QUERY}",
+    "LIMIT": "${LIMIT}",
+    "PUB_TYPES": "${PUB_TYPES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "_schema": "task-ledger TEMPLATE for pathway-enrichment — set perk, fill record_store + the vars the perk declares.",
+  "skill": "pathway-enrichment",
+  "perk": "ora",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "GENES": "<gene hit list: one symbol per line, or CSV first column>",
+    "LIBRARIES": "MSigDB_Hallmark_2020 GO_Biological_Process_2023 KEGG_2021_Human",
+    "ORGANISM": "human",
+    "FDR": "0.05"
+  }
+}

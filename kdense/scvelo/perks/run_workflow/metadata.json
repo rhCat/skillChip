@@ -1,0 +1,21 @@
+{
+  "perk": "run_workflow",
+  "skill": "scvelo",
+  "description": "End-to-end RNA velocity pipeline in one command, wrapping the upstream rna_velocity_workflow.run_velocity_analysis: preprocess -> velocity -> velocity_graph -> latent time (dynamical) -> velocity_confidence -> velocity_pseudotime -> rank_velocity_genes -> figures, writing adata_velocity.h5ad plus the figure set under record_store.",
+  "rules": [
+    "read-only input — writes adata_velocity.h5ad and figures under record_store",
+    "input must have layers['spliced'] and layers['unspliced'] plus a UMAP and the GROUPBY clusters",
+    "latent time + driver genes are produced only when MODE=dynamical and the GROUPBY column exists",
+    "defaults follow the upstream skill: groupby=clusters, n_top_genes=2000, n_neighbors=30, mode=dynamical, n_jobs=4"
+  ],
+  "usage": "Set INPUT (.h5ad with spliced/unspliced + UMAP + clusters). Optional: GROUPBY, N_TOP_GENES, N_NEIGHBORS, MODE, N_JOBS. Output: adata_velocity.h5ad + figures.",
+  "limitation": "Requires scvelo (and scanpy) installed; without it the porter writes a {} placeholder adata_velocity.h5ad and still passes. Dynamical mode is slow (~10-30 min for 10K cells).",
+  "minimal_example": {
+    "perk": "run_workflow",
+    "vars": {
+      "INPUT": "data.h5ad",
+      "GROUPBY": "clusters",
+      "MODE": "stochastic"
+    }
+  }
+}

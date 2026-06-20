@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for pufferlib — set perk, fill record_store + the vars the perk declares.",
+  "skill": "pufferlib",
+  "perk": "env_scaffold",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "GRID_SIZE": "10"
+  }
+}

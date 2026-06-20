@@ -1,0 +1,27 @@
+{
+  "tool": "generate_image",
+  "inputs": {
+    "PROMPT": {
+      "type": "string",
+      "required": true
+    },
+    "MODEL": {
+      "type": "string",
+      "required": false
+    },
+    "OUTPUT_NAME": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "generated_image": {
+      "path": "${RECORD_STORE}/generated_image.png",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/generated_image.png"
+  }
+}

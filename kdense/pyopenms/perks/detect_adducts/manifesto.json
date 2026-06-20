@@ -1,0 +1,28 @@
+{
+  "_perk": "detect_adducts",
+  "sequence": [
+    "detect_adducts"
+  ],
+  "tools": {
+    "detect_adducts": {
+      "binary": "bash",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "NEGATIVE": "${NEGATIVE}",
+    "ADDUCTS": "${ADDUCTS}",
+    "CHARGE_MIN": "${CHARGE_MIN}",
+    "CHARGE_MAX": "${CHARGE_MAX}",
+    "MASS_MAX_DIFF": "${MASS_MAX_DIFF}",
+    "RT_MAX_DIFF": "${RT_MAX_DIFF}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

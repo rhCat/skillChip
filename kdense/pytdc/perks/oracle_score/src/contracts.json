@@ -1,0 +1,23 @@
+{
+  "tool": "tdc_oracle_score",
+  "inputs": {
+    "TDC_ORACLE": {
+      "type": "string",
+      "required": true
+    },
+    "TDC_SMILES": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "scores_out": {
+      "path": "${RECORD_STORE}/scores.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/scores.json"
+  }
+}

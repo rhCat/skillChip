@@ -1,0 +1,21 @@
+{
+  "perk": "linearity",
+  "skill": "statistical-analysis",
+  "description": "Linear-fit + residuals-vs-fitted linearity diagnostic for two numeric CSV columns (+ figure).",
+  "rules": [
+    "read-only — input CSV is never mutated",
+    "fits a simple OLS line of Y on X via scipy.stats.linregress",
+    "reports slope, intercept, r, r-squared, p-value, std_err",
+    "JSON report + PNG figure (scatter+fit and residuals-vs-fitted) written to record_store"
+  ],
+  "usage": "Set DATA_CSV, X_COL (predictor), Y_COL (outcome). Output: linearity.json + linearity.png.",
+  "limitation": "Single predictor (bivariate) only; rows with NaN in either column are dropped. Requires numpy/scipy/pandas/matplotlib present; degrades to an empty report otherwise.",
+  "minimal_example": {
+    "perk": "linearity",
+    "vars": {
+      "DATA_CSV": "./data.csv",
+      "X_COL": "hours",
+      "Y_COL": "score"
+    }
+  }
+}

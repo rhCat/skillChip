@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for get-available-resources — set perk, fill record_store + the vars the perk declares.",
+  "skill": "get-available-resources",
+  "perk": "detect",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PROBE_PATH": "<dir to probe for disk space; defaults to RECORD_STORE if unset>"
+  }
+}

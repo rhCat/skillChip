@@ -1,0 +1,21 @@
+{
+  "perk": "promote",
+  "skill": "autoskill",
+  "description": "move a user-approved proposal directory into skills/<name>/ (refuses to overwrite an existing skill)",
+  "rules": [
+    "local filesystem move only — no remote service, no install",
+    "looks for the proposal under new-skills/<NAME> then composition-recipes/<NAME>",
+    "refuses to overwrite: exits non-zero (captured) if the target skills/<NAME> already exists or the proposal is not found",
+    "the captured promote result is written to record_store as promote.txt"
+  ],
+  "usage": "Set PROPOSED (the proposed/<ts> dir), SKILLS_DIR (target skills/ dir), NAME (skill to promote). Output: promote.txt.",
+  "limitation": "Only moves a proposal that exists under PROPOSED; will not overwrite an existing skill of the same name. Mutates the local skills directory.",
+  "minimal_example": {
+    "perk": "promote",
+    "vars": {
+      "PROPOSED": "~/.autoskill/proposed/2026-04-17T14-30-00",
+      "SKILLS_DIR": "./skills",
+      "NAME": "zotero-pubmed-helper"
+    }
+  }
+}

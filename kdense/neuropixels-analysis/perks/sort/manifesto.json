@@ -1,0 +1,23 @@
+{
+  "_perk": "sort",
+  "sequence": [
+    "run_sorting"
+  ],
+  "tools": {
+    "run_sorting": {
+      "binary": "python3",
+      "params": {
+        "PREPROCESSED_DIR": "${PREPROCESSED_DIR}",
+        "SORTER": "${SORTER}"
+      }
+    }
+  },
+  "env": {
+    "PREPROCESSED_DIR": "${PREPROCESSED_DIR}",
+    "SORTER": "${SORTER}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

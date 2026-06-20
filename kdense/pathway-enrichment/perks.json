@@ -1,0 +1,21 @@
+{
+  "skill": "pathway-enrichment",
+  "perks": [
+    {
+      "id": "ora",
+      "summary": "over-representation analysis (Enrichr/Fisher) on a gene hit list -> results CSV + dotplot",
+      "destructive": false,
+      "tools": [
+        "run_ora"
+      ]
+    },
+    {
+      "id": "gsea",
+      "summary": "preranked GSEA from a DESeq2 table or a gene,score rank file -> results CSV + dotplot",
+      "destructive": false,
+      "tools": [
+        "run_gsea"
+      ]
+    }
+  ]
+}

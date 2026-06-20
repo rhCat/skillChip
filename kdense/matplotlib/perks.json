@@ -1,0 +1,21 @@
+{
+  "skill": "matplotlib",
+  "perks": [
+    {
+      "id": "render_plot",
+      "summary": "render a template matplotlib plot (line/scatter/bar/histogram/heatmap/contour/box/violin/3d/all) to an image file",
+      "destructive": false,
+      "tools": [
+        "plot_render"
+      ]
+    },
+    {
+      "id": "configure_style",
+      "summary": "generate a custom .mplstyle style sheet (and optional preview PNG) from a named preset",
+      "destructive": false,
+      "tools": [
+        "style_config"
+      ]
+    }
+  ]
+}

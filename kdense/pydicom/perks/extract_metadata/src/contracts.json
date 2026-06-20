@@ -1,0 +1,23 @@
+{
+  "tool": "extract_metadata",
+  "inputs": {
+    "DICOM_IN": {
+      "type": "string",
+      "required": true
+    },
+    "META_FORMAT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "metadata_out": {
+      "path": "${RECORD_STORE}/metadata.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/metadata.txt"
+  }
+}

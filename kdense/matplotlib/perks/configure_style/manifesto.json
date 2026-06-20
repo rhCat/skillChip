@@ -1,0 +1,23 @@
+{
+  "_perk": "configure_style",
+  "sequence": [
+    "style_config"
+  ],
+  "tools": {
+    "style_config": {
+      "binary": "python3",
+      "params": {
+        "STYLE_PRESET": "${STYLE_PRESET}",
+        "STYLE_OUT": "${STYLE_OUT}"
+      }
+    }
+  },
+  "env": {
+    "STYLE_PRESET": "${STYLE_PRESET}",
+    "STYLE_OUT": "${STYLE_OUT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

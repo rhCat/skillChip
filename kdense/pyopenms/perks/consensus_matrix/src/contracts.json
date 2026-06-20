@@ -1,0 +1,27 @@
+{
+  "tool": "consensus_to_matrix",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "LONG_FORMAT": {
+      "type": "string",
+      "required": false
+    },
+    "NORMALIZE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "matrix": {
+      "path": "${RECORD_STORE}/quant_matrix.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/quant_matrix.csv"
+  }
+}

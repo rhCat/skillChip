@@ -1,0 +1,21 @@
+{
+  "_perk": "latent_time",
+  "sequence": [
+    "latent_time"
+  ],
+  "tools": {
+    "latent_time": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

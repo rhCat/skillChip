@@ -1,0 +1,16 @@
+{
+  "_perk": "train",
+  "requires": ["python3"],
+  "vars": {
+    "ENV_ID": "CartPole-v1",
+    "ALGORITHM": "PPO",
+    "POLICY": "MlpPolicy",
+    "N_ENVS": "1",
+    "TOTAL_TIMESTEPS": "100"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["train.json"],
+    "nonempty": ["train.json"]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "tool": "customize_template",
+  "inputs": {
+    "TEMPLATE": {
+      "type": "string",
+      "required": true
+    },
+    "TITLE": {
+      "type": "string",
+      "required": false
+    },
+    "AUTHORS": {
+      "type": "string",
+      "required": false
+    },
+    "AFFILIATIONS": {
+      "type": "string",
+      "required": false
+    },
+    "EMAIL": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "customized_tex": {
+      "path": "${RECORD_STORE}/customized.tex",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/customized.tex"
+  }
+}

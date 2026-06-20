@@ -1,0 +1,10 @@
+{
+  "_perk": "validate_quality",
+  "requires": ["python3"],
+  "vars": { "PLAN_FILE": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["quality.txt"],
+    "nonempty": ["quality.txt"]
+  }
+}

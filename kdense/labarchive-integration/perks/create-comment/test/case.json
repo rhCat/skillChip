@@ -1,0 +1,21 @@
+{
+  "_perk": "create-comment",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "LA_CONFIG": "${FIXTURE}/config.yaml",
+    "LA_NBID": "12345",
+    "LA_ENTRY_ID": "67890",
+    "LA_COMMENT": "Follow-up analysis needed"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "create_comment.json"
+    ],
+    "nonempty": [
+      "create_comment.json"
+    ]
+  }
+}

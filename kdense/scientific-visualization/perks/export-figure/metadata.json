@@ -1,0 +1,21 @@
+{
+  "perk": "export-figure",
+  "skill": "scientific-visualization",
+  "description": "Render a CSV (first column = x, remaining columns = y series) into a publication-styled matplotlib line figure and save it in the requested formats/DPI via save_publication_figure().",
+  "rules": [
+    "read-only with respect to inputs; only writes under record_store",
+    "first CSV column is x, every remaining numeric column is a plotted y series",
+    "FORMATS defaults to pdf,png and DPI defaults to 300; vector formats cap embedded-raster DPI at 300",
+    "degrades gracefully (writes a non-empty manifest, exits 0) when matplotlib/numpy are absent"
+  ],
+  "usage": "Set DATA_CSV (CSV with header + numeric columns). Optional FORMATS (comma list) and DPI. Outputs: figure_export.json manifest plus figure.<fmt> files.",
+  "limitation": "Produces a simple multi-series line plot only; for bespoke multi-panel layouts call matplotlib directly. Figure files require matplotlib + numpy present.",
+  "minimal_example": {
+    "perk": "export-figure",
+    "vars": {
+      "DATA_CSV": "./series.csv",
+      "FORMATS": "pdf,png",
+      "DPI": "300"
+    }
+  }
+}

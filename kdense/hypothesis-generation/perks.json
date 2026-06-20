@@ -1,0 +1,13 @@
+{
+  "skill": "hypothesis-generation",
+  "perks": [
+    {
+      "id": "schematic",
+      "summary": "generate an AI publication-quality scientific schematic with iterative quality review (read-only; writes image + review-log under record_store)",
+      "destructive": false,
+      "tools": [
+        "gen_schematic"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "perk": "validate-trial-report",
+  "skill": "clinical-reports",
+  "description": "Validate a Clinical Study Report (CSR) against the ICH-E3 section structure (read-only).",
+  "rules": [
+    "read-only — never edits the input report",
+    "checks for the 15 ICH-E3 sections (synopsis, ethics, efficacy, safety, appendices, etc.) via header regex",
+    "computes a compliance rate and PASS / NEEDS_REVISION status",
+    "JSON validation report written to record_store"
+  ],
+  "usage": "Set REPORT_FILE (a CSR .md). Output: ich_e3_validation.json.",
+  "limitation": "Header-pattern heuristic only; detects presence of section headings, not their adequacy. Requires python3 (stdlib only).",
+  "minimal_example": {
+    "perk": "validate-trial-report",
+    "vars": {
+      "REPORT_FILE": "./csr.md"
+    }
+  }
+}

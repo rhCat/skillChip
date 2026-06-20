@@ -1,0 +1,35 @@
+{
+  "tool": "arbor_set_evidence",
+  "inputs": {
+    "NODE": {
+      "type": "string",
+      "required": true
+    },
+    "DEV_SCORE": {
+      "type": "string",
+      "required": false
+    },
+    "RESULT": {
+      "type": "string",
+      "required": false
+    },
+    "INSIGHT": {
+      "type": "string",
+      "required": false
+    },
+    "BRANCH_REF": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "set_evidence_report": {
+      "path": "${RECORD_STORE}/set_evidence.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/set_evidence.txt"
+  }
+}

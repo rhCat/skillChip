@@ -1,0 +1,10 @@
+{
+  "_perk": "scaffold_module",
+  "requires": ["python3", "bash"],
+  "vars": { "OUT_NAME": "lightning_module_template.py" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["lightning_module_template.py"],
+    "nonempty": ["lightning_module_template.py"]
+  }
+}

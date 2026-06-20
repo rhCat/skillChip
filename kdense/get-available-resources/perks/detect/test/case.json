@@ -1,0 +1,22 @@
+{
+  "_perk": "detect",
+  "requires": ["python3"],
+  "vars": {
+    "PROBE_PATH": "${FIXTURE}"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [".claude_resources.json"],
+    "nonempty": [".claude_resources.json"],
+    "contains": {
+      ".claude_resources.json": [
+        "\"recommendations\"",
+        "\"parallel_processing\"",
+        "\"memory_strategy\"",
+        "\"gpu_acceleration\"",
+        "\"large_data_handling\"",
+        "\"logical_cores\""
+      ]
+    }
+  }
+}

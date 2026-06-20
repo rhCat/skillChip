@@ -1,0 +1,16 @@
+{
+  "_perk": "dea",
+  "requires": ["python3"],
+  "vars": {
+    "COUNTS": "${FIXTURE}/counts.csv",
+    "METADATA": "${FIXTURE}/metadata.csv",
+    "DESIGN": "~condition",
+    "CONTRAST": "condition treated control",
+    "MIN_COUNTS": "10"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["deseq2_results.csv"],
+    "nonempty": ["deseq2_results.csv"]
+  }
+}

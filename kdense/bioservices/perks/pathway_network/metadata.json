@@ -1,0 +1,20 @@
+{
+  "perk": "pathway_network",
+  "skill": "bioservices",
+  "description": "Retrieve all KEGG pathways for an organism, parse each KGML for protein-protein interactions, and export a per-pathway summary CSV plus a combined SIF interaction network.",
+  "rules": [
+    "read-only — queries the KEGG API, writes local files only",
+    "ORGANISM is a KEGG organism code (hsa, mmu, dme, sce, eco, ...)",
+    "LIMIT caps analysis to the first N pathways (keep small to bound runtime/requests)",
+    "outputs written to record_store: pathway_summary.csv, all_interactions.sif, pathways/<id>_interactions.csv"
+  ],
+  "usage": "Set ORGANISM (KEGG code) and LIMIT (max pathways). Outputs: pathway_summary.csv, all_interactions.sif.",
+  "limitation": "Needs the bioservices Python package and internet access to KEGG. Offline / package-absent runs still produce pathway_summary.csv (degraded, may be empty). Full-organism runs with no LIMIT issue thousands of KEGG requests.",
+  "minimal_example": {
+    "perk": "pathway_network",
+    "vars": {
+      "ORGANISM": "hsa",
+      "LIMIT": "5"
+    }
+  }
+}

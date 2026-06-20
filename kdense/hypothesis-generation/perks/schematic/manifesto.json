@@ -1,0 +1,26 @@
+{
+  "_perk": "schematic",
+  "sequence": [
+    "gen_schematic"
+  ],
+  "tools": {
+    "gen_schematic": {
+      "binary": "python3",
+      "params": {
+        "SCHEMATIC_PROMPT": "${SCHEMATIC_PROMPT}",
+        "DOC_TYPE": "${DOC_TYPE}",
+        "ITERATIONS": "${ITERATIONS}"
+      }
+    }
+  },
+  "env": {
+    "SCHEMATIC_PROMPT": "${SCHEMATIC_PROMPT}",
+    "DOC_TYPE": "${DOC_TYPE}",
+    "ITERATIONS": "${ITERATIONS}",
+    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

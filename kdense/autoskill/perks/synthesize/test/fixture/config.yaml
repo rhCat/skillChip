@@ -1,0 +1,4 @@
+backend: local
+local:
+  endpoint: http://localhost:1234/v1
+  model: Gemma-4-31B-it

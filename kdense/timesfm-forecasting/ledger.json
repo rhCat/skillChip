@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for timesfm-forecasting — set perk, fill record_store + the vars the perk declares.",
+  "skill": "timesfm-forecasting",
+  "perk": "check-system",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "MODEL_VERSION": "v2.5"
+  }
+}

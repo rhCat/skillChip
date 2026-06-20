@@ -1,0 +1,24 @@
+{
+  "_perk": "add-node",
+  "sequence": [
+    "arbor_add_node"
+  ],
+  "tools": {
+    "arbor_add_node": {
+      "binary": "python3",
+      "params": {
+        "PARENT": "${PARENT}",
+        "HYPOTHESIS": "${HYPOTHESIS}"
+      }
+    }
+  },
+  "env": {
+    "PARENT": "${PARENT}",
+    "HYPOTHESIS": "${HYPOTHESIS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "perk": "complexity",
+  "skill": "medchem",
+  "description": "Filter molecules by a molecular-complexity percentile threshold against precomputed ZINC-15 distributions, writing a passes_complexity_<metric> boolean column (True = below the percentile threshold).",
+  "rules": [
+    "read-only — parses molecules and writes a results CSV; mutates nothing remote",
+    "INPUT may be .csv/.tsv (smiles column), .sdf, or .txt (one SMILES per line)",
+    "COMPLEXITY is the percentile limit (e.g. 99 keeps molecules below the 99th ZINC-15 percentile)",
+    "COMPLEXITY_METHOD is one of: bertz, sas, qed, clogp, whitlock, barone, smcm, twc",
+    "results written to record_store/complexity.csv"
+  ],
+  "usage": "Set INPUT (molecule file), COMPLEXITY (percentile e.g. 99), COMPLEXITY_METHOD (metric). Output: complexity.csv.",
+  "limitation": "Requires the medchem + datamol + rdkit + pandas stack (Python >=3.9); when absent the porter degrades gracefully and writes a stub so governance still runs offline.",
+  "minimal_example": {
+    "perk": "complexity",
+    "vars": {
+      "INPUT": "mols.txt",
+      "COMPLEXITY": "99",
+      "COMPLEXITY_METHOD": "bertz"
+    }
+  }
+}

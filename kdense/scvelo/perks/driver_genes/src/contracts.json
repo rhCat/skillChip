@@ -1,0 +1,27 @@
+{
+  "tool": "driver_genes",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "GROUPBY": {
+      "type": "string",
+      "required": false
+    },
+    "MIN_CORR": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "driver_genes_csv": {
+      "path": "${RECORD_STORE}/driver_genes.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/driver_genes.csv"
+  }
+}

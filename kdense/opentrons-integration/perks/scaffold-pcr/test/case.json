@@ -1,0 +1,11 @@
+{
+  "_perk": "scaffold-pcr",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["pcr_setup.py"],
+    "nonempty": ["pcr_setup.py"],
+    "contains": { "pcr_setup.py": "execute_profile" }
+  }
+}

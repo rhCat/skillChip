@@ -1,0 +1,13 @@
+{
+  "_perk": "substructure",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/mols.smi",
+    "PATTERN": "c1ccccc1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["report.csv"],
+    "nonempty": ["report.csv"]
+  }
+}

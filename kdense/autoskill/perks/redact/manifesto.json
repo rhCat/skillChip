@@ -1,0 +1,21 @@
+{
+  "_perk": "redact",
+  "sequence": [
+    "redact"
+  ],
+  "tools": {
+    "redact": {
+      "binary": "redact.sh",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

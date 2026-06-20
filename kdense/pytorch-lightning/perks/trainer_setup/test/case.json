@@ -1,0 +1,10 @@
+{
+  "_perk": "trainer_setup",
+  "requires": ["python3", "bash"],
+  "vars": { "OUT_NAME": "trainer_configs.py" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["trainer_configs.py"],
+    "nonempty": ["trainer_configs.py"]
+  }
+}

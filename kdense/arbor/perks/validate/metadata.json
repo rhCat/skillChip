@@ -1,0 +1,16 @@
+{
+  "perk": "validate",
+  "skill": "arbor",
+  "description": "check hypothesis-tree invariants and report any inconsistencies (read-only)",
+  "rules": [
+    "read-only — never mutates the tree or run config",
+    "checks that the root exists, parents resolve, statuses are valid, and best_node is consistent",
+    "exits non-zero inside the core if the tree is invalid (the porter still records the report)"
+  ],
+  "usage": "Set RECORD_STORE pointing at an existing Arbor run. Output: validate.txt (prints OK with node count, or INVALID with the problems). If no run exists, an empty bootstrap run is created first.",
+  "limitation": "Structural invariant check only — it does not repair the tree or judge research quality.",
+  "minimal_example": {
+    "perk": "validate",
+    "vars": {}
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "rd_properties",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "rd_properties_out": {
+      "path": "${RECORD_STORE}/properties.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/properties.csv"
+  }
+}

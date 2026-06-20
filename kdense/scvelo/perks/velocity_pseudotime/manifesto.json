@@ -1,0 +1,21 @@
+{
+  "_perk": "velocity_pseudotime",
+  "sequence": [
+    "velocity_pseudotime"
+  ],
+  "tools": {
+    "velocity_pseudotime": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "_perk": "gen_chipseq_analysis",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT_BAM": "Input.bam",
+    "CHIP_BAM": "H3K4me3.bam",
+    "GENES_BED": "genes.bed",
+    "PEAKS_BED": "peaks.bed",
+    "GENOME_SIZE": "2913022398",
+    "THREADS": "4"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["chipseq_analysis.sh"],
+    "nonempty": ["chipseq_analysis.sh"],
+    "contains": {
+      "chipseq_analysis.sh": "ChIP-seq Complete Analysis Workflow"
+    }
+  }
+}

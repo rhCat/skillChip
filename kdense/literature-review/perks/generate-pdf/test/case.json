@@ -1,0 +1,15 @@
+{
+  "_perk": "generate-pdf",
+  "requires": ["python3"],
+  "vars": {
+    "REVIEW_MD": "${FIXTURE}/review.md",
+    "CITATION_STYLE": "apa",
+    "TOC": "1",
+    "NUMBER_SECTIONS": "1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["run.log"],
+    "nonempty": ["run.log"]
+  }
+}

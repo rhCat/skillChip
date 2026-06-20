@@ -1,0 +1,18 @@
+{
+  "perk": "export_sirius",
+  "skill": "pyopenms",
+  "description": "Export a SIRIUS .ms file (and a compound-info TSV) from mzML + optional featureXML using SiriusExportAlgorithm, for downstream formula/structure elucidation in SIRIUS.",
+  "rules": [
+    "INPUT is an mzML (with MS2); FEATUREXML optionally groups spectra",
+    "writes export.ms and export_compounds.tsv under record_store",
+    "the mzML must carry SourceFile metadata; synthetic/hand-built mzML may fail this (re-export through OpenMS FileConverter)"
+  ],
+  "usage": "Set INPUT (mzML). Optional FEATUREXML. Output: export.ms (+ export_compounds.tsv).",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) AND a SourceFile-annotated mzML; if absent or unannotated the core exits early and the porter records the reason while still creating export.ms.",
+  "minimal_example": {
+    "perk": "export_sirius",
+    "vars": {
+      "INPUT": "sample.mzML"
+    }
+  }
+}

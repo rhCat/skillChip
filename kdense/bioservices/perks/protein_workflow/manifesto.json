@@ -1,0 +1,22 @@
+{
+  "_perk": "protein_workflow",
+  "sequence": [
+    "protein_workflow"
+  ],
+  "tools": {
+    "protein_workflow": {
+      "binary": "python3",
+      "params": {
+        "PROTEIN": "${PROTEIN}"
+      }
+    }
+  },
+  "env": {
+    "PROTEIN": "${PROTEIN}",
+    "NCBI_EMAIL": "${NCBI_EMAIL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

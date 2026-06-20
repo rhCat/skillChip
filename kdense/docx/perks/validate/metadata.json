@@ -1,0 +1,18 @@
+{
+  "perk": "validate",
+  "skill": "docx",
+  "description": "Validate a .docx (or an unpacked dir) against OOXML XSD schemas plus tracked-changes (redlining) rules, with auto-repair of hex IDs and whitespace preservation.",
+  "rules": [
+    "read-only re: the user's documents; --auto-repair acts only on a temp/unpacked copy",
+    "checks XML well-formedness, namespaces, unique IDs, references, content-types, XSD, redlining",
+    "with ORIGINAL_DOCX set, reports only NEW errors vs the original"
+  ],
+  "usage": "Set DOCX_PATH (a .docx file or unpacked dir). Optional ORIGINAL_DOCX for new-error-only diffing. Output: validate.txt.",
+  "limitation": "The vendored validators import defusedxml; if absent the porter records the import error and exits 0 with an empty report (degraded). With defusedxml + lxml present it runs the full validation suite.",
+  "minimal_example": {
+    "perk": "validate",
+    "vars": {
+      "DOCX_PATH": "edited.docx"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "perk": "list_options",
+  "skill": "infographics",
+  "description": "list available infographic types, industry styles, colorblind-safe palettes, and document-type quality thresholds (read-only, offline)",
+  "rules": [
+    "read-only — prints reference options, no generation",
+    "fully offline — needs no API key and no network",
+    "captures the option listing to options.txt under record_store"
+  ],
+  "usage": "No vars required. Runs `generate_infographic.py --list-options`. Output: options.txt.",
+  "limitation": "Informational only: enumerates the 10 types / 8 styles / 3 palettes / 7 doc-type thresholds. Generates no infographic.",
+  "minimal_example": {
+    "perk": "list_options",
+    "vars": {}
+  }
+}

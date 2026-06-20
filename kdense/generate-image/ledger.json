@@ -1,0 +1,12 @@
+{
+  "_schema": "task-ledger TEMPLATE for generate-image — set perk, fill record_store + the vars the perk declares.",
+  "skill": "generate-image",
+  "perk": "generate",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PROMPT": "<text description of the image to generate>",
+    "MODEL": "google/gemini-3.1-flash-image-preview",
+    "OUTPUT_NAME": "generated_image.png",
+    "OPENROUTER_API_KEY": "<OpenRouter API key>"
+  }
+}

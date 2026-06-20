@@ -1,0 +1,37 @@
+{
+  "skill": "liteparse",
+  "perks": [
+    {
+      "id": "parse",
+      "summary": "parse one document/PDF to layout-preserved text or bbox JSON (lit parse)",
+      "destructive": false,
+      "tools": [
+        "lit_parse"
+      ]
+    },
+    {
+      "id": "screenshot",
+      "summary": "render document pages to PNG files for multimodal agents (lit screenshot)",
+      "destructive": false,
+      "tools": [
+        "lit_screenshot"
+      ]
+    },
+    {
+      "id": "batch_parse",
+      "summary": "parse every supported file in a directory to text or JSON (vendored batch_parse_dir.py)",
+      "destructive": false,
+      "tools": [
+        "batch_parse_dir"
+      ]
+    },
+    {
+      "id": "search_items",
+      "summary": "phrase-search parsed JSON text_items and return merged bounding boxes (stdlib, offline)",
+      "destructive": false,
+      "tools": [
+        "search_items"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "perk": "search",
+  "skill": "exa-search",
+  "description": "Run an Exa web search (search_and_contents) and write ranked results to JSON",
+  "rules": [
+    "read-only (queries the Exa API; mutates nothing remote)",
+    "requires the exa-py SDK, an EXA_API_KEY, and internet access",
+    "sets the x-exa-integration tracking header — do not remove",
+    "results written to record_store as search.json"
+  ],
+  "usage": "Set QUERY (and EXA_API_KEY). Optional: SEARCH_TYPE (auto|fast|deep), NUM_RESULTS, CATEGORY (e.g. 'research paper'), INCLUDE_DOMAINS / EXCLUDE_DOMAINS (comma-separated). Output: search.json.",
+  "limitation": "Read-only retrieval only. Needs network + a valid EXA_API_KEY; degrades to an empty {} report when the SDK or key is absent.",
+  "minimal_example": {
+    "perk": "search",
+    "vars": {
+      "QUERY": "transformer architectures",
+      "EXA_API_KEY": "exa-...",
+      "CATEGORY": "research paper"
+    }
+  }
+}

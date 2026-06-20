@@ -1,0 +1,24 @@
+{
+  "_perk": "visuals",
+  "sequence": [
+    "market_visuals"
+  ],
+  "tools": {
+    "market_visuals": {
+      "binary": "bash",
+      "params": {
+        "TOPIC": "${TOPIC}",
+        "ALL": "${ALL}"
+      }
+    }
+  },
+  "env": {
+    "TOPIC": "${TOPIC}",
+    "ALL": "${ALL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

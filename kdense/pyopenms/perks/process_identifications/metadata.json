@@ -1,0 +1,18 @@
+{
+  "perk": "process_identifications",
+  "skill": "pyopenms",
+  "description": "Post-process search-engine results (idXML): optionally re-index peptides against a protein FASTA, estimate FDR/q-values, filter by FDR threshold / peptide length / best-hit-per-spectrum, then export a filtered idXML and a flat CSV of peptide hits.",
+  "rules": [
+    "writes filtered.idXML and hits.csv under record_store",
+    "FASTA enables re-indexing (target/decoy + accessions); FDR requires decoys",
+    "filters: FDR, MIN_LENGTH/MAX_LENGTH, BEST_PER_SPECTRUM=1"
+  ],
+  "usage": "Set INPUT (idXML). Optional FASTA, FDR, MIN_LENGTH, MAX_LENGTH, BEST_PER_SPECTRUM=1. Output: filtered.idXML (+ hits.csv).",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) to produce real content; if absent the porter still creates filtered.idXML and records the reason.",
+  "minimal_example": {
+    "perk": "process_identifications",
+    "vars": {
+      "INPUT": "search.idXML"
+    }
+  }
+}

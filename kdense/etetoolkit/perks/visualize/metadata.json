@@ -1,0 +1,21 @@
+{
+  "perk": "visualize",
+  "skill": "etetoolkit",
+  "description": "Render a phylogenetic tree to a publication figure (PNG, PDF, or SVG) with rectangular or circular layout and default node styling.",
+  "rules": [
+    "read-only on input — emits an image file, never edits the source",
+    "IMAGE_FORMAT is the output extension: png, pdf, or svg",
+    "LAYOUT_MODE: r=rectangular, c=circular",
+    "image (tree.<ext>) + run log (visualize.log) written under record_store"
+  ],
+  "usage": "Set TREE_FILE (input Newick tree), IMAGE_FORMAT (png|pdf|svg, default pdf), LAYOUT_MODE (r|c, default r). Outputs: visualize.log (always) and tree.<ext> (when ete3 + Qt backend present).",
+  "limitation": "Rendering needs ete3 AND a Qt5 backend (system dependency); without them the porter records the failure in visualize.log and exits 0 (no image is produced). Cannot render headless/offline.",
+  "minimal_example": {
+    "perk": "visualize",
+    "vars": {
+      "TREE_FILE": "tree.nw",
+      "IMAGE_FORMAT": "pdf",
+      "LAYOUT_MODE": "r"
+    }
+  }
+}

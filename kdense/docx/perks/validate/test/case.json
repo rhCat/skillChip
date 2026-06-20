@@ -1,0 +1,10 @@
+{
+  "_perk": "validate",
+  "requires": ["bash", "python3"],
+  "vars": { "DOCX_PATH": "${FIXTURE}/sample.docx" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["validate.txt"],
+    "nonempty": ["validate.txt"]
+  }
+}

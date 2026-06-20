@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for pytorch-lightning — set perk, fill record_store + the vars the perk declares.",
+  "skill": "pytorch-lightning",
+  "perk": "scaffold_module",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "OUT_NAME": "lightning_module_template.py"
+  }
+}

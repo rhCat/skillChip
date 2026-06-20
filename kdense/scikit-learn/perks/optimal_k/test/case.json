@@ -1,0 +1,14 @@
+{
+  "_perk": "optimal_k",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_CSV": "${FIXTURE}/data.csv",
+    "K_MIN": "2",
+    "K_MAX": "4"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["optimal_k.json"],
+    "nonempty": ["optimal_k.json"]
+  }
+}

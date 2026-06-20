@@ -1,0 +1,23 @@
+{
+  "tool": "ete_leaves",
+  "inputs": {
+    "TREE_FILE": {
+      "type": "string",
+      "required": true
+    },
+    "TREE_FORMAT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "ete_leaves_out": {
+      "path": "${RECORD_STORE}/leaves.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/leaves.txt"
+  }
+}

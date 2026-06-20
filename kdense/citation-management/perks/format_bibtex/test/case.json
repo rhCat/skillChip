@@ -1,0 +1,15 @@
+{
+  "_perk": "format_bibtex",
+  "requires": ["python3"],
+  "vars": {
+    "BIB_FILE": "${FIXTURE}/refs.bib",
+    "SORT_BY": "year",
+    "DEDUPLICATE": "1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["formatted.bib"],
+    "nonempty": ["formatted.bib"],
+    "contains": { "formatted.bib": "583--589" }
+  }
+}

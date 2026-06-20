@@ -1,0 +1,12 @@
+{
+  "_schema": "task-ledger TEMPLATE for hypothesis-generation — set perk, fill record_store + the vars the perk declares.",
+  "skill": "hypothesis-generation",
+  "perk": "schematic",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "SCHEMATIC_PROMPT": "<natural-language description of the diagram>",
+    "DOC_TYPE": "journal",
+    "ITERATIONS": "2",
+    "OPENROUTER_API_KEY": "<OpenRouter API key for the LLM image + review steps>"
+  }
+}

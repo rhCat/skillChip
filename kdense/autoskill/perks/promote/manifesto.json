@@ -1,0 +1,25 @@
+{
+  "_perk": "promote",
+  "sequence": [
+    "promote"
+  ],
+  "tools": {
+    "promote": {
+      "binary": "promote.sh",
+      "params": {
+        "PROPOSED": "${PROPOSED}",
+        "SKILLS_DIR": "${SKILLS_DIR}",
+        "NAME": "${NAME}"
+      }
+    }
+  },
+  "env": {
+    "PROPOSED": "${PROPOSED}",
+    "SKILLS_DIR": "${SKILLS_DIR}",
+    "NAME": "${NAME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

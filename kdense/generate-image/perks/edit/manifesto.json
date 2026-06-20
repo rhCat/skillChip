@@ -1,0 +1,28 @@
+{
+  "_perk": "edit",
+  "sequence": [
+    "edit_image"
+  ],
+  "tools": {
+    "edit_image": {
+      "binary": "python3",
+      "params": {
+        "PROMPT": "${PROMPT}",
+        "INPUT_IMAGE": "${INPUT_IMAGE}",
+        "MODEL": "${MODEL}",
+        "OUTPUT_NAME": "${OUTPUT_NAME}"
+      }
+    }
+  },
+  "env": {
+    "PROMPT": "${PROMPT}",
+    "INPUT_IMAGE": "${INPUT_IMAGE}",
+    "MODEL": "${MODEL}",
+    "OUTPUT_NAME": "${OUTPUT_NAME}",
+    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

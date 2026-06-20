@@ -1,0 +1,32 @@
+{
+  "_perk": "chat_send",
+  "sequence": [
+    "chat_send"
+  ],
+  "tools": {
+    "chat_send": {
+      "binary": "bash",
+      "params": {
+        "OPEN_NOTEBOOK_URL": "${OPEN_NOTEBOOK_URL}",
+        "SESSION_ID": "${SESSION_ID}",
+        "CHAT_MESSAGE": "${CHAT_MESSAGE}",
+        "INCLUDE_SOURCES": "${INCLUDE_SOURCES}",
+        "INCLUDE_NOTES": "${INCLUDE_NOTES}",
+        "MODEL_OVERRIDE": "${MODEL_OVERRIDE}"
+      }
+    }
+  },
+  "env": {
+    "OPEN_NOTEBOOK_URL": "${OPEN_NOTEBOOK_URL}",
+    "SESSION_ID": "${SESSION_ID}",
+    "CHAT_MESSAGE": "${CHAT_MESSAGE}",
+    "INCLUDE_SOURCES": "${INCLUDE_SOURCES}",
+    "INCLUDE_NOTES": "${INCLUDE_NOTES}",
+    "MODEL_OVERRIDE": "${MODEL_OVERRIDE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

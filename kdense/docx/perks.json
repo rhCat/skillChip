@@ -1,0 +1,53 @@
+{
+  "skill": "docx",
+  "perks": [
+    {
+      "id": "extract",
+      "summary": "extract text/markdown from a .docx via pandoc, preserving tracked changes (read-only)",
+      "destructive": false,
+      "tools": [
+        "docx_extract"
+      ]
+    },
+    {
+      "id": "unpack",
+      "summary": "unpack a .docx into a pretty-printed XML directory (merges runs, escapes smart quotes)",
+      "destructive": false,
+      "tools": [
+        "docx_unpack"
+      ]
+    },
+    {
+      "id": "validate",
+      "summary": "validate a .docx (or unpacked dir) against OOXML XSD schemas + redlining rules, with auto-repair",
+      "destructive": false,
+      "tools": [
+        "docx_validate"
+      ]
+    },
+    {
+      "id": "comment",
+      "summary": "add a comment (or threaded reply) into an unpacked .docx directory's comment parts",
+      "destructive": false,
+      "tools": [
+        "docx_comment"
+      ]
+    },
+    {
+      "id": "pack",
+      "summary": "repack an unpacked XML directory into a .docx (validate + auto-repair + condense)",
+      "destructive": false,
+      "tools": [
+        "docx_pack"
+      ]
+    },
+    {
+      "id": "accept-changes",
+      "summary": "accept all tracked changes in a .docx via LibreOffice, writing a clean copy",
+      "destructive": false,
+      "tools": [
+        "docx_accept_changes"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "perk": "stratified-block-randomization",
+  "skill": "experimental-design",
+  "description": "Seeded block randomization run independently within each stratum, guaranteeing arm balance within every subgroup (e.g. site, sex, disease stage).",
+  "rules": [
+    "read-only — reads a JSON spec, writes a CSV; mutates no live service",
+    "seeded — each stratum uses seed+offset so the schedule is reproducible",
+    "strata is a dict {label: count} or a list of per-unit labels",
+    "needs numpy + pandas; no network or GPU"
+  ],
+  "usage": "Set SPEC_JSON to a JSON file with keys: strata (required dict {label:n} or list[str]), arms (list[str]), block_size (int), ratio (list[int]), seed (int). Output: allocation_schedule.csv under record_store.",
+  "limitation": "Too many strata (over-stratification) leaves tiny blocks and can undermine balance. No power/sample-size calculation.",
+  "minimal_example": {
+    "perk": "stratified-block-randomization",
+    "vars": {
+      "SPEC_JSON": "spec.json"
+    },
+    "spec.json": {
+      "strata": {"siteA": 8, "siteB": 6},
+      "arms": ["drug", "placebo"],
+      "seed": 1
+    }
+  }
+}

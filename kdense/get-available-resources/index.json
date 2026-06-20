@@ -1,0 +1,21 @@
+{
+  "skill": "get-available-resources",
+  "skill_sha": "3fee1d6196bfa0e6192b1088bc480327a47c56e56fe35cd814d53562bd509e11",
+  "file_count": 14,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "12bc3bb735342d6f9f490e992f1502ebd5a39640bad5da647d46ba1156e5dada",
+    "blueprint.drawio": "d5702adb5908aede39666baefdb9039dd9ad883ae8625db7e82128f555f2196b",
+    "blueprint.json": "cdf50571fa8b8b49450a03e94a5d3bce438226400867a9919131f79c903c6c4d",
+    "blueprint.svg": "a3626c8ed52d5cd70a30e8b21828b733740b59d1f1db3eec87958b484f2901d1",
+    "ledger.json": "4b53a10f804d1c63d65684e5b6b73b54d755126c24b19ed4fe4c4ed2f6d179ca",
+    "perks.json": "099a1e95fcd00446474c460ef0c563ca94d82d39389d1ba3a9c5adb646b1e534",
+    "perks/detect/manifesto.json": "c2f715ed3164c7fbd5bec98a787f5d44df660880b3d8a112b28ed521f657ec01",
+    "perks/detect/metadata.json": "33e0822611de446b5df4e1cf297c4370bf42cb2a0016cbadccf108de6d5cd4e4",
+    "perks/detect/src/contracts.json": "f7e16704eef3d46a5508c611e1d83a3792b480494cd37c734c98645566ec6352",
+    "perks/detect/src/detect_resources.py": "636e0de7bda128c27091142083c38b26a51f47728124e7ea4a0bcc680a64700b",
+    "perks/detect/src/detect_resources.sh": "eb6f0a48e283deed98d1c517e4dd8fb1060748d8d9988b47540b4ebe539aa654",
+    "perks/detect/test/case.json": "e30a39578f4993d8e908a103dce8ff35f43acc2357e2966394505fe7d7d7fc16",
+    "perks/detect/test/fixture/.gitkeep": "d43c553ffd8e9e36466932f66762469508ce9167064a53c529cd47dad90bb430"
+  }
+}

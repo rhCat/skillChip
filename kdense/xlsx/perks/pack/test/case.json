@@ -1,0 +1,13 @@
+{
+  "_perk": "pack",
+  "requires": ["python3"],
+  "vars": {
+    "PACK_DIR": "${FIXTURE}/unpacked",
+    "OUT_FILE": "out.xlsx"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["pack.json"],
+    "nonempty": ["pack.json"]
+  }
+}

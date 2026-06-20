@@ -1,0 +1,19 @@
+{
+  "tool": "update_schema",
+  "inputs": {
+    "SCHEMA_URL": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "bids_schema_out": {
+      "path": "${RECORD_STORE}/bids_schema.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/bids_schema.json"
+  }
+}

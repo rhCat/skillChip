@@ -1,0 +1,14 @@
+{
+  "_perk": "prune",
+  "requires": ["python3"],
+  "vars": {
+    "NODE": "n1",
+    "REASON": "search-augmented judge overfits dev questions; no test transfer"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["prune.txt"],
+    "nonempty": ["prune.txt"],
+    "contains": { "prune.txt": "Pruned" }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "tool": "digest_protein",
+  "inputs": {
+    "FASTA": {
+      "type": "string",
+      "required": false
+    },
+    "SEQUENCE": {
+      "type": "string",
+      "required": false
+    },
+    "ENZYME": {
+      "type": "string",
+      "required": false
+    },
+    "MISSED": {
+      "type": "string",
+      "required": false
+    },
+    "MIN_LENGTH": {
+      "type": "string",
+      "required": false
+    },
+    "MAX_LENGTH": {
+      "type": "string",
+      "required": false
+    },
+    "CHARGES": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "peptides": {
+      "path": "${RECORD_STORE}/peptides.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/peptides.csv"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_perk": "pathway_network",
+  "sequence": [
+    "pathway_network"
+  ],
+  "tools": {
+    "pathway_network": {
+      "binary": "python3",
+      "params": {
+        "ORGANISM": "${ORGANISM}",
+        "LIMIT": "${LIMIT}"
+      }
+    }
+  },
+  "env": {
+    "ORGANISM": "${ORGANISM}",
+    "LIMIT": "${LIMIT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

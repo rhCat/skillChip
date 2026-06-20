@@ -1,0 +1,23 @@
+{
+  "tool": "cluster_compare",
+  "inputs": {
+    "DATA_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "N_CLUSTERS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "cluster_compare_out": {
+      "path": "${RECORD_STORE}/cluster_compare.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/cluster_compare.json"
+  }
+}

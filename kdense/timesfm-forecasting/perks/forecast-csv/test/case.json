@@ -1,0 +1,15 @@
+{
+  "_perk": "forecast-csv",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT_CSV": "${FIXTURE}/series.csv",
+    "HORIZON": "3",
+    "DATE_COL": "date",
+    "VALUE_COLS": "sales"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["forecasts.json"],
+    "nonempty": ["forecasts.json"]
+  }
+}

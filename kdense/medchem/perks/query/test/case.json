@@ -1,0 +1,13 @@
+{
+  "_perk": "query",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/mols.txt",
+    "QUERY": "MATCHRULE(\"rule_of_five\") AND NOT HASALERT(\"pains\")"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["query.csv"],
+    "nonempty": ["query.csv"]
+  }
+}

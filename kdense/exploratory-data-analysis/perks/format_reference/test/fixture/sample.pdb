@@ -1,0 +1,4 @@
+HEADER    TEST STRUCTURE
+ATOM      1  N   MET A   1      11.104  13.207  10.567  1.00 20.00           N
+ATOM      2  CA  MET A   1      12.560  13.207  10.567  1.00 20.00           C
+END

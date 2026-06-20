@@ -1,0 +1,13 @@
+{
+  "_perk": "make-style",
+  "requires": ["bash", "python3"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["style_template.json", "publication.mplstyle"],
+    "nonempty": ["style_template.json"],
+    "contains": {
+      "publication.mplstyle": "axes.prop_cycle"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_perk": "explore",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_PATH": "${FIXTURE}",
+    "STREAM_NAME": "imec0.ap"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["explore_report.txt"],
+    "nonempty": ["explore_report.txt"]
+  }
+}

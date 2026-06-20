@@ -1,0 +1,21 @@
+{
+  "perk": "all",
+  "skill": "hugging-science",
+  "description": "Fetch and parse the full Hugging Science catalog (llms-full.txt) — every entry across all domains — into markdown or JSON, optionally filtered.",
+  "rules": [
+    "read-only — HTTPS GET against huggingscience.co, no mutation",
+    "RAW optional: any non-empty value prints the untouched file (--raw)",
+    "FILTER optional: datasets | models | blogs",
+    "TAG optional: case-insensitive tag substring",
+    "FORMAT optional: markdown (default) | json",
+    "output written to record_store/catalog.out"
+  ],
+  "usage": "No required vars. Optional: RAW, FILTER, TAG, FORMAT. Output: catalog.out.",
+  "limitation": "Needs network to reach huggingscience.co; offline the porter records the failure and emits a non-empty file. The full catalog is large — prefer `topic` or `search` when you know the domain/keyword.",
+  "minimal_example": {
+    "perk": "all",
+    "vars": {
+      "FILTER": "models"
+    }
+  }
+}

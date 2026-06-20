@@ -1,0 +1,23 @@
+{
+  "tool": "structure_convert",
+  "inputs": {
+    "INPUT_FILE": {
+      "type": "string",
+      "required": true
+    },
+    "OUTPUT_FORMAT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "convert_log": {
+      "path": "${RECORD_STORE}/convert.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/convert.log"
+  }
+}

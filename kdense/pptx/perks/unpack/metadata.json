@@ -1,0 +1,18 @@
+{
+  "perk": "unpack",
+  "skill": "pptx",
+  "description": "Unpack a .pptx (a ZIP archive) into a pretty-printed XML directory for editing: extracts all parts, pretty-prints every .xml/.rels, and escapes smart quotes so the tree is hand-editable. (Run merging / redline simplification applies to DOCX only.)",
+  "rules": [
+    "requires defusedxml (vendored core imports defusedxml.minidom for pretty-printing); degrades gracefully when absent",
+    "the unpacked tree is written to a 'unpacked' subdir under record_store; a one-line summary is captured to unpack.log",
+    "non-destructive to the source — PPTX_FILE is only read"
+  ],
+  "usage": "Set PPTX_FILE (path to a .pptx). Output: unpacked/ (editable XML tree) plus unpack.log. Edit the tree, then use the pack perk to rebuild.",
+  "limitation": "Accepts .docx/.pptx/.xlsx; this perk is scoped to .pptx. The merge-runs / simplify-redlines passes are DOCX-only no-ops here.",
+  "minimal_example": {
+    "perk": "unpack",
+    "vars": {
+      "PPTX_FILE": "presentation.pptx"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_perk": "setup-config",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "LA_API_URL": "https://api.labarchives.com/api",
+    "LA_ACCESS_KEY_ID": "demo_key",
+    "LA_ACCESS_PASSWORD": "demo_pass",
+    "LA_USER_EMAIL": "user@example.edu",
+    "LA_USER_EXTERNAL_PASSWORD": "ext_app_pass"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "setup_config.json"
+    ],
+    "nonempty": [
+      "setup_config.json"
+    ]
+  }
+}

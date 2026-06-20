@@ -1,0 +1,21 @@
+{
+  "_perk": "update_schema",
+  "sequence": [
+    "update_schema"
+  ],
+  "tools": {
+    "update_schema": {
+      "binary": "python3",
+      "params": {
+        "SCHEMA_URL": "${SCHEMA_URL}"
+      }
+    }
+  },
+  "env": {
+    "SCHEMA_URL": "${SCHEMA_URL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

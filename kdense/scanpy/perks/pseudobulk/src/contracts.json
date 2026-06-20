@@ -1,0 +1,23 @@
+{
+  "tool": "pseudobulk",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "BY": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "pseudobulk_counts": {
+      "path": "${RECORD_STORE}/pseudobulk_counts.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pseudobulk_counts.csv"
+  }
+}

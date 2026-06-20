@@ -1,0 +1,27 @@
+{
+  "tool": "pdf_to_images",
+  "inputs": {
+    "PDF_PATH": {
+      "type": "string",
+      "required": true
+    },
+    "DPI": {
+      "type": "string",
+      "required": false
+    },
+    "IMAGE_FORMAT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "pdf_to_images_manifest": {
+      "path": "${RECORD_STORE}/pdf_to_images.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pdf_to_images.json"
+  }
+}

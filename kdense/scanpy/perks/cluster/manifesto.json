@@ -1,0 +1,25 @@
+{
+  "_perk": "cluster",
+  "sequence": [
+    "cluster"
+  ],
+  "tools": {
+    "cluster": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "RESOLUTION": "${RESOLUTION}",
+    "ALGORITHM": "${ALGORITHM}",
+    "KEY": "${KEY}",
+    "NO_PLOTS": "${NO_PLOTS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

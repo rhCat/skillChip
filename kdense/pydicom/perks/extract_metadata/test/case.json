@@ -1,0 +1,16 @@
+{
+  "_perk": "extract_metadata",
+  "requires": ["python3"],
+  "vars": {
+    "DICOM_IN": "${FIXTURE}/sample.dcm",
+    "META_FORMAT": "text"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["metadata.txt"],
+    "nonempty": ["metadata.txt"],
+    "contains": {
+      "metadata.txt": ["DICOM Metadata", "Doe^John", "CT"]
+    }
+  }
+}

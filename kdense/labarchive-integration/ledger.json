@@ -1,0 +1,13 @@
+{
+  "_schema": "task-ledger TEMPLATE for labarchive-integration — set perk, fill record_store + the vars the perk declares.",
+  "skill": "labarchive-integration",
+  "perk": "setup-config",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "LA_API_URL": "https://api.labarchives.com/api",
+    "LA_ACCESS_KEY_ID": "<institutional access key id>",
+    "LA_ACCESS_PASSWORD": "<institutional access password>",
+    "LA_USER_EMAIL": "<your LabArchives login email>",
+    "LA_USER_EXTERNAL_PASSWORD": "<external applications password>"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_perk": "params",
+  "sequence": [
+    "build_params"
+  ],
+  "tools": {
+    "build_params": {
+      "binary": "bash",
+      "params": {
+        "OUTDIR": "${OUTDIR}",
+        "SAMPLESHEET": "${SAMPLESHEET}",
+        "FASTA": "${FASTA}",
+        "GENOME": "${GENOME}"
+      }
+    }
+  },
+  "env": {
+    "OUTDIR": "${OUTDIR}",
+    "SAMPLESHEET": "${SAMPLESHEET}",
+    "FASTA": "${FASTA}",
+    "GENOME": "${GENOME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

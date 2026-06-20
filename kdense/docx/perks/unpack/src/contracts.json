@@ -1,0 +1,19 @@
+{
+  "tool": "docx_unpack",
+  "inputs": {
+    "DOCX_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "docx_unpack_log": {
+      "path": "${RECORD_STORE}/unpack.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/unpack.log"
+  }
+}

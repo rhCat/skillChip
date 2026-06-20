@@ -1,0 +1,21 @@
+{
+  "_perk": "nibr",
+  "sequence": [
+    "mc_nibr"
+  ],
+  "tools": {
+    "mc_nibr": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

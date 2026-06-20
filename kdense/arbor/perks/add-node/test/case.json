@@ -1,0 +1,14 @@
+{
+  "_perk": "add-node",
+  "requires": ["python3"],
+  "vars": {
+    "PARENT": "n0",
+    "HYPOTHESIS": "Verification, not retrieval, is the bottleneck"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["add_node.txt"],
+    "nonempty": ["add_node.txt"],
+    "contains": { "add_node.txt": "Added direction node" }
+  }
+}

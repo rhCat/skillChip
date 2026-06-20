@@ -1,0 +1,4 @@
+{
+  "_perk": "schematic",
+  "skip": "needs OPENROUTER_API_KEY secret + the requests library + outbound network to openrouter.ai to generate the image; cannot run offline."
+}

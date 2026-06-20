@@ -1,0 +1,23 @@
+{
+  "perk": "gen_chipseq_qc",
+  "skill": "deeptools",
+  "description": "Generate a ChIP-seq quality-control workflow bash script: sample correlation (multiBamSummary + plotCorrelation), PCA (plotPCA), coverage (plotCoverage), fragment size (bamPEFragmentSize), and ChIP enrichment (plotFingerprint).",
+  "rules": [
+    "read-only — emits a bash script template; never runs deepTools or touches sequencing data",
+    "INPUT_BAM is the control/input BAM; CHIP_BAMS is a space-separated list of ChIP BAMs",
+    "all vars optional — unset ones use the generator's safe defaults",
+    "filenames are sanitized (no shell metacharacters, no '..' segments) before interpolation",
+    "generated script written to record_store/chipseq_qc.sh"
+  ],
+  "usage": "Optionally set INPUT_BAM, CHIP_BAMS (space-separated), GENOME_SIZE, THREADS. Output: chipseq_qc.sh (a customizable bash workflow to review and run separately).",
+  "limitation": "Produces a template script only. Running it requires deepTools 3.5.6 installed (bamCoverage, plotFingerprint, etc.). Paths must satisfy the sanitizer pattern [A-Za-z0-9._/-].",
+  "minimal_example": {
+    "perk": "gen_chipseq_qc",
+    "vars": {
+      "INPUT_BAM": "Input.bam",
+      "CHIP_BAMS": "ChIP1.bam ChIP2.bam",
+      "GENOME_SIZE": "2913022398",
+      "THREADS": "8"
+    }
+  }
+}

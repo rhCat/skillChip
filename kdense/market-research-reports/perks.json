@@ -1,0 +1,13 @@
+{
+  "skill": "market-research-reports",
+  "perks": [
+    {
+      "id": "visuals",
+      "summary": "batch-generate the standard market-report visual set (growth, TAM/SAM/SOM, Porter, positioning, risk heatmap, +extended) for a topic; writes a manifest of every visual it plans/produces",
+      "destructive": false,
+      "tools": [
+        "market_visuals"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "_perk": "subset",
+  "sequence": [
+    "subset"
+  ],
+  "tools": {
+    "subset": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "OBS": "${OBS}",
+    "KEEP": "${KEEP}",
+    "DROP": "${DROP}",
+    "GENES": "${GENES}",
+    "RECOMPUTE_HVG": "${RECOMPUTE_HVG}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

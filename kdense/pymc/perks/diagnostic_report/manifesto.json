@@ -1,0 +1,23 @@
+{
+  "_perk": "diagnostic_report",
+  "sequence": [
+    "diagnostic_report"
+  ],
+  "tools": {
+    "diagnostic_report": {
+      "binary": "bash",
+      "params": {
+        "IDATA": "${IDATA}"
+      }
+    }
+  },
+  "env": {
+    "IDATA": "${IDATA}",
+    "VAR_NAMES": "${VAR_NAMES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

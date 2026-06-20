@@ -1,0 +1,12 @@
+{
+  "_schema": "task-ledger TEMPLATE for peer-review — set perk, fill record_store + the vars the perk declares.",
+  "skill": "peer-review",
+  "perk": "schematic",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PROMPT": "<natural-language description of the diagram to generate>",
+    "OUTPUT": "<output image filename, e.g. figure.png>",
+    "DOC_TYPE": "<journal|conference|poster|presentation|report|grant|thesis|preprint|default>",
+    "OPENROUTER_API_KEY": "<OpenRouter API key for AI generation + review>"
+  }
+}

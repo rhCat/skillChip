@@ -1,0 +1,24 @@
+{
+  "_perk": "phasediagram",
+  "sequence": [
+    "phase_diagram"
+  ],
+  "tools": {
+    "phase_diagram": {
+      "binary": "python3",
+      "params": {
+        "CHEMSYS": "${CHEMSYS}",
+        "COMPOSITION": "${COMPOSITION}"
+      }
+    }
+  },
+  "env": {
+    "CHEMSYS": "${CHEMSYS}",
+    "COMPOSITION": "${COMPOSITION}",
+    "MP_API_KEY": "${MP_API_KEY}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

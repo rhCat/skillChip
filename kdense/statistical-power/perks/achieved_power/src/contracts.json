@@ -1,0 +1,31 @@
+{
+  "tool": "power_achieved",
+  "inputs": {
+    "TEST": {
+      "type": "string",
+      "required": true
+    },
+    "EFFECT_SIZE": {
+      "type": "number",
+      "required": false
+    },
+    "NOBS1": {
+      "type": "number",
+      "required": false
+    },
+    "ALPHA": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "outputs": {
+    "achieved_power_out": {
+      "path": "${RECORD_STORE}/achieved_power.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/achieved_power.json"
+  }
+}

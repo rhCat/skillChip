@@ -1,0 +1,25 @@
+{
+  "_perk": "validation-image",
+  "sequence": [
+    "validation_image"
+  ],
+  "tools": {
+    "validation_image": {
+      "binary": "python3",
+      "params": {
+        "PAGE_NUMBER": "${PAGE_NUMBER}",
+        "FIELDS_JSON": "${FIELDS_JSON}",
+        "PAGE_IMAGE": "${PAGE_IMAGE}"
+      }
+    }
+  },
+  "env": {
+    "PAGE_NUMBER": "${PAGE_NUMBER}",
+    "FIELDS_JSON": "${FIELDS_JSON}",
+    "PAGE_IMAGE": "${PAGE_IMAGE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

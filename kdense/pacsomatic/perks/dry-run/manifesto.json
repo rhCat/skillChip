@@ -1,0 +1,38 @@
+{
+  "_perk": "dry-run",
+  "sequence": [
+    "dry_run"
+  ],
+  "tools": {
+    "dry_run": {
+      "binary": "python3",
+      "params": {
+        "PATIENT_ID": "${PATIENT_ID}",
+        "TUMOR_SAMPLE_ID": "${TUMOR_SAMPLE_ID}",
+        "NORMAL_SAMPLE_ID": "${NORMAL_SAMPLE_ID}",
+        "TUMOR_BAM": "${TUMOR_BAM}",
+        "NORMAL_BAM": "${NORMAL_BAM}",
+        "FASTA": "${FASTA}",
+        "GENOME": "${GENOME}",
+        "PROFILE": "${PROFILE}",
+        "EXECUTOR": "${EXECUTOR}"
+      }
+    }
+  },
+  "env": {
+    "PATIENT_ID": "${PATIENT_ID}",
+    "TUMOR_SAMPLE_ID": "${TUMOR_SAMPLE_ID}",
+    "NORMAL_SAMPLE_ID": "${NORMAL_SAMPLE_ID}",
+    "TUMOR_BAM": "${TUMOR_BAM}",
+    "NORMAL_BAM": "${NORMAL_BAM}",
+    "FASTA": "${FASTA}",
+    "GENOME": "${GENOME}",
+    "PROFILE": "${PROFILE}",
+    "EXECUTOR": "${EXECUTOR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

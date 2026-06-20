@@ -1,0 +1,19 @@
+{
+  "perk": "detect",
+  "skill": "get-available-resources",
+  "description": "detect CPU/GPU/memory/disk/OS and emit a JSON resource report with strategic recommendations (read-only)",
+  "rules": [
+    "read-only — only probes system state, never mutates anything",
+    "single detection pass writes one report: .claude_resources.json under record_store",
+    "GPU probe shells out to nvidia-smi / rocm-smi / sysctl + system_profiler when present; absent tools degrade to empty GPU lists",
+    "requires the psutil Python package for CPU/memory/disk; if psutil is missing the porter still emits a non-empty report"
+  ],
+  "usage": "Optionally set PROBE_PATH (dir whose disk space is measured; defaults to RECORD_STORE). Output: .claude_resources.json.",
+  "limitation": "Snapshot only — memory/disk figures change constantly. GPU detection depends on vendor CLIs being on PATH. CPU/memory/disk detail needs psutil installed.",
+  "minimal_example": {
+    "perk": "detect",
+    "vars": {
+      "PROBE_PATH": "."
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_perk": "counts_from_star",
+  "requires": ["python3"],
+  "vars": {
+    "QUANT_DIR": "${FIXTURE}",
+    "STRANDEDNESS": "reverse"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["counts/counts.csv", "counts/metadata_template.csv"],
+    "nonempty": ["counts/counts.csv"],
+    "contains": {
+      "counts/counts.csv": ["gene_id", "ENSG00000001", "760"]
+    }
+  }
+}

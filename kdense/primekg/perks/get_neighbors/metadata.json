@@ -1,0 +1,22 @@
+{
+  "perk": "get_neighbors",
+  "skill": "primekg",
+  "description": "list direct neighbors of a PrimeKG node, optionally filtered by relation type (read-only)",
+  "rules": [
+    "read-only — never mutates the graph or any remote service",
+    "scans both edge endpoints (x_id == NODE_ID and y_id == NODE_ID) and returns the opposite node each time",
+    "node ids are matched as strings, so numeric gene ids work without coercion",
+    "RELATION_TYPE narrows to one edge relation (e.g. disease_gene, drug_protein, disease_phenotype)",
+    "writes the neighbor records as JSON to record_store"
+  ],
+  "usage": "Set PRIMEKG_CSV (path to kg.csv) and NODE_ID (from search_nodes); optionally RELATION_TYPE. Output: get_neighbors.json.",
+  "limitation": "Depth-1 neighbors only. NODE_ID must be an exact PrimeKG id (use search_nodes first). Requires pandas and a local PrimeKG kg.csv edge list.",
+  "minimal_example": {
+    "perk": "get_neighbors",
+    "vars": {
+      "PRIMEKG_CSV": "/data/PrimeKG/kg.csv",
+      "NODE_ID": "EFO_0000249",
+      "RELATION_TYPE": "disease_gene"
+    }
+  }
+}

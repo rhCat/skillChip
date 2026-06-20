@@ -1,0 +1,21 @@
+{
+  "_perk": "compound_xref",
+  "sequence": [
+    "compound_xref"
+  ],
+  "tools": {
+    "compound_xref": {
+      "binary": "python3",
+      "params": {
+        "COMPOUND": "${COMPOUND}"
+      }
+    }
+  },
+  "env": {
+    "COMPOUND": "${COMPOUND}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

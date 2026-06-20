@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for phylogenetics — set perk, fill record_store + the vars the perk declares.",
+  "skill": "phylogenetics",
+  "perk": "align",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "INPUT_FASTA": "<unaligned FASTA file>"
+  }
+}

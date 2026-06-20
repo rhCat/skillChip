@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for research-lookup — set perk, fill record_store + the vars the perk declares.",
+  "skill": "research-lookup",
+  "perk": "research-lookup",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "QUERY": "<research query text>",
+    "FORCE_BACKEND": "<optional: parallel|perplexity, empty to auto-route>",
+    "OUTPUT_NAME": "<output filename, e.g. research_topic.md>"
+  }
+}

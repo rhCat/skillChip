@@ -1,0 +1,23 @@
+{
+  "tool": "check_diagnostics",
+  "inputs": {
+    "IDATA": {
+      "type": "string",
+      "required": true
+    },
+    "VAR_NAMES": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "diagnostics_out": {
+      "path": "${RECORD_STORE}/diagnostics.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/diagnostics.json"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_perk": "score",
+  "sequence": [
+    "calculate_scores"
+  ],
+  "tools": {
+    "calculate_scores": {
+      "binary": "python3",
+      "params": {
+        "SCORES_JSON": "${SCORES_JSON}"
+      }
+    }
+  },
+  "env": {
+    "SCORES_JSON": "${SCORES_JSON}",
+    "WEIGHTS_JSON": "${WEIGHTS_JSON}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

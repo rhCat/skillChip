@@ -1,0 +1,14 @@
+{
+  "_perk": "get_neighbors",
+  "requires": ["python3"],
+  "vars": {
+    "PRIMEKG_CSV": "${FIXTURE}/kg.csv",
+    "NODE_ID": "EFO_0000249",
+    "RELATION_TYPE": "disease_gene"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["get_neighbors.json"],
+    "nonempty": ["get_neighbors.json"]
+  }
+}

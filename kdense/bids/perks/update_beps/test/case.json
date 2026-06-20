@@ -1,0 +1,10 @@
+{
+  "_perk": "update_beps",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["beps.yml"],
+    "nonempty": ["beps.yml"]
+  }
+}

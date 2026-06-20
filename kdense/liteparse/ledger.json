@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for liteparse — set perk, fill record_store + the vars the perk declares.",
+  "skill": "liteparse",
+  "perk": "parse",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "INPUT_FILE": "<path to a PDF/document>",
+    "FORMAT": "text"
+  }
+}

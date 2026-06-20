@@ -1,0 +1,18 @@
+{
+  "perk": "accurate_mass_search",
+  "skill": "pyopenms",
+  "description": "Annotate detected features with putative metabolite identities by matching accurate masses against the HMDB databases using AccurateMassSearchEngine. Writes an annotated mzTab and a flat CSV of annotation hits.",
+  "rules": [
+    "input is a featureXML (or consensusXML)",
+    "writes annotations.mzTab and annotations.csv under record_store",
+    "the pip wheel ships HMDBMappingFile.tsv but NOT HMDB2StructMapping.tsv; supply DB_STRUCT (and DB_MAPPING) to use a custom structure DB"
+  ],
+  "usage": "Set INPUT (featureXML/consensusXML). Optional NEGATIVE=1, PPM, DB_MAPPING, DB_STRUCT. Output: annotations.mzTab (+ annotations.csv).",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) AND the HMDB structure DB; without the structure DB the core exits early and the porter records the reason while still creating annotations.mzTab.",
+  "minimal_example": {
+    "perk": "accurate_mass_search",
+    "vars": {
+      "INPUT": "features.featureXML"
+    }
+  }
+}

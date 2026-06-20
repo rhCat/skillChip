@@ -1,0 +1,31 @@
+{
+  "tool": "check_homogeneity",
+  "inputs": {
+    "DATA_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "VALUE_COL": {
+      "type": "string",
+      "required": true
+    },
+    "GROUP_COL": {
+      "type": "string",
+      "required": true
+    },
+    "ALPHA": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "homogeneity_report": {
+      "path": "${RECORD_STORE}/homogeneity.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/homogeneity.json"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_perk": "central-composite",
+  "requires": ["python3"],
+  "vars": { "SPEC_JSON": "${FIXTURE}/spec.json" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["experimental_runs.csv"],
+    "nonempty": ["experimental_runs.csv"]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "_perk": "simple-randomization",
+  "requires": ["python3"],
+  "vars": { "SPEC_JSON": "${FIXTURE}/spec.json" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["allocation_schedule.csv"],
+    "nonempty": ["allocation_schedule.csv"],
+    "contains": { "allocation_schedule.csv": ["unit_id,arm", "treatment"] }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "tool": "theoretical_spectrum",
+  "inputs": {
+    "PEPTIDE": {
+      "type": "string",
+      "required": true
+    },
+    "CHARGE": {
+      "type": "string",
+      "required": false
+    },
+    "IONS": {
+      "type": "string",
+      "required": false
+    },
+    "LOSSES": {
+      "type": "string",
+      "required": false
+    },
+    "PRECURSOR": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "peaks": {
+      "path": "${RECORD_STORE}/theoretical_peaks.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/theoretical_peaks.csv"
+  }
+}

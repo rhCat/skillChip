@@ -1,0 +1,25 @@
+{
+  "_perk": "generate-schematic",
+  "sequence": [
+    "generate_schematic"
+  ],
+  "tools": {
+    "generate_schematic": {
+      "binary": "python3",
+      "params": {
+        "PROMPT": "${PROMPT}",
+        "DOC_TYPE": "${DOC_TYPE}",
+        "OUTPUT_NAME": "${OUTPUT_NAME}"
+      }
+    }
+  },
+  "env": {
+    "PROMPT": "${PROMPT}",
+    "DOC_TYPE": "${DOC_TYPE}",
+    "OUTPUT_NAME": "${OUTPUT_NAME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

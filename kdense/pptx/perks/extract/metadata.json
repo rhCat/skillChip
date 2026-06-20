@@ -1,0 +1,18 @@
+{
+  "perk": "extract",
+  "skill": "pptx",
+  "description": "Extract the text content of a .pptx as Markdown using markitdown (python -m markitdown). Read-only — the deck is not modified; the extracted text is written to extract.md under record_store for downstream summarization, search, or QA grep.",
+  "rules": [
+    "read-only — never writes back to PPTX_FILE",
+    "requires markitdown with the [pptx] extra (pip install 'markitdown[pptx]'); degrades gracefully when the extra/module is absent",
+    "extracted Markdown is captured to extract.md under record_store"
+  ],
+  "usage": "Set PPTX_FILE (path to a .pptx). Output: extract.md (Markdown text dump).",
+  "limitation": "Text-only extraction — images, charts, and layout/positioning are not captured. For a visual overview use the thumbnail perk.",
+  "minimal_example": {
+    "perk": "extract",
+    "vars": {
+      "PPTX_FILE": "presentation.pptx"
+    }
+  }
+}

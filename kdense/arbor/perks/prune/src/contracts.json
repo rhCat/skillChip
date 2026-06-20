@@ -1,0 +1,23 @@
+{
+  "tool": "arbor_prune",
+  "inputs": {
+    "NODE": {
+      "type": "string",
+      "required": true
+    },
+    "REASON": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "prune_report": {
+      "path": "${RECORD_STORE}/prune.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/prune.txt"
+  }
+}

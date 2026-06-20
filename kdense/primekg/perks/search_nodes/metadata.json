@@ -1,0 +1,22 @@
+{
+  "perk": "search_nodes",
+  "skill": "primekg",
+  "description": "substring-search PrimeKG nodes by name, optionally filtered by node type (read-only)",
+  "rules": [
+    "read-only — never mutates the graph or any remote service",
+    "matches NAME_QUERY case-insensitively against node names across the union of x_* and y_* node columns",
+    "NODE_TYPE narrows results to one type (e.g. disease | drug | gene/protein)",
+    "returns at most the first 20 matches (the core's head(20))",
+    "writes the matches as JSON to record_store"
+  ],
+  "usage": "Set PRIMEKG_CSV (path to kg.csv) and NAME_QUERY; optionally NODE_TYPE. Output: search_nodes.json.",
+  "limitation": "Substring match only (no fuzzy/synonym search); capped at 20 results. Requires pandas and a local PrimeKG kg.csv edge list.",
+  "minimal_example": {
+    "perk": "search_nodes",
+    "vars": {
+      "PRIMEKG_CSV": "/data/PrimeKG/kg.csv",
+      "NAME_QUERY": "Alzheimer",
+      "NODE_TYPE": "disease"
+    }
+  }
+}

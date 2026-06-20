@@ -1,0 +1,18 @@
+{
+  "perk": "check_env",
+  "skill": "diffdock",
+  "description": "Diagnose the DiffDock environment: Python version, PyTorch + CUDA, PyTorch Geometric, core deps (numpy/scipy/pandas/RDKit/biopython), ESM, and DiffDock files/checkpoints (read-only).",
+  "rules": [
+    "read-only — imports/inspects only, never installs or modifies the environment",
+    "missing optional libraries are reported as failures, not crashes",
+    "full diagnostic report written to record_store"
+  ],
+  "usage": "Optionally set VERBOSE (any non-empty value enables --verbose). Output: setup_check.txt.",
+  "limitation": "Reports availability only; it does not install dependencies or download checkpoints. Checkpoint/DiffDock-file checks reflect the current working directory.",
+  "minimal_example": {
+    "perk": "check_env",
+    "vars": {
+      "VERBOSE": ""
+    }
+  }
+}

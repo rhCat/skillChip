@@ -1,0 +1,27 @@
+{
+  "_perk": "many_objective",
+  "sequence": [
+    "pymoo_many_objective"
+  ],
+  "tools": {
+    "pymoo_many_objective": {
+      "binary": "python3",
+      "params": {
+        "PROBLEM": "${PROBLEM}",
+        "N_OBJ": "${N_OBJ}",
+        "N_PARTITIONS": "${N_PARTITIONS}",
+        "N_GEN": "${N_GEN}"
+      }
+    }
+  },
+  "env": {
+    "PROBLEM": "${PROBLEM}",
+    "N_OBJ": "${N_OBJ}",
+    "N_PARTITIONS": "${N_PARTITIONS}",
+    "N_GEN": "${N_GEN}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

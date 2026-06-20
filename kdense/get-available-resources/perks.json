@@ -1,0 +1,13 @@
+{
+  "skill": "get-available-resources",
+  "perks": [
+    {
+      "id": "detect",
+      "summary": "detect CPU/GPU/memory/disk/OS and emit a JSON resource report with strategic recommendations (read-only)",
+      "destructive": false,
+      "tools": [
+        "detect_resources"
+      ]
+    }
+  ]
+}

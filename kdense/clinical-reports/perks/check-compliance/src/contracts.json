@@ -1,0 +1,19 @@
+{
+  "tool": "compliance_checker",
+  "inputs": {
+    "REPORT_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "compliance": {
+      "path": "${RECORD_STORE}/compliance.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/compliance.json"
+  }
+}

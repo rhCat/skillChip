@@ -1,0 +1,14 @@
+{
+  "_perk": "render_plot",
+  "requires": ["python3"],
+  "vars": {
+    "PLOT_TYPE": "line",
+    "PLOT_STYLE": "default",
+    "PLOT_OUT": "plot.png"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["plot.png"],
+    "nonempty": ["plot.png"]
+  }
+}

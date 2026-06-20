@@ -1,0 +1,29 @@
+{
+  "_perk": "digest_protein",
+  "sequence": [
+    "digest_protein"
+  ],
+  "tools": {
+    "digest_protein": {
+      "binary": "bash",
+      "params": {
+        "FASTA": "${FASTA}",
+        "SEQUENCE": "${SEQUENCE}"
+      }
+    }
+  },
+  "env": {
+    "FASTA": "${FASTA}",
+    "SEQUENCE": "${SEQUENCE}",
+    "ENZYME": "${ENZYME}",
+    "MISSED": "${MISSED}",
+    "MIN_LENGTH": "${MIN_LENGTH}",
+    "MAX_LENGTH": "${MAX_LENGTH}",
+    "CHARGES": "${CHARGES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

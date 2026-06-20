@@ -1,0 +1,12 @@
+{
+  "_perk": "custom_env",
+  "requires": ["python3"],
+  "vars": {
+    "GRID_SIZE": "5"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["check_env.json"],
+    "nonempty": ["check_env.json"]
+  }
+}

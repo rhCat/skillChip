@@ -1,0 +1,23 @@
+{
+  "perk": "cluster-randomization",
+  "skill": "experimental-design",
+  "description": "Seeded randomization of whole clusters (clinics, schools, litters) to arms; the cluster is the unit of randomization and of analysis-level independence.",
+  "rules": [
+    "read-only — reads a JSON spec, writes a CSV; mutates no live service",
+    "seeded — the exact schedule is reproducible from SPEC_JSON.seed",
+    "one row per cluster; uses blocking across clusters for arm balance",
+    "needs numpy + pandas; no network or GPU"
+  ],
+  "usage": "Set SPEC_JSON to a JSON file with keys: clusters (required list[str] of ids or int count), arms (list[str]), ratio (list[int]), block_size (int), seed (int). Output: cluster_allocation.csv under record_store.",
+  "limitation": "Analyze with a method that accounts for clustering (mixed model / GEE); treating members as independent is pseudoreplication. With few clusters, balance and power are limited.",
+  "minimal_example": {
+    "perk": "cluster-randomization",
+    "vars": {
+      "SPEC_JSON": "spec.json"
+    },
+    "spec.json": {
+      "clusters": ["clinic1", "clinic2", "clinic3", "clinic4"],
+      "seed": 1
+    }
+  }
+}

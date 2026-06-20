@@ -1,0 +1,21 @@
+{
+  "_perk": "simple-randomization",
+  "sequence": [
+    "simple_randomization"
+  ],
+  "tools": {
+    "simple_randomization": {
+      "binary": "python3",
+      "params": {
+        "SPEC_JSON": "${SPEC_JSON}"
+      }
+    }
+  },
+  "env": {
+    "SPEC_JSON": "${SPEC_JSON}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

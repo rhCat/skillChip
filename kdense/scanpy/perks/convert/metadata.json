@@ -1,0 +1,18 @@
+{
+  "perk": "convert",
+  "skill": "scanpy",
+  "description": "Load any supported single-cell format (10x mtx dir, 10x .h5, CSV/TSV, loom, mtx) and write it as a single .h5ad so later steps read one fast format.",
+  "rules": [
+    "read-only input — writes a new data.h5ad under record_store, never overwrites the input",
+    "optional TRANSPOSE for genes x cells matrices; optional MAKE_UNIQUE to dedupe gene names",
+    "R-native files (.rds/Seurat/SingleCellExperiment) must be converted with R first (see references/r_interop.md)"
+  ],
+  "usage": "Set INPUT (10x mtx dir/.h5, .csv, .loom, .mtx). Optional: TRANSPOSE=1, MAKE_UNIQUE=1. Output: data.h5ad.",
+  "limitation": "Requires scanpy installed to read/write AnnData; without it the porter writes a {} placeholder data.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "convert",
+    "vars": {
+      "INPUT": "filtered_feature_bc_matrix/"
+    }
+  }
+}

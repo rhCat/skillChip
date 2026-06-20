@@ -1,0 +1,21 @@
+{
+  "skill": "exa-search",
+  "perks": [
+    {
+      "id": "search",
+      "summary": "Run an Exa web search (search_and_contents) and write ranked results to JSON",
+      "destructive": false,
+      "tools": [
+        "exa_search"
+      ]
+    },
+    {
+      "id": "extract",
+      "summary": "Fetch + extract content from one or more URLs via Exa /contents and write to JSON",
+      "destructive": false,
+      "tools": [
+        "exa_extract"
+      ]
+    }
+  ]
+}

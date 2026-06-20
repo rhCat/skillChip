@@ -1,0 +1,20 @@
+{
+  "perk": "extract_metadata",
+  "skill": "pydicom",
+  "description": "read a DICOM file and extract its metadata (patient/study/series/image elements) as formatted text or JSON",
+  "rules": [
+    "read-only on the input .dcm",
+    "output (metadata.txt or metadata.json) written to record_store",
+    "META_FORMAT selects text (default) or json",
+    "degrades gracefully when pydicom is not importable"
+  ],
+  "usage": "Set DICOM_IN (input .dcm file). Optional META_FORMAT (text|json, default text). Output: metadata.txt or metadata.json under record_store.",
+  "limitation": "Read-only: parses metadata only. Sequences (VR 'SQ') are summarised, not expanded. Requires pydicom; degrades to a placeholder if pydicom is absent.",
+  "minimal_example": {
+    "perk": "extract_metadata",
+    "vars": {
+      "DICOM_IN": "sample.dcm",
+      "META_FORMAT": "text"
+    }
+  }
+}

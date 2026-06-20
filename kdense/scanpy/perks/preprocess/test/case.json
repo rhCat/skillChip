@@ -1,0 +1,12 @@
+{
+  "_perk": "preprocess",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.csv"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["normalized.h5ad"],
+    "nonempty": ["normalized.h5ad"]
+  }
+}

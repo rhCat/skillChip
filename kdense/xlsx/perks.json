@@ -1,0 +1,29 @@
+{
+  "skill": "xlsx",
+  "perks": [
+    {
+      "id": "recalc",
+      "summary": "recalculate all formulas in an .xlsx/.xlsm workbook via LibreOffice and scan every cell for Excel errors (read-only report)",
+      "destructive": false,
+      "tools": [
+        "recalc"
+      ]
+    },
+    {
+      "id": "unpack",
+      "summary": "unpack an Office workbook (.xlsx/.docx/.pptx) ZIP into a pretty-printed XML directory tree for editing",
+      "destructive": false,
+      "tools": [
+        "unpack"
+      ]
+    },
+    {
+      "id": "pack",
+      "summary": "pack an unpacked XML directory tree back into an Office workbook (.xlsx/.docx/.pptx), condensing XML",
+      "destructive": false,
+      "tools": [
+        "pack"
+      ]
+    }
+  ]
+}

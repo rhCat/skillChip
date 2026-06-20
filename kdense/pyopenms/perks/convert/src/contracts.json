@@ -1,0 +1,39 @@
+{
+  "tool": "convert_format",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "OUT_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "MS_LEVEL": {
+      "type": "string",
+      "required": false
+    },
+    "RT_MIN": {
+      "type": "string",
+      "required": false
+    },
+    "RT_MAX": {
+      "type": "string",
+      "required": false
+    },
+    "MIN_INTENSITY": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "converted": {
+      "path": "${RECORD_STORE}/${OUT_NAME}",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/${OUT_NAME}"
+  }
+}

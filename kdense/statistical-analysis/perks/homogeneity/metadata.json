@@ -1,0 +1,22 @@
+{
+  "perk": "homogeneity",
+  "skill": "statistical-analysis",
+  "description": "Levene's test for homogeneity of variance across groups in a CSV (+ box/variance figure).",
+  "rules": [
+    "read-only — input CSV is never mutated",
+    "groups the value column by the group column and runs Levene's test",
+    "reports the variance ratio (max/min) alongside the test",
+    "JSON report + PNG figure written to record_store"
+  ],
+  "usage": "Set DATA_CSV, VALUE_COL, GROUP_COL, and optionally ALPHA (default 0.05). Output: homogeneity.json + homogeneity.png.",
+  "limitation": "Needs at least two groups, each with >= 2 observations. Requires numpy/scipy/pandas/matplotlib present; degrades to an empty report otherwise.",
+  "minimal_example": {
+    "perk": "homogeneity",
+    "vars": {
+      "DATA_CSV": "./data.csv",
+      "VALUE_COL": "score",
+      "GROUP_COL": "group",
+      "ALPHA": "0.05"
+    }
+  }
+}

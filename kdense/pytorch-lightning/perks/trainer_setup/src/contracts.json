@@ -1,0 +1,19 @@
+{
+  "tool": "trainer_setup",
+  "inputs": {
+    "OUT_NAME": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "trainer_setup_out": {
+      "path": "${RECORD_STORE}/${OUT_NAME}",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/${OUT_NAME}"
+  }
+}

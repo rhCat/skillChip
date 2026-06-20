@@ -1,0 +1,27 @@
+{
+  "_perk": "all",
+  "sequence": [
+    "hs_all"
+  ],
+  "tools": {
+    "hs_all": {
+      "binary": "python3",
+      "params": {
+        "RAW": "${RAW}",
+        "FILTER": "${FILTER}",
+        "TAG": "${TAG}",
+        "FORMAT": "${FORMAT}"
+      }
+    }
+  },
+  "env": {
+    "RAW": "${RAW}",
+    "FILTER": "${FILTER}",
+    "TAG": "${TAG}",
+    "FORMAT": "${FORMAT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

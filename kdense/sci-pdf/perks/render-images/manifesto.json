@@ -1,0 +1,21 @@
+{
+  "_perk": "render-images",
+  "sequence": [
+    "render_images"
+  ],
+  "tools": {
+    "render_images": {
+      "binary": "python3",
+      "params": {
+        "PDF_PATH": "${PDF_PATH}"
+      }
+    }
+  },
+  "env": {
+    "PDF_PATH": "${PDF_PATH}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

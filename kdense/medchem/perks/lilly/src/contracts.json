@@ -1,0 +1,23 @@
+{
+  "tool": "mc_lilly",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "LILLY_MAX": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "mc_lilly_out": {
+      "path": "${RECORD_STORE}/lilly.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/lilly.csv"
+  }
+}

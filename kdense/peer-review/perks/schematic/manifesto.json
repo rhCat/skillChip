@@ -1,0 +1,26 @@
+{
+  "_perk": "schematic",
+  "sequence": [
+    "generate_schematic"
+  ],
+  "tools": {
+    "generate_schematic": {
+      "binary": "python3",
+      "params": {
+        "PROMPT": "${PROMPT}",
+        "OUTPUT": "${OUTPUT}",
+        "DOC_TYPE": "${DOC_TYPE}"
+      }
+    }
+  },
+  "env": {
+    "PROMPT": "${PROMPT}",
+    "OUTPUT": "${OUTPUT}",
+    "DOC_TYPE": "${DOC_TYPE}",
+    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

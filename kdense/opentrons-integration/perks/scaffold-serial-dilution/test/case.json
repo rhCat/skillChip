@@ -1,0 +1,11 @@
+{
+  "_perk": "scaffold-serial-dilution",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["serial_dilution.py"],
+    "nonempty": ["serial_dilution.py"],
+    "contains": { "serial_dilution.py": "mix_after" }
+  }
+}

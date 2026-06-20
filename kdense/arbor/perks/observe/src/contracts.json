@@ -1,0 +1,14 @@
+{
+  "tool": "arbor_observe",
+  "inputs": {},
+  "outputs": {
+    "observe_report": {
+      "path": "${RECORD_STORE}/observe.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/observe.txt"
+  }
+}

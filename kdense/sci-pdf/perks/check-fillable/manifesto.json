@@ -1,0 +1,21 @@
+{
+  "_perk": "check-fillable",
+  "sequence": [
+    "check_fillable"
+  ],
+  "tools": {
+    "check_fillable": {
+      "binary": "python3",
+      "params": {
+        "PDF_PATH": "${PDF_PATH}"
+      }
+    }
+  },
+  "env": {
+    "PDF_PATH": "${PDF_PATH}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

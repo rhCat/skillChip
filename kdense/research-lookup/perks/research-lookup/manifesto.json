@@ -1,0 +1,25 @@
+{
+  "_perk": "research-lookup",
+  "sequence": [
+    "research_lookup"
+  ],
+  "tools": {
+    "research_lookup": {
+      "binary": "python3",
+      "params": {
+        "QUERY": "${QUERY}",
+        "FORCE_BACKEND": "${FORCE_BACKEND}",
+        "OUTPUT_NAME": "${OUTPUT_NAME}"
+      }
+    }
+  },
+  "env": {
+    "QUERY": "${QUERY}",
+    "FORCE_BACKEND": "${FORCE_BACKEND}",
+    "OUTPUT_NAME": "${OUTPUT_NAME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

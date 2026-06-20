@@ -1,0 +1,10 @@
+{
+  "_perk": "mass_calculator",
+  "requires": ["python3", "bash"],
+  "vars": { "PEPTIDE": "DFPIANGER" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["mass_report.txt"],
+    "nonempty": ["mass_report.txt"]
+  }
+}

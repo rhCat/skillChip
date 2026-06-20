@@ -1,0 +1,26 @@
+{
+  "perk": "train_gnn",
+  "skill": "deepchem",
+  "description": "Train a molecular graph neural network (gcn, gat, attentivefp, mpnn, or dmpnn) on a MoleculeNet benchmark (tox21/bbbp/bace/hiv/delaney/freesolv/lipo) or a custom SMILES CSV, then evaluate it on train/valid/test.",
+  "rules": [
+    "read-only / local — reads a CSV (or downloads a MoleculeNet benchmark) and writes a report; no remote or live service is mutated",
+    "exactly one of DATASET (MoleculeNet) or DATA_CSV (custom) must be set",
+    "custom CSVs are split with the scaffold splitter and featurized with MolGraphConvFeaturizer",
+    "report (dataset info, training log, evaluation metrics) written to record_store",
+    "needs deepchem[torch] (GNN models) + RDKit at run time; porter degrades gracefully if absent"
+  ],
+  "usage": "Set MODEL (gcn|gat|attentivefp|mpnn|dmpnn). Then either DATASET (a MoleculeNet name) OR DATA_CSV + TASK_TYPE (classification|regression) + TARGETS (space-separated columns) + SMILES_COL. EPOCHS sets training epochs. Output: gnn_train.txt.",
+  "limitation": "Not hermetic offline — GNN training requires deepchem with a torch backend, RDKit, and (for benchmarks) network access. Without them the porter writes gnn_train.txt noting the missing dependency and exits 0.",
+  "minimal_example": {
+    "perk": "train_gnn",
+    "vars": {
+      "MODEL": "gcn",
+      "DATASET": "",
+      "DATA_CSV": "./molecules.csv",
+      "TASK_TYPE": "regression",
+      "TARGETS": "activity",
+      "SMILES_COL": "smiles",
+      "EPOCHS": "50"
+    }
+  }
+}

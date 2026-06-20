@@ -1,0 +1,23 @@
+{
+  "perk": "box-behnken",
+  "skill": "experimental-design",
+  "description": "Box-Behnken (BBD) response-surface DOE: fits a quadratic without using the extreme corner combinations; returned in real units with a randomized run order.",
+  "rules": [
+    "read-only — reads a JSON spec, writes a CSV; mutates no live service",
+    "seeded — the run order is reproducible from SPEC_JSON.seed",
+    "requires at least 3 factors",
+    "needs python3 + pyDOE3 + numpy + pandas"
+  ],
+  "usage": "Set SPEC_JSON to a JSON file with keys: factors (required dict {name:[low,high]}, >=3), center (int, default 1), randomize (bool, default true), seed (int). Output: experimental_runs.csv under record_store.",
+  "limitation": "Needs >=3 factors and never visits the all-low/all-high corners, so it can't characterize response there. When pyDOE3 is absent the porter writes an empty {} artifact.",
+  "minimal_example": {
+    "perk": "box-behnken",
+    "vars": {
+      "SPEC_JSON": "spec.json"
+    },
+    "spec.json": {
+      "factors": {"temp_C": [20, 60], "conc_mM": [1, 10], "pH": [6, 8]},
+      "seed": 1
+    }
+  }
+}

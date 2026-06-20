@@ -1,0 +1,17 @@
+{
+  "_schema": "task-ledger TEMPLATE for infographics — set perk, fill record_store + the vars the perk declares.",
+  "skill": "infographics",
+  "perk": "list_options",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PROMPT": "<infographic content description; required only for the generate perk>",
+    "OUTPUT_NAME": "<output image filename, e.g. chart.png; required only for the generate perk>",
+    "INFOGRAPHIC_TYPE": "<optional: statistical|timeline|process|comparison|list|geographic|hierarchical|anatomical|resume|social>",
+    "STYLE": "<optional: corporate|healthcare|technology|nature|education|marketing|finance|nonprofit>",
+    "PALETTE": "<optional: wong|ibm|tol>",
+    "DOC_TYPE": "<optional: marketing|report|presentation|social|internal|draft|default>",
+    "ITERATIONS": "<optional: max refinement iterations, default 3>",
+    "RESEARCH": "<optional: 1 to enable Perplexity research>",
+    "OPENROUTER_API_KEY": "<OpenRouter API key; required only for the generate perk>"
+  }
+}

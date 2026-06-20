@@ -1,0 +1,21 @@
+{
+  "perk": "preprocess",
+  "skill": "neuropixels-analysis",
+  "description": "Preprocess a Neuropixels recording: bandpass filter (FREQ_MIN-FREQ_MAX), phase-shift ADC correction, bad-channel detection + removal, common-median reference, then save the preprocessed recording and probe.json under record_store.",
+  "rules": [
+    "loads SpikeGLX/OpenEphys/NWB via FORMAT (auto|spikeglx|openephys|nwb)",
+    "writes the preprocessed recording into record_store/preprocessed/",
+    "captures the run log to record_store/preprocess_report.txt",
+    "degrades gracefully (still writes the report, exit 0) when spikeinterface is absent"
+  ],
+  "usage": "Set DATA_PATH (input recording dir); optional FORMAT (default auto), STREAM_NAME (default imec0.ap), FREQ_MIN (default 300), FREQ_MAX (default 6000). Output: preprocess_report.txt + preprocessed/.",
+  "limitation": "Requires spikeinterface (+ probeinterface). Writes only to record_store; does not mutate the source recording.",
+  "minimal_example": {
+    "perk": "preprocess",
+    "vars": {
+      "DATA_PATH": "/path/to/run_g0",
+      "FORMAT": "spikeglx",
+      "STREAM_NAME": "imec0.ap"
+    }
+  }
+}

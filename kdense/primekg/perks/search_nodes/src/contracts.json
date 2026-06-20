@@ -1,0 +1,27 @@
+{
+  "tool": "search_nodes",
+  "inputs": {
+    "PRIMEKG_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "NAME_QUERY": {
+      "type": "string",
+      "required": true
+    },
+    "NODE_TYPE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "search_nodes_out": {
+      "path": "${RECORD_STORE}/search_nodes.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/search_nodes.json"
+  }
+}

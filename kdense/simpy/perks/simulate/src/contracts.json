@@ -1,0 +1,35 @@
+{
+  "tool": "simpy_simulate",
+  "inputs": {
+    "SIM_TIME": {
+      "type": "number",
+      "required": true
+    },
+    "NUM_RESOURCES": {
+      "type": "number",
+      "required": true
+    },
+    "ARRIVAL_RATE": {
+      "type": "number",
+      "required": true
+    },
+    "SERVICE_TIME_MEAN": {
+      "type": "number",
+      "required": true
+    },
+    "RANDOM_SEED": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "outputs": {
+    "simpy_simulate_out": {
+      "path": "${RECORD_STORE}/sim_stats.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/sim_stats.txt"
+  }
+}

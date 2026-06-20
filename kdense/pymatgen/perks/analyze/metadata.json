@@ -1,0 +1,19 @@
+{
+  "perk": "analyze",
+  "skill": "pymatgen",
+  "description": "Analyze a crystal structure with pymatgen — composition/formula, lattice parameters, density, space group / symmetry, and coordination environment — and export structured results to JSON.",
+  "rules": [
+    "read-only — reads one structure file, computes properties, writes a report",
+    "runs symmetry (SpacegroupAnalyzer) and coordination (CrystalNN) analysis",
+    "structured results exported to analysis.json under record_store; human-readable log to analyze.log",
+    "requires pymatgen present for real analysis; degrades gracefully (records missing dep, exits 0) when absent"
+  ],
+  "usage": "Set STRUCTURE_FILE (path to a CIF / POSCAR / etc.). Outputs: analyze.log (human-readable) and analysis.json (structured) under record_store.",
+  "limitation": "Real output needs pymatgen installed; without it the porter writes a graceful stub and a missing-dependency note. Coordination/symmetry sections fall back silently if individual analyses fail.",
+  "minimal_example": {
+    "perk": "analyze",
+    "vars": {
+      "STRUCTURE_FILE": "POSCAR"
+    }
+  }
+}

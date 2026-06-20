@@ -1,0 +1,19 @@
+{
+  "tool": "run_pipeline",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "processed": {
+      "path": "${RECORD_STORE}/processed.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/processed.h5ad"
+  }
+}

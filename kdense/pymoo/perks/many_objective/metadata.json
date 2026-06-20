@@ -1,0 +1,23 @@
+{
+  "perk": "many_objective",
+  "skill": "pymoo",
+  "description": "many-objective optimization with NSGA-III using reference directions on a 4+ objective benchmark (read-only)",
+  "rules": [
+    "read-only — computes a high-dimensional front and writes a report; mutates nothing remote or live",
+    "runs the vendored many_objective_example.py core (NSGA-III on DTLZ2, das-dennis reference directions) via python3",
+    "forces MPLBACKEND=Agg so the Parallel Coordinate Plot never blocks",
+    "captures stdout (ref-dir count, solution count, per-objective min/max) to record_store/many_objective.txt",
+    "requires the pymoo package at run time; degrades to an empty {} report if it is absent"
+  ],
+  "usage": "Set PROBLEM (e.g. dtlz2), N_OBJ (4+), N_PARTITIONS (reference-direction partitions), N_GEN. Output: many_objective.txt.",
+  "limitation": "The vendored core runs its built-in 5-objective benchmark (DTLZ2, NSGA-III); vars document intent. Needs the pymoo library installed to produce real results.",
+  "minimal_example": {
+    "perk": "many_objective",
+    "vars": {
+      "PROBLEM": "dtlz2",
+      "N_OBJ": "5",
+      "N_PARTITIONS": "12",
+      "N_GEN": "300"
+    }
+  }
+}

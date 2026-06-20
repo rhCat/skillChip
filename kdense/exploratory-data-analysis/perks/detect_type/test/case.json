@@ -1,0 +1,13 @@
+{
+  "_perk": "detect_type",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_FILE": "${FIXTURE}/sample.csv"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["file_type.json"],
+    "nonempty": ["file_type.json"],
+    "json": { "file_type.json": { "file_type": { "category": "general_scientific" } } }
+  }
+}

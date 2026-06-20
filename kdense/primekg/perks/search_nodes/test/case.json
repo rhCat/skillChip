@@ -1,0 +1,14 @@
+{
+  "_perk": "search_nodes",
+  "requires": ["python3"],
+  "vars": {
+    "PRIMEKG_CSV": "${FIXTURE}/kg.csv",
+    "NAME_QUERY": "Alzheimer",
+    "NODE_TYPE": "disease"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["search_nodes.json"],
+    "nonempty": ["search_nodes.json"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_perk": "stats",
+  "requires": ["python3"],
+  "vars": {
+    "TREE_FILE": "${FIXTURE}",
+    "TREE_FORMAT": "0"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["stats.txt"],
+    "nonempty": ["stats.txt"]
+  }
+}

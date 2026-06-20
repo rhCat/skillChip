@@ -1,0 +1,19 @@
+{
+  "perk": "survival",
+  "skill": "clinical-decision-support",
+  "description": "Fit Kaplan-Meier survival curves comparing groups, with log-rank test, Cox proportional-hazards hazard ratio + 95% CI, a number-at-risk table, a statistics summary, and a LaTeX outcome table.",
+  "rules": [
+    "read-only — reads one survival CSV (patient_id,time,event,group), writes only under record_store",
+    "requires lifelines + matplotlib at run time; absent lifelines the porter records the gap and writes an empty report",
+    "primary output is survival_statistics.txt (PDF/PNG curves, number-at-risk CSV, and LaTeX table accompany it when lifelines is present)"
+  ],
+  "usage": "Set INPUT_CSV (CSV with patient_id,time,event,group) and optionally TITLE. Output: survival_statistics.txt.",
+  "limitation": "Hazard-ratio path assumes 2 groups. Needs lifelines (not bundled); without it the report is an empty placeholder. Curve rendering needs matplotlib.",
+  "minimal_example": {
+    "perk": "survival",
+    "vars": {
+      "INPUT_CSV": "survival_data.csv",
+      "TITLE": "PFS by PD-L1 Status"
+    }
+  }
+}

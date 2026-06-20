@@ -1,0 +1,20 @@
+{
+  "perk": "diagnostics",
+  "skill": "pymc",
+  "description": "Quick MCMC diagnostic check (R-hat, ESS, divergences, tree depth) on a saved PyMC/ArviZ InferenceData .nc file.",
+  "rules": [
+    "read-only — never mutates the input or any remote/live service",
+    "input is a netCDF InferenceData file written by idata.to_netcdf(...)",
+    "requires arviz (+ pymc) importable for real output; absent libs produce a graceful {} stub",
+    "diagnostic summary written to record_store as diagnostics.json"
+  ],
+  "usage": "Set IDATA (path to a .nc InferenceData file). Optional VAR_NAMES (comma-separated). Output: diagnostics.json.",
+  "limitation": "Read-only quick check only. Needs arviz/pymc + the netCDF backend to emit real R-hat/ESS/divergence numbers; offline it writes an empty JSON stub. No plots (see diagnostic_report).",
+  "minimal_example": {
+    "perk": "diagnostics",
+    "vars": {
+      "IDATA": "idata.nc",
+      "VAR_NAMES": "alpha,beta,sigma"
+    }
+  }
+}

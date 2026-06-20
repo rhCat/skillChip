@@ -1,0 +1,19 @@
+{
+  "perk": "generate_slide_image",
+  "skill": "scientific-slides",
+  "description": "Generate a full presentation slide (title + content + visuals) or a visual-only figure from a natural-language prompt, using Nano Banana Pro via the OpenRouter API with smart quality-gated iteration.",
+  "rules": [
+    "calls the OpenRouter API — requires OPENROUTER_API_KEY in env",
+    "produces one image (slide.png) under record_store",
+    "VISUAL_ONLY=1 yields just the figure (PPT workflow); empty/0 yields a full slide (PDF workflow)"
+  ],
+  "usage": "Set PROMPT (slide description); optionally VISUAL_ONLY=1. Requires OPENROUTER_API_KEY. Output: slide.png.",
+  "limitation": "Network + paid API. Offline or without OPENROUTER_API_KEY the porter writes a stub report instead of a real image. Capped at 2 refinement iterations.",
+  "minimal_example": {
+    "perk": "generate_slide_image",
+    "vars": {
+      "PROMPT": "Title: Introduction to ML\\nKey points: supervised, unsupervised, reinforcement",
+      "VISUAL_ONLY": ""
+    }
+  }
+}

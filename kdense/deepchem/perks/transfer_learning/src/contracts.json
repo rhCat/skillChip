@@ -1,0 +1,43 @@
+{
+  "tool": "transfer_learning",
+  "inputs": {
+    "MODEL": {
+      "type": "string",
+      "required": true
+    },
+    "DATASET": {
+      "type": "string",
+      "required": false
+    },
+    "DATA_CSV": {
+      "type": "string",
+      "required": false
+    },
+    "TARGET": {
+      "type": "string",
+      "required": false
+    },
+    "SMILES_COL": {
+      "type": "string",
+      "required": false
+    },
+    "TASK_TYPE": {
+      "type": "string",
+      "required": false
+    },
+    "EPOCHS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "transfer_report": {
+      "path": "${RECORD_STORE}/transfer_learning.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/transfer_learning.txt"
+  }
+}

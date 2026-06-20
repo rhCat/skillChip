@@ -1,0 +1,27 @@
+{
+  "_perk": "homogeneity",
+  "sequence": [
+    "check_homogeneity"
+  ],
+  "tools": {
+    "check_homogeneity": {
+      "binary": "python3",
+      "params": {
+        "DATA_CSV": "${DATA_CSV}",
+        "VALUE_COL": "${VALUE_COL}",
+        "GROUP_COL": "${GROUP_COL}",
+        "ALPHA": "${ALPHA}"
+      }
+    }
+  },
+  "env": {
+    "DATA_CSV": "${DATA_CSV}",
+    "VALUE_COL": "${VALUE_COL}",
+    "GROUP_COL": "${GROUP_COL}",
+    "ALPHA": "${ALPHA}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

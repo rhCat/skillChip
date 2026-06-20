@@ -1,0 +1,26 @@
+{
+  "_perk": "theoretical_spectrum",
+  "sequence": [
+    "theoretical_spectrum"
+  ],
+  "tools": {
+    "theoretical_spectrum": {
+      "binary": "bash",
+      "params": {
+        "PEPTIDE": "${PEPTIDE}"
+      }
+    }
+  },
+  "env": {
+    "PEPTIDE": "${PEPTIDE}",
+    "CHARGE": "${CHARGE}",
+    "IONS": "${IONS}",
+    "LOSSES": "${LOSSES}",
+    "PRECURSOR": "${PRECURSOR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

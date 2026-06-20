@@ -1,0 +1,19 @@
+{
+  "tool": "generate_report_template",
+  "inputs": {
+    "TEMPLATE_TYPE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "template": {
+      "path": "${RECORD_STORE}/template.md",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/template.md"
+  }
+}

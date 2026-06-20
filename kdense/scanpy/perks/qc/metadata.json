@@ -1,0 +1,20 @@
+{
+  "perk": "qc",
+  "skill": "scanpy",
+  "description": "Compute QC metrics (genes/counts per cell, mitochondrial/ribosomal/hemoglobin fractions), write before/after QC plots, filter cells and genes by thresholds, and optionally run Scrublet doublet detection and drop doublets.",
+  "rules": [
+    "run FIRST on raw counts, before normalization",
+    "read-only input — writes a new qc_filtered.h5ad + figures under record_store",
+    "filters: min/max genes per cell, min/max counts, min cells per gene, max pct mitochondrial",
+    "optional SCRUBLET doublet removal; figures skipped with NO_PLOTS"
+  ],
+  "usage": "Set INPUT. Optional: MIN_GENES, MAX_GENES, MIN_COUNTS, MAX_COUNTS, MIN_CELLS, MT_THRESHOLD, SCRUBLET=1, NO_PLOTS=1. Output: qc_filtered.h5ad.",
+  "limitation": "Requires scanpy installed; SCRUBLET additionally needs scikit-image. Without scanpy the porter writes a {} placeholder qc_filtered.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "qc",
+    "vars": {
+      "INPUT": "raw.h5ad",
+      "MT_THRESHOLD": "10"
+    }
+  }
+}

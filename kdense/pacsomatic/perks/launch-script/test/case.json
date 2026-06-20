@@ -1,0 +1,19 @@
+{
+  "_perk": "launch-script",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "SAMPLESHEET": "${FIXTURE}/out/samplesheet.csv",
+    "OUTDIR": "${FIXTURE}/out",
+    "GENOME": "GRCh38",
+    "EXECUTOR": "local",
+    "PROFILE": "singularity"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["launch_script.sh", "run_pacsomatic.local.sh"],
+    "nonempty": ["launch_script.sh"],
+    "contains": {
+      "launch_script.sh": ["#!/usr/bin/env bash", "nextflow run nf-core/pacsomatic", "--genome GRCh38", "set -euo pipefail"]
+    }
+  }
+}

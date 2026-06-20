@@ -1,0 +1,19 @@
+{
+  "tool": "render_pdf",
+  "inputs": {
+    "PPTX_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "render_pdf_out": {
+      "path": "${RECORD_STORE}/render.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/render.log"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "skill": "exploratory-data-analysis",
+  "perks": [
+    {
+      "id": "detect_type",
+      "summary": "detect a scientific file's type — extension -> category + description + basic metadata (read-only) — JSON out",
+      "destructive": false,
+      "tools": [
+        "eda_detect_type"
+      ]
+    },
+    {
+      "id": "format_reference",
+      "summary": "extract the vendored format-reference section for a file's extension (read-only) — markdown out",
+      "destructive": false,
+      "tools": [
+        "eda_format_reference"
+      ]
+    },
+    {
+      "id": "analyze",
+      "summary": "full EDA pipeline — detect, reference, format-specific analysis, markdown report (read-only)",
+      "destructive": false,
+      "tools": [
+        "eda_analyze"
+      ]
+    }
+  ]
+}

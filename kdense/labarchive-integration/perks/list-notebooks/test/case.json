@@ -1,0 +1,18 @@
+{
+  "_perk": "list-notebooks",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "LA_CONFIG": "${FIXTURE}/config.yaml"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "list_notebooks.json"
+    ],
+    "nonempty": [
+      "list_notebooks.json"
+    ]
+  }
+}

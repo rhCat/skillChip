@@ -1,0 +1,14 @@
+{
+  "tool": "list_options",
+  "inputs": {},
+  "outputs": {
+    "options_out": {
+      "path": "${RECORD_STORE}/options.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/options.txt"
+  }
+}

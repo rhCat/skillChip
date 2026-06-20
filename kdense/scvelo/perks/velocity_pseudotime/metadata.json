@@ -1,0 +1,18 @@
+{
+  "perk": "velocity_pseudotime",
+  "skill": "scvelo",
+  "description": "Compute velocity pseudotime and per-cell velocity quality metrics: scv.tl.velocity_confidence (adds obs['velocity_length'] and obs['velocity_confidence']) and scv.tl.velocity_pseudotime (adds obs['velocity_pseudotime']). Writes the updated .h5ad.",
+  "rules": [
+    "read-only input — writes a new velocity_pseudotime.h5ad under record_store",
+    "requires a velocity graph (run the velocity perk first)",
+    "model-agnostic — works for any velocity mode, complementary to the dynamical latent_time"
+  ],
+  "usage": "Set INPUT (velocity .h5ad). Output: velocity_pseudotime.h5ad.",
+  "limitation": "Requires scvelo installed; without it the porter writes a {} placeholder velocity_pseudotime.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "velocity_pseudotime",
+    "vars": {
+      "INPUT": "velocity.h5ad"
+    }
+  }
+}

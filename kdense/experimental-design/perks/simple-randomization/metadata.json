@@ -1,0 +1,23 @@
+{
+  "perk": "simple-randomization",
+  "skill": "experimental-design",
+  "description": "Seeded simple (independent per-unit) randomization schedule assigning units to arms.",
+  "rules": [
+    "read-only — reads a JSON spec, writes a CSV; mutates no live service",
+    "seeded — the exact schedule is reproducible from SPEC_JSON.seed",
+    "needs numpy + pandas; no network or GPU"
+  ],
+  "usage": "Set SPEC_JSON to a JSON file with keys: n (required int), arms (list[str]), ratio (list[int]), seed (int). Output: allocation_schedule.csv under record_store.",
+  "limitation": "Simple randomization can produce arm-size imbalance with small n; use block-randomization for guaranteed balance. No power/sample-size calculation.",
+  "minimal_example": {
+    "perk": "simple-randomization",
+    "vars": {
+      "SPEC_JSON": "spec.json"
+    },
+    "spec.json": {
+      "n": 10,
+      "arms": ["treatment", "control"],
+      "seed": 1
+    }
+  }
+}

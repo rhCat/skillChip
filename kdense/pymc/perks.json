@@ -1,0 +1,45 @@
+{
+  "skill": "pymc",
+  "perks": [
+    {
+      "id": "diagnostics",
+      "summary": "quick MCMC diagnostic check (R-hat, ESS, divergences, tree depth) on a PyMC/ArviZ InferenceData .nc file (read-only)",
+      "destructive": false,
+      "tools": [
+        "check_diagnostics"
+      ]
+    },
+    {
+      "id": "diagnostic_report",
+      "summary": "full diagnostic report — trace/rank/autocorr/energy/ESS plots + summary CSV — from one InferenceData .nc file",
+      "destructive": false,
+      "tools": [
+        "diagnostic_report"
+      ]
+    },
+    {
+      "id": "compare",
+      "summary": "rank multiple models by LOO or WAIC information criteria from a set of InferenceData .nc files (read-only)",
+      "destructive": false,
+      "tools": [
+        "compare_models"
+      ]
+    },
+    {
+      "id": "loo_reliability",
+      "summary": "check LOO-CV reliability via Pareto-k diagnostics across InferenceData .nc files (read-only)",
+      "destructive": false,
+      "tools": [
+        "loo_reliability"
+      ]
+    },
+    {
+      "id": "model_averaging",
+      "summary": "Bayesian model averaging — weight + combine posterior-predictive draws across InferenceData .nc files (read-only)",
+      "destructive": false,
+      "tools": [
+        "model_averaging"
+      ]
+    }
+  ]
+}

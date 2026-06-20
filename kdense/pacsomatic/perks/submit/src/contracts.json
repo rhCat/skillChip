@@ -1,0 +1,51 @@
+{
+  "tool": "submit",
+  "inputs": {
+    "PATIENT_ID": {
+      "type": "string",
+      "required": true
+    },
+    "TUMOR_SAMPLE_ID": {
+      "type": "string",
+      "required": true
+    },
+    "NORMAL_SAMPLE_ID": {
+      "type": "string",
+      "required": true
+    },
+    "TUMOR_BAM": {
+      "type": "string",
+      "required": true
+    },
+    "NORMAL_BAM": {
+      "type": "string",
+      "required": true
+    },
+    "FASTA": {
+      "type": "string",
+      "required": false
+    },
+    "GENOME": {
+      "type": "string",
+      "required": false
+    },
+    "PROFILE": {
+      "type": "string",
+      "required": false
+    },
+    "EXECUTOR": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "out": {
+      "path": "${RECORD_STORE}/submit.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/submit.log"
+  }
+}

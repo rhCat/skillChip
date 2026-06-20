@@ -1,0 +1,25 @@
+{
+  "_perk": "pdf_to_images",
+  "sequence": [
+    "pdf_to_images"
+  ],
+  "tools": {
+    "pdf_to_images": {
+      "binary": "python3",
+      "params": {
+        "PDF_PATH": "${PDF_PATH}",
+        "DPI": "${DPI}",
+        "IMAGE_FORMAT": "${IMAGE_FORMAT}"
+      }
+    }
+  },
+  "env": {
+    "PDF_PATH": "${PDF_PATH}",
+    "DPI": "${DPI}",
+    "IMAGE_FORMAT": "${IMAGE_FORMAT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

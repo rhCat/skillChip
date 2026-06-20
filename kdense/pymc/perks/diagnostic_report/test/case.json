@@ -1,0 +1,10 @@
+{
+  "_perk": "diagnostic_report",
+  "requires": ["bash", "python3"],
+  "vars": { "IDATA": "${FIXTURE}/idata.nc", "VAR_NAMES": "alpha,beta,sigma" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["report.json"],
+    "nonempty": ["report.json"]
+  }
+}

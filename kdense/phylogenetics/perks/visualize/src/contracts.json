@@ -1,0 +1,23 @@
+{
+  "tool": "tree_visualize",
+  "inputs": {
+    "TREE_FILE": {
+      "type": "string",
+      "required": true
+    },
+    "OUTGROUP": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "image": {
+      "path": "${RECORD_STORE}/tree.png",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/tree.png"
+  }
+}

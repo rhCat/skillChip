@@ -1,0 +1,19 @@
+{
+  "perk": "generate_timeline",
+  "skill": "treatment-plans",
+  "description": "Extract treatment phases, scheduled appointments, and milestones/assessments from a LaTeX treatment plan via regex and render a text timeline (matplotlib Gantt-style visual is optional).",
+  "rules": [
+    "read-only: never modifies the input plan",
+    "input is a .tex (or .txt) treatment plan",
+    "text timeline is stdlib only; --visual mode needs matplotlib",
+    "timeline written to record_store/timeline.txt"
+  ],
+  "usage": "Set PLAN_FILE to a .tex treatment plan. Output: timeline.txt (text mode).",
+  "limitation": "Only detects timeframes matching its patterns (Week N-M, Month N, POD N, Every N ...). The core exits non-zero if NO timeline items are detected; the porter still records the file. Visual PNG/PDF output requires matplotlib (absent here) and is not exercised by this perk's text path.",
+  "minimal_example": {
+    "perk": "generate_timeline",
+    "vars": {
+      "PLAN_FILE": "./my_plan.tex"
+    }
+  }
+}

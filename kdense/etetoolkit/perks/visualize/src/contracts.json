@@ -1,0 +1,27 @@
+{
+  "tool": "ete_visualize",
+  "inputs": {
+    "TREE_FILE": {
+      "type": "string",
+      "required": true
+    },
+    "IMAGE_FORMAT": {
+      "type": "string",
+      "required": false
+    },
+    "LAYOUT_MODE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "ete_visualize_out": {
+      "path": "${RECORD_STORE}/visualize.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/visualize.log"
+  }
+}

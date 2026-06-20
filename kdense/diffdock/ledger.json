@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for diffdock — set perk, fill record_store + the vars the perk declares.",
+  "skill": "diffdock",
+  "perk": "check_env",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "VERBOSE": "<optional: any non-empty value enables --verbose; leave empty for default>"
+  }
+}

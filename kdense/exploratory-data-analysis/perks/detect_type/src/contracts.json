@@ -1,0 +1,19 @@
+{
+  "tool": "eda_detect_type",
+  "inputs": {
+    "DATA_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "file_type_json": {
+      "path": "${RECORD_STORE}/file_type.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/file_type.json"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_perk": "pseudobulk",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.csv",
+    "BY": "sample"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["pseudobulk_counts.csv"],
+    "nonempty": ["pseudobulk_counts.csv"]
+  }
+}

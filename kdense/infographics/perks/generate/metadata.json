@@ -1,0 +1,22 @@
+{
+  "perk": "generate",
+  "skill": "infographics",
+  "description": "generate a publication-quality infographic via Nano Banana Pro with optional Perplexity research and Gemini iterative quality review (needs OPENROUTER_API_KEY + network)",
+  "rules": [
+    "calls OpenRouter: Nano Banana Pro (image), Gemini 3.x Pro (quality review), Perplexity Sonar (optional research)",
+    "smart iteration — regenerates only while the quality score is below the document-type threshold",
+    "produces local files only (image + *_review_log.json, plus *_research.json when RESEARCH=1) under record_store; mutates no remote/live service",
+    "requires OPENROUTER_API_KEY and network — degrades gracefully offline"
+  ],
+  "usage": "Set PROMPT (content) and OUTPUT_NAME (image filename). Optional: INFOGRAPHIC_TYPE, STYLE, PALETTE, DOC_TYPE, ITERATIONS, RESEARCH=1. Provide OPENROUTER_API_KEY. Output: the image, ${OUTPUT_NAME%.png}_review_log.json, and a generate.log under record_store.",
+  "limitation": "Needs a valid OPENROUTER_API_KEY + network reachability to openrouter.ai. Without them the porter records the failure to generate.log and exits cleanly without producing an image.",
+  "minimal_example": {
+    "perk": "generate",
+    "vars": {
+      "PROMPT": "5 benefits of regular exercise",
+      "OUTPUT_NAME": "exercise.png",
+      "INFOGRAPHIC_TYPE": "list",
+      "STYLE": "healthcare"
+    }
+  }
+}

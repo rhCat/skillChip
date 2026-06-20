@@ -1,0 +1,28 @@
+{
+  "skill": "scholar-evaluation",
+  "skill_sha": "309e8db9652d8e2f56f5678eaf6a18190329bd12fed91f21d7ff5f31520618d4",
+  "file_count": 21,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "d7323d2f5b7aaa84d42999bc13553ea4175aa6a5f37849bbafb15c736addc042",
+    "blueprint.drawio": "b583b45187c8852eef3bc2898cbb9f69aaa976a6e5273918d0721f6de92e1415",
+    "blueprint.json": "63a2aa273a36c00ea9325707e6c36f60ed79be98e80b422dbac2beeabda633e7",
+    "blueprint.svg": "2e6be3a4550171db40c711acbf70129a2325301dca797ebfe7e30d9d754b15f1",
+    "ledger.json": "a356fa259275394d411ce82eaa09b405c46a4ae10fe015324af558aa7ce9b169",
+    "perks.json": "277a58e2f988b71cee66562882e1c0b12490eba9cd3b893c316913f8658f8cbf",
+    "perks/schematic/manifesto.json": "07c6c77fa199a7081b5f6c80e3eb42ef9a952c134947ffaab1bb7a91c12049bf",
+    "perks/schematic/metadata.json": "4f80af0b2d1c5dc99cbaeceaee88300040961104aa0215f4cd2a51a2d4dba41f",
+    "perks/schematic/src/contracts.json": "ddd15350790e41964b3cd556fed2368fd3fd7aeefcde113ae4b95467b1505f6f",
+    "perks/schematic/src/generate_schematic.py": "a426ae30ed9185f250245f35c868e6f8aae6096e94a4b8392283dc05f089c041",
+    "perks/schematic/src/generate_schematic.sh": "0decd5993dcc247ee892bf07581fcf8be27a938bf5285145a20f93ebbdb8256d",
+    "perks/schematic/src/generate_schematic_ai.py": "0e1708bc163eab7e4440ae7d9d61ed1cd123bdc401499d46cb3df30f1b9f349c",
+    "perks/schematic/test/case.json": "2034f42977c24e3234d864e8eb8cc79640c034447c5e750eabb97d619775014b",
+    "perks/score/manifesto.json": "1156ecd2d0217363988c7fba16ab8ae39531865e920873e869c049e4a22b4360",
+    "perks/score/metadata.json": "263c8dc8a5fc02729c56dd6a6d5ac95d7e347b143a1618263af71990af439a14",
+    "perks/score/src/calculate_scores.py": "7d50b0daec81f76581c9151adb1bf60521b11ea09542957677bb6b22fbac7f58",
+    "perks/score/src/calculate_scores.sh": "8e98d8820b562042096fbe00787ee325a4e4aed24705d32c782275aec9413402",
+    "perks/score/src/contracts.json": "183e873cc2d83cc01234ec95e719991cea0582be16cdcf50c514b9814aaada5f",
+    "perks/score/test/case.json": "8d69a093dab7219c8ab1ca1ebbc1628d67305de29a15672293d29a574dde66c9",
+    "perks/score/test/fixture/scores.json": "129f52322c00a0b889da6edefe49cf0ac7b2b038ff806cce25608079a033c6b0"
+  }
+}

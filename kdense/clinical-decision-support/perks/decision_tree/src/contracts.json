@@ -1,0 +1,19 @@
+{
+  "tool": "decision_tree",
+  "inputs": {
+    "SPEC_JSON": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "algorithm_tex": {
+      "path": "${RECORD_STORE}/clinical_algorithm.tex",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/clinical_algorithm.tex"
+  }
+}

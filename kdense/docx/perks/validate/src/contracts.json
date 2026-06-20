@@ -1,0 +1,23 @@
+{
+  "tool": "docx_validate",
+  "inputs": {
+    "DOCX_PATH": {
+      "type": "string",
+      "required": true
+    },
+    "ORIGINAL_DOCX": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "docx_validate_report": {
+      "path": "${RECORD_STORE}/validate.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/validate.txt"
+  }
+}

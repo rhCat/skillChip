@@ -1,0 +1,19 @@
+{
+  "tool": "clean",
+  "inputs": {
+    "UNPACKED_DIR": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "clean_out": {
+      "path": "${RECORD_STORE}/clean.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/clean.txt"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "tool": "generate_infographic",
+  "inputs": {
+    "PROMPT": {
+      "type": "string",
+      "required": true
+    },
+    "OUTPUT_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "INFOGRAPHIC_TYPE": {
+      "type": "string",
+      "required": false
+    },
+    "STYLE": {
+      "type": "string",
+      "required": false
+    },
+    "PALETTE": {
+      "type": "string",
+      "required": false
+    },
+    "DOC_TYPE": {
+      "type": "string",
+      "required": false
+    },
+    "ITERATIONS": {
+      "type": "string",
+      "required": false
+    },
+    "RESEARCH": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "generate_log": {
+      "path": "${RECORD_STORE}/generate.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/generate.log"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "perk": "fetch",
+  "skill": "autoskill",
+  "description": "paginate the local screenpipe /search API over a time window into a normalized timeline JSON",
+  "rules": [
+    "read-only — only GETs the local screenpipe /search endpoint on loopback",
+    "bounded: hard ceiling of 10000 pages so the loop cannot spin forever",
+    "normalizes each event to {ts, app, window_title, text, content_type}",
+    "SCREENPIPE_TOKEN bearer-auths the request when set; SCREENPIPE_URL defaults to http://localhost:3030",
+    "degrades gracefully — writes a well-formed empty timeline if the daemon is unreachable",
+    "timeline written to record_store as timeline.json"
+  ],
+  "usage": "Set START and END (ISO times). Optional: SCREENPIPE_URL, SCREENPIPE_TOKEN. Output: timeline.json.",
+  "limitation": "Has no alternate data source: a real timeline requires the screenpipe daemon running on loopback. Offline it yields an empty timeline.",
+  "minimal_example": {
+    "perk": "fetch",
+    "vars": {
+      "START": "2026-04-17T00:00:00Z",
+      "END": "2026-04-17T23:59:59Z"
+    }
+  }
+}

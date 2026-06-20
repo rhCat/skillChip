@@ -1,0 +1,17 @@
+{
+  "perk": "update_beps",
+  "skill": "bids",
+  "description": "fetch the current BEPs listing (beps.yml) from bids-website and write references/beps.yml (read-only network fetch)",
+  "rules": [
+    "read-only: fetches a remote artifact, never mutates a remote service",
+    "downloads beps.yml from raw.githubusercontent.com/bids-standard/bids-website",
+    "writes the BEPs listing verbatim under record_store",
+    "no dependencies beyond the Python standard library"
+  ],
+  "usage": "No vars required. Output: beps.yml (the canonical BIDS Extension Proposals listing with titles, leads, status, links).",
+  "limitation": "Requires network access to reach the bids-website upstream. Offline the porter degrades gracefully — it writes an empty {} artifact and exits 0 so the contract still holds, but the BEPs list is not refreshed.",
+  "minimal_example": {
+    "perk": "update_beps",
+    "vars": {}
+  }
+}

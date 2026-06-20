@@ -1,0 +1,16 @@
+[
+  {
+    "ts": "2026-04-17T10:00:00Z",
+    "app": "Terminal",
+    "window_title": "ssh as alice@lab.example.edu",
+    "text": "export ANTHROPIC_API_KEY=sk-abcdefghijklmnopqrstuvwxyz0123 and call (415) 555-1234",
+    "content_type": "ocr"
+  },
+  {
+    "ts": "2026-04-17T10:01:00Z",
+    "app": "Zotero",
+    "window_title": "PubMed search",
+    "text": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9 header for the API",
+    "content_type": "ocr"
+  }
+]

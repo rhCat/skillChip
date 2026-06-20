@@ -1,0 +1,19 @@
+{
+  "tool": "check_deidentification",
+  "inputs": {
+    "REPORT_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "deidentification": {
+      "path": "${RECORD_STORE}/deidentification.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/deidentification.json"
+  }
+}

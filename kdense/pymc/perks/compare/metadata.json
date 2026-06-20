@@ -1,0 +1,22 @@
+{
+  "perk": "compare",
+  "skill": "pymc",
+  "description": "Rank two or more Bayesian models by an information criterion (LOO or WAIC) from saved PyMC/ArviZ InferenceData .nc files.",
+  "rules": [
+    "read-only — never mutates inputs or any remote/live service",
+    "each input is a netCDF InferenceData file written with a log_likelihood group (idata_kwargs={'log_likelihood': True})",
+    "MODELS_DIR globs *.nc (model name = filename stem); MODELS overrides with a comma list of name=path or path",
+    "IC selects loo (default) or waic",
+    "requires arviz (+ pymc) importable for real output; absent libs produce a graceful {} stub",
+    "comparison table written to record_store as comparison.json"
+  ],
+  "usage": "Set MODELS_DIR (a dir of .nc files) or MODELS (comma list of name=path.nc). Optional IC (loo|waic). Output: comparison.json.",
+  "limitation": "Read-only ranking. Models must have been fit with log_likelihood. Needs arviz/pymc + the netCDF backend; offline it writes an empty JSON stub. Reliability of LOO is checked separately by the loo_reliability perk.",
+  "minimal_example": {
+    "perk": "compare",
+    "vars": {
+      "MODELS_DIR": "models/",
+      "IC": "loo"
+    }
+  }
+}

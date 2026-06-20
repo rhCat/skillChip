@@ -1,0 +1,24 @@
+{
+  "_perk": "loo_reliability",
+  "sequence": [
+    "loo_reliability"
+  ],
+  "tools": {
+    "loo_reliability": {
+      "binary": "bash",
+      "params": {
+        "MODELS_DIR": "${MODELS_DIR}"
+      }
+    }
+  },
+  "env": {
+    "MODELS_DIR": "${MODELS_DIR}",
+    "MODELS": "${MODELS}",
+    "THRESHOLD": "${THRESHOLD}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

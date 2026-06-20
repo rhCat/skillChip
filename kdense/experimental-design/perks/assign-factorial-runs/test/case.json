@@ -1,0 +1,11 @@
+{
+  "_perk": "assign-factorial-runs",
+  "requires": ["python3"],
+  "vars": { "SPEC_JSON": "${FIXTURE}/spec.json" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["run_order.csv"],
+    "nonempty": ["run_order.csv"],
+    "contains": { "run_order.csv": ["run_order", "temp,conc"] }
+  }
+}

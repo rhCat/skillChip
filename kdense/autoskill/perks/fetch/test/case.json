@@ -1,0 +1,15 @@
+{
+  "_perk": "fetch",
+  "requires": ["python3"],
+  "vars": {
+    "START": "2026-04-17T00:00:00Z",
+    "END": "2026-04-17T23:59:59Z",
+    "SCREENPIPE_URL": "http://localhost:3030",
+    "SCREENPIPE_TOKEN": ""
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["timeline.json"],
+    "nonempty": ["timeline.json"]
+  }
+}

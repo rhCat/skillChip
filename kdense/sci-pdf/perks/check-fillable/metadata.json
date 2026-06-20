@@ -1,0 +1,18 @@
+{
+  "perk": "check-fillable",
+  "skill": "sci-pdf",
+  "description": "Detect whether a PDF has fillable AcroForm fields (read-only). Wraps pypdf's get_fields().",
+  "rules": [
+    "read-only — opens the PDF, never writes it back",
+    "verdict text is written to record_store/check_fillable.txt",
+    "needs pypdf at runtime; absent -> graceful no-op note + exit 0"
+  ],
+  "usage": "Set PDF_PATH (input .pdf). Output: check_fillable.txt (one of the two verdict lines).",
+  "limitation": "Only reports presence/absence of an AcroForm; says nothing about field count or layout. Requires pypdf to actually inspect the PDF.",
+  "minimal_example": {
+    "perk": "check-fillable",
+    "vars": {
+      "PDF_PATH": "form.pdf"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for etetoolkit — set perk, fill record_store + the vars the perk declares.",
+  "skill": "etetoolkit",
+  "perk": "stats",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "TREE_FILE": "<input tree file (Newick)>",
+    "TREE_FORMAT": "0"
+  }
+}

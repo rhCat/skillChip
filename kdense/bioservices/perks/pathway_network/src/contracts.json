@@ -1,0 +1,23 @@
+{
+  "tool": "pathway_network",
+  "inputs": {
+    "ORGANISM": {
+      "type": "string",
+      "required": true
+    },
+    "LIMIT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "pathway_summary": {
+      "path": "${RECORD_STORE}/pathway_summary.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pathway_summary.csv"
+  }
+}

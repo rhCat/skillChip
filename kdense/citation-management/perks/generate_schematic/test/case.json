@@ -1,0 +1,4 @@
+{
+  "_perk": "generate_schematic",
+  "skip": "needs OPENROUTER_API_KEY and network access to an LLM image model (Nano Banana 2 on openrouter.ai) — cannot produce a real schematic.png offline"
+}

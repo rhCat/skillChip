@@ -1,0 +1,39 @@
+{
+  "tool": "tdc_load_split",
+  "inputs": {
+    "TDC_PROBLEM": {
+      "type": "string",
+      "required": true
+    },
+    "TDC_TASK": {
+      "type": "string",
+      "required": true
+    },
+    "TDC_DATASET": {
+      "type": "string",
+      "required": true
+    },
+    "TDC_METHOD": {
+      "type": "string",
+      "required": false
+    },
+    "TDC_SEED": {
+      "type": "string",
+      "required": false
+    },
+    "TDC_FRAC": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "split_out": {
+      "path": "${RECORD_STORE}/split.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/split.json"
+  }
+}

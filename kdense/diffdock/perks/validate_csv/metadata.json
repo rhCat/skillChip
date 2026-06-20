@@ -1,0 +1,19 @@
+{
+  "perk": "validate_csv",
+  "skill": "diffdock",
+  "description": "Validate a DiffDock batch-input CSV: required columns present, each row supplies a protein (path or sequence) and a ligand, file paths resolve, and SMILES parse (RDKit, optional).",
+  "rules": [
+    "read-only — inspects the CSV and referenced files, never writes inputs",
+    "requires pandas; RDKit is optional (SMILES validation is skipped if RDKit is absent)",
+    "validation report (pass/fail + per-row messages) written to record_store"
+  ],
+  "usage": "Set INPUT_CSV (path to the batch CSV). Optionally set BASE_DIR (base dir for relative file paths). Output: validation_report.txt.",
+  "limitation": "Validates structure/paths/SMILES only; it does not check chemistry feasibility or run docking. Without RDKit, SMILES are not chemically validated.",
+  "minimal_example": {
+    "perk": "validate_csv",
+    "vars": {
+      "INPUT_CSV": "batch_input.csv",
+      "BASE_DIR": ""
+    }
+  }
+}

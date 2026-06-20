@@ -1,0 +1,14 @@
+{
+  "_perk": "benchmark",
+  "requires": ["python3"],
+  "vars": {
+    "TDC_GROUP": "admet_group",
+    "TDC_PRED": "${FIXTURE}"
+  },
+  "fixture": "bench_preds.json",
+  "expect": {
+    "exit": 0,
+    "outputs": ["bench.json"],
+    "nonempty": ["bench.json"]
+  }
+}

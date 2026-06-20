@@ -1,0 +1,19 @@
+{
+  "perk": "validate-case-report",
+  "skill": "clinical-reports",
+  "description": "Validate a clinical case report against CARE guidelines: section checklist, HIPAA identifier scan, word count and reference count (read-only).",
+  "rules": [
+    "read-only — never edits the input report",
+    "checks the 12 CARE sections via regex over the file content",
+    "also flags obvious HIPAA identifiers, word count vs the 1500-3000 range, and reference count",
+    "JSON validation report written to record_store; the porter never fails the step on low compliance"
+  ],
+  "usage": "Set REPORT_FILE (a case report .md/.txt). Output: care_validation.json.",
+  "limitation": "Regex heuristics only — section detection and HIPAA scanning are advisory, not a substitute for human review. Requires python3 (stdlib only).",
+  "minimal_example": {
+    "perk": "validate-case-report",
+    "vars": {
+      "REPORT_FILE": "./case_report.md"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "tool": "pack",
+  "inputs": {
+    "UNPACKED_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "ORIGINAL_PPTX": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "pack_out": {
+      "path": "${RECORD_STORE}/pack.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pack.log"
+  }
+}

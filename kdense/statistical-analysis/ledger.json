@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for statistical-analysis — set perk, fill record_store + the vars the perk declares.",
+  "skill": "statistical-analysis",
+  "perk": "normality",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "DATA_CSV": "<path to a CSV with the data>",
+    "VALUE_COL": "<numeric column to test for normality>",
+    "ALPHA": "0.05"
+  }
+}

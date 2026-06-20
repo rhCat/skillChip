@@ -1,0 +1,21 @@
+{
+  "perk": "generate-pdf",
+  "skill": "literature-review",
+  "description": "Render a markdown literature review into a professionally formatted PDF with pandoc (xelatex engine): 1-inch margins, 11pt, colored links, optional table of contents and section numbering, and citeproc bibliography when a sibling .bib exists.",
+  "rules": [
+    "read-only — the source markdown is never modified",
+    "shells out to pandoc --pdf-engine=xelatex",
+    "if a sibling <review>.bib exists, --citeproc + --csl <style>.csl are added",
+    "TOC and section numbering are on by default; set TOC=0 / NUMBER_SECTIONS=0 to disable",
+    "the PDF is written to record_store as review.pdf; a run.log captures the pandoc invocation"
+  ],
+  "usage": "Set REVIEW_MD (path to the review markdown). Optional: CITATION_STYLE (apa|nature|chicago|vancouver|ieee, default apa), TOC (1/0, default 1), NUMBER_SECTIONS (1/0, default 1). Output: review.pdf (best-effort) + run.log.",
+  "limitation": "Requires pandoc and xelatex on PATH. When either is absent the porter degrades: run.log records the failure and no PDF is produced (run.log is the guaranteed output the contract checks).",
+  "minimal_example": {
+    "perk": "generate-pdf",
+    "vars": {
+      "REVIEW_MD": "./my_literature_review.md",
+      "CITATION_STYLE": "nature"
+    }
+  }
+}

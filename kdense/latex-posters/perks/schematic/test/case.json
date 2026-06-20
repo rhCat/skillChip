@@ -1,0 +1,14 @@
+{
+  "_perk": "schematic",
+  "requires": ["python3"],
+  "vars": {
+    "PROMPT": "POSTER FORMAT for A0. ULTRA-SIMPLE 3-box workflow: DISCOVER -> VALIDATE -> APPROVE. 120pt bold. 60% white space.",
+    "OUTPUT_NAME": "schematic.png",
+    "DOC_TYPE": "poster"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["schematic.json"],
+    "nonempty": ["schematic.json"]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "skill": "generate-image",
+  "skill_sha": "512e293e1c0fce7b807f1ea0882153ac96caaabf6986cdcb8310e6f41defb5d0",
+  "file_count": 20,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "1c2d60b92f5a206f2fb96662d937ec0a81b36751a677fda30209c75e951f1fb8",
+    "blueprint.drawio": "f499fd25f6610afb000652d14ed025f14b8bd4d1b483491b9b514d7ed39171f5",
+    "blueprint.json": "95d41ad9d2b6647b117e73069a428990306e093a821ca24a372cebe640556b44",
+    "blueprint.svg": "ba788c24afd7d7524968d62cf71f7b7024b8632a4fb079be2d00cbd9a37c0a3a",
+    "ledger.json": "0c2e18db2fa00e7c54d6513836ef540105959e309612e30aa60f71e7bf4dcb9d",
+    "perks.json": "4894eac3104f5654c83ed4560623c134dda32c4be943dad193f31ac36b56507e",
+    "perks/edit/manifesto.json": "7ecafca4681dadc7b17f19f7c95b3a8f5f40bf3fdb612aaa79aa4e77d9196450",
+    "perks/edit/metadata.json": "409236ba22aea5fce52d138e73a8b42ff2e5e6b20547a73d624636403ab5258c",
+    "perks/edit/src/contracts.json": "f7654668c24e8d84955f29676d5e9d9835c904c3e8a232fba1503b4aa3526a01",
+    "perks/edit/src/edit_image.sh": "011abc15c4c85482df6cc811fe6ffdf93faa81790cccf39f8fc9fd1f5f4db3c1",
+    "perks/edit/src/generate_image_core.py": "f4aee183b7f192cae34813e53f094d2d14f0ca265189343f018b218415b63d9a",
+    "perks/edit/test/case.json": "1343268b0eb2375c2c331a3df90ca6fde2087aabb720eed5597e3102fd75482b",
+    "perks/edit/test/fixture/input.png": "a7c3b756173296d4b5f895b8d4e559640db80a573b3c639b788537b7c627971e",
+    "perks/generate/manifesto.json": "e2ee2e87abf91c93f499057d5e07b0b5b6eff964e5ab9a46b14c72b1f80a77b0",
+    "perks/generate/metadata.json": "37a02e7d8ec5075a367b19c9d114adb5d11e656efa9183f9004ee679205dad6c",
+    "perks/generate/src/contracts.json": "3419abbc8dc3b220c890afaf9cbfe200ba038dc989d8bd7c2070775847b243dd",
+    "perks/generate/src/generate_image.sh": "cd4024a75aa73a8d35ae3f3cc0c7c479a703469e3e1a533b794994d42166a797",
+    "perks/generate/src/generate_image_core.py": "f4aee183b7f192cae34813e53f094d2d14f0ca265189343f018b218415b63d9a",
+    "perks/generate/test/case.json": "c1013e8ef92c1daa1727aa2858be120ddd7b6f7d89c444185074203854beda74"
+  }
+}

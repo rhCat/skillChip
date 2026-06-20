@@ -1,0 +1,13 @@
+{
+  "_schema": "task-ledger TEMPLATE for pytdc — set perk, fill record_store + the vars the perk declares.",
+  "skill": "pytdc",
+  "perk": "load_split",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "TDC_PROBLEM": "single_pred",
+    "TDC_TASK": "ADME",
+    "TDC_DATASET": "Caco2_Wang",
+    "TDC_METHOD": "scaffold",
+    "TDC_SEED": "42"
+  }
+}

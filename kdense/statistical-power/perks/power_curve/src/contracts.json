@@ -1,0 +1,31 @@
+{
+  "tool": "power_curve",
+  "inputs": {
+    "TEST": {
+      "type": "string",
+      "required": true
+    },
+    "EFFECT_SIZE": {
+      "type": "number",
+      "required": false
+    },
+    "ALPHA": {
+      "type": "number",
+      "required": false
+    },
+    "POWER": {
+      "type": "number",
+      "required": false
+    }
+  },
+  "outputs": {
+    "power_curve_out": {
+      "path": "${RECORD_STORE}/power_curve.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/power_curve.json"
+  }
+}

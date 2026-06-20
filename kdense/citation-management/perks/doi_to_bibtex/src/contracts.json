@@ -1,0 +1,23 @@
+{
+  "tool": "doi_to_bibtex",
+  "inputs": {
+    "DOI": {
+      "type": "string",
+      "required": true
+    },
+    "DOI_FILE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "doi_to_bibtex_out": {
+      "path": "${RECORD_STORE}/references.bib",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/references.bib"
+  }
+}

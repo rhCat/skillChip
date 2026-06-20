@@ -1,0 +1,29 @@
+{
+  "skill": "pymatgen",
+  "perks": [
+    {
+      "id": "convert",
+      "summary": "convert a crystal structure file between formats (CIF, POSCAR, XYZ, JSON, ...) via pymatgen (read-only, file producer)",
+      "destructive": false,
+      "tools": [
+        "structure_convert"
+      ]
+    },
+    {
+      "id": "analyze",
+      "summary": "analyze a crystal structure — composition, lattice, symmetry/space group, coordination — and export JSON (read-only)",
+      "destructive": false,
+      "tools": [
+        "structure_analyze"
+      ]
+    },
+    {
+      "id": "phasediagram",
+      "summary": "build a Materials Project phase diagram for a chemical system and assess stability (read-only; needs mp-api + MP_API_KEY + network)",
+      "destructive": false,
+      "tools": [
+        "phase_diagram"
+      ]
+    }
+  ]
+}

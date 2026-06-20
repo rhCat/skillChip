@@ -1,0 +1,27 @@
+{
+  "_perk": "topic",
+  "sequence": [
+    "hs_topic"
+  ],
+  "tools": {
+    "hs_topic": {
+      "binary": "python3",
+      "params": {
+        "SLUG": "${SLUG}",
+        "FILTER": "${FILTER}",
+        "TAG": "${TAG}",
+        "FORMAT": "${FORMAT}"
+      }
+    }
+  },
+  "env": {
+    "SLUG": "${SLUG}",
+    "FILTER": "${FILTER}",
+    "TAG": "${TAG}",
+    "FORMAT": "${FORMAT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

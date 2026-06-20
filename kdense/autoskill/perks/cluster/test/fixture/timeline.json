@@ -1,0 +1,9 @@
+[
+  {"ts": "2026-04-17T10:00:00Z", "app": "Zotero", "window_title": "PubMed search: CRISPR"},
+  {"ts": "2026-04-17T10:03:00Z", "app": "Chrome", "window_title": "Google Scholar"},
+  {"ts": "2026-04-17T10:08:00Z", "app": "Chrome", "window_title": "Google Scholar results"},
+
+  {"ts": "2026-04-17T11:00:00Z", "app": "Zotero", "window_title": "PubMed search: kinase"},
+  {"ts": "2026-04-17T11:04:00Z", "app": "Chrome", "window_title": "Google Scholar"},
+  {"ts": "2026-04-17T11:09:00Z", "app": "Chrome", "window_title": "Google Scholar results 2"}
+]

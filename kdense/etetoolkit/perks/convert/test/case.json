@@ -1,0 +1,14 @@
+{
+  "_perk": "convert",
+  "requires": ["python3"],
+  "vars": {
+    "TREE_FILE": "${FIXTURE}",
+    "IN_FORMAT": "0",
+    "OUT_FORMAT": "1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["convert.log"],
+    "nonempty": ["convert.log"]
+  }
+}

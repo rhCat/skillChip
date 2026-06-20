@@ -1,0 +1,18 @@
+{
+  "_perk": "cluster",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/timeline.json",
+    "IDLE_GAP_MINUTES": "10",
+    "MIN_SESSION_MINUTES": "5",
+    "MIN_CLUSTER_SIZE": "2"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["clusters.json"],
+    "nonempty": ["clusters.json"],
+    "contains": {
+      "clusters.json": ["\"session_count\": 2", "\"Zotero\"", "\"Chrome\""]
+    }
+  }
+}

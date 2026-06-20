@@ -1,0 +1,34 @@
+{
+  "_perk": "samplesheet",
+  "sequence": [
+    "build_samplesheet"
+  ],
+  "tools": {
+    "build_samplesheet": {
+      "binary": "bash",
+      "params": {
+        "PATIENT_ID": "${PATIENT_ID}",
+        "TUMOR_SAMPLE_ID": "${TUMOR_SAMPLE_ID}",
+        "NORMAL_SAMPLE_ID": "${NORMAL_SAMPLE_ID}",
+        "TUMOR_BAM": "${TUMOR_BAM}",
+        "NORMAL_BAM": "${NORMAL_BAM}",
+        "TUMOR_PBI": "${TUMOR_PBI}",
+        "NORMAL_PBI": "${NORMAL_PBI}"
+      }
+    }
+  },
+  "env": {
+    "PATIENT_ID": "${PATIENT_ID}",
+    "TUMOR_SAMPLE_ID": "${TUMOR_SAMPLE_ID}",
+    "NORMAL_SAMPLE_ID": "${NORMAL_SAMPLE_ID}",
+    "TUMOR_BAM": "${TUMOR_BAM}",
+    "NORMAL_BAM": "${NORMAL_BAM}",
+    "TUMOR_PBI": "${TUMOR_PBI}",
+    "NORMAL_PBI": "${NORMAL_PBI}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

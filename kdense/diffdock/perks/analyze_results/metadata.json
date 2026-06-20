@@ -1,0 +1,21 @@
+{
+  "perk": "analyze_results",
+  "skill": "diffdock",
+  "description": "Parse pose-confidence scores from a DiffDock output directory (single-complex or batch), rank predictions, classify them High/Moderate/Low, and export a per-pose summary CSV.",
+  "rules": [
+    "read-only — reads DiffDock rank*_confidence*.sdf outputs, never modifies them",
+    "pure Python stdlib — runs without PyTorch, RDKit, or a GPU",
+    "always exports summary.csv to record_store; the printed summary is teed to a log"
+  ],
+  "usage": "Set RESULTS_DIR (a DiffDock output dir). Optionally set TOP (top-N per complex), THRESHOLD (min confidence), BEST (top-N across complexes). Output: summary.csv.",
+  "limitation": "Confidence reflects model certainty about the pose, NOT binding affinity. Scores are parsed from filenames / SDF properties; non-standard output layouts may yield no predictions.",
+  "minimal_example": {
+    "perk": "analyze_results",
+    "vars": {
+      "RESULTS_DIR": "results/batch/",
+      "TOP": "",
+      "THRESHOLD": "",
+      "BEST": ""
+    }
+  }
+}

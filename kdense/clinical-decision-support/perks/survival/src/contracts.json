@@ -1,0 +1,23 @@
+{
+  "tool": "survival_analysis",
+  "inputs": {
+    "INPUT_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "TITLE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "survival_statistics": {
+      "path": "${RECORD_STORE}/survival_statistics.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/survival_statistics.txt"
+  }
+}

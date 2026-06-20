@@ -1,0 +1,10 @@
+{
+  "_perk": "enrichment",
+  "requires": ["python3"],
+  "vars": { "GENE_LIST": "${FIXTURE}/genes.txt", "SPECIES": "human" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["enrichment.log"],
+    "nonempty": ["enrichment.log"]
+  }
+}

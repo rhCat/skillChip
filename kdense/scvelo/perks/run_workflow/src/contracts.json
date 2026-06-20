@@ -1,0 +1,39 @@
+{
+  "tool": "run_workflow",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "GROUPBY": {
+      "type": "string",
+      "required": false
+    },
+    "N_TOP_GENES": {
+      "type": "string",
+      "required": false
+    },
+    "N_NEIGHBORS": {
+      "type": "string",
+      "required": false
+    },
+    "MODE": {
+      "type": "string",
+      "required": false
+    },
+    "N_JOBS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "adata_velocity_h5ad": {
+      "path": "${RECORD_STORE}/adata_velocity.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/adata_velocity.h5ad"
+  }
+}

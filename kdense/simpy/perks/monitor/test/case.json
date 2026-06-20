@@ -1,0 +1,14 @@
+{
+  "_perk": "monitor",
+  "requires": ["python3"],
+  "vars": {
+    "NUM_PROCESSES": "5",
+    "CAPACITY": "2",
+    "BASE_DURATION": "3"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["monitor_report.txt"],
+    "nonempty": ["monitor_report.txt"]
+  }
+}

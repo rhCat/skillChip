@@ -1,0 +1,10 @@
+{
+  "_perk": "export_sirius",
+  "requires": ["python3", "bash"],
+  "vars": { "INPUT": "${FIXTURE}/sample.mzML" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["export.ms"],
+    "nonempty": ["export.ms"]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "skill": "pydicom",
+  "perks": [
+    {
+      "id": "extract_metadata",
+      "summary": "read a DICOM file and extract its metadata as text or JSON (read-only)",
+      "destructive": false,
+      "tools": [
+        "extract_metadata"
+      ]
+    },
+    {
+      "id": "convert_image",
+      "summary": "convert a DICOM file's pixel data to a standard image (PNG/JPEG/TIFF/BMP)",
+      "destructive": false,
+      "tools": [
+        "dicom_to_image"
+      ]
+    },
+    {
+      "id": "anonymize",
+      "summary": "anonymize a DICOM file by removing/replacing PHI, writing a new de-identified DICOM",
+      "destructive": false,
+      "tools": [
+        "anonymize_dicom"
+      ]
+    }
+  ]
+}

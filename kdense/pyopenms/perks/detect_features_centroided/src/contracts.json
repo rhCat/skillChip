@@ -1,0 +1,35 @@
+{
+  "tool": "detect_features_centroided",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "MZ_TOL_PPM": {
+      "type": "string",
+      "required": false
+    },
+    "CHARGE_LOW": {
+      "type": "string",
+      "required": false
+    },
+    "CHARGE_HIGH": {
+      "type": "string",
+      "required": false
+    },
+    "MIN_SPECTRA": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "features": {
+      "path": "${RECORD_STORE}/features.featureXML",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/features.featureXML"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "_perk": "phasediagram",
+  "skip": "needs the mp-api package, a valid MP_API_KEY, and network access to the Materials Project database — cannot run offline even in degraded mode"
+}

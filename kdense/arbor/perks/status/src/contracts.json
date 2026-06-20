@@ -1,0 +1,14 @@
+{
+  "tool": "arbor_status",
+  "inputs": {},
+  "outputs": {
+    "status_report": {
+      "path": "${RECORD_STORE}/status.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/status.txt"
+  }
+}

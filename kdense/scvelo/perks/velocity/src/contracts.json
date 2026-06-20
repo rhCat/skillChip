@@ -1,0 +1,27 @@
+{
+  "tool": "velocity",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "MODE": {
+      "type": "string",
+      "required": false
+    },
+    "N_JOBS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "velocity_h5ad": {
+      "path": "${RECORD_STORE}/velocity.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/velocity.h5ad"
+  }
+}

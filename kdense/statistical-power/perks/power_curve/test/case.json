@@ -1,0 +1,18 @@
+{
+  "_perk": "power_curve",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "TEST": "t_ind",
+    "EFFECT_SIZE": "0.5",
+    "ALPHA": "0.05",
+    "POWER": "0.80",
+    "N_START": "10",
+    "N_STOP": "80",
+    "N_STEP": "10"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["power_curve.json"],
+    "nonempty": ["power_curve.json"]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_perk": "linearity",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_CSV": "${FIXTURE}/data.csv",
+    "X_COL": "hours",
+    "Y_COL": "score"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["linearity.json", "linearity.png"],
+    "nonempty": ["linearity.json"],
+    "json": {
+      "linearity.json": { "n": 10 }
+    }
+  }
+}

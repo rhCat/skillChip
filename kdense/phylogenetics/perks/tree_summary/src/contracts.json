@@ -1,0 +1,19 @@
+{
+  "tool": "tree_summary",
+  "inputs": {
+    "TREE_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "stats": {
+      "path": "${RECORD_STORE}/tree_stats.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/tree_stats.json"
+  }
+}

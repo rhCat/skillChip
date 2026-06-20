@@ -1,0 +1,20 @@
+{
+  "perk": "pack",
+  "skill": "xlsx",
+  "description": "Pack an unpacked Office XML directory tree back into an Office workbook (.xlsx/.docx/.pptx), condensing XML whitespace.",
+  "rules": [
+    "condenses XML (strips insignificant whitespace + comments) then ZIP-deflates the tree into the workbook",
+    "validation/auto-repair runs only for .docx/.pptx with an --original reference; for .xlsx it is skipped",
+    "this porter disables validation (--validate false) so no schema files are needed",
+    "packed workbook written under record_store as OUT_FILE; a JSON summary is written to pack.json"
+  ],
+  "usage": "Set PACK_DIR (an unpacked Office XML directory, e.g. from the unpack perk) and OUT_FILE (workbook basename, e.g. out.xlsx). Output: pack.json (summary) + record_store/<OUT_FILE>.",
+  "limitation": "Requires defusedxml. Output extension must be .xlsx/.docx/.pptx. Without defusedxml the perk still emits valid JSON but produces no workbook. Round-trips an existing unpacked tree; it does not author a workbook from scratch.",
+  "minimal_example": {
+    "perk": "pack",
+    "vars": {
+      "PACK_DIR": "unpacked/",
+      "OUT_FILE": "out.xlsx"
+    }
+  }
+}

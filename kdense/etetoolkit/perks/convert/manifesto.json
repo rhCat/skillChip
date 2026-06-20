@@ -1,0 +1,25 @@
+{
+  "_perk": "convert",
+  "sequence": [
+    "ete_convert"
+  ],
+  "tools": {
+    "ete_convert": {
+      "binary": "python3",
+      "params": {
+        "TREE_FILE": "${TREE_FILE}",
+        "IN_FORMAT": "${IN_FORMAT}",
+        "OUT_FORMAT": "${OUT_FORMAT}"
+      }
+    }
+  },
+  "env": {
+    "TREE_FILE": "${TREE_FILE}",
+    "IN_FORMAT": "${IN_FORMAT}",
+    "OUT_FORMAT": "${OUT_FORMAT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

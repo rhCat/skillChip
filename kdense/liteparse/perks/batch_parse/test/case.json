@@ -1,0 +1,15 @@
+{
+  "_perk": "batch_parse",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT_DIR": "${FIXTURE}",
+    "FORMAT": "json",
+    "EXTENSION": ".pdf",
+    "RECURSIVE": "0"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["batch.json"],
+    "nonempty": ["batch.json"]
+  }
+}

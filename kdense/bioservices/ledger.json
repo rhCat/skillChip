@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for bioservices — set perk, fill record_store + the vars the perk declares.",
+  "skill": "bioservices",
+  "perk": "batch_id_convert",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "ID_FILE": "<file of identifiers, one per line>",
+    "FROM_DB": "<source database code, e.g. UniProtKB_AC-ID>",
+    "TO_DB": "<target database code, e.g. KEGG>"
+  }
+}

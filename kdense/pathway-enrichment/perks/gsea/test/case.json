@@ -1,0 +1,16 @@
+{
+  "_perk": "gsea",
+  "requires": ["python3"],
+  "vars": {
+    "RNK": "${FIXTURE}/ranked_genes.csv",
+    "LIBRARIES": "MSigDB_Hallmark_2020",
+    "ORGANISM": "human",
+    "FDR": "0.05",
+    "SEED": "123"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["gsea_results.csv"],
+    "nonempty": ["gsea_results.csv"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_perk": "fill-annotations",
+  "requires": ["python3"],
+  "vars": {
+    "PDF_PATH": "${FIXTURE}/mini.pdf",
+    "FIELDS_JSON": "${FIXTURE}/fields.json"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["fill_annotations.txt"],
+    "nonempty": ["fill_annotations.txt"]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "perk": "plackett-burman",
+  "skill": "experimental-design",
+  "description": "Plackett-Burman screening DOE matrix: main effects only in very few runs, returned in real units with a randomized run order.",
+  "rules": [
+    "read-only — reads a JSON spec, writes a CSV; mutates no live service",
+    "seeded — the run order is reproducible from SPEC_JSON.seed",
+    "run count is the next multiple of 4 above k (extra dummy columns are dropped)",
+    "needs python3 + pyDOE3 + numpy + pandas"
+  ],
+  "usage": "Set SPEC_JSON to a JSON file with keys: factors (required dict {name:[low,high]}), randomize (bool, default true), seed (int). Output: experimental_runs.csv under record_store.",
+  "limitation": "Two-factor interactions are heavily confounded with main effects — use it to screen the vital few, not to model interactions. When pyDOE3 is absent the porter writes an empty {} artifact.",
+  "minimal_example": {
+    "perk": "plackett-burman",
+    "vars": {
+      "SPEC_JSON": "spec.json"
+    },
+    "spec.json": {
+      "factors": {"x1": [0, 1], "x2": [0, 1], "x3": [0, 1], "x4": [0, 1], "x5": [0, 1]},
+      "seed": 1
+    }
+  }
+}

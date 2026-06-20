@@ -1,0 +1,25 @@
+{
+  "_perk": "monitor",
+  "sequence": [
+    "simpy_monitor"
+  ],
+  "tools": {
+    "simpy_monitor": {
+      "binary": "python3",
+      "params": {
+        "NUM_PROCESSES": "${NUM_PROCESSES}",
+        "CAPACITY": "${CAPACITY}",
+        "BASE_DURATION": "${BASE_DURATION}"
+      }
+    }
+  },
+  "env": {
+    "NUM_PROCESSES": "${NUM_PROCESSES}",
+    "CAPACITY": "${CAPACITY}",
+    "BASE_DURATION": "${BASE_DURATION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

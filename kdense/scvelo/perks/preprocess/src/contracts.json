@@ -1,0 +1,35 @@
+{
+  "tool": "preprocess",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "MIN_SHARED_COUNTS": {
+      "type": "string",
+      "required": false
+    },
+    "N_TOP_GENES": {
+      "type": "string",
+      "required": false
+    },
+    "N_NEIGHBORS": {
+      "type": "string",
+      "required": false
+    },
+    "N_PCS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "preprocessed_h5ad": {
+      "path": "${RECORD_STORE}/preprocessed.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/preprocessed.h5ad"
+  }
+}

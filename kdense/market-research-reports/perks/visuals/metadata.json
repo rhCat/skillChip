@@ -1,0 +1,19 @@
+{
+  "perk": "visuals",
+  "skill": "market-research-reports",
+  "description": "Plan and batch-generate the standard market-research-report visual set (market growth trajectory, TAM/SAM/SOM, Porter's Five Forces, competitive positioning, risk heatmap, executive infographic, plus an extended set) for a given market TOPIC, writing a manifest of every visual under record_store.",
+  "rules": [
+    "read-only / local — never mutates a remote or live service",
+    "TOPIC is required; ALL=1 selects the full extended visual set (else core 5-6)",
+    "renders via the scientific-schematics + generate-image backends when present; degrades to a deterministic plan manifest when they are absent",
+    "manifest written to record_store"
+  ],
+  "usage": "Set TOPIC (the market name); optionally set ALL=1 for the extended set. Output: market_visuals_manifest.txt.",
+  "limitation": "Actual image rendering requires the scientific-schematics and generate-image skill scripts (heavy image/network backends) to be reachable on the skills path. Offline the porter records the deterministic plan only. The upstream --all path has a malformed visual entry that aborts the full enumeration partway; the core set always enumerates cleanly.",
+  "minimal_example": {
+    "perk": "visuals",
+    "vars": {
+      "TOPIC": "Electric Vehicle Charging Infrastructure"
+    }
+  }
+}

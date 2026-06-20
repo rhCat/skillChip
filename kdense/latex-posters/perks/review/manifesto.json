@@ -1,0 +1,21 @@
+{
+  "_perk": "review",
+  "sequence": [
+    "review_poster"
+  ],
+  "tools": {
+    "review_poster": {
+      "binary": "bash",
+      "params": {
+        "POSTER_PDF": "${POSTER_PDF}"
+      }
+    }
+  },
+  "env": {
+    "POSTER_PDF": "${POSTER_PDF}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

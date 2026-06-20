@@ -1,0 +1,23 @@
+{
+  "tool": "lit_parse",
+  "inputs": {
+    "INPUT_FILE": {
+      "type": "string",
+      "required": true
+    },
+    "FORMAT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "parse_out": {
+      "path": "${RECORD_STORE}/parse.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/parse.json"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "perk": "recalc",
+  "skill": "xlsx",
+  "description": "Recalculate all formulas in an .xlsx/.xlsm workbook via LibreOffice and scan every cell for Excel errors, emitting a JSON report.",
+  "rules": [
+    "read-only report — never edits the workbook's structure/data, only re-evaluates formulas in place and reports",
+    "drives LibreOffice headless (soffice) to compute formula values; openpyxl reloads to count formulas + locate errors",
+    "scans for #REF!, #DIV/0!, #VALUE!, #NAME?, #NULL!, #NUM!, #N/A across all sheets",
+    "report written to record_store as recalc.json"
+  ],
+  "usage": "Set XLSX_FILE (path to the workbook). Optional RECALC_TIMEOUT (seconds, default 30). Output: recalc.json with status/total_errors/total_formulas/error_summary.",
+  "limitation": "Formula recalculation requires LibreOffice (soffice on PATH); without it the report carries an error field but the perk still emits valid JSON. Requires openpyxl. gcc is only needed where AF_UNIX sockets are blocked.",
+  "minimal_example": {
+    "perk": "recalc",
+    "vars": {
+      "XLSX_FILE": "model.xlsx",
+      "RECALC_TIMEOUT": "30"
+    }
+  }
+}

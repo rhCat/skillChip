@@ -1,0 +1,39 @@
+{
+  "tool": "align_link_quantify",
+  "inputs": {
+    "INPUTS": {
+      "type": "string",
+      "required": true
+    },
+    "RT_TOL": {
+      "type": "string",
+      "required": false
+    },
+    "MZ_TOL": {
+      "type": "string",
+      "required": false
+    },
+    "MZ_UNIT": {
+      "type": "string",
+      "required": false
+    },
+    "PPM": {
+      "type": "string",
+      "required": false
+    },
+    "NOISE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "consensus": {
+      "path": "${RECORD_STORE}/study.consensusXML",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/study.consensusXML"
+  }
+}

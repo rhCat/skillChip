@@ -1,0 +1,13 @@
+{
+  "_perk": "groups",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/mols.txt",
+    "GROUPS": "privileged_scaffolds,rings_in_drugs"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["groups.csv"],
+    "nonempty": ["groups.csv"]
+  }
+}

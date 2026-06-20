@@ -1,0 +1,28 @@
+{
+  "_perk": "search_query",
+  "sequence": [
+    "search_query"
+  ],
+  "tools": {
+    "search_query": {
+      "binary": "bash",
+      "params": {
+        "OPEN_NOTEBOOK_URL": "${OPEN_NOTEBOOK_URL}",
+        "SEARCH_QUERY": "${SEARCH_QUERY}",
+        "SEARCH_TYPE": "${SEARCH_TYPE}",
+        "SEARCH_LIMIT": "${SEARCH_LIMIT}"
+      }
+    }
+  },
+  "env": {
+    "OPEN_NOTEBOOK_URL": "${OPEN_NOTEBOOK_URL}",
+    "SEARCH_QUERY": "${SEARCH_QUERY}",
+    "SEARCH_TYPE": "${SEARCH_TYPE}",
+    "SEARCH_LIMIT": "${SEARCH_LIMIT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

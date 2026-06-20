@@ -1,0 +1,27 @@
+{
+  "tool": "batch_id_convert",
+  "inputs": {
+    "ID_FILE": {
+      "type": "string",
+      "required": true
+    },
+    "FROM_DB": {
+      "type": "string",
+      "required": true
+    },
+    "TO_DB": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "mapping_csv": {
+      "path": "${RECORD_STORE}/mapping_results.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/mapping_results.csv"
+  }
+}

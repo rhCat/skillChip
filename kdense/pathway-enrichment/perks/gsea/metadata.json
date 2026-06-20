@@ -1,0 +1,23 @@
+{
+  "perk": "gsea",
+  "skill": "pathway-enrichment",
+  "description": "preranked GSEA from a DESeq2 table or a gene,score rank file -> results CSV + dotplot",
+  "rules": [
+    "read-only — no inputs are mutated; outputs only under record_store",
+    "supply exactly one of DESEQ2 (results CSV indexed by gene) or RNK (gene,score file)",
+    "ranking metric prefers the Wald `stat`, else sign(log2FoldChange) * -log10(pvalue)",
+    "permutations use a fixed SEED (default 123) for reproducible p-values",
+    "FDR filter uses FDR q-val; needs gseapy + network, degrades gracefully when absent/offline"
+  ],
+  "usage": "Set DESEQ2 (DESeq2 results CSV, index=genes) OR RNK (two-column gene,score file). Optional: LIBRARIES, ORGANISM (default human), FDR (default 0.05), SEED (default 123), MIN_SIZE (15), MAX_SIZE (500), PERMUTATIONS (1000). Outputs: gsea_results.csv, gsea_significant.csv, gsea_dotplot.png.",
+  "limitation": "Preranked GSEA only; never runs ORA. Requires a per-gene score (full ranked list) — never threshold first. Requires gseapy installed and network access for library downloads to produce real results.",
+  "minimal_example": {
+    "perk": "gsea",
+    "vars": {
+      "RNK": "ranked_genes.csv",
+      "LIBRARIES": "MSigDB_Hallmark_2020",
+      "ORGANISM": "human",
+      "SEED": "123"
+    }
+  }
+}

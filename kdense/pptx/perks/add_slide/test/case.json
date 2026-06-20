@@ -1,0 +1,13 @@
+{
+  "_perk": "add_slide",
+  "requires": ["python3"],
+  "vars": {
+    "UNPACKED_DIR": "${FIXTURE}/unpacked",
+    "SLIDE_SOURCE": "slide1.xml"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["add_slide.txt"],
+    "nonempty": ["add_slide.txt"]
+  }
+}

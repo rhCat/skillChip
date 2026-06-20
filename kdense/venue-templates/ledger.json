@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for venue-templates — set perk, fill record_store + the vars the perk declares.",
+  "skill": "venue-templates",
+  "perk": "query",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "VENUE": "<venue name, e.g. Nature or NeurIPS>",
+    "TEMPLATE_TYPE": "<journals|posters|grants|all (optional)>",
+    "KEYWORD": "<search keyword (optional)>"
+  }
+}

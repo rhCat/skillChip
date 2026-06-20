@@ -1,0 +1,38 @@
+{
+  "_perk": "achieved_power",
+  "sequence": [
+    "power_achieved"
+  ],
+  "tools": {
+    "power_achieved": {
+      "binary": "bash",
+      "params": {
+        "TEST": "${TEST}",
+        "EFFECT_SIZE": "${EFFECT_SIZE}",
+        "NOBS1": "${NOBS1}",
+        "ALPHA": "${ALPHA}"
+      }
+    }
+  },
+  "env": {
+    "TEST": "${TEST}",
+    "EFFECT_SIZE": "${EFFECT_SIZE}",
+    "NOBS1": "${NOBS1}",
+    "NOBS": "${NOBS}",
+    "ALPHA": "${ALPHA}",
+    "ALTERNATIVE": "${ALTERNATIVE}",
+    "RATIO": "${RATIO}",
+    "K_GROUPS": "${K_GROUPS}",
+    "PROP1": "${PROP1}",
+    "PROP2": "${PROP2}",
+    "PROP0": "${PROP0}",
+    "DOF": "${DOF}",
+    "DF_NUM": "${DF_NUM}",
+    "K_TOTAL": "${K_TOTAL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

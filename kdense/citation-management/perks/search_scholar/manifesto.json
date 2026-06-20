@@ -1,0 +1,23 @@
+{
+  "_perk": "search_scholar",
+  "sequence": [
+    "search_scholar"
+  ],
+  "tools": {
+    "search_scholar": {
+      "binary": "python3",
+      "params": {
+        "QUERY": "${QUERY}"
+      }
+    }
+  },
+  "env": {
+    "QUERY": "${QUERY}",
+    "LIMIT": "${LIMIT}",
+    "SORT_BY": "${SORT_BY}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

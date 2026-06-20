@@ -1,0 +1,23 @@
+{
+  "tool": "notebook_list",
+  "inputs": {
+    "OPEN_NOTEBOOK_URL": {
+      "type": "string",
+      "required": true
+    },
+    "NB_ARCHIVED": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "notebooks_out": {
+      "path": "${RECORD_STORE}/notebooks.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/notebooks.json"
+  }
+}

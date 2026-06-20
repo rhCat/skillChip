@@ -1,0 +1,33 @@
+{
+  "skill": "stable-baselines3",
+  "skill_sha": "ce6432ac0215325329a0518a34788030e9676b40f667372b358864c36e07ada1",
+  "file_count": 26,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "33603be3dfc41286f31040b0bf4e59b3d8fe5b351a575048815e3f39f8a2f7b7",
+    "blueprint.drawio": "0d189dbf6fc1ae4fdb7e9df0107804937e7d51202504f6163ce584bc2f7706fb",
+    "blueprint.json": "ee577651bc18450515e0e6bdcfd5b97985d6a6be2a2f138663fbcd743488f87d",
+    "blueprint.svg": "c01a68cf895f2fae661c8365a4bf5aa7bf7aade6237a48e21df9130bcd477cc1",
+    "ledger.json": "13a02434dd51c8b4d0d18b08e5e2629d31a4452d61c1ad876c220b622a3398cd",
+    "perks.json": "0f722f536e1653729983492395c17f7a151570f8e65dba8eec5a4de0136e1925",
+    "perks/custom_env/manifesto.json": "eb725f1be242ed92e7971dedfb7151bcc4df2a63b7b2c7586ee0c38754c4213e",
+    "perks/custom_env/metadata.json": "467e85c84e4dea562c3082d1d0b42e7197759fe760def4a2c3e6eeb51c5199e8",
+    "perks/custom_env/src/contracts.json": "ddb5f79e2a11d088e8dc2424043372c36994139f51375b4aaf5c32e834bb9f7f",
+    "perks/custom_env/src/custom_env_template.py": "10d4d2f55fef72b091d65faa409746484fa8ef9472578c6f96de551f2b37512d",
+    "perks/custom_env/src/sb3_check_env.sh": "763a1b968be4a7b86587133192a3808211110588becf88d3b478291bac0dd901",
+    "perks/custom_env/test/case.json": "fc57451a14f571df0e0c52dc546398d307c62bac546a086e42aeb65a70e747bb",
+    "perks/evaluate/manifesto.json": "e966f5451db988210cd9c3a43b5cdf7cbf613b34a29c00532e0b595d38f40b66",
+    "perks/evaluate/metadata.json": "21ed6c867895c44ee4c1f7a8e2e2d21f07d75bf5ca71365c13805fe5383d2965",
+    "perks/evaluate/src/contracts.json": "0d1fa9b3a91bb1ed9a9f996c153ac7c6af010d43485331ec588450e6751c2974",
+    "perks/evaluate/src/evaluate_agent.py": "16024c0322e4c70b82dae620fa7481da08a1ea6e10fd36ec203c2c32fa0da464",
+    "perks/evaluate/src/sb3_evaluate.sh": "81ab6f4f9d7056c9943f3ce2e042814e30d22de4827e547dcbf9786ac3552ca0",
+    "perks/evaluate/test/case.json": "6a5275de8202b3342c816505494907c85ef78550285352e7cd758d96dddd33b4",
+    "perks/evaluate/test/fixture/model.zip": "03ec0e285b8859c70f668848ac7262d6e33c73624f378c807d2a6d05b20ef7a1",
+    "perks/train/manifesto.json": "12b7b91e70af6f614c7f15ebc4006f4a7bcda3e3117ff0d7b87ee1278d65ff79",
+    "perks/train/metadata.json": "6cbe18fb362f91f0643f7935bf6e45aa0880552c247b3b60b0f8ec668f8dc5cf",
+    "perks/train/src/contracts.json": "b9636725908b0cf94362c0db388367190eb6e1964ba510b15915861376ee253a",
+    "perks/train/src/sb3_train.sh": "96b7bcb8925415b545c837dfdeaf83cb9da0c8196fa465b2157ab4024d051163",
+    "perks/train/src/train_rl_agent.py": "a233523c6ee778c8931bdf3ae093f1ee8865db63be40f3365328e0e6ec024892",
+    "perks/train/test/case.json": "c708e50129f1b5861d6cab08f1b11996b39350776ef4633c54743ad2c7716f36"
+  }
+}

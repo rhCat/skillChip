@@ -1,0 +1,19 @@
+{
+  "tool": "validate_quality",
+  "inputs": {
+    "PLAN_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "quality_report": {
+      "path": "${RECORD_STORE}/quality.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/quality.txt"
+  }
+}

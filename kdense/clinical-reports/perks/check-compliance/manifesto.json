@@ -1,0 +1,21 @@
+{
+  "_perk": "check-compliance",
+  "sequence": [
+    "compliance_checker"
+  ],
+  "tools": {
+    "compliance_checker": {
+      "binary": "python3",
+      "params": {
+        "REPORT_FILE": "${REPORT_FILE}"
+      }
+    }
+  },
+  "env": {
+    "REPORT_FILE": "${REPORT_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

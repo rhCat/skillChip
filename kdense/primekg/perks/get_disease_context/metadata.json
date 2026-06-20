@@ -1,0 +1,21 @@
+{
+  "perk": "get_disease_context",
+  "skill": "primekg",
+  "description": "summarize the local graph around a disease: associated genes, drugs, phenotypes, related diseases (read-only)",
+  "rules": [
+    "read-only — never mutates the graph or any remote service",
+    "resolves DISEASE_NAME via the same substring search as search_nodes (node_type='disease') and takes the first match",
+    "buckets the matched disease's direct neighbors by neighbor type into associated_genes / associated_drugs / phenotypes / related_diseases",
+    "returns {\"error\": \"Disease not found\"} inside the context when no disease matches",
+    "writes the summary as JSON to record_store"
+  ],
+  "usage": "Set PRIMEKG_CSV (path to kg.csv) and DISEASE_NAME. Output: disease_context.json.",
+  "limitation": "Uses the first substring match for the disease name; buckets only depth-1 neighbors. Requires pandas and a local PrimeKG kg.csv edge list.",
+  "minimal_example": {
+    "perk": "get_disease_context",
+    "vars": {
+      "PRIMEKG_CSV": "/data/PrimeKG/kg.csv",
+      "DISEASE_NAME": "Alzheimer's disease"
+    }
+  }
+}

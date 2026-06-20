@@ -1,0 +1,21 @@
+{
+  "_perk": "clean",
+  "sequence": [
+    "clean"
+  ],
+  "tools": {
+    "clean": {
+      "binary": "python3",
+      "params": {
+        "UNPACKED_DIR": "${UNPACKED_DIR}"
+      }
+    }
+  },
+  "env": {
+    "UNPACKED_DIR": "${UNPACKED_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

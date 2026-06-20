@@ -1,0 +1,31 @@
+{
+  "tool": "cluster",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "IDLE_GAP_MINUTES": {
+      "type": "string",
+      "required": false
+    },
+    "MIN_SESSION_MINUTES": {
+      "type": "string",
+      "required": false
+    },
+    "MIN_CLUSTER_SIZE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "clusters": {
+      "path": "${RECORD_STORE}/clusters.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/clusters.json"
+  }
+}

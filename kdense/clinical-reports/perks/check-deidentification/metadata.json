@@ -1,0 +1,19 @@
+{
+  "perk": "check-deidentification",
+  "skill": "clinical-reports",
+  "description": "Scan clinical text for the 18 HIPAA identifiers and ages over 89, returning a de-identification compliance report (read-only).",
+  "rules": [
+    "read-only — never edits or redacts the input report",
+    "scans for all 18 HIPAA Safe-Harbor identifiers (names, dates, phone, SSN, MRN, URLs, IPs, etc.) plus ages >89",
+    "assigns CRITICAL / HIGH / MEDIUM severity and an overall COMPLIANT / NEEDS_REVIEW / NON_COMPLIANT status",
+    "JSON report written to record_store; the porter does not fail the step on detected violations"
+  ],
+  "usage": "Set REPORT_FILE (any clinical text/.md). Output: deidentification.json.",
+  "limitation": "Regex detection — yields false positives/negatives and is not a certified de-identification tool. Requires python3 (stdlib only).",
+  "minimal_example": {
+    "perk": "check-deidentification",
+    "vars": {
+      "REPORT_FILE": "./report.md"
+    }
+  }
+}

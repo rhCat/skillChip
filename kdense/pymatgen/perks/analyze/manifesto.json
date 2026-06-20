@@ -1,0 +1,21 @@
+{
+  "_perk": "analyze",
+  "sequence": [
+    "structure_analyze"
+  ],
+  "tools": {
+    "structure_analyze": {
+      "binary": "python3",
+      "params": {
+        "STRUCTURE_FILE": "${STRUCTURE_FILE}"
+      }
+    }
+  },
+  "env": {
+    "STRUCTURE_FILE": "${STRUCTURE_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

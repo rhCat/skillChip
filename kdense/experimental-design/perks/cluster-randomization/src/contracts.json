@@ -1,0 +1,19 @@
+{
+  "tool": "cluster_randomization",
+  "inputs": {
+    "SPEC_JSON": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "cluster_allocation": {
+      "path": "${RECORD_STORE}/cluster_allocation.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/cluster_allocation.csv"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "skill": "pptx-posters",
+  "perks": [
+    {
+      "id": "schematic",
+      "summary": "generate an AI scientific schematic / poster figure from a natural-language prompt (OpenRouter Nano Banana 2, iterative quality review)",
+      "destructive": false,
+      "tools": [
+        "schematic"
+      ]
+    }
+  ]
+}

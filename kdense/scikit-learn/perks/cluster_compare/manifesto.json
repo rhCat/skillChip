@@ -1,0 +1,23 @@
+{
+  "_perk": "cluster_compare",
+  "sequence": [
+    "cluster_compare"
+  ],
+  "tools": {
+    "cluster_compare": {
+      "binary": "bash",
+      "params": {
+        "DATA_CSV": "${DATA_CSV}"
+      }
+    }
+  },
+  "env": {
+    "DATA_CSV": "${DATA_CSV}",
+    "N_CLUSTERS": "${N_CLUSTERS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

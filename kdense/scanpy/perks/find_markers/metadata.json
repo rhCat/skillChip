@@ -1,0 +1,20 @@
+{
+  "perk": "find_markers",
+  "skill": "scanpy",
+  "description": "Rank marker genes per group with sc.tl.rank_genes_groups, write a combined CSV of top markers, per-group CSVs, and standard marker plots (rank panel, heatmap, dotplot).",
+  "rules": [
+    "EXPLORATORY cluster markers only — per-cell tests inflate significance because cells are not independent; for rigorous DE between conditions use the pseudobulk perk + pydeseq2",
+    "read-only input — writes markers.h5ad, per-group CSVs (markers/ dir), and plots under record_store",
+    "USE_RAW ranks on adata.raw (normalized log values) when present",
+    "GROUPBY must be an existing obs column (default leiden)"
+  ],
+  "usage": "Set INPUT. Optional: GROUPBY (default leiden), METHOD (wilcoxon|t-test|t-test_overestim_var|logreg), N_GENES, TOP, USE_RAW=1, NO_PLOTS=1. Outputs: markers.h5ad + markers/ CSVs.",
+  "limitation": "Requires scanpy installed; without it the porter writes a {} placeholder markers.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "find_markers",
+    "vars": {
+      "INPUT": "clustered.h5ad",
+      "GROUPBY": "leiden"
+    }
+  }
+}

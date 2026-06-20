@@ -1,0 +1,20 @@
+{
+  "perk": "leaves",
+  "skill": "etetoolkit",
+  "description": "List the names of all leaves (tips/taxa) in a phylogenetic tree, one per line.",
+  "rules": [
+    "read-only — never modifies the input tree",
+    "TREE_FORMAT is the ETE Newick format number (default 0)",
+    "one leaf name per line",
+    "leaf list (leaves.txt) is written under record_store"
+  ],
+  "usage": "Set TREE_FILE (input Newick tree) and TREE_FORMAT (default 0). Output: leaves.txt.",
+  "limitation": "Requires ete3 to parse; without it the porter records an ete3-missing note and exits 0. Stdout-only op — no tree file is written.",
+  "minimal_example": {
+    "perk": "leaves",
+    "vars": {
+      "TREE_FILE": "tree.nw",
+      "TREE_FORMAT": "0"
+    }
+  }
+}

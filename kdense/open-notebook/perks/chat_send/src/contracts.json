@@ -1,0 +1,39 @@
+{
+  "tool": "chat_send",
+  "inputs": {
+    "OPEN_NOTEBOOK_URL": {
+      "type": "string",
+      "required": true
+    },
+    "SESSION_ID": {
+      "type": "string",
+      "required": true
+    },
+    "CHAT_MESSAGE": {
+      "type": "string",
+      "required": true
+    },
+    "INCLUDE_SOURCES": {
+      "type": "string",
+      "required": false
+    },
+    "INCLUDE_NOTES": {
+      "type": "string",
+      "required": false
+    },
+    "MODEL_OVERRIDE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "chat_response_out": {
+      "path": "${RECORD_STORE}/chat_response.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/chat_response.json"
+  }
+}

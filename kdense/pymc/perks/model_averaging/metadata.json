@@ -1,0 +1,23 @@
+{
+  "perk": "model_averaging",
+  "skill": "pymc",
+  "description": "Bayesian model averaging — compute pseudo-BMA weights from an information criterion and form a weighted average of posterior-predictive draws across saved PyMC/ArviZ InferenceData .nc files.",
+  "rules": [
+    "read-only — never mutates inputs or any remote/live service",
+    "each input is a netCDF InferenceData file carrying posterior_predictive/predictions for VAR_NAME",
+    "MODELS_DIR globs *.nc (model name = filename stem); MODELS overrides with a comma list of name=path or path",
+    "VAR_NAME selects the predicted variable (default y_obs); IC selects loo (default) or waic for weights",
+    "requires arviz + numpy (+ pymc) importable for real output; absent libs produce a graceful {} stub",
+    "weights + averaged-prediction summary written to record_store as averaging.json; the full averaged array is saved alongside as averaging_predictions.npy"
+  ],
+  "usage": "Set MODELS_DIR (a dir of .nc files) or MODELS (comma list of name=path.nc). Optional VAR_NAME (default y_obs) + IC (loo|waic). Outputs: averaging.json + averaging_predictions.npy.",
+  "limitation": "Read-only averaging. Each model needs posterior_predictive (or predictions) for VAR_NAME and compatible draw shapes. Needs arviz/numpy/pymc + the netCDF backend; offline it writes an empty JSON stub.",
+  "minimal_example": {
+    "perk": "model_averaging",
+    "vars": {
+      "MODELS_DIR": "models/",
+      "VAR_NAME": "y_obs",
+      "IC": "loo"
+    }
+  }
+}

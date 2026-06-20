@@ -1,0 +1,10 @@
+{
+  "_perk": "gene_analysis",
+  "requires": ["python3"],
+  "vars": { "GENE": "ACE2", "SPECIES": "homo_sapiens" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["gene_analysis.log"],
+    "nonempty": ["gene_analysis.log"]
+  }
+}

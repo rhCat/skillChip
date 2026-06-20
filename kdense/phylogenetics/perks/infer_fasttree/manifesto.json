@@ -1,0 +1,24 @@
+{
+  "_perk": "infer_fasttree",
+  "sequence": [
+    "fasttree_infer"
+  ],
+  "tools": {
+    "fasttree_infer": {
+      "binary": "bash",
+      "params": {
+        "ALIGNED_FASTA": "${ALIGNED_FASTA}",
+        "SEQ_TYPE": "${SEQ_TYPE}"
+      }
+    }
+  },
+  "env": {
+    "ALIGNED_FASTA": "${ALIGNED_FASTA}",
+    "SEQ_TYPE": "${SEQ_TYPE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

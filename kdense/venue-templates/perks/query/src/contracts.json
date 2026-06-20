@@ -1,0 +1,27 @@
+{
+  "tool": "query_template",
+  "inputs": {
+    "VENUE": {
+      "type": "string",
+      "required": false
+    },
+    "TEMPLATE_TYPE": {
+      "type": "string",
+      "required": false
+    },
+    "KEYWORD": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "query_out": {
+      "path": "${RECORD_STORE}/query.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/query.txt"
+  }
+}

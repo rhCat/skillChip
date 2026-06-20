@@ -1,0 +1,27 @@
+{
+  "_perk": "predict_solubility",
+  "sequence": [
+    "predict_solubility"
+  ],
+  "tools": {
+    "predict_solubility": {
+      "binary": "python3",
+      "params": {
+        "DATA_CSV": "${DATA_CSV}",
+        "SMILES_COL": "${SMILES_COL}",
+        "TARGET_COL": "${TARGET_COL}",
+        "PREDICT_SMILES": "${PREDICT_SMILES}"
+      }
+    }
+  },
+  "env": {
+    "DATA_CSV": "${DATA_CSV}",
+    "SMILES_COL": "${SMILES_COL}",
+    "TARGET_COL": "${TARGET_COL}",
+    "PREDICT_SMILES": "${PREDICT_SMILES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

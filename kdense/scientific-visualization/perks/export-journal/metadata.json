@@ -1,0 +1,21 @@
+{
+  "perk": "export-journal",
+  "skill": "scientific-visualization",
+  "description": "Render a CSV (first column = x, remaining columns = y series) into a publication-styled figure and save it with a specific journal's required formats + DPI via save_for_journal().",
+  "rules": [
+    "read-only with respect to inputs; only writes under record_store",
+    "JOURNAL must be one of nature|science|cell|plos|acs|ieee; FIGURE_TYPE one of line_art|photo|combination",
+    "formats and DPI are taken from the journal spec table, not chosen by the caller",
+    "degrades gracefully (writes a non-empty manifest, exits 0) when matplotlib/numpy are absent or the journal is unknown"
+  ],
+  "usage": "Set DATA_CSV (CSV with header + numeric columns). Optional JOURNAL (default nature) and FIGURE_TYPE (default combination). Outputs: journal_export.json manifest plus figure.<fmt> files.",
+  "limitation": "Produces a simple multi-series line plot only. Figure files require matplotlib + numpy present; EPS/TIFF output additionally needs the relevant matplotlib backends.",
+  "minimal_example": {
+    "perk": "export-journal",
+    "vars": {
+      "DATA_CSV": "./series.csv",
+      "JOURNAL": "nature",
+      "FIGURE_TYPE": "combination"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for markitdown — set perk, fill record_store + the vars the perk declares.",
+  "skill": "markitdown",
+  "perk": "batch_convert",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "INPUT_DIR": "<directory of files to convert>"
+  }
+}

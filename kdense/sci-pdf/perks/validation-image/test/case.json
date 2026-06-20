@@ -1,0 +1,14 @@
+{
+  "_perk": "validation-image",
+  "requires": ["python3"],
+  "vars": {
+    "PAGE_NUMBER": "1",
+    "FIELDS_JSON": "${FIXTURE}/fields.json",
+    "PAGE_IMAGE": "${FIXTURE}/page_1.png"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["validation_image.txt"],
+    "nonempty": ["validation_image.txt"]
+  }
+}

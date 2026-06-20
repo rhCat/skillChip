@@ -1,0 +1,18 @@
+{
+  "perk": "detect_adducts",
+  "skill": "pyopenms",
+  "description": "Group features that are different ionization forms (adducts/charge variants) of the same neutral compound using MetaboliteFeatureDeconvolution. Annotates each feature with its inferred adduct and neutral mass; writes a decharged featureXML and a consensusXML of grouped adduct families.",
+  "rules": [
+    "writes decharged.featureXML and adduct_groups.consensusXML under record_store",
+    "adducts use OpenMS 'Elements:Charge:Probability' syntax (e.g. H:+:0.4), NOT bracket notation",
+    "NEGATIVE=1 selects negative ionization mode (and negative default adducts)"
+  ],
+  "usage": "Set INPUT (featureXML). Optional NEGATIVE=1, ADDUCTS, CHARGE_MIN/CHARGE_MAX, MASS_MAX_DIFF, RT_MAX_DIFF. Output: decharged.featureXML (+ adduct_groups.consensusXML).",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) to produce real content; if absent the porter still creates decharged.featureXML and records the reason.",
+  "minimal_example": {
+    "perk": "detect_adducts",
+    "vars": {
+      "INPUT": "features.featureXML"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "n": 12,
+  "arms": ["treatment", "control"],
+  "ratio": [2, 1],
+  "seed": 1
+}

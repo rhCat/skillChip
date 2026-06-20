@@ -1,0 +1,19 @@
+{
+  "perk": "compound_xref",
+  "skill": "bioservices",
+  "description": "Search a compound by name in KEGG and cross-reference its identifiers across ChEBI and ChEMBL (via UniChem), plus basic properties. Writes a text report.",
+  "rules": [
+    "read-only — queries KEGG / UniChem / ChEBI / ChEMBL APIs, writes local files only",
+    "COMPOUND is a free-text compound name (e.g. Geldanamycin, Aspirin)",
+    "first KEGG hit is used; ChEBI is taken from the KEGG entry; ChEMBL is mapped via UniChem",
+    "report written to record_store as compound_xref.txt"
+  ],
+  "usage": "Set COMPOUND (compound name). Output: compound_xref.txt.",
+  "limitation": "Needs the bioservices Python package and internet access to KEGG/UniChem/ChEBI/ChEMBL. Offline / package-absent runs still produce compound_xref.txt (degraded, may be empty).",
+  "minimal_example": {
+    "perk": "compound_xref",
+    "vars": {
+      "COMPOUND": "Geldanamycin"
+    }
+  }
+}

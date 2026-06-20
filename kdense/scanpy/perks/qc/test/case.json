@@ -1,0 +1,12 @@
+{
+  "_perk": "qc",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.csv"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["qc_filtered.h5ad"],
+    "nonempty": ["qc_filtered.h5ad"]
+  }
+}

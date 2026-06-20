@@ -1,0 +1,20 @@
+{
+  "perk": "annotate",
+  "skill": "scanpy",
+  "description": "Annotate clusters with cell-type labels from a JSON or CSV mapping, writing the labels into a new obs column and saving a UMAP and dotplot. Optionally draw a marker-gene reference dotplot to help decide the mapping.",
+  "rules": [
+    "MAPPING is JSON {\"0\":\"CD4 T cells\",...} or CSV with columns cluster,cell_type",
+    "read-only inputs — writes a new annotated.h5ad + plots under record_store",
+    "CLUSTER_KEY must be an existing obs column (default leiden); unmapped clusters become 'Unknown'",
+    "provide MAPPING (to annotate) and/or MARKERS (JSON {cell_type:[genes]} for a reference dotplot)"
+  ],
+  "usage": "Set INPUT and MAPPING. Optional: CLUSTER_KEY (default leiden), LABEL_KEY (default cell_type), MARKERS, NO_PLOTS=1. Output: annotated.h5ad.",
+  "limitation": "Requires scanpy installed; without it the porter writes a {} placeholder annotated.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "annotate",
+    "vars": {
+      "INPUT": "clustered.h5ad",
+      "MAPPING": "celltypes.json"
+    }
+  }
+}

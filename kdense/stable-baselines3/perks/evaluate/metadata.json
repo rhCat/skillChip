@@ -1,0 +1,22 @@
+{
+  "perk": "evaluate",
+  "skill": "stable-baselines3",
+  "description": "Load a saved SB3 model and evaluate it over N episodes with evaluate_policy, reporting mean and std episode reward.",
+  "rules": [
+    "read-only with respect to remote/live services — only reads the model and writes under record_store",
+    "wraps the vendored evaluate_agent.py:evaluate_agent unchanged (PPO.load + DummyVecEnv + evaluate_policy)",
+    "MODEL_PATH must point to an SB3 .zip saved by the train perk (or any SB3 model.save)",
+    "uses deterministic actions; no rendering",
+    "needs stable-baselines3 >= 2.8 (Python 3.10+), gymnasium, and torch present to actually evaluate; degrades gracefully otherwise"
+  ],
+  "usage": "Set MODEL_PATH (saved .zip), ENV_ID (Gymnasium id), N_EVAL_EPISODES. Output: evaluation.json (mean/std reward + metadata).",
+  "limitation": "Loads with the PPO class (matches the vendored template); other algorithm classes would need an edit. Heavy science libs and Python 3.10+ are required; without them the porter records the libs are absent and writes an empty-but-present report.",
+  "minimal_example": {
+    "perk": "evaluate",
+    "vars": {
+      "MODEL_PATH": "./models/final_model.zip",
+      "ENV_ID": "CartPole-v1",
+      "N_EVAL_EPISODES": "10"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "_perk": "convert_with_ai",
+  "sequence": [
+    "convert_with_ai"
+  ],
+  "tools": {
+    "convert_with_ai": {
+      "binary": "python3",
+      "params": {
+        "INPUT_FILE": "${INPUT_FILE}"
+      }
+    }
+  },
+  "env": {
+    "INPUT_FILE": "${INPUT_FILE}",
+    "MODEL": "${MODEL}",
+    "PROMPT_TYPE": "${PROMPT_TYPE}",
+    "CUSTOM_PROMPT": "${CUSTOM_PROMPT}",
+    "OPENROUTER_API_KEY": "${OPENROUTER_API_KEY}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

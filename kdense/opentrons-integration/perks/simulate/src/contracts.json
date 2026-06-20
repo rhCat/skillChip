@@ -1,0 +1,19 @@
+{
+  "tool": "ot_simulate",
+  "inputs": {
+    "PROTOCOL_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "ot_simulate_out": {
+      "path": "${RECORD_STORE}/simulate.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/simulate.log"
+  }
+}

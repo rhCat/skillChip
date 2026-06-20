@@ -1,0 +1,20 @@
+{
+  "perk": "preprocess",
+  "skill": "scanpy",
+  "description": "Normalize (normalize_total), log1p, select highly variable genes, and optionally regress out covariates and scale. Keeps raw counts in layers['counts'] and the normalized log matrix in adata.raw so downstream marker/expression plots can use use_raw=True.",
+  "rules": [
+    "takes QC-filtered raw counts; produces a normalized, log1p object ready for dimensionality reduction",
+    "read-only input — writes a new normalized.h5ad + HVG plot under record_store",
+    "FLAVOR seurat_v3 selects HVGs on raw counts before normalization; seurat/cell_ranger after",
+    "REGRESS_OUT is a space-separated list of obs columns (e.g. 'total_counts pct_counts_mt')"
+  ],
+  "usage": "Set INPUT. Optional: TARGET_SUM, N_TOP_GENES, FLAVOR (seurat|cell_ranger|seurat_v3), BATCH_KEY, SUBSET_HVG=1, REGRESS_OUT, SCALE=1, NO_PLOTS=1. Output: normalized.h5ad.",
+  "limitation": "Requires scanpy installed; without it the porter writes a {} placeholder normalized.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "preprocess",
+    "vars": {
+      "INPUT": "qc_filtered.h5ad",
+      "N_TOP_GENES": "2000"
+    }
+  }
+}

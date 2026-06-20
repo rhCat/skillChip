@@ -1,0 +1,22 @@
+{
+  "perk": "train",
+  "skill": "pufferlib",
+  "description": "Run the PuffeRL PPO+LSTM training script on a chosen environment, writing a training log and checkpoints under record_store. Local compute — no remote service is mutated.",
+  "rules": [
+    "local compute: writes only under record_store (training log + checkpoints), never mutates a remote service",
+    "ENV_NAME selects the environment (default procgen-coinrun); NUM_ENVS / NUM_ITERATIONS / DEVICE tune the run",
+    "checkpoints are written to record_store/checkpoints",
+    "requires pufferlib + torch (and a GPU for real throughput); degrades gracefully to a logged note when the stack is absent"
+  ],
+  "usage": "Set ENV_NAME, NUM_ENVS, NUM_ITERATIONS, DEVICE (cpu|cuda). Output: train.log (training stdout/stderr or the absent-stack note); checkpoints under record_store/checkpoints when training runs.",
+  "limitation": "Real training needs pufferlib + torch installed and ideally a CUDA GPU; without them the porter records that the stack is absent and exits cleanly. No hyperparameter search is performed.",
+  "minimal_example": {
+    "perk": "train",
+    "vars": {
+      "ENV_NAME": "procgen-coinrun",
+      "NUM_ENVS": "256",
+      "NUM_ITERATIONS": "1",
+      "DEVICE": "cpu"
+    }
+  }
+}

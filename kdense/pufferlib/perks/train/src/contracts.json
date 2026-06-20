@@ -1,0 +1,31 @@
+{
+  "tool": "train",
+  "inputs": {
+    "ENV_NAME": {
+      "type": "string",
+      "required": false
+    },
+    "NUM_ENVS": {
+      "type": "string",
+      "required": false
+    },
+    "NUM_ITERATIONS": {
+      "type": "string",
+      "required": false
+    },
+    "DEVICE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "train_log": {
+      "path": "${RECORD_STORE}/train.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/train.log"
+  }
+}

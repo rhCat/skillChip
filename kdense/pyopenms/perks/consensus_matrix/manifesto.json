@@ -1,0 +1,24 @@
+{
+  "_perk": "consensus_matrix",
+  "sequence": [
+    "consensus_to_matrix"
+  ],
+  "tools": {
+    "consensus_to_matrix": {
+      "binary": "bash",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "LONG_FORMAT": "${LONG_FORMAT}",
+    "NORMALIZE": "${NORMALIZE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

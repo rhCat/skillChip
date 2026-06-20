@@ -1,0 +1,10 @@
+{
+  "_perk": "extract-structure",
+  "requires": ["python3"],
+  "vars": { "PDF_PATH": "${FIXTURE}/mini.pdf" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["structure.json"],
+    "nonempty": ["structure.json"]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_perk": "format-adverse-events",
+  "sequence": [
+    "format_adverse_events"
+  ],
+  "tools": {
+    "format_adverse_events": {
+      "binary": "python3",
+      "params": {
+        "AE_CSV": "${AE_CSV}"
+      }
+    }
+  },
+  "env": {
+    "AE_CSV": "${AE_CSV}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "_perk": "common_alerts",
+  "sequence": [
+    "mc_common_alerts"
+  ],
+  "tools": {
+    "mc_common_alerts": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

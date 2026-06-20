@@ -1,0 +1,20 @@
+{
+  "perk": "normality",
+  "skill": "statistical-analysis",
+  "description": "Shapiro-Wilk normality test on one numeric column of a CSV (+ Q-Q/histogram figure).",
+  "rules": [
+    "read-only — input CSV is never mutated",
+    "tests a single numeric column with the Shapiro-Wilk test",
+    "JSON report + PNG figure written to record_store"
+  ],
+  "usage": "Set DATA_CSV, VALUE_COL, and optionally ALPHA (default 0.05). Output: normality.json + normality.png.",
+  "limitation": "Single column only; NaNs dropped. Shapiro-Wilk is unreliable for n < 3 or very large n. Requires numpy/scipy/pandas/matplotlib present; degrades to an empty report otherwise.",
+  "minimal_example": {
+    "perk": "normality",
+    "vars": {
+      "DATA_CSV": "./data.csv",
+      "VALUE_COL": "score",
+      "ALPHA": "0.05"
+    }
+  }
+}

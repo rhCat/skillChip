@@ -1,0 +1,12 @@
+{
+  "_schema": "task-ledger TEMPLATE for statistical-power — set perk, fill record_store + the vars the perk declares.",
+  "skill": "statistical-power",
+  "perk": "sample_size",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "TEST": "t_ind",
+    "EFFECT_SIZE": "0.5",
+    "POWER": "0.80",
+    "ALPHA": "0.05"
+  }
+}

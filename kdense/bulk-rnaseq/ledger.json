@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for bulk-rnaseq — set perk, fill record_store + the vars the perk declares.",
+  "skill": "bulk-rnaseq",
+  "perk": "validate_samplesheet",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "SAMPLESHEET": "<path to nf-core/rnaseq samplesheet CSV>"
+  }
+}

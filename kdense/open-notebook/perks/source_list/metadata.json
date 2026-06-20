@@ -1,0 +1,21 @@
+{
+  "perk": "source_list",
+  "skill": "open-notebook",
+  "description": "List sources, optionally filtered by notebook (GET /api/sources).",
+  "rules": [
+    "read-only: only GETs from the server",
+    "NOTEBOOK_ID optional — omit to list across all notebooks",
+    "writes the source list JSON to record_store/sources.json",
+    "degrades gracefully (status=unreachable, exit 0) when the server is down"
+  ],
+  "usage": "Set OPEN_NOTEBOOK_URL (NOTEBOOK_ID optional filter, SOURCE_LIMIT default 20). Output: sources.json.",
+  "limitation": "Requires a reachable Open Notebook server with the requests package.",
+  "minimal_example": {
+    "perk": "source_list",
+    "vars": {
+      "OPEN_NOTEBOOK_URL": "http://localhost:5055",
+      "NOTEBOOK_ID": "notebook:abc123",
+      "SOURCE_LIMIT": "20"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "skill": "pyopenms",
+  "perks": [
+    {
+      "id": "inspect",
+      "summary": "summarize any mzML/mzXML/featureXML/consensusXML/idXML (counts, RT/m/z ranges, TIC, metadata); optional per-spectrum CSV",
+      "destructive": false,
+      "tools": ["inspect_ms_data"]
+    },
+    {
+      "id": "convert",
+      "summary": "convert spectra between mzML/mzXML/MGF with optional MS-level, RT, and intensity filtering",
+      "destructive": false,
+      "tools": ["convert_format"]
+    },
+    {
+      "id": "process_spectra",
+      "summary": "configurable signal-processing chain: smoothing, centroiding, normalization, S/N + intensity thresholds",
+      "destructive": false,
+      "tools": ["process_spectra"]
+    },
+    {
+      "id": "detect_features_metabo",
+      "summary": "untargeted metabolomics feature finding (MassTraceDetection -> ElutionPeakDetection -> FeatureFindingMetabo)",
+      "destructive": false,
+      "tools": ["detect_features_metabo"]
+    },
+    {
+      "id": "detect_features_centroided",
+      "summary": "peptide/centroided feature detection via FeatureFinderAlgorithmPicked",
+      "destructive": false,
+      "tools": ["detect_features_centroided"]
+    },
+    {
+      "id": "align_link_quantify",
+      "summary": "multi-sample pipeline: detect (or load) features -> RT alignment -> consensus linking -> quant matrix CSV",
+      "destructive": false,
+      "tools": ["align_link_quantify"]
+    },
+    {
+      "id": "consensus_matrix",
+      "summary": "consensusXML -> wide intensity matrix + metadata, with optional median/quantile normalization and long format",
+      "destructive": false,
+      "tools": ["consensus_to_matrix"]
+    },
+    {
+      "id": "detect_adducts",
+      "summary": "group adducts/charge variants of the same neutral mass (MetaboliteFeatureDeconvolution)",
+      "destructive": false,
+      "tools": ["detect_adducts"]
+    },
+    {
+      "id": "accurate_mass_search",
+      "summary": "annotate features against HMDB by accurate mass (AccurateMassSearchEngine -> mzTab/CSV)",
+      "destructive": false,
+      "tools": ["accurate_mass_search"]
+    },
+    {
+      "id": "export_gnps",
+      "summary": "export GNPS FBMN inputs (MGF of MS2 + quantification table) from a consensusXML + source mzML",
+      "destructive": false,
+      "tools": ["export_gnps"]
+    },
+    {
+      "id": "export_sirius",
+      "summary": "export a SIRIUS .ms file (+ compound-info TSV) from mzML + optional featureXML",
+      "destructive": false,
+      "tools": ["export_sirius"]
+    },
+    {
+      "id": "process_identifications",
+      "summary": "re-index against FASTA, estimate FDR/q-values, filter (FDR/length/best-per-spectrum), export idXML + CSV",
+      "destructive": false,
+      "tools": ["process_identifications"]
+    },
+    {
+      "id": "mass_calculator",
+      "summary": "monoisotopic/average mass, charged m/z, formula, and isotope pattern for peptides or empirical formulas",
+      "destructive": false,
+      "tools": ["mass_calculator"]
+    },
+    {
+      "id": "digest_protein",
+      "summary": "in-silico protease digestion of FASTA/sequence -> theoretical peptides with masses and m/z",
+      "destructive": false,
+      "tools": ["digest_protein"]
+    },
+    {
+      "id": "theoretical_spectrum",
+      "summary": "generate annotated theoretical fragment spectra (b/y/a/c/x/z, losses) for a peptide",
+      "destructive": false,
+      "tools": ["theoretical_spectrum"]
+    },
+    {
+      "id": "extract_chromatograms",
+      "summary": "build TIC/BPC and XIC traces for target m/z (CSV + optional plot)",
+      "destructive": false,
+      "tools": ["extract_chromatograms"]
+    },
+    {
+      "id": "plot_ms_data",
+      "summary": "quick plots: single spectrum, TIC, 2D feature map, MS1 signal map",
+      "destructive": false,
+      "tools": ["plot_ms_data"]
+    }
+  ]
+}

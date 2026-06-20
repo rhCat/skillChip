@@ -1,0 +1,24 @@
+{
+  "perk": "genie3",
+  "skill": "arboreto",
+  "description": "Infer a gene regulatory network from an expression matrix using GENIE3 (Random Forest, the classic multiple-regression approach). Reads a TSV expression matrix (genes as columns, observations as rows), optionally restricts regulators to a transcription-factor list, and writes a TF–target–importance network TSV. Useful for comparison with / validation of GRNBoost2 results.",
+  "rules": [
+    "read-only / local — never mutates remote or live state",
+    "EXPRESSION_FILE is a TSV with genes as columns and observations (cells/samples) as rows",
+    "TF_FILE is optional (one TF name per line); empty = all genes treated as potential regulators",
+    "SEED makes the run reproducible; LIMIT caps the network to the top-N links globally",
+    "output network.tsv has columns TF, target, importance (no header, tab-separated)",
+    "runs inference on the local machine via the vendored arboreto core; slower than GRNBoost2"
+  ],
+  "usage": "Set EXPRESSION_FILE (TSV). Optionally set TF_FILE, SEED, LIMIT. Output: network.tsv (+ genie3.log).",
+  "limitation": "Requires the arboreto Python package (with dask/distributed/scikit-learn) installed in the runtime to produce a real network; when absent the porter degrades gracefully and writes an empty artifact. GENIE3 is more computationally expensive than GRNBoost2. python3 in the test runtime is 3.9.",
+  "minimal_example": {
+    "perk": "genie3",
+    "vars": {
+      "EXPRESSION_FILE": "expression_data.tsv",
+      "TF_FILE": "",
+      "SEED": "777",
+      "LIMIT": ""
+    }
+  }
+}

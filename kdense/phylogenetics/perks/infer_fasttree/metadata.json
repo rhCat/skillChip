@@ -1,0 +1,19 @@
+{
+  "perk": "infer_fasttree",
+  "skill": "phylogenetics",
+  "description": "FastTree fast approximate maximum-likelihood tree for large datasets (aligned FASTA -> Newick tree).",
+  "rules": [
+    "read-only on inputs; writes one artifact (phylo.tree) under record_store",
+    "nucleotide alignments use -nt -gtr -gamma; protein alignments use -lg -gamma",
+    "requires the FastTree binary on PATH; without it the porter degrades gracefully and emits {}"
+  ],
+  "usage": "Set ALIGNED_FASTA (an alignment). Optional SEQ_TYPE (nt|aa, default nt). Output: phylo.tree.",
+  "limitation": "Needs FastTree installed (conda install -c bioconda fasttree). Offline / without FastTree the tree is not produced; the output is a graceful {} placeholder. Approximate ML — less accurate than IQ-TREE but 10-100x faster on >5000 sequences.",
+  "minimal_example": {
+    "perk": "infer_fasttree",
+    "vars": {
+      "ALIGNED_FASTA": "aligned.fasta",
+      "SEQ_TYPE": "nt"
+    }
+  }
+}

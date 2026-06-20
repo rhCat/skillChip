@@ -1,0 +1,16 @@
+{
+  "perk": "observe",
+  "skill": "arbor",
+  "description": "render the Observe projection of the current research state (read-only)",
+  "rules": [
+    "read-only — never mutates the tree or run config",
+    "prints objective, global insights, active frontier, executed/merged evidence, pruned constraints, current best",
+    "the coordinator re-grounds on this projection at the start of each cycle"
+  ],
+  "usage": "Set RECORD_STORE pointing at an existing Arbor run (created by the init perk). Output: observe.txt. If no run exists in the store, an empty bootstrap run is created so the projection has a tree to read.",
+  "limitation": "Read-only projection only — it interprets nothing and makes no decisions. Requires the .arbor/ state to exist (or it bootstraps an empty one).",
+  "minimal_example": {
+    "perk": "observe",
+    "vars": {}
+  }
+}

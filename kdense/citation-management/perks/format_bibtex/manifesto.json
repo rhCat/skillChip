@@ -1,0 +1,23 @@
+{
+  "_perk": "format_bibtex",
+  "sequence": [
+    "format_bibtex"
+  ],
+  "tools": {
+    "format_bibtex": {
+      "binary": "python3",
+      "params": {
+        "BIB_FILE": "${BIB_FILE}"
+      }
+    }
+  },
+  "env": {
+    "BIB_FILE": "${BIB_FILE}",
+    "SORT_BY": "${SORT_BY}",
+    "DEDUPLICATE": "${DEDUPLICATE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

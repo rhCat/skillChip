@@ -1,0 +1,27 @@
+{
+  "_perk": "fetch",
+  "sequence": [
+    "fetch_window"
+  ],
+  "tools": {
+    "fetch_window": {
+      "binary": "fetch_window.sh",
+      "params": {
+        "START": "${START}",
+        "END": "${END}",
+        "SCREENPIPE_URL": "${SCREENPIPE_URL}",
+        "SCREENPIPE_TOKEN": "${SCREENPIPE_TOKEN}"
+      }
+    }
+  },
+  "env": {
+    "START": "${START}",
+    "END": "${END}",
+    "SCREENPIPE_URL": "${SCREENPIPE_URL}",
+    "SCREENPIPE_TOKEN": "${SCREENPIPE_TOKEN}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "full_factorial",
+  "inputs": {
+    "SPEC_JSON": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "experimental_runs": {
+      "path": "${RECORD_STORE}/experimental_runs.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/experimental_runs.csv"
+  }
+}

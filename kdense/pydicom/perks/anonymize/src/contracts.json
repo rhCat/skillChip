@@ -1,0 +1,27 @@
+{
+  "tool": "anonymize_dicom",
+  "inputs": {
+    "DICOM_IN": {
+      "type": "string",
+      "required": true
+    },
+    "PATIENT_ID": {
+      "type": "string",
+      "required": false
+    },
+    "PATIENT_NAME": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "anonymized_out": {
+      "path": "${RECORD_STORE}/anonymized.dcm",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/anonymized.dcm"
+  }
+}

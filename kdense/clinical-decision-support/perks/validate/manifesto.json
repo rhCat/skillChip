@@ -1,0 +1,21 @@
+{
+  "_perk": "validate",
+  "sequence": [
+    "validate_cds"
+  ],
+  "tools": {
+    "validate_cds": {
+      "binary": "python3",
+      "params": {
+        "DOC": "${DOC}"
+      }
+    }
+  },
+  "env": {
+    "DOC": "${DOC}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

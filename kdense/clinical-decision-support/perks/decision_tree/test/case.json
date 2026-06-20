@@ -1,0 +1,12 @@
+{
+  "_perk": "decision_tree",
+  "requires": ["python3"],
+  "vars": {
+    "SPEC_JSON": "${FIXTURE}/algorithm.json"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["clinical_algorithm.tex"],
+    "nonempty": ["clinical_algorithm.tex"]
+  }
+}

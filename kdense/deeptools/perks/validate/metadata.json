@@ -1,0 +1,22 @@
+{
+  "perk": "validate",
+  "skill": "deeptools",
+  "description": "Validate BAM/bigWig/BED input files for deepTools analysis — checks file existence/readability, BAM index (.bai) presence, and basic BED format correctness.",
+  "rules": [
+    "read-only — inspects files, never modifies them",
+    "at least one of BAM_FILES / BIGWIG_FILES / BED_FILES must be non-empty",
+    "each var is a space-separated list of paths",
+    "full validation report written to record_store/validation.txt",
+    "pure Python stdlib — no deepTools or science library required"
+  ],
+  "usage": "Set any of BAM_FILES, BIGWIG_FILES, BED_FILES (space-separated path lists; leave unused ones empty). Output: validation.txt.",
+  "limitation": "Structural checks only: BAM index existence (not BAM body integrity), bigWig size sanity, and BED column/coordinate format on the first 10 rows. Does not parse BAM/bigWig binary contents.",
+  "minimal_example": {
+    "perk": "validate",
+    "vars": {
+      "BAM_FILES": "",
+      "BIGWIG_FILES": "",
+      "BED_FILES": "regions.bed"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_perk": "convert",
+  "sequence": [
+    "convert"
+  ],
+  "tools": {
+    "convert": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "TRANSPOSE": "${TRANSPOSE}",
+    "MAKE_UNIQUE": "${MAKE_UNIQUE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

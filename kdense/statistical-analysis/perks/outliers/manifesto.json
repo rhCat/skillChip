@@ -1,0 +1,27 @@
+{
+  "_perk": "outliers",
+  "sequence": [
+    "detect_outliers"
+  ],
+  "tools": {
+    "detect_outliers": {
+      "binary": "python3",
+      "params": {
+        "DATA_CSV": "${DATA_CSV}",
+        "VALUE_COL": "${VALUE_COL}",
+        "METHOD": "${METHOD}",
+        "THRESHOLD": "${THRESHOLD}"
+      }
+    }
+  },
+  "env": {
+    "DATA_CSV": "${DATA_CSV}",
+    "VALUE_COL": "${VALUE_COL}",
+    "METHOD": "${METHOD}",
+    "THRESHOLD": "${THRESHOLD}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "_perk": "analyze",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_FILE": "${FIXTURE}/sample.csv"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["eda_report.md"],
+    "nonempty": ["eda_report.md"],
+    "contains": { "eda_report.md": "Exploratory Data Analysis Report" }
+  }
+}

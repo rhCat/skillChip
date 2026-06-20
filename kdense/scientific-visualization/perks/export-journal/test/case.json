@@ -1,0 +1,14 @@
+{
+  "_perk": "export-journal",
+  "requires": ["bash", "python3"],
+  "vars": {
+    "DATA_CSV": "${FIXTURE}/series.csv",
+    "JOURNAL": "plos",
+    "FIGURE_TYPE": "photo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["journal_export.json"],
+    "nonempty": ["journal_export.json"]
+  }
+}

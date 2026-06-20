@@ -1,0 +1,21 @@
+{
+  "_perk": "backup-notebook",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "LA_CONFIG": "${FIXTURE}/config.yaml",
+    "LA_NBID": "12345",
+    "LA_BACKUP_JSON": "false",
+    "LA_NO_ATTACHMENTS": "true"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "backup_notebook.json"
+    ],
+    "nonempty": [
+      "backup_notebook.json"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_perk": "loo_reliability",
+  "requires": ["bash", "python3"],
+  "vars": { "MODELS_DIR": "${FIXTURE}", "THRESHOLD": "0.7" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["loo_reliability.json"],
+    "nonempty": ["loo_reliability.json"]
+  }
+}

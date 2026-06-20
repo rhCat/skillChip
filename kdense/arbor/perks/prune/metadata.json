@@ -1,0 +1,19 @@
+{
+  "perk": "prune",
+  "skill": "arbor",
+  "description": "prune a falsified node and its subtree, recording the reason as a negative constraint (the Decide step)",
+  "rules": [
+    "marks the node and all descendants pruned (skipping merged/root nodes)",
+    "the REASON is stored as prune_reason and surfaces in Observe as a negative constraint",
+    "pruned-with-a-reason is more valuable than pruned-and-forgotten — failures are constraints, not noise"
+  ],
+  "usage": "Set NODE (the falsified node) and optional REASON (why this direction is a dead end). Output: prune.txt. If no run exists, a bootstrap run with a root + one child node (n1) is created first.",
+  "limitation": "Marks state only — it does not delete artifacts, branches, or worktrees. A merged node or the root is never pruned. NODE must reference an existing node id.",
+  "minimal_example": {
+    "perk": "prune",
+    "vars": {
+      "NODE": "n1",
+      "REASON": "search-augmented judge overfits dev questions; no test transfer"
+    }
+  }
+}

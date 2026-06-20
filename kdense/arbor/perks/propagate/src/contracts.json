@@ -1,0 +1,27 @@
+{
+  "tool": "arbor_propagate",
+  "inputs": {
+    "NODE": {
+      "type": "string",
+      "required": true
+    },
+    "INSIGHT": {
+      "type": "string",
+      "required": true
+    },
+    "TO_ROOT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "propagate_report": {
+      "path": "${RECORD_STORE}/propagate.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/propagate.txt"
+  }
+}

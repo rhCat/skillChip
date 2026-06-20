@@ -1,0 +1,19 @@
+{
+  "tool": "eda_format_reference",
+  "inputs": {
+    "DATA_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "format_reference_md": {
+      "path": "${RECORD_STORE}/format_reference.md",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/format_reference.md"
+  }
+}

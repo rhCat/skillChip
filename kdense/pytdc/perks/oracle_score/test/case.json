@@ -1,0 +1,14 @@
+{
+  "_perk": "oracle_score",
+  "requires": ["python3"],
+  "vars": {
+    "TDC_ORACLE": "QED",
+    "TDC_SMILES": "${FIXTURE}"
+  },
+  "fixture": "mols.smi",
+  "expect": {
+    "exit": 0,
+    "outputs": ["scores.json"],
+    "nonempty": ["scores.json"]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_perk": "load",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.h5ad"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["data.h5ad"],
+    "nonempty": ["data.h5ad"]
+  }
+}

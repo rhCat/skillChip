@@ -1,0 +1,13 @@
+{
+  "_perk": "fill-fillable",
+  "requires": ["python3"],
+  "vars": {
+    "PDF_PATH": "${FIXTURE}/mini.pdf",
+    "FIELDS_JSON": "${FIXTURE}/values.json"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["fill_fillable.txt"],
+    "nonempty": ["fill_fillable.txt"]
+  }
+}

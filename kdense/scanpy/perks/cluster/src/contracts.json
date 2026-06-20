@@ -1,0 +1,19 @@
+{
+  "tool": "cluster",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "clustered": {
+      "path": "${RECORD_STORE}/clustered.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/clustered.h5ad"
+  }
+}

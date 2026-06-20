@@ -1,0 +1,20 @@
+{
+  "perk": "sequence_analysis",
+  "skill": "gget",
+  "description": "Batch sequence analysis via gget: BLAST each record in a FASTA file (gget blast) then run a MUSCLE multiple alignment over all records (gget muscle). Writes per-sequence BLAST CSVs and an alignment.afa under record_store (read-only remote queries).",
+  "rules": [
+    "read-only — only queries the NCBI BLAST + MUSCLE services and writes local files",
+    "needs network and an installed gget package; with gget absent the porter degrades gracefully and still writes a non-empty report",
+    "all outputs land under record_store (the porter runs the vendored core there)",
+    "AlphaFold structure prediction in the core is disabled by default (the porter never passes --predict-structure)"
+  ],
+  "usage": "Set FASTA (path to a FASTA file of sequences) and BLAST_DB (default nr for proteins, nt for nucleotides). Output: sequence_analysis.log (run log) plus <id>_blast.csv per record and alignment.afa when >1 sequence.",
+  "limitation": "Requires gget + network for real BLAST/alignment results; offline it only produces the run log. Alignment is skipped for a single sequence. Per-sequence BLAST failures are warned and skipped.",
+  "minimal_example": {
+    "perk": "sequence_analysis",
+    "vars": {
+      "FASTA": "/abs/path/sequences.fasta",
+      "BLAST_DB": "nr"
+    }
+  }
+}

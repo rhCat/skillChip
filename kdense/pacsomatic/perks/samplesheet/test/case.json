@@ -1,0 +1,19 @@
+{
+  "_perk": "samplesheet",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "PATIENT_ID": "P001",
+    "TUMOR_SAMPLE_ID": "P001_T",
+    "NORMAL_SAMPLE_ID": "P001_N",
+    "TUMOR_BAM": "${FIXTURE}/tumor.bam",
+    "NORMAL_BAM": "${FIXTURE}/normal.bam"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["samplesheet.csv"],
+    "nonempty": ["samplesheet.csv"],
+    "contains": {
+      "samplesheet.csv": ["patient,sample,status,bam,pbi", "P001,P001_T,1,", "P001,P001_N,0,"]
+    }
+  }
+}

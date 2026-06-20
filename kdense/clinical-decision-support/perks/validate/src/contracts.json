@@ -1,0 +1,19 @@
+{
+  "tool": "validate_cds",
+  "inputs": {
+    "DOC": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "validation_report": {
+      "path": "${RECORD_STORE}/validation_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/validation_report.txt"
+  }
+}

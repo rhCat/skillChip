@@ -1,0 +1,39 @@
+{
+  "tool": "extract_chromatograms",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "TIC": {
+      "type": "string",
+      "required": false
+    },
+    "BPC": {
+      "type": "string",
+      "required": false
+    },
+    "MZ": {
+      "type": "string",
+      "required": false
+    },
+    "PPM": {
+      "type": "string",
+      "required": false
+    },
+    "PLOT_ON": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "chromatograms": {
+      "path": "${RECORD_STORE}/chromatograms.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/chromatograms.csv"
+  }
+}

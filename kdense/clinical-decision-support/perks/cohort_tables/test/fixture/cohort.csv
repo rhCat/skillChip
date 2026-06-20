@@ -1,0 +1,9 @@
+patient_id,group,age,sex,ecog_ps,stage,best_response,fatigue_grade,neutropenia_grade
+PT001,Biomarker+,65,Male,0-1,IV,PR,1,0
+PT002,Biomarker-,58,Female,0-1,III,SD,2,1
+PT003,Biomarker+,71,Male,0-1,IV,CR,0,2
+PT004,Biomarker-,49,Female,2,IV,PD,3,0
+PT005,Biomarker+,62,Female,0-1,III,PR,1,1
+PT006,Biomarker-,55,Male,0-1,IV,SD,0,3
+PT007,Biomarker+,68,Male,0-1,IV,PR,2,0
+PT008,Biomarker-,60,Female,2,III,PD,1,1

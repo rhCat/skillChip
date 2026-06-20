@@ -1,0 +1,26 @@
+{
+  "_perk": "detect_features_centroided",
+  "sequence": [
+    "detect_features_centroided"
+  ],
+  "tools": {
+    "detect_features_centroided": {
+      "binary": "bash",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "MZ_TOL_PPM": "${MZ_TOL_PPM}",
+    "CHARGE_LOW": "${CHARGE_LOW}",
+    "CHARGE_HIGH": "${CHARGE_HIGH}",
+    "MIN_SPECTRA": "${MIN_SPECTRA}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "perk": "properties",
+  "skill": "rdkit",
+  "description": "Compute comprehensive molecular descriptors for every molecule in a library and write a per-molecule table. Columns include canonical SMILES, molecular formula, MW/ExactMW, LogP, MR, TPSA, LabuteASA, HBD/HBA, heavy-atom/heteroatom/valence-electron counts, ring counts (total/aromatic/saturated/aliphatic/heterocycle), rotatable bonds, FractionCsp3, BertzCT complexity, QED, and Lipinski / lead-like pass flags.",
+  "rules": [
+    "read-only — parses molecules and writes a descriptor CSV; mutates nothing remote",
+    "INPUT may be .sdf/.mol or .smi/.smiles/.txt (one SMILES per line, no title line)",
+    "results written to record_store/properties.csv"
+  ],
+  "usage": "Set INPUT (molecule file). Output: properties.csv.",
+  "limitation": "Requires the rdkit library (Python >=3.9); when absent the porter degrades gracefully and writes a stub so governance still runs offline. Molecules that fail to parse are skipped with a warning.",
+  "minimal_example": {
+    "perk": "properties",
+    "vars": {
+      "INPUT": "mols.smi"
+    }
+  }
+}

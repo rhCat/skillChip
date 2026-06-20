@@ -1,0 +1,19 @@
+{
+  "tool": "find_markers",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "markers_h5ad": {
+      "path": "${RECORD_STORE}/markers.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/markers.h5ad"
+  }
+}

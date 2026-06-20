@@ -1,0 +1,23 @@
+{
+  "_perk": "pack",
+  "sequence": [
+    "pack"
+  ],
+  "tools": {
+    "pack": {
+      "binary": "python3",
+      "params": {
+        "PACK_DIR": "${PACK_DIR}",
+        "OUT_FILE": "${OUT_FILE}"
+      }
+    }
+  },
+  "env": {
+    "PACK_DIR": "${PACK_DIR}",
+    "OUT_FILE": "${OUT_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

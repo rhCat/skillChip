@@ -1,0 +1,12 @@
+{
+  "_perk": "reduce_dimensions",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.csv"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["reduced.h5ad"],
+    "nonempty": ["reduced.h5ad"]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_perk": "lilly",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/mols.txt",
+    "LILLY_MAX": "160"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["lilly.csv"],
+    "nonempty": ["lilly.csv"]
+  }
+}

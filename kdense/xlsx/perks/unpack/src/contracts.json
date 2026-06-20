@@ -1,0 +1,19 @@
+{
+  "tool": "unpack",
+  "inputs": {
+    "OFFICE_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "unpack_out": {
+      "path": "${RECORD_STORE}/unpack.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/unpack.json"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_perk": "sort",
+  "requires": ["python3"],
+  "vars": {
+    "PREPROCESSED_DIR": "${FIXTURE}",
+    "SORTER": "spykingcircus2"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["sort_report.txt"],
+    "nonempty": ["sort_report.txt"]
+  }
+}

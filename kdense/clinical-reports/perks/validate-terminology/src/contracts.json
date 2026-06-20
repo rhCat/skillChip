@@ -1,0 +1,19 @@
+{
+  "tool": "terminology_validator",
+  "inputs": {
+    "REPORT_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "terminology": {
+      "path": "${RECORD_STORE}/terminology.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/terminology.json"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_perk": "digest_protein",
+  "requires": ["python3", "bash"],
+  "vars": { "SEQUENCE": "MKWVTFISLLLLFSSAYSRGVFRR" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["peptides.csv"],
+    "nonempty": ["peptides.csv"]
+  }
+}

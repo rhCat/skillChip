@@ -1,0 +1,23 @@
+{
+  "tool": "visualize",
+  "inputs": {
+    "DATA_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "N_CLUSTERS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "visualize_out": {
+      "path": "${RECORD_STORE}/cluster_visualization.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/cluster_visualization.json"
+  }
+}

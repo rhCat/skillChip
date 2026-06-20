@@ -1,0 +1,23 @@
+{
+  "tool": "batch_correct",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "BATCH_KEY": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "integrated": {
+      "path": "${RECORD_STORE}/integrated.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/integrated.h5ad"
+  }
+}

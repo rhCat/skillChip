@@ -1,0 +1,53 @@
+{
+  "skill": "clinical-decision-support",
+  "perks": [
+    {
+      "id": "classify",
+      "summary": "stratify a patient cohort by biomarker (PD-L1 TPS / HER2 IHC / generic threshold) and emit classified CSV + group distribution + statistical comparisons (read-only)",
+      "destructive": false,
+      "tools": [
+        "biomarker_classifier"
+      ]
+    },
+    {
+      "id": "cohort_tables",
+      "summary": "build publication-ready cohort tables (baseline demographics, efficacy ORR/DCR with binomial CI, CTCAE safety) as CSV + LaTeX (read-only)",
+      "destructive": false,
+      "tools": [
+        "cohort_tables"
+      ]
+    },
+    {
+      "id": "survival",
+      "summary": "fit Kaplan-Meier curves with log-rank test, Cox hazard ratio, number-at-risk table and LaTeX outcome table (read-only)",
+      "destructive": false,
+      "tools": [
+        "survival_analysis"
+      ]
+    },
+    {
+      "id": "decision_tree",
+      "summary": "render a clinical decision algorithm (JSON or simple-text spec) into a TikZ/LaTeX flowchart (read-only)",
+      "destructive": false,
+      "tools": [
+        "decision_tree"
+      ]
+    },
+    {
+      "id": "validate",
+      "summary": "lint a CDS document (.tex/.md/.txt) for required sections, citations, GRADE grading, statistical reporting and HIPAA identifiers (read-only)",
+      "destructive": false,
+      "tools": [
+        "validate_cds"
+      ]
+    },
+    {
+      "id": "schematic",
+      "summary": "generate an AI scientific schematic via OpenRouter/Nano-Banana (network + OPENROUTER_API_KEY)",
+      "destructive": false,
+      "tools": [
+        "schematic"
+      ]
+    }
+  ]
+}

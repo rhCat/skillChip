@@ -1,0 +1,19 @@
+{
+  "tool": "gap_analyzer",
+  "inputs": {
+    "DOCS_DIR": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "gap_report_out": {
+      "path": "${RECORD_STORE}/gap-report.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/gap-report.json"
+  }
+}

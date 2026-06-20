@@ -1,0 +1,12 @@
+{
+  "_perk": "extract_metadata",
+  "requires": ["python3"],
+  "vars": {
+    "IDENTIFIER": "10.1038/s41586-021-03819-2"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["metadata.bib"],
+    "nonempty": ["metadata.bib"]
+  }
+}

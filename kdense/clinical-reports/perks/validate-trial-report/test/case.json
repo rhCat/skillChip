@@ -1,0 +1,11 @@
+{
+  "_perk": "validate-trial-report",
+  "requires": ["python3"],
+  "vars": { "REPORT_FILE": "${FIXTURE}/csr.md" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["ich_e3_validation.json"],
+    "nonempty": ["ich_e3_validation.json"],
+    "json": { "ich_e3_validation.json": { "status": "PASS" } }
+  }
+}

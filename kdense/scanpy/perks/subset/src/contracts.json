@@ -1,0 +1,19 @@
+{
+  "tool": "subset",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "subset": {
+      "path": "${RECORD_STORE}/subset.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/subset.h5ad"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "perk": "format-adverse-events",
+  "skill": "clinical-reports",
+  "description": "Convert an adverse-event CSV into a markdown summary table (counts and percentages per treatment arm) for clinical trial reports (read-only).",
+  "rules": [
+    "read-only on the input CSV — writes a new markdown table to record_store",
+    "groups rows by the 'treatment_arm' column and tallies any_ae / related / serious / fatal / discontinuation (yes/no)",
+    "emits a markdown table with N and percentage per arm per category",
+    "expected CSV columns: treatment_arm, any_ae, related, serious, fatal, discontinuation"
+  ],
+  "usage": "Set AE_CSV (path to the AE data CSV). Output: ae_summary.md.",
+  "limitation": "Reads the columns above; missing columns are treated as 'no'. CSV must have a header row. Requires python3 (stdlib only).",
+  "minimal_example": {
+    "perk": "format-adverse-events",
+    "vars": {
+      "AE_CSV": "./ae_data.csv"
+    }
+  }
+}

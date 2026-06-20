@@ -1,0 +1,19 @@
+{
+  "perk": "extract_chromatograms",
+  "skill": "pyopenms",
+  "description": "Build chromatograms from MS1 data: total ion chromatogram (TIC), base peak chromatogram (BPC), and extracted ion chromatograms (XIC) for target m/z values within a ppm tolerance. Writes a tidy CSV (rt, trace, intensity) and optionally a PNG plot.",
+  "rules": [
+    "writes chromatograms.csv under record_store (defaults to TIC if none of TIC/BPC/MZ requested)",
+    "MZ is a space-separated list of target m/z for XIC; PPM sets the tolerance",
+    "PLOT_ON=1 also writes chromatograms.png"
+  ],
+  "usage": "Set INPUT (mzML/mzXML). Optional TIC=1, BPC=1, MZ (space-separated m/z), PPM, PLOT_ON=1. Output: chromatograms.csv (+ chromatograms.png).",
+  "limitation": "Requires pyOpenMS 3.5.0 + numpy (Python 3.9+) to produce real content; the plot also needs matplotlib. If absent the porter still creates chromatograms.csv and records the reason.",
+  "minimal_example": {
+    "perk": "extract_chromatograms",
+    "vars": {
+      "INPUT": "data.mzML",
+      "TIC": "1"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_perk": "slides_to_pdf",
+  "sequence": [
+    "slides_to_pdf"
+  ],
+  "tools": {
+    "slides_to_pdf": {
+      "binary": "python3",
+      "params": {
+        "IMAGES_DIR": "${IMAGES_DIR}"
+      }
+    }
+  },
+  "env": {
+    "IMAGES_DIR": "${IMAGES_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

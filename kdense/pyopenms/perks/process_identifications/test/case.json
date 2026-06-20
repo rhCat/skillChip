@@ -1,0 +1,10 @@
+{
+  "_perk": "process_identifications",
+  "requires": ["python3", "bash"],
+  "vars": { "INPUT": "${FIXTURE}/search.idXML" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["filtered.idXML"],
+    "nonempty": ["filtered.idXML"]
+  }
+}

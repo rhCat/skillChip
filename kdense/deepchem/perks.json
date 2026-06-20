@@ -1,0 +1,29 @@
+{
+  "skill": "deepchem",
+  "perks": [
+    {
+      "id": "predict_solubility",
+      "summary": "train a MultitaskRegressor for solubility (Delaney ECFP benchmark or custom SMILES CSV), evaluate, and predict new molecules",
+      "destructive": false,
+      "tools": [
+        "predict_solubility"
+      ]
+    },
+    {
+      "id": "train_gnn",
+      "summary": "train a molecular graph neural network (gcn/gat/attentivefp/mpnn/dmpnn) on a MoleculeNet benchmark or custom SMILES CSV and evaluate it",
+      "destructive": false,
+      "tools": [
+        "train_gnn"
+      ]
+    },
+    {
+      "id": "transfer_learning",
+      "summary": "fine-tune a pretrained molecular model (chemberta/grover/molformer) on a property-prediction task and evaluate it",
+      "destructive": false,
+      "tools": [
+        "transfer_learning"
+      ]
+    }
+  ]
+}

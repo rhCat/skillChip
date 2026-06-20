@@ -1,0 +1,14 @@
+{
+  "tool": "ot_scaffold_serial_dilution",
+  "inputs": {},
+  "outputs": {
+    "ot_scaffold_serial_dilution_out": {
+      "path": "${RECORD_STORE}/serial_dilution.py",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/serial_dilution.py"
+  }
+}

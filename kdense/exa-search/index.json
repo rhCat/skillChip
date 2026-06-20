@@ -1,0 +1,26 @@
+{
+  "skill": "exa-search",
+  "skill_sha": "3c1e941c487721fb17bf23b34c6a9f0eba0dee55025948b92ec6191f7bdd0d0e",
+  "file_count": 19,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "b71593798104afd1cf5c146163d0ea1bf856091a888391702360f23a06c13269",
+    "blueprint.drawio": "bbbe6a60c4fd318f0f85f05b6af5645c76e5f7f4a241f3fc12105ce334924c04",
+    "blueprint.json": "2b1b004e4e98fb1ac57710d79b1ec757a0ee3e2818383901e6d0120bea3fcded",
+    "blueprint.svg": "c12c7cb8b145ad01bcb74625936362dcebc42cfc970196fdd8c07087e28bff7a",
+    "ledger.json": "d49fcc11d4fddd3f6064ac53f701d2714b5b6ba8ac923fcee01c8ee70a84433c",
+    "perks.json": "a8684a5d4751219bfe3e0630f36304d34ae4a44679e8749c297bad43cb33307d",
+    "perks/extract/manifesto.json": "09e4a01102cf1614ee5c39e3d26bef22fe9cb5e4fff9c62df14e99633aaa3dee",
+    "perks/extract/metadata.json": "628bb3d120ca3234db256649ab4a42a254b4b980454eb9fe48d90401604abd01",
+    "perks/extract/src/contracts.json": "0a19d7bce677dc56734b7fea962897f5d91b8c4a3b3bc0fcb8474b1871ad1ff4",
+    "perks/extract/src/exa_extract.py": "1ae6c53dcca9e57dc854509c917617a82a890181da79e574c10bb003ad58ec8d",
+    "perks/extract/src/exa_extract.sh": "7ddbdd060fed0a1253e54159b02dcffe5b34163d7657a0e2e4aea069a9cea272",
+    "perks/extract/test/case.json": "97c4654153b446dfe41d24afbd7499c109a05fb534470c589d81db89d31147ab",
+    "perks/search/manifesto.json": "54dc9dee01f9885d132c2389af54838caaad1b219975340d334c14ee4a4a8841",
+    "perks/search/metadata.json": "c12d1dbafc8ed6d5ea43dda59af4629e4e2a589eb4494e81632df14141044afb",
+    "perks/search/src/contracts.json": "d35ef8d8b5194c01cbf5bebf6e55120137f5ebc27b4a695aac1532e5d8e58c74",
+    "perks/search/src/exa_search.py": "97442b48dcce37e5935af3ebea537b5cea41db53f1886620f1abeb21197947b0",
+    "perks/search/src/exa_search.sh": "4cdccad643f4862950b231364b14454bfbd306e4523bdc1225e1d3b1e07bfbb8",
+    "perks/search/test/case.json": "e00342bff61fe8b7cd884a5e1d95960756f62c2a2f3c6c25589221ed0f25cb6b"
+  }
+}

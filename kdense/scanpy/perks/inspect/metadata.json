@@ -1,0 +1,18 @@
+{
+  "perk": "inspect",
+  "skill": "scanpy",
+  "description": "Summarize an AnnData / single-cell file: shape, obs/var columns, layers, obsm/varm/uns keys, X dtype + value range, raw-vs-normalized guess, and which pipeline steps (PCA/neighbors/UMAP/clustering) are already present.",
+  "rules": [
+    "read-only: never writes back to the input; only emits a summary report",
+    "dispatches on file extension / 10x mtx directory layout via the vendored _common.load_anndata",
+    "summary captured to record_store/inspect.txt"
+  ],
+  "usage": "Set INPUT (any .h5ad/.h5/.csv/.loom/.mtx file or 10x mtx dir). Output: inspect.txt.",
+  "limitation": "Read-only inspection. Requires scanpy installed to read the data; if scanpy is absent the porter still writes inspect.txt (placeholder) and exits 0.",
+  "minimal_example": {
+    "perk": "inspect",
+    "vars": {
+      "INPUT": "data.h5ad"
+    }
+  }
+}

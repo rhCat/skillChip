@@ -1,0 +1,21 @@
+{
+  "perk": "search",
+  "skill": "hugging-science",
+  "description": "Substring-search the full Hugging Science catalog (title/description/type/tags) and render matches as markdown or JSON.",
+  "rules": [
+    "read-only — HTTPS GET against huggingscience.co, no mutation",
+    "QUERY required — case-insensitive substring across title/description/type/tags",
+    "FILTER optional: datasets | models | blogs",
+    "TAG optional: case-insensitive tag substring",
+    "FORMAT optional: markdown (default) | json",
+    "output written to record_store/search.out"
+  ],
+  "usage": "Set QUERY (required). Optional: FILTER, TAG, FORMAT. Output: search.out.",
+  "limitation": "Needs network to reach huggingscience.co; offline the porter records the failure and emits a non-empty file. Substring-only (no fuzzy/semantic matching).",
+  "minimal_example": {
+    "perk": "search",
+    "vars": {
+      "QUERY": "protein language model"
+    }
+  }
+}

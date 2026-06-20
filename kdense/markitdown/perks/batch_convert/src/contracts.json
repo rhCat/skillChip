@@ -1,0 +1,27 @@
+{
+  "tool": "batch_convert",
+  "inputs": {
+    "INPUT_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "EXTENSIONS": {
+      "type": "string",
+      "required": false
+    },
+    "RECURSIVE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "batch_convert_out": {
+      "path": "${RECORD_STORE}/convert_summary.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/convert_summary.json"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "perk": "format_bibtex",
+  "skill": "citation-management",
+  "description": "format, fix common issues, deduplicate, and sort a BibTeX file (offline)",
+  "rules": [
+    "read-only on the input — output written to record_store as formatted.bib",
+    "standardizes field order, indentation, page ranges (-- ), author separators ( and ), and DOI prefixes",
+    "DEDUPLICATE=1 drops entries with duplicate DOI or citation key",
+    "SORT_BY is one of key|year|author|title (optional)",
+    "no network — pure stdlib regex parsing"
+  ],
+  "usage": "Set BIB_FILE. Optionally SORT_BY (key|year|author|title) and DEDUPLICATE (1). Output: formatted.bib.",
+  "limitation": "Regex-based parser (not a full BibTeX grammar); only handles brace/quote-delimited single-line fields. Offline only.",
+  "minimal_example": {
+    "perk": "format_bibtex",
+    "vars": {
+      "BIB_FILE": "/path/to/references.bib",
+      "SORT_BY": "year",
+      "DEDUPLICATE": "1"
+    }
+  }
+}

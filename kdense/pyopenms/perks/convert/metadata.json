@@ -1,0 +1,19 @@
+{
+  "perk": "convert",
+  "skill": "pyopenms",
+  "description": "Convert spectral data between mzML, mzXML, and MGF, with optional MS-level and RT/intensity filtering. FileHandler auto-detects the input format.",
+  "rules": [
+    "output format is chosen by OUT_NAME extension (.mzML, .mzXML, .mgf)",
+    "writes the converted file under record_store as OUT_NAME",
+    "optional filters: MS_LEVEL, RT_MIN, RT_MAX, MIN_INTENSITY"
+  ],
+  "usage": "Set INPUT and OUT_NAME (output filename with .mzML/.mzXML/.mgf). Optional MS_LEVEL/RT_MIN/RT_MAX/MIN_INTENSITY. Output: <OUT_NAME> + convert.log.",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) to produce real content; if absent the porter still creates the output file and records the reason.",
+  "minimal_example": {
+    "perk": "convert",
+    "vars": {
+      "INPUT": "input.mzXML",
+      "OUT_NAME": "output.mzML"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "clusters": ["clinic1", "clinic2", "clinic3", "clinic4"],
+  "seed": 1
+}

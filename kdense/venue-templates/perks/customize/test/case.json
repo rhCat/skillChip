@@ -1,0 +1,16 @@
+{
+  "_perk": "customize",
+  "requires": ["python3"],
+  "vars": {
+    "TEMPLATE": "nature_article.tex",
+    "TITLE": "A Study of X",
+    "AUTHORS": "",
+    "AFFILIATIONS": "",
+    "EMAIL": ""
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["customized.tex"],
+    "nonempty": ["customized.tex"]
+  }
+}

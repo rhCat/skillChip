@@ -1,0 +1,12 @@
+{
+  "_perk": "validate",
+  "requires": ["python3"],
+  "vars": {
+    "PPTX_PATH": "${FIXTURE}/sample.pptx"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["validate.log"],
+    "nonempty": ["validate.log"]
+  }
+}

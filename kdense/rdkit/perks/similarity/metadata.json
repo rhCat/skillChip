@@ -1,0 +1,23 @@
+{
+  "perk": "similarity",
+  "skill": "rdkit",
+  "description": "Fingerprint-based similarity screen of a single query molecule against a database of molecules. Generates fingerprints (morgan / rdkit / maccs / atompair / torsion), scores every database molecule against the query with a similarity metric (tanimoto / dice / cosine), keeps hits at or above THRESHOLD, and writes a ranked hit table (Rank, Index, Name, SMILES, Similarity).",
+  "rules": [
+    "read-only — parses molecules and writes a hits CSV; mutates nothing remote",
+    "QUERY is a SMILES string (or a molecule file; the first molecule is used)",
+    "INPUT is the database file: .sdf/.mol or .smi/.smiles/.txt (one SMILES per line)",
+    "METHOD defaults to morgan; THRESHOLD defaults to 0.7",
+    "results written to record_store/hits.csv"
+  ],
+  "usage": "Set QUERY (query SMILES) and INPUT (database file). Optional: METHOD (morgan|rdkit|maccs|atompair|torsion), THRESHOLD (0-1). Output: hits.csv.",
+  "limitation": "Requires the rdkit library (Python >=3.9); when absent the porter degrades gracefully and writes a stub so governance still runs offline. With no database hit above THRESHOLD the CSV holds only the header row.",
+  "minimal_example": {
+    "perk": "similarity",
+    "vars": {
+      "QUERY": "CCO",
+      "INPUT": "db.smi",
+      "METHOD": "morgan",
+      "THRESHOLD": "0.3"
+    }
+  }
+}

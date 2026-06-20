@@ -1,0 +1,19 @@
+{
+  "tool": "structure_analyze",
+  "inputs": {
+    "STRUCTURE_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "analyze_log": {
+      "path": "${RECORD_STORE}/analyze.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/analyze.log"
+  }
+}

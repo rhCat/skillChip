@@ -1,0 +1,28 @@
+{
+  "_perk": "reduce_dimensions",
+  "sequence": [
+    "reduce_dimensions"
+  ],
+  "tools": {
+    "reduce_dimensions": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "N_COMPS": "${N_COMPS}",
+    "N_PCS": "${N_PCS}",
+    "N_NEIGHBORS": "${N_NEIGHBORS}",
+    "USE_REP": "${USE_REP}",
+    "TSNE": "${TSNE}",
+    "COLOR": "${COLOR}",
+    "NO_PLOTS": "${NO_PLOTS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "perk": "filter",
+  "skill": "pydeseq2",
+  "description": "filter low-count genes + missing-metadata samples from an RNA-seq count matrix (read-only, pure pandas)",
+  "rules": [
+    "read-only — reads COUNTS + METADATA, writes only filtered_counts.csv",
+    "counts loaded genes x samples and transposed to samples x genes (set NO_TRANSPOSE=1 to skip)",
+    "drops genes with total counts < MIN_COUNTS and samples with missing CONDITION_COL",
+    "pure pandas — does not import pydeseq2"
+  ],
+  "usage": "Set COUNTS (counts CSV) and METADATA (metadata CSV). Optional: MIN_COUNTS (default 10), CONDITION_COL, NO_TRANSPOSE. Output: filtered_counts.csv.",
+  "limitation": "Filtering only — no normalization, no statistics. Requires pandas; without it the porter writes a {} placeholder and still passes.",
+  "minimal_example": {
+    "perk": "filter",
+    "vars": {
+      "COUNTS": "counts.csv",
+      "METADATA": "metadata.csv",
+      "MIN_COUNTS": "10",
+      "CONDITION_COL": "condition"
+    }
+  }
+}

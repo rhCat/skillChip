@@ -1,0 +1,19 @@
+{
+  "tool": "check_boxes",
+  "inputs": {
+    "FIELDS_JSON": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "check_boxes_out": {
+      "path": "${RECORD_STORE}/check_boxes.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/check_boxes.txt"
+  }
+}

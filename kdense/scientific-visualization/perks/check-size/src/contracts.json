@@ -1,0 +1,27 @@
+{
+  "tool": "size_check",
+  "inputs": {
+    "WIDTH_IN": {
+      "type": "string",
+      "required": true
+    },
+    "HEIGHT_IN": {
+      "type": "string",
+      "required": true
+    },
+    "JOURNAL": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "size_report": {
+      "path": "${RECORD_STORE}/size_check.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/size_check.json"
+  }
+}

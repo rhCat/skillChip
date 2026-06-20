@@ -1,0 +1,10 @@
+{
+  "_perk": "accurate_mass_search",
+  "requires": ["python3", "bash"],
+  "vars": { "INPUT": "${FIXTURE}/features.featureXML" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["annotations.mzTab"],
+    "nonempty": ["annotations.mzTab"]
+  }
+}

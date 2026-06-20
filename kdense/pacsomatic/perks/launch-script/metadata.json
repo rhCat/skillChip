@@ -1,0 +1,26 @@
+{
+  "perk": "launch-script",
+  "skill": "pacsomatic",
+  "description": "Generate the executor launch script for nf-core/pacsomatic: the selected scheduler's directive header (local/none have none; lsf #BSUB, slurm #SBATCH, pbs #PBS, sge #$) followed by the full `nextflow run` command. Written but never executed.",
+  "rules": [
+    "read-only — writes the launch script only, never executes the pipeline",
+    "exactly one reference mode: provide FASTA or GENOME (FASTA takes precedence if both set)",
+    "executor in {local, none, lsf, slurm, pbs, sge}; scheduler resources (QUEUE/PROJECT/CPUS/MEMORY_GB/WALLTIME) populate the header for scheduler backends",
+    "writes run_pacsomatic.<executor>.sh plus a stable executor-independent copy launch_script.sh under record_store"
+  ],
+  "usage": "Set SAMPLESHEET, OUTDIR, one of FASTA or GENOME, and optionally PROFILE/EXECUTOR/QUEUE/PROJECT/CPUS/MEMORY_GB/WALLTIME. Output: launch_script.sh (and run_pacsomatic.<executor>.sh).",
+  "limitation": "Generates the script only; submission/execution is the destructive `submit` perk. The embedded nextflow binary path is the default `nextflow` unless NEXTFLOW_BIN is set.",
+  "minimal_example": {
+    "perk": "launch-script",
+    "vars": {
+      "SAMPLESHEET": "/data/out/samplesheet.csv",
+      "OUTDIR": "/data/out",
+      "GENOME": "GRCh38",
+      "EXECUTOR": "slurm",
+      "QUEUE": "compute",
+      "CPUS": "16",
+      "MEMORY_GB": "64",
+      "WALLTIME": "48:00"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_perk": "convert",
+  "sequence": [
+    "convert_format"
+  ],
+  "tools": {
+    "convert_format": {
+      "binary": "bash",
+      "params": {
+        "INPUT": "${INPUT}",
+        "OUT_NAME": "${OUT_NAME}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "OUT_NAME": "${OUT_NAME}",
+    "MS_LEVEL": "${MS_LEVEL}",
+    "RT_MIN": "${RT_MIN}",
+    "RT_MAX": "${RT_MAX}",
+    "MIN_INTENSITY": "${MIN_INTENSITY}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

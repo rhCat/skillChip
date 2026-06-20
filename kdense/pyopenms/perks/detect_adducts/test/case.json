@@ -1,0 +1,10 @@
+{
+  "_perk": "detect_adducts",
+  "requires": ["python3", "bash"],
+  "vars": { "INPUT": "${FIXTURE}/features.featureXML" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["decharged.featureXML"],
+    "nonempty": ["decharged.featureXML"]
+  }
+}

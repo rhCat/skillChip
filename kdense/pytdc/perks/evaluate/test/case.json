@@ -1,0 +1,14 @@
+{
+  "_perk": "evaluate",
+  "requires": ["python3"],
+  "vars": {
+    "TDC_METRIC": "MAE",
+    "TDC_PRED": "${FIXTURE}"
+  },
+  "fixture": "preds.json",
+  "expect": {
+    "exit": 0,
+    "outputs": ["eval.json"],
+    "nonempty": ["eval.json"]
+  }
+}

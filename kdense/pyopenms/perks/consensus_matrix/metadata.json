@@ -1,0 +1,18 @@
+{
+  "perk": "consensus_matrix",
+  "skill": "pyopenms",
+  "description": "Convert a consensusXML into a wide intensity matrix (consensus features x samples) joined with feature metadata (RT, m/z, charge, quality), with optional cross-sample normalization (median/quantile) and an optional long/tidy format.",
+  "rules": [
+    "writes quant_matrix.csv under record_store",
+    "LONG_FORMAT=1 also writes quant_long.csv (tidy)",
+    "NORMALIZE in {median, quantile, none}"
+  ],
+  "usage": "Set INPUT (consensusXML). Optional LONG_FORMAT=1, NORMALIZE(median|quantile|none). Output: quant_matrix.csv (+ quant_long.csv).",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) and pandas to produce real content; if absent the porter still creates quant_matrix.csv and records the reason.",
+  "minimal_example": {
+    "perk": "consensus_matrix",
+    "vars": {
+      "INPUT": "study.consensusXML"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "_perk": "pipeline",
+  "sequence": [
+    "neuropixels_pipeline"
+  ],
+  "tools": {
+    "neuropixels_pipeline": {
+      "binary": "python3",
+      "params": {
+        "DATA_PATH": "${DATA_PATH}",
+        "SORTER": "${SORTER}",
+        "STREAM_NAME": "${STREAM_NAME}",
+        "CURATION": "${CURATION}"
+      }
+    }
+  },
+  "env": {
+    "DATA_PATH": "${DATA_PATH}",
+    "SORTER": "${SORTER}",
+    "STREAM_NAME": "${STREAM_NAME}",
+    "CURATION": "${CURATION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

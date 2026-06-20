@@ -1,0 +1,20 @@
+{
+  "perk": "velocity",
+  "skill": "scvelo",
+  "description": "Fit the RNA velocity model and build the cell-cell transition graph. For mode=dynamical, scv.tl.recover_dynamics runs first to estimate full splicing kinetics; then scv.tl.velocity(mode) and scv.tl.velocity_graph. Writes a velocity-annotated .h5ad.",
+  "rules": [
+    "read-only input — writes a new velocity.h5ad under record_store",
+    "input must be moments-ready (run the preprocess perk first)",
+    "mode=dynamical runs recover_dynamics first (slow; ~10-30 min for 10K cells) and adds fit_* gene parameters",
+    "supported modes: stochastic, deterministic, dynamical, steady_state"
+  ],
+  "usage": "Set INPUT (preprocessed .h5ad). Optional: MODE (default dynamical), N_JOBS (default 4). Output: velocity.h5ad.",
+  "limitation": "Requires scvelo installed; without it the porter writes a {} placeholder velocity.h5ad and still passes. latent_time downstream needs MODE=dynamical.",
+  "minimal_example": {
+    "perk": "velocity",
+    "vars": {
+      "INPUT": "preprocessed.h5ad",
+      "MODE": "stochastic"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for pyopenms — set perk, fill record_store + the vars the perk declares.",
+  "skill": "pyopenms",
+  "perk": "inspect",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "INPUT": "<MS file: mzML/mzXML/featureXML/consensusXML/idXML>"
+  }
+}

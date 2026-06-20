@@ -1,0 +1,19 @@
+{
+  "perk": "score",
+  "skill": "scholar-evaluation",
+  "description": "Compute a weighted aggregate ScholarEval score from per-dimension ratings (each 1-5), with quality level, ASCII bar chart, and prioritised recommendations, into a text report.",
+  "rules": [
+    "read-only — reads SCORES_JSON (and optional WEIGHTS_JSON), writes report.txt only",
+    "each dimension score must be between 1 and 5; weights (if supplied) must sum to 1.0",
+    "stdlib-only (json/argparse) — no third-party packages, fully offline",
+    "report is written under record_store"
+  ],
+  "usage": "Set SCORES_JSON to a JSON file of dimension->score (1-5), e.g. {\"methodology\":4.0,\"writing\":4.5}. Optionally set WEIGHTS_JSON (dimension->weight, summing to 1.0). Output: report.txt.",
+  "limitation": "Read-only: never grades the work itself — it only aggregates ratings you supply. Bad input (score out of 1-5, or weights not summing to 1.0) makes the core exit non-zero; the porter still emits report.txt.",
+  "minimal_example": {
+    "perk": "score",
+    "vars": {
+      "SCORES_JSON": "scores.json"
+    }
+  }
+}

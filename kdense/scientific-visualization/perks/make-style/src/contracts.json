@@ -1,0 +1,14 @@
+{
+  "tool": "style_template",
+  "inputs": {},
+  "outputs": {
+    "style_manifest": {
+      "path": "${RECORD_STORE}/style_template.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/style_template.json"
+  }
+}

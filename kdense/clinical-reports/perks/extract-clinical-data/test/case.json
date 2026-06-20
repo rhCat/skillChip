@@ -1,0 +1,11 @@
+{
+  "_perk": "extract-clinical-data",
+  "requires": ["python3"],
+  "vars": { "REPORT_FILE": "${FIXTURE}/soap_note.md" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["clinical_data.json"],
+    "nonempty": ["clinical_data.json"],
+    "json": { "clinical_data.json": { "vital_signs": { "bp": "142/88" } } }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "_perk": "convert_image",
+  "requires": ["python3"],
+  "vars": {
+    "DICOM_IN": "${FIXTURE}/sample.dcm",
+    "IMG_OUT": "image.png",
+    "FRAME": "0"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["image.png"],
+    "nonempty": ["image.png"]
+  }
+}

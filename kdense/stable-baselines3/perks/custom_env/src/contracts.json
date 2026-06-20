@@ -1,0 +1,19 @@
+{
+  "tool": "sb3_check_env",
+  "inputs": {
+    "GRID_SIZE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "sb3_check_env_out": {
+      "path": "${RECORD_STORE}/check_env.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/check_env.json"
+  }
+}

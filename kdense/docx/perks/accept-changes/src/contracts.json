@@ -1,0 +1,19 @@
+{
+  "tool": "docx_accept_changes",
+  "inputs": {
+    "DOCX_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "docx_accept_changes_log": {
+      "path": "${RECORD_STORE}/accept_changes.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/accept_changes.log"
+  }
+}

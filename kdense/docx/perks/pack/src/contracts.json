@@ -1,0 +1,23 @@
+{
+  "tool": "docx_pack",
+  "inputs": {
+    "UNPACKED_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "ORIGINAL_DOCX": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "docx_pack_log": {
+      "path": "${RECORD_STORE}/pack.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pack.log"
+  }
+}

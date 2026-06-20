@@ -1,0 +1,23 @@
+{
+  "_perk": "driver_genes",
+  "sequence": [
+    "driver_genes"
+  ],
+  "tools": {
+    "driver_genes": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "GROUPBY": "${GROUPBY}",
+    "MIN_CORR": "${MIN_CORR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "_perk": "synthesize",
+  "sequence": [
+    "synthesize"
+  ],
+  "tools": {
+    "synthesize": {
+      "binary": "synthesize.sh",
+      "params": {
+        "MATCHES": "${MATCHES}",
+        "CONFIG": "${CONFIG}"
+      }
+    }
+  },
+  "env": {
+    "MATCHES": "${MATCHES}",
+    "CONFIG": "${CONFIG}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

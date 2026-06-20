@@ -1,0 +1,20 @@
+{
+  "perk": "cluster",
+  "skill": "scanpy",
+  "description": "Leiden (or louvain) clustering at one or more resolutions on a precomputed neighborhood graph, with a UMAP colored by each clustering.",
+  "rules": [
+    "requires that sc.pp.neighbors has already been run (use reduce_dimensions first)",
+    "read-only input — writes a new clustered.h5ad + cluster UMAP under record_store",
+    "RESOLUTION is a space-separated list; higher = more clusters",
+    "leiden uses the scanpy 1.12 igraph backend; louvain is deprecated"
+  ],
+  "usage": "Set INPUT. Optional: RESOLUTION (e.g. '0.3 0.5 0.8'), ALGORITHM (leiden|louvain), KEY, NO_PLOTS=1. Output: clustered.h5ad.",
+  "limitation": "Requires scanpy installed (plus leidenalg/python-igraph for leiden); without it the porter writes a {} placeholder clustered.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "cluster",
+    "vars": {
+      "INPUT": "reduced.h5ad",
+      "RESOLUTION": "0.5"
+    }
+  }
+}

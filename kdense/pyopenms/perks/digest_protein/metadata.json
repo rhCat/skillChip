@@ -1,0 +1,18 @@
+{
+  "perk": "digest_protein",
+  "skill": "pyopenms",
+  "description": "In-silico protease digestion of protein sequences (FASTA or a single sequence) with a configurable enzyme, producing theoretical peptides with monoisotopic masses and m/z for chosen charge states. Useful for targeted method design and search-space estimation.",
+  "rules": [
+    "provide FASTA and/or SEQUENCE (at least one)",
+    "writes peptides.csv under record_store",
+    "tunable via ENZYME, MISSED, MIN_LENGTH, MAX_LENGTH, CHARGES"
+  ],
+  "usage": "Set FASTA (path) and/or SEQUENCE. Optional ENZYME, MISSED, MIN_LENGTH, MAX_LENGTH, CHARGES (space-separated). Output: peptides.csv.",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) to produce real content; if absent the porter still creates peptides.csv and records the reason.",
+  "minimal_example": {
+    "perk": "digest_protein",
+    "vars": {
+      "SEQUENCE": "MKWVTFISLLLLFSSAYS"
+    }
+  }
+}

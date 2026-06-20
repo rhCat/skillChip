@@ -1,0 +1,21 @@
+{
+  "skill": "iso-13485-certification",
+  "skill_sha": "93b4cfd7dcbfa18a0a75dbeecc5672ae8b0f6fc135bb1b4644865b7f5454673b",
+  "file_count": 14,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "9ccae779d30ba1693463a21b26500d1be9057fd9dcf259848fdb11fcbf6cf969",
+    "blueprint.drawio": "d649fe6d090a164f081218fe4f46b3ed7eca4af1143c0ada50a18108eb5b962b",
+    "blueprint.json": "54d46438954526bf3d064e0947c70de0db66c78cfaf5175c68d560d2d84538b8",
+    "blueprint.svg": "835ceb3cd33e88745b7881d8014cd190b8e18dc9c2217a0379d2fa5845a72239",
+    "ledger.json": "5c27de22fa15999e3ae9df9f90bd133664bbea735be1be30ffae884202ece59f",
+    "perks.json": "7dbe852a86d49a1edac0f027202de543ce0e4b69d63e9c16a8be5fe0785b6b93",
+    "perks/gap-analysis/manifesto.json": "afdc3acd59f2c6c05f5e9f755227ff3a3856e6fdd39e02ad4ea0df41a39dbc6a",
+    "perks/gap-analysis/metadata.json": "ebe300f93a9e3f92645cb305553fdaaee6165efc1e31ef3cc1ca5ca8083fe583",
+    "perks/gap-analysis/src/contracts.json": "c6023ed177ad344c8d01a81f16a4c68337913e6dba072daa4ab12b0dfcec59da",
+    "perks/gap-analysis/src/gap_analyzer.py": "b694cba373f26975935850bf361bbaf5dfdcd4de154646a38fa04773d4e2eba1",
+    "perks/gap-analysis/src/gap_analyzer.sh": "2a83a4eb957db030ebbe6a837620f7b4a707e89d285df1e9272fe0b0c624f823",
+    "perks/gap-analysis/test/case.json": "52b3b098a94606e9fada581a9cb18c039bd70e2a21635f26df6b079b8a990d5c",
+    "perks/gap-analysis/test/fixture/quality-manual.md": "f4c52049d2ea489e097d72b6760338c4fadacccb03f9b00aad8ee2ebaffd4db2"
+  }
+}

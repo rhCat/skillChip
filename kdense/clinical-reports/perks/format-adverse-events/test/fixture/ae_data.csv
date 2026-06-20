@@ -1,0 +1,7 @@
+treatment_arm,any_ae,related,serious,fatal,discontinuation
+Drug A,yes,yes,no,no,no
+Drug A,yes,no,yes,no,yes
+Drug A,no,no,no,no,no
+Placebo,yes,no,no,no,no
+Placebo,no,no,no,no,no
+Placebo,yes,yes,no,no,no

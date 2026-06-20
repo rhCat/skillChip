@@ -1,0 +1,18 @@
+{
+  "perk": "tree_summary",
+  "skill": "phylogenetics",
+  "description": "ETE3 tree statistics: taxa count, total/mean/max branch length (Newick tree -> JSON).",
+  "rules": [
+    "read-only; writes one artifact (tree_stats.json) under record_store",
+    "applies midpoint rooting before computing statistics",
+    "requires the ete3 Python package; without it the core returns {} and the porter emits {}"
+  ],
+  "usage": "Set TREE_FILE (a Newick tree). Output: tree_stats.json with n_taxa, total_branch_length, mean_branch_length, max_branch_length.",
+  "limitation": "Needs ete3 installed (pip install ete3). Offline / without ete3 the stats are not computed; the output is a graceful {} placeholder.",
+  "minimal_example": {
+    "perk": "tree_summary",
+    "vars": {
+      "TREE_FILE": "phylo.treefile"
+    }
+  }
+}

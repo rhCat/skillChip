@@ -1,0 +1,51 @@
+{
+  "tool": "run_gsea",
+  "inputs": {
+    "DESEQ2": {
+      "type": "string",
+      "required": false
+    },
+    "RNK": {
+      "type": "string",
+      "required": false
+    },
+    "LIBRARIES": {
+      "type": "string",
+      "required": false
+    },
+    "ORGANISM": {
+      "type": "string",
+      "required": false
+    },
+    "FDR": {
+      "type": "string",
+      "required": false
+    },
+    "SEED": {
+      "type": "string",
+      "required": false
+    },
+    "MIN_SIZE": {
+      "type": "string",
+      "required": false
+    },
+    "MAX_SIZE": {
+      "type": "string",
+      "required": false
+    },
+    "PERMUTATIONS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "gsea_results": {
+      "path": "${RECORD_STORE}/gsea_results.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/gsea_results.csv"
+  }
+}

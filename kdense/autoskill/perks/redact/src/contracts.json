@@ -1,0 +1,19 @@
+{
+  "tool": "redact",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "redacted": {
+      "path": "${RECORD_STORE}/redacted.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/redacted.json"
+  }
+}

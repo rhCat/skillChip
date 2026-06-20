@@ -1,0 +1,20 @@
+{
+  "perk": "evaluate",
+  "skill": "pytdc",
+  "description": "Score predictions against ground truth with a standardized TDC metric (ROC-AUC, PR-AUC, F1, Accuracy, RMSE, MAE, R2, Spearman, Pearson, ...).",
+  "rules": [
+    "read-only — pure metric computation over a local predictions file",
+    "input is a JSON payload {\"y_true\": [...], \"y_pred\": [...]}",
+    "degrades gracefully (skipped report) when the tdc package is absent",
+    "the metric name and score are written to record_store as eval.json"
+  ],
+  "usage": "Set TDC_METRIC (e.g. MAE, RMSE, ROC-AUC) and TDC_PRED (path to a JSON file with y_true and y_pred arrays). Output: eval.json.",
+  "limitation": "Read-only. Requires the PyTDC package for the Evaluator; offline it emits a skipped report. y_true and y_pred must be equal-length numeric arrays appropriate for the chosen metric.",
+  "minimal_example": {
+    "perk": "evaluate",
+    "vars": {
+      "TDC_METRIC": "MAE",
+      "TDC_PRED": "/abs/path/preds.json"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_perk": "detect_type",
+  "sequence": [
+    "eda_detect_type"
+  ],
+  "tools": {
+    "eda_detect_type": {
+      "binary": "python3",
+      "params": {
+        "DATA_FILE": "${DATA_FILE}"
+      }
+    }
+  },
+  "env": {
+    "DATA_FILE": "${DATA_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

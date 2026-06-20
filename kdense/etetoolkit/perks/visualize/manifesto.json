@@ -1,0 +1,25 @@
+{
+  "_perk": "visualize",
+  "sequence": [
+    "ete_visualize"
+  ],
+  "tools": {
+    "ete_visualize": {
+      "binary": "python3",
+      "params": {
+        "TREE_FILE": "${TREE_FILE}",
+        "IMAGE_FORMAT": "${IMAGE_FORMAT}",
+        "LAYOUT_MODE": "${LAYOUT_MODE}"
+      }
+    }
+  },
+  "env": {
+    "TREE_FILE": "${TREE_FILE}",
+    "IMAGE_FORMAT": "${IMAGE_FORMAT}",
+    "LAYOUT_MODE": "${LAYOUT_MODE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

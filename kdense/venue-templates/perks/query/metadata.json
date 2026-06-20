@@ -1,0 +1,20 @@
+{
+  "perk": "query",
+  "skill": "venue-templates",
+  "description": "Search and list venue-specific LaTeX templates by venue name, template type, or keyword, and print each match's formatting requirements (page limit, citation style, layout, anonymization).",
+  "rules": [
+    "read-only — never writes or mutates templates",
+    "pure Python stdlib — runs fully offline",
+    "at least one of VENUE / TEMPLATE_TYPE / KEYWORD should be set; otherwise the full catalog is listed",
+    "output written to record_store as query.txt"
+  ],
+  "usage": "Set VENUE (e.g. Nature, NeurIPS, PLOS ONE), optionally TEMPLATE_TYPE (journals|posters|grants|all) and/or KEYWORD. Output: query.txt.",
+  "limitation": "Catalog is the built-in TEMPLATES table (journals, posters, grants). Reports requirements known to the script; does not parse the .tex assets themselves.",
+  "minimal_example": {
+    "perk": "query",
+    "vars": {
+      "VENUE": "Nature",
+      "TEMPLATE_TYPE": "journals"
+    }
+  }
+}

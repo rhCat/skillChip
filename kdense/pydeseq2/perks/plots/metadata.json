@@ -1,0 +1,20 @@
+{
+  "perk": "plots",
+  "skill": "pydeseq2",
+  "description": "render volcano + MA plots from a DESeq2 results CSV (read-only, matplotlib)",
+  "rules": [
+    "read-only — reads a results CSV, writes only volcano_plot.png + ma_plot.png",
+    "results CSV must carry the standard DESeq2 columns: log2FoldChange, padj, baseMean",
+    "colours genes by padj < ALPHA; uses a headless (Agg) matplotlib backend",
+    "pure matplotlib + numpy + pandas — does not import pydeseq2"
+  ],
+  "usage": "Set RESULTS (a DESeq2 results CSV, e.g. the dea perk's deseq2_results.csv). Optional: ALPHA (default 0.05). Output: volcano_plot.png, ma_plot.png.",
+  "limitation": "Visualization only. Requires matplotlib; without it the porter writes a {} placeholder and still passes.",
+  "minimal_example": {
+    "perk": "plots",
+    "vars": {
+      "RESULTS": "deseq2_results.csv",
+      "ALPHA": "0.05"
+    }
+  }
+}

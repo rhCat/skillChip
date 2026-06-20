@@ -1,0 +1,23 @@
+{
+  "tool": "ete_stats",
+  "inputs": {
+    "TREE_FILE": {
+      "type": "string",
+      "required": true
+    },
+    "TREE_FORMAT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "ete_stats_out": {
+      "path": "${RECORD_STORE}/stats.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/stats.txt"
+  }
+}

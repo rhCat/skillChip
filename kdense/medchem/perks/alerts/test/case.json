@@ -1,0 +1,13 @@
+{
+  "_perk": "alerts",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/mols.txt",
+    "ALERTS": "pains,brenk"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["alerts.csv"],
+    "nonempty": ["alerts.csv"]
+  }
+}

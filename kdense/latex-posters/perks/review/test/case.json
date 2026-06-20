@@ -1,0 +1,12 @@
+{
+  "_perk": "review",
+  "requires": ["bash"],
+  "vars": {
+    "POSTER_PDF": "${FIXTURE}"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["review.txt"],
+    "nonempty": ["review.txt"]
+  }
+}

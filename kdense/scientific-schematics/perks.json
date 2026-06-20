@@ -1,0 +1,13 @@
+{
+  "skill": "scientific-schematics",
+  "perks": [
+    {
+      "id": "generate",
+      "summary": "generate a publication-quality scientific diagram from a text prompt via OpenRouter (Nano Banana 2 image gen + Gemini quality review, smart iterative refinement); writes the PNG + a review-log JSON to record_store",
+      "destructive": false,
+      "tools": [
+        "generate_schematic"
+      ]
+    }
+  ]
+}

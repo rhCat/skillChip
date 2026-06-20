@@ -1,0 +1,14 @@
+{
+  "tool": "update_beps",
+  "inputs": {},
+  "outputs": {
+    "beps_out": {
+      "path": "${RECORD_STORE}/beps.yml",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/beps.yml"
+  }
+}

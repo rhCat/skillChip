@@ -1,0 +1,21 @@
+{
+  "perk": "classify",
+  "skill": "clinical-decision-support",
+  "description": "Stratify a patient cohort by biomarker profile (PD-L1 TPS categories, HER2 IHC/FISH status, or a generic threshold) and emit classified data plus group distribution and statistical comparisons.",
+  "rules": [
+    "read-only — reads one CSV, writes only under record_store",
+    "no INPUT_CSV (or empty) falls back to the built-in seeded example cohort",
+    "BIOMARKER + THRESHOLD together trigger a generic binary split; either may be omitted",
+    "primary output is classified_data.csv; group_distribution.csv / statistical_comparisons.csv are written when a stratifier is resolved"
+  ],
+  "usage": "Set INPUT_CSV (patient/biomarker CSV; omit for example data), optionally BIOMARKER (column) and THRESHOLD (cut-point). Output: classified_data.csv.",
+  "limitation": "scikit-learn clustering paths are optional and not exercised here. Statistical comparisons assume a 2-group stratifier. Requires pandas/numpy/scipy at run time.",
+  "minimal_example": {
+    "perk": "classify",
+    "vars": {
+      "INPUT_CSV": "",
+      "BIOMARKER": "pd_l1_tps",
+      "THRESHOLD": "50"
+    }
+  }
+}

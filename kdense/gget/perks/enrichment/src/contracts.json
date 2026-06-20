@@ -1,0 +1,23 @@
+{
+  "tool": "enrichment",
+  "inputs": {
+    "GENE_LIST": {
+      "type": "string",
+      "required": true
+    },
+    "SPECIES": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "enrichment_log": {
+      "path": "${RECORD_STORE}/enrichment.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/enrichment.log"
+  }
+}

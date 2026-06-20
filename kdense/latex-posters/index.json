@@ -1,0 +1,28 @@
+{
+  "skill": "latex-posters",
+  "skill_sha": "50c10283f96d4b709f04d9ff3873438edfbdd2343976b0e0188c2334a5bf0046",
+  "file_count": 21,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "79efbbfe6aa9ad45d8c32f6b5f819488ab5a4ba70fe71dd6ef9fd35e41de460e",
+    "blueprint.drawio": "eb061146ae467dcb5b660264c9198bf07848e795235847cab2066b2cb44a8d94",
+    "blueprint.json": "4afbbb765ee1b6d289d341f8742cc6a222bed5003cc5a10036849e32f1fab190",
+    "blueprint.svg": "8b7d22f82091949b030ef40dac21f54e5ae2fc3db93fccd9b24ae004a279e64e",
+    "ledger.json": "e3c4c770cd43f9bbfca93ba5ceda065efadb7765b2adb31c79ce833b58a67dd9",
+    "perks.json": "aab947810032bd06296e00ae3acb0de4da193f636308251a53bb5db6a2b7795f",
+    "perks/review/manifesto.json": "202b3319b8178106411898a7a37410a4897c5ff330a17c10f6dd52968e2bf456",
+    "perks/review/metadata.json": "68fd90011f88ef89222726595a2327ac7717f60e11ca1029ea8d273e694b1820",
+    "perks/review/src/contracts.json": "0c0a0868f7ea70989d1058d58141ee78f358baeeb60d33f38677789fe7356623",
+    "perks/review/src/review_poster.impl.sh": "db1fcfcda80c0ae1be5ceb075ec9e7f00df6908aa1bc395c029f8dfcb97f43a9",
+    "perks/review/src/review_poster.sh": "573f368296b79404b2b661bb421f79aee30e20d8a2d2948d3cd45d50898683ab",
+    "perks/review/test/case.json": "55ce9f522904bc9e1241e74c298ab9be5ea47f925baa0de53c6310eafbd861b4",
+    "perks/review/test/fixture/poster.pdf": "1de20066f8899f2bc5f01a081e34f1535661e193e5d49a98babd5bc49438811a",
+    "perks/schematic/manifesto.json": "89e6b15908125d94e85e173c683770e1c2d8692c8e0ff8c4ead985ff1d3e99b7",
+    "perks/schematic/metadata.json": "9004fdcf19273672169723ddf4a9364ae3685928fbaed29afa2255032de0e376",
+    "perks/schematic/src/contracts.json": "376ec4ad53341f7d5dd42c01741ca37f808c28963808809ec7c7b15ab5b30106",
+    "perks/schematic/src/generate_schematic.py": "a426ae30ed9185f250245f35c868e6f8aae6096e94a4b8392283dc05f089c041",
+    "perks/schematic/src/generate_schematic.sh": "2126ad478a9df036d3b7113e4dbf7993e931a5875997886414a1b70cc3d96f34",
+    "perks/schematic/src/generate_schematic_ai.py": "0e1708bc163eab7e4440ae7d9d61ed1cd123bdc401499d46cb3df30f1b9f349c",
+    "perks/schematic/test/case.json": "6fb58aa0d8f4fb2a4a345656ac645943bdf6e8a3e1af8dfcd8982366b2060f9a"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "_perk": "comment",
+  "sequence": [
+    "docx_comment"
+  ],
+  "tools": {
+    "docx_comment": {
+      "binary": "bash",
+      "params": {
+        "UNPACKED_DIR": "${UNPACKED_DIR}",
+        "COMMENT_ID": "${COMMENT_ID}",
+        "COMMENT_TEXT": "${COMMENT_TEXT}"
+      }
+    }
+  },
+  "env": {
+    "UNPACKED_DIR": "${UNPACKED_DIR}",
+    "COMMENT_ID": "${COMMENT_ID}",
+    "COMMENT_TEXT": "${COMMENT_TEXT}",
+    "COMMENT_AUTHOR": "${COMMENT_AUTHOR}",
+    "PARENT_ID": "${PARENT_ID}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

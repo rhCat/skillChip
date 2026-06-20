@@ -1,0 +1,24 @@
+{
+  "perk": "generate",
+  "skill": "scientific-schematics",
+  "description": "generate a publication-quality scientific diagram from a natural-language prompt via OpenRouter (Nano Banana 2 image generation + Gemini quality review with smart iterative refinement)",
+  "rules": [
+    "read-only — only requests a render, mutates no remote/live service",
+    "requires OPENROUTER_API_KEY and network access to openrouter.ai",
+    "image model is google/gemini-3.1-flash-image-preview (Nano Banana 2); review model is google/gemini-3.1-pro-preview",
+    "DOC_TYPE sets the quality threshold (journal 8.5 .. presentation 6.5; default 7.5); regenerates only if below threshold",
+    "ITERATIONS capped at 2 by the core; smart early-stop when threshold is met",
+    "output diagram PNG and a <name>_review_log.json are written under record_store"
+  ],
+  "usage": "Set PROMPT (natural-language diagram description). Optional: DOC_TYPE (journal|conference|poster|presentation|report|grant|thesis|preprint|default), ITERATIONS (1-2), OUTPUT_NAME. Set OPENROUTER_API_KEY. Output: the named PNG plus its review-log JSON under record_store.",
+  "limitation": "Network + valid OpenRouter API key required to actually render. Offline or without a key, the porter still produces the output file so the contract holds, but it will be empty/placeholder. Requires the python3 'requests' library at run time.",
+  "minimal_example": {
+    "perk": "generate",
+    "vars": {
+      "PROMPT": "CONSORT participant flow diagram: n=500 screened, n=150 excluded, n=350 randomized into two arms",
+      "DOC_TYPE": "default",
+      "ITERATIONS": "2",
+      "OUTPUT_NAME": "schematic.png"
+    }
+  }
+}

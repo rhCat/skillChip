@@ -1,0 +1,21 @@
+{
+  "_perk": "assign-factorial-runs",
+  "sequence": [
+    "assign_factorial_runs"
+  ],
+  "tools": {
+    "assign_factorial_runs": {
+      "binary": "python3",
+      "params": {
+        "SPEC_JSON": "${SPEC_JSON}"
+      }
+    }
+  },
+  "env": {
+    "SPEC_JSON": "${SPEC_JSON}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

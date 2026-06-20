@@ -1,0 +1,21 @@
+{
+  "perk": "generate_schematic",
+  "skill": "citation-management",
+  "description": "generate a publication-quality scientific schematic from a text prompt via an LLM image model (Nano Banana 2 on OpenRouter)",
+  "rules": [
+    "read-only on inputs — image written to record_store as schematic.png (plus _vN iterations and a review log)",
+    "PROMPT is a natural-language description of the diagram",
+    "DOC_TYPE (journal|conference|poster|presentation|report|grant|thesis|preprint|default) sets the quality threshold; smart iteration stops early once met (max 2 iterations)",
+    "requires OPENROUTER_API_KEY and network access to openrouter.ai",
+    "entry script generate_schematic.py shells out to its sibling generate_schematic_ai.py (both vendored in src/)"
+  ],
+  "usage": "Set PROMPT and OPENROUTER_API_KEY. Optionally DOC_TYPE. Output: schematic.png.",
+  "limitation": "Requires OPENROUTER_API_KEY and network access to an LLM image model — cannot run offline. Costs API credits.",
+  "minimal_example": {
+    "perk": "generate_schematic",
+    "vars": {
+      "PROMPT": "Citation management workflow: search -> extract -> validate -> format",
+      "DOC_TYPE": "journal"
+    }
+  }
+}

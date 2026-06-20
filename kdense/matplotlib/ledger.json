@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for matplotlib — set perk, fill record_store + the vars the perk declares.",
+  "skill": "matplotlib",
+  "perk": "render_plot",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PLOT_TYPE": "line",
+    "PLOT_STYLE": "default",
+    "PLOT_OUT": "plot.png"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "perk": "configure_style",
+  "skill": "matplotlib",
+  "description": "generate a custom .mplstyle style sheet (and optional preview PNG) from a named preset",
+  "rules": [
+    "read-only",
+    "forces MPLBACKEND=Agg so plt.show() never blocks",
+    ".mplstyle sheet written to record_store",
+    "degrades gracefully when matplotlib is not importable"
+  ],
+  "usage": "Set STYLE_PRESET (publication|presentation|web|dark|minimal). Optional STYLE_OUT (.mplstyle filename). Outputs: the .mplstyle sheet under record_store, plus a *_preview.png alongside it.",
+  "limitation": "Read-only: emits a style sheet from one of the five built-in presets — it does not run the interactive customization mode. Requires matplotlib (and numpy for the preview render); degrades to a placeholder if matplotlib is absent.",
+  "minimal_example": {
+    "perk": "configure_style",
+    "vars": {
+      "STYLE_PRESET": "publication",
+      "STYLE_OUT": "custom.mplstyle"
+    }
+  }
+}

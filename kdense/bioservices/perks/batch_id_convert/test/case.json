@@ -1,0 +1,14 @@
+{
+  "_perk": "batch_id_convert",
+  "requires": ["python3"],
+  "vars": {
+    "ID_FILE": "${FIXTURE}/ids.txt",
+    "FROM_DB": "UniProtKB_AC-ID",
+    "TO_DB": "KEGG"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["mapping_results.csv"],
+    "nonempty": ["mapping_results.csv"]
+  }
+}

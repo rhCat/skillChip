@@ -1,0 +1,21 @@
+{
+  "_perk": "validate-trial-report",
+  "sequence": [
+    "validate_trial_report"
+  ],
+  "tools": {
+    "validate_trial_report": {
+      "binary": "python3",
+      "params": {
+        "REPORT_FILE": "${REPORT_FILE}"
+      }
+    }
+  },
+  "env": {
+    "REPORT_FILE": "${REPORT_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

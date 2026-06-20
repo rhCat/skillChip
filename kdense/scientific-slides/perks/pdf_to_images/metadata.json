@@ -1,0 +1,20 @@
+{
+  "perk": "pdf_to_images",
+  "skill": "scientific-slides",
+  "description": "Rasterize each page of a presentation PDF into a per-slide image (jpg or png) for visual inspection, using PyMuPDF (no external binaries).",
+  "rules": [
+    "read-only on the input PDF; emits images + a manifest under record_store",
+    "images are written as slide-001.<fmt>, slide-002.<fmt>, ... under record_store",
+    "needs the PyMuPDF (fitz) library; degrades to a stub manifest when absent"
+  ],
+  "usage": "Set PDF_PATH; optionally DPI (default 150) and IMAGE_FORMAT (jpg|png, default jpg). Output: pdf_to_images.json manifest plus slide-NNN images.",
+  "limitation": "PyMuPDF must be installed at run time. Converts the whole deck (no page-range knobs exposed here).",
+  "minimal_example": {
+    "perk": "pdf_to_images",
+    "vars": {
+      "PDF_PATH": "./presentation.pdf",
+      "DPI": "150",
+      "IMAGE_FORMAT": "jpg"
+    }
+  }
+}

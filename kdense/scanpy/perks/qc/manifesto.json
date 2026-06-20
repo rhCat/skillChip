@@ -1,0 +1,29 @@
+{
+  "_perk": "qc",
+  "sequence": [
+    "qc_analysis"
+  ],
+  "tools": {
+    "qc_analysis": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "MIN_GENES": "${MIN_GENES}",
+    "MAX_GENES": "${MAX_GENES}",
+    "MIN_COUNTS": "${MIN_COUNTS}",
+    "MAX_COUNTS": "${MAX_COUNTS}",
+    "MIN_CELLS": "${MIN_CELLS}",
+    "MT_THRESHOLD": "${MT_THRESHOLD}",
+    "SCRUBLET": "${SCRUBLET}",
+    "NO_PLOTS": "${NO_PLOTS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "tool": "generate_slide_image",
+  "inputs": {
+    "PROMPT": {
+      "type": "string",
+      "required": true
+    },
+    "VISUAL_ONLY": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "slide_image": {
+      "path": "${RECORD_STORE}/slide.png",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/slide.png"
+  }
+}

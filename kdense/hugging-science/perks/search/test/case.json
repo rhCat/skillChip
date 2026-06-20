@@ -1,0 +1,15 @@
+{
+  "_perk": "search",
+  "requires": ["python3"],
+  "vars": {
+    "QUERY": "protein",
+    "FILTER": "",
+    "TAG": "",
+    "FORMAT": "markdown"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["search.out"],
+    "nonempty": ["search.out"]
+  }
+}

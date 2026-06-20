@@ -1,0 +1,69 @@
+{
+  "skill": "sci-pdf",
+  "perks": [
+    {
+      "id": "check-fillable",
+      "summary": "detect whether a PDF has fillable AcroForm fields (read-only)",
+      "destructive": false,
+      "tools": [
+        "check_fillable"
+      ]
+    },
+    {
+      "id": "extract-fields",
+      "summary": "extract fillable form-field metadata (ids, types, page, rect) to JSON",
+      "destructive": false,
+      "tools": [
+        "extract_fields"
+      ]
+    },
+    {
+      "id": "extract-structure",
+      "summary": "extract labels, horizontal lines, and checkboxes of a non-fillable PDF to JSON",
+      "destructive": false,
+      "tools": [
+        "extract_structure"
+      ]
+    },
+    {
+      "id": "render-images",
+      "summary": "render PDF pages to downscaled PNG images",
+      "destructive": false,
+      "tools": [
+        "render_images"
+      ]
+    },
+    {
+      "id": "check-boxes",
+      "summary": "validate field bounding-box overlaps and entry-height in a fields JSON (stdlib)",
+      "destructive": false,
+      "tools": [
+        "check_boxes"
+      ]
+    },
+    {
+      "id": "validation-image",
+      "summary": "draw entry/label bounding boxes for a page onto an image for visual review",
+      "destructive": false,
+      "tools": [
+        "validation_image"
+      ]
+    },
+    {
+      "id": "fill-fillable",
+      "summary": "fill AcroForm fields from a values JSON and write a new PDF",
+      "destructive": false,
+      "tools": [
+        "fill_fillable"
+      ]
+    },
+    {
+      "id": "fill-annotations",
+      "summary": "overlay FreeText annotations onto a non-fillable PDF and write a new PDF",
+      "destructive": false,
+      "tools": [
+        "fill_annotations"
+      ]
+    }
+  ]
+}

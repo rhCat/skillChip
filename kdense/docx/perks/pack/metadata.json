@@ -1,0 +1,18 @@
+{
+  "perk": "pack",
+  "skill": "docx",
+  "description": "Repack an unpacked XML directory into a new .docx: validates with auto-repair (when an original is given), condenses XML whitespace, then ZIPs the parts.",
+  "rules": [
+    "writes a new packed.docx under record_store; never overwrites the source dir",
+    "ORIGINAL_DOCX enables validation diffing + author inference for redlining",
+    "condenses insignificant whitespace in every part except <w:t> text"
+  ],
+  "usage": "Set UNPACKED_DIR (an unpacked .docx dir). Optional ORIGINAL_DOCX for validation. Outputs: packed.docx and pack.log.",
+  "limitation": "The vendored core imports defusedxml; if absent the porter records the import error and exits 0 with an empty audit log (degraded). With defusedxml present it validates, condenses, and writes the .docx.",
+  "minimal_example": {
+    "perk": "pack",
+    "vars": {
+      "UNPACKED_DIR": "unpacked"
+    }
+  }
+}

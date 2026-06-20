@@ -1,0 +1,11 @@
+{
+  "_perk": "extract",
+  "requires": ["bash", "pandoc"],
+  "vars": { "DOCX_FILE": "${FIXTURE}/sample.docx" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["extracted.md"],
+    "nonempty": ["extracted.md"],
+    "contains": { "extracted.md": "Hello from the docx fixture." }
+  }
+}

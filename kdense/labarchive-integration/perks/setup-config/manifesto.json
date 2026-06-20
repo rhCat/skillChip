@@ -1,0 +1,29 @@
+{
+  "_perk": "setup-config",
+  "sequence": [
+    "setup_config"
+  ],
+  "tools": {
+    "setup_config": {
+      "binary": "python3",
+      "params": {
+        "LA_API_URL": "${LA_API_URL}",
+        "LA_ACCESS_KEY_ID": "${LA_ACCESS_KEY_ID}",
+        "LA_ACCESS_PASSWORD": "${LA_ACCESS_PASSWORD}",
+        "LA_USER_EMAIL": "${LA_USER_EMAIL}",
+        "LA_USER_EXTERNAL_PASSWORD": "${LA_USER_EXTERNAL_PASSWORD}"
+      }
+    }
+  },
+  "env": {
+    "LA_API_URL": "${LA_API_URL}",
+    "LA_ACCESS_KEY_ID": "${LA_ACCESS_KEY_ID}",
+    "LA_ACCESS_PASSWORD": "${LA_ACCESS_PASSWORD}",
+    "LA_USER_EMAIL": "${LA_USER_EMAIL}",
+    "LA_USER_EXTERNAL_PASSWORD": "${LA_USER_EXTERNAL_PASSWORD}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

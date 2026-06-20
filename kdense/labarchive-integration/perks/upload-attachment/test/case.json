@@ -1,0 +1,21 @@
+{
+  "_perk": "upload-attachment",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "LA_CONFIG": "${FIXTURE}/config.yaml",
+    "LA_NBID": "12345",
+    "LA_ENTRY_ID": "67890",
+    "LA_FILE": "${FIXTURE}/data.csv"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "upload_attachment.json"
+    ],
+    "nonempty": [
+      "upload_attachment.json"
+    ]
+  }
+}

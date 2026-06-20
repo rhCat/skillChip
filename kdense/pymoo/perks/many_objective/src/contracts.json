@@ -1,0 +1,31 @@
+{
+  "tool": "pymoo_many_objective",
+  "inputs": {
+    "PROBLEM": {
+      "type": "string",
+      "required": true
+    },
+    "N_OBJ": {
+      "type": "string",
+      "required": true
+    },
+    "N_PARTITIONS": {
+      "type": "string",
+      "required": true
+    },
+    "N_GEN": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "report": {
+      "path": "${RECORD_STORE}/many_objective.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/many_objective.txt"
+  }
+}

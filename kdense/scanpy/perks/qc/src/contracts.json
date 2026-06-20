@@ -1,0 +1,19 @@
+{
+  "tool": "qc_analysis",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "qc_filtered": {
+      "path": "${RECORD_STORE}/qc_filtered.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/qc_filtered.h5ad"
+  }
+}

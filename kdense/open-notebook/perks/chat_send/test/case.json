@@ -1,0 +1,16 @@
+{
+  "_perk": "chat_send",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "OPEN_NOTEBOOK_URL": "http://127.0.0.1:5999",
+    "SESSION_ID": "chat_session:skilltest",
+    "CHAT_MESSAGE": "What are the key biomarkers?",
+    "INCLUDE_SOURCES": "true",
+    "INCLUDE_NOTES": "true"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["chat_response.json"],
+    "nonempty": ["chat_response.json"]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_perk": "export_phy",
+  "sequence": [
+    "export_to_phy"
+  ],
+  "tools": {
+    "export_to_phy": {
+      "binary": "python3",
+      "params": {
+        "ANALYZER_DIR": "${ANALYZER_DIR}"
+      }
+    }
+  },
+  "env": {
+    "ANALYZER_DIR": "${ANALYZER_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

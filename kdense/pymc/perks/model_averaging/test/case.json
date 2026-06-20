@@ -1,0 +1,10 @@
+{
+  "_perk": "model_averaging",
+  "requires": ["bash", "python3"],
+  "vars": { "MODELS_DIR": "${FIXTURE}", "VAR_NAME": "y_obs", "IC": "loo" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["averaging.json"],
+    "nonempty": ["averaging.json"]
+  }
+}

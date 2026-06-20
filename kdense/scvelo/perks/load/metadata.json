@@ -1,0 +1,18 @@
+{
+  "perk": "load",
+  "skill": "scvelo",
+  "description": "Load a velocyto .loom (which carries spliced/unspliced layers) into a single AnnData .h5ad. When a processed Scanpy .h5ad is supplied, merge its metadata (UMAP, clusters) onto the velocity layers via scv.utils.merge.",
+  "rules": [
+    "read-only input — writes a new data.h5ad under record_store, never overwrites the input",
+    "optional PROCESSED merges a Scanpy .h5ad (UMAP/clusters) onto the velocyto layers",
+    "input must carry spliced/unspliced layers (velocyto / STARsolo / kallisto|bustools output)"
+  ],
+  "usage": "Set INPUT (velocyto .loom or .h5ad). Optional: PROCESSED (Scanpy .h5ad). Output: data.h5ad.",
+  "limitation": "Requires scvelo (and scanpy for --processed merge) installed; without it the porter writes a {} placeholder data.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "load",
+    "vars": {
+      "INPUT": "velocyto.loom"
+    }
+  }
+}

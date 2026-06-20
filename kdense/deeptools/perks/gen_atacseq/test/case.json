@@ -1,0 +1,18 @@
+{
+  "_perk": "gen_atacseq",
+  "requires": ["python3"],
+  "vars": {
+    "ATAC_BAM": "atacseq.bam",
+    "PEAKS_BED": "peaks.bed",
+    "GENOME_SIZE": "2913022398",
+    "THREADS": "4"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["atacseq.sh"],
+    "nonempty": ["atacseq.sh"],
+    "contains": {
+      "atacseq.sh": "ATAC-seq Analysis Workflow"
+    }
+  }
+}

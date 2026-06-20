@@ -1,0 +1,13 @@
+{
+  "_schema": "task-ledger TEMPLATE for scientific-schematics — set perk, fill record_store + the vars the perk declares.",
+  "skill": "scientific-schematics",
+  "perk": "generate",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PROMPT": "<natural-language description of the diagram to generate>",
+    "DOC_TYPE": "default",
+    "ITERATIONS": "2",
+    "OUTPUT_NAME": "schematic.png",
+    "OPENROUTER_API_KEY": "<OpenRouter API key>"
+  }
+}

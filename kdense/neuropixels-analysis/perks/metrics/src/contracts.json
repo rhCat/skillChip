@@ -1,0 +1,27 @@
+{
+  "tool": "compute_metrics",
+  "inputs": {
+    "SORTING_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "PREPROCESSED_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "CURATION": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "metrics_report": {
+      "path": "${RECORD_STORE}/metrics_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/metrics_report.txt"
+  }
+}

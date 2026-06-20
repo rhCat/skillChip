@@ -1,0 +1,35 @@
+{
+  "tool": "docx_comment",
+  "inputs": {
+    "UNPACKED_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "COMMENT_ID": {
+      "type": "string",
+      "required": true
+    },
+    "COMMENT_TEXT": {
+      "type": "string",
+      "required": true
+    },
+    "COMMENT_AUTHOR": {
+      "type": "string",
+      "required": false
+    },
+    "PARENT_ID": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "docx_comment_log": {
+      "path": "${RECORD_STORE}/comment.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/comment.log"
+  }
+}

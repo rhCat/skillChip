@@ -1,0 +1,18 @@
+{
+  "perk": "clean",
+  "skill": "pptx",
+  "description": "Remove unreferenced/orphaned files from an unpacked .pptx directory: orphaned slides not in sldIdLst (and their .rels), the [trash] directory, orphaned .rels, unreferenced media/embeddings/charts/diagrams/drawings/ink/theme/notes files, and stale [Content_Types].xml overrides.",
+  "rules": [
+    "requires defusedxml (vendored core imports defusedxml.minidom); degrades gracefully when absent",
+    "mutates UNPACKED_DIR in place — deletes only files unreachable from presentation.xml relationships",
+    "the list of removed files is captured to clean.txt under record_store"
+  ],
+  "usage": "Set UNPACKED_DIR (an unpacked .pptx dir). Output: clean.txt (list of removed files).",
+  "limitation": "Operates only on an already-unpacked directory (run unpack first). Idempotent: re-running on a clean dir removes nothing.",
+  "minimal_example": {
+    "perk": "clean",
+    "vars": {
+      "UNPACKED_DIR": "unpacked"
+    }
+  }
+}

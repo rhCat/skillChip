@@ -1,0 +1,14 @@
+{
+  "_perk": "align",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT_FASTA": "${FIXTURE}/sequences.fasta",
+    "THREADS": "1",
+    "METHOD": "auto"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["aligned.fasta"],
+    "nonempty": ["aligned.fasta"]
+  }
+}

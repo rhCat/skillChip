@@ -1,0 +1,27 @@
+{
+  "tool": "source_list",
+  "inputs": {
+    "OPEN_NOTEBOOK_URL": {
+      "type": "string",
+      "required": true
+    },
+    "NOTEBOOK_ID": {
+      "type": "string",
+      "required": false
+    },
+    "SOURCE_LIMIT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "sources_out": {
+      "path": "${RECORD_STORE}/sources.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/sources.json"
+  }
+}

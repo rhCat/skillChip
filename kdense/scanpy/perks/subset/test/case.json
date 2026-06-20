@@ -1,0 +1,13 @@
+{
+  "_perk": "subset",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.csv",
+    "GENES": "GeneA GeneB"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["subset.h5ad"],
+    "nonempty": ["subset.h5ad"]
+  }
+}

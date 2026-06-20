@@ -1,0 +1,19 @@
+{
+  "tool": "validate_trial_report",
+  "inputs": {
+    "REPORT_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "ich_e3_validation": {
+      "path": "${RECORD_STORE}/ich_e3_validation.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/ich_e3_validation.json"
+  }
+}

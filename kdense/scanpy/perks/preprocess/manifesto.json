@@ -1,0 +1,29 @@
+{
+  "_perk": "preprocess",
+  "sequence": [
+    "preprocess"
+  ],
+  "tools": {
+    "preprocess": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "TARGET_SUM": "${TARGET_SUM}",
+    "N_TOP_GENES": "${N_TOP_GENES}",
+    "FLAVOR": "${FLAVOR}",
+    "BATCH_KEY": "${BATCH_KEY}",
+    "SUBSET_HVG": "${SUBSET_HVG}",
+    "REGRESS_OUT": "${REGRESS_OUT}",
+    "SCALE": "${SCALE}",
+    "NO_PLOTS": "${NO_PLOTS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

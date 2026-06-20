@@ -1,0 +1,31 @@
+{
+  "tool": "upload_attachment",
+  "inputs": {
+    "LA_CONFIG": {
+      "type": "string",
+      "required": true
+    },
+    "LA_NBID": {
+      "type": "string",
+      "required": true
+    },
+    "LA_ENTRY_ID": {
+      "type": "string",
+      "required": true
+    },
+    "LA_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "upload_attachment_out": {
+      "path": "${RECORD_STORE}/upload_attachment.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/upload_attachment.json"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_perk": "pipeline",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_PATH": "${FIXTURE}",
+    "SORTER": "spykingcircus2",
+    "STREAM_NAME": "imec0.ap",
+    "CURATION": "allen"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["pipeline_report.txt"],
+    "nonempty": ["pipeline_report.txt"]
+  }
+}

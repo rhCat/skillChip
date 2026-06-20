@@ -1,0 +1,25 @@
+{
+  "_perk": "metrics",
+  "sequence": [
+    "compute_metrics"
+  ],
+  "tools": {
+    "compute_metrics": {
+      "binary": "python3",
+      "params": {
+        "SORTING_DIR": "${SORTING_DIR}",
+        "PREPROCESSED_DIR": "${PREPROCESSED_DIR}",
+        "CURATION": "${CURATION}"
+      }
+    }
+  },
+  "env": {
+    "SORTING_DIR": "${SORTING_DIR}",
+    "PREPROCESSED_DIR": "${PREPROCESSED_DIR}",
+    "CURATION": "${CURATION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

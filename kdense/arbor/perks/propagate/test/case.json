@@ -1,0 +1,15 @@
+{
+  "_perk": "propagate",
+  "requires": ["python3"],
+  "vars": {
+    "NODE": "n1",
+    "INSIGHT": "Candidate coverage, not verification, limits this direction",
+    "TO_ROOT": "1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["propagate.txt"],
+    "nonempty": ["propagate.txt"],
+    "contains": { "propagate.txt": "Propagated insight from n1" }
+  }
+}

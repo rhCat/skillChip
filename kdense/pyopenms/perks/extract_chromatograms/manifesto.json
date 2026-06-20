@@ -1,0 +1,27 @@
+{
+  "_perk": "extract_chromatograms",
+  "sequence": [
+    "extract_chromatograms"
+  ],
+  "tools": {
+    "extract_chromatograms": {
+      "binary": "bash",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "TIC": "${TIC}",
+    "BPC": "${BPC}",
+    "MZ": "${MZ}",
+    "PPM": "${PPM}",
+    "PLOT_ON": "${PLOT_ON}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

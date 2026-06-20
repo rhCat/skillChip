@@ -1,0 +1,10 @@
+{
+  "_perk": "inspect",
+  "requires": ["python3", "bash"],
+  "vars": { "INPUT": "${FIXTURE}/sample.featureXML" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["inspect.txt"],
+    "nonempty": ["inspect.txt"]
+  }
+}

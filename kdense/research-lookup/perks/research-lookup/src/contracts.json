@@ -1,0 +1,27 @@
+{
+  "tool": "research_lookup",
+  "inputs": {
+    "QUERY": {
+      "type": "string",
+      "required": true
+    },
+    "FORCE_BACKEND": {
+      "type": "string",
+      "required": false
+    },
+    "OUTPUT_NAME": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "research_report": {
+      "path": "${RECORD_STORE}/research.md",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/research.md"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_perk": "prepare_csv",
+  "requires": ["python3"],
+  "vars": { "NUM_EXAMPLES": "3" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["batch_template.csv"],
+    "nonempty": ["batch_template.csv"]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "tool": "detect_adducts",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "NEGATIVE": {
+      "type": "string",
+      "required": false
+    },
+    "ADDUCTS": {
+      "type": "string",
+      "required": false
+    },
+    "CHARGE_MIN": {
+      "type": "string",
+      "required": false
+    },
+    "CHARGE_MAX": {
+      "type": "string",
+      "required": false
+    },
+    "MASS_MAX_DIFF": {
+      "type": "string",
+      "required": false
+    },
+    "RT_MAX_DIFF": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "decharged": {
+      "path": "${RECORD_STORE}/decharged.featureXML",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/decharged.featureXML"
+  }
+}

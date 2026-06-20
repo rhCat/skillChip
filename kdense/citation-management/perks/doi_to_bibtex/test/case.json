@@ -1,0 +1,12 @@
+{
+  "_perk": "doi_to_bibtex",
+  "requires": ["python3"],
+  "vars": {
+    "DOI": "10.1038/s41586-021-03819-2"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["references.bib"],
+    "nonempty": ["references.bib"]
+  }
+}

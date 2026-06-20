@@ -1,0 +1,23 @@
+{
+  "perk": "simulate_power",
+  "skill": "statistical-power",
+  "description": "Monte Carlo power for a design with no closed-form formula: simulate -> analyze with the planned model -> repeat, returning power plus a Wilson MC confidence interval.",
+  "rules": [
+    "read-only: writes only a JSON result into RECORD_STORE",
+    "DESIGN selects one bundled worked example: two_group, logistic, cluster_randomized, linear_mixed",
+    "estimate is reproducible for a fixed SEED; report the returned MC CI so 0.81 vs 0.79 is read as signal or noise",
+    "use n_sims >= 1000 (5000-10000 near 80%) for a stable estimate",
+    "the bundled designs are the starting point to copy and adapt - swap in your own data-generating process for production use"
+  ],
+  "usage": "Set DESIGN (two_group | logistic | cluster_randomized | linear_mixed). Optional N (sample size, design-specific units), N_SIMS (default 1000), EFFECT, ALPHA, SEED. Output: simulate_power.json.",
+  "limitation": "Stochastic - the result is a Monte Carlo estimate, not exact. cluster_randomized and linear_mixed fit statsmodels mixed models and are slow at large n/n_sims. The survival example from the source needs lifelines and is not exposed here.",
+  "minimal_example": {
+    "perk": "simulate_power",
+    "vars": {
+      "DESIGN": "two_group",
+      "N": "64",
+      "N_SIMS": "1000",
+      "EFFECT": "0.5"
+    }
+  }
+}

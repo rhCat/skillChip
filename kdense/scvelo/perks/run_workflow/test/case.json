@@ -1,0 +1,13 @@
+{
+  "_perk": "run_workflow",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.h5ad",
+    "MODE": "stochastic"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["adata_velocity.h5ad"],
+    "nonempty": ["adata_velocity.h5ad"]
+  }
+}

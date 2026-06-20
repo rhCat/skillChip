@@ -1,0 +1,21 @@
+{
+  "perk": "process_spectra",
+  "skill": "pyopenms",
+  "description": "Apply a configurable chain of signal-processing steps to spectra: smoothing (Gauss/SGolay), centroiding (PeakPickerHiRes), normalization (to_one/to_TIC), S/N filtering, and absolute-intensity thresholding. Steps run in a fixed order.",
+  "rules": [
+    "writes the processed mzML under record_store as OUT_NAME",
+    "steps are opt-in via SMOOTH/PICK/NORMALIZE/THRESHOLD/SN flags",
+    "PICK=1 enables centroiding; MS_LEVEL restricts processing to one MS level"
+  ],
+  "usage": "Set INPUT and OUT_NAME (output .mzML). Optional SMOOTH(gauss|sgolay), PICK=1, NORMALIZE(to_one|to_TIC), THRESHOLD, SN, MS_LEVEL, GAUSSIAN_WIDTH, SIGNAL_TO_NOISE. Output: <OUT_NAME>.",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) to produce real content; if absent the porter still creates the output file and records the reason.",
+  "minimal_example": {
+    "perk": "process_spectra",
+    "vars": {
+      "INPUT": "raw.mzML",
+      "OUT_NAME": "centroided.mzML",
+      "SMOOTH": "gauss",
+      "PICK": "1"
+    }
+  }
+}

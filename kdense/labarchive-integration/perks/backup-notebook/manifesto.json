@@ -1,0 +1,27 @@
+{
+  "_perk": "backup-notebook",
+  "sequence": [
+    "backup_notebook"
+  ],
+  "tools": {
+    "backup_notebook": {
+      "binary": "python3",
+      "params": {
+        "LA_CONFIG": "${LA_CONFIG}",
+        "LA_NBID": "${LA_NBID}",
+        "LA_BACKUP_JSON": "${LA_BACKUP_JSON}",
+        "LA_NO_ATTACHMENTS": "${LA_NO_ATTACHMENTS}"
+      }
+    }
+  },
+  "env": {
+    "LA_CONFIG": "${LA_CONFIG}",
+    "LA_NBID": "${LA_NBID}",
+    "LA_BACKUP_JSON": "${LA_BACKUP_JSON}",
+    "LA_NO_ATTACHMENTS": "${LA_NO_ATTACHMENTS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "_perk": "gap-analysis",
+  "sequence": [
+    "gap_analyzer"
+  ],
+  "tools": {
+    "gap_analyzer": {
+      "binary": "python3",
+      "params": {
+        "DOCS_DIR": "${DOCS_DIR}"
+      }
+    }
+  },
+  "env": {
+    "DOCS_DIR": "${DOCS_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

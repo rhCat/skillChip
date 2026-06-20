@@ -1,0 +1,16 @@
+{
+  "_perk": "simulate_power",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "DESIGN": "two_group",
+    "N": "64",
+    "N_SIMS": "200",
+    "EFFECT": "0.5",
+    "SEED": "0"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["simulate_power.json"],
+    "nonempty": ["simulate_power.json"]
+  }
+}

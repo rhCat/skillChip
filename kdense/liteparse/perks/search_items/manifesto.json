@@ -1,0 +1,25 @@
+{
+  "_perk": "search_items",
+  "sequence": [
+    "search_items"
+  ],
+  "tools": {
+    "search_items": {
+      "binary": "python3",
+      "params": {
+        "PARSED_JSON": "${PARSED_JSON}",
+        "PHRASE": "${PHRASE}",
+        "CASE_SENSITIVE": "${CASE_SENSITIVE}"
+      }
+    }
+  },
+  "env": {
+    "PARSED_JSON": "${PARSED_JSON}",
+    "PHRASE": "${PHRASE}",
+    "CASE_SENSITIVE": "${CASE_SENSITIVE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "generate_timeline",
+  "inputs": {
+    "PLAN_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "timeline": {
+      "path": "${RECORD_STORE}/timeline.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/timeline.txt"
+  }
+}

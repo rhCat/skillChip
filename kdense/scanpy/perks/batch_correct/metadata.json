@@ -1,0 +1,21 @@
+{
+  "perk": "batch_correct",
+  "skill": "scanpy",
+  "description": "Batch correction / integration across samples. harmony corrects the PCA embedding (writes obsm['X_pca_harmony']); bbknn builds a batch-balanced kNN graph then UMAP; combat corrects the expression matrix in place.",
+  "rules": [
+    "run on a normalized object that already has PCA (harmony/bbknn) computed",
+    "read-only input — writes a new integrated.h5ad under record_store",
+    "harmony needs harmonypy; bbknn needs bbknn; combat is built into scanpy",
+    "after harmony, follow with reduce_dimensions USE_REP=X_pca_harmony"
+  ],
+  "usage": "Set INPUT and BATCH_KEY (obs column identifying batches). Optional: METHOD (harmony|bbknn|combat, default harmony). Output: integrated.h5ad.",
+  "limitation": "Requires scanpy installed (plus harmonypy/bbknn for those methods). Without scanpy the porter writes a {} placeholder integrated.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "batch_correct",
+    "vars": {
+      "INPUT": "reduced.h5ad",
+      "BATCH_KEY": "sample",
+      "METHOD": "harmony"
+    }
+  }
+}

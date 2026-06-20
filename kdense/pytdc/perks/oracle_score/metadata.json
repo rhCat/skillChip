@@ -1,0 +1,20 @@
+{
+  "perk": "oracle_score",
+  "skill": "pytdc",
+  "description": "Score a list of SMILES with a TDC molecular oracle (QED, SA, LogP, GSK3B, DRD2, JNK3, ...) for molecular optimization.",
+  "rules": [
+    "read-only — evaluates molecules against a property/target oracle; nothing is mutated remotely",
+    "SMILES are read one per line from the TDC_SMILES file",
+    "PyTDC downloads oracle weights on first use; degrades gracefully (skipped report) when tdc/network is absent",
+    "per-SMILES scores + summary (mean/min/max) are written to record_store as scores.json"
+  ],
+  "usage": "Set TDC_ORACLE (e.g. QED, SA, LogP, GSK3B, DRD2) and TDC_SMILES (path to a text file with one SMILES per line). Output: scores.json.",
+  "limitation": "Read-only. Requires the PyTDC package (and rdkit / downloaded oracle assets) plus network access on first use; offline it emits a skipped report. Some oracles (Docking, Vina, ASKCOS) need extra heavy dependencies.",
+  "minimal_example": {
+    "perk": "oracle_score",
+    "vars": {
+      "TDC_ORACLE": "QED",
+      "TDC_SMILES": "/abs/path/mols.smi"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_perk": "infer_iqtree",
+  "requires": ["python3"],
+  "vars": {
+    "ALIGNED_FASTA": "${FIXTURE}/aligned.fasta",
+    "SEQ_TYPE": "nt",
+    "BOOTSTRAP": "1000",
+    "THREADS": "1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["phylo.treefile"],
+    "nonempty": ["phylo.treefile"]
+  }
+}

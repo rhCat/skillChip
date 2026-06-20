@@ -1,0 +1,25 @@
+{
+  "_perk": "evaluate",
+  "sequence": [
+    "sb3_evaluate"
+  ],
+  "tools": {
+    "sb3_evaluate": {
+      "binary": "python3",
+      "params": {
+        "MODEL_PATH": "${MODEL_PATH}",
+        "ENV_ID": "${ENV_ID}",
+        "N_EVAL_EPISODES": "${N_EVAL_EPISODES}"
+      }
+    }
+  },
+  "env": {
+    "MODEL_PATH": "${MODEL_PATH}",
+    "ENV_ID": "${ENV_ID}",
+    "N_EVAL_EPISODES": "${N_EVAL_EPISODES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

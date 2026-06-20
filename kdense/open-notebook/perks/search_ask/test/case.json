@@ -1,0 +1,13 @@
+{
+  "_perk": "search_ask",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "OPEN_NOTEBOOK_URL": "http://127.0.0.1:5999",
+    "ASK_QUERY": "How does TMB predict checkpoint inhibitor response?"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["answer.json"],
+    "nonempty": ["answer.json"]
+  }
+}

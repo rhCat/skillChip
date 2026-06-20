@@ -1,0 +1,31 @@
+{
+  "_perk": "aggregate",
+  "sequence": [
+    "search_databases"
+  ],
+  "tools": {
+    "search_databases": {
+      "binary": "python3",
+      "params": {
+        "RESULTS_JSON": "${RESULTS_JSON}",
+        "OUTPUT_FORMAT": "${OUTPUT_FORMAT}",
+        "RANK": "${RANK}",
+        "YEAR_START": "${YEAR_START}",
+        "YEAR_END": "${YEAR_END}",
+        "DEDUPLICATE": "${DEDUPLICATE}"
+      }
+    }
+  },
+  "env": {
+    "RESULTS_JSON": "${RESULTS_JSON}",
+    "OUTPUT_FORMAT": "${OUTPUT_FORMAT}",
+    "RANK": "${RANK}",
+    "YEAR_START": "${YEAR_START}",
+    "YEAR_END": "${YEAR_END}",
+    "DEDUPLICATE": "${DEDUPLICATE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

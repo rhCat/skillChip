@@ -1,0 +1,27 @@
+{
+  "tool": "plot_render",
+  "inputs": {
+    "PLOT_TYPE": {
+      "type": "string",
+      "required": true
+    },
+    "PLOT_STYLE": {
+      "type": "string",
+      "required": false
+    },
+    "PLOT_OUT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "plot_out": {
+      "path": "${RECORD_STORE}/plot.png",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/plot.png"
+  }
+}

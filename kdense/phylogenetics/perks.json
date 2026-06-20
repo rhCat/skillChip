@@ -1,0 +1,45 @@
+{
+  "skill": "phylogenetics",
+  "perks": [
+    {
+      "id": "align",
+      "summary": "MAFFT multiple sequence alignment (unaligned FASTA -> aligned FASTA)",
+      "destructive": false,
+      "tools": [
+        "mafft_align"
+      ]
+    },
+    {
+      "id": "infer_iqtree",
+      "summary": "IQ-TREE 2 maximum-likelihood tree with automatic model selection + ultrafast bootstrap (aligned FASTA -> Newick treefile)",
+      "destructive": false,
+      "tools": [
+        "iqtree_infer"
+      ]
+    },
+    {
+      "id": "infer_fasttree",
+      "summary": "FastTree fast approximate ML tree for large datasets (aligned FASTA -> Newick tree)",
+      "destructive": false,
+      "tools": [
+        "fasttree_infer"
+      ]
+    },
+    {
+      "id": "tree_summary",
+      "summary": "ETE3 tree statistics: taxa count + total/mean/max branch length (Newick tree -> JSON)",
+      "destructive": false,
+      "tools": [
+        "tree_summary"
+      ]
+    },
+    {
+      "id": "visualize",
+      "summary": "ETE3 rooted-tree render to PNG with Newick fallback (Newick tree -> PNG)",
+      "destructive": false,
+      "tools": [
+        "tree_visualize"
+      ]
+    }
+  ]
+}

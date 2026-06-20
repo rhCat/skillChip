@@ -1,0 +1,24 @@
+{
+  "_perk": "visualize",
+  "sequence": [
+    "tree_visualize"
+  ],
+  "tools": {
+    "tree_visualize": {
+      "binary": "bash",
+      "params": {
+        "TREE_FILE": "${TREE_FILE}",
+        "OUTGROUP": "${OUTGROUP}"
+      }
+    }
+  },
+  "env": {
+    "TREE_FILE": "${TREE_FILE}",
+    "OUTGROUP": "${OUTGROUP}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

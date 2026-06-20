@@ -1,0 +1,14 @@
+{
+  "_perk": "set-status",
+  "requires": ["python3"],
+  "vars": {
+    "NODE": "n1",
+    "STATUS": "running"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["set_status.txt"],
+    "nonempty": ["set_status.txt"],
+    "contains": { "set_status.txt": "status=running" }
+  }
+}

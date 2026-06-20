@@ -1,0 +1,20 @@
+{
+  "perk": "convert",
+  "skill": "etetoolkit",
+  "description": "Convert a phylogenetic tree between ETE Newick format specifications (e.g. format 0 flexible-with-lengths -> format 1 with internal names).",
+  "rules": [
+    "read-only on input — emits a new tree file, never edits the source",
+    "IN_FORMAT / OUT_FORMAT are ETE Newick format numbers (0-100)",
+    "converted tree (converted.nw) + run log (convert.log) written under record_store"
+  ],
+  "usage": "Set TREE_FILE (input Newick tree), IN_FORMAT (default 0), OUT_FORMAT (default 1). Outputs: convert.log (always) and converted.nw (when ete3 present).",
+  "limitation": "Requires ete3 to actually parse/rewrite; without it the porter records an ete3-missing note in convert.log and exits 0 (no converted.nw is produced).",
+  "minimal_example": {
+    "perk": "convert",
+    "vars": {
+      "TREE_FILE": "tree.nw",
+      "IN_FORMAT": "0",
+      "OUT_FORMAT": "1"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_perk": "validate",
+  "requires": ["python3"],
+  "vars": {
+    "BAM_FILES": "",
+    "BIGWIG_FILES": "",
+    "BED_FILES": "${FIXTURE}/regions.bed"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["validation.txt"],
+    "nonempty": ["validation.txt"],
+    "contains": {
+      "validation.txt": "BED file format appears valid"
+    }
+  }
+}

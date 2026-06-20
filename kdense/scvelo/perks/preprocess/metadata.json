@@ -1,0 +1,19 @@
+{
+  "perk": "preprocess",
+  "skill": "scvelo",
+  "description": "Standard scVelo preprocessing: scv.pp.filter_and_normalize, then sc.pp.neighbors (only if not already present), then scv.pp.moments to compute the first- and second-order moments velocity estimation needs. Writes a moments-ready .h5ad.",
+  "rules": [
+    "read-only input — writes a new preprocessed.h5ad under record_store",
+    "input must have layers['spliced'] and layers['unspliced']",
+    "neighbors graph is computed only when 'neighbors' is absent from adata.uns",
+    "defaults follow the upstream skill: min_shared_counts=20, n_top_genes=2000, n_neighbors=30, n_pcs=30"
+  ],
+  "usage": "Set INPUT (.h5ad with spliced/unspliced). Optional: MIN_SHARED_COUNTS, N_TOP_GENES, N_NEIGHBORS, N_PCS. Output: preprocessed.h5ad.",
+  "limitation": "Requires scvelo (and scanpy) installed; without it the porter writes a {} placeholder preprocessed.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "preprocess",
+    "vars": {
+      "INPUT": "data.h5ad"
+    }
+  }
+}

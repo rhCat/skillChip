@@ -1,0 +1,16 @@
+{
+  "_perk": "doctor",
+  "requires": ["python3"],
+  "vars": {
+    "CONFIG": "${FIXTURE}/config.yaml",
+    "SKILLS_DIR": "${FIXTURE}/skills"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["doctor.txt"],
+    "nonempty": ["doctor.txt"],
+    "contains": {
+      "doctor.txt": ["autoskill doctor", "config", "skills_dir", "screenpipe", "llm"]
+    }
+  }
+}

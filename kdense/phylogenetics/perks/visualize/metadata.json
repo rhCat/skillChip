@@ -1,0 +1,18 @@
+{
+  "perk": "visualize",
+  "skill": "phylogenetics",
+  "description": "ETE3 rooted-tree render to PNG with Newick fallback (Newick tree -> PNG).",
+  "rules": [
+    "read-only on inputs; writes one artifact (tree.png) under record_store",
+    "roots at OUTGROUP if it matches a leaf, otherwise applies midpoint rooting; shows leaf names + branch support",
+    "requires the ete3 Python package (and a working render backend); without it the porter degrades gracefully and emits {}"
+  ],
+  "usage": "Set TREE_FILE (a Newick tree). Optional OUTGROUP (taxon name for rooting). Output: tree.png (rooted Newick saved alongside if PNG rendering fails).",
+  "limitation": "Needs ete3 installed (pip install ete3); PNG rendering also needs a Qt/display backend. Offline / without ete3 the image is not produced; the output is a graceful {} placeholder.",
+  "minimal_example": {
+    "perk": "visualize",
+    "vars": {
+      "TREE_FILE": "phylo.treefile"
+    }
+  }
+}

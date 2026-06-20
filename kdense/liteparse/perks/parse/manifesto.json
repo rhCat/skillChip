@@ -1,0 +1,23 @@
+{
+  "_perk": "parse",
+  "sequence": [
+    "lit_parse"
+  ],
+  "tools": {
+    "lit_parse": {
+      "binary": "python3",
+      "params": {
+        "INPUT_FILE": "${INPUT_FILE}",
+        "FORMAT": "${FORMAT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT_FILE": "${INPUT_FILE}",
+    "FORMAT": "${FORMAT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

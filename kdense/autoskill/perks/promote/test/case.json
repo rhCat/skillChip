@@ -1,0 +1,17 @@
+{
+  "_perk": "promote",
+  "requires": ["python3"],
+  "vars": {
+    "PROPOSED": "${FIXTURE}/proposed",
+    "SKILLS_DIR": "${RECORD_STORE}/skills",
+    "NAME": "zotero-pubmed-helper"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["promote.txt"],
+    "nonempty": ["promote.txt"],
+    "contains": {
+      "promote.txt": ["promoted", "zotero-pubmed-helper"]
+    }
+  }
+}

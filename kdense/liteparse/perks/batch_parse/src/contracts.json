@@ -1,0 +1,31 @@
+{
+  "tool": "batch_parse_dir",
+  "inputs": {
+    "INPUT_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "FORMAT": {
+      "type": "string",
+      "required": false
+    },
+    "EXTENSION": {
+      "type": "string",
+      "required": false
+    },
+    "RECURSIVE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "batch_summary": {
+      "path": "${RECORD_STORE}/batch.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/batch.json"
+  }
+}

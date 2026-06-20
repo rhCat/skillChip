@@ -1,0 +1,20 @@
+{
+  "perk": "convert",
+  "skill": "pymatgen",
+  "description": "Convert a single crystal structure file between formats (CIF, POSCAR, XYZ, JSON, ...) using pymatgen with automatic input-format detection.",
+  "rules": [
+    "read-only — reads one input structure file, writes one converted file",
+    "input format auto-detected by pymatgen from file contents/extension",
+    "converted file is written under record_store as structure.<OUTPUT_FORMAT>",
+    "requires pymatgen present for a real conversion; degrades gracefully (records missing dep, exits 0) when absent"
+  ],
+  "usage": "Set INPUT_FILE (path to the source structure) and OUTPUT_FORMAT (target, e.g. cif, poscar, xyz, json). Output: structure.<OUTPUT_FORMAT> plus convert.log under record_store.",
+  "limitation": "Single-file conversion only (no batch/wildcard). Real output needs pymatgen installed; without it the porter writes a graceful stub and a missing-dependency note.",
+  "minimal_example": {
+    "perk": "convert",
+    "vars": {
+      "INPUT_FILE": "POSCAR",
+      "OUTPUT_FORMAT": "cif"
+    }
+  }
+}

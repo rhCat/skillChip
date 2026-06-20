@@ -1,0 +1,31 @@
+{
+  "tool": "hs_topic",
+  "inputs": {
+    "SLUG": {
+      "type": "string",
+      "required": true
+    },
+    "FILTER": {
+      "type": "string",
+      "required": false
+    },
+    "TAG": {
+      "type": "string",
+      "required": false
+    },
+    "FORMAT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "topic_out": {
+      "path": "${RECORD_STORE}/topic.out",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/topic.out"
+  }
+}

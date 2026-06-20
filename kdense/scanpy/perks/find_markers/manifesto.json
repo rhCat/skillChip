@@ -1,0 +1,27 @@
+{
+  "_perk": "find_markers",
+  "sequence": [
+    "find_markers"
+  ],
+  "tools": {
+    "find_markers": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "GROUPBY": "${GROUPBY}",
+    "METHOD": "${METHOD}",
+    "N_GENES": "${N_GENES}",
+    "TOP": "${TOP}",
+    "USE_RAW": "${USE_RAW}",
+    "NO_PLOTS": "${NO_PLOTS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

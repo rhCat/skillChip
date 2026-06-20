@@ -1,0 +1,18 @@
+{
+  "perk": "theoretical_spectrum",
+  "skill": "pyopenms",
+  "description": "Generate a theoretical fragment-ion spectrum (b/y, optionally a/c/x/z and neutral losses) for a peptide using TheoreticalSpectrumGenerator. Writes the spectrum to mzML and an annotated peak list CSV.",
+  "rules": [
+    "writes theoretical_peaks.csv and theoretical.mzML under record_store",
+    "IONS is a space-separated subset of a b c x y z (default b y)",
+    "LOSSES=1 includes neutral losses; PRECURSOR=1 includes precursor peaks"
+  ],
+  "usage": "Set PEPTIDE (OpenMS mod syntax allowed). Optional CHARGE, IONS (space-separated), LOSSES=1, PRECURSOR=1. Output: theoretical_peaks.csv (+ theoretical.mzML).",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) to produce real content; if absent the porter still creates theoretical_peaks.csv and records the reason.",
+  "minimal_example": {
+    "perk": "theoretical_spectrum",
+    "vars": {
+      "PEPTIDE": "DFPIANGER"
+    }
+  }
+}

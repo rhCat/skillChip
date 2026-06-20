@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for latex-posters — set perk, fill record_store + the vars the perk declares.",
+  "skill": "latex-posters",
+  "perk": "schematic",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PROMPT": "<natural-language description of the diagram to generate>",
+    "OUTPUT_NAME": "schematic.png",
+    "DOC_TYPE": "poster"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "perk": "init",
+  "skill": "arbor",
+  "description": "initialize a new Arbor AO run — create the hypothesis tree (root n0) + run config under .arbor/",
+  "rules": [
+    "creates record_store/run/.arbor/tree.json + run.json",
+    "establishes the task tuple (M_0, O, E_dev, E_test) and budget/branching/depth",
+    "always (re)creates the run with --force so init is idempotent in the store"
+  ],
+  "usage": "Set OBJECTIVE, DEV_EVAL, TEST_EVAL (required); optional MATERIAL, METRIC_DIRECTION (max|min), BRANCHING, MAX_DEPTH, BUDGET. Output: init.txt (and the .arbor/ state under run/).",
+  "limitation": "Pure local state bookkeeping — it does not run the evaluators, dispatch executors, or touch the artifact. The held-out dev/test split is the coordinator's responsibility to construct.",
+  "minimal_example": {
+    "perk": "init",
+    "vars": {
+      "OBJECTIVE": "Improve answer accuracy on the search harness",
+      "DEV_EVAL": "python eval.py --split dev --n 50",
+      "TEST_EVAL": "python eval.py --split test --n 300"
+    }
+  }
+}

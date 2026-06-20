@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for clinical-reports — set perk, fill record_store + the vars the perk declares.",
+  "skill": "clinical-reports",
+  "perk": "validate-case-report",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "REPORT_FILE": "<path to the clinical report .md/.txt>"
+  }
+}

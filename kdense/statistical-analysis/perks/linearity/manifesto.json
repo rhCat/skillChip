@@ -1,0 +1,25 @@
+{
+  "_perk": "linearity",
+  "sequence": [
+    "check_linearity"
+  ],
+  "tools": {
+    "check_linearity": {
+      "binary": "python3",
+      "params": {
+        "DATA_CSV": "${DATA_CSV}",
+        "X_COL": "${X_COL}",
+        "Y_COL": "${Y_COL}"
+      }
+    }
+  },
+  "env": {
+    "DATA_CSV": "${DATA_CSV}",
+    "X_COL": "${X_COL}",
+    "Y_COL": "${Y_COL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

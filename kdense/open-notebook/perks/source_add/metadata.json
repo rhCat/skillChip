@@ -1,0 +1,21 @@
+{
+  "perk": "source_add",
+  "skill": "open-notebook",
+  "description": "Ingest ONE source — a web URL or raw text — into a notebook (POST /api/sources).",
+  "rules": [
+    "remote-mutating: creates a source resource on the live server",
+    "SOURCE_URL takes precedence over SOURCE_TEXT when both are set; URL sources processed synchronously",
+    "writes the created source JSON to record_store/source.json",
+    "degrades gracefully (status=unreachable, exit 0) when the server is down"
+  ],
+  "usage": "Set OPEN_NOTEBOOK_URL, NOTEBOOK_ID, and one of SOURCE_URL or SOURCE_TEXT (SOURCE_TITLE optional for text). Output: source.json.",
+  "limitation": "Requires a reachable Open Notebook server. File uploads (PDF/audio/video) are not exposed by this perk — only URL and text ingestion. Full processing needs a configured AI provider.",
+  "minimal_example": {
+    "perk": "source_add",
+    "vars": {
+      "OPEN_NOTEBOOK_URL": "http://localhost:5055",
+      "NOTEBOOK_ID": "notebook:abc123",
+      "SOURCE_URL": "https://arxiv.org/abs/2301.00001"
+    }
+  }
+}

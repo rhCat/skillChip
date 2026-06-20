@@ -1,0 +1,13 @@
+{
+  "_perk": "visuals",
+  "requires": ["python3", "bash"],
+  "vars": { "TOPIC": "Electric Vehicle Charging Infrastructure" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["market_visuals_manifest.txt"],
+    "nonempty": ["market_visuals_manifest.txt"],
+    "contains": {
+      "market_visuals_manifest.txt": ["01_market_growth_trajectory.png", "Electric Vehicle Charging Infrastructure"]
+    }
+  }
+}

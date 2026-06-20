@@ -1,0 +1,26 @@
+{
+  "_perk": "accurate_mass_search",
+  "sequence": [
+    "accurate_mass_search"
+  ],
+  "tools": {
+    "accurate_mass_search": {
+      "binary": "bash",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "NEGATIVE": "${NEGATIVE}",
+    "PPM": "${PPM}",
+    "DB_MAPPING": "${DB_MAPPING}",
+    "DB_STRUCT": "${DB_STRUCT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

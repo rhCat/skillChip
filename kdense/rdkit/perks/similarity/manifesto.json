@@ -1,0 +1,25 @@
+{
+  "_perk": "similarity",
+  "sequence": [
+    "rd_similarity"
+  ],
+  "tools": {
+    "rd_similarity": {
+      "binary": "python3",
+      "params": {
+        "QUERY": "${QUERY}",
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "QUERY": "${QUERY}",
+    "INPUT": "${INPUT}",
+    "METHOD": "${METHOD}",
+    "THRESHOLD": "${THRESHOLD}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

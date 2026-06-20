@@ -1,0 +1,31 @@
+{
+  "tool": "predict_solubility",
+  "inputs": {
+    "DATA_CSV": {
+      "type": "string",
+      "required": false
+    },
+    "SMILES_COL": {
+      "type": "string",
+      "required": false
+    },
+    "TARGET_COL": {
+      "type": "string",
+      "required": false
+    },
+    "PREDICT_SMILES": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "solubility_report": {
+      "path": "${RECORD_STORE}/solubility.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/solubility.txt"
+  }
+}

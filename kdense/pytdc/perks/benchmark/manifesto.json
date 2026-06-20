@@ -1,0 +1,25 @@
+{
+  "_perk": "benchmark",
+  "sequence": [
+    "tdc_benchmark"
+  ],
+  "tools": {
+    "tdc_benchmark": {
+      "binary": "python3",
+      "params": {
+        "TDC_GROUP": "${TDC_GROUP}",
+        "TDC_PRED": "${TDC_PRED}",
+        "TDC_PATH": "${TDC_PATH}"
+      }
+    }
+  },
+  "env": {
+    "TDC_GROUP": "${TDC_GROUP}",
+    "TDC_PRED": "${TDC_PRED}",
+    "TDC_PATH": "${TDC_PATH}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

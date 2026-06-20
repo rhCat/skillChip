@@ -1,0 +1,15 @@
+{
+  "_perk": "achieved_power",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "TEST": "t_ind",
+    "EFFECT_SIZE": "0.5",
+    "NOBS1": "64",
+    "ALPHA": "0.05"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["achieved_power.json"],
+    "nonempty": ["achieved_power.json"]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for scvelo — set perk, fill record_store + the vars the perk declares.",
+  "skill": "scvelo",
+  "perk": "preprocess",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "INPUT": "<AnnData .h5ad with spliced/unspliced layers>"
+  }
+}

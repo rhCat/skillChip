@@ -1,0 +1,4 @@
+{
+  "_perk": "generate_slide_image",
+  "skip": "needs the OpenRouter API (Nano Banana Pro / Gemini) + OPENROUTER_API_KEY + network — cannot run offline even degraded"
+}

@@ -1,0 +1,17 @@
+{
+  "perk": "demo-covariates",
+  "skill": "timesfm-forecasting",
+  "description": "Generate a deterministic synthetic 3-store weekly retail dataset (24-week context + 12-week horizon) with price/promotion/holiday/day-of-week covariates, decompose each covariate's effect on sales, and export a 108-row CSV plus a metadata JSON describing the XReg (forecast_with_covariates) workflow.",
+  "rules": [
+    "takes no inputs — data is generated with a fixed RNG seed (42), so output is reproducible",
+    "pure numpy/pandas/matplotlib; the TimesFM XReg API is only printed, never invoked",
+    "covariate effects are fixed: holiday +200, promotion +150, price -20/$ above base",
+    "writes sales_with_covariates.csv (108 rows) and covariates_metadata.json to record_store"
+  ],
+  "usage": "No vars required. Output: sales_with_covariates.csv (3 stores x 36 weeks = 108 rows) and covariates_metadata.json (dimensions, covariate roles, effect magnitudes).",
+  "limitation": "Demonstration data only — does not run real TimesFM inference. Use forecast-csv for actual forecasts. Store price ordering is store_A > store_B > store_C by construction.",
+  "minimal_example": {
+    "perk": "demo-covariates",
+    "vars": {}
+  }
+}

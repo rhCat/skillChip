@@ -1,0 +1,13 @@
+{
+  "_perk": "rules",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/mols.txt",
+    "RULES": "rule_of_five,rule_of_cns"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["rules.csv"],
+    "nonempty": ["rules.csv"]
+  }
+}

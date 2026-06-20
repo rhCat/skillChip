@@ -1,0 +1,19 @@
+{
+  "tool": "hs_raw",
+  "inputs": {
+    "NAME": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "raw_out": {
+      "path": "${RECORD_STORE}/raw.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/raw.txt"
+  }
+}

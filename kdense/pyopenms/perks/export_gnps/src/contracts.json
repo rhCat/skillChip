@@ -1,0 +1,23 @@
+{
+  "tool": "export_gnps",
+  "inputs": {
+    "CONSENSUS": {
+      "type": "string",
+      "required": true
+    },
+    "MZML": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "mgf": {
+      "path": "${RECORD_STORE}/gnps_export.mgf",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/gnps_export.mgf"
+  }
+}

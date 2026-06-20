@@ -1,0 +1,4 @@
+{
+  "_perk": "generate_schematic",
+  "skip": "needs OPENROUTER_API_KEY, the requests library, and network access to the OpenRouter / Nano Banana 2 API — cannot produce a real image offline"
+}

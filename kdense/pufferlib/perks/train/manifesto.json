@@ -1,0 +1,27 @@
+{
+  "_perk": "train",
+  "sequence": [
+    "train"
+  ],
+  "tools": {
+    "train": {
+      "binary": "python3",
+      "params": {
+        "ENV_NAME": "${ENV_NAME}",
+        "NUM_ENVS": "${NUM_ENVS}",
+        "NUM_ITERATIONS": "${NUM_ITERATIONS}",
+        "DEVICE": "${DEVICE}"
+      }
+    }
+  },
+  "env": {
+    "ENV_NAME": "${ENV_NAME}",
+    "NUM_ENVS": "${NUM_ENVS}",
+    "NUM_ITERATIONS": "${NUM_ITERATIONS}",
+    "DEVICE": "${DEVICE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

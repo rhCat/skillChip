@@ -1,0 +1,31 @@
+{
+  "tool": "run_dea",
+  "inputs": {
+    "COUNTS": {
+      "type": "string",
+      "required": true
+    },
+    "METADATA": {
+      "type": "string",
+      "required": true
+    },
+    "DESIGN": {
+      "type": "string",
+      "required": true
+    },
+    "CONTRAST": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "deseq2_results": {
+      "path": "${RECORD_STORE}/deseq2_results.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/deseq2_results.csv"
+  }
+}

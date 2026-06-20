@@ -1,0 +1,20 @@
+{
+  "perk": "pseudobulk",
+  "skill": "scanpy",
+  "description": "Aggregate single cells into pseudobulk profiles by summing raw counts within each combination of grouping columns (e.g. sample x cell_type) via sc.get.aggregate, exporting a genes x pseudobulk-sample count matrix plus a sample-metadata table for pydeseq2 / edgeR / limma.",
+  "rules": [
+    "statistically correct route for DE between conditions, unlike per-cell rank_genes_groups",
+    "read-only input — writes pseudobulk_counts.csv + pseudobulk_samples.csv under record_store",
+    "BY is a space-separated list of obs columns to aggregate by (e.g. 'sample cell_type')",
+    "LAYER selects the raw-counts layer to sum (default counts; falls back to X)"
+  ],
+  "usage": "Set INPUT and BY (e.g. 'sample cell_type'). Optional: LAYER (default counts), FUNC (sum|mean|count_nonzero). Outputs: pseudobulk_counts.csv, pseudobulk_samples.csv.",
+  "limitation": "Requires scanpy installed; without it the porter writes a {} placeholder pseudobulk_counts.csv and still passes.",
+  "minimal_example": {
+    "perk": "pseudobulk",
+    "vars": {
+      "INPUT": "annotated.h5ad",
+      "BY": "sample cell_type"
+    }
+  }
+}

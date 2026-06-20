@@ -1,0 +1,14 @@
+{
+  "_perk": "plot",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.csv",
+    "KIND": "umap",
+    "COLOR": "leiden"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["plot.log"],
+    "nonempty": ["plot.log"]
+  }
+}

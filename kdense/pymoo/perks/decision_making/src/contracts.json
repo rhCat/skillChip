@@ -1,0 +1,27 @@
+{
+  "tool": "pymoo_decision_making",
+  "inputs": {
+    "PROBLEM": {
+      "type": "string",
+      "required": true
+    },
+    "POP_SIZE": {
+      "type": "string",
+      "required": true
+    },
+    "N_GEN": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "report": {
+      "path": "${RECORD_STORE}/decision_making.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/decision_making.txt"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "tool": "process_spectra",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "OUT_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "MS_LEVEL": {
+      "type": "string",
+      "required": false
+    },
+    "SMOOTH": {
+      "type": "string",
+      "required": false
+    },
+    "GAUSSIAN_WIDTH": {
+      "type": "string",
+      "required": false
+    },
+    "PICK": {
+      "type": "string",
+      "required": false
+    },
+    "SIGNAL_TO_NOISE": {
+      "type": "string",
+      "required": false
+    },
+    "NORMALIZE": {
+      "type": "string",
+      "required": false
+    },
+    "THRESHOLD": {
+      "type": "string",
+      "required": false
+    },
+    "SN": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "processed": {
+      "path": "${RECORD_STORE}/${OUT_NAME}",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/${OUT_NAME}"
+  }
+}

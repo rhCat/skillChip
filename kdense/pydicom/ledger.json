@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for pydicom — set perk, fill record_store + the vars the perk declares.",
+  "skill": "pydicom",
+  "perk": "extract_metadata",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "DICOM_IN": "<input .dcm file>",
+    "META_FORMAT": "text"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_perk": "tree_summary",
+  "requires": ["python3"],
+  "vars": {
+    "TREE_FILE": "${FIXTURE}/tree.nwk"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["tree_stats.json"],
+    "nonempty": ["tree_stats.json"]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_perk": "unpack",
+  "sequence": [
+    "unpack"
+  ],
+  "tools": {
+    "unpack": {
+      "binary": "python3",
+      "params": {
+        "OFFICE_FILE": "${OFFICE_FILE}"
+      }
+    }
+  },
+  "env": {
+    "OFFICE_FILE": "${OFFICE_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

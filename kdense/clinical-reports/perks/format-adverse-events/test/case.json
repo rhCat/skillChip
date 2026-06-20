@@ -1,0 +1,11 @@
+{
+  "_perk": "format-adverse-events",
+  "requires": ["python3"],
+  "vars": { "AE_CSV": "${FIXTURE}/ae_data.csv" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["ae_summary.md"],
+    "nonempty": ["ae_summary.md"],
+    "contains": { "ae_summary.md": ["Serious AE", "Drug A"] }
+  }
+}

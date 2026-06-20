@@ -1,0 +1,29 @@
+{
+  "skill": "stable-baselines3",
+  "perks": [
+    {
+      "id": "train",
+      "summary": "train an SB3 agent (PPO/SAC/DQN/...) on a Gymnasium env with eval + checkpoint callbacks; saves model + logs",
+      "destructive": false,
+      "tools": [
+        "sb3_train"
+      ]
+    },
+    {
+      "id": "evaluate",
+      "summary": "load a saved SB3 model and evaluate_policy over N episodes; reports mean/std reward (optional video)",
+      "destructive": false,
+      "tools": [
+        "sb3_evaluate"
+      ]
+    },
+    {
+      "id": "custom_env",
+      "summary": "instantiate a custom Gymnasium env and validate it with SB3's check_env (structure/space conformance)",
+      "destructive": false,
+      "tools": [
+        "sb3_check_env"
+      ]
+    }
+  ]
+}

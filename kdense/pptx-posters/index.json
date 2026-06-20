@@ -1,0 +1,21 @@
+{
+  "skill": "pptx-posters",
+  "skill_sha": "db11593f93aaa1eb9ef0b73eee040a85e19a90fb7b47aebcc136df3685a14dbf",
+  "file_count": 14,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "ecca507db2db055759b4f349dfcf2d4d74184ee1f5fe1ee7484bd82446428e3e",
+    "blueprint.drawio": "ffda58fd4a182a9ab1bade3d83d8c73b949408020a469b7346bcbd930857cc2a",
+    "blueprint.json": "c9637b8f899ae750433dadb180632ef4e9995ff3829edcbf3d31db50f4674e47",
+    "blueprint.svg": "80dbfde37826b51dc6382a625ce2bcf1204fee8bd107e3a330d980ada5b2f3ce",
+    "ledger.json": "8fdd1379dc854d42fa0deff3ce6ecd697c47b6eeca4278e04ccd76e626d5c081",
+    "perks.json": "915f92e8325814715439b432dbbef86f455a0ec1ea6882e628b433c3a0760376",
+    "perks/schematic/manifesto.json": "47aaa61b3234d78b905e19b3b704807c24dcd1da94baf6466120110afc1a5efe",
+    "perks/schematic/metadata.json": "1de547b837b9eab9ab84bc485fe0b3cd18d106c602b19bcc0845904d6fd77893",
+    "perks/schematic/src/contracts.json": "b90e7b39792e23220f5803e7ea736f1b352ecf2bd381bffd697a219b399606b9",
+    "perks/schematic/src/generate_schematic.py": "a426ae30ed9185f250245f35c868e6f8aae6096e94a4b8392283dc05f089c041",
+    "perks/schematic/src/generate_schematic_ai.py": "0e1708bc163eab7e4440ae7d9d61ed1cd123bdc401499d46cb3df30f1b9f349c",
+    "perks/schematic/src/schematic.sh": "4a241e750aa33c83f5b15cd353076125f8856ee351f4a8590e19566d6abef8ad",
+    "perks/schematic/test/case.json": "b60047fccf07e67098cb3a92e5ce9cf33d29cd622cdfb2bb12a57cc6ce930197"
+  }
+}

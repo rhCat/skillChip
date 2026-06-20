@@ -1,0 +1,26 @@
+[
+  {
+    "title": "CRISPR-Cas9 gene editing for sickle cell disease",
+    "authors": "Smith, J., Johnson, M.",
+    "year": 2021,
+    "source": "PubMed",
+    "doi": "10.1000/example1",
+    "citations": 312
+  },
+  {
+    "title": "CRISPR-Cas9 gene editing for sickle cell disease",
+    "authors": "Smith, J., Johnson, M.",
+    "year": 2021,
+    "source": "Semantic Scholar",
+    "doi": "10.1000/example1",
+    "citations": 312
+  },
+  {
+    "title": "Lipid nanoparticle delivery of base editors",
+    "authors": "Williams, K.",
+    "year": 2019,
+    "source": "arXiv",
+    "doi": "10.1000/example2",
+    "citations": 88
+  }
+]

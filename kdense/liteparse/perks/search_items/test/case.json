@@ -1,0 +1,17 @@
+{
+  "_perk": "search_items",
+  "requires": ["python3"],
+  "vars": {
+    "PARSED_JSON": "${FIXTURE}/parsed.json",
+    "PHRASE": "Materials and Methods",
+    "CASE_SENSITIVE": "0"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["matches.json"],
+    "nonempty": ["matches.json"],
+    "contains": {
+      "matches.json": ["\"count\": 1", "\"width\": 148.0", "Materials and Methods"]
+    }
+  }
+}

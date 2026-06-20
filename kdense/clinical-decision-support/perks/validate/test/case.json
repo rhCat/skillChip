@@ -1,0 +1,12 @@
+{
+  "_perk": "validate",
+  "requires": ["python3"],
+  "vars": {
+    "DOC": "${FIXTURE}/cohort_analysis.md"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["validation_report.txt"],
+    "nonempty": ["validation_report.txt"]
+  }
+}

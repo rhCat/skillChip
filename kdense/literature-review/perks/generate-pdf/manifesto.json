@@ -1,0 +1,27 @@
+{
+  "_perk": "generate-pdf",
+  "sequence": [
+    "generate_pdf"
+  ],
+  "tools": {
+    "generate_pdf": {
+      "binary": "python3",
+      "params": {
+        "REVIEW_MD": "${REVIEW_MD}",
+        "CITATION_STYLE": "${CITATION_STYLE}",
+        "TOC": "${TOC}",
+        "NUMBER_SECTIONS": "${NUMBER_SECTIONS}"
+      }
+    }
+  },
+  "env": {
+    "REVIEW_MD": "${REVIEW_MD}",
+    "CITATION_STYLE": "${CITATION_STYLE}",
+    "TOC": "${TOC}",
+    "NUMBER_SECTIONS": "${NUMBER_SECTIONS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

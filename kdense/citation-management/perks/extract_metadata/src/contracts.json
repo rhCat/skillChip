@@ -1,0 +1,23 @@
+{
+  "tool": "extract_metadata",
+  "inputs": {
+    "IDENTIFIER": {
+      "type": "string",
+      "required": true
+    },
+    "ID_FILE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "extract_metadata_out": {
+      "path": "${RECORD_STORE}/metadata.bib",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/metadata.bib"
+  }
+}

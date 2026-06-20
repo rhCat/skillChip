@@ -1,0 +1,19 @@
+{
+  "perk": "format_reference",
+  "skill": "exploratory-data-analysis",
+  "description": "Extract the format-reference section for a scientific file's extension from the vendored references — description, typical data, use cases, Python libraries, and the recommended EDA approach. Writes a markdown section.",
+  "rules": [
+    "read-only — uses the file's extension to select a reference section, never opens its contents",
+    "pure stdlib — reference markdown is vendored beside the core, no network",
+    "searches references/<category>_formats.md for the '### .<ext>' heading",
+    "result written to record_store as format_reference.md"
+  ],
+  "usage": "Set DATA_FILE (path to the data file). Output: format_reference.md (the matched reference section, or a note when no section matches).",
+  "limitation": "Only returns content for extensions documented in the six vendored reference files; unknown extensions yield a short 'no section found' note.",
+  "minimal_example": {
+    "perk": "format_reference",
+    "vars": {
+      "DATA_FILE": "structure.pdb"
+    }
+  }
+}

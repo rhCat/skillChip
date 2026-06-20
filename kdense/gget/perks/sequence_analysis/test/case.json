@@ -1,0 +1,10 @@
+{
+  "_perk": "sequence_analysis",
+  "requires": ["python3"],
+  "vars": { "FASTA": "${FIXTURE}/sequences.fasta", "BLAST_DB": "nr" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["sequence_analysis.log"],
+    "nonempty": ["sequence_analysis.log"]
+  }
+}

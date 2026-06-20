@@ -1,0 +1,22 @@
+{
+  "perk": "load_split",
+  "skill": "pytdc",
+  "description": "Load a TDC dataset (single_pred/multi_pred/generation) and write a train/valid/test split via the chosen method (scaffold/random/cold_drug/cold_target).",
+  "rules": [
+    "read-only — loads a curated dataset and partitions it; nothing is mutated remotely",
+    "PyTDC downloads the dataset on first use; degrades gracefully (skipped report) when tdc/network is absent",
+    "split sizes + columns + a 3-row train sample are written to record_store as split.json"
+  ],
+  "usage": "Set TDC_PROBLEM (single_pred|multi_pred|generation), TDC_TASK (e.g. ADME, DTI, MolGen), TDC_DATASET (e.g. Caco2_Wang); optional TDC_METHOD (default scaffold), TDC_SEED (default 42), TDC_FRAC (default 0.7,0.1,0.2). Output: split.json.",
+  "limitation": "Read-only. Requires the PyTDC package and network access to fetch the dataset; offline it emits a skipped report. Cold splits apply only to multi_pred (DTI/DDI) tasks.",
+  "minimal_example": {
+    "perk": "load_split",
+    "vars": {
+      "TDC_PROBLEM": "single_pred",
+      "TDC_TASK": "ADME",
+      "TDC_DATASET": "Caco2_Wang",
+      "TDC_METHOD": "scaffold",
+      "TDC_SEED": "42"
+    }
+  }
+}

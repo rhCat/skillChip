@@ -1,0 +1,20 @@
+{
+  "perk": "rules",
+  "skill": "medchem",
+  "description": "Apply medicinal-chemistry drug-likeness rules (rule_of_five, rule_of_cns, rule_of_veber, rule_of_oprea, rule_of_leadlike_soft, ...) to every molecule in the input library and write a per-rule pass/fail table plus pass_all/pass_any columns.",
+  "rules": [
+    "read-only — parses molecules and writes a results CSV; mutates nothing remote",
+    "INPUT may be .csv/.tsv (smiles column), .sdf, or .txt (one SMILES per line)",
+    "RULES is a comma-separated list of named medchem rules",
+    "results written to record_store/rules.csv"
+  ],
+  "usage": "Set INPUT (molecule file) and RULES (comma-separated rule names). Output: rules.csv.",
+  "limitation": "Requires the medchem + datamol + rdkit + pandas stack (Python >=3.9); when absent the porter degrades gracefully and writes a stub so governance still runs offline. Unknown rule names error at runtime inside medchem.",
+  "minimal_example": {
+    "perk": "rules",
+    "vars": {
+      "INPUT": "mols.txt",
+      "RULES": "rule_of_five,rule_of_cns"
+    }
+  }
+}

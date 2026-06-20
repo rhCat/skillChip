@@ -1,0 +1,19 @@
+{
+  "tool": "export_to_phy",
+  "inputs": {
+    "ANALYZER_DIR": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "export_phy_report": {
+      "path": "${RECORD_STORE}/export_phy_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/export_phy_report.txt"
+  }
+}

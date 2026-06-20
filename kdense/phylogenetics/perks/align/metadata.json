@@ -1,0 +1,20 @@
+{
+  "perk": "align",
+  "skill": "phylogenetics",
+  "description": "MAFFT multiple sequence alignment (unaligned FASTA -> aligned FASTA).",
+  "rules": [
+    "read-only on inputs; writes one artifact (aligned.fasta) under record_store",
+    "METHOD auto picks the strategy from sequence count (localpair <=200, --auto <=1000, fftns otherwise)",
+    "requires the mafft binary on PATH; without it the porter degrades gracefully and emits {}"
+  ],
+  "usage": "Set INPUT_FASTA (unaligned FASTA). Optional THREADS (default 4), METHOD (auto|linsi|einsi|fftnsi|fftns). Output: aligned.fasta.",
+  "limitation": "Needs MAFFT installed (conda install -c bioconda mafft). Offline / without MAFFT the alignment is not produced; the output is a graceful {} placeholder.",
+  "minimal_example": {
+    "perk": "align",
+    "vars": {
+      "INPUT_FASTA": "sequences.fasta",
+      "THREADS": "4",
+      "METHOD": "auto"
+    }
+  }
+}

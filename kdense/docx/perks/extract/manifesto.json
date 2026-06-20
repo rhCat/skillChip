@@ -1,0 +1,22 @@
+{
+  "_perk": "extract",
+  "sequence": [
+    "docx_extract"
+  ],
+  "tools": {
+    "docx_extract": {
+      "binary": "bash",
+      "params": {
+        "DOCX_FILE": "${DOCX_FILE}"
+      }
+    }
+  },
+  "env": {
+    "DOCX_FILE": "${DOCX_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "pandoc"
+  ]
+}

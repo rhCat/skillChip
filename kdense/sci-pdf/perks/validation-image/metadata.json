@@ -1,0 +1,21 @@
+{
+  "perk": "validation-image",
+  "skill": "sci-pdf",
+  "description": "Draw a form's entry bounding boxes (red) and label bounding boxes (blue) for one page onto a rendered page image, for visual verification of proposed field coordinates. Wraps PIL.",
+  "rules": [
+    "reads a fields JSON + an input page image; writes a new annotated PNG",
+    "only fields whose page_number matches PAGE_NUMBER are drawn",
+    "annotated image is written to record_store/validation_page.png; a manifest line goes to validation_image.txt",
+    "needs Pillow (PIL) at runtime; absent -> manifest note + exit 0"
+  ],
+  "usage": "Set PAGE_NUMBER, FIELDS_JSON (with a form_fields array), and PAGE_IMAGE (the rendered page PNG). Outputs: validation_page.png + validation_image.txt.",
+  "limitation": "Operates in image pixel coordinates; the fields JSON must use the same coordinate space as PAGE_IMAGE. Requires Pillow.",
+  "minimal_example": {
+    "perk": "validation-image",
+    "vars": {
+      "PAGE_NUMBER": "1",
+      "FIELDS_JSON": "fields.json",
+      "PAGE_IMAGE": "page_1.png"
+    }
+  }
+}

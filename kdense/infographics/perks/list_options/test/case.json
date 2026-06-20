@@ -1,0 +1,13 @@
+{
+  "_perk": "list_options",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["options.txt"],
+    "nonempty": ["options.txt"],
+    "contains": {
+      "options.txt": "INFOGRAPHIC TYPES"
+    }
+  }
+}

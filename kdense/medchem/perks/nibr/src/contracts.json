@@ -1,0 +1,19 @@
+{
+  "tool": "mc_nibr",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "mc_nibr_out": {
+      "path": "${RECORD_STORE}/nibr.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/nibr.csv"
+  }
+}

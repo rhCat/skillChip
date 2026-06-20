@@ -1,0 +1,18 @@
+{
+  "perk": "render-images",
+  "skill": "sci-pdf",
+  "description": "Render each PDF page to a downscaled PNG (max 1000px on the long edge, 200 dpi) for visual inspection. Wraps pdf2image (poppler).",
+  "rules": [
+    "writes page_1.png, page_2.png, ... into record_store/pages/",
+    "a render_images.txt manifest lists every saved page (the contract output)",
+    "needs pdf2image + the poppler binaries at runtime; absent -> manifest note + exit 0"
+  ],
+  "usage": "Set PDF_PATH (input .pdf). Outputs: pages/page_N.png images + render_images.txt manifest.",
+  "limitation": "Rasterizes only — no text layer. Requires pdf2image and poppler (pdftoppm) on PATH.",
+  "minimal_example": {
+    "perk": "render-images",
+    "vars": {
+      "PDF_PATH": "document.pdf"
+    }
+  }
+}

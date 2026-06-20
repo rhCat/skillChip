@@ -1,0 +1,22 @@
+{
+  "perk": "decision_making",
+  "skill": "pymoo",
+  "description": "select a preferred solution from a Pareto front via pseudo-weights MCDM (read-only)",
+  "rules": [
+    "read-only — selects from an obtained Pareto front and writes a report; mutates nothing remote or live",
+    "runs the vendored decision_making_example.py core (NSGA-II on ZDT1 + PseudoWeights MCDM) via python3",
+    "forces MPLBACKEND=Agg so the Scatter and Petal plots never block",
+    "captures stdout (extreme solutions, per-preference selections) to record_store/decision_making.txt",
+    "requires the pymoo package at run time; degrades to an empty {} report if it is absent"
+  ],
+  "usage": "Set PROBLEM (e.g. zdt1), POP_SIZE, N_GEN. Output: decision_making.txt.",
+  "limitation": "The vendored core runs its built-in ZDT1 optimization and compares three fixed preference-weight scenarios; vars document intent. Needs the pymoo library installed to produce real results.",
+  "minimal_example": {
+    "perk": "decision_making",
+    "vars": {
+      "PROBLEM": "zdt1",
+      "POP_SIZE": "100",
+      "N_GEN": "200"
+    }
+  }
+}

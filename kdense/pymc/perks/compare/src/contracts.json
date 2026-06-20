@@ -1,0 +1,27 @@
+{
+  "tool": "compare_models",
+  "inputs": {
+    "MODELS_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "MODELS": {
+      "type": "string",
+      "required": false
+    },
+    "IC": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "comparison_out": {
+      "path": "${RECORD_STORE}/comparison.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/comparison.json"
+  }
+}

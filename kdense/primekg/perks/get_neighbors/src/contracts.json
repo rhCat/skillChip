@@ -1,0 +1,27 @@
+{
+  "tool": "get_neighbors",
+  "inputs": {
+    "PRIMEKG_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "NODE_ID": {
+      "type": "string",
+      "required": true
+    },
+    "RELATION_TYPE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "get_neighbors_out": {
+      "path": "${RECORD_STORE}/get_neighbors.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/get_neighbors.json"
+  }
+}

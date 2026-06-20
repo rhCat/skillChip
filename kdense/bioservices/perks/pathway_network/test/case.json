@@ -1,0 +1,13 @@
+{
+  "_perk": "pathway_network",
+  "requires": ["python3"],
+  "vars": {
+    "ORGANISM": "hsa",
+    "LIMIT": "2"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["pathway_summary.csv"],
+    "nonempty": ["pathway_summary.csv"]
+  }
+}

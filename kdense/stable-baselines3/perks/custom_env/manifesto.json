@@ -1,0 +1,21 @@
+{
+  "_perk": "custom_env",
+  "sequence": [
+    "sb3_check_env"
+  ],
+  "tools": {
+    "sb3_check_env": {
+      "binary": "python3",
+      "params": {
+        "GRID_SIZE": "${GRID_SIZE}"
+      }
+    }
+  },
+  "env": {
+    "GRID_SIZE": "${GRID_SIZE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

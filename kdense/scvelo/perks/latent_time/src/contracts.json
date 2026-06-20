@@ -1,0 +1,19 @@
+{
+  "tool": "latent_time",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "latent_time_h5ad": {
+      "path": "${RECORD_STORE}/latent_time.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/latent_time.h5ad"
+  }
+}

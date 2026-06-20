@@ -1,0 +1,22 @@
+{
+  "perk": "backup-notebook",
+  "skill": "labarchive-integration",
+  "description": "Download a full backup of one LabArchives notebook. Produces a 7z archive (with attachments) or an XML/JSON dump (no attachments) under record_store. Read-only against the remote API — it copies notebook data out, never mutates it.",
+  "rules": [
+    "read-only remote — downloads data, mutates nothing on the server",
+    "credentials are read from LA_CONFIG (a config.yaml)",
+    "LA_NBID selects the notebook; LA_BACKUP_JSON / LA_NO_ATTACHMENTS pick the format",
+    "needs the labarchives-py package + network; degrades to {} offline"
+  ],
+  "usage": "Set LA_CONFIG, LA_NBID; optionally LA_BACKUP_JSON (true/false), LA_NO_ATTACHMENTS (true/false). Output: backups/ archive + backup_notebook.json audit.",
+  "limitation": "Requires the labarchives-py package, valid credentials, and network. With attachments the backup is a .7z; with LA_NO_ATTACHMENTS=true it is .xml (or .json when LA_BACKUP_JSON=true). Offline the tool writes {} and exits 0.",
+  "minimal_example": {
+    "perk": "backup-notebook",
+    "vars": {
+      "LA_CONFIG": "/path/to/config.yaml",
+      "LA_NBID": "12345",
+      "LA_BACKUP_JSON": "false",
+      "LA_NO_ATTACHMENTS": "false"
+    }
+  }
+}

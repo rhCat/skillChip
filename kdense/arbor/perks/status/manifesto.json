@@ -1,0 +1,19 @@
+{
+  "_perk": "status",
+  "sequence": [
+    "arbor_status"
+  ],
+  "tools": {
+    "arbor_status": {
+      "binary": "python3",
+      "params": {}
+    }
+  },
+  "env": {
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

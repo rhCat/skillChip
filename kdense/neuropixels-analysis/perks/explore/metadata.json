@@ -1,0 +1,20 @@
+{
+  "perk": "explore",
+  "skill": "neuropixels-analysis",
+  "description": "Inspect a Neuropixels recording: streams, channel count, duration, sampling rate, probe info, bad-channel detection, and 1 s signal statistics. Read-only.",
+  "rules": [
+    "read-only — never modifies the recording",
+    "loads via si.read_spikeglx(DATA_PATH, stream_name=STREAM_NAME)",
+    "human-readable report written to record_store/explore_report.txt",
+    "degrades gracefully (still writes the report, exit 0) when spikeinterface is absent"
+  ],
+  "usage": "Set DATA_PATH (recording dir) and optional STREAM_NAME (default imec0.ap). Output: explore_report.txt.",
+  "limitation": "Requires the spikeinterface library (and a readable SpikeGLX recording) to produce real stats; without it the report records that the dependency was missing.",
+  "minimal_example": {
+    "perk": "explore",
+    "vars": {
+      "DATA_PATH": "/path/to/run_g0",
+      "STREAM_NAME": "imec0.ap"
+    }
+  }
+}

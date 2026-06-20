@@ -1,0 +1,35 @@
+{
+  "tool": "sb3_train",
+  "inputs": {
+    "ENV_ID": {
+      "type": "string",
+      "required": true
+    },
+    "ALGORITHM": {
+      "type": "string",
+      "required": false
+    },
+    "POLICY": {
+      "type": "string",
+      "required": false
+    },
+    "N_ENVS": {
+      "type": "string",
+      "required": false
+    },
+    "TOTAL_TIMESTEPS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "sb3_train_out": {
+      "path": "${RECORD_STORE}/train.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/train.json"
+  }
+}

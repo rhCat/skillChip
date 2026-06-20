@@ -1,0 +1,19 @@
+{
+  "tool": "check_env",
+  "inputs": {
+    "VERBOSE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "setup_report": {
+      "path": "${RECORD_STORE}/setup_check.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/setup_check.txt"
+  }
+}

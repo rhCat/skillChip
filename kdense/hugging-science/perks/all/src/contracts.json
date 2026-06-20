@@ -1,0 +1,31 @@
+{
+  "tool": "hs_all",
+  "inputs": {
+    "RAW": {
+      "type": "string",
+      "required": false
+    },
+    "FILTER": {
+      "type": "string",
+      "required": false
+    },
+    "TAG": {
+      "type": "string",
+      "required": false
+    },
+    "FORMAT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "catalog_out": {
+      "path": "${RECORD_STORE}/catalog.out",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/catalog.out"
+  }
+}

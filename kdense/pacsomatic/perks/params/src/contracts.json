@@ -1,0 +1,31 @@
+{
+  "tool": "build_params",
+  "inputs": {
+    "OUTDIR": {
+      "type": "string",
+      "required": true
+    },
+    "SAMPLESHEET": {
+      "type": "string",
+      "required": true
+    },
+    "FASTA": {
+      "type": "string",
+      "required": false
+    },
+    "GENOME": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "out": {
+      "path": "${RECORD_STORE}/pacsomatic.params.generated.yaml",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pacsomatic.params.generated.yaml"
+  }
+}

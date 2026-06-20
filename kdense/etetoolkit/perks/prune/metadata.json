@@ -1,0 +1,21 @@
+{
+  "perk": "prune",
+  "skill": "etetoolkit",
+  "description": "Prune a phylogenetic tree down to a specified set of taxa, preserving branch lengths so retained leaves keep their evolutionary distances.",
+  "rules": [
+    "read-only on input — emits a new tree file, never edits the source",
+    "KEEP_TAXA is a comma-separated taxa list OR a path to a newline-delimited taxa file",
+    "branch lengths are preserved (preserve_branch_length=True)",
+    "pruned tree (pruned.nw) + run log (prune.log) written under record_store"
+  ],
+  "usage": "Set TREE_FILE (input Newick tree) and KEEP_TAXA (comma list like \"A,B,C\" or a file path). TREE_FORMAT default 0. Outputs: prune.log (always) and pruned.nw (when ete3 present).",
+  "limitation": "Requires ete3 to prune; without it the porter records an ete3-missing note in prune.log and exits 0 (no pruned.nw is produced).",
+  "minimal_example": {
+    "perk": "prune",
+    "vars": {
+      "TREE_FILE": "tree.nw",
+      "KEEP_TAXA": "A,B,C",
+      "TREE_FORMAT": "0"
+    }
+  }
+}

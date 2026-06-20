@@ -1,0 +1,21 @@
+{
+  "skill": "latex-posters",
+  "perks": [
+    {
+      "id": "schematic",
+      "summary": "generate an AI scientific schematic image (PNG) for a poster via OpenRouter (Nano Banana 2 + Gemini quality review)",
+      "destructive": false,
+      "tools": [
+        "generate_schematic"
+      ]
+    },
+    {
+      "id": "review",
+      "summary": "read-only quality check of a poster PDF (page size, page count, file size, font embedding, image inventory)",
+      "destructive": false,
+      "tools": [
+        "review_poster"
+      ]
+    }
+  ]
+}

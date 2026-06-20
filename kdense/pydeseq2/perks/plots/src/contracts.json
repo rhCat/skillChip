@@ -1,0 +1,23 @@
+{
+  "tool": "render_plots",
+  "inputs": {
+    "RESULTS": {
+      "type": "string",
+      "required": true
+    },
+    "ALPHA": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "volcano_plot": {
+      "path": "${RECORD_STORE}/volcano_plot.png",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/volcano_plot.png"
+  }
+}

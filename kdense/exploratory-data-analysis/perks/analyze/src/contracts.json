@@ -1,0 +1,19 @@
+{
+  "tool": "eda_analyze",
+  "inputs": {
+    "DATA_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "eda_report_md": {
+      "path": "${RECORD_STORE}/eda_report.md",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/eda_report.md"
+  }
+}

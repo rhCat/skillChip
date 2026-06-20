@@ -1,0 +1,13 @@
+{
+  "_perk": "recalc",
+  "requires": ["python3"],
+  "vars": {
+    "XLSX_FILE": "${FIXTURE}/sample.xlsx",
+    "RECALC_TIMEOUT": "10"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["recalc.json"],
+    "nonempty": ["recalc.json"]
+  }
+}

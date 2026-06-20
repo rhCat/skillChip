@@ -1,0 +1,12 @@
+{
+  "_perk": "nibr",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/mols.txt"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["nibr.csv"],
+    "nonempty": ["nibr.csv"]
+  }
+}

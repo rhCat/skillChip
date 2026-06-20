@@ -1,0 +1,25 @@
+{
+  "_perk": "batch_id_convert",
+  "sequence": [
+    "batch_id_convert"
+  ],
+  "tools": {
+    "batch_id_convert": {
+      "binary": "python3",
+      "params": {
+        "ID_FILE": "${ID_FILE}",
+        "FROM_DB": "${FROM_DB}",
+        "TO_DB": "${TO_DB}"
+      }
+    }
+  },
+  "env": {
+    "ID_FILE": "${ID_FILE}",
+    "FROM_DB": "${FROM_DB}",
+    "TO_DB": "${TO_DB}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

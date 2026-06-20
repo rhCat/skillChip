@@ -1,0 +1,19 @@
+{
+  "tool": "verify_citations",
+  "inputs": {
+    "REVIEW_MD": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "citation_report": {
+      "path": "${RECORD_STORE}/citation_report.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/citation_report.json"
+  }
+}

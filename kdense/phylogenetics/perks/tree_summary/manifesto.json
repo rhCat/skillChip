@@ -1,0 +1,22 @@
+{
+  "_perk": "tree_summary",
+  "sequence": [
+    "tree_summary"
+  ],
+  "tools": {
+    "tree_summary": {
+      "binary": "bash",
+      "params": {
+        "TREE_FILE": "${TREE_FILE}"
+      }
+    }
+  },
+  "env": {
+    "TREE_FILE": "${TREE_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

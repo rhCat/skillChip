@@ -1,0 +1,21 @@
+{
+  "skill": "market-research-reports",
+  "skill_sha": "287860c05ac3ff3fe1b3096712a0298c5e73a8fccd293d1b1608f81a0b286c1f",
+  "file_count": 14,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "bfa48d67953664f25ea2c7206bb3fed5481333eca907112441aa04b7f2820415",
+    "blueprint.drawio": "4703da392cd6d89b1cc2690b7a55a6e7db925be10d29e733ca76f180afbfed8b",
+    "blueprint.json": "c022e835738f6355bc82b6b3307409b87b29af02c3d875fd19f3cc215699903f",
+    "blueprint.svg": "ec480557169c962911451de8e6a486e79a8fa86909ab4aad33d52c4632488da1",
+    "ledger.json": "70171546bafa2b56f2eaf4822476deb388ffed54683818bb24ddf1929519fe0f",
+    "perks.json": "075611953444fd260f2b336df0d4144e88dce9b28b5f28771d5406df58d025f7",
+    "perks/visuals/manifesto.json": "1f90f6e786980c5f79b85c62959327071b3420bc056ecd783597a5eccef6441f",
+    "perks/visuals/metadata.json": "b21f588cfd13c3abc9f7114c7cc7c19b816ca83514f99bbb8d5ea7c22c4515d1",
+    "perks/visuals/src/contracts.json": "fbd267bc034a349d02416b01a7ea101a45c364f03664f778612eef903d99efca",
+    "perks/visuals/src/generate_market_visuals.py": "6c259c5fe7980d568e1d2f0960cb1092c7cb43a644d35481993bc09ef733230f",
+    "perks/visuals/src/market_visuals.sh": "491e5bb5fe581cf32077df8569f9db94be30313ce8eaa57fd6546bc65bbc3a75",
+    "perks/visuals/test/case.json": "0575615752e2ae3600df0c21d5e5f19812401d2bba1e17d6e9ed25b7bfb810fb",
+    "perks/visuals/test/fixture/topic.txt": "2a76e2bff66231773fa8f3722f35f46cd65178dc9a2f637b89a32a4e4b87fc2a"
+  }
+}

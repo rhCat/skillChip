@@ -1,0 +1,21 @@
+{
+  "perk": "convert_literature",
+  "skill": "markitdown",
+  "description": "Convert a directory of scientific PDFs to Markdown with YAML front matter, filename-derived metadata (author/year/title), and an optional INDEX.md + catalog.json.",
+  "rules": [
+    "read-only inputs; writes Markdown + catalog into record_store/literature",
+    "INPUT_DIR must be an existing directory containing PDFs",
+    "ORGANIZE_BY_YEAR=1 nests output into year subdirectories",
+    "CREATE_INDEX=1 emits INDEX.md and catalog.json",
+    "requires the markitdown Python library to actually convert"
+  ],
+  "usage": "Set INPUT_DIR (dir of PDFs). Optional ORGANIZE_BY_YEAR=1, CREATE_INDEX=1, RECURSIVE=1. Output: literature/ dir + convert_literature_summary.json.",
+  "limitation": "Needs the markitdown library installed; without it the porter records a structured 'lib missing' note. Filename metadata uses the Author_Year_Title.pdf convention. No network.",
+  "minimal_example": {
+    "perk": "convert_literature",
+    "vars": {
+      "INPUT_DIR": "./literature/pdfs",
+      "CREATE_INDEX": "1"
+    }
+  }
+}

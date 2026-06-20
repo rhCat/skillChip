@@ -1,0 +1,27 @@
+{
+  "tool": "validate_files",
+  "inputs": {
+    "BAM_FILES": {
+      "type": "string",
+      "required": false
+    },
+    "BIGWIG_FILES": {
+      "type": "string",
+      "required": false
+    },
+    "BED_FILES": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "validation_out": {
+      "path": "${RECORD_STORE}/validation.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/validation.txt"
+  }
+}

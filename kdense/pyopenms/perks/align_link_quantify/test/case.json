@@ -1,0 +1,10 @@
+{
+  "_perk": "align_link_quantify",
+  "requires": ["python3", "bash"],
+  "vars": { "INPUTS": "${FIXTURE}/s1.mzML ${FIXTURE}/s2.mzML" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["study.consensusXML"],
+    "nonempty": ["study.consensusXML"]
+  }
+}

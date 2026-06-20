@@ -1,0 +1,10 @@
+{
+  "_perk": "consensus_matrix",
+  "requires": ["python3", "bash"],
+  "vars": { "INPUT": "${FIXTURE}/study.consensusXML" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["quant_matrix.csv"],
+    "nonempty": ["quant_matrix.csv"]
+  }
+}

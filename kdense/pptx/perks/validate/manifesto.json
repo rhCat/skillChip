@@ -1,0 +1,21 @@
+{
+  "_perk": "validate",
+  "sequence": [
+    "validate"
+  ],
+  "tools": {
+    "validate": {
+      "binary": "python3",
+      "params": {
+        "PPTX_PATH": "${PPTX_PATH}"
+      }
+    }
+  },
+  "env": {
+    "PPTX_PATH": "${PPTX_PATH}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

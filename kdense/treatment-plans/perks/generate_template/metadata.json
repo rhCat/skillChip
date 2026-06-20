@@ -1,0 +1,19 @@
+{
+  "perk": "generate_template",
+  "skill": "treatment-plans",
+  "description": "Copy a specialty LaTeX treatment-plan template (general_medical, rehabilitation, mental_health, chronic_disease, perioperative, pain_management) from the vendored asset library into the record store.",
+  "rules": [
+    "non-interactive: TEMPLATE_TYPE selects the template (no stdin prompt)",
+    "stdlib only (shutil, argparse) — no third-party deps",
+    "templates are vendored under the perk's assets/ dir",
+    "copied template written to record_store/template.tex"
+  ],
+  "usage": "Set TEMPLATE_TYPE to one of general_medical|rehabilitation|mental_health|chronic_disease|perioperative|pain_management. Output: template.tex.",
+  "limitation": "Only copies a template; it does not customize placeholders or compile LaTeX. An unknown TEMPLATE_TYPE yields an empty/fallback output rather than a real template.",
+  "minimal_example": {
+    "perk": "generate_template",
+    "vars": {
+      "TEMPLATE_TYPE": "general_medical"
+    }
+  }
+}

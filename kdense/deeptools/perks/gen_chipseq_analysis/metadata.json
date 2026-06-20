@@ -1,0 +1,25 @@
+{
+  "perk": "gen_chipseq_analysis",
+  "skill": "deeptools",
+  "description": "Generate a complete ChIP-seq analysis workflow bash script: normalized coverage tracks (bamCoverage RPGC), log2 ratio track (bamCompare), signal matrix around TSS (computeMatrix), heatmap (plotHeatmap), profile (plotProfile), and enrichment at peaks (plotEnrichment).",
+  "rules": [
+    "read-only — emits a bash script template; never runs deepTools or touches sequencing data",
+    "INPUT_BAM = control BAM, CHIP_BAM = single ChIP BAM, GENES_BED = TSS regions, PEAKS_BED = peak regions",
+    "all vars optional — unset ones use the generator's safe defaults",
+    "filenames are sanitized (no shell metacharacters, no '..' segments) before interpolation",
+    "generated script written to record_store/chipseq_analysis.sh"
+  ],
+  "usage": "Optionally set INPUT_BAM, CHIP_BAM, GENES_BED, PEAKS_BED, GENOME_SIZE, THREADS. Output: chipseq_analysis.sh (a customizable bash workflow to review and run separately).",
+  "limitation": "Produces a template script only. Running it requires deepTools 3.5.6 installed. Paths must satisfy the sanitizer pattern [A-Za-z0-9._/-]. The peaks step is skipped at runtime if PEAKS_BED does not exist.",
+  "minimal_example": {
+    "perk": "gen_chipseq_analysis",
+    "vars": {
+      "INPUT_BAM": "Input.bam",
+      "CHIP_BAM": "H3K4me3.bam",
+      "GENES_BED": "genes.bed",
+      "PEAKS_BED": "peaks.bed",
+      "GENOME_SIZE": "2913022398",
+      "THREADS": "8"
+    }
+  }
+}

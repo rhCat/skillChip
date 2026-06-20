@@ -1,0 +1,14 @@
+{
+  "_perk": "generate_schematic",
+  "requires": ["python3"],
+  "vars": {
+    "PROMPT": "CONSORT participant flow diagram",
+    "OUTPUT_NAME": "schematic.png",
+    "DOC_TYPE": "default"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["schematic.audit.json"],
+    "nonempty": ["schematic.audit.json"]
+  }
+}

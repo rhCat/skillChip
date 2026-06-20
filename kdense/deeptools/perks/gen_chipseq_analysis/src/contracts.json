@@ -1,0 +1,39 @@
+{
+  "tool": "gen_chipseq_analysis",
+  "inputs": {
+    "INPUT_BAM": {
+      "type": "string",
+      "required": false
+    },
+    "CHIP_BAM": {
+      "type": "string",
+      "required": false
+    },
+    "GENES_BED": {
+      "type": "string",
+      "required": false
+    },
+    "PEAKS_BED": {
+      "type": "string",
+      "required": false
+    },
+    "GENOME_SIZE": {
+      "type": "string",
+      "required": false
+    },
+    "THREADS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "workflow_out": {
+      "path": "${RECORD_STORE}/chipseq_analysis.sh",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/chipseq_analysis.sh"
+  }
+}

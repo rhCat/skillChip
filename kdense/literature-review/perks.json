@@ -1,0 +1,37 @@
+{
+  "skill": "literature-review",
+  "perks": [
+    {
+      "id": "aggregate",
+      "summary": "deduplicate + rank + year-filter + format search results (json/markdown/bibtex) (read-only, stdlib)",
+      "destructive": false,
+      "tools": [
+        "search_databases"
+      ]
+    },
+    {
+      "id": "verify-citations",
+      "summary": "extract DOIs from a markdown review, resolve each via doi.org + CrossRef, emit a verification report (read-only)",
+      "destructive": false,
+      "tools": [
+        "verify_citations"
+      ]
+    },
+    {
+      "id": "generate-pdf",
+      "summary": "render a markdown literature review to a professionally formatted PDF via pandoc/xelatex (read-only)",
+      "destructive": false,
+      "tools": [
+        "generate_pdf"
+      ]
+    },
+    {
+      "id": "generate-schematic",
+      "summary": "generate an AI publication-quality scientific schematic from a natural-language prompt (read-only, file-producing)",
+      "destructive": false,
+      "tools": [
+        "generate_schematic"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "_perk": "align",
+  "sequence": [
+    "mafft_align"
+  ],
+  "tools": {
+    "mafft_align": {
+      "binary": "bash",
+      "params": {
+        "INPUT_FASTA": "${INPUT_FASTA}",
+        "THREADS": "${THREADS}",
+        "METHOD": "${METHOD}"
+      }
+    }
+  },
+  "env": {
+    "INPUT_FASTA": "${INPUT_FASTA}",
+    "THREADS": "${THREADS}",
+    "METHOD": "${METHOD}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

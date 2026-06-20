@@ -1,0 +1,23 @@
+{
+  "tool": "search_ask",
+  "inputs": {
+    "OPEN_NOTEBOOK_URL": {
+      "type": "string",
+      "required": true
+    },
+    "ASK_QUERY": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "answer_out": {
+      "path": "${RECORD_STORE}/answer.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/answer.json"
+  }
+}

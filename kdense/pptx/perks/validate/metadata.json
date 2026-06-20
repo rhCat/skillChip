@@ -1,0 +1,18 @@
+{
+  "perk": "validate",
+  "skill": "pptx",
+  "description": "Validate a .pptx file (or an unpacked directory) against the OOXML ISO/IEC 29500 XSD schemas plus PPTX-specific checks: namespace correctness, unique/UUID IDs, file references, slideLayout references, content types, notes-slide references, and no duplicate slide layouts. Read-only — reports pass/fail and never mutates the input.",
+  "rules": [
+    "read-only — never modifies PPTX_PATH (auto-repair is NOT enabled by this porter)",
+    "requires defusedxml + lxml plus the vendored schemas/ tree; degrades gracefully when absent",
+    "the validation report is captured to validate.log under record_store"
+  ],
+  "usage": "Set PPTX_PATH (a .pptx file or an unpacked dir). Output: validate.log (PASSED/FAILED report with per-error detail).",
+  "limitation": "Reports only; does not repair. Redlining validation is DOCX-only and skipped for .pptx.",
+  "minimal_example": {
+    "perk": "validate",
+    "vars": {
+      "PPTX_PATH": "presentation.pptx"
+    }
+  }
+}

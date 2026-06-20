@@ -1,0 +1,23 @@
+{
+  "_perk": "alerts",
+  "sequence": [
+    "mc_alerts"
+  ],
+  "tools": {
+    "mc_alerts": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}",
+        "ALERTS": "${ALERTS}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "ALERTS": "${ALERTS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "skill": "venue-templates",
+  "perks": [
+    {
+      "id": "query",
+      "summary": "search/list venue templates by venue, type, or keyword and print their formatting requirements (read-only)",
+      "destructive": false,
+      "tools": [
+        "query_template"
+      ]
+    },
+    {
+      "id": "customize",
+      "summary": "fill a venue LaTeX template's author/title/affiliation/email placeholders, writing a customized .tex",
+      "destructive": false,
+      "tools": [
+        "customize_template"
+      ]
+    },
+    {
+      "id": "validate",
+      "summary": "validate a manuscript PDF against venue page-count/margin/font requirements (read-only, via pdfinfo/pdffonts)",
+      "destructive": false,
+      "tools": [
+        "validate_format"
+      ]
+    },
+    {
+      "id": "schematic",
+      "summary": "generate a publication-quality scientific schematic from a natural-language description via the OpenRouter image API",
+      "destructive": false,
+      "tools": [
+        "generate_schematic"
+      ]
+    }
+  ]
+}

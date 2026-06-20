@@ -1,0 +1,22 @@
+{
+  "perk": "metrics",
+  "skill": "neuropixels-analysis",
+  "description": "Build a SortingAnalyzer from a sorting + preprocessed recording, compute waveforms/templates/correlograms/unit-locations and quality metrics (snr, isi_violations_ratio, presence_ratio, amplitude_cutoff, firing_rate, amplitude_cv, sliding_rp_violation), then apply threshold-based curation labels (good/mua/noise).",
+  "rules": [
+    "loads sorting from SORTING_DIR/sorting and recording from PREPROCESSED_DIR/preprocessed",
+    "CURATION is one of allen | ibl | strict",
+    "writes analyzer/, quality_metrics.csv, and curation_labels.json under record_store",
+    "captures the run log to record_store/metrics_report.txt",
+    "degrades gracefully (still writes the report, exit 0) when spikeinterface is absent"
+  ],
+  "usage": "Set SORTING_DIR (dir with a 'sorting' subfolder) and PREPROCESSED_DIR (dir with a 'preprocessed' subfolder); optional CURATION (default allen). Output: metrics_report.txt + quality_metrics.csv + curation_labels.json.",
+  "limitation": "Requires spikeinterface (+ pandas). Read-only over inputs; writes only to record_store. Threshold curation is a starting point, not a verdict.",
+  "minimal_example": {
+    "perk": "metrics",
+    "vars": {
+      "SORTING_DIR": "/path/to/sort_out",
+      "PREPROCESSED_DIR": "/path/to/preprocessed_out",
+      "CURATION": "allen"
+    }
+  }
+}

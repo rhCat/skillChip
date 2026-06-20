@@ -1,0 +1,26 @@
+{
+  "skill": "pufferlib",
+  "skill_sha": "369895397eb3f3ec5e259751162c701c989c361c7e04f323a65db92d34b8cf0d",
+  "file_count": 19,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "1a09fad0303af78c0a7b86f2cadc85db8782b28653bace507ad8caf05f21fd2a",
+    "blueprint.drawio": "39362827cb65b706ca1e5cc406dbcda8311915d2e4f7a4cda2ab499452a17db1",
+    "blueprint.json": "770d2cac03f5102acdfe2371f2cce1dff8aeeaedc6dfd6e8ba161b46aed65f55",
+    "blueprint.svg": "35c88744f0752a51ad15777ba8628f2804478be10fb3cb782feb66bf12d0fdf8",
+    "ledger.json": "4f1d4cc9f95c02858181d5f733a11cfa61b284a27123941027d61e43046d83cc",
+    "perks.json": "584c3138756e4857b440abeca669b7ff4ee060f9b73964aea0e56db48a703023",
+    "perks/env_scaffold/manifesto.json": "6cece043917746fba71ea4a198d7a226061566eb3561d8b8b912da6f758bbcff",
+    "perks/env_scaffold/metadata.json": "f8564a95534f6be9e088a7d8309a283f89557ad932f39535abf98674f94c2a8a",
+    "perks/env_scaffold/src/contracts.json": "a4cb0c28dfbcda831620a1358749fe50bc5af1a57ba065f1c8e68c77a625eba5",
+    "perks/env_scaffold/src/env_scaffold.sh": "8fc184925e6094470f3fd3b8f2af64da15599e365bcb77df32b9f863a5d2e9df",
+    "perks/env_scaffold/src/env_template.py": "9f394e9c719e50926181ab603abfbc2d1d1a8747c7dd384d24836c0e4de8713e",
+    "perks/env_scaffold/test/case.json": "b2febd19bf80cd1c18ad9ccd7b7075d6334be31a1e1fc6c7cd373f34fafb479b",
+    "perks/train/manifesto.json": "67a65d7e8cd0fc4d23e75b0a9ec34a3764f9e7ab33f28d99548280e6360683eb",
+    "perks/train/metadata.json": "f05d3226a766a98c097c92dd0e6b00434545522e7780732c94243560b9e2a612",
+    "perks/train/src/contracts.json": "47767528711d42ce4f374d56630d21229beecadbd4963b40580c7988c6d8938f",
+    "perks/train/src/train.sh": "09c63d76df138252e07f42321456d51c6d31723ead4419343e6876a2212b8aee",
+    "perks/train/src/train_template.py": "e0dffda87ea42e890769205ea0eb71ab2d1892f5d3015a189196fc03b6729d9f",
+    "perks/train/test/case.json": "65ecdfada868308b0b6d24d914adfb3dc90370b63534cc000eb47cf6aaadeaa9"
+  }
+}

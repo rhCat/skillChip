@@ -1,0 +1,15 @@
+{
+  "_perk": "all",
+  "requires": ["python3"],
+  "vars": {
+    "RAW": "",
+    "FILTER": "",
+    "TAG": "",
+    "FORMAT": "markdown"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["catalog.out"],
+    "nonempty": ["catalog.out"]
+  }
+}

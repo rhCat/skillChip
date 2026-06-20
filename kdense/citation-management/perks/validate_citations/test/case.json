@@ -1,0 +1,13 @@
+{
+  "_perk": "validate_citations",
+  "requires": ["python3"],
+  "vars": {
+    "BIB_FILE": "${FIXTURE}/refs.bib"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["validation.json"],
+    "nonempty": ["validation.json"],
+    "json": { "validation.json": { "total_entries": 1 } }
+  }
+}

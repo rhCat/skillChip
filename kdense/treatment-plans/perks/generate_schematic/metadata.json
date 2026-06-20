@@ -1,0 +1,20 @@
+{
+  "perk": "generate_schematic",
+  "skill": "treatment-plans",
+  "description": "Generate a publication-quality scientific schematic (treatment-pathway flowchart, care-coordination diagram, etc.) from a natural-language prompt using Nano Banana 2 via OpenRouter, with smart iterative quality review.",
+  "rules": [
+    "requires OPENROUTER_API_KEY and the requests library",
+    "makes outbound network calls to the OpenRouter API",
+    "DOC_TYPE sets the quality threshold (journal|conference|poster|presentation|report|grant|thesis|preprint|default)",
+    "generated figure written to record_store/schematic.png"
+  ],
+  "usage": "Set SCHEMATIC_PROMPT (diagram description) and DOC_TYPE; export OPENROUTER_API_KEY. Output: schematic.png.",
+  "limitation": "NOT hermetic: needs a live OPENROUTER_API_KEY, the requests library, and network access. Offline (or without a key) the porter degrades to a fallback marker file and still records the audit line, but no real image is produced.",
+  "minimal_example": {
+    "perk": "generate_schematic",
+    "vars": {
+      "SCHEMATIC_PROMPT": "Diabetes treatment pathway flowchart",
+      "DOC_TYPE": "report"
+    }
+  }
+}

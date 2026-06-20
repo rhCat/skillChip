@@ -1,0 +1,21 @@
+{
+  "_perk": "detect-anomalies",
+  "sequence": [
+    "detect_anomalies"
+  ],
+  "tools": {
+    "detect_anomalies": {
+      "binary": "detect_anomalies.sh",
+      "params": {
+        "INPUT_CSV": "${INPUT_CSV}"
+      }
+    }
+  },
+  "env": {
+    "INPUT_CSV": "${INPUT_CSV}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

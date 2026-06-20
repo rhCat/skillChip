@@ -1,0 +1,11 @@
+{
+  "_perk": "cluster-randomization",
+  "requires": ["python3"],
+  "vars": { "SPEC_JSON": "${FIXTURE}/spec.json" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["cluster_allocation.csv"],
+    "nonempty": ["cluster_allocation.csv"],
+    "contains": { "cluster_allocation.csv": ["cluster_id,block,arm", "clinic1"] }
+  }
+}

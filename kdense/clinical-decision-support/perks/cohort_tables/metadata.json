@@ -1,0 +1,20 @@
+{
+  "perk": "cohort_tables",
+  "skill": "clinical-decision-support",
+  "description": "Build publication-ready cohort tables from patient-level data: Table 1 baseline demographics (median[IQR], n(%), p-values), efficacy outcomes (ORR/DCR with Clopper-Pearson 95% CI), and CTCAE v5.0 safety, each as CSV plus LaTeX.",
+  "rules": [
+    "read-only — reads one CSV, writes only under record_store",
+    "no INPUT_CSV (or empty) falls back to the built-in seeded example cohort",
+    "GROUP_COL names the two-arm grouping variable (default 'group')",
+    "table1_baseline.csv is always produced; efficacy/safety tables appear when best_response / *_grade columns exist"
+  ],
+  "usage": "Set INPUT_CSV (cohort CSV; omit for example data) and optionally GROUP_COL. Output: table1_baseline.csv (+ table1_baseline.tex, and efficacy/safety tables when applicable).",
+  "limitation": "p-value tests assume a 2-group comparison. Requires pandas/numpy/scipy at run time.",
+  "minimal_example": {
+    "perk": "cohort_tables",
+    "vars": {
+      "INPUT_CSV": "",
+      "GROUP_COL": "group"
+    }
+  }
+}

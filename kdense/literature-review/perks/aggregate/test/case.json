@@ -1,0 +1,20 @@
+{
+  "_perk": "aggregate",
+  "requires": ["python3"],
+  "vars": {
+    "RESULTS_JSON": "${FIXTURE}/results.json",
+    "OUTPUT_FORMAT": "markdown",
+    "RANK": "citations",
+    "DEDUPLICATE": "1",
+    "YEAR_START": "",
+    "YEAR_END": ""
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["aggregated_results.md"],
+    "nonempty": ["aggregated_results.md"],
+    "contains": {
+      "aggregated_results.md": "Literature Search Results"
+    }
+  }
+}

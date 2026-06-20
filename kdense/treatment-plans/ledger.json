@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for treatment-plans — set perk, fill record_store + the vars the perk declares.",
+  "skill": "treatment-plans",
+  "perk": "check_completeness",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PLAN_FILE": "<path to a .tex treatment plan>"
+  }
+}

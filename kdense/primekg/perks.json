@@ -1,0 +1,37 @@
+{
+  "skill": "primekg",
+  "perks": [
+    {
+      "id": "search_nodes",
+      "summary": "substring-search PrimeKG nodes by name, optionally filtered by node type (read-only)",
+      "destructive": false,
+      "tools": [
+        "search_nodes"
+      ]
+    },
+    {
+      "id": "get_neighbors",
+      "summary": "list direct neighbors of a PrimeKG node, optionally filtered by relation type (read-only)",
+      "destructive": false,
+      "tools": [
+        "get_neighbors"
+      ]
+    },
+    {
+      "id": "find_paths",
+      "summary": "find direct (depth-1) edges connecting two PrimeKG nodes, e.g. drug-disease (read-only)",
+      "destructive": false,
+      "tools": [
+        "find_paths"
+      ]
+    },
+    {
+      "id": "get_disease_context",
+      "summary": "summarize the local graph around a disease: associated genes, drugs, phenotypes, related diseases (read-only)",
+      "destructive": false,
+      "tools": [
+        "get_disease_context"
+      ]
+    }
+  ]
+}

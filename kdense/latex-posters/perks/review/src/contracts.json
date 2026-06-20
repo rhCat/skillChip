@@ -1,0 +1,19 @@
+{
+  "tool": "review_poster",
+  "inputs": {
+    "POSTER_PDF": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "review_out": {
+      "path": "${RECORD_STORE}/review.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/review.txt"
+  }
+}

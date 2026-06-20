@@ -1,0 +1,22 @@
+{
+  "_perk": "trainer_setup",
+  "sequence": [
+    "trainer_setup"
+  ],
+  "tools": {
+    "trainer_setup": {
+      "binary": "python3",
+      "params": {
+        "OUT_NAME": "${OUT_NAME}"
+      }
+    }
+  },
+  "env": {
+    "OUT_NAME": "${OUT_NAME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

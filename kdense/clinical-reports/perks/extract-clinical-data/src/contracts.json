@@ -1,0 +1,19 @@
+{
+  "tool": "extract_clinical_data",
+  "inputs": {
+    "REPORT_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "clinical_data": {
+      "path": "${RECORD_STORE}/clinical_data.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/clinical_data.json"
+  }
+}

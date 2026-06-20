@@ -1,0 +1,22 @@
+{
+  "_perk": "unpack",
+  "sequence": [
+    "docx_unpack"
+  ],
+  "tools": {
+    "docx_unpack": {
+      "binary": "bash",
+      "params": {
+        "DOCX_FILE": "${DOCX_FILE}"
+      }
+    }
+  },
+  "env": {
+    "DOCX_FILE": "${DOCX_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

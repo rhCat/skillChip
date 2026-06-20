@@ -1,0 +1,29 @@
+{
+  "_perk": "preprocess",
+  "sequence": [
+    "preprocess_recording"
+  ],
+  "tools": {
+    "preprocess_recording": {
+      "binary": "python3",
+      "params": {
+        "DATA_PATH": "${DATA_PATH}",
+        "FORMAT": "${FORMAT}",
+        "STREAM_NAME": "${STREAM_NAME}",
+        "FREQ_MIN": "${FREQ_MIN}",
+        "FREQ_MAX": "${FREQ_MAX}"
+      }
+    }
+  },
+  "env": {
+    "DATA_PATH": "${DATA_PATH}",
+    "FORMAT": "${FORMAT}",
+    "STREAM_NAME": "${STREAM_NAME}",
+    "FREQ_MIN": "${FREQ_MIN}",
+    "FREQ_MAX": "${FREQ_MAX}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

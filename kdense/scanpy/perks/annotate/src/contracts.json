@@ -1,0 +1,23 @@
+{
+  "tool": "annotate",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "MAPPING": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "annotated": {
+      "path": "${RECORD_STORE}/annotated.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/annotated.h5ad"
+  }
+}

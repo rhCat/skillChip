@@ -1,0 +1,19 @@
+{
+  "tool": "velocity_pseudotime",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "velocity_pseudotime_h5ad": {
+      "path": "${RECORD_STORE}/velocity_pseudotime.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/velocity_pseudotime.h5ad"
+  }
+}

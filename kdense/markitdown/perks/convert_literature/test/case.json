@@ -1,0 +1,10 @@
+{
+  "_perk": "convert_literature",
+  "requires": ["python3"],
+  "vars": { "INPUT_DIR": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["convert_literature_summary.json"],
+    "nonempty": ["convert_literature_summary.json"]
+  }
+}

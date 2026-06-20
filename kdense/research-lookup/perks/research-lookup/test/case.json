@@ -1,0 +1,14 @@
+{
+  "_perk": "research-lookup",
+  "requires": ["python3"],
+  "vars": {
+    "QUERY": "Recent advances in CRISPR gene editing 2025",
+    "FORCE_BACKEND": "",
+    "OUTPUT_NAME": "research.md"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["research.md"],
+    "nonempty": ["research.md"]
+  }
+}

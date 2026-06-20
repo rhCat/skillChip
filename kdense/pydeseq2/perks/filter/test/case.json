@@ -1,0 +1,16 @@
+{
+  "_perk": "filter",
+  "requires": ["python3"],
+  "vars": {
+    "COUNTS": "${FIXTURE}/counts.csv",
+    "METADATA": "${FIXTURE}/metadata.csv",
+    "MIN_COUNTS": "10",
+    "CONDITION_COL": "condition"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["filtered_counts.csv"],
+    "nonempty": ["filtered_counts.csv"],
+    "contains": {"filtered_counts.csv": "geneA"}
+  }
+}

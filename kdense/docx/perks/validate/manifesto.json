@@ -1,0 +1,23 @@
+{
+  "_perk": "validate",
+  "sequence": [
+    "docx_validate"
+  ],
+  "tools": {
+    "docx_validate": {
+      "binary": "bash",
+      "params": {
+        "DOCX_PATH": "${DOCX_PATH}"
+      }
+    }
+  },
+  "env": {
+    "DOCX_PATH": "${DOCX_PATH}",
+    "ORIGINAL_DOCX": "${ORIGINAL_DOCX}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

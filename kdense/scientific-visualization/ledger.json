@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for scientific-visualization — set perk, fill record_store + the vars the perk declares.",
+  "skill": "scientific-visualization",
+  "perk": "export-figure",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "DATA_CSV": "<CSV with numeric columns; first column = x, others = y series>"
+  }
+}

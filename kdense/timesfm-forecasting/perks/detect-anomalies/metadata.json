@@ -1,0 +1,20 @@
+{
+  "perk": "detect-anomalies",
+  "skill": "timesfm-forecasting",
+  "description": "Two-phase anomaly detection on a monthly series: Phase 1 linear-detrends the context and flags |Z|>=2 (WARNING) / |Z|>=3 (CRITICAL); Phase 2 forecasts with TimesFM and classifies points outside the 60%/80% quantile prediction intervals.",
+  "rules": [
+    "INPUT_CSV must have columns date and anomaly_c (one monthly observation per row)",
+    "Phase 1 is pure numpy/pandas; Phase 2 needs timesfm + torch + HuggingFace weights",
+    "thresholds are fixed module constants: WARNING_Z=2.0, CRITICAL_Z=3.0",
+    "without timesfm/torch the porter degrades to an empty {} report (exit 0) so the contract holds",
+    "writes anomaly_detection.json to record_store"
+  ],
+  "usage": "Set INPUT_CSV (date,anomaly_c). Output: anomaly_detection.json with context_detections, forecast_detections, and per-phase CRITICAL/WARNING summaries.",
+  "limitation": "Full two-phase output requires timesfm[torch] and network for first-run weights; offline it produces an empty report. The core uses TimesFM 1.0 (freq=[0]) for the forecast phase.",
+  "minimal_example": {
+    "perk": "detect-anomalies",
+    "vars": {
+      "INPUT_CSV": "temperature_anomaly.csv"
+    }
+  }
+}

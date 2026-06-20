@@ -1,0 +1,20 @@
+{
+  "perk": "customize",
+  "skill": "venue-templates",
+  "description": "Fill a venue LaTeX template's title / author / affiliation / corresponding-email placeholders via regex substitution and write a customized .tex ready for editing and compilation.",
+  "rules": [
+    "pure Python stdlib — runs fully offline",
+    "non-interactive — TEMPLATE is resolved against the vendored assets/{journals,posters,grants} catalog",
+    "only TITLE / AUTHORS / AFFILIATIONS / EMAIL placeholders are substituted; unmatched placeholders are left for manual editing",
+    "output written to record_store as customized.tex (never overwrites the source template)"
+  ],
+  "usage": "Set TEMPLATE (a bundled .tex filename, e.g. nature_article.tex). Optionally set TITLE, AUTHORS, AFFILIATIONS, EMAIL. Output: customized.tex.",
+  "limitation": "Substitutes only the four placeholder kinds the script knows; templates lacking those exact placeholders are copied through unchanged. Does not compile LaTeX.",
+  "minimal_example": {
+    "perk": "customize",
+    "vars": {
+      "TEMPLATE": "nature_article.tex",
+      "TITLE": "A Study of X"
+    }
+  }
+}

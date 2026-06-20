@@ -1,0 +1,21 @@
+{
+  "perk": "generate_schematic",
+  "skill": "scientific-writing",
+  "description": "Generate a publication-quality scientific schematic/diagram from a natural-language prompt, with AI quality-review iteration via OpenRouter (Nano Banana 2 generation + Gemini 3.1 Pro review).",
+  "rules": [
+    "read-only with respect to local state; calls the OpenRouter API over the network",
+    "requires OPENROUTER_API_KEY; without it (or offline) the porter degrades and writes an empty placeholder output",
+    "output PNG (plus per-iteration versions and a review log) is written under record_store",
+    "max 2 refinement iterations; re-generation occurs only when quality is below the doc-type threshold"
+  ],
+  "usage": "Set PROMPT (diagram description), OUTPUT_NAME (e.g. schematic.png), DOC_TYPE (journal|conference|poster|presentation|report|grant|thesis|preprint|default), and OPENROUTER_API_KEY. Output: ${RECORD_STORE}/${OUTPUT_NAME}.",
+  "limitation": "Needs OPENROUTER_API_KEY and network access to produce a real image; offline it only creates an empty placeholder. python3 must have the requests library for live generation.",
+  "minimal_example": {
+    "perk": "generate_schematic",
+    "vars": {
+      "PROMPT": "CONSORT participant flow diagram",
+      "OUTPUT_NAME": "flowchart.png",
+      "DOC_TYPE": "journal"
+    }
+  }
+}

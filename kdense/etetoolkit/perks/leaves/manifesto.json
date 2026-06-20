@@ -1,0 +1,23 @@
+{
+  "_perk": "leaves",
+  "sequence": [
+    "ete_leaves"
+  ],
+  "tools": {
+    "ete_leaves": {
+      "binary": "python3",
+      "params": {
+        "TREE_FILE": "${TREE_FILE}",
+        "TREE_FORMAT": "${TREE_FORMAT}"
+      }
+    }
+  },
+  "env": {
+    "TREE_FILE": "${TREE_FILE}",
+    "TREE_FORMAT": "${TREE_FORMAT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

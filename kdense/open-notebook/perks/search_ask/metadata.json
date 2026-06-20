@@ -1,0 +1,19 @@
+{
+  "perk": "search_ask",
+  "skill": "open-notebook",
+  "description": "Ask a question and get a single AI-generated answer grounded in the knowledge base (POST /api/search/ask/simple).",
+  "rules": [
+    "read-only: queries the server and runs an AI answer, mutates nothing persistent",
+    "writes the answer JSON to record_store/answer.json",
+    "degrades gracefully (status=unreachable, exit 0) when the server is down"
+  ],
+  "usage": "Set OPEN_NOTEBOOK_URL and ASK_QUERY. Output: answer.json.",
+  "limitation": "Requires a reachable Open Notebook server with a configured AI provider for answer generation.",
+  "minimal_example": {
+    "perk": "search_ask",
+    "vars": {
+      "OPEN_NOTEBOOK_URL": "http://localhost:5055",
+      "ASK_QUERY": "How does TMB predict checkpoint inhibitor response?"
+    }
+  }
+}

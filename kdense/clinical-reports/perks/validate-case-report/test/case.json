@@ -1,0 +1,11 @@
+{
+  "_perk": "validate-case-report",
+  "requires": ["python3"],
+  "vars": { "REPORT_FILE": "${FIXTURE}/report.md" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["care_validation.json"],
+    "nonempty": ["care_validation.json"],
+    "json": { "care_validation.json": { "overall_status": "PASS" } }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "perk": "notebook_list",
+  "skill": "open-notebook",
+  "description": "List notebooks on the Open Notebook server, optionally filtering by archived status (GET /api/notebooks).",
+  "rules": [
+    "read-only: only GETs from the server",
+    "writes the notebook list JSON to record_store/notebooks.json",
+    "degrades gracefully (status=unreachable, exit 0) when the server is down"
+  ],
+  "usage": "Set OPEN_NOTEBOOK_URL (NB_ARCHIVED 'true'/'false', default false). Output: notebooks.json.",
+  "limitation": "Requires a reachable Open Notebook server with the requests package.",
+  "minimal_example": {
+    "perk": "notebook_list",
+    "vars": {
+      "OPEN_NOTEBOOK_URL": "http://localhost:5055",
+      "NB_ARCHIVED": "false"
+    }
+  }
+}

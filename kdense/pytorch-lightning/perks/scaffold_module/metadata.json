@@ -1,0 +1,18 @@
+{
+  "perk": "scaffold_module",
+  "skill": "pytorch-lightning",
+  "description": "scaffold a complete LightningModule (training/validation/test/predict steps + configure_optimizers) boilerplate",
+  "rules": [
+    "read-only: produces a local .py scaffold, never trains or mutates remote state",
+    "scaffold source is written to record_store/${OUT_NAME}; validation stdout goes to scaffold_module.log",
+    "emitting the template needs no heavy lib; the optional validation run needs lightning + torch installed"
+  ],
+  "usage": "Set OUT_NAME (the .py filename to write). Output: record_store/${OUT_NAME} + scaffold_module.log.",
+  "limitation": "Emits boilerplate only — it does not run training. Editing the placeholder network / loss is left to the caller.",
+  "minimal_example": {
+    "perk": "scaffold_module",
+    "vars": {
+      "OUT_NAME": "lightning_module_template.py"
+    }
+  }
+}

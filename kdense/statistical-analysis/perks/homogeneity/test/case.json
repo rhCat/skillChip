@@ -1,0 +1,18 @@
+{
+  "_perk": "homogeneity",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_CSV": "${FIXTURE}/data.csv",
+    "VALUE_COL": "score",
+    "GROUP_COL": "group",
+    "ALPHA": "0.05"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["homogeneity.json", "homogeneity.png"],
+    "nonempty": ["homogeneity.json"],
+    "json": {
+      "homogeneity.json": { "test": "Levene", "is_homogeneous": true }
+    }
+  }
+}

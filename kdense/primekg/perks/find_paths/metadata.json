@@ -1,0 +1,23 @@
+{
+  "perk": "find_paths",
+  "skill": "primekg",
+  "description": "find direct (depth-1) edges connecting two PrimeKG nodes, e.g. drug-disease (read-only)",
+  "rules": [
+    "read-only — never mutates the graph or any remote service",
+    "returns every direct edge between START_NODE_ID and END_NODE_ID, in either orientation, as a single-edge path",
+    "node ids are matched as strings",
+    "MAX_DEPTH >= 2 is accepted but depth-2 path expansion is a documented MVP stub in the core (no extra paths)",
+    "writes the connecting edges as JSON to record_store"
+  ],
+  "usage": "Set PRIMEKG_CSV (path to kg.csv), START_NODE_ID and END_NODE_ID (from search_nodes); optionally MAX_DEPTH. Output: find_paths.json.",
+  "limitation": "Only direct (depth-1) connections are resolved; multi-hop paths are not yet implemented in the upstream core. Requires pandas and a local PrimeKG kg.csv edge list.",
+  "minimal_example": {
+    "perk": "find_paths",
+    "vars": {
+      "PRIMEKG_CSV": "/data/PrimeKG/kg.csv",
+      "START_NODE_ID": "CHEMBL502",
+      "END_NODE_ID": "EFO_0000249",
+      "MAX_DEPTH": "1"
+    }
+  }
+}

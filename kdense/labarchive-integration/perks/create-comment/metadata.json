@@ -1,0 +1,22 @@
+{
+  "perk": "create-comment",
+  "skill": "labarchive-integration",
+  "description": "Add a text comment to an existing LabArchives entry. DESTRUCTIVE: it writes a comment into the live electronic lab notebook.",
+  "rules": [
+    "DESTRUCTIVE — adds a comment to an entry on the live remote notebook",
+    "credentials are read from LA_CONFIG (a config.yaml)",
+    "LA_NBID + LA_ENTRY_ID select the target entry; LA_COMMENT is the comment text",
+    "needs the labarchives-py package + network; degrades to {} offline"
+  ],
+  "usage": "Set LA_CONFIG, LA_NBID, LA_ENTRY_ID, LA_COMMENT. Output: create_comment.json audit.",
+  "limitation": "Requires the labarchives-py package, valid credentials, and network. Mutates the remote ELN, so the executor gates it (destructive). Offline the tool writes {} and exits 0.",
+  "minimal_example": {
+    "perk": "create-comment",
+    "vars": {
+      "LA_CONFIG": "/path/to/config.yaml",
+      "LA_NBID": "12345",
+      "LA_ENTRY_ID": "67890",
+      "LA_COMMENT": "Follow-up analysis needed"
+    }
+  }
+}

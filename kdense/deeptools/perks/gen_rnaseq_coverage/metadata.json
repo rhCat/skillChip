@@ -1,0 +1,22 @@
+{
+  "perk": "gen_rnaseq_coverage",
+  "skill": "deeptools",
+  "description": "Generate a strand-specific RNA-seq coverage workflow bash script: forward- and reverse-strand bigWig tracks via bamCoverage with --filterRNAstrand and CPM normalization (binSize 1, never --extendReads).",
+  "rules": [
+    "read-only — emits a bash script template; never runs deepTools or touches sequencing data",
+    "RNASEQ_BAM is the aligned RNA-seq BAM",
+    "all vars optional — unset ones use the generator's safe defaults",
+    "filenames are sanitized (no shell metacharacters, no '..' segments) before interpolation",
+    "generated script written to record_store/rnaseq_coverage.sh",
+    "never extends reads (would span splice junctions); --filterRNAstrand assumes dUTP-style reverse-stranded libraries"
+  ],
+  "usage": "Optionally set RNASEQ_BAM, THREADS. Output: rnaseq_coverage.sh (a customizable bash workflow to review and run separately).",
+  "limitation": "Produces a template script only. Running it requires deepTools 3.5.6 installed (bamCoverage). Forward/reverse labels invert for libraries where read 1 follows the RNA strand. Paths must satisfy the sanitizer pattern [A-Za-z0-9._/-].",
+  "minimal_example": {
+    "perk": "gen_rnaseq_coverage",
+    "vars": {
+      "RNASEQ_BAM": "rnaseq.bam",
+      "THREADS": "8"
+    }
+  }
+}

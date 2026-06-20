@@ -1,0 +1,21 @@
+{
+  "_perk": "decision_tree",
+  "sequence": [
+    "decision_tree"
+  ],
+  "tools": {
+    "decision_tree": {
+      "binary": "python3",
+      "params": {
+        "SPEC_JSON": "${SPEC_JSON}"
+      }
+    }
+  },
+  "env": {
+    "SPEC_JSON": "${SPEC_JSON}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "perk": "topic",
+  "skill": "hugging-science",
+  "description": "Fetch and parse one Hugging Science topic file (topics/<slug>.md) into markdown or JSON, optionally filtered by section or tag.",
+  "rules": [
+    "read-only — HTTPS GET against huggingscience.co, no mutation",
+    "SLUG required (e.g. biology, materials-science); normalized to lowercase-hyphenated",
+    "FILTER optional: datasets | models | blogs",
+    "TAG optional: case-insensitive tag substring",
+    "FORMAT optional: markdown (default) | json",
+    "output written to record_store/topic.out"
+  ],
+  "usage": "Set SLUG (required). Optional: FILTER, TAG, FORMAT. Output: topic.out.",
+  "limitation": "Needs network to reach huggingscience.co; offline the porter records the failure and emits a non-empty file. Slugs are best-effort — a 404 means the slug changed (use `raw` to refetch llms.txt).",
+  "minimal_example": {
+    "perk": "topic",
+    "vars": {
+      "SLUG": "biology"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "preprocess",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "normalized": {
+      "path": "${RECORD_STORE}/normalized.h5ad",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/normalized.h5ad"
+  }
+}

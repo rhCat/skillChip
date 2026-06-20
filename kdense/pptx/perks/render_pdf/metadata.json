@@ -1,0 +1,18 @@
+{
+  "perk": "render_pdf",
+  "skill": "pptx",
+  "description": "Convert a .pptx to PDF via headless LibreOffice (soffice --headless --convert-to pdf). Read-only — the deck is not modified; the PDF lands under record_store. The vendored soffice.py auto-applies an LD_PRELOAD socket shim for sandboxed VMs where AF_UNIX is blocked.",
+  "rules": [
+    "read-only — never writes back to PPTX_FILE",
+    "requires the soffice (LibreOffice) binary on PATH; degrades gracefully when absent",
+    "rendered PDF is written to render.pdf under record_store"
+  ],
+  "usage": "Set PPTX_FILE (path to a .pptx). Output: render.pdf. Pipe through pdftoppm for per-slide JPEGs if needed.",
+  "limitation": "Needs LibreOffice installed; rendering fidelity depends on the soffice version and available fonts. No image conversion (use pdftoppm separately) — this perk stops at the PDF.",
+  "minimal_example": {
+    "perk": "render_pdf",
+    "vars": {
+      "PPTX_FILE": "presentation.pptx"
+    }
+  }
+}

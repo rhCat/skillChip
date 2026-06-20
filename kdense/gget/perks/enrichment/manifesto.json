@@ -1,0 +1,23 @@
+{
+  "_perk": "enrichment",
+  "sequence": [
+    "enrichment"
+  ],
+  "tools": {
+    "enrichment": {
+      "binary": "python3",
+      "params": {
+        "GENE_LIST": "${GENE_LIST}",
+        "SPECIES": "${SPECIES}"
+      }
+    }
+  },
+  "env": {
+    "GENE_LIST": "${GENE_LIST}",
+    "SPECIES": "${SPECIES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

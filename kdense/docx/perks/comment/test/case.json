@@ -1,0 +1,14 @@
+{
+  "_perk": "comment",
+  "requires": ["bash", "python3"],
+  "vars": {
+    "UNPACKED_DIR": "${FIXTURE}/unpacked",
+    "COMMENT_ID": "0",
+    "COMMENT_TEXT": "Please clarify this clause."
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["comment.log"],
+    "nonempty": ["comment.log"]
+  }
+}

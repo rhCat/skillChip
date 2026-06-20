@@ -1,0 +1,21 @@
+{
+  "perk": "infer_iqtree",
+  "skill": "phylogenetics",
+  "description": "IQ-TREE 2 maximum-likelihood tree with automatic model selection (-m TEST), ultrafast bootstrap (-B) and SH-aLRT (aligned FASTA -> Newick treefile).",
+  "rules": [
+    "read-only on inputs; writes outputs (phylo.treefile + IQ-TREE side files) under record_store",
+    "model is auto-selected via -m TEST; bootstrap defaults to 1000 ultrafast replicates",
+    "requires the iqtree2 binary on PATH; without it the porter degrades gracefully and emits {}"
+  ],
+  "usage": "Set ALIGNED_FASTA (an alignment). Optional SEQ_TYPE (nt|aa, default nt), BOOTSTRAP (default 1000), THREADS (default 4), OUTGROUP. Output: phylo.treefile.",
+  "limitation": "Needs IQ-TREE 2 installed (conda install -c bioconda iqtree). Offline / without iqtree2 the tree is not produced; the output is a graceful {} placeholder. Needs >=4 taxa for bootstrap.",
+  "minimal_example": {
+    "perk": "infer_iqtree",
+    "vars": {
+      "ALIGNED_FASTA": "aligned.fasta",
+      "SEQ_TYPE": "nt",
+      "BOOTSTRAP": "1000",
+      "THREADS": "4"
+    }
+  }
+}

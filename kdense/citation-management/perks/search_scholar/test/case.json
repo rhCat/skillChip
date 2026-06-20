@@ -1,0 +1,13 @@
+{
+  "_perk": "search_scholar",
+  "requires": ["python3"],
+  "vars": {
+    "QUERY": "machine learning protein folding",
+    "LIMIT": "3"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["scholar.json"],
+    "nonempty": ["scholar.json"]
+  }
+}

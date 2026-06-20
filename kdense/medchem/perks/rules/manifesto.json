@@ -1,0 +1,23 @@
+{
+  "_perk": "rules",
+  "sequence": [
+    "mc_rules"
+  ],
+  "tools": {
+    "mc_rules": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}",
+        "RULES": "${RULES}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "RULES": "${RULES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

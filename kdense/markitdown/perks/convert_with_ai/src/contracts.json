@@ -1,0 +1,35 @@
+{
+  "tool": "convert_with_ai",
+  "inputs": {
+    "INPUT_FILE": {
+      "type": "string",
+      "required": true
+    },
+    "MODEL": {
+      "type": "string",
+      "required": false
+    },
+    "PROMPT_TYPE": {
+      "type": "string",
+      "required": false
+    },
+    "CUSTOM_PROMPT": {
+      "type": "string",
+      "required": false
+    },
+    "OPENROUTER_API_KEY": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "convert_with_ai_out": {
+      "path": "${RECORD_STORE}/convert_with_ai_summary.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/convert_with_ai_summary.json"
+  }
+}

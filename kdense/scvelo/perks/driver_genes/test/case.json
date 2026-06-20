@@ -1,0 +1,13 @@
+{
+  "_perk": "driver_genes",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.h5ad",
+    "GROUPBY": "clusters"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["driver_genes.csv"],
+    "nonempty": ["driver_genes.csv"]
+  }
+}

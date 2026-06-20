@@ -1,0 +1,15 @@
+{
+  "_perk": "train",
+  "requires": ["python3"],
+  "vars": {
+    "ENV_NAME": "procgen-coinrun",
+    "NUM_ENVS": "4",
+    "NUM_ITERATIONS": "1",
+    "DEVICE": "cpu"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["train.log"],
+    "nonempty": ["train.log"]
+  }
+}

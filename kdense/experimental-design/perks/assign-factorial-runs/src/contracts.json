@@ -1,0 +1,19 @@
+{
+  "tool": "assign_factorial_runs",
+  "inputs": {
+    "SPEC_JSON": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "run_order": {
+      "path": "${RECORD_STORE}/run_order.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/run_order.csv"
+  }
+}

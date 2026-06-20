@@ -1,0 +1,61 @@
+{
+  "skill": "autoskill",
+  "perks": [
+    {
+      "id": "doctor",
+      "summary": "preflight check: config backend valid, skills dir exists, screenpipe reachable, LLM backend ready",
+      "destructive": false,
+      "tools": [
+        "doctor"
+      ]
+    },
+    {
+      "id": "fetch",
+      "summary": "paginate the local screenpipe /search API over a time window into a normalized timeline JSON",
+      "destructive": false,
+      "tools": [
+        "fetch_window"
+      ]
+    },
+    {
+      "id": "redact",
+      "summary": "scrub emails, API keys, bearer tokens, JWTs, phones, SSNs from timeline text and window titles",
+      "destructive": false,
+      "tools": [
+        "redact"
+      ]
+    },
+    {
+      "id": "cluster",
+      "summary": "segment a timeline into sessions on idle gaps, then cluster sessions by app-signature",
+      "destructive": false,
+      "tools": [
+        "cluster"
+      ]
+    },
+    {
+      "id": "match",
+      "summary": "rank each cluster against sibling SKILL.md descriptions via local sentence-transformers embeddings (top-k cosine)",
+      "destructive": false,
+      "tools": [
+        "match_skills"
+      ]
+    },
+    {
+      "id": "synthesize",
+      "summary": "LLM judge classifies each cluster as reuse / compose / novel and drafts a SKILL.md body",
+      "destructive": false,
+      "tools": [
+        "synthesize"
+      ]
+    },
+    {
+      "id": "promote",
+      "summary": "move a user-approved proposal directory into skills/<name>/ (refuses to overwrite)",
+      "destructive": false,
+      "tools": [
+        "promote"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "perk": "central-composite",
+  "skill": "experimental-design",
+  "description": "Central composite (CCD) response-surface DOE: a 2^k factorial plus axial and center points so a quadratic model can locate an optimum; returned in real units with a randomized run order.",
+  "rules": [
+    "read-only — reads a JSON spec, writes a CSV; mutates no live service",
+    "seeded — the run order is reproducible from SPEC_JSON.seed",
+    "face='circumscribed' puts axial points OUTSIDE the (low,high) box; use 'inscribed'/'faced' to stay within range",
+    "needs python3 + pyDOE3 + numpy + pandas"
+  ],
+  "usage": "Set SPEC_JSON to a JSON file with keys: factors (required dict {name:[low,high]}), center ([int,int]), alpha (str, default 'orthogonal'), face (str, default 'circumscribed'), randomize (bool, default true), seed (int). Output: experimental_runs.csv under record_store.",
+  "limitation": "Circumscribed axial points exceed the stated factor range, which may be infeasible/unsafe. When pyDOE3 is absent the porter writes an empty {} artifact.",
+  "minimal_example": {
+    "perk": "central-composite",
+    "vars": {
+      "SPEC_JSON": "spec.json"
+    },
+    "spec.json": {
+      "factors": {"temp_C": [20, 60], "conc_mM": [1, 10]},
+      "seed": 1
+    }
+  }
+}

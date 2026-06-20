@@ -1,0 +1,13 @@
+{
+  "_perk": "get_disease_context",
+  "requires": ["python3"],
+  "vars": {
+    "PRIMEKG_CSV": "${FIXTURE}/kg.csv",
+    "DISEASE_NAME": "Alzheimer"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["disease_context.json"],
+    "nonempty": ["disease_context.json"]
+  }
+}

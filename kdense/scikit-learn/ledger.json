@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for scikit-learn — set perk, fill record_store + the vars the perk declares.",
+  "skill": "scikit-learn",
+  "perk": "classify",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "DATA_CSV": "<path to CSV; last column is the target for classify, all columns are features for clustering>"
+  }
+}

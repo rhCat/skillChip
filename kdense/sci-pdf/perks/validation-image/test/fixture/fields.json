@@ -1,0 +1,21 @@
+{
+  "pages": [
+    { "page_number": 1, "image_width": 800, "image_height": 1000 }
+  ],
+  "form_fields": [
+    {
+      "description": "Full name",
+      "page_number": 1,
+      "label_bounding_box": [50, 50, 200, 70],
+      "entry_bounding_box": [210, 50, 500, 80],
+      "entry_text": { "text": "", "font_size": 14 }
+    },
+    {
+      "description": "Date",
+      "page_number": 1,
+      "label_bounding_box": [50, 120, 200, 140],
+      "entry_bounding_box": [210, 120, 500, 150],
+      "entry_text": { "text": "", "font_size": 14 }
+    }
+  ]
+}

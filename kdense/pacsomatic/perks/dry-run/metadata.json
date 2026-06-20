@@ -1,0 +1,25 @@
+{
+  "perk": "dry-run",
+  "skill": "pacsomatic",
+  "description": "Run the full nf-core/pacsomatic preparation path with --dry-run: validate identifiers (no spaces, tumor!=normal), check local BAM/PBI existence and reference mode, probe runtime/dependency tools, and write all launch artifacts (samplesheet.csv, params YAML, launch script) under record_store WITHOUT executing or submitting anything.",
+  "rules": [
+    "read-only — validates and writes artifacts only, never executes or submits the pipeline",
+    "exactly one reference mode: provide FASTA or GENOME",
+    "local BAMs must exist; a provided PBI must exist; remote (http/s3/gs/ftp) BAMs skip local checks",
+    "uses --use-current-path so no conda env is required; missing nextflow/java/container tools only WARN in dry-run",
+    "writes dry_run.log plus samplesheet.csv, pacsomatic.params.generated.yaml, run_pacsomatic.<executor>.sh under record_store"
+  ],
+  "usage": "Set PATIENT_ID, TUMOR_SAMPLE_ID, NORMAL_SAMPLE_ID, TUMOR_BAM, NORMAL_BAM, one of FASTA or GENOME, and optionally PROFILE/EXECUTOR. Output: dry_run.log (and the artifact set).",
+  "limitation": "Validation downgrades missing run-time tools to warnings; a genuine run still requires nextflow + the selected container/conda runtime via the submit perk.",
+  "minimal_example": {
+    "perk": "dry-run",
+    "vars": {
+      "PATIENT_ID": "P001",
+      "TUMOR_SAMPLE_ID": "P001_T",
+      "NORMAL_SAMPLE_ID": "P001_N",
+      "TUMOR_BAM": "/data/P001_T.bam",
+      "NORMAL_BAM": "/data/P001_N.bam",
+      "GENOME": "GRCh38"
+    }
+  }
+}

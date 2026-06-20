@@ -1,0 +1,14 @@
+{
+  "tool": "arbor_validate",
+  "inputs": {},
+  "outputs": {
+    "validate_report": {
+      "path": "${RECORD_STORE}/validate.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/validate.txt"
+  }
+}

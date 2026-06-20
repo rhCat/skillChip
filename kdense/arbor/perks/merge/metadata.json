@@ -1,0 +1,20 @@
+{
+  "perk": "merge",
+  "skill": "arbor",
+  "description": "record a held-out merge-gate decision against the TEST evaluator; promote M_best only if it improves (the Decide step)",
+  "rules": [
+    "records the candidate's test_score and compares it to the current best per metric_direction",
+    "promotes M_best (best_node / best_test_score / best_branch_ref) only when the test score improves",
+    "a high-dev / low-test gap is informative: the gate rejects it and M_best stays unchanged"
+  ],
+  "usage": "Set NODE and TEST_SCORE (the score from running the TEST evaluator in a FRESH worktree); optional BRANCH_REF is the artifact ref to promote. Output: merge.txt. If no run exists, a bootstrap run with a root + one child node (n1) is created first.",
+  "limitation": "Records a decision in local state only — it does NOT run the test evaluator and does NOT merge any git branch or mutate the live artifact. Call it only AFTER evaluating the candidate on E_test yourself.",
+  "minimal_example": {
+    "perk": "merge",
+    "vars": {
+      "NODE": "n1",
+      "TEST_SCORE": "67.67",
+      "BRANCH_REF": "wt/n1"
+    }
+  }
+}

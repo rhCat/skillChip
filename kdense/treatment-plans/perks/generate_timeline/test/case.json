@@ -1,0 +1,10 @@
+{
+  "_perk": "generate_timeline",
+  "requires": ["python3"],
+  "vars": { "PLAN_FILE": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["timeline.txt"],
+    "nonempty": ["timeline.txt"]
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "_perk": "generate-schematic",
+  "skip": "needs OPENROUTER_API_KEY + the requests library + network to call the OpenRouter image API"
+}

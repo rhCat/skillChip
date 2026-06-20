@@ -1,0 +1,23 @@
+{
+  "_perk": "convert",
+  "sequence": [
+    "structure_convert"
+  ],
+  "tools": {
+    "structure_convert": {
+      "binary": "python3",
+      "params": {
+        "INPUT_FILE": "${INPUT_FILE}",
+        "OUTPUT_FORMAT": "${OUTPUT_FORMAT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT_FILE": "${INPUT_FILE}",
+    "OUTPUT_FORMAT": "${OUTPUT_FORMAT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

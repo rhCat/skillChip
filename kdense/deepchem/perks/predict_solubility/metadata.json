@@ -1,0 +1,22 @@
+{
+  "perk": "predict_solubility",
+  "skill": "deepchem",
+  "description": "Train a MultitaskRegressor to predict aqueous solubility from SMILES (Delaney/ESOL ECFP benchmark by default, or a custom CSV), evaluate on train/valid/test, and optionally predict new molecules.",
+  "rules": [
+    "read-only / local — reads a CSV (or downloads the Delaney benchmark) and writes a report; no remote or live service is mutated",
+    "scaffold splitting is used for custom CSVs to avoid molecular data leakage",
+    "report (training log, evaluation metrics, predictions) written to record_store",
+    "needs deepchem + a DL backend (torch/tensorflow) + RDKit at run time; porter degrades gracefully if absent"
+  ],
+  "usage": "Leave DATA_CSV empty to use the Delaney (ESOL) benchmark, or set it to a SMILES CSV with SMILES_COL + TARGET_COL. Set PREDICT_SMILES (space-separated) to predict after training. Output: solubility.txt.",
+  "limitation": "Not hermetic offline — full training requires deepchem, a deep-learning backend, and RDKit (and network access for the Delaney benchmark). Without them the porter writes solubility.txt noting the missing dependency and exits 0.",
+  "minimal_example": {
+    "perk": "predict_solubility",
+    "vars": {
+      "DATA_CSV": "",
+      "SMILES_COL": "smiles",
+      "TARGET_COL": "solubility",
+      "PREDICT_SMILES": "CCO c1ccccc1"
+    }
+  }
+}

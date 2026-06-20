@@ -1,0 +1,16 @@
+{
+  "perk": "scaffold-pcr",
+  "skill": "opentrons-integration",
+  "description": "Emit the PCR-setup (thermocycler) Opentrons Protocol API v2 template (.py) into the record store.",
+  "rules": [
+    "read-only — produces a local file, controls no hardware",
+    "pure Python stdlib — copies the vendored pcr_setup_template.py",
+    "writes record_store/pcr_setup.py (master-mix distribution, sample addition, thermocycler cycling)"
+  ],
+  "usage": "No vars required. Output: pcr_setup.py — edit it, then run the `simulate` perk.",
+  "limitation": "Emits a static template only; it does not customize cycle counts, temperatures, or sample counts.",
+  "minimal_example": {
+    "perk": "scaffold-pcr",
+    "vars": {}
+  }
+}

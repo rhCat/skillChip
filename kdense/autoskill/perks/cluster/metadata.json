@@ -1,0 +1,23 @@
+{
+  "perk": "cluster",
+  "skill": "autoskill",
+  "description": "segment a timeline JSON into sessions on idle gaps, then cluster sessions by app-signature",
+  "rules": [
+    "read-only / pure — no network, stdlib only",
+    "segment_sessions splits on idle gaps (default 10 min) and drops sessions shorter than min (default 5 min)",
+    "cluster_sessions groups sessions sharing an app-signature and keeps clusters of size >= min_cluster_size (default 2)",
+    "ts strings are normalized to epoch seconds before segmentation",
+    "clusters written to record_store as clusters.json"
+  ],
+  "usage": "Set INPUT (redacted timeline JSON). Optional: IDLE_GAP_MINUTES, MIN_SESSION_MINUTES, MIN_CLUSTER_SIZE. Output: clusters.json.",
+  "limitation": "Clusters by exact ordered app-signature only; no fuzzy app grouping. Window-title text is summarized, not analyzed.",
+  "minimal_example": {
+    "perk": "cluster",
+    "vars": {
+      "INPUT": "./redacted.json",
+      "IDLE_GAP_MINUTES": "10",
+      "MIN_SESSION_MINUTES": "5",
+      "MIN_CLUSTER_SIZE": "2"
+    }
+  }
+}

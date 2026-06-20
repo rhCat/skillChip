@@ -1,0 +1,4 @@
+{
+  "_perk": "schematic",
+  "skip": "needs OPENROUTER_API_KEY + outbound network to openrouter.ai (Nano-Banana image generation); cannot run offline"
+}

@@ -1,0 +1,20 @@
+{
+  "perk": "update_schema",
+  "skill": "bids",
+  "description": "fetch the BIDS schema.json from upstream and write references/bids_schema.json (read-only network fetch)",
+  "rules": [
+    "read-only: fetches a remote artifact, never mutates a remote service",
+    "downloads from SCHEMA_URL (default: stable ReadTheDocs schema export)",
+    "validates the payload is JSON and re-serializes with consistent indentation",
+    "writes bids_schema.json under record_store",
+    "no dependencies beyond the Python standard library"
+  ],
+  "usage": "Set SCHEMA_URL (default https://bids-specification.readthedocs.io/en/stable/schema.json; may be a version pin or a BEP-specific preview URL). Output: bids_schema.json.",
+  "limitation": "Requires network access to reach SCHEMA_URL. Offline the porter degrades gracefully — it writes an empty {} artifact and exits 0 so the contract still holds, but the schema is not refreshed.",
+  "minimal_example": {
+    "perk": "update_schema",
+    "vars": {
+      "SCHEMA_URL": "https://bids-specification.readthedocs.io/en/stable/schema.json"
+    }
+  }
+}

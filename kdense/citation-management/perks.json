@@ -1,0 +1,61 @@
+{
+  "skill": "citation-management",
+  "perks": [
+    {
+      "id": "search_pubmed",
+      "summary": "search PubMed via NCBI E-utilities and export results (JSON or BibTeX)",
+      "destructive": false,
+      "tools": [
+        "search_pubmed"
+      ]
+    },
+    {
+      "id": "search_scholar",
+      "summary": "search Google Scholar (scholarly lib) and export results (JSON or BibTeX)",
+      "destructive": false,
+      "tools": [
+        "search_scholar"
+      ]
+    },
+    {
+      "id": "extract_metadata",
+      "summary": "extract citation metadata from a DOI/PMID/arXiv ID/URL and emit BibTeX",
+      "destructive": false,
+      "tools": [
+        "extract_metadata"
+      ]
+    },
+    {
+      "id": "doi_to_bibtex",
+      "summary": "convert DOI(s) to BibTeX via CrossRef content negotiation",
+      "destructive": false,
+      "tools": [
+        "doi_to_bibtex"
+      ]
+    },
+    {
+      "id": "format_bibtex",
+      "summary": "format, fix, deduplicate, and sort a BibTeX file (offline)",
+      "destructive": false,
+      "tools": [
+        "format_bibtex"
+      ]
+    },
+    {
+      "id": "validate_citations",
+      "summary": "validate a BibTeX file for completeness, format, duplicates, venue count, and manuscript cross-refs (offline)",
+      "destructive": false,
+      "tools": [
+        "validate_citations"
+      ]
+    },
+    {
+      "id": "generate_schematic",
+      "summary": "generate a publication-quality scientific schematic from a text prompt via an LLM image model",
+      "destructive": false,
+      "tools": [
+        "generate_schematic"
+      ]
+    }
+  ]
+}

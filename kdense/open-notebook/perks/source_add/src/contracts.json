@@ -1,0 +1,35 @@
+{
+  "tool": "source_add",
+  "inputs": {
+    "OPEN_NOTEBOOK_URL": {
+      "type": "string",
+      "required": true
+    },
+    "NOTEBOOK_ID": {
+      "type": "string",
+      "required": true
+    },
+    "SOURCE_URL": {
+      "type": "string",
+      "required": false
+    },
+    "SOURCE_TEXT": {
+      "type": "string",
+      "required": false
+    },
+    "SOURCE_TITLE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "source_out": {
+      "path": "${RECORD_STORE}/source.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/source.json"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_perk": "counts_from_salmon",
+  "sequence": [
+    "counts_from_salmon"
+  ],
+  "tools": {
+    "counts_from_salmon": {
+      "binary": "python3",
+      "params": {
+        "QUANT_DIR": "${QUANT_DIR}",
+        "TX2GENE": "${TX2GENE}"
+      }
+    }
+  },
+  "env": {
+    "QUANT_DIR": "${QUANT_DIR}",
+    "TX2GENE": "${TX2GENE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "tool": "gen_atacseq",
+  "inputs": {
+    "ATAC_BAM": {
+      "type": "string",
+      "required": false
+    },
+    "PEAKS_BED": {
+      "type": "string",
+      "required": false
+    },
+    "GENOME_SIZE": {
+      "type": "string",
+      "required": false
+    },
+    "THREADS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "workflow_out": {
+      "path": "${RECORD_STORE}/atacseq.sh",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/atacseq.sh"
+  }
+}

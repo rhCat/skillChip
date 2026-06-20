@@ -1,0 +1,14 @@
+{
+  "_schema": "task-ledger TEMPLATE for literature-review — set perk, fill record_store + the vars the perk declares.",
+  "skill": "literature-review",
+  "perk": "aggregate",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "RESULTS_JSON": "<path to combined search-results JSON array>",
+    "OUTPUT_FORMAT": "markdown",
+    "RANK": "citations",
+    "YEAR_START": "",
+    "YEAR_END": "",
+    "DEDUPLICATE": "1"
+  }
+}

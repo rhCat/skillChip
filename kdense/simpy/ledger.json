@@ -1,0 +1,13 @@
+{
+  "_schema": "task-ledger TEMPLATE for simpy — set perk, fill record_store + the vars the perk declares.",
+  "skill": "simpy",
+  "perk": "simulate",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "SIM_TIME": "<simulation horizon in time units, e.g. 50>",
+    "NUM_RESOURCES": "<server/machine capacity, e.g. 2>",
+    "ARRIVAL_RATE": "<mean inter-arrival time, e.g. 2.0>",
+    "SERVICE_TIME_MEAN": "<mean service time, e.g. 3.0>",
+    "RANDOM_SEED": "<seed for reproducibility, e.g. 42>"
+  }
+}

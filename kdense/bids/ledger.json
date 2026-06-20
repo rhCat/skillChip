@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for bids — set perk, fill record_store + the vars the perk declares.",
+  "skill": "bids",
+  "perk": "update_schema",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "SCHEMA_URL": "https://bids-specification.readthedocs.io/en/stable/schema.json"
+  }
+}

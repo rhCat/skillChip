@@ -1,0 +1,27 @@
+{
+  "tool": "search_items",
+  "inputs": {
+    "PARSED_JSON": {
+      "type": "string",
+      "required": true
+    },
+    "PHRASE": {
+      "type": "string",
+      "required": true
+    },
+    "CASE_SENSITIVE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "matches": {
+      "path": "${RECORD_STORE}/matches.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/matches.json"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_perk": "extract_metadata",
+  "sequence": [
+    "extract_metadata"
+  ],
+  "tools": {
+    "extract_metadata": {
+      "binary": "python3",
+      "params": {
+        "DICOM_IN": "${DICOM_IN}",
+        "META_FORMAT": "${META_FORMAT}"
+      }
+    }
+  },
+  "env": {
+    "DICOM_IN": "${DICOM_IN}",
+    "META_FORMAT": "${META_FORMAT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

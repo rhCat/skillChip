@@ -1,0 +1,23 @@
+{
+  "perk": "mde",
+  "skill": "statistical-power",
+  "description": "Closed-form minimum detectable effect: solve for the smallest standardized effect detectable at a fixed n and target power.",
+  "rules": [
+    "read-only: computes a number, mutates no external state",
+    "TEST selects the solver: t_ind, t_paired, t_one, anova, two_proportions, one_proportion, correlation, chi2, linear_regression",
+    "pass NOBS1 for per-group tests; NOBS for total-n tests",
+    "returns the effect in the test's native units (d, f, h, w, r, f^2)",
+    "use this (a sensitivity analysis at the achieved n) instead of post-hoc power for an already-collected sample"
+  ],
+  "usage": "Set TEST and a sample size (NOBS1 or NOBS). Optional ALPHA (default 0.05), POWER (default 0.80), ALTERNATIVE, RATIO. Output: mde.json.",
+  "limitation": "Closed-form only. The MDE is in standardized units; convert back to raw units yourself with the study SD / baseline rate.",
+  "minimal_example": {
+    "perk": "mde",
+    "vars": {
+      "TEST": "t_ind",
+      "NOBS1": "30",
+      "POWER": "0.80",
+      "ALPHA": "0.05"
+    }
+  }
+}

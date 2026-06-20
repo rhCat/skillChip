@@ -1,0 +1,27 @@
+{
+  "tool": "figure_export",
+  "inputs": {
+    "DATA_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "FORMATS": {
+      "type": "string",
+      "required": false
+    },
+    "DPI": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "figure_manifest": {
+      "path": "${RECORD_STORE}/figure_export.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/figure_export.json"
+  }
+}

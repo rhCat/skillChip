@@ -1,0 +1,10 @@
+{
+  "_perk": "convert_with_ai",
+  "requires": ["python3"],
+  "vars": { "INPUT_FILE": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["convert_with_ai_summary.json"],
+    "nonempty": ["convert_with_ai_summary.json"]
+  }
+}

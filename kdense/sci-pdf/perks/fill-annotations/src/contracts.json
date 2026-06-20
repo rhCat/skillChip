@@ -1,0 +1,23 @@
+{
+  "tool": "fill_annotations",
+  "inputs": {
+    "PDF_PATH": {
+      "type": "string",
+      "required": true
+    },
+    "FIELDS_JSON": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "fill_annotations_out": {
+      "path": "${RECORD_STORE}/fill_annotations.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/fill_annotations.txt"
+  }
+}

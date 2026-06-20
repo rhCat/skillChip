@@ -1,0 +1,20 @@
+{
+  "perk": "visualize",
+  "skill": "scikit-learn",
+  "description": "Standard-scale a CSV, label it with K-Means at n_clusters=N_CLUSTERS, project to 2D with PCA, and render a labeled cluster scatter (clustering_results.png) annotated with explained variance and silhouette.",
+  "rules": [
+    "read-only with respect to inputs; writes only under record_store",
+    "all numeric columns are used as features; data is standard-scaled first",
+    "PCA projects to 2 components for plotting; K-Means uses random_state=42, n_init=10",
+    "matplotlib runs headless (Agg backend) so no display is required",
+    "graceful: if scikit-learn is absent the porter still writes a valid non-empty JSON note"
+  ],
+  "usage": "Set DATA_CSV (numeric feature table). Optional: N_CLUSTERS (default 3). Output: cluster_visualization.json plus clustering_results.png.",
+  "limitation": "Requires scikit-learn + matplotlib + pandas at runtime to render the plot; offline it degrades to a note. The 2D PCA view discards variance beyond the first two components.",
+  "minimal_example": {
+    "perk": "visualize",
+    "vars": {
+      "DATA_CSV": "features.csv"
+    }
+  }
+}

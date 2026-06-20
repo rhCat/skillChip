@@ -1,0 +1,32 @@
+{
+  "tool": "validate_citations",
+  "inputs": {
+    "BIB_FILE": {
+      "type": "file",
+      "required": true,
+      "scan_content": false
+    },
+    "VENUE": {
+      "type": "string",
+      "required": false
+    },
+    "MIN_COUNT": {
+      "type": "string",
+      "required": false
+    },
+    "MANUSCRIPT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "validate_citations_out": {
+      "path": "${RECORD_STORE}/validation.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/validation.json"
+  }
+}

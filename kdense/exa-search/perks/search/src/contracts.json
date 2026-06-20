@@ -1,0 +1,43 @@
+{
+  "tool": "exa_search",
+  "inputs": {
+    "QUERY": {
+      "type": "string",
+      "required": true
+    },
+    "EXA_API_KEY": {
+      "type": "string",
+      "required": false
+    },
+    "SEARCH_TYPE": {
+      "type": "string",
+      "required": false
+    },
+    "NUM_RESULTS": {
+      "type": "string",
+      "required": false
+    },
+    "CATEGORY": {
+      "type": "string",
+      "required": false
+    },
+    "INCLUDE_DOMAINS": {
+      "type": "string",
+      "required": false
+    },
+    "EXCLUDE_DOMAINS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "exa_search_out": {
+      "path": "${RECORD_STORE}/search.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/search.json"
+  }
+}

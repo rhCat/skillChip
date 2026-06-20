@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for scholar-evaluation — set perk, fill record_store + the vars the perk declares.",
+  "skill": "scholar-evaluation",
+  "perk": "score",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "SCORES_JSON": "<path to dimension-scores JSON: {\"methodology\":4.0,...}, each 1-5>"
+  }
+}

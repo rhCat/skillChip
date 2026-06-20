@@ -1,0 +1,27 @@
+{
+  "_perk": "validate_samplesheet",
+  "sequence": [
+    "validate_samplesheet"
+  ],
+  "tools": {
+    "validate_samplesheet": {
+      "binary": "python3",
+      "params": {
+        "SAMPLESHEET": "${SAMPLESHEET}",
+        "METADATA": "${METADATA}",
+        "CONDITION_COL": "${CONDITION_COL}",
+        "MIN_REPLICATES": "${MIN_REPLICATES}"
+      }
+    }
+  },
+  "env": {
+    "SAMPLESHEET": "${SAMPLESHEET}",
+    "METADATA": "${METADATA}",
+    "CONDITION_COL": "${CONDITION_COL}",
+    "MIN_REPLICATES": "${MIN_REPLICATES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

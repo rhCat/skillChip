@@ -1,0 +1,36 @@
+{
+  "_perk": "init",
+  "sequence": [
+    "arbor_init"
+  ],
+  "tools": {
+    "arbor_init": {
+      "binary": "python3",
+      "params": {
+        "OBJECTIVE": "${OBJECTIVE}",
+        "DEV_EVAL": "${DEV_EVAL}",
+        "TEST_EVAL": "${TEST_EVAL}",
+        "MATERIAL": "${MATERIAL}",
+        "METRIC_DIRECTION": "${METRIC_DIRECTION}",
+        "BRANCHING": "${BRANCHING}",
+        "MAX_DEPTH": "${MAX_DEPTH}",
+        "BUDGET": "${BUDGET}"
+      }
+    }
+  },
+  "env": {
+    "OBJECTIVE": "${OBJECTIVE}",
+    "DEV_EVAL": "${DEV_EVAL}",
+    "TEST_EVAL": "${TEST_EVAL}",
+    "MATERIAL": "${MATERIAL}",
+    "METRIC_DIRECTION": "${METRIC_DIRECTION}",
+    "BRANCHING": "${BRANCHING}",
+    "MAX_DEPTH": "${MAX_DEPTH}",
+    "BUDGET": "${BUDGET}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

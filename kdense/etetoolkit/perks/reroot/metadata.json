@@ -1,0 +1,20 @@
+{
+  "perk": "reroot",
+  "skill": "etetoolkit",
+  "description": "Reroot a phylogenetic tree, either by a named outgroup taxon or, when no outgroup is given, by the midpoint method.",
+  "rules": [
+    "read-only on input — emits a new tree file, never edits the source",
+    "OUTGROUP empty -> midpoint rooting; OUTGROUP set -> root on that taxon",
+    "rerooted tree (rerooted.nw) + run log (reroot.log) written under record_store"
+  ],
+  "usage": "Set TREE_FILE (input Newick tree); leave OUTGROUP empty for midpoint rooting or set it to a leaf name. TREE_FORMAT default 0. Outputs: reroot.log (always) and rerooted.nw (when ete3 present).",
+  "limitation": "Requires ete3 to reroot; without it the porter records an ete3-missing note in reroot.log and exits 0 (no rerooted.nw is produced).",
+  "minimal_example": {
+    "perk": "reroot",
+    "vars": {
+      "TREE_FILE": "tree.nw",
+      "OUTGROUP": "",
+      "TREE_FORMAT": "0"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_perk": "raw",
+  "sequence": [
+    "hs_raw"
+  ],
+  "tools": {
+    "hs_raw": {
+      "binary": "python3",
+      "params": {
+        "NAME": "${NAME}"
+      }
+    }
+  },
+  "env": {
+    "NAME": "${NAME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

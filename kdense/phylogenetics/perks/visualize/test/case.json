@@ -1,0 +1,12 @@
+{
+  "_perk": "visualize",
+  "requires": ["python3"],
+  "vars": {
+    "TREE_FILE": "${FIXTURE}/tree.nwk"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["tree.png"],
+    "nonempty": ["tree.png"]
+  }
+}

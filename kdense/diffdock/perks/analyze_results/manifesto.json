@@ -1,0 +1,27 @@
+{
+  "_perk": "analyze_results",
+  "sequence": [
+    "analyze_results"
+  ],
+  "tools": {
+    "analyze_results": {
+      "binary": "python3",
+      "params": {
+        "RESULTS_DIR": "${RESULTS_DIR}",
+        "TOP": "${TOP}",
+        "THRESHOLD": "${THRESHOLD}",
+        "BEST": "${BEST}"
+      }
+    }
+  },
+  "env": {
+    "RESULTS_DIR": "${RESULTS_DIR}",
+    "TOP": "${TOP}",
+    "THRESHOLD": "${THRESHOLD}",
+    "BEST": "${BEST}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

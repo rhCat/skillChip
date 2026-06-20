@@ -1,0 +1,18 @@
+{
+  "perk": "common_alerts",
+  "skill": "medchem",
+  "description": "Apply the ChEMBL-derived common structural alerts filter to every molecule and write pass/status/reasons columns (renamed passes_common_alerts / common_alert_status).",
+  "rules": [
+    "read-only — parses molecules and writes a results CSV; mutates nothing remote",
+    "INPUT may be .csv/.tsv (smiles column), .sdf, or .txt (one SMILES per line)",
+    "results written to record_store/common_alerts.csv"
+  ],
+  "usage": "Set INPUT (molecule file). Output: common_alerts.csv.",
+  "limitation": "Requires the medchem + datamol + rdkit + pandas stack (Python >=3.9); when absent the porter degrades gracefully and writes a stub so governance still runs offline.",
+  "minimal_example": {
+    "perk": "common_alerts",
+    "vars": {
+      "INPUT": "mols.txt"
+    }
+  }
+}

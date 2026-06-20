@@ -1,0 +1,29 @@
+{
+  "skill": "rdkit",
+  "perks": [
+    {
+      "id": "properties",
+      "summary": "compute comprehensive molecular descriptors (MW, LogP, TPSA, HBD/HBA, rings, QED, Lipinski/lead-like flags) for a molecule library; writes a per-molecule descriptor table (read-only)",
+      "destructive": false,
+      "tools": [
+        "rd_properties"
+      ]
+    },
+    {
+      "id": "similarity",
+      "summary": "fingerprint-based similarity screen of a query molecule against a database (morgan/rdkit/maccs/atompair/torsion fingerprints; tanimoto/dice/cosine metric); writes a ranked hit table above a threshold (read-only)",
+      "destructive": false,
+      "tools": [
+        "rd_similarity"
+      ]
+    },
+    {
+      "id": "substructure",
+      "summary": "filter a molecule library by SMARTS/SMILES substructure patterns (custom include/exclude or named libraries: functional-groups/rings/pains/privileged); writes a per-molecule match report (read-only)",
+      "destructive": false,
+      "tools": [
+        "rd_substructure"
+      ]
+    }
+  ]
+}

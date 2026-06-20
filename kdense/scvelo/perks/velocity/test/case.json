@@ -1,0 +1,13 @@
+{
+  "_perk": "velocity",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.h5ad",
+    "MODE": "stochastic"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["velocity.h5ad"],
+    "nonempty": ["velocity.h5ad"]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "perk": "detect_type",
+  "skill": "exploratory-data-analysis",
+  "description": "Detect a scientific data file's type — map its extension to a format category and human-readable description, and gather basic filesystem metadata (size, mtime, path). Writes a JSON descriptor.",
+  "rules": [
+    "read-only — inspects the file's name + stat only, never opens its contents",
+    "pure stdlib — no scientific library or network is touched",
+    "covers 200+ extensions across chemistry, bioinformatics, microscopy, spectroscopy, omics, and general formats",
+    "result written to record_store as file_type.json"
+  ],
+  "usage": "Set DATA_FILE (path to the data file). Output: file_type.json (basic_info + file_type).",
+  "limitation": "Detection is extension-based only; it does not sniff file contents. Unknown extensions are reported with category 'unknown'.",
+  "minimal_example": {
+    "perk": "detect_type",
+    "vars": {
+      "DATA_FILE": "experiment.csv"
+    }
+  }
+}

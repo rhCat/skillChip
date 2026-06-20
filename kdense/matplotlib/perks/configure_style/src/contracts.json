@@ -1,0 +1,23 @@
+{
+  "tool": "style_config",
+  "inputs": {
+    "STYLE_PRESET": {
+      "type": "string",
+      "required": true
+    },
+    "STYLE_OUT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "style_out": {
+      "path": "${RECORD_STORE}/custom.mplstyle",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/custom.mplstyle"
+  }
+}

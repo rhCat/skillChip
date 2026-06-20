@@ -1,0 +1,24 @@
+{
+  "perk": "train",
+  "skill": "stable-baselines3",
+  "description": "Train an SB3 agent on a Gymnasium environment with eval + checkpoint callbacks; saves the final/best model and TensorBoard logs under record_store.",
+  "rules": [
+    "read-only with respect to remote/live services — only writes under record_store",
+    "wraps the vendored train_rl_agent.py:train_agent unchanged (make_vec_env + EvalCallback + CheckpointCallback + model.learn + model.save)",
+    "ALGORITHM must be one of PPO/A2C/SAC/TD3/DDPG/DQN (resolved against stable_baselines3)",
+    "log_dir and save_path are forced under record_store",
+    "needs stable-baselines3 >= 2.8 (Python 3.10+), gymnasium, and torch present to actually train; degrades gracefully otherwise"
+  ],
+  "usage": "Set ENV_ID (Gymnasium id), ALGORITHM, POLICY, N_ENVS, TOTAL_TIMESTEPS. Output: train.json (run summary + model/log paths).",
+  "limitation": "Does not tune hyperparameters or run TensorBoard. Heavy science libs (stable_baselines3/gymnasium/torch) and Python 3.10+ are required for real training; without them the porter records that the libs are absent and writes an empty-but-present report.",
+  "minimal_example": {
+    "perk": "train",
+    "vars": {
+      "ENV_ID": "CartPole-v1",
+      "ALGORITHM": "PPO",
+      "POLICY": "MlpPolicy",
+      "N_ENVS": "1",
+      "TOTAL_TIMESTEPS": "1000"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "_perk": "mde",
+  "sequence": [
+    "power_mde"
+  ],
+  "tools": {
+    "power_mde": {
+      "binary": "bash",
+      "params": {
+        "TEST": "${TEST}",
+        "NOBS1": "${NOBS1}",
+        "ALPHA": "${ALPHA}",
+        "POWER": "${POWER}"
+      }
+    }
+  },
+  "env": {
+    "TEST": "${TEST}",
+    "NOBS1": "${NOBS1}",
+    "NOBS": "${NOBS}",
+    "ALPHA": "${ALPHA}",
+    "POWER": "${POWER}",
+    "ALTERNATIVE": "${ALTERNATIVE}",
+    "RATIO": "${RATIO}",
+    "K_GROUPS": "${K_GROUPS}",
+    "PROP1": "${PROP1}",
+    "PROP2": "${PROP2}",
+    "PROP0": "${PROP0}",
+    "DOF": "${DOF}",
+    "DF_NUM": "${DF_NUM}",
+    "K_TOTAL": "${K_TOTAL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

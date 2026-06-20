@@ -1,0 +1,21 @@
+{
+  "perk": "generate-schematic",
+  "skill": "literature-review",
+  "description": "Generate a publication-quality scientific schematic (PRISMA flow, search-strategy flowchart, thematic-synthesis or conceptual-framework diagram) from a natural-language prompt using the AI image pipeline (Nano Banana for generation, Gemini for quality review and smart iterative refinement).",
+  "rules": [
+    "read-only / file-producing — writes only the requested image + a run.log under record_store",
+    "calls the OpenRouter API; requires OPENROUTER_API_KEY in env",
+    "DOC_TYPE sets the quality threshold (journal 8.5 .. presentation 6.5; default 7.5)",
+    "ITERATIONS is capped at 2 by the core",
+    "the schematic is written to record_store as schematic.png; run.log captures the generation transcript"
+  ],
+  "usage": "Set PROMPT (the diagram description). Optional: DOC_TYPE (journal|conference|poster|presentation|report|grant|thesis|preprint|default), ITERATIONS (1-2). Requires OPENROUTER_API_KEY. Output: schematic.png (best-effort) + run.log.",
+  "limitation": "Needs the requests library, OPENROUTER_API_KEY, and outbound network to OpenRouter. Without a key or network the porter degrades: run.log records the failure and no image is produced (run.log is the guaranteed output the contract checks).",
+  "minimal_example": {
+    "perk": "generate-schematic",
+    "vars": {
+      "PROMPT": "PRISMA flow diagram for a systematic review",
+      "DOC_TYPE": "journal"
+    }
+  }
+}

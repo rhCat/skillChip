@@ -1,0 +1,20 @@
+{
+  "perk": "cluster_compare",
+  "skill": "scikit-learn",
+  "description": "Standard-scale a CSV and compare K-Means, Agglomerative (ward), Gaussian Mixture, and DBSCAN at n_clusters=N_CLUSTERS, scoring each with silhouette (higher better), Calinski-Harabasz (higher better), and Davies-Bouldin (lower better).",
+  "rules": [
+    "read-only with respect to inputs; writes only under record_store",
+    "all numeric columns are used as features; data is standard-scaled first",
+    "DBSCAN (eps=0.5, min_samples=5) ignores N_CLUSTERS; it is scored only if it finds >1 cluster, excluding noise points",
+    "K-Means and Gaussian Mixture use random_state=42 for reproducibility",
+    "graceful: if scikit-learn is absent the porter still writes a valid non-empty JSON note"
+  ],
+  "usage": "Set DATA_CSV (numeric feature table). Optional: N_CLUSTERS (default 3). Output: cluster_compare.json.",
+  "limitation": "Requires scikit-learn + pandas at runtime to produce real scores; offline it degrades to a note. DBSCAN's fixed eps/min_samples may yield a single cluster or all-noise on unscaled-scale-mismatched data.",
+  "minimal_example": {
+    "perk": "cluster_compare",
+    "vars": {
+      "DATA_CSV": "features.csv"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "perk": "validate_samplesheet",
+  "skill": "bulk-rnaseq",
+  "description": "Validate an nf-core/rnaseq-style samplesheet (sample,fastq_1,fastq_2,strandedness) and, optionally, design metadata. Catches missing/duplicate FASTQs, mixed paired/single-end rows, invalid strandedness, too few replicates, and batch fully confounded with condition. Read-only.",
+  "rules": [
+    "read-only — only reads the samplesheet/metadata; writes a report under record_store",
+    "exit nonzero on any ERROR is captured by the porter; the report and audit line are always written",
+    "local FASTQ existence is checked unless --no-check-files semantics are desired (remote URLs are warned, not errored)",
+    "needs only python3 + pandas — no aligner or science container required"
+  ],
+  "usage": "Set SAMPLESHEET (CSV with at least 'sample','fastq_1'). Optionally set METADATA (design CSV indexed by sample), CONDITION_COL (default 'condition'), MIN_REPLICATES (default 3). Output: validation_report.txt.",
+  "limitation": "Validates structure and design sanity only; it does not run QC, alignment, or quantification. Replication/confounding checks require METADATA.",
+  "minimal_example": {
+    "perk": "validate_samplesheet",
+    "vars": {
+      "SAMPLESHEET": "samplesheet.csv"
+    }
+  }
+}

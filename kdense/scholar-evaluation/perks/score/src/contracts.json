@@ -1,0 +1,23 @@
+{
+  "tool": "calculate_scores",
+  "inputs": {
+    "SCORES_JSON": {
+      "type": "string",
+      "required": true
+    },
+    "WEIGHTS_JSON": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "score_report": {
+      "path": "${RECORD_STORE}/report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/report.txt"
+  }
+}

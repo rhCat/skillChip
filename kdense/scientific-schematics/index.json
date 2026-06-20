@@ -1,0 +1,21 @@
+{
+  "skill": "scientific-schematics",
+  "skill_sha": "900df47a4f6961b6e3dea10cb523902addea61c1e3d80163385637fcf046809d",
+  "file_count": 14,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "69e3321797eabd079ef681669452c000ac3a41153682c2f29e3360afd31478ee",
+    "blueprint.drawio": "da88e196ed84bcbe96078533355777d3948ccd50234df922e18a23da2ba8af69",
+    "blueprint.json": "6bede3cc8a5a9c00647edc98b16b38d4f5fd2f5488aaaf0c15c63240243c15e6",
+    "blueprint.svg": "5a9dd12f48fcbe01f940820b157b5f74eb9751c4edbd796b62e6bf77619de6c5",
+    "ledger.json": "525ac9fffbae6fd1c5cb2d7a6abf83c607ce1b13fe105fa28d12941e2cfc75a2",
+    "perks.json": "ca1f39c977455c8688dabf8f948e09071683f4b7638406baf892557d1ae71a46",
+    "perks/generate/manifesto.json": "71362faae9aa58ff135f91954646b9fae01468ed1e15dae80cc9b899d85f3f7f",
+    "perks/generate/metadata.json": "b6e6cf1c9645a6be5dfd6eae43f96995025bba775a0380c558c493e78f7809b7",
+    "perks/generate/src/contracts.json": "2afc5778ea5077d31e6a8ffe583db9918fa9ec9c30215a4965ac292e57c0d188",
+    "perks/generate/src/generate_schematic.py": "a426ae30ed9185f250245f35c868e6f8aae6096e94a4b8392283dc05f089c041",
+    "perks/generate/src/generate_schematic.sh": "e56b7a2c952997681537705a7592d545fe893bd20ccc1c6752aa440761e65ab9",
+    "perks/generate/src/generate_schematic_ai.py": "0e1708bc163eab7e4440ae7d9d61ed1cd123bdc401499d46cb3df30f1b9f349c",
+    "perks/generate/test/case.json": "c59d76819f74f6f4b71368d70c16223067a4a83124a9aa97d36911e332384653"
+  }
+}

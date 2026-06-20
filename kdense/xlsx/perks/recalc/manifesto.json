@@ -1,0 +1,22 @@
+{
+  "_perk": "recalc",
+  "sequence": [
+    "recalc"
+  ],
+  "tools": {
+    "recalc": {
+      "binary": "python3",
+      "params": {
+        "XLSX_FILE": "${XLSX_FILE}"
+      }
+    }
+  },
+  "env": {
+    "XLSX_FILE": "${XLSX_FILE}",
+    "RECALC_TIMEOUT": "${RECALC_TIMEOUT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

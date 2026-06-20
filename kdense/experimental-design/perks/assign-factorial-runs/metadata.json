@@ -1,0 +1,28 @@
+{
+  "perk": "assign-factorial-runs",
+  "skill": "experimental-design",
+  "description": "Randomize the execution order of a set of design runs (e.g. a DOE matrix), so factors are not confounded with time/drift (machine warm-up, reagent aging).",
+  "rules": [
+    "read-only — reads a JSON spec, writes a CSV; mutates no live service",
+    "seeded — the exact run order is reproducible from SPEC_JSON.seed",
+    "spec provides exactly one of rows (inline) or design_csv (path)",
+    "needs numpy + pandas; no network or GPU"
+  ],
+  "usage": "Set SPEC_JSON to a JSON file with keys: rows (list[dict] of design rows) OR design_csv (path to a CSV), and seed (int). Output: run_order.csv (input rows plus a randomized 'run_order' column, sorted) under record_store.",
+  "limitation": "Only randomizes order; does not generate the design itself (use the *-factorial / response-surface perks for that).",
+  "minimal_example": {
+    "perk": "assign-factorial-runs",
+    "vars": {
+      "SPEC_JSON": "spec.json"
+    },
+    "spec.json": {
+      "rows": [
+        {"temp": 20, "conc": 1},
+        {"temp": 60, "conc": 1},
+        {"temp": 20, "conc": 10},
+        {"temp": 60, "conc": 10}
+      ],
+      "seed": 1
+    }
+  }
+}

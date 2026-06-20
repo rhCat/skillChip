@@ -1,0 +1,14 @@
+{
+  "_perk": "decision_making",
+  "requires": ["python3"],
+  "vars": {
+    "PROBLEM": "zdt1",
+    "POP_SIZE": "100",
+    "N_GEN": "200"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["decision_making.txt"],
+    "nonempty": ["decision_making.txt"]
+  }
+}

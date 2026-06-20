@@ -1,0 +1,19 @@
+{
+  "tool": "list_notebooks",
+  "inputs": {
+    "LA_CONFIG": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "list_notebooks_out": {
+      "path": "${RECORD_STORE}/list_notebooks.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/list_notebooks.json"
+  }
+}

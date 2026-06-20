@@ -1,0 +1,23 @@
+{
+  "_perk": "velocity",
+  "sequence": [
+    "velocity"
+  ],
+  "tools": {
+    "velocity": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "MODE": "${MODE}",
+    "N_JOBS": "${N_JOBS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

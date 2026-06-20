@@ -1,0 +1,27 @@
+{
+  "_perk": "gen_atacseq",
+  "sequence": [
+    "gen_atacseq"
+  ],
+  "tools": {
+    "gen_atacseq": {
+      "binary": "python3",
+      "params": {
+        "ATAC_BAM": "${ATAC_BAM}",
+        "PEAKS_BED": "${PEAKS_BED}",
+        "GENOME_SIZE": "${GENOME_SIZE}",
+        "THREADS": "${THREADS}"
+      }
+    }
+  },
+  "env": {
+    "ATAC_BAM": "${ATAC_BAM}",
+    "PEAKS_BED": "${PEAKS_BED}",
+    "GENOME_SIZE": "${GENOME_SIZE}",
+    "THREADS": "${THREADS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

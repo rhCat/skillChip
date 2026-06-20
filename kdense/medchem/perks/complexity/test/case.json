@@ -1,0 +1,14 @@
+{
+  "_perk": "complexity",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/mols.txt",
+    "COMPLEXITY": "99",
+    "COMPLEXITY_METHOD": "bertz"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["complexity.csv"],
+    "nonempty": ["complexity.csv"]
+  }
+}

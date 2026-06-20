@@ -1,0 +1,23 @@
+{
+  "tool": "cohort_tables",
+  "inputs": {
+    "INPUT_CSV": {
+      "type": "string",
+      "required": false
+    },
+    "GROUP_COL": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "table1_out": {
+      "path": "${RECORD_STORE}/table1_baseline.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/table1_baseline.csv"
+  }
+}

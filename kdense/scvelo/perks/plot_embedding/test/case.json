@@ -1,0 +1,13 @@
+{
+  "_perk": "plot_embedding",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.h5ad",
+    "KIND": "stream"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["velocity_embedding.png"],
+    "nonempty": ["velocity_embedding.png"]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "tool": "export_sirius",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "FEATUREXML": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "ms_file": {
+      "path": "${RECORD_STORE}/export.ms",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/export.ms"
+  }
+}

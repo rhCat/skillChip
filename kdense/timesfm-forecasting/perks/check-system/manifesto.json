@@ -1,0 +1,21 @@
+{
+  "_perk": "check-system",
+  "sequence": [
+    "check_system"
+  ],
+  "tools": {
+    "check_system": {
+      "binary": "check_system.sh",
+      "params": {
+        "MODEL_VERSION": "${MODEL_VERSION}"
+      }
+    }
+  },
+  "env": {
+    "MODEL_VERSION": "${MODEL_VERSION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

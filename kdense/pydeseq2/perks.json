@@ -1,0 +1,29 @@
+{
+  "skill": "pydeseq2",
+  "perks": [
+    {
+      "id": "filter",
+      "summary": "filter low-count genes + missing-metadata samples from an RNA-seq count matrix (read-only, pure pandas)",
+      "destructive": false,
+      "tools": [
+        "filter_counts"
+      ]
+    },
+    {
+      "id": "dea",
+      "summary": "run the full PyDESeq2 differential-expression pipeline (load + filter + fit + Wald test + LFC shrink + export)",
+      "destructive": false,
+      "tools": [
+        "run_dea"
+      ]
+    },
+    {
+      "id": "plots",
+      "summary": "render volcano + MA plots from a DESeq2 results CSV (read-only, matplotlib)",
+      "destructive": false,
+      "tools": [
+        "render_plots"
+      ]
+    }
+  ]
+}

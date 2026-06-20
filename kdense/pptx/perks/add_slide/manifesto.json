@@ -1,0 +1,23 @@
+{
+  "_perk": "add_slide",
+  "sequence": [
+    "add_slide"
+  ],
+  "tools": {
+    "add_slide": {
+      "binary": "python3",
+      "params": {
+        "UNPACKED_DIR": "${UNPACKED_DIR}",
+        "SLIDE_SOURCE": "${SLIDE_SOURCE}"
+      }
+    }
+  },
+  "env": {
+    "UNPACKED_DIR": "${UNPACKED_DIR}",
+    "SLIDE_SOURCE": "${SLIDE_SOURCE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

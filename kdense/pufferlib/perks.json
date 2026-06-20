@@ -1,0 +1,21 @@
+{
+  "skill": "pufferlib",
+  "perks": [
+    {
+      "id": "env_scaffold",
+      "summary": "materialize + self-test a custom single/multi-agent PufferEnv environment template (read-only)",
+      "destructive": false,
+      "tools": [
+        "env_scaffold"
+      ]
+    },
+    {
+      "id": "train",
+      "summary": "run the PuffeRL PPO training script on a chosen environment (local compute, writes a training log)",
+      "destructive": false,
+      "tools": [
+        "train"
+      ]
+    }
+  ]
+}

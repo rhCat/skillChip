@@ -1,0 +1,23 @@
+{
+  "tool": "arbor_add_node",
+  "inputs": {
+    "PARENT": {
+      "type": "string",
+      "required": true
+    },
+    "HYPOTHESIS": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "add_node_report": {
+      "path": "${RECORD_STORE}/add_node.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/add_node.txt"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_perk": "latent_time",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.h5ad"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["latent_time.h5ad"],
+    "nonempty": ["latent_time.h5ad"]
+  }
+}

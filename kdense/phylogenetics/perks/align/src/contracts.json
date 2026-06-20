@@ -1,0 +1,27 @@
+{
+  "tool": "mafft_align",
+  "inputs": {
+    "INPUT_FASTA": {
+      "type": "string",
+      "required": true
+    },
+    "THREADS": {
+      "type": "string",
+      "required": false
+    },
+    "METHOD": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "aligned_fasta": {
+      "path": "${RECORD_STORE}/aligned.fasta",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/aligned.fasta"
+  }
+}

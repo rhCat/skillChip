@@ -1,0 +1,12 @@
+{
+  "_perk": "verify-citations",
+  "requires": ["python3"],
+  "vars": {
+    "REVIEW_MD": "${FIXTURE}/review.md"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["citation_report.json"],
+    "nonempty": ["citation_report.json"]
+  }
+}

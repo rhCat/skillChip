@@ -1,0 +1,20 @@
+{
+  "perk": "fill-annotations",
+  "skill": "sci-pdf",
+  "description": "Overlay FreeText annotations onto a non-fillable PDF using per-field entry bounding boxes and text, transforming from image or PDF coordinates into pypdf's coordinate space. Writes a new annotated PDF. Wraps pypdf.",
+  "rules": [
+    "reads the input PDF + a fields JSON (pages[] + form_fields[] with entry_bounding_box and entry_text); writes a new PDF (input untouched)",
+    "supports both image-pixel coords (image_width/image_height) and native PDF coords (pdf_width)",
+    "annotated PDF is written to record_store/annotated.pdf; a manifest line goes to fill_annotations.txt",
+    "needs pypdf at runtime; absent -> manifest note + exit 0"
+  ],
+  "usage": "Set PDF_PATH (input .pdf) and FIELDS_JSON (with pages[] dimensions + form_fields[] entry boxes/text). Outputs: annotated.pdf + fill_annotations.txt. Use extract-structure + check-boxes first to derive valid coordinates.",
+  "limitation": "FreeText overlays sit on top of the page; this does not create real form fields. Coordinate space in the JSON must match the page. Requires pypdf.",
+  "minimal_example": {
+    "perk": "fill-annotations",
+    "vars": {
+      "PDF_PATH": "form.pdf",
+      "FIELDS_JSON": "fields.json"
+    }
+  }
+}

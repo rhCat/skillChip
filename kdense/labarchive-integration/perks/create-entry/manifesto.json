@@ -1,0 +1,27 @@
+{
+  "_perk": "create-entry",
+  "sequence": [
+    "create_entry"
+  ],
+  "tools": {
+    "create_entry": {
+      "binary": "python3",
+      "params": {
+        "LA_CONFIG": "${LA_CONFIG}",
+        "LA_NBID": "${LA_NBID}",
+        "LA_TITLE": "${LA_TITLE}",
+        "LA_CONTENT": "${LA_CONTENT}"
+      }
+    }
+  },
+  "env": {
+    "LA_CONFIG": "${LA_CONFIG}",
+    "LA_NBID": "${LA_NBID}",
+    "LA_TITLE": "${LA_TITLE}",
+    "LA_CONTENT": "${LA_CONTENT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

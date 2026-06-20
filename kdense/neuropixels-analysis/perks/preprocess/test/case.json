@@ -1,0 +1,16 @@
+{
+  "_perk": "preprocess",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_PATH": "${FIXTURE}",
+    "FORMAT": "spikeglx",
+    "STREAM_NAME": "imec0.ap",
+    "FREQ_MIN": "300",
+    "FREQ_MAX": "6000"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["preprocess_report.txt"],
+    "nonempty": ["preprocess_report.txt"]
+  }
+}

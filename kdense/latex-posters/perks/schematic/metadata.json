@@ -1,0 +1,21 @@
+{
+  "perk": "schematic",
+  "skill": "latex-posters",
+  "description": "Generate an AI scientific schematic image (PNG) for a poster via OpenRouter (Nano Banana 2 image model + Gemini quality review with smart iterative refinement).",
+  "rules": [
+    "writes a PNG + a JSON result manifest under record_store; mutates nothing else",
+    "requires OPENROUTER_API_KEY and network access to openrouter.ai",
+    "doc_type sets the quality threshold (poster=7.0); iterations capped at 2",
+    "degrades gracefully offline: emits schematic.json with outcome=skipped_offline_or_no_api_key and exits 0"
+  ],
+  "usage": "Set PROMPT (diagram description). Optional: OUTPUT_NAME (default schematic.png), DOC_TYPE (default poster). Provide OPENROUTER_API_KEY in env. Output: schematic.json (manifest) + the named PNG.",
+  "limitation": "Needs OPENROUTER_API_KEY + network + the requests library; offline it produces only the manifest, not the image. doc-type is one of journal/conference/poster/presentation/report/grant/thesis/preprint/default.",
+  "minimal_example": {
+    "perk": "schematic",
+    "vars": {
+      "PROMPT": "POSTER FORMAT for A0. ULTRA-SIMPLE 3-box workflow: DISCOVER -> VALIDATE -> APPROVE. 120pt bold. 60% white space.",
+      "OUTPUT_NAME": "workflow.png",
+      "DOC_TYPE": "poster"
+    }
+  }
+}

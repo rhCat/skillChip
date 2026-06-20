@@ -1,0 +1,10 @@
+{
+  "_perk": "validate_presentation",
+  "requires": ["python3"],
+  "vars": { "DECK_PATH": "${FIXTURE}", "DURATION": "15" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["validation_report.txt"],
+    "nonempty": ["validation_report.txt"]
+  }
+}

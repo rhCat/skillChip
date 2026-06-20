@@ -1,0 +1,31 @@
+{
+  "tool": "genie3",
+  "inputs": {
+    "EXPRESSION_FILE": {
+      "type": "string",
+      "required": true
+    },
+    "TF_FILE": {
+      "type": "string",
+      "required": false
+    },
+    "SEED": {
+      "type": "string",
+      "required": false
+    },
+    "LIMIT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "network": {
+      "path": "${RECORD_STORE}/network.tsv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/network.tsv"
+  }
+}

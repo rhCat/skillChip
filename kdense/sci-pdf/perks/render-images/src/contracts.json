@@ -1,0 +1,19 @@
+{
+  "tool": "render_images",
+  "inputs": {
+    "PDF_PATH": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "render_images_out": {
+      "path": "${RECORD_STORE}/render_images.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/render_images.txt"
+  }
+}

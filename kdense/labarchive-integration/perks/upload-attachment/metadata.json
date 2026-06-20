@@ -1,0 +1,22 @@
+{
+  "perk": "upload-attachment",
+  "skill": "labarchive-integration",
+  "description": "Upload a single file as an attachment to an existing LabArchives entry via a multipart POST. DESTRUCTIVE: it writes a file into the live electronic lab notebook.",
+  "rules": [
+    "DESTRUCTIVE — attaches a file to an entry on the live remote notebook",
+    "credentials are read from LA_CONFIG (a config.yaml)",
+    "LA_NBID + LA_ENTRY_ID select the target; LA_FILE is the local file to upload",
+    "needs the requests package + network; degrades to {} offline"
+  ],
+  "usage": "Set LA_CONFIG, LA_NBID, LA_ENTRY_ID, LA_FILE. Output: upload_attachment.json audit.",
+  "limitation": "Requires the requests package (and labarchives-py for auth), valid credentials, and network. Supported file types include PDF/DOCX/TXT, PNG/JPG/TIFF, CSV/XLSX/HDF5, CIF/MOL/PDB, ZIP/7Z. Offline the tool writes {} and exits 0.",
+  "minimal_example": {
+    "perk": "upload-attachment",
+    "vars": {
+      "LA_CONFIG": "/path/to/config.yaml",
+      "LA_NBID": "12345",
+      "LA_ENTRY_ID": "67890",
+      "LA_FILE": "/path/to/data.csv"
+    }
+  }
+}

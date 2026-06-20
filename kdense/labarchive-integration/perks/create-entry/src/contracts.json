@@ -1,0 +1,31 @@
+{
+  "tool": "create_entry",
+  "inputs": {
+    "LA_CONFIG": {
+      "type": "string",
+      "required": true
+    },
+    "LA_NBID": {
+      "type": "string",
+      "required": true
+    },
+    "LA_TITLE": {
+      "type": "string",
+      "required": true
+    },
+    "LA_CONTENT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "create_entry_out": {
+      "path": "${RECORD_STORE}/create_entry.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/create_entry.json"
+  }
+}

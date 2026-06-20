@@ -1,0 +1,21 @@
+{
+  "_perk": "two-level-factorial",
+  "sequence": [
+    "two_level_factorial"
+  ],
+  "tools": {
+    "two_level_factorial": {
+      "binary": "python3",
+      "params": {
+        "SPEC_JSON": "${SPEC_JSON}"
+      }
+    }
+  },
+  "env": {
+    "SPEC_JSON": "${SPEC_JSON}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

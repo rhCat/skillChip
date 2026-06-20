@@ -1,0 +1,10 @@
+{
+  "_perk": "check_completeness",
+  "requires": ["python3"],
+  "vars": { "PLAN_FILE": "${FIXTURE}" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["completeness.txt"],
+    "nonempty": ["completeness.txt"]
+  }
+}

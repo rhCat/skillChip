@@ -1,0 +1,22 @@
+{
+  "perk": "multi_objective",
+  "skill": "pymoo",
+  "description": "multi-objective optimization with NSGA-II, obtaining a Pareto front on a bi-objective benchmark (read-only)",
+  "rules": [
+    "read-only — computes a Pareto front and writes a report; mutates nothing remote or live",
+    "runs the vendored multi_objective_example.py core (NSGA-II on ZDT1) via python3",
+    "forces MPLBACKEND=Agg so the Scatter plot never blocks",
+    "captures stdout (front size, n_gen, n_eval, first solutions) to record_store/multi_objective.txt",
+    "requires the pymoo package at run time; degrades to an empty {} report if it is absent"
+  ],
+  "usage": "Set PROBLEM (e.g. zdt1), POP_SIZE, N_GEN. Output: multi_objective.txt.",
+  "limitation": "The vendored core runs its built-in bi-objective benchmark (ZDT1, NSGA-II); vars document intent. Needs the pymoo library installed to produce real results.",
+  "minimal_example": {
+    "perk": "multi_objective",
+    "vars": {
+      "PROBLEM": "zdt1",
+      "POP_SIZE": "100",
+      "N_GEN": "200"
+    }
+  }
+}

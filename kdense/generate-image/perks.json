@@ -1,0 +1,21 @@
+{
+  "skill": "generate-image",
+  "perks": [
+    {
+      "id": "generate",
+      "summary": "generate a new image from a text prompt via an OpenRouter image model (writes a PNG to record_store)",
+      "destructive": false,
+      "tools": [
+        "generate_image"
+      ]
+    },
+    {
+      "id": "edit",
+      "summary": "edit an existing image with a text instruction via an OpenRouter image model (writes the edited PNG to record_store)",
+      "destructive": false,
+      "tools": [
+        "edit_image"
+      ]
+    }
+  ]
+}

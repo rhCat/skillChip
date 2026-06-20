@@ -1,0 +1,20 @@
+{
+  "_perk": "init",
+  "requires": ["python3"],
+  "vars": {
+    "OBJECTIVE": "Improve answer accuracy on the search harness",
+    "DEV_EVAL": "python eval.py --split dev --n 50",
+    "TEST_EVAL": "python eval.py --split test --n 300",
+    "MATERIAL": ".",
+    "METRIC_DIRECTION": "max",
+    "BRANCHING": "3",
+    "MAX_DEPTH": "2",
+    "BUDGET": "12"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["init.txt"],
+    "nonempty": ["init.txt"],
+    "contains": { "init.txt": "Initialized Arbor run" }
+  }
+}

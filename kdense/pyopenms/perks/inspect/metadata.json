@@ -1,0 +1,18 @@
+{
+  "perk": "inspect",
+  "skill": "pyopenms",
+  "description": "Summarize any mzML/mzXML/featureXML/consensusXML/idXML: spectrum counts by MS level, RT/m/z ranges, TIC, chromatograms, precursor info, and instrument metadata; optional per-spectrum CSV.",
+  "rules": [
+    "read-only: never mutates the input file",
+    "writes a human-readable summary to inspect.txt under record_store",
+    "optional per-spectrum table to SPECTRA_CSV (default spectra.csv in record_store)"
+  ],
+  "usage": "Set INPUT (an MS file). Optional SPECTRA_CSV. Output: inspect.txt (+ spectra.csv for raw spectra).",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) to produce real content; if absent the porter still writes inspect.txt and records the reason.",
+  "minimal_example": {
+    "perk": "inspect",
+    "vars": {
+      "INPUT": "sample.mzML"
+    }
+  }
+}

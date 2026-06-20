@@ -1,0 +1,10 @@
+{
+  "_perk": "validate_samplesheet",
+  "requires": ["python3"],
+  "vars": { "SAMPLESHEET": "${FIXTURE}/samplesheet.csv" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["validation_report.txt"],
+    "nonempty": ["validation_report.txt"]
+  }
+}

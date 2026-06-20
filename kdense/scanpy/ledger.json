@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for scanpy — set perk, fill record_store + the vars the perk declares.",
+  "skill": "scanpy",
+  "perk": "inspect",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "INPUT": "<input single-cell file: .h5ad, .h5, .csv, .loom, .mtx, or 10x mtx dir>"
+  }
+}

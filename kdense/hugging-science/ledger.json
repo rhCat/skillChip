@@ -1,0 +1,7 @@
+{
+  "_schema": "task-ledger TEMPLATE for hugging-science — set perk, fill record_store + the vars the perk declares.",
+  "skill": "hugging-science",
+  "perk": "topics",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {}
+}

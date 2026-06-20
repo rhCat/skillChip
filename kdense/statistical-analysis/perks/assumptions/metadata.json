@@ -1,0 +1,22 @@
+{
+  "perk": "assumptions",
+  "skill": "statistical-analysis",
+  "description": "Comprehensive assumption battery for a CSV column: outliers + normality, plus per-group homogeneity of variance when a group column is given.",
+  "rules": [
+    "read-only — input CSV is never mutated",
+    "always runs IQR outlier detection + normality on the value column",
+    "when GROUP_COL is set: normality is computed per group and Levene's homogeneity test is added",
+    "single combined JSON report written to record_store"
+  ],
+  "usage": "Set DATA_CSV, VALUE_COL, optionally GROUP_COL (omit/empty for ungrouped) and ALPHA (default 0.05). Output: assumptions.json.",
+  "limitation": "No figures (numeric report only). Per-group mode needs >= 2 observations per group. Requires numpy/scipy/pandas/matplotlib present; degrades to an empty report otherwise.",
+  "minimal_example": {
+    "perk": "assumptions",
+    "vars": {
+      "DATA_CSV": "./data.csv",
+      "VALUE_COL": "score",
+      "GROUP_COL": "group",
+      "ALPHA": "0.05"
+    }
+  }
+}

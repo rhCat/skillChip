@@ -1,0 +1,23 @@
+{
+  "perk": "full-factorial",
+  "skill": "experimental-design",
+  "description": "Full-factorial DOE matrix: every combination of the listed factor levels, returned in real units with a randomized run order.",
+  "rules": [
+    "read-only — reads a JSON spec, writes a CSV; mutates no live service",
+    "seeded — the run order is reproducible from SPEC_JSON.seed",
+    "factor values are explicit level lists (e.g. [20,40,60] or [\"A\",\"B\"])",
+    "needs python3 + pyDOE3 + numpy + pandas"
+  ],
+  "usage": "Set SPEC_JSON to a JSON file with keys: factors (required dict {name:[level,...]}), randomize (bool, default true), seed (int). Output: experimental_runs.csv under record_store.",
+  "limitation": "Run count is the product of level counts, so it explodes quickly with many factors — use fractional-factorial or plackett-burman to screen. When pyDOE3 is absent the porter writes an empty {} artifact.",
+  "minimal_example": {
+    "perk": "full-factorial",
+    "vars": {
+      "SPEC_JSON": "spec.json"
+    },
+    "spec.json": {
+      "factors": {"temp_C": [20, 40, 60], "catalyst": ["A", "B"]},
+      "seed": 1
+    }
+  }
+}

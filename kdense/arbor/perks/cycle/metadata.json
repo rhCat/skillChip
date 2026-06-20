@@ -1,0 +1,16 @@
+{
+  "perk": "cycle",
+  "skill": "arbor",
+  "description": "increment the coordinator cycle counter and report budget remaining",
+  "rules": [
+    "increments cycles_used in record_store/run/.arbor/run.json",
+    "call once per Observe->Decide pass to track the budget",
+    "reports when the budget is exhausted so the run can be finished"
+  ],
+  "usage": "Set RECORD_STORE pointing at an existing Arbor run. Output: cycle.txt. If no run exists in the store, an empty bootstrap run is created first.",
+  "limitation": "Counter bookkeeping only — it does not enforce the budget or stop the run; the coordinator decides when to stop.",
+  "minimal_example": {
+    "perk": "cycle",
+    "vars": {}
+  }
+}

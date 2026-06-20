@@ -1,0 +1,13 @@
+{
+  "_perk": "format_reference",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_FILE": "${FIXTURE}/sample.pdb"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["format_reference.md"],
+    "nonempty": ["format_reference.md"],
+    "contains": { "format_reference.md": "Protein Data Bank" }
+  }
+}

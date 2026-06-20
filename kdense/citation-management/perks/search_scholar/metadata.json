@@ -1,0 +1,21 @@
+{
+  "perk": "search_scholar",
+  "skill": "citation-management",
+  "description": "search Google Scholar (via the scholarly library) and export results as JSON",
+  "rules": [
+    "read-only — results written to record_store as scholar.json",
+    "QUERY is a free-text Scholar query (supports author:, intitle:, source: operators)",
+    "LIMIT caps results (default 50); SORT_BY is relevance|citations",
+    "requires the third-party 'scholarly' Python library; absent it the core exits and the porter writes {}",
+    "porter degrades gracefully (writes {} and exits 0) when scholarly is missing or Scholar is unreachable"
+  ],
+  "usage": "Set QUERY. Optionally LIMIT, SORT_BY (relevance|citations). Output: scholar.json.",
+  "limitation": "Needs the 'scholarly' library AND network access to scholar.google.com; heavily rate-limited and prone to blocking. Prefer search_pubmed for biomedical work.",
+  "minimal_example": {
+    "perk": "search_scholar",
+    "vars": {
+      "QUERY": "machine learning protein folding",
+      "LIMIT": "20"
+    }
+  }
+}

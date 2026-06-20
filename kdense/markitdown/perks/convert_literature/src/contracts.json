@@ -1,0 +1,31 @@
+{
+  "tool": "convert_literature",
+  "inputs": {
+    "INPUT_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "ORGANIZE_BY_YEAR": {
+      "type": "string",
+      "required": false
+    },
+    "CREATE_INDEX": {
+      "type": "string",
+      "required": false
+    },
+    "RECURSIVE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "convert_literature_out": {
+      "path": "${RECORD_STORE}/convert_literature_summary.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/convert_literature_summary.json"
+  }
+}

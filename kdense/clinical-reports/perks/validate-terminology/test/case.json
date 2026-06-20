@@ -1,0 +1,11 @@
+{
+  "_perk": "validate-terminology",
+  "requires": ["python3"],
+  "vars": { "REPORT_FILE": "${FIXTURE}/note.md" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["terminology.json"],
+    "nonempty": ["terminology.json"],
+    "json": { "terminology.json": { "total_issues": 0 } }
+  }
+}

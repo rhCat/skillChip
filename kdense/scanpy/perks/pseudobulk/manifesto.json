@@ -1,0 +1,25 @@
+{
+  "_perk": "pseudobulk",
+  "sequence": [
+    "pseudobulk"
+  ],
+  "tools": {
+    "pseudobulk": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}",
+        "BY": "${BY}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "BY": "${BY}",
+    "LAYER": "${LAYER}",
+    "FUNC": "${FUNC}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

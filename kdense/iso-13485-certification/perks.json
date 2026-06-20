@@ -1,0 +1,13 @@
+{
+  "skill": "iso-13485-certification",
+  "perks": [
+    {
+      "id": "gap-analysis",
+      "summary": "scan a QMS documentation directory and report which ISO 13485:2016 required procedures + key documents are present vs missing, with a compliance percentage and prioritized recommendations (read-only)",
+      "destructive": false,
+      "tools": [
+        "gap_analyzer"
+      ]
+    }
+  ]
+}

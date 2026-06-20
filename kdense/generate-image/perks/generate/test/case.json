@@ -1,0 +1,14 @@
+{
+  "_perk": "generate",
+  "requires": ["python3"],
+  "vars": {
+    "PROMPT": "A tiny red dot on a white background",
+    "MODEL": "google/gemini-3.1-flash-image-preview",
+    "OUTPUT_NAME": "generated_image.png"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["generated_image.png"],
+    "nonempty": ["generated_image.png"]
+  }
+}

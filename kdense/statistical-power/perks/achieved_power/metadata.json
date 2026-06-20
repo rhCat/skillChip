@@ -1,0 +1,22 @@
+{
+  "perk": "achieved_power",
+  "skill": "statistical-power",
+  "description": "Closed-form achieved-power calculation: solve for power (1 - beta) given a fixed sample size and effect size.",
+  "rules": [
+    "read-only: computes a number, mutates no external state",
+    "TEST selects the solver: t_ind, t_paired, t_one, anova, two_proportions, one_proportion, correlation, chi2, linear_regression",
+    "pass NOBS1 for per-group tests (t_ind, two_proportions); pass NOBS for total-n tests (anova, chi2, regression, correlation, one-sample)",
+    "this is a priori power at a planned n - NOT post-hoc / observed power (which is circular and should not be reported)"
+  ],
+  "usage": "Set TEST, the effect inputs, and a sample size (NOBS1 or NOBS). Optional ALPHA (default 0.05), ALTERNATIVE, RATIO. Output: achieved_power.json.",
+  "limitation": "Closed-form only. Do not feed the effect size you just estimated from the same data - that is observed power and is uninformative.",
+  "minimal_example": {
+    "perk": "achieved_power",
+    "vars": {
+      "TEST": "t_ind",
+      "EFFECT_SIZE": "0.5",
+      "NOBS1": "64",
+      "ALPHA": "0.05"
+    }
+  }
+}

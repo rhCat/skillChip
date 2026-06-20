@@ -1,0 +1,14 @@
+{
+  "_perk": "evaluate",
+  "requires": ["python3"],
+  "vars": {
+    "MODEL_PATH": "${FIXTURE}",
+    "ENV_ID": "CartPole-v1",
+    "N_EVAL_EPISODES": "2"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["evaluation.json"],
+    "nonempty": ["evaluation.json"]
+  }
+}

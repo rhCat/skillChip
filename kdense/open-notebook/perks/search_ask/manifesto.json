@@ -1,0 +1,24 @@
+{
+  "_perk": "search_ask",
+  "sequence": [
+    "search_ask"
+  ],
+  "tools": {
+    "search_ask": {
+      "binary": "bash",
+      "params": {
+        "OPEN_NOTEBOOK_URL": "${OPEN_NOTEBOOK_URL}",
+        "ASK_QUERY": "${ASK_QUERY}"
+      }
+    }
+  },
+  "env": {
+    "OPEN_NOTEBOOK_URL": "${OPEN_NOTEBOOK_URL}",
+    "ASK_QUERY": "${ASK_QUERY}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

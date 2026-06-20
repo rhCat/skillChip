@@ -1,0 +1,20 @@
+{
+  "perk": "fill-fillable",
+  "skill": "sci-pdf",
+  "description": "Fill a PDF's AcroForm fields from a values JSON (each entry: field_id, page, value) and write a new PDF with NeedAppearances set. Validates field ids, page numbers, and checkbox/radio/choice values before writing. Wraps pypdf.",
+  "rules": [
+    "reads the input PDF + a values JSON; writes a new filled PDF (input untouched)",
+    "rejects unknown field ids, wrong page numbers, and invalid checkbox/radio/choice values",
+    "filled PDF is written to record_store/filled.pdf; a manifest line goes to fill_fillable.txt",
+    "needs pypdf at runtime; absent -> manifest note + exit 0"
+  ],
+  "usage": "Set PDF_PATH (input .pdf) and FIELDS_JSON (array of {field_id, page, value}). Outputs: filled.pdf + fill_fillable.txt. Use extract-fields first to learn the field ids.",
+  "limitation": "Only works on PDFs that already have an AcroForm (use fill-annotations for non-fillable PDFs). Requires pypdf.",
+  "minimal_example": {
+    "perk": "fill-fillable",
+    "vars": {
+      "PDF_PATH": "form.pdf",
+      "FIELDS_JSON": "values.json"
+    }
+  }
+}

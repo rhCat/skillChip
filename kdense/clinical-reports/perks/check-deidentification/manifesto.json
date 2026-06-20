@@ -1,0 +1,21 @@
+{
+  "_perk": "check-deidentification",
+  "sequence": [
+    "check_deidentification"
+  ],
+  "tools": {
+    "check_deidentification": {
+      "binary": "python3",
+      "params": {
+        "REPORT_FILE": "${REPORT_FILE}"
+      }
+    }
+  },
+  "env": {
+    "REPORT_FILE": "${REPORT_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

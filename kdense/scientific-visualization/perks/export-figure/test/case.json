@@ -1,0 +1,14 @@
+{
+  "_perk": "export-figure",
+  "requires": ["bash", "python3"],
+  "vars": {
+    "DATA_CSV": "${FIXTURE}/series.csv",
+    "FORMATS": "png",
+    "DPI": "150"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["figure_export.json"],
+    "nonempty": ["figure_export.json"]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "perk": "latent_time",
+  "skill": "scvelo",
+  "description": "Compute the shared latent time from the dynamical velocity model via scv.tl.latent_time. Per-gene latent times are averaged (weighted by fit_likelihood) into a single pseudotime in obs['latent_time']. Writes the updated .h5ad.",
+  "rules": [
+    "read-only input — writes a new latent_time.h5ad under record_store",
+    "requires velocity fit with mode='dynamical' (recover_dynamics must have run)",
+    "adds obs['latent_time'] in [0, 1]"
+  ],
+  "usage": "Set INPUT (velocity .h5ad from a dynamical fit). Output: latent_time.h5ad.",
+  "limitation": "Requires scvelo installed and a dynamical velocity fit; without scvelo the porter writes a {} placeholder latent_time.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "latent_time",
+    "vars": {
+      "INPUT": "velocity.h5ad"
+    }
+  }
+}

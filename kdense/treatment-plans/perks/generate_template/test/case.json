@@ -1,0 +1,10 @@
+{
+  "_perk": "generate_template",
+  "requires": ["python3"],
+  "vars": { "TEMPLATE_TYPE": "general_medical" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["template.tex"],
+    "nonempty": ["template.tex"]
+  }
+}

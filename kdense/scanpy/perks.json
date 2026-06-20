@@ -1,0 +1,117 @@
+{
+  "skill": "scanpy",
+  "perks": [
+    {
+      "id": "inspect",
+      "summary": "summarize an AnnData/single-cell file: shape, obs/var, layers, embeddings, raw-vs-normalized (read-only)",
+      "destructive": false,
+      "tools": [
+        "inspect_data"
+      ]
+    },
+    {
+      "id": "convert",
+      "summary": "load any supported single-cell format (10x mtx dir/.h5, csv, loom, mtx) and write .h5ad",
+      "destructive": false,
+      "tools": [
+        "convert"
+      ]
+    },
+    {
+      "id": "qc",
+      "summary": "compute QC metrics, before/after plots, filter cells/genes, optional Scrublet doublet removal",
+      "destructive": false,
+      "tools": [
+        "qc_analysis"
+      ]
+    },
+    {
+      "id": "preprocess",
+      "summary": "normalize_total + log1p + highly-variable genes, optional scale/regress (keeps counts layer + raw)",
+      "destructive": false,
+      "tools": [
+        "preprocess"
+      ]
+    },
+    {
+      "id": "reduce_dimensions",
+      "summary": "PCA + variance plot, neighbors graph, UMAP, optional t-SNE",
+      "destructive": false,
+      "tools": [
+        "reduce_dimensions"
+      ]
+    },
+    {
+      "id": "batch_correct",
+      "summary": "batch integration across samples: harmony / bbknn / combat",
+      "destructive": false,
+      "tools": [
+        "batch_correct"
+      ]
+    },
+    {
+      "id": "cluster",
+      "summary": "Leiden (or louvain) clustering at one or many resolutions on a precomputed graph",
+      "destructive": false,
+      "tools": [
+        "cluster"
+      ]
+    },
+    {
+      "id": "find_markers",
+      "summary": "rank_genes_groups per group + per-group marker CSVs + marker plots (exploratory)",
+      "destructive": false,
+      "tools": [
+        "find_markers"
+      ]
+    },
+    {
+      "id": "annotate",
+      "summary": "map clusters to cell-type labels from a JSON/CSV mapping; optional marker reference dotplot",
+      "destructive": false,
+      "tools": [
+        "annotate"
+      ]
+    },
+    {
+      "id": "score_genes",
+      "summary": "score gene signatures (JSON) and/or cell-cycle phase, add per-signature obs columns",
+      "destructive": false,
+      "tools": [
+        "score_genes"
+      ]
+    },
+    {
+      "id": "pseudobulk",
+      "summary": "aggregate counts by sample x cell type into a genes x pseudobulk-sample matrix + metadata for pydeseq2",
+      "destructive": false,
+      "tools": [
+        "pseudobulk"
+      ]
+    },
+    {
+      "id": "subset",
+      "summary": "subset an AnnData by obs-column values (keep/drop) or by gene list, optionally clearing stale embeddings",
+      "destructive": false,
+      "tools": [
+        "subset"
+      ]
+    },
+    {
+      "id": "plot",
+      "summary": "render a standard single-cell plot (umap/tsne/pca/violin/dotplot/matrixplot/heatmap/tracksplot/stacked_violin)",
+      "destructive": false,
+      "tools": [
+        "plot"
+      ]
+    },
+    {
+      "id": "run_pipeline",
+      "summary": "end-to-end scRNA-seq pipeline in one command: load -> QC -> normalize -> HVG -> PCA -> (batch) -> UMAP -> Leiden -> markers",
+      "destructive": false,
+      "tools": [
+        "run_pipeline"
+      ]
+    }
+  ]
+}

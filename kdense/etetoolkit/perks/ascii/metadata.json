@@ -1,0 +1,20 @@
+{
+  "perk": "ascii",
+  "skill": "etetoolkit",
+  "description": "Render a phylogenetic tree as ASCII art (text topology with internal node names), suitable for terminals and logs.",
+  "rules": [
+    "read-only — never modifies the input tree",
+    "TREE_FORMAT is the ETE Newick format number (default 0)",
+    "internal node names are shown",
+    "ASCII art (ascii.txt) is written under record_store"
+  ],
+  "usage": "Set TREE_FILE (input Newick tree) and TREE_FORMAT (default 0). Output: ascii.txt.",
+  "limitation": "Requires ete3 to draw; without it the porter records an ete3-missing note and exits 0. Stdout-only op — no tree file is written.",
+  "minimal_example": {
+    "perk": "ascii",
+    "vars": {
+      "TREE_FILE": "tree.nw",
+      "TREE_FORMAT": "0"
+    }
+  }
+}

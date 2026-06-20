@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for exa-search — set perk, fill record_store + the vars the perk declares.",
+  "skill": "exa-search",
+  "perk": "search",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "QUERY": "<natural-language search query>",
+    "EXA_API_KEY": "<Exa API key>"
+  }
+}

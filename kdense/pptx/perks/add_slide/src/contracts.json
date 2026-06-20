@@ -1,0 +1,23 @@
+{
+  "tool": "add_slide",
+  "inputs": {
+    "UNPACKED_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "SLIDE_SOURCE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "add_slide_out": {
+      "path": "${RECORD_STORE}/add_slide.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/add_slide.txt"
+  }
+}

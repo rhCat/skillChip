@@ -1,0 +1,17 @@
+{
+  "_perk": "match",
+  "requires": ["python3"],
+  "vars": {
+    "CLUSTERS": "${FIXTURE}/clusters.json",
+    "SKILLS_DIR": "${FIXTURE}/skills",
+    "TOP_K": "5"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["matches.json"],
+    "nonempty": ["matches.json"],
+    "contains": {
+      "matches.json": ["\"skill_count\": 1", "literature-review"]
+    }
+  }
+}

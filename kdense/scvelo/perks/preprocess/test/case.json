@@ -1,0 +1,12 @@
+{
+  "_perk": "preprocess",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.h5ad"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["preprocessed.h5ad"],
+    "nonempty": ["preprocessed.h5ad"]
+  }
+}

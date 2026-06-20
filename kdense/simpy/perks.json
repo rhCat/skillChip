@@ -1,0 +1,21 @@
+{
+  "skill": "simpy",
+  "perks": [
+    {
+      "id": "simulate",
+      "summary": "run a seeded discrete-event queue simulation and report wait/service/throughput stats",
+      "destructive": false,
+      "tools": [
+        "simpy_simulate"
+      ]
+    },
+    {
+      "id": "monitor",
+      "summary": "run a SimPy resource-monitoring demo and report utilization/queue/wait stats",
+      "destructive": false,
+      "tools": [
+        "simpy_monitor"
+      ]
+    }
+  ]
+}

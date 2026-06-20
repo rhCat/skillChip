@@ -1,0 +1,26 @@
+{
+  "_perk": "run_workflow",
+  "sequence": [
+    "run_workflow"
+  ],
+  "tools": {
+    "run_workflow": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "GROUPBY": "${GROUPBY}",
+    "N_TOP_GENES": "${N_TOP_GENES}",
+    "N_NEIGHBORS": "${N_NEIGHBORS}",
+    "MODE": "${MODE}",
+    "N_JOBS": "${N_JOBS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

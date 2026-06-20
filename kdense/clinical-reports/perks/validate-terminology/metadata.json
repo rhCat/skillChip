@@ -1,0 +1,19 @@
+{
+  "perk": "validate-terminology",
+  "skill": "clinical-reports",
+  "description": "Validate medical terminology in a report: flag Joint Commission Do-Not-Use abbreviations, ambiguous abbreviations, and detect ICD-10 codes (read-only).",
+  "rules": [
+    "read-only — never edits the input report",
+    "flags prohibited abbreviations (U, IU, QD, QOD, MS, MSO4, MgSO4) and ambiguous ones (cc, hs, SC, OD, ...)",
+    "detects strings matching the ICD-10-CM code format",
+    "JSON report written to record_store"
+  ],
+  "usage": "Set REPORT_FILE (a clinical report .md). Output: terminology.json.",
+  "limitation": "Word-boundary regex only; abbreviation matching is case-sensitive for the Do-Not-Use list and ICD-10 detection is format-only (not a code lookup). Requires python3 (stdlib only).",
+  "minimal_example": {
+    "perk": "validate-terminology",
+    "vars": {
+      "REPORT_FILE": "./note.md"
+    }
+  }
+}

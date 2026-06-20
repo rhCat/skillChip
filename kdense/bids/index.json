@@ -1,0 +1,26 @@
+{
+  "skill": "bids",
+  "skill_sha": "bf63cb641f19e3cdeb5786bc022681321104564fab85b9b4b486195ed5ae68d3",
+  "file_count": 19,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "4fe9b1fe16c2596d1f12a33986d52d24d3703c9144a5c03140a78e9397baa756",
+    "blueprint.drawio": "207d957bee2881af3be60d2dec8b6c70125090ed46218f7d4d7bd69695301264",
+    "blueprint.json": "f32bd97c80ead919b0870b71a37da6fb7f28c0afe16f26f98f400cfd09cd8508",
+    "blueprint.svg": "d938aad8344aabd00b9f6068c6cd41c670923f2d997759a585b15d7d54181c93",
+    "ledger.json": "8d3e914c97a2d5f4dd860d1fc3012612e52a6cff57071ba5e3a70341de6d8f1f",
+    "perks.json": "83479b2215d9db0f0c590adcb052dc2c70c21f38085b0601f7223e124c6d0bd2",
+    "perks/update_beps/manifesto.json": "1f82e01919b7815a543510e73d27a2b4753f531430fe968e77b7ccd58bac7dd8",
+    "perks/update_beps/metadata.json": "62360154ba2473d38ab4e8062625954d215d71d388f023ab97d5f3e9aa65e8a1",
+    "perks/update_beps/src/contracts.json": "daebe7b2241ff232e4990b33867da726fda47e65f42ba6c963836c0f45e5b5f3",
+    "perks/update_beps/src/update_beps.sh": "b75311dc63ee16a2f742533ba1db0284e2e24620a7dc7dc742f51e367aa7ac99",
+    "perks/update_beps/src/update_schema.py": "3a17814d4214784e4f984017325305e25f54e6caecf8068707ea01c46228f3fa",
+    "perks/update_beps/test/case.json": "a7361028af950ae09517cdafed5e6a2963b3da7c47e2e95d5ac9de2b16a156b9",
+    "perks/update_schema/manifesto.json": "f258d51a0a1a94a7595bb7aae74460975979a534f713eede7487825410232e89",
+    "perks/update_schema/metadata.json": "39759d5a1c7f91fedf11f528455e5751dd03f15fb86ccfb9df13c736e2a802ad",
+    "perks/update_schema/src/contracts.json": "2921935f2b00028c894925de43230fbbd55501c4049bfc40a5219dafca7ee209",
+    "perks/update_schema/src/update_schema.py": "3a17814d4214784e4f984017325305e25f54e6caecf8068707ea01c46228f3fa",
+    "perks/update_schema/src/update_schema.sh": "47a4fc7a545ac03406a22210d8c5400dbb923e7f96fc29dddd640acdefe8fc8c",
+    "perks/update_schema/test/case.json": "cf74942cc52b6bd08b9a068412978c6e926b8ec1a5860b6953ed8756b1ae7610"
+  }
+}

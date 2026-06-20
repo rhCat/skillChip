@@ -1,0 +1,27 @@
+{
+  "skill": "research-lookup",
+  "skill_sha": "6a7e4049b05e0664bd48687a674acd9936e222645bcb3e3a8c9930d04099d7f6",
+  "file_count": 20,
+  "files": {
+    "LICENSE.txt": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+    "SKILL.md": "15fe10b939d40cc1526788b1a3e49056ec40f3ead12364f9d3e59a4f4ad5421c",
+    "blueprint.drawio": "4fa376fc57881e53fd7e0776020134c68ddd595c394f2795b98c6b94b4d7f27c",
+    "blueprint.json": "3d5ae0b7341c500532ec01ac95591eb4a7d323261824db2772eed2d5b2d243a9",
+    "blueprint.svg": "3cae8ef1f2a634e24662727c0b19c97505ba4cf9f22be4dc1a90d097d236d556",
+    "ledger.json": "b29fbc298be02ccfab07edc5f90524802bd275daba50b6bad2e0edd8c6c0c887",
+    "perks.json": "9054fcc0c36d9187b755e9a7f41890d76736e3448d1fb9175379af99a85d2cf0",
+    "perks/generate-schematic/manifesto.json": "0111679fcd381f7308defd754cc3d94b32d02b39a967e4efd9f2fede4dac3e34",
+    "perks/generate-schematic/metadata.json": "975e69eac9283aa127693776fe7253bf6237462a6627f1b7bc9ec9ab17260926",
+    "perks/generate-schematic/src/contracts.json": "1c6bd0a8e3747e63c873a5ce6931bbb0739e98b0392f2d548cf8070d8a2e6cb1",
+    "perks/generate-schematic/src/generate_schematic.py": "a426ae30ed9185f250245f35c868e6f8aae6096e94a4b8392283dc05f089c041",
+    "perks/generate-schematic/src/generate_schematic.sh": "6ec3f6c1f342008f192f0ac586e88f02b35f907098e01a3dcfb596f6855367be",
+    "perks/generate-schematic/src/generate_schematic_ai.py": "0e1708bc163eab7e4440ae7d9d61ed1cd123bdc401499d46cb3df30f1b9f349c",
+    "perks/generate-schematic/test/case.json": "618833933f8988de7b97499b84b3fd0eb088f3f941a4203a24d67adb399496c8",
+    "perks/research-lookup/manifesto.json": "69fdec54bdcfa5e9f60653515d1f71b0268087610710cd00e7b75431f7ccb9ca",
+    "perks/research-lookup/metadata.json": "8e3e7a5627919c69e1554f8f1005aeb00cafdaa91316b84a7a7897a9f18b5012",
+    "perks/research-lookup/src/contracts.json": "a7fccad207b655d7d064a1df1ee9dbd652f906bc7ae285f1d5773a758f295350",
+    "perks/research-lookup/src/research_lookup.py": "989c290b434141a31773254bd095474b1a91220825c311d14c4b185f6bb4c2e9",
+    "perks/research-lookup/src/research_lookup.sh": "4a046ea3a5fa8dfc6e338d33701ad9911bd0d60f46315337b291497261ebb0bd",
+    "perks/research-lookup/test/case.json": "010c6f57748ffbc3886e535dfe1907309a818590f989657de1137de1865540e9"
+  }
+}

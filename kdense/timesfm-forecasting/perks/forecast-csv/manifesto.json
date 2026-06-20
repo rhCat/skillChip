@@ -1,0 +1,27 @@
+{
+  "_perk": "forecast-csv",
+  "sequence": [
+    "forecast_csv"
+  ],
+  "tools": {
+    "forecast_csv": {
+      "binary": "forecast_csv.sh",
+      "params": {
+        "INPUT_CSV": "${INPUT_CSV}",
+        "HORIZON": "${HORIZON}",
+        "DATE_COL": "${DATE_COL}",
+        "VALUE_COLS": "${VALUE_COLS}"
+      }
+    }
+  },
+  "env": {
+    "INPUT_CSV": "${INPUT_CSV}",
+    "HORIZON": "${HORIZON}",
+    "DATE_COL": "${DATE_COL}",
+    "VALUE_COLS": "${VALUE_COLS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

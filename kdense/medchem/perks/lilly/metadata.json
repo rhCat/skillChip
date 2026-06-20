@@ -1,0 +1,20 @@
+{
+  "perk": "lilly",
+  "skill": "medchem",
+  "description": "Apply the Eli Lilly demerit filter to every molecule with a max-demerits threshold, writing a passes_lilly boolean column (default max demerits 160).",
+  "rules": [
+    "read-only — parses molecules and writes a results CSV; mutates nothing remote",
+    "INPUT may be .csv/.tsv (smiles column), .sdf, or .txt (one SMILES per line)",
+    "LILLY_MAX is the integer max-demerits threshold (medchem default 160)",
+    "results written to record_store/lilly.csv"
+  ],
+  "usage": "Set INPUT (molecule file) and LILLY_MAX (integer threshold). Output: lilly.csv.",
+  "limitation": "Requires the medchem + datamol + rdkit + pandas stack (Python >=3.9) AND the optional native lilly-medchem-rules binaries (mamba install -c conda-forge lilly-medchem-rules); without the binaries the column is filled with nulls, and without the stack the porter degrades gracefully and writes a stub so governance still runs offline.",
+  "minimal_example": {
+    "perk": "lilly",
+    "vars": {
+      "INPUT": "mols.txt",
+      "LILLY_MAX": "160"
+    }
+  }
+}

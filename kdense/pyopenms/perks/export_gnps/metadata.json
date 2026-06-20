@@ -1,0 +1,19 @@
+{
+  "perk": "export_gnps",
+  "skill": "pyopenms",
+  "description": "Export GNPS Feature-Based Molecular Networking (FBMN) inputs: an MGF of MS2 spectra (from a consensusXML linked across samples) plus the GNPS quantification table. Upload both to GNPS FBMN.",
+  "rules": [
+    "CONSENSUS is a consensusXML linked across samples",
+    "MZML is a space-separated list of source mzML files (with MS2)",
+    "writes gnps_export.mgf and gnps_export_quant.txt under record_store"
+  ],
+  "usage": "Set CONSENSUS (consensusXML) and MZML (space-separated mzML). Output: gnps_export.mgf (+ gnps_export_quant.txt).",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) to produce real content; if absent the porter still creates gnps_export.mgf and records the reason.",
+  "minimal_example": {
+    "perk": "export_gnps",
+    "vars": {
+      "CONSENSUS": "study.consensusXML",
+      "MZML": "s1.mzML s2.mzML"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "tool": "neuropixels_pipeline",
+  "inputs": {
+    "DATA_PATH": {
+      "type": "string",
+      "required": true
+    },
+    "SORTER": {
+      "type": "string",
+      "required": false
+    },
+    "STREAM_NAME": {
+      "type": "string",
+      "required": false
+    },
+    "CURATION": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "pipeline_report": {
+      "path": "${RECORD_STORE}/pipeline_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pipeline_report.txt"
+  }
+}

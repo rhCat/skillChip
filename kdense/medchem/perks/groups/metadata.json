@@ -1,0 +1,20 @@
+{
+  "perk": "groups",
+  "skill": "medchem",
+  "description": "Detect chemical-group / curated-substructure matches (privileged_scaffolds, common_warhead_covalent_inhibitors, rings_in_drugs, ...) on every molecule, writing a has_<group> boolean column per requested group.",
+  "rules": [
+    "read-only — parses molecules and writes a results CSV; mutates nothing remote",
+    "INPUT may be .csv/.tsv (smiles column), .sdf, or .txt (one SMILES per line)",
+    "GROUPS is a comma-separated list of named chemical-group collections",
+    "results written to record_store/groups.csv"
+  ],
+  "usage": "Set INPUT (molecule file) and GROUPS (comma-separated group names). Output: groups.csv.",
+  "limitation": "Requires the medchem + datamol + rdkit + pandas stack (Python >=3.9); when absent the porter degrades gracefully and writes a stub so governance still runs offline. Unknown group names error at runtime inside medchem.",
+  "minimal_example": {
+    "perk": "groups",
+    "vars": {
+      "INPUT": "mols.txt",
+      "GROUPS": "privileged_scaffolds,rings_in_drugs"
+    }
+  }
+}

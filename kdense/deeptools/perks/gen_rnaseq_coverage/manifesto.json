@@ -1,0 +1,23 @@
+{
+  "_perk": "gen_rnaseq_coverage",
+  "sequence": [
+    "gen_rnaseq_coverage"
+  ],
+  "tools": {
+    "gen_rnaseq_coverage": {
+      "binary": "python3",
+      "params": {
+        "RNASEQ_BAM": "${RNASEQ_BAM}",
+        "THREADS": "${THREADS}"
+      }
+    }
+  },
+  "env": {
+    "RNASEQ_BAM": "${RNASEQ_BAM}",
+    "THREADS": "${THREADS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "skill": "scikit-learn",
+  "perks": [
+    {
+      "id": "classify",
+      "summary": "preprocess (impute + scale + one-hot) a CSV, compare LogReg/RandomForest/GradientBoosting by 5-fold CV, tune the best with GridSearchCV, and report test metrics + feature importances",
+      "destructive": false,
+      "tools": [
+        "classify"
+      ]
+    },
+    {
+      "id": "optimal_k",
+      "summary": "find the optimal K for K-Means over a range via inertia (elbow) + silhouette score, save an elbow/silhouette plot, and report the recommended K",
+      "destructive": false,
+      "tools": [
+        "optimal_k"
+      ]
+    },
+    {
+      "id": "cluster_compare",
+      "summary": "scale a CSV and compare K-Means, Agglomerative, Gaussian Mixture, and DBSCAN, scoring each with silhouette, Calinski-Harabasz, and Davies-Bouldin",
+      "destructive": false,
+      "tools": [
+        "cluster_compare"
+      ]
+    },
+    {
+      "id": "visualize",
+      "summary": "project a scaled CSV to 2D with PCA, K-Means-label it, and render a labeled scatter plot of the clusters",
+      "destructive": false,
+      "tools": [
+        "visualize"
+      ]
+    }
+  ]
+}

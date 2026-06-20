@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for docx — set perk, fill record_store + the vars the perk declares.",
+  "skill": "docx",
+  "perk": "extract",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "DOCX_FILE": "<path to the .docx file to read>"
+  }
+}

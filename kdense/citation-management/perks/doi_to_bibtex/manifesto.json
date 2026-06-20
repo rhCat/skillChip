@@ -1,0 +1,22 @@
+{
+  "_perk": "doi_to_bibtex",
+  "sequence": [
+    "doi_to_bibtex"
+  ],
+  "tools": {
+    "doi_to_bibtex": {
+      "binary": "python3",
+      "params": {
+        "DOI": "${DOI}"
+      }
+    }
+  },
+  "env": {
+    "DOI": "${DOI}",
+    "DOI_FILE": "${DOI_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

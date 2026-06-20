@@ -1,0 +1,19 @@
+{
+  "tool": "validate_case_report",
+  "inputs": {
+    "REPORT_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "care_validation": {
+      "path": "${RECORD_STORE}/care_validation.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/care_validation.json"
+  }
+}

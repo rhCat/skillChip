@@ -1,0 +1,14 @@
+{
+  "_perk": "reroot",
+  "requires": ["python3"],
+  "vars": {
+    "TREE_FILE": "${FIXTURE}",
+    "OUTGROUP": "",
+    "TREE_FORMAT": "0"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["reroot.log"],
+    "nonempty": ["reroot.log"]
+  }
+}

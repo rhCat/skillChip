@@ -1,0 +1,10 @@
+{
+  "_perk": "search",
+  "requires": ["python3"],
+  "vars": { "QUERY": "transformer architectures" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["search.json"],
+    "nonempty": ["search.json"]
+  }
+}

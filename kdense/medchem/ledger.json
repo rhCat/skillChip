@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for medchem — set perk, fill record_store + the vars the perk declares.",
+  "skill": "medchem",
+  "perk": "rules",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "INPUT": "<molecule file: .csv/.tsv (smiles column), .sdf, or .txt (one SMILES per line)>",
+    "RULES": "rule_of_five,rule_of_cns"
+  }
+}

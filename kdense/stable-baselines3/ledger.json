@@ -1,0 +1,13 @@
+{
+  "_schema": "task-ledger TEMPLATE for stable-baselines3 — set perk, fill record_store + the vars the perk declares.",
+  "skill": "stable-baselines3",
+  "perk": "train",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "ENV_ID": "CartPole-v1",
+    "ALGORITHM": "PPO",
+    "POLICY": "MlpPolicy",
+    "N_ENVS": "1",
+    "TOTAL_TIMESTEPS": "1000"
+  }
+}

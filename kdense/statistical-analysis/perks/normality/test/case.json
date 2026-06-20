@@ -1,0 +1,17 @@
+{
+  "_perk": "normality",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_CSV": "${FIXTURE}/data.csv",
+    "VALUE_COL": "score",
+    "ALPHA": "0.05"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["normality.json", "normality.png"],
+    "nonempty": ["normality.json"],
+    "json": {
+      "normality.json": { "test": "Shapiro-Wilk", "is_normal": true }
+    }
+  }
+}

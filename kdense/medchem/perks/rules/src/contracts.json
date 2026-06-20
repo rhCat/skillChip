@@ -1,0 +1,23 @@
+{
+  "tool": "mc_rules",
+  "inputs": {
+    "INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "RULES": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "mc_rules_out": {
+      "path": "${RECORD_STORE}/rules.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/rules.csv"
+  }
+}

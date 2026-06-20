@@ -1,0 +1,101 @@
+{
+  "skill": "experimental-design",
+  "perks": [
+    {
+      "id": "simple-randomization",
+      "summary": "seeded simple (independent per-unit) randomization schedule to arms",
+      "destructive": false,
+      "tools": [
+        "simple_randomization"
+      ]
+    },
+    {
+      "id": "block-randomization",
+      "summary": "seeded permuted-block randomization schedule (balance throughout enrollment)",
+      "destructive": false,
+      "tools": [
+        "block_randomization"
+      ]
+    },
+    {
+      "id": "stratified-block-randomization",
+      "summary": "seeded block randomization within each stratum (balance per subgroup)",
+      "destructive": false,
+      "tools": [
+        "stratified_block_randomization"
+      ]
+    },
+    {
+      "id": "cluster-randomization",
+      "summary": "seeded randomization of whole clusters (sites/clinics/classes) to arms",
+      "destructive": false,
+      "tools": [
+        "cluster_randomization"
+      ]
+    },
+    {
+      "id": "assign-factorial-runs",
+      "summary": "randomize the execution run order of a set of design rows (defeat drift)",
+      "destructive": false,
+      "tools": [
+        "assign_factorial_runs"
+      ]
+    },
+    {
+      "id": "full-factorial",
+      "summary": "full-factorial DOE matrix over explicit factor levels, in real units",
+      "destructive": false,
+      "tools": [
+        "full_factorial"
+      ]
+    },
+    {
+      "id": "two-level-factorial",
+      "summary": "full 2^k factorial DOE (all main effects + interactions) in real units",
+      "destructive": false,
+      "tools": [
+        "two_level_factorial"
+      ]
+    },
+    {
+      "id": "fractional-factorial",
+      "summary": "2^(k-p) fractional-factorial DOE from a Yates generator string",
+      "destructive": false,
+      "tools": [
+        "fractional_factorial"
+      ]
+    },
+    {
+      "id": "plackett-burman",
+      "summary": "Plackett-Burman main-effects-only screening DOE for many factors",
+      "destructive": false,
+      "tools": [
+        "plackett_burman"
+      ]
+    },
+    {
+      "id": "central-composite",
+      "summary": "central-composite response-surface DOE (curvature / optimization)",
+      "destructive": false,
+      "tools": [
+        "central_composite"
+      ]
+    },
+    {
+      "id": "box-behnken",
+      "summary": "Box-Behnken response-surface DOE (>=3 factors, no extreme corners)",
+      "destructive": false,
+      "tools": [
+        "box_behnken"
+      ]
+    },
+    {
+      "id": "latin-hypercube",
+      "summary": "space-filling Latin-hypercube sample over continuous factor ranges",
+      "destructive": false,
+      "tools": [
+        "latin_hypercube"
+      ]
+    }
+  ]
+}

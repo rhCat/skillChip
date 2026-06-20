@@ -1,0 +1,25 @@
+{
+  "_perk": "model_averaging",
+  "sequence": [
+    "model_averaging"
+  ],
+  "tools": {
+    "model_averaging": {
+      "binary": "bash",
+      "params": {
+        "MODELS_DIR": "${MODELS_DIR}"
+      }
+    }
+  },
+  "env": {
+    "MODELS_DIR": "${MODELS_DIR}",
+    "MODELS": "${MODELS}",
+    "VAR_NAME": "${VAR_NAME}",
+    "IC": "${IC}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "_perk": "observe",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["observe.txt"],
+    "nonempty": ["observe.txt"],
+    "contains": { "observe.txt": "OBSERVE" }
+  }
+}

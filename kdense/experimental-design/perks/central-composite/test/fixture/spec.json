@@ -1,0 +1,4 @@
+{
+  "factors": {"temp_C": [20, 60], "conc_mM": [1, 10]},
+  "seed": 1
+}

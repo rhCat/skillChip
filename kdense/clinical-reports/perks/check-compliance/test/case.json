@@ -1,0 +1,11 @@
+{
+  "_perk": "check-compliance",
+  "requires": ["python3"],
+  "vars": { "REPORT_FILE": "${FIXTURE}/report.md" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["compliance.json"],
+    "nonempty": ["compliance.json"],
+    "json": { "compliance.json": { "compliance": { "gcp": { "irb_approval": true } } } }
+  }
+}

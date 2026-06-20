@@ -1,0 +1,10 @@
+{
+  "_perk": "scaffold_datamodule",
+  "requires": ["python3", "bash"],
+  "vars": { "OUT_NAME": "lightning_datamodule_template.py" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["lightning_datamodule_template.py"],
+    "nonempty": ["lightning_datamodule_template.py"]
+  }
+}

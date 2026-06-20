@@ -1,0 +1,27 @@
+{
+  "_perk": "align_link_quantify",
+  "sequence": [
+    "align_link_quantify"
+  ],
+  "tools": {
+    "align_link_quantify": {
+      "binary": "bash",
+      "params": {
+        "INPUTS": "${INPUTS}"
+      }
+    }
+  },
+  "env": {
+    "INPUTS": "${INPUTS}",
+    "RT_TOL": "${RT_TOL}",
+    "MZ_TOL": "${MZ_TOL}",
+    "MZ_UNIT": "${MZ_UNIT}",
+    "PPM": "${PPM}",
+    "NOISE": "${NOISE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "bash"
+  ]
+}

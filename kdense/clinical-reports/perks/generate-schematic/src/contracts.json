@@ -1,0 +1,23 @@
+{
+  "tool": "generate_schematic",
+  "inputs": {
+    "SCHEMATIC_PROMPT": {
+      "type": "string",
+      "required": true
+    },
+    "DOC_TYPE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "schematic": {
+      "path": "${RECORD_STORE}/schematic.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/schematic.json"
+  }
+}

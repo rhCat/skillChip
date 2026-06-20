@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for pptx — set perk, fill record_store + the vars the perk declares.",
+  "skill": "pptx",
+  "perk": "extract",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PPTX_FILE": "<path to .pptx file>"
+  }
+}

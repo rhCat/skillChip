@@ -1,0 +1,23 @@
+{
+  "_perk": "cohort_tables",
+  "sequence": [
+    "cohort_tables"
+  ],
+  "tools": {
+    "cohort_tables": {
+      "binary": "python3",
+      "params": {
+        "INPUT_CSV": "${INPUT_CSV}",
+        "GROUP_COL": "${GROUP_COL}"
+      }
+    }
+  },
+  "env": {
+    "INPUT_CSV": "${INPUT_CSV}",
+    "GROUP_COL": "${GROUP_COL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

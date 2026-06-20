@@ -1,0 +1,53 @@
+{
+  "skill": "labarchive-integration",
+  "perks": [
+    {
+      "id": "setup-config",
+      "summary": "generate a LabArchives config.yaml (api_url + credentials) from env vars (local, read-only)",
+      "destructive": false,
+      "tools": [
+        "setup_config"
+      ]
+    },
+    {
+      "id": "list-notebooks",
+      "summary": "list all notebooks accessible to the authenticated user (read-only remote)",
+      "destructive": false,
+      "tools": [
+        "list_notebooks"
+      ]
+    },
+    {
+      "id": "backup-notebook",
+      "summary": "download a full notebook backup (XML/JSON/7z) to a file (read-only remote)",
+      "destructive": false,
+      "tools": [
+        "backup_notebook"
+      ]
+    },
+    {
+      "id": "create-entry",
+      "summary": "create a new entry in a notebook (mutates the remote ELN)",
+      "destructive": true,
+      "tools": [
+        "create_entry"
+      ]
+    },
+    {
+      "id": "upload-attachment",
+      "summary": "upload a file attachment to an existing entry (mutates the remote ELN)",
+      "destructive": true,
+      "tools": [
+        "upload_attachment"
+      ]
+    },
+    {
+      "id": "create-comment",
+      "summary": "add a comment to an existing entry (mutates the remote ELN)",
+      "destructive": true,
+      "tools": [
+        "create_comment"
+      ]
+    }
+  ]
+}

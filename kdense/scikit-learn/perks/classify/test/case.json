@@ -1,0 +1,14 @@
+{
+  "_perk": "classify",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_CSV": "${FIXTURE}/data.csv",
+    "TARGET_COL": "target",
+    "TEST_SIZE": "0.34"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["classification.json"],
+    "nonempty": ["classification.json"]
+  }
+}

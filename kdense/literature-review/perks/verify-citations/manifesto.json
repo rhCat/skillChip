@@ -1,0 +1,21 @@
+{
+  "_perk": "verify-citations",
+  "sequence": [
+    "verify_citations"
+  ],
+  "tools": {
+    "verify_citations": {
+      "binary": "python3",
+      "params": {
+        "REVIEW_MD": "${REVIEW_MD}"
+      }
+    }
+  },
+  "env": {
+    "REVIEW_MD": "${REVIEW_MD}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

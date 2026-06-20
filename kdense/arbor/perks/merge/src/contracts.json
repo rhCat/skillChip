@@ -1,0 +1,27 @@
+{
+  "tool": "arbor_merge",
+  "inputs": {
+    "NODE": {
+      "type": "string",
+      "required": true
+    },
+    "TEST_SCORE": {
+      "type": "string",
+      "required": true
+    },
+    "BRANCH_REF": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "merge_report": {
+      "path": "${RECORD_STORE}/merge.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/merge.txt"
+  }
+}

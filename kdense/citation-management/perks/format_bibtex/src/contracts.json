@@ -1,0 +1,28 @@
+{
+  "tool": "format_bibtex",
+  "inputs": {
+    "BIB_FILE": {
+      "type": "file",
+      "required": true,
+      "scan_content": false
+    },
+    "SORT_BY": {
+      "type": "string",
+      "required": false
+    },
+    "DEDUPLICATE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "format_bibtex_out": {
+      "path": "${RECORD_STORE}/formatted.bib",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/formatted.bib"
+  }
+}

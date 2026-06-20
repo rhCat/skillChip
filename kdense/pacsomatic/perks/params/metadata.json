@@ -1,0 +1,21 @@
+{
+  "perk": "params",
+  "skill": "pacsomatic",
+  "description": "Write the generated Nextflow params YAML (input: <samplesheet>, outdir: <outdir>, and exactly one of fasta:/genome:) for reproducible reruns of nf-core/pacsomatic.",
+  "rules": [
+    "read-only — writes the params YAML only, never executes the pipeline",
+    "exactly one reference mode: provide FASTA or GENOME (FASTA takes precedence if both set)",
+    "input line points at the samplesheet path; outdir line points at the run output dir",
+    "output written under record_store"
+  ],
+  "usage": "Set OUTDIR, SAMPLESHEET, and one of FASTA or GENOME. Output: pacsomatic.params.generated.yaml.",
+  "limitation": "Emits only input/outdir/fasta|genome keys; richer pipeline params should be supplied via a separate -params-file at run time.",
+  "minimal_example": {
+    "perk": "params",
+    "vars": {
+      "OUTDIR": "/data/out",
+      "SAMPLESHEET": "/data/out/samplesheet.csv",
+      "GENOME": "GRCh38"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for exploratory-data-analysis — set perk, fill record_store + the vars the perk declares.",
+  "skill": "exploratory-data-analysis",
+  "perk": "detect_type",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "DATA_FILE": "<path to the scientific data file to analyze>"
+  }
+}

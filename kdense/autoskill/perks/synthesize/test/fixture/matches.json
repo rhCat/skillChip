@@ -1,0 +1,18 @@
+{
+  "skill_count": 1,
+  "matches": [
+    {
+      "apps": ["Zotero", "Chrome"],
+      "session_count": 2,
+      "total_duration_seconds": 1020,
+      "example_titles": ["PubMed search", "Google Scholar"],
+      "top_k": [
+        {
+          "name": "literature-review",
+          "description": "Search PubMed and Google Scholar, collect citations in Zotero.",
+          "score": 0.43
+        }
+      ]
+    }
+  ]
+}

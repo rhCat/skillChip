@@ -1,0 +1,31 @@
+{
+  "tool": "model_averaging",
+  "inputs": {
+    "MODELS_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "MODELS": {
+      "type": "string",
+      "required": false
+    },
+    "VAR_NAME": {
+      "type": "string",
+      "required": false
+    },
+    "IC": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "averaging_out": {
+      "path": "${RECORD_STORE}/averaging.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/averaging.json"
+  }
+}

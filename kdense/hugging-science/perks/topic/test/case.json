@@ -1,0 +1,15 @@
+{
+  "_perk": "topic",
+  "requires": ["python3"],
+  "vars": {
+    "SLUG": "biology",
+    "FILTER": "",
+    "TAG": "",
+    "FORMAT": "markdown"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["topic.out"],
+    "nonempty": ["topic.out"]
+  }
+}

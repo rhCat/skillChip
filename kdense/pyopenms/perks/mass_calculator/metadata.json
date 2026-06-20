@@ -1,0 +1,18 @@
+{
+  "perk": "mass_calculator",
+  "skill": "pyopenms",
+  "description": "Compute masses and isotope distributions for a peptide (amino-acid sequence), an empirical formula, or both: monoisotopic and average mass, m/z for a range of charge states, the molecular formula, and the theoretical isotope pattern.",
+  "rules": [
+    "provide PEPTIDE and/or FORMULA (at least one)",
+    "writes mass_report.txt under record_store",
+    "ISOTOPES>0 also writes isotopes.csv (mass, rel_abundance)"
+  ],
+  "usage": "Set PEPTIDE and/or FORMULA. Optional CHARGES (space-separated), ISOTOPES (count), NEGATIVE=1. Output: mass_report.txt (+ isotopes.csv).",
+  "limitation": "Requires pyOpenMS 3.5.0 (Python 3.9+) to produce real content; if absent the porter still creates mass_report.txt and records the reason.",
+  "minimal_example": {
+    "perk": "mass_calculator",
+    "vars": {
+      "PEPTIDE": "DFPIANGER"
+    }
+  }
+}

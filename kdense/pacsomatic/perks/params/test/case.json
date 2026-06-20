@@ -1,0 +1,17 @@
+{
+  "_perk": "params",
+  "requires": ["python3", "bash"],
+  "vars": {
+    "OUTDIR": "${FIXTURE}/out",
+    "SAMPLESHEET": "${FIXTURE}/out/samplesheet.csv",
+    "GENOME": "GRCh38"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["pacsomatic.params.generated.yaml"],
+    "nonempty": ["pacsomatic.params.generated.yaml"],
+    "contains": {
+      "pacsomatic.params.generated.yaml": ["input:", "outdir:", "genome: GRCh38"]
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "tool": "search_databases",
+  "inputs": {
+    "RESULTS_JSON": {
+      "type": "string",
+      "required": true
+    },
+    "OUTPUT_FORMAT": {
+      "type": "string",
+      "required": false
+    },
+    "RANK": {
+      "type": "string",
+      "required": false
+    },
+    "YEAR_START": {
+      "type": "string",
+      "required": false
+    },
+    "YEAR_END": {
+      "type": "string",
+      "required": false
+    },
+    "DEDUPLICATE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "aggregate_out": {
+      "path": "${RECORD_STORE}/aggregated_results.md",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/aggregated_results.md"
+  }
+}

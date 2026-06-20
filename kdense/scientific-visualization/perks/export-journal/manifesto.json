@@ -1,0 +1,26 @@
+{
+  "_perk": "export-journal",
+  "sequence": [
+    "journal_export"
+  ],
+  "tools": {
+    "journal_export": {
+      "binary": "bash",
+      "params": {
+        "DATA_CSV": "${DATA_CSV}",
+        "JOURNAL": "${JOURNAL}",
+        "FIGURE_TYPE": "${FIGURE_TYPE}"
+      }
+    }
+  },
+  "env": {
+    "DATA_CSV": "${DATA_CSV}",
+    "JOURNAL": "${JOURNAL}",
+    "FIGURE_TYPE": "${FIGURE_TYPE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

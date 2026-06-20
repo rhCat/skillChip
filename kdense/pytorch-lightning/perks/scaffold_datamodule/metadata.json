@@ -1,0 +1,18 @@
+{
+  "perk": "scaffold_datamodule",
+  "skill": "pytorch-lightning",
+  "description": "scaffold a complete LightningDataModule (prepare_data/setup + train/val/test/predict dataloaders) boilerplate",
+  "rules": [
+    "read-only: produces a local .py scaffold, never downloads data or mutates remote state",
+    "scaffold source is written to record_store/${OUT_NAME}; validation stdout goes to scaffold_datamodule.log",
+    "emitting the template needs no heavy lib; the optional validation run needs lightning + torch installed"
+  ],
+  "usage": "Set OUT_NAME (the .py filename to write). Output: record_store/${OUT_NAME} + scaffold_datamodule.log.",
+  "limitation": "Emits boilerplate only — the CustomDataset uses placeholder tensors; wire in real data loading yourself.",
+  "minimal_example": {
+    "perk": "scaffold_datamodule",
+    "vars": {
+      "OUT_NAME": "lightning_datamodule_template.py"
+    }
+  }
+}

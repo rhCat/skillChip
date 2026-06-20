@@ -1,0 +1,23 @@
+{
+  "perk": "setup-config",
+  "skill": "labarchive-integration",
+  "description": "Generate a LabArchives config.yaml (regional api_url + institutional and user credentials) from environment variables. Writes the file under record_store with 0600 permissions. Local only — never contacts the network.",
+  "rules": [
+    "read-only / local — no network calls",
+    "credentials come from env vars (LA_*), never hard-coded",
+    "config.yaml is written under RECORD_STORE with 0600 permissions",
+    "needs the PyYAML package (import yaml); degrades to {} if absent"
+  ],
+  "usage": "Set LA_API_URL, LA_ACCESS_KEY_ID, LA_ACCESS_PASSWORD, LA_USER_EMAIL, LA_USER_EXTERNAL_PASSWORD. Output: config.yaml + setup_config.json audit.",
+  "limitation": "Does not validate credentials against the live API (that requires the labarchives-py package and network). LA_API_URL should be a regional endpoint: https://api.labarchives.com/api (US), https://auapi.labarchives.com/api (AU), or https://ukapi.labarchives.com/api (UK).",
+  "minimal_example": {
+    "perk": "setup-config",
+    "vars": {
+      "LA_API_URL": "https://api.labarchives.com/api",
+      "LA_ACCESS_KEY_ID": "demo_key",
+      "LA_ACCESS_PASSWORD": "demo_pass",
+      "LA_USER_EMAIL": "user@example.edu",
+      "LA_USER_EXTERNAL_PASSWORD": "ext_app_pass"
+    }
+  }
+}

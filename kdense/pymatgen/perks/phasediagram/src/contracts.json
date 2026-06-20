@@ -1,0 +1,23 @@
+{
+  "tool": "phase_diagram",
+  "inputs": {
+    "CHEMSYS": {
+      "type": "string",
+      "required": true
+    },
+    "COMPOSITION": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "phasediagram_log": {
+      "path": "${RECORD_STORE}/phasediagram.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/phasediagram.log"
+  }
+}

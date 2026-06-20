@@ -1,0 +1,21 @@
+{
+  "_perk": "counts_from_featurecounts",
+  "sequence": [
+    "counts_from_featurecounts"
+  ],
+  "tools": {
+    "counts_from_featurecounts": {
+      "binary": "python3",
+      "params": {
+        "COUNTS_FILE": "${COUNTS_FILE}"
+      }
+    }
+  },
+  "env": {
+    "COUNTS_FILE": "${COUNTS_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

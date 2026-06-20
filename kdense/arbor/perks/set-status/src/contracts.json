@@ -1,0 +1,23 @@
+{
+  "tool": "arbor_set_status",
+  "inputs": {
+    "NODE": {
+      "type": "string",
+      "required": true
+    },
+    "STATUS": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "set_status_report": {
+      "path": "${RECORD_STORE}/set_status.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/set_status.txt"
+  }
+}

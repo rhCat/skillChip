@@ -1,0 +1,10 @@
+{
+  "_perk": "render-images",
+  "requires": ["python3"],
+  "vars": { "PDF_PATH": "${FIXTURE}/mini.pdf" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["render_images.txt"],
+    "nonempty": ["render_images.txt"]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_perk": "oracle_score",
+  "sequence": [
+    "tdc_oracle_score"
+  ],
+  "tools": {
+    "tdc_oracle_score": {
+      "binary": "python3",
+      "params": {
+        "TDC_ORACLE": "${TDC_ORACLE}",
+        "TDC_SMILES": "${TDC_SMILES}"
+      }
+    }
+  },
+  "env": {
+    "TDC_ORACLE": "${TDC_ORACLE}",
+    "TDC_SMILES": "${TDC_SMILES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

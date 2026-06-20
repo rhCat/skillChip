@@ -1,0 +1,13 @@
+{
+  "_perk": "find_markers",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.csv",
+    "GROUPBY": "leiden"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["markers.h5ad"],
+    "nonempty": ["markers.h5ad"]
+  }
+}

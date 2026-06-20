@@ -1,0 +1,19 @@
+{
+  "perk": "counts_from_featurecounts",
+  "skill": "bulk-rnaseq",
+  "description": "Parse a combined featureCounts (Subread) matrix into a gene x sample integer counts matrix for PyDESeq2. Skips the leading '#' command line, drops the Geneid/Chr/Start/End/Strand/Length metadata columns, and cleans BAM-path sample names. Writes counts.csv (genes x samples) and metadata_template.csv.",
+  "rules": [
+    "local analysis — reads the featureCounts matrix, writes counts.csv + metadata_template.csv under record_store",
+    "the first '#' line (the featureCounts command) is treated as a comment; the next row is the real header",
+    "counts are already integers; all-zero genes are dropped; never emits TPM/FPKM",
+    "needs only python3 + pandas — no aligner or science container required"
+  ],
+  "usage": "Set COUNTS_FILE (the combined featureCounts matrix). Output: counts/counts.csv + counts/metadata_template.csv.",
+  "limitation": "featureCounts mode only. Expects the standard featureCounts column layout (Geneid,Chr,Start,End,Strand,Length,<bam>...).",
+  "minimal_example": {
+    "perk": "counts_from_featurecounts",
+    "vars": {
+      "COUNTS_FILE": "counts/featurecounts.txt"
+    }
+  }
+}

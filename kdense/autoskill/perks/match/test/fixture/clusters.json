@@ -1,0 +1,11 @@
+{
+  "session_count": 2,
+  "clusters": [
+    {
+      "apps": ["Zotero", "Chrome"],
+      "session_count": 2,
+      "total_duration_seconds": 1020,
+      "example_titles": ["PubMed search literature review", "Google Scholar citations"]
+    }
+  ]
+}

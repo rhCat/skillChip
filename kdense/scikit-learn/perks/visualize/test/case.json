@@ -1,0 +1,13 @@
+{
+  "_perk": "visualize",
+  "requires": ["python3"],
+  "vars": {
+    "DATA_CSV": "${FIXTURE}/data.csv",
+    "N_CLUSTERS": "3"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["cluster_visualization.json"],
+    "nonempty": ["cluster_visualization.json"]
+  }
+}

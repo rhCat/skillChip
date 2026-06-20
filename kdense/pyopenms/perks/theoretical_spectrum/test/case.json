@@ -1,0 +1,10 @@
+{
+  "_perk": "theoretical_spectrum",
+  "requires": ["python3", "bash"],
+  "vars": { "PEPTIDE": "DFPIANGER" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["theoretical_peaks.csv"],
+    "nonempty": ["theoretical_peaks.csv"]
+  }
+}

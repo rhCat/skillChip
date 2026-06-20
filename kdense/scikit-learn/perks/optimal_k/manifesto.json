@@ -1,0 +1,24 @@
+{
+  "_perk": "optimal_k",
+  "sequence": [
+    "optimal_k"
+  ],
+  "tools": {
+    "optimal_k": {
+      "binary": "bash",
+      "params": {
+        "DATA_CSV": "${DATA_CSV}"
+      }
+    }
+  },
+  "env": {
+    "DATA_CSV": "${DATA_CSV}",
+    "K_MIN": "${K_MIN}",
+    "K_MAX": "${K_MAX}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

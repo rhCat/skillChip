@@ -1,0 +1,22 @@
+{
+  "perk": "ora",
+  "skill": "pathway-enrichment",
+  "description": "over-representation analysis (Enrichr/Fisher) on a gene hit list -> results CSV + dotplot",
+  "rules": [
+    "read-only — no inputs are mutated; outputs only under record_store",
+    "gene symbols are cleaned + deduped (human UPPER, mouse Title-case) before testing",
+    "FDR filter uses Adjusted P-value (Benjamini-Hochberg), computed within each library",
+    "needs gseapy + network for Enrichr; absent/offline the porter emits a degraded report so the contract holds"
+  ],
+  "usage": "Set GENES (hit list: one symbol per line or CSV first column). Optional: LIBRARIES (space-separated Enrichr names / GMT paths), ORGANISM (default human), FDR (default 0.05), BACKGROUND (custom universe file). Outputs: ora_results.csv, ora_significant.csv, ora_dotplot.png.",
+  "limitation": "Read-only over-representation only; never runs GSEA. Enrichr uses a fixed background unless BACKGROUND is supplied. Requires gseapy installed and network access to Enrichr for real results.",
+  "minimal_example": {
+    "perk": "ora",
+    "vars": {
+      "GENES": "deg_symbols.txt",
+      "LIBRARIES": "MSigDB_Hallmark_2020 KEGG_2021_Human",
+      "ORGANISM": "human",
+      "FDR": "0.05"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "pages": [
+    { "page_number": 1, "pdf_width": 200, "pdf_height": 200 }
+  ],
+  "form_fields": [
+    {
+      "page_number": 1,
+      "entry_bounding_box": [20, 40, 180, 60],
+      "entry_text": { "text": "Sample", "font": "Helvetica", "font_size": 12, "font_color": "000000" }
+    }
+  ]
+}

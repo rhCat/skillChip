@@ -1,0 +1,27 @@
+{
+  "tool": "validation_image",
+  "inputs": {
+    "PAGE_NUMBER": {
+      "type": "string",
+      "required": true
+    },
+    "FIELDS_JSON": {
+      "type": "string",
+      "required": true
+    },
+    "PAGE_IMAGE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "validation_image_out": {
+      "path": "${RECORD_STORE}/validation_image.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/validation_image.txt"
+  }
+}

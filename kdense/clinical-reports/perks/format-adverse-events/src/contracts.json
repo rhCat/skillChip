@@ -1,0 +1,19 @@
+{
+  "tool": "format_adverse_events",
+  "inputs": {
+    "AE_CSV": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "ae_summary": {
+      "path": "${RECORD_STORE}/ae_summary.md",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/ae_summary.md"
+  }
+}

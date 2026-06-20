@@ -1,0 +1,23 @@
+{
+  "_perk": "sequence_analysis",
+  "sequence": [
+    "sequence_analysis"
+  ],
+  "tools": {
+    "sequence_analysis": {
+      "binary": "python3",
+      "params": {
+        "FASTA": "${FASTA}",
+        "BLAST_DB": "${BLAST_DB}"
+      }
+    }
+  },
+  "env": {
+    "FASTA": "${FASTA}",
+    "BLAST_DB": "${BLAST_DB}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

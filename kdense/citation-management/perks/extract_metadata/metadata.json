@@ -1,0 +1,20 @@
+{
+  "perk": "extract_metadata",
+  "skill": "citation-management",
+  "description": "extract complete citation metadata from a DOI/PMID/arXiv ID/URL and emit BibTeX",
+  "rules": [
+    "read-only — BibTeX written to record_store as metadata.bib",
+    "IDENTIFIER auto-detected as DOI (10.*), PMID (digits), arXiv (NNNN.NNNNN), or URL",
+    "ID_FILE (optional) points to a file with one mixed identifier per line",
+    "queries CrossRef (DOI), NCBI E-utilities (PMID), or arXiv API; NCBI_EMAIL/NCBI_API_KEY env vars raise PubMed limits",
+    "porter degrades gracefully (writes {} and exits 0) when the source API is unreachable"
+  ],
+  "usage": "Set IDENTIFIER (a DOI/PMID/arXiv ID/URL) and/or ID_FILE. Output: metadata.bib.",
+  "limitation": "Requires network access to CrossRef/NCBI/arXiv. PMID extraction is best with NCBI_EMAIL set.",
+  "minimal_example": {
+    "perk": "extract_metadata",
+    "vars": {
+      "IDENTIFIER": "10.1038/s41586-021-03819-2"
+    }
+  }
+}

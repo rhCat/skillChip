@@ -1,0 +1,23 @@
+{
+  "_perk": "evaluate",
+  "sequence": [
+    "tdc_evaluate"
+  ],
+  "tools": {
+    "tdc_evaluate": {
+      "binary": "python3",
+      "params": {
+        "TDC_METRIC": "${TDC_METRIC}",
+        "TDC_PRED": "${TDC_PRED}"
+      }
+    }
+  },
+  "env": {
+    "TDC_METRIC": "${TDC_METRIC}",
+    "TDC_PRED": "${TDC_PRED}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

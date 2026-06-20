@@ -1,0 +1,22 @@
+{
+  "perk": "validate_citations",
+  "skill": "citation-management",
+  "description": "validate a BibTeX file for completeness, format, duplicates, venue citation count, and manuscript cross-references (offline)",
+  "rules": [
+    "read-only — JSON report written to record_store as validation.json",
+    "checks required/recommended fields per entry type, year + DOI format, page-range style, author separators",
+    "detects duplicate DOIs/keys and identical titles",
+    "VENUE (nature|science|cell|neurips|icml|iclr|cvpr|acl|review|nejm|lancet|jama|...) or MIN_COUNT enforces citation-count standards",
+    "MANUSCRIPT (.md/.tex) cross-checks cited keys vs defined entries (unresolved + unused)",
+    "DOI resolution (--check-dois) is NOT exposed by this perk, so it runs fully offline"
+  ],
+  "usage": "Set BIB_FILE. Optionally VENUE, MIN_COUNT, MANUSCRIPT. Output: validation.json.",
+  "limitation": "Offline structural validation only — does not resolve DOIs over the network. Regex-based BibTeX parser.",
+  "minimal_example": {
+    "perk": "validate_citations",
+    "vars": {
+      "BIB_FILE": "/path/to/references.bib",
+      "VENUE": "nature"
+    }
+  }
+}

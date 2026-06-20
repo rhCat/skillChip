@@ -1,0 +1,37 @@
+{
+  "skill": "markitdown",
+  "perks": [
+    {
+      "id": "batch_convert",
+      "summary": "batch convert a directory of files (PDF/DOCX/PPTX/XLSX/HTML/images) to Markdown",
+      "destructive": false,
+      "tools": [
+        "batch_convert"
+      ]
+    },
+    {
+      "id": "convert_literature",
+      "summary": "convert a directory of scientific PDFs to Markdown with front-matter metadata + INDEX/catalog",
+      "destructive": false,
+      "tools": [
+        "convert_literature"
+      ]
+    },
+    {
+      "id": "convert_with_ai",
+      "summary": "convert one file to Markdown with AI-enhanced image descriptions via OpenRouter",
+      "destructive": false,
+      "tools": [
+        "convert_with_ai"
+      ]
+    },
+    {
+      "id": "generate_schematic",
+      "summary": "generate a publication-quality scientific schematic from a natural-language prompt via OpenRouter (Nano Banana 2 + Gemini review)",
+      "destructive": false,
+      "tools": [
+        "generate_schematic"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "simple_randomization",
+  "inputs": {
+    "SPEC_JSON": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "allocation_schedule": {
+      "path": "${RECORD_STORE}/allocation_schedule.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/allocation_schedule.csv"
+  }
+}

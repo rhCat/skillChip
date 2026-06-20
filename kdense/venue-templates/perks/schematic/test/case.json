@@ -1,0 +1,4 @@
+{
+  "_perk": "schematic",
+  "skip": "needs OPENROUTER_API_KEY + network egress to the OpenRouter image API + the requests library; cannot run offline even degraded (would only emit an empty 0-byte schematic.png marker)."
+}

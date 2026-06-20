@@ -1,0 +1,15 @@
+{
+  "_perk": "schematic",
+  "requires": ["python3"],
+  "vars": {
+    "PROMPT": "POSTER FORMAT for A0. SIMPLE 3-box workflow: DISCOVER then VALIDATE then APPROVE. Giant bold labels. 60% white space.",
+    "OUTPUT_NAME": "workflow.png",
+    "DOC_TYPE": "poster",
+    "ITERATIONS": "2"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["schematic.log"],
+    "nonempty": ["schematic.log"]
+  }
+}

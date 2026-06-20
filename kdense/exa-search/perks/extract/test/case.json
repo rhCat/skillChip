@@ -1,0 +1,10 @@
+{
+  "_perk": "extract",
+  "requires": ["python3"],
+  "vars": { "URLS": "https://arxiv.org/abs/2401.04088" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["extract.json"],
+    "nonempty": ["extract.json"]
+  }
+}

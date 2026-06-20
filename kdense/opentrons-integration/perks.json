@@ -1,0 +1,37 @@
+{
+  "skill": "opentrons-integration",
+  "perks": [
+    {
+      "id": "simulate",
+      "summary": "dry-run an Opentrons Protocol API v2 file via opentrons_simulate (read-only, no robot)",
+      "destructive": false,
+      "tools": [
+        "ot_simulate"
+      ]
+    },
+    {
+      "id": "scaffold-basic",
+      "summary": "emit the basic transfer protocol template (.py) into the record store",
+      "destructive": false,
+      "tools": [
+        "ot_scaffold_basic"
+      ]
+    },
+    {
+      "id": "scaffold-pcr",
+      "summary": "emit the PCR-setup (thermocycler) protocol template (.py) into the record store",
+      "destructive": false,
+      "tools": [
+        "ot_scaffold_pcr"
+      ]
+    },
+    {
+      "id": "scaffold-serial-dilution",
+      "summary": "emit the serial-dilution protocol template (.py) into the record store",
+      "destructive": false,
+      "tools": [
+        "ot_scaffold_serial_dilution"
+      ]
+    }
+  ]
+}

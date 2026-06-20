@@ -1,0 +1,23 @@
+{
+  "tool": "sequence_analysis",
+  "inputs": {
+    "FASTA": {
+      "type": "string",
+      "required": true
+    },
+    "BLAST_DB": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "sequence_analysis_log": {
+      "path": "${RECORD_STORE}/sequence_analysis.log",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/sequence_analysis.log"
+  }
+}

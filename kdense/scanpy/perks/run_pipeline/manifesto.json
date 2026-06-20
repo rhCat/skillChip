@@ -1,0 +1,39 @@
+{
+  "_perk": "run_pipeline",
+  "sequence": [
+    "run_pipeline"
+  ],
+  "tools": {
+    "run_pipeline": {
+      "binary": "python3",
+      "params": {
+        "INPUT": "${INPUT}"
+      }
+    }
+  },
+  "env": {
+    "INPUT": "${INPUT}",
+    "CONFIG": "${CONFIG}",
+    "MIN_GENES": "${MIN_GENES}",
+    "MAX_GENES": "${MAX_GENES}",
+    "MIN_CELLS": "${MIN_CELLS}",
+    "MT_THRESHOLD": "${MT_THRESHOLD}",
+    "SCRUBLET": "${SCRUBLET}",
+    "TARGET_SUM": "${TARGET_SUM}",
+    "N_TOP_GENES": "${N_TOP_GENES}",
+    "HVG_FLAVOR": "${HVG_FLAVOR}",
+    "SCALE": "${SCALE}",
+    "REGRESS_OUT": "${REGRESS_OUT}",
+    "N_PCS": "${N_PCS}",
+    "N_NEIGHBORS": "${N_NEIGHBORS}",
+    "RESOLUTION": "${RESOLUTION}",
+    "BATCH_KEY": "${BATCH_KEY}",
+    "BATCH_METHOD": "${BATCH_METHOD}",
+    "MARKER_METHOD": "${MARKER_METHOD}",
+    "SKIP_MARKERS": "${SKIP_MARKERS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

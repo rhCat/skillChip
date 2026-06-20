@@ -1,0 +1,6 @@
+relation,display_relation,x_id,x_type,x_name,x_source,y_id,y_type,y_name,y_source
+disease_gene,associated with,EFO_0000249,disease,Alzheimer's disease,EFO,348,gene/protein,APOE,NCBI
+drug_disease,indication,CHEMBL502,drug,Donepezil,DrugBank,EFO_0000249,disease,Alzheimer's disease,EFO
+disease_phenotype,presents,EFO_0000249,disease,Alzheimer's disease,EFO,HP_0002354,phenotype,memory impairment,HPO
+drug_protein,target,CHEMBL502,drug,Donepezil,DrugBank,43,gene/protein,ACHE,NCBI
+disease_disease,related,EFO_0000249,disease,Alzheimer's disease,EFO,EFO_0003888,disease,frontotemporal dementia,EFO

@@ -1,0 +1,12 @@
+{
+  "_perk": "compound_xref",
+  "requires": ["python3"],
+  "vars": {
+    "COMPOUND": "Geldanamycin"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["compound_xref.txt"],
+    "nonempty": ["compound_xref.txt"]
+  }
+}

@@ -1,0 +1,5 @@
+sample,fastq_1,fastq_2,strandedness
+ctrl_rep1,https://example.org/ctrl_rep1_R1.fastq.gz,https://example.org/ctrl_rep1_R2.fastq.gz,auto
+ctrl_rep2,https://example.org/ctrl_rep2_R1.fastq.gz,https://example.org/ctrl_rep2_R2.fastq.gz,auto
+treat_rep1,https://example.org/treat_rep1_R1.fastq.gz,https://example.org/treat_rep1_R2.fastq.gz,auto
+treat_rep2,https://example.org/treat_rep2_R1.fastq.gz,https://example.org/treat_rep2_R2.fastq.gz,auto

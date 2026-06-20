@@ -1,0 +1,20 @@
+{
+  "perk": "score_genes",
+  "skill": "scanpy",
+  "description": "Score cells for one or more gene signatures with sc.tl.score_genes (adds one obs column per signature, <name>_score) and/or the built-in cell-cycle phase scoring. Writes UMAPs colored by each score.",
+  "rules": [
+    "GENE_SETS is a JSON file {name: [genes]}; genes absent from the data are skipped",
+    "read-only inputs — writes a new scored.h5ad + score UMAPs under record_store",
+    "CELL_CYCLE adds S_score, G2M_score, and phase using Tirosh 2016 human genes",
+    "provide GENE_SETS and/or CELL_CYCLE"
+  ],
+  "usage": "Set INPUT and one of GENE_SETS (JSON) or CELL_CYCLE=1. Optional: NO_PLOTS=1. Output: scored.h5ad.",
+  "limitation": "Requires scanpy installed; without it the porter writes a {} placeholder scored.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "score_genes",
+    "vars": {
+      "INPUT": "annotated.h5ad",
+      "GENE_SETS": "signatures.json"
+    }
+  }
+}

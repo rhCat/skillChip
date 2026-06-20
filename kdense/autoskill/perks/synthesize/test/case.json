@@ -1,0 +1,16 @@
+{
+  "_perk": "synthesize",
+  "requires": ["python3"],
+  "vars": {
+    "MATCHES": "${FIXTURE}/matches.json",
+    "CONFIG": "${FIXTURE}/config.yaml"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["verdicts.json"],
+    "nonempty": ["verdicts.json"],
+    "contains": {
+      "verdicts.json": ["\"verdicts\""]
+    }
+  }
+}

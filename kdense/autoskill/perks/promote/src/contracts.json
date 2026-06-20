@@ -1,0 +1,27 @@
+{
+  "tool": "promote",
+  "inputs": {
+    "PROPOSED": {
+      "type": "string",
+      "required": true
+    },
+    "SKILLS_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "NAME": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "report": {
+      "path": "${RECORD_STORE}/promote.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/promote.txt"
+  }
+}

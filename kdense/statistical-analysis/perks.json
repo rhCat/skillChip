@@ -1,0 +1,45 @@
+{
+  "skill": "statistical-analysis",
+  "perks": [
+    {
+      "id": "normality",
+      "summary": "Shapiro-Wilk normality test on a numeric column (+ Q-Q/histogram figure)",
+      "destructive": false,
+      "tools": [
+        "check_normality"
+      ]
+    },
+    {
+      "id": "homogeneity",
+      "summary": "Levene's test for homogeneity of variance across groups (+ box/variance figure)",
+      "destructive": false,
+      "tools": [
+        "check_homogeneity"
+      ]
+    },
+    {
+      "id": "linearity",
+      "summary": "Linear-fit + residuals-vs-fitted linearity diagnostic for two numeric columns (+ figure)",
+      "destructive": false,
+      "tools": [
+        "check_linearity"
+      ]
+    },
+    {
+      "id": "outliers",
+      "summary": "Detect outliers in a numeric column by IQR or z-score (+ box/scatter figure)",
+      "destructive": false,
+      "tools": [
+        "detect_outliers"
+      ]
+    },
+    {
+      "id": "assumptions",
+      "summary": "Comprehensive assumption check (outliers + normality + variance homogeneity) for a column, optionally by group",
+      "destructive": false,
+      "tools": [
+        "assumption_check"
+      ]
+    }
+  ]
+}

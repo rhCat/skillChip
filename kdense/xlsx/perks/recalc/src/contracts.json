@@ -1,0 +1,23 @@
+{
+  "tool": "recalc",
+  "inputs": {
+    "XLSX_FILE": {
+      "type": "string",
+      "required": true
+    },
+    "RECALC_TIMEOUT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "recalc_out": {
+      "path": "${RECORD_STORE}/recalc.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/recalc.json"
+  }
+}

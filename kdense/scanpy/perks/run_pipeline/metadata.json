@@ -1,0 +1,21 @@
+{
+  "perk": "run_pipeline",
+  "skill": "scanpy",
+  "description": "End-to-end standard scRNA-seq pipeline in one command on raw counts: load -> QC + filter -> (optional doublets) -> normalize + log1p -> HVG -> (optional scale/regress) -> PCA -> (optional batch correction) -> neighbors -> UMAP -> Leiden -> marker genes -> save.",
+  "rules": [
+    "fastest path from counts to a clustered, annotation-ready object; use the per-step perks to iterate on one stage",
+    "read-only input — writes processed.h5ad, marker CSVs (markers/), and figures under record_store",
+    "CONFIG is an optional JSON file overriding any flag (keys mirror flag names with underscores)",
+    "REGRESS_OUT is a space-separated list of obs columns; BATCH_METHOD is harmony or combat"
+  ],
+  "usage": "Set INPUT (raw counts). Optional: CONFIG, MIN_GENES, MAX_GENES, MIN_CELLS, MT_THRESHOLD, SCRUBLET=1, TARGET_SUM, N_TOP_GENES, HVG_FLAVOR, SCALE=1, REGRESS_OUT, N_PCS, N_NEIGHBORS, RESOLUTION, BATCH_KEY, BATCH_METHOD, MARKER_METHOD, SKIP_MARKERS=1. Output: processed.h5ad.",
+  "limitation": "Requires scanpy installed (plus leidenalg/python-igraph; harmonypy for harmony). Without scanpy the porter writes a {} placeholder processed.h5ad and still passes.",
+  "minimal_example": {
+    "perk": "run_pipeline",
+    "vars": {
+      "INPUT": "raw.h5ad",
+      "RESOLUTION": "0.5",
+      "N_TOP_GENES": "2000"
+    }
+  }
+}

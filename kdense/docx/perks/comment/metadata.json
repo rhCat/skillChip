@@ -1,0 +1,20 @@
+{
+  "perk": "comment",
+  "skill": "docx",
+  "description": "Add a comment (or threaded reply) into an already-unpacked .docx directory by appending to its comment parts (comments.xml + extended/ids/extensible parts) and wiring up relationships and content types.",
+  "rules": [
+    "operates on an unpacked dir the caller already produced via the unpack perk",
+    "COMMENT_TEXT must be pre-escaped XML (e.g. &amp;, &#x2019;)",
+    "PARENT_ID makes it a reply; the document.xml markers must still be added by the caller"
+  ],
+  "usage": "Set UNPACKED_DIR, COMMENT_ID (unique int), COMMENT_TEXT. Optional COMMENT_AUTHOR (default Claude), PARENT_ID (reply). Output: comment.log with the marker snippet to paste into document.xml.",
+  "limitation": "The vendored core imports defusedxml; if absent the porter records the import error and exits 0 with an empty log (degraded). With defusedxml present it edits the comment parts in place.",
+  "minimal_example": {
+    "perk": "comment",
+    "vars": {
+      "UNPACKED_DIR": "unpacked",
+      "COMMENT_ID": "0",
+      "COMMENT_TEXT": "Please clarify this clause."
+    }
+  }
+}

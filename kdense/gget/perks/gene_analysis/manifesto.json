@@ -1,0 +1,23 @@
+{
+  "_perk": "gene_analysis",
+  "sequence": [
+    "gene_analysis"
+  ],
+  "tools": {
+    "gene_analysis": {
+      "binary": "python3",
+      "params": {
+        "GENE": "${GENE}",
+        "SPECIES": "${SPECIES}"
+      }
+    }
+  },
+  "env": {
+    "GENE": "${GENE}",
+    "SPECIES": "${SPECIES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

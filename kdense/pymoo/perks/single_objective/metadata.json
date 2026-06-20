@@ -1,0 +1,23 @@
+{
+  "perk": "single_objective",
+  "skill": "pymoo",
+  "description": "single-objective optimization with a Genetic Algorithm on a benchmark problem (read-only)",
+  "rules": [
+    "read-only — computes a result and writes a report; mutates nothing remote or live",
+    "runs the vendored single_objective_example.py core via python3",
+    "forces MPLBACKEND=Agg so plotting never blocks",
+    "captures stdout (best solution, objective, n_gen, n_eval) to record_store/single_objective.txt",
+    "requires the pymoo package at run time; degrades to an empty {} report if it is absent"
+  ],
+  "usage": "Set PROBLEM (e.g. sphere), N_VAR, POP_SIZE, N_GEN. Output: single_objective.txt.",
+  "limitation": "The vendored core runs its built-in benchmark (sphere, GA); vars document intent. Needs the pymoo library installed to produce real results.",
+  "minimal_example": {
+    "perk": "single_objective",
+    "vars": {
+      "PROBLEM": "sphere",
+      "N_VAR": "10",
+      "POP_SIZE": "100",
+      "N_GEN": "100"
+    }
+  }
+}

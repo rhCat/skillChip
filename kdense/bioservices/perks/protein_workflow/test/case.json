@@ -1,0 +1,12 @@
+{
+  "_perk": "protein_workflow",
+  "requires": ["python3"],
+  "vars": {
+    "PROTEIN": "ZAP70_HUMAN"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["protein_report.txt"],
+    "nonempty": ["protein_report.txt"]
+  }
+}

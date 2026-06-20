@@ -1,0 +1,19 @@
+{
+  "tool": "slides_to_pdf",
+  "inputs": {
+    "IMAGES_DIR": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "presentation_pdf": {
+      "path": "${RECORD_STORE}/presentation.pdf",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/presentation.pdf"
+  }
+}

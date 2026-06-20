@@ -1,0 +1,10 @@
+{
+  "_perk": "unpack",
+  "requires": ["bash", "python3"],
+  "vars": { "DOCX_FILE": "${FIXTURE}/sample.docx" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["unpack.log"],
+    "nonempty": ["unpack.log"]
+  }
+}

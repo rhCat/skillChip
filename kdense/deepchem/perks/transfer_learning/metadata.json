@@ -1,0 +1,26 @@
+{
+  "perk": "transfer_learning",
+  "skill": "deepchem",
+  "description": "Fine-tune a pretrained molecular model (chemberta, grover, or molformer) on a property-prediction task — a MoleculeNet benchmark (tox21/bbbp/bace/hiv/delaney/freesolv/lipo) or a custom SMILES CSV — and evaluate it.",
+  "rules": [
+    "read-only / local — reads a CSV (or downloads a MoleculeNet benchmark + pretrained weights) and writes a report; no remote or live service is mutated",
+    "exactly one of DATASET (MoleculeNet) or DATA_CSV (custom) must be set",
+    "featurizer is chosen per model: Raw/DummyFeaturizer for chemberta+molformer, GraphConv for grover",
+    "report (model info, fine-tuning log, evaluation metrics) written to record_store",
+    "needs deepchem[torch] + RDKit + network access to download pretrained weights at run time; porter degrades gracefully if absent"
+  ],
+  "usage": "Set MODEL (chemberta|grover|molformer). Then either DATASET (a MoleculeNet name) OR DATA_CSV + TARGET (space-separated columns) + SMILES_COL + TASK_TYPE (classification|regression). EPOCHS sets fine-tuning epochs. Output: transfer_learning.txt.",
+  "limitation": "Not hermetic offline — fine-tuning requires deepchem with a torch backend, RDKit, and network access to fetch pretrained weights (e.g. ChemBERTa from HuggingFace). Without them the porter writes transfer_learning.txt noting the missing dependency and exits 0.",
+  "minimal_example": {
+    "perk": "transfer_learning",
+    "vars": {
+      "MODEL": "chemberta",
+      "DATASET": "",
+      "DATA_CSV": "./small_dataset.csv",
+      "TARGET": "activity",
+      "SMILES_COL": "smiles",
+      "TASK_TYPE": "classification",
+      "EPOCHS": "10"
+    }
+  }
+}

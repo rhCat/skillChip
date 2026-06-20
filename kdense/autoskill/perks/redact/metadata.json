@@ -1,0 +1,19 @@
+{
+  "perk": "redact",
+  "skill": "autoskill",
+  "description": "scrub emails, API keys, bearer tokens, JWTs, phones, SSNs from a timeline JSON's text and window_title fields",
+  "rules": [
+    "read-only / pure — no network, stdlib only",
+    "defense-in-depth over screenpipe's own PII removal, applied before any summary leaves the machine",
+    "placeholder-substitutes known secret-env assignments, bearer/JWT/API-key formats, emails, phones, SSNs",
+    "redacted timeline written to record_store as redacted.json"
+  ],
+  "usage": "Set INPUT (a timeline JSON array of {ts,app,window_title,text,content_type}). Output: redacted.json.",
+  "limitation": "Regex-based defense-in-depth, not a guarantee; it scrubs the listed patterns only. Operates on the fetched timeline JSON, not raw OCR frames.",
+  "minimal_example": {
+    "perk": "redact",
+    "vars": {
+      "INPUT": "./timeline.json"
+    }
+  }
+}

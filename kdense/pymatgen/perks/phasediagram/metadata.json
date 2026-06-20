@@ -1,0 +1,21 @@
+{
+  "perk": "phasediagram",
+  "skill": "pymatgen",
+  "description": "Build a phase diagram for a chemical system from Materials Project entries, list the stable phases on the convex hull, and (optionally) report the energy above hull / decomposition for a target composition.",
+  "rules": [
+    "read-only — queries the Materials Project database; does not mutate any remote service",
+    "requires the mp-api package, a valid MP_API_KEY, and network access",
+    "CHEMSYS must contain at least 2 elements (e.g. Li-Fe-O)",
+    "COMPOSITION is optional — when set, the perk reports stability (energy above hull / decomposition)",
+    "stability report written to phasediagram.log under record_store; degrades gracefully (records missing dep / key, exits 0) when offline"
+  ],
+  "usage": "Set CHEMSYS (e.g. Li-Fe-O) and optionally COMPOSITION (e.g. LiFeO2). Requires MP_API_KEY in the environment. Output: phasediagram.log under record_store.",
+  "limitation": "Cannot run without mp-api + MP_API_KEY + network. The plot/image output of the underlying script is not produced (headless); only the textual stability report is captured. Without the dependencies the porter writes a graceful stub and a missing-dependency note.",
+  "minimal_example": {
+    "perk": "phasediagram",
+    "vars": {
+      "CHEMSYS": "Li-Fe-O",
+      "COMPOSITION": "LiFeO2"
+    }
+  }
+}

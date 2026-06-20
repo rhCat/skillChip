@@ -1,0 +1,12 @@
+{
+  "_perk": "raw",
+  "requires": ["python3"],
+  "vars": {
+    "NAME": "llms"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["raw.txt"],
+    "nonempty": ["raw.txt"]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_perk": "extract_chromatograms",
+  "requires": ["python3", "bash"],
+  "vars": { "INPUT": "${FIXTURE}/sample.mzML", "TIC": "1" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["chromatograms.csv"],
+    "nonempty": ["chromatograms.csv"]
+  }
+}

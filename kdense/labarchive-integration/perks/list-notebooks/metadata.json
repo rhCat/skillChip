@@ -1,0 +1,18 @@
+{
+  "perk": "list-notebooks",
+  "skill": "labarchive-integration",
+  "description": "Authenticate to LabArchives and list every notebook accessible to the user (notebook id, name, role). Read-only against the remote API. Reads credentials from a config.yaml (produce one with the setup-config perk).",
+  "rules": [
+    "read-only remote — lists notebooks, mutates nothing",
+    "credentials are read from LA_CONFIG (a config.yaml)",
+    "needs the labarchives-py package + network; degrades to {} offline"
+  ],
+  "usage": "Set LA_CONFIG to a config.yaml path. Output: notebooks.json (the listing) + list_notebooks.json audit.",
+  "limitation": "Requires the labarchives-py package, valid enterprise API credentials, and network access. When the package is absent the tool writes {} and exits 0 (graceful offline) so the contract still holds.",
+  "minimal_example": {
+    "perk": "list-notebooks",
+    "vars": {
+      "LA_CONFIG": "/path/to/config.yaml"
+    }
+  }
+}

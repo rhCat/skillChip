@@ -1,0 +1,13 @@
+{
+  "_perk": "cluster",
+  "requires": ["python3"],
+  "vars": {
+    "INPUT": "${FIXTURE}/tiny.csv",
+    "RESOLUTION": "0.5"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["clustered.h5ad"],
+    "nonempty": ["clustered.h5ad"]
+  }
+}

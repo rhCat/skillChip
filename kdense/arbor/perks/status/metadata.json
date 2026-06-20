@@ -1,0 +1,16 @@
+{
+  "perk": "status",
+  "skill": "arbor",
+  "description": "render the hypothesis tree as an ASCII audit trail (read-only)",
+  "rules": [
+    "read-only — never mutates the tree or run config",
+    "renders each node with a status symbol, hypothesis, scores, and the M_best marker",
+    "useful for the final report and quick scans of what was tried"
+  ],
+  "usage": "Set RECORD_STORE pointing at an existing Arbor run. Output: status.txt. If no run exists in the store, an empty bootstrap run is created so there is a tree to render.",
+  "limitation": "Read-only render only — no interpretation, no decisions.",
+  "minimal_example": {
+    "perk": "status",
+    "vars": {}
+  }
+}

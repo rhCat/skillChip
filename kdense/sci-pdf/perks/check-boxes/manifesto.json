@@ -1,0 +1,21 @@
+{
+  "_perk": "check-boxes",
+  "sequence": [
+    "check_boxes"
+  ],
+  "tools": {
+    "check_boxes": {
+      "binary": "python3",
+      "params": {
+        "FIELDS_JSON": "${FIELDS_JSON}"
+      }
+    }
+  },
+  "env": {
+    "FIELDS_JSON": "${FIELDS_JSON}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

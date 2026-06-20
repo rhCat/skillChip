@@ -1,0 +1,27 @@
+{
+  "_perk": "search",
+  "sequence": [
+    "exa_search"
+  ],
+  "tools": {
+    "exa_search": {
+      "binary": "python3",
+      "params": {
+        "QUERY": "${QUERY}"
+      }
+    }
+  },
+  "env": {
+    "QUERY": "${QUERY}",
+    "EXA_API_KEY": "${EXA_API_KEY}",
+    "SEARCH_TYPE": "${SEARCH_TYPE}",
+    "NUM_RESULTS": "${NUM_RESULTS}",
+    "CATEGORY": "${CATEGORY}",
+    "INCLUDE_DOMAINS": "${INCLUDE_DOMAINS}",
+    "EXCLUDE_DOMAINS": "${EXCLUDE_DOMAINS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

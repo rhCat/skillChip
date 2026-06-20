@@ -1,0 +1,25 @@
+{
+  "_perk": "validate",
+  "sequence": [
+    "validate_files"
+  ],
+  "tools": {
+    "validate_files": {
+      "binary": "python3",
+      "params": {
+        "BAM_FILES": "${BAM_FILES}",
+        "BIGWIG_FILES": "${BIGWIG_FILES}",
+        "BED_FILES": "${BED_FILES}"
+      }
+    }
+  },
+  "env": {
+    "BAM_FILES": "${BAM_FILES}",
+    "BIGWIG_FILES": "${BIGWIG_FILES}",
+    "BED_FILES": "${BED_FILES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

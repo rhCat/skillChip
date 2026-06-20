@@ -1,0 +1,13 @@
+{
+  "_perk": "configure_style",
+  "requires": ["python3"],
+  "vars": {
+    "STYLE_PRESET": "publication",
+    "STYLE_OUT": "custom.mplstyle"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["custom.mplstyle"],
+    "nonempty": ["custom.mplstyle"]
+  }
+}

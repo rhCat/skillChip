@@ -1,0 +1,23 @@
+{
+  "perk": "dea",
+  "skill": "pydeseq2",
+  "description": "run the full PyDESeq2 differential-expression pipeline (load + filter + fit + Wald test + LFC shrink + export)",
+  "rules": [
+    "read-only inputs — writes only under record_store (deseq2_results.csv, significant_genes.csv, results_sorted_by_padj.csv, deseq_dataset.h5ad)",
+    "runs the complete DESeq2 pipeline: size factors, dispersion fitting, Wald tests, Benjamini-Hochberg FDR",
+    "optional apeGLM LFC shrinkage (skip with NO_SHRINK) and volcano/MA plots (PLOTS=1)",
+    "CONTRAST is three space-separated tokens: '<variable> <test_level> <reference_level>'",
+    "requires the pydeseq2 library; without it the porter writes a {} placeholder and still passes"
+  ],
+  "usage": "Set COUNTS, METADATA, DESIGN (e.g. '~condition'), CONTRAST (e.g. 'condition treated control'). Optional: MIN_COUNTS, ALPHA, N_CPUS, SHRINK_COEFF, NO_TRANSPOSE, NO_SHRINK, PLOTS. Output: deseq2_results.csv.",
+  "limitation": "Needs pydeseq2 (Python >=3.11 stack) installed to produce real results. Without it the run degrades to a {} placeholder so the contract still holds.",
+  "minimal_example": {
+    "perk": "dea",
+    "vars": {
+      "COUNTS": "counts.csv",
+      "METADATA": "metadata.csv",
+      "DESIGN": "~condition",
+      "CONTRAST": "condition treated control"
+    }
+  }
+}

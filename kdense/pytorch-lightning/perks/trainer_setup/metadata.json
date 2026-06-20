@@ -1,0 +1,18 @@
+{
+  "perk": "trainer_setup",
+  "skill": "pytorch-lightning",
+  "description": "emit ready-to-use Trainer configurations (basic, debug, single-GPU, DDP, FSDP, DeepSpeed, reproducible, etc.)",
+  "rules": [
+    "read-only: produces a local .py of Trainer factory functions, never starts a training run",
+    "config source is written to record_store/${OUT_NAME}; validation stdout goes to trainer_setup.log",
+    "emitting the template needs no heavy lib; the optional validation run needs lightning installed"
+  ],
+  "usage": "Set OUT_NAME (the .py filename to write). Output: record_store/${OUT_NAME} + trainer_setup.log.",
+  "limitation": "Emits ten configuration factories only — multi-GPU/TPU, FSDP and DeepSpeed strategies require the matching hardware and installs at actual training time.",
+  "minimal_example": {
+    "perk": "trainer_setup",
+    "vars": {
+      "OUT_NAME": "trainer_configs.py"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "tool": "fetch_window",
+  "inputs": {
+    "START": {
+      "type": "string",
+      "required": true
+    },
+    "END": {
+      "type": "string",
+      "required": true
+    },
+    "SCREENPIPE_URL": {
+      "type": "string",
+      "required": false
+    },
+    "SCREENPIPE_TOKEN": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "timeline": {
+      "path": "${RECORD_STORE}/timeline.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/timeline.json"
+  }
+}

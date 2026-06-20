@@ -1,0 +1,25 @@
+{
+  "perk": "block-randomization",
+  "skill": "experimental-design",
+  "description": "Seeded permuted-block randomization schedule; every arm appears in the specified ratio within each block, so balance is maintained throughout enrollment.",
+  "rules": [
+    "read-only — reads a JSON spec, writes a CSV; mutates no live service",
+    "seeded — the exact schedule is reproducible from SPEC_JSON.seed",
+    "block_size must be a multiple of sum(ratio)",
+    "needs numpy + pandas; no network or GPU"
+  ],
+  "usage": "Set SPEC_JSON to a JSON file with keys: n (required int), arms (list[str]), block_size (int), ratio (list[int]), seed (int). Output: allocation_schedule.csv under record_store.",
+  "limitation": "Fixed small blocks are slightly predictable in unblinded trials — vary block size if that matters. No power/sample-size calculation.",
+  "minimal_example": {
+    "perk": "block-randomization",
+    "vars": {
+      "SPEC_JSON": "spec.json"
+    },
+    "spec.json": {
+      "n": 12,
+      "arms": ["treatment", "control"],
+      "ratio": [2, 1],
+      "seed": 1
+    }
+  }
+}

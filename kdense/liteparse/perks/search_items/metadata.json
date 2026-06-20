@@ -1,0 +1,22 @@
+{
+  "perk": "search_items",
+  "skill": "liteparse",
+  "description": "Phrase-search the text_items of a parsed-document JSON and return matches with merged bounding boxes (stdlib reimplementation of liteparse.search_items).",
+  "rules": [
+    "read-only — consumes a parsed JSON file (pages[].text_items[]) produced by the parse perk",
+    "matches may span multiple adjacent text_items; matched items are merged into one combined bbox",
+    "CASE_SENSITIVE='1' makes matching case-sensitive (default: case-insensitive)",
+    "fully local, stdlib only — no liteparse package or network required",
+    "results written under record_store as matches.json"
+  ],
+  "usage": "Set PARSED_JSON (a JSON file with pages[].text_items[]), PHRASE, optional CASE_SENSITIVE (1). Output: matches.json (list of {page_num, text, x, y, width, height}).",
+  "limitation": "Operates on already-parsed JSON; it does not parse documents itself. Use the parse perk (FORMAT=json) first to produce the input.",
+  "minimal_example": {
+    "perk": "search_items",
+    "vars": {
+      "PARSED_JSON": "parse.json",
+      "PHRASE": "Materials and Methods",
+      "CASE_SENSITIVE": "0"
+    }
+  }
+}

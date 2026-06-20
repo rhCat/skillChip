@@ -1,0 +1,9 @@
+{
+  "rows": [
+    {"temp": 20, "conc": 1},
+    {"temp": 60, "conc": 1},
+    {"temp": 20, "conc": 10},
+    {"temp": 60, "conc": 10}
+  ],
+  "seed": 1
+}

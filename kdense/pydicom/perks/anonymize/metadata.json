@@ -1,0 +1,23 @@
+{
+  "perk": "anonymize",
+  "skill": "pydicom",
+  "description": "anonymize a DICOM file by removing or replacing Protected Health Information (PHI) tags, writing a new de-identified DICOM",
+  "rules": [
+    "read-only on the input .dcm — writes a NEW anonymized file, never mutates the input",
+    "output anonymized.dcm written to record_store",
+    "PatientName/PatientID replaced (default ANONYMOUS), PatientBirthDate set to 19000101",
+    "other PHI tags (institution, physicians, descriptions, etc.) removed",
+    "pixel data is preserved intact",
+    "degrades gracefully when pydicom is not importable"
+  ],
+  "usage": "Set DICOM_IN (input .dcm). Optional PATIENT_ID and PATIENT_NAME (replacement values, default ANONYMOUS). Output: anonymized.dcm under record_store.",
+  "limitation": "Removes/replaces a fixed list of common PHI tags only; it does NOT re-generate UIDs and does NOT scrub PHI burned into pixel data or private tags. Verify de-identification before sharing. Requires pydicom; degrades to a placeholder if pydicom is absent.",
+  "minimal_example": {
+    "perk": "anonymize",
+    "vars": {
+      "DICOM_IN": "sample.dcm",
+      "PATIENT_ID": "ANON001",
+      "PATIENT_NAME": "Anonymous^Patient"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "perk": "slides_to_pdf",
+  "skill": "scientific-slides",
+  "description": "Combine ordered slide images (PNG/JPG/JPEG/GIF/WEBP/BMP) from a directory into a single PDF presentation, preserving aspect ratio.",
+  "rules": [
+    "read-only on inputs; emits one PDF under record_store",
+    "images are taken from IMAGES_DIR and sorted by filename",
+    "needs the Pillow (PIL) library; degrades to a stub report when absent"
+  ],
+  "usage": "Set IMAGES_DIR (a directory of slide images). Output: presentation.pdf.",
+  "limitation": "Sorts strictly by filename — name slides 01_, 02_, ... for correct order. Requires Pillow at run time.",
+  "minimal_example": {
+    "perk": "slides_to_pdf",
+    "vars": {
+      "IMAGES_DIR": "./slides"
+    }
+  }
+}

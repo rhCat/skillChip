@@ -1,0 +1,19 @@
+{
+  "perk": "classify",
+  "skill": "scikit-learn",
+  "description": "Preprocess a CSV (median-impute + standard-scale numeric, most-frequent-impute + one-hot categorical), compare Logistic Regression / Random Forest / Gradient Boosting by 5-fold cross-validation, tune the winner with GridSearchCV, then report test accuracy / precision / recall / F1 (and ROC AUC when binary).",
+  "rules": [
+    "read-only with respect to inputs; writes only under record_store",
+    "the last CSV column is the target unless TARGET_COL names another",
+    "stratified 80/20 split with random_state=42 for reproducibility",
+    "graceful: if scikit-learn is absent the porter still writes a valid non-empty JSON note"
+  ],
+  "usage": "Set DATA_CSV (a labeled table; last column = target unless TARGET_COL is set). Optional: TARGET_COL, TEST_SIZE (default 0.2). Output: classification.json.",
+  "limitation": "Requires scikit-learn + pandas + numpy at runtime to produce real metrics; offline it degrades to a note. Single train/test evaluation, not nested CV.",
+  "minimal_example": {
+    "perk": "classify",
+    "vars": {
+      "DATA_CSV": "data.csv"
+    }
+  }
+}

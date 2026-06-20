@@ -1,0 +1,21 @@
+{
+  "perk": "synthesize",
+  "skill": "autoskill",
+  "description": "LLM judge classifies each cluster as reuse / compose / novel and drafts a SKILL.md body",
+  "rules": [
+    "read-only with respect to local files — sends only redacted cluster summaries + candidate skill names to the LLM",
+    "backend selected by config.yaml: local LM Studio (default, no egress) or opt-in claude/foundry",
+    "valid verdicts are exactly reuse / compose / novel; reuse names a target skill, compose/novel emit a SKILL.md body",
+    "degrades gracefully — if no LLM backend is reachable each cluster is marked status skipped",
+    "verdicts written to record_store as verdicts.json"
+  ],
+  "usage": "Set MATCHES (matches.json) and CONFIG (config.yaml selecting the backend). Output: verdicts.json.",
+  "limitation": "A meaningful verdict needs a reachable LLM backend (local LM Studio on :1234, or ANTHROPIC_API_KEY/FOUNDRY_API_KEY for the opt-in cloud backends). Offline it only records skipped clusters.",
+  "minimal_example": {
+    "perk": "synthesize",
+    "vars": {
+      "MATCHES": "./matches.json",
+      "CONFIG": "./config.yaml"
+    }
+  }
+}

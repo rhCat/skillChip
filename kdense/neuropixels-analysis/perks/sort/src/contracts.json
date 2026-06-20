@@ -1,0 +1,23 @@
+{
+  "tool": "run_sorting",
+  "inputs": {
+    "PREPROCESSED_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "SORTER": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "sort_report": {
+      "path": "${RECORD_STORE}/sort_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/sort_report.txt"
+  }
+}

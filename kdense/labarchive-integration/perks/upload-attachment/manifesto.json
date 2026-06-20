@@ -1,0 +1,27 @@
+{
+  "_perk": "upload-attachment",
+  "sequence": [
+    "upload_attachment"
+  ],
+  "tools": {
+    "upload_attachment": {
+      "binary": "python3",
+      "params": {
+        "LA_CONFIG": "${LA_CONFIG}",
+        "LA_NBID": "${LA_NBID}",
+        "LA_ENTRY_ID": "${LA_ENTRY_ID}",
+        "LA_FILE": "${LA_FILE}"
+      }
+    }
+  },
+  "env": {
+    "LA_CONFIG": "${LA_CONFIG}",
+    "LA_NBID": "${LA_NBID}",
+    "LA_ENTRY_ID": "${LA_ENTRY_ID}",
+    "LA_FILE": "${LA_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

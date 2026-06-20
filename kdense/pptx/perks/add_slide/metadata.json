@@ -1,0 +1,19 @@
+{
+  "perk": "add_slide",
+  "skill": "pptx",
+  "description": "Add a slide to an unpacked .pptx directory by duplicating an existing slide (e.g. slide2.xml) or instantiating a slide layout (e.g. slideLayout2.xml). Wires up [Content_Types].xml, presentation.xml.rels, and prints the <p:sldId> to add to presentation.xml.",
+  "rules": [
+    "stdlib-only (re, shutil, pathlib) — no third-party deps",
+    "SLIDE_SOURCE ending in slideLayoutN.xml creates a blank slide from that layout; any other slideN.xml duplicates it",
+    "mutates UNPACKED_DIR in place; the printed sldId line is captured to add_slide.txt under record_store"
+  ],
+  "usage": "Set UNPACKED_DIR (an unpacked .pptx dir) and SLIDE_SOURCE (slideN.xml or slideLayoutN.xml). Output: add_slide.txt.",
+  "limitation": "Operates only on an already-unpacked directory (run the unpack perk first). Does not edit presentation.xml itself — it prints the sldId element for you to insert.",
+  "minimal_example": {
+    "perk": "add_slide",
+    "vars": {
+      "UNPACKED_DIR": "unpacked",
+      "SLIDE_SOURCE": "slide1.xml"
+    }
+  }
+}

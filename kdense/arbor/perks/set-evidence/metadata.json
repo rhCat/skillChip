@@ -1,0 +1,22 @@
+{
+  "perk": "set-evidence",
+  "skill": "arbor",
+  "description": "write an executor's report (dev_score / result / insight / branch_ref) into its node (Backpropagate, leaf)",
+  "rules": [
+    "writes dev_score, result, insight, and branch_ref into the node's metadata",
+    "sets the node status to executed (unless overridden)",
+    "this is the leaf half of Backpropagate; abstracting the lesson upward is the separate propagate perk"
+  ],
+  "usage": "Set NODE (required); optional DEV_SCORE, RESULT, INSIGHT, BRANCH_REF carry the executor's returned evidence. Output: set_evidence.txt. If no run exists, a bootstrap run with a root + one child node (n1) is created first.",
+  "limitation": "Records evidence verbatim — it neither runs the dev evaluator nor judges whether the result supports the hypothesis. NODE must reference an existing node id.",
+  "minimal_example": {
+    "perk": "set-evidence",
+    "vars": {
+      "NODE": "n1",
+      "DEV_SCORE": "70.0",
+      "RESULT": "K=5 dossier aggregation recovers minority-rollout answers",
+      "INSIGHT": "Aggregation beats majority vote when correct answers are rare",
+      "BRANCH_REF": "wt/n1"
+    }
+  }
+}

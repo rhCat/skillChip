@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for opentrons-integration — set perk, fill record_store + the vars the perk declares.",
+  "skill": "opentrons-integration",
+  "perk": "simulate",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "PROTOCOL_FILE": "<path to an Opentrons Protocol API v2 .py file>"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_perk": "update_schema",
+  "requires": ["python3"],
+  "vars": {
+    "SCHEMA_URL": "https://bids-specification.readthedocs.io/en/stable/schema.json"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["bids_schema.json"],
+    "nonempty": ["bids_schema.json"]
+  }
+}

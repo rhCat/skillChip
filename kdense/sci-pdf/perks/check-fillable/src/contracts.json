@@ -1,0 +1,19 @@
+{
+  "tool": "check_fillable",
+  "inputs": {
+    "PDF_PATH": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "check_fillable_out": {
+      "path": "${RECORD_STORE}/check_fillable.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/check_fillable.txt"
+  }
+}
