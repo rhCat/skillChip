@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-xxe",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Xxe offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

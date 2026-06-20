@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-zigbee-thread-matter",
+  "skill_sha": "1027c51b392c39222e746f14f2732d72d827a68d9ccd610d75d8267c2325437b",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "0a65eb39821ea81b3a4a65be698882f65ac6cd659424835b266e63e53c4983fa",
+    "blueprint.drawio": "f595a8bc3ea3bd6e72cd824a776ba534237be6a794d1eae91ebabd2c8325ad0e",
+    "blueprint.json": "d6140f25ae0bdfc71ec17dc14de48c26e1c67284afc6cecb661af148047cbb99",
+    "blueprint.svg": "8487b383db1ef2488874a3e36783f52461cf0945f5a3241b6dadde0e82217084",
+    "ledger.json": "e520bdd41384f5ba92b33299fd3d4acb1772bc6f1205801ee0e8e3e4ebe6a590",
+    "perks.json": "1828f9fa7684c095c0f4c1e123218169dfda95f0cf00adcfde40b3cbec2693a2",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "cfbc03b3985803b0f70ac9586f93bfcd5b5de61efdbf3378894582de429ca741",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "89809281dd4b1e86e619297e990a10fd5c0c153d88721b476f7c875d823607e2",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-fast-checking",
+  "skill_sha": "ef45c6ca11ea2d83c68d34bb5a02dcd91f849e146d57006920671f82513a72e0",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "ab246a46f07046f6eb1c002c1c98541b4e38f850d426cb4efe14d9aaad30125a",
+    "blueprint.drawio": "e2c30df98671955124367b42c42caa8752484b28ed04ee6936cc9d7ccede2cd6",
+    "blueprint.json": "2bc0836cac2c7fd580b51d78dc72a5c594608379844020d2f130f7453ff43a9a",
+    "blueprint.svg": "a98822b9b4a0a4314311d0e15dfde6b09e339f66dfb3a2915647c330bb24f696",
+    "ledger.json": "b2be7fcb4068b1f3bb3b3e9c5a193bdd1c51a596882827d7af12c122b52b3972",
+    "perks.json": "4e0def3157ac5083be2102ef7021c735204a7d6f9fe5bf974dd95b6794524d84",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "0a10a5bba94c82a93bb2b7ee2c6104a8c031d28111c4c7c4113ac2dbae195d6d",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "f25479fa99f60fa70471fedd40daad09be897b43b0ed6783c45327962bb32f12",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-vuln-classes",
+  "skill_sha": "80f13b84583e6028ff81f4ffdda144f890175827460a0335e2a86e3c88adee99",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "eea952bd39d6ce284dfe0e6090f69000dfc84e82481a24f8a98bbcf6a830147d",
+    "blueprint.drawio": "a9ba4c5ed8c56d5fb1233c286d7f2dc555dd8853e3f58b7a414824945c3cb6b9",
+    "blueprint.json": "e55afe9bf317dc8d02de458633b2111b3b766cc1b3e68dc3377c7bdc0d8147ec",
+    "blueprint.svg": "2b863d4cfbd27bd555dc3bec7c42d2047295d494eefbebc6b16f8628b3d8dcbe",
+    "ledger.json": "8f3c5d76490b383ea14ed0631c59a9c470a3f67a5081693e95056f0629db661d",
+    "perks.json": "1ed35b07d20fc1afd27b149be88fdbffac480e6e2f470e7047c184311a556a61",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "95d0717ca86828d8b118b507d7dc002e58891a3914e2c372c1fee94b2c861e7e",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "85b7eeeded746de0962b27ed14984f483cb21d1444843e21bc531aba221985e0",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

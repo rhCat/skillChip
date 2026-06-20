@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-request-smuggling",
+  "skill_sha": "08129df9fed46cc97c859834f931e24fdb25d4946cdd291cf727ac9ef9a87aef",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "6adfb273af41e007b974d637ac5cffe840219745e01a001e9b5a164e0a9ac937",
+    "blueprint.drawio": "4b6816aaf45b4f1df317ad20e25882a3ff129e15d20cebef236faf58154eab2e",
+    "blueprint.json": "8742bc517dffa7edfd92472993d9220855e6880011813ddad2ba54c7512e91ad",
+    "blueprint.svg": "5ed0be67ff473f87493c7ee9326384be06d93503533d459cac1fc6276f3d7f8c",
+    "ledger.json": "2489b742acda42438f9c928f5c996f052148915b313a682e575369c2f4bd8d5e",
+    "perks.json": "a5ba49f343c3a588b4941c606adc0c97cc9b43c9f4ad634094cdfd2638811e05",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "ded411da00647f899a815ddf88d4aec5e91c91cafdb6c37455e01434fe68fb7b",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "67c54307ca8760a7c3d270bc708a9675f2c8d474d3715b64567a2e9a32db1f9c",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

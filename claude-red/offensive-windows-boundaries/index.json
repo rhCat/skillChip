@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-windows-boundaries",
+  "skill_sha": "d6ac8c1f7ab56422a657f4315ef25fab7651398597594048c1dfa672008fd44a",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "945b191af7b8c0fea85076f70678096e39fb6f8a9d1c9af8106be56da5717b82",
+    "blueprint.drawio": "9a40835275c8d171d55f1aaa583910e2c550ae6d078d48eb525c29fc191b1314",
+    "blueprint.json": "e60a587ad7730e72aa189e55d5b5070f427b9e648b9bbbdcc81859ee681224b1",
+    "blueprint.svg": "085792505f1db8891a3694f276a1f3c0f3677117e68702decb0fa7ce15c18744",
+    "ledger.json": "7ec517f2558eb0cd2356731c89ca15974de60dc8b97942c3caedfca907acfee6",
+    "perks.json": "4763bfafafadd2bbb2f230482bbd466749e615d359339214775ec2be1d23f5af",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "ea25ff402689472a84b1d3930cc395807f847f24082097ec3a85f92fec82f200",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "a31cb44295c46284a3742f923f6a55175fb3d9a6f4f90e69fa3cab70bd4983c2",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

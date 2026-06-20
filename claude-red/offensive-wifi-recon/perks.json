@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-wifi-recon",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Wifi Recon offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

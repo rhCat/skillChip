@@ -1,0 +1,14 @@
+{
+  "tool": "emit_brief",
+  "inputs": {},
+  "outputs": {
+    "brief": {
+      "path": "${RECORD_STORE}/brief.md",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/brief.md"
+  }
+}

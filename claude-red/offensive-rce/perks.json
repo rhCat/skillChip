@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-rce",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Rce offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

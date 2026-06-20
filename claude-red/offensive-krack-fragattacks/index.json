@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-krack-fragattacks",
+  "skill_sha": "faf125cdc5905f327f12c6a8cb8ad48f8d959f676678ce1ea63048e7e59d8079",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "9b1dc0ee8b257c048af6ac14fbfe2bf18e86c333bb7277b71797b24b4c459a2b",
+    "blueprint.drawio": "66e6f164e0995951a9dd327b68ace1c3672f48c9158cbfb1f0a900c2a3fb9754",
+    "blueprint.json": "b3f28976cc249ad78995b746d8c2f700341ed2893af1e03d0302ac3bfed8c66c",
+    "blueprint.svg": "ff4cb9d63d9a0fadded1b61a2cb778a241d5b6ee8230fb77216ef06565e1c62a",
+    "ledger.json": "d2b145cde19444d4df88c0d9d812ce3a9f0d092ead947e4bd5884a97c26595fe",
+    "perks.json": "05ddbe5b524dbebee56a1228cf86b0d2e44a4249d7be8dd5513d01b0aabae0b3",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "2641e86222a8f3eb010122576219ce91f92bcd5c1710c359a22a5cde357e2bd5",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "12dea4e775fa3f28d89ab1223bb4810bce21a5ac13cf300dbe54583abbd28316",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

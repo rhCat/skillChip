@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-advanced-redteam",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Advanced Redteam offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

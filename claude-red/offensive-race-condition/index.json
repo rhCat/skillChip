@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-race-condition",
+  "skill_sha": "2a331ff5c410f4f1ed3bae7a100a427b2afb0d0da6100d774f2f4876ddc932ca",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "1ef2c82f7407612f356ec3891de9629782e5d49c3d07ae0fafbb951838457e82",
+    "blueprint.drawio": "4f938033efc99be270885305bf512b8826d6eee0f5faf3ae4fe3917d72eb2318",
+    "blueprint.json": "745f98eee7a74c2ed8070cd273dca9c7ffd62bd510809e3a4eb80fbe17c65f16",
+    "blueprint.svg": "3b72b3070cb9cf527a61cbcc05b958d1a1ff5df620b66bbc3f458a18f3faf520",
+    "ledger.json": "7b58a57b707b8a6ac521f14f538310f6b747f5dcb51b92be2419e63e10e471f3",
+    "perks.json": "b17bbc727d37b77eb59a1af22cfbd62007df944f206c4a4fcb20e73e41d21ba7",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "12dde22b63ef23318ee72e444f932e7cfbeb4d15b13f28f57b2d87de731994a0",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "802e2f87e90c0f43f910e3440c4e57fd732d3ac24622c9ca3211fea62d1c5d27",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

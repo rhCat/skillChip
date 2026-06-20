@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-cloud",
+  "skill_sha": "27c4b15fc2584e281adc281c4033fb7c37f78cfa4e5a039b8d5c9332a9f0e022",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "2dbfd2fcd0572821eb146ccfb3051b5b239e83dca5d5752a311d822438dcce21",
+    "blueprint.drawio": "0ed7380ee602959c80476a60abae1a664eef0137b4878edd8ef7caa44978b548",
+    "blueprint.json": "2cba7241bd45eebc10677a6eb238e90ef2ded9e0577fa15dff0466d94bd021a6",
+    "blueprint.svg": "4500b7fa89123cf4bdb875dc3c666b52b3102eea86c8a1da1fb66ad1891a06b9",
+    "ledger.json": "5b2764790fdcc499960eb2a4eb793ab01d2a1c81196a2f198aa35dd56b983c8f",
+    "perks.json": "24ccea443bea863a9dc60bf8ecd16159904c7dce048ab53b20cd797d46e56a29",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "25e69be0f79e2d49ccd9fa9fd3d4e9d3b48de5624591e8a26df47ab6dd537715",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "5dd13c1cac582a03db3e1ab8c9c0c147a93c2121e4cb275b8d39763cb9a144cb",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-wifi-recon",
+  "skill_sha": "ea9b60c2b713c13f2aeb55cec215ca20bf9d0d8297e1939e4de0fd73092c4d1a",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "573a8d1e4a55a1e3bb555b2a57a5db7ad99e40ecef66b195d53419ac84a962a9",
+    "blueprint.drawio": "4d4888dec4acda707c01c3dfddbd9d944e026851df4d248e7bf454bfe47efc23",
+    "blueprint.json": "ca564d0feaa571cab31959eb4d2f03e359db8ab1b96df79b8f1b11d3be675e5c",
+    "blueprint.svg": "f8b4e9fb497e6dbd36e4b21a84a92bc703728491d44bef702fcb2c66fd9f0f1b",
+    "ledger.json": "97d8faf02ed189a9c0053b5527ac130449d6c7a06a2666d2185de32e28b7851c",
+    "perks.json": "a084ccd7adb4c21b381af6a88ef3a064f58f31bb00ebcc901d69d96389baa3f9",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "e4d49f3922fa010a7e5882dc4edfe0e37357ebb7b79b1e205c5432972d8be0a7",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "e9504bac7e1479593ca36674ae4807e8983bb744ac300840c9e07c0c599e5408",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

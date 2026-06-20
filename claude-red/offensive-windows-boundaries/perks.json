@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-windows-boundaries",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Windows Boundaries offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

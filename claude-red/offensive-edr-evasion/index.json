@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-edr-evasion",
+  "skill_sha": "6576c299630be412d3309301baa9af2ff644f9eef38edca622ec041ef58b20c3",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "3586a29762d15b01df27cb09107f270f12de25a96f8b5e346010620437f951df",
+    "blueprint.drawio": "9d8785ef9652ba6c3d1c3242d937a73e476e1bf7e2c4b28fa45acf3aa1ceed43",
+    "blueprint.json": "77a9d85f784e392bfae8fb7847a4087639e80619ccb9ced8d8d0897bc6585131",
+    "blueprint.svg": "148b6f685f279bc9ee712e2395c03e3c24177421b228e1ddca6de1a0b542cf03",
+    "ledger.json": "77fff54a8dd71102e34182aae6b1f0ae15cde4ae37b3b925100120a1013ca2b7",
+    "perks.json": "aa4fa76e616373bf41b6779d00825ec5530750f375bb59e33f9b89ceb1cc0fcf",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "8b59a9f589708fa7d701ae6c23e38f5a57da2ead8d44f244d0bbcaf9ed4e482c",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "e0131dc7f57fc7bd93bf17ec9e0eac4a228b07cb7afff35a7c45abb8a4c2958c",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

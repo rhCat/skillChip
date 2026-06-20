@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-wpa2-psk",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Wpa2 Psk offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

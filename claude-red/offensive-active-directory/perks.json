@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-active-directory",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Active Directory offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

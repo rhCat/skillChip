@@ -1,0 +1,7 @@
+{
+  "_schema": "task-ledger TEMPLATE for offensive-lorawan-sub-ghz \u2014 set record_store.",
+  "skill": "offensive-lorawan-sub-ghz",
+  "perk": "brief",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {}
+}

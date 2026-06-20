@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-fuzzing",
+  "skill_sha": "c71da89760bd5c80a7a743bfc0f11cac0085b8ce6d774964d9566cfbad392d3d",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "a5d811c83387dc6449560642df6b4aec7b81c2b80b9a77e3e22b50b66ad23491",
+    "blueprint.drawio": "ea3b8208b9cd441d081d99856dac87f325094866b9d8ce552a387b16e1adcfad",
+    "blueprint.json": "2241144ffdde584269563445b6cd7dc35169b9bab9e4dddff6b7af8b3e507900",
+    "blueprint.svg": "ea3179ed0c2969d717be13bc7d8b6000449e33ad26de0bff5771378069f3c7d8",
+    "ledger.json": "ed8743be7fbba12f64e4eb578a1fa8b00e9931311239b45aaa1b379263345536",
+    "perks.json": "05a65f1a9bd47f5957867ca7743fb3eba99a50700be84be1c42842349db3a3a4",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "9967b13231d2254dbb4b28d3aa35e36c243180728dab8a809e1f2bf1cb559515",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "fcd129b42cdf383cacd7852db336dc51e3e540d872ead9931c7acec30b4088c4",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

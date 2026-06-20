@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-edr-evasion",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Edr Evasion offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

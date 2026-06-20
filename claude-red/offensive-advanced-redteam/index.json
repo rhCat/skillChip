@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-advanced-redteam",
+  "skill_sha": "fec44b8ceef6ebce25d76a1c348270e5c039d59c3d932815d2356eed2c7c89e9",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "5bb6fe6bf3273094bd055d8fb14ecf794ad2cd9ee7e50cc317d8c11accb0f543",
+    "blueprint.drawio": "4c29ba1d872db01223c6a3e67b5bf8c6c67f1056f99354e1229333489c0c6e8f",
+    "blueprint.json": "2a3703a6dddfb4a4fdd1c1e90fe0348e8ea3d67dc0920381fe21f7c55a381973",
+    "blueprint.svg": "d3e659677264f9c60d2a73ece15d703a0c5fc7168f200cf0d49d64cd3c7343c7",
+    "ledger.json": "b4bb67512789e35bf5d65a1f965052308279e39aefbccc2341c61a74b99d4b70",
+    "perks.json": "6596a53347ceb1aa9c9cb18886827c6b536d5a6d5ee76a505c65799d6651b09f",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "75b1674e5f2a9a495c47cbd9d55706da7d1787da5bee9e86dab9111c6fdb81ef",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "dd4a81b45350c1fa4689c7c3498dbbcfc2fb03472fe2de7ff975c6437dac7b26",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

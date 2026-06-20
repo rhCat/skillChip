@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-oauth",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Oauth offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

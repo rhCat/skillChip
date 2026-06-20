@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-wpa-enterprise",
+  "skill_sha": "cf984e34350155d015aad0b26b719276effbb3f8442d66d0c5741415077c0c83",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "8018282d6958508d72e658fb01f215fe4eb8f1c715fa7cfa8d1309fff2c14540",
+    "blueprint.drawio": "7aaebdaf9023b1c405326c7ebca87011088da777c5f1f21b961f06b5eb01f631",
+    "blueprint.json": "56573313f5a607c80fbae64eb636e7ecb42cb67b6e7c723561be7a125a78e1f8",
+    "blueprint.svg": "870ad7aaae969f4acfb35daf0f1de83a4c6228381a8ca63a05dd23e939e9bbe9",
+    "ledger.json": "2f819dc8502a52e135b1f3c84b95ba7c53a425a108cef19dbe9b5150107aa117",
+    "perks.json": "8fd1a4cd92c1fc8c4938654cff91fa6e1fac24979a56a67280179aa1865ac442",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "d3992860b8ae0e9f3fa5a36d2ddfbf9e4b5b79d5ad5f8018abc4d60a606e488d",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "a744c80d312a30fc7040f73e782cda3d171dce68767e74630ac8f1a8b3320dba",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

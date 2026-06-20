@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-ai-security",
+  "skill_sha": "07ae33477160bb5a6bfa5f13c9de544a0c367c27669521b90744ec55d4015052",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "5bdae778ea4d4fc1789873fef84b20c2a9c7e3f6e6fda76277460ee4ef8681d7",
+    "blueprint.drawio": "e35f9ee48a633c2c8d6047b428527f406ea8a9d057563bd0d3d50e41fa3f2d8b",
+    "blueprint.json": "3f521c17cf648442e60df60562bf8f45be0ef0365fe938b3d5c45d139c06fbe6",
+    "blueprint.svg": "293d4c9efdc253bcad81e8494937a274036651591c7f8b314346b0f53295b2fa",
+    "ledger.json": "344957146bb8eea44e8133779f785e2cc89d8b01cb2b3e4ad04d9aa42f2d8b7d",
+    "perks.json": "ca7f21aedfbec7adaa50fc7ba1bec9abd4185ff7fa3fd7ab72b80cd0ace78cf3",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "bc87833454a59242aeb38a011ca967b70665ee96629b22fb1e6b1de646e8519c",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "345b920695dabd22392ee623512df78a8862dd30cde507a02c2d31f9139f2595",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

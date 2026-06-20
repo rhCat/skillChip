@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-jwt",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Jwt offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

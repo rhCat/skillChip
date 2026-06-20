@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-fuzzing-course",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Fuzzing Course offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

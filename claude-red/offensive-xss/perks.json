@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-xss",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Xss offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

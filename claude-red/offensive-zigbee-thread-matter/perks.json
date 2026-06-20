@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-zigbee-thread-matter",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Zigbee Thread Matter offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

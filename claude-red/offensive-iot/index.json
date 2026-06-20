@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-iot",
+  "skill_sha": "2a3185019a7fafdd2db0e7de6345d297fb7863e2960b0266ce8ba609efac0591",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "0fb17fb7fdc060eb554fbc556e99c50405d628072d1058e6efb87f38e55274b9",
+    "blueprint.drawio": "b9d322d7cbe37a72c4ce7f04025817316a2ee073bbac4af56e431e58143f115c",
+    "blueprint.json": "354ee0f6d95b687b46961a8231c203703918ee99d7c1e94f583f774e64e9478f",
+    "blueprint.svg": "e6e7e12425611acdeee7edbaa7ffd2e284167b59c493c2b4701bc1e2d124c9c3",
+    "ledger.json": "105307161cf2177972364093a02531a183c36093e6739fd818bc3e31a69ca23e",
+    "perks.json": "582d526b7d64802e0ade921eb311d4738cf95b22d03bd145e1d68121041fde22",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "4a384db7186b8d3bdb0cae2e7e583d1e9d99e06e50ca82fe7d89a8a3f58465dc",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "4f9e9df132f3b93ba79b7f25f1d76a6ac2ac384cd6e51412dda19b5242ee6ab6",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

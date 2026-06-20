@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-bluetooth-classic",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Bluetooth Classic offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

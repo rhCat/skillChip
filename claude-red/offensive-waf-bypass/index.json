@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-waf-bypass",
+  "skill_sha": "b561899477b18bccf5a2487ae08b15d1d2f56c82ff6d4ba8a3a4ee85c9546d89",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "7fa41fd7000dba36963ff03098b4896eb9529706a1c131e7d607315b34e2ef0e",
+    "blueprint.drawio": "99e6949ace22c8eda2a89ca7bcafeb06cd01bcdd9b17bd95f39030cb4b9c41e9",
+    "blueprint.json": "550f7fb56609781a9565ad6fd575c9299c1171753f26fdfdabf66f085ecc1a47",
+    "blueprint.svg": "d29303778a053d94c5d8624d5a8ab9344c97bd1ec4e07f438ca29ddbde710d89",
+    "ledger.json": "bc393503596099976ac8c4301edd09b4429e4e7b37137c598dce68eac23e532f",
+    "perks.json": "d9cdd9384e759917235d3a2bf3e89cd1328ddb302fbe9dadf996178f1b375d9a",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "beed0fdbf5a345247f37fc9359799446218054c36c6c0eef38edba4982512ff7",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "0485e6ebf76ff726a024b73c4d1059e2d692ac0d65ff78739101acc7b40a6712",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "_perk": "brief",
+  "requires": [
+    "bash"
+  ],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "brief.md"
+    ],
+    "nonempty": [
+      "brief.md"
+    ]
+  }
+}

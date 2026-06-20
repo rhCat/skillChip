@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-iot",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Iot offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

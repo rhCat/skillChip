@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-wpa-enterprise",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Wpa Enterprise offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

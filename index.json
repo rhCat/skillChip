@@ -2,7 +2,7 @@
   "chip": "skillChip",
   "version": 1,
   "cartridge": false,
-  "count": 145,
+  "count": 203,
   "skills": [
     {
       "skill": "aiq-research",
@@ -450,6 +450,296 @@
       "file_count": 12
     },
     {
+      "skill": "offensive-active-directory",
+      "skill_sha": "b9aa912e2102dee1f8709a73ae547b12c96e408f44762dd3119b829f72bd5242",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-advanced-redteam",
+      "skill_sha": "fec44b8ceef6ebce25d76a1c348270e5c039d59c3d932815d2356eed2c7c89e9",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-ai-security",
+      "skill_sha": "07ae33477160bb5a6bfa5f13c9de544a0c367c27669521b90744ec55d4015052",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-basic-exploitation",
+      "skill_sha": "0b69c22bc6c14186e1f6fbfd25da54e805489b2a1fd7b878ae426a97fdcd6730",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-bluetooth-ble",
+      "skill_sha": "66875347bf36aa993efd34ec4ad4f281e82b3ad8e3459f2188518382054ad6f1",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-bluetooth-classic",
+      "skill_sha": "c301fb35974333b767bd30c487bc128c77bb75aeef1ec0ce17af7650e0615aa3",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-bug-identification",
+      "skill_sha": "54ac2066328e23344241a58c4085926221ab68d8d839a75f7b8a26d302667207",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-business-logic",
+      "skill_sha": "7afc89c1528e7342bd99b1d9af3c2a1e702fac2847420ebf69389c8a196da8c3",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-cloud",
+      "skill_sha": "27c4b15fc2584e281adc281c4033fb7c37f78cfa4e5a039b8d5c9332a9f0e022",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-crash-analysis",
+      "skill_sha": "0b38a7b1a24a1dfcf8dc3a60641a4cb40d192d6cdde9bfece5f2ea088dc9e5e9",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-deauth-disassoc",
+      "skill_sha": "0bd7a65b597aef4d2b6134fba3a8e6e96ca4d0c8362ab138e7f64607787267cb",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-deserialization",
+      "skill_sha": "9f74864de1298db9b54dd08dfae117eeaeedbc9ce6095d283c31a0f5f52d0f92",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-edr-evasion",
+      "skill_sha": "6576c299630be412d3309301baa9af2ff644f9eef38edca622ec041ef58b20c3",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-evil-twin",
+      "skill_sha": "40f6dc0dd5dd45c8012ccc7a19e8d380a77bb98da85a48837e6e07bcc5150460",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-exploit-dev-course",
+      "skill_sha": "54e36dac72986bffe5dd0b6af1e25170759b9492fc417490cd9ad520bdd55aec",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-exploit-development",
+      "skill_sha": "3b6b5b2a8b694a8fe2239d7990b1a9d3a1338fc2ce25f40e2190936e9837100d",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-fast-checking",
+      "skill_sha": "ef45c6ca11ea2d83c68d34bb5a02dcd91f849e146d57006920671f82513a72e0",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-file-upload",
+      "skill_sha": "a9ccbd06b975c20ce92fb0ef2cf856635327d5a99570ad13ce7660029aa868e2",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-fuzzing",
+      "skill_sha": "c71da89760bd5c80a7a743bfc0f11cac0085b8ce6d774964d9566cfbad392d3d",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-fuzzing-course",
+      "skill_sha": "11abf568d945c66f431798c22da7d27c33c318ed75774e6a2974918db5c71a96",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-graphql",
+      "skill_sha": "fb9453853d8af1cbb612d867814ae8f80aafb6383ec411a2baf12a2480b522ff",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-idor",
+      "skill_sha": "dfd6853c81089303f9e592e3c328eb00b9db47dff06e45516d7a92d9fe1c15b7",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-initial-access",
+      "skill_sha": "19d7ccda211954c82114e7ed8d96e4bfabf3d9df6f2a39550be034776f31079d",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-iot",
+      "skill_sha": "2a3185019a7fafdd2db0e7de6345d297fb7863e2960b0266ce8ba609efac0591",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-jwt",
+      "skill_sha": "5163b1dff65a0f42675ab6a32cd25c1c6a0951279d4be04b85c13d83df2ef972",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-keylogger-arch",
+      "skill_sha": "df083c8d14f5f62f752ccf7a4a198e3c68f95670d0bca3efa84a4d3deb46a834",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-krack-fragattacks",
+      "skill_sha": "faf125cdc5905f327f12c6a8cb8ad48f8d959f676678ce1ea63048e7e59d8079",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-lorawan-sub-ghz",
+      "skill_sha": "ae08476440da4c4c7a134a0f404a983cdce8c2c65053e864b88ead4e3da4e73b",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-mitigations",
+      "skill_sha": "2046f7a5864e1e11bdf0299b3df97cc4fbcf1c2859a20e4f338d88ad979d8e4f",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-mobile",
+      "skill_sha": "5c9db2f65ec4212241afb14e19ba49fa65d4321ad5cf6e928a15a49e15102d46",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-oauth",
+      "skill_sha": "884e53c1b0c396864a990a6e0213008ae063a7d2267f35a950c28cb1c5948202",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-open-redirect",
+      "skill_sha": "e7a61075d34d1caed727d1f3d0065560b99d4b36f7a8b39c97f66f66d2340267",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-osint",
+      "skill_sha": "d71d7500e57296bbf754382829e4a1352a8116f1ed22cbace26bf6e548012a85",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-osint-methodology",
+      "skill_sha": "8e1cb54bd417cc116f3c3201226ffdd782c02fb52722643ad10f69dcbf0f1f11",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-parameter-pollution",
+      "skill_sha": "1a35a3583f09d21aba1e77b1c8f299579b00b55b25399a29e249df5a4afa10e2",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-race-condition",
+      "skill_sha": "2a331ff5c410f4f1ed3bae7a100a427b2afb0d0da6100d774f2f4876ddc932ca",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-rce",
+      "skill_sha": "8a1cbb98fbf054e5940b0913d30e36e56c53459f3d37dff3f450a03d43616b55",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-reporting",
+      "skill_sha": "f3c51487b893a2a45625d3f8fb80345258988c16ed5182157b41003c717c2d5a",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-request-smuggling",
+      "skill_sha": "08129df9fed46cc97c859834f931e24fdb25d4946cdd291cf727ac9ef9a87aef",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-shellcode",
+      "skill_sha": "f54854be1b6f3bf2240ba0b57caeff3a78455d1746b63c3ff0c53d8cc4bfb2ce",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-sqli",
+      "skill_sha": "96f395701dcdad389fbc7b21eae71b79ba2d504f3962e9e73a21ff4cb83d8e60",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-ssrf",
+      "skill_sha": "14ebd44f54fb1e8e7d2b0c6322d27f5ba2d2ab4fd1cc58409e35bb2c3e106e27",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-ssti",
+      "skill_sha": "c83a02652d5386cb69f261b5f8c69cdb1a6eee58a42a72867b6d2c07cef84e51",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-toctou",
+      "skill_sha": "b3e094ab8e8b8704110bae814958c82dea14e30a7dad14f2b2fa67dce3a8bfb8",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-vuln-classes",
+      "skill_sha": "80f13b84583e6028ff81f4ffdda144f890175827460a0335e2a86e3c88adee99",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-waf-bypass",
+      "skill_sha": "b561899477b18bccf5a2487ae08b15d1d2f56c82ff6d4ba8a3a4ee85c9546d89",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-wifi",
+      "skill_sha": "e3ff54642d9c2c414125510fef977136fbf308f15c96264480b12187b4ed485f",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-wifi-recon",
+      "skill_sha": "ea9b60c2b713c13f2aeb55cec215ca20bf9d0d8297e1939e4de0fd73092c4d1a",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-windows-boundaries",
+      "skill_sha": "d6ac8c1f7ab56422a657f4315ef25fab7651398597594048c1dfa672008fd44a",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-windows-mitigations",
+      "skill_sha": "238d92e2262a91790f55e24fcf4d633daa2f0653fa89315922207b24f208c70f",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-wpa-enterprise",
+      "skill_sha": "cf984e34350155d015aad0b26b719276effbb3f8442d66d0c5741415077c0c83",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-wpa2-psk",
+      "skill_sha": "c1040969eb14a57f2c6e3eba47335e8b5ddd2f4aa464d7dda678992b8aa425a5",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-wpa3-sae",
+      "skill_sha": "0a5b4dc6bc541e21b38641ff3cac5b4e848c5bb42d10d61c6ea774c4cf80b6a7",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-wps",
+      "skill_sha": "3acd7202a3ce0491044fde259e9c6eb4674f23464074cc2f1700fdb8a037c20e",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-xss",
+      "skill_sha": "930641df6fd78b628f505a143ee2e09d97236d3779cfae6a77e11bea10b05503",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-xxe",
+      "skill_sha": "0d3dc83d23b7cf098a4831bfe9cf2003666942213f19191844604464f9744b09",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-z-wave",
+      "skill_sha": "3c484a44c57e6cfac0a79adf3c2be03bf9802fd8829c7ad0fc9a0b9497e554c8",
+      "file_count": 13
+    },
+    {
+      "skill": "offensive-zigbee-thread-matter",
+      "skill_sha": "1027c51b392c39222e746f14f2732d72d827a68d9ccd610d75d8267c2325437b",
+      "file_count": 13
+    },
+    {
       "skill": "open-notebook",
       "skill_sha": "a8350d5d953c4f40878498c1a91ee64f343ebfbacd9e08486b2669186f454d97",
       "file_count": 63
@@ -730,5 +1020,5 @@
       "file_count": 39
     }
   ],
-  "chip_sha": "f20caa9f83e435cc45abc194e25cab603ee16b720ff80733830917edbcb90eed"
+  "chip_sha": "cd8701cd2cd7e0788f4f837640dfecb005e983e75ad750e1322516b22b806bab"
 }

@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-evil-twin",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Evil Twin offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-krack-fragattacks",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Krack Fragattacks offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

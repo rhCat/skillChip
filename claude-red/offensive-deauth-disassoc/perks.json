@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-deauth-disassoc",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Deauth Disassoc offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "skill": "offensive-request-smuggling",
+  "perks": [
+    {
+      "id": "brief",
+      "summary": "Emit the Request Smuggling offensive-security methodology brief (read-only)",
+      "destructive": false,
+      "tools": [
+        "emit_brief"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-idor",
+  "skill_sha": "dfd6853c81089303f9e592e3c328eb00b9db47dff06e45516d7a92d9fe1c15b7",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "1158a61e11ccbb14da5e4935428a58c7f983973969b9d4c7df45a5d84908d8a0",
+    "blueprint.drawio": "6eba471fbeec975c2ce05d1fead77356cd890f20127aab675333b2029d145fd5",
+    "blueprint.json": "dd150353333371d494c56cc048bf25803530b492dad011aa7fb9dcb613f69cf7",
+    "blueprint.svg": "1a55df466e46c15d7957785a9ae207606d939a1fe246e307b19dfad0184f2b4e",
+    "ledger.json": "ed694e6277864453bfff6c637f029c111d3e6d5c7a6eb84c051a0dd2413485cc",
+    "perks.json": "bd1b991c4a3f889f0816ceaae7308068757ef0775574c51359b4f2844bed9218",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "c047e499316a9ff19e7aebc199d977db233704263a8d871c059b891826a9fa77",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "03a3002dd293907c507c27107d44368668d26dcfccf6d9a25197b871f58f528e",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

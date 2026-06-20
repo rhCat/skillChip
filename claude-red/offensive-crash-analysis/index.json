@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-crash-analysis",
+  "skill_sha": "0b38a7b1a24a1dfcf8dc3a60641a4cb40d192d6cdde9bfece5f2ea088dc9e5e9",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "662aa361f1abdaed1753641d62090d0f16b227d7e8eed380d32ebc03d53d93f4",
+    "blueprint.drawio": "002f271cc3897b72a10f3d7f265fdc1af09c35d9cbef5fb94905d557f9ec5642",
+    "blueprint.json": "f1fb97d060d26327a3cb25d18da13534a8d757c764f492b37b588694eb6d75fc",
+    "blueprint.svg": "3785825ad0d08bb6160cf1ef85b0bdce649096049847d53e4b66cf90c1d791f3",
+    "ledger.json": "0b77b128b6d511bbe9f687bc2e6a50335dfbc7bca21d0e1fcbbc3ad7c46766c1",
+    "perks.json": "f161115f1edbb36f72b9c547ba5f71eda6015e205bbeb7b66cb284273263ffef",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "ac1d1566a86359ca25c92af290f3a9b04dbc19dd40ba5f47f103b45f74e67f17",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "43212963900033f563cb23ad323d5a56d507142d2caeebba55b8c50605681a32",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

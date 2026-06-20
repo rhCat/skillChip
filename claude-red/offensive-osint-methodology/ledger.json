@@ -1,0 +1,7 @@
+{
+  "_schema": "task-ledger TEMPLATE for offensive-osint-methodology \u2014 set record_store.",
+  "skill": "offensive-osint-methodology",
+  "perk": "brief",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {}
+}

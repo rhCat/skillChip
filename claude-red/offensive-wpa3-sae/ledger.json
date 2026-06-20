@@ -1,0 +1,7 @@
+{
+  "_schema": "task-ledger TEMPLATE for offensive-wpa3-sae \u2014 set record_store.",
+  "skill": "offensive-wpa3-sae",
+  "perk": "brief",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {}
+}

@@ -1,0 +1,7 @@
+{
+  "_schema": "task-ledger TEMPLATE for offensive-deauth-disassoc \u2014 set record_store.",
+  "skill": "offensive-deauth-disassoc",
+  "perk": "brief",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {}
+}

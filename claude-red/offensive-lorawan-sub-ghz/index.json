@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-lorawan-sub-ghz",
+  "skill_sha": "ae08476440da4c4c7a134a0f404a983cdce8c2c65053e864b88ead4e3da4e73b",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "8eda5b2794ee04c0b2b893e8424f319fbda8427ccd4769068f0c61f24ae96586",
+    "blueprint.drawio": "743770d9b807c4209a274eb809f428bf639389e51726110017820eac4cb0028f",
+    "blueprint.json": "72a1a14a3d687abef62823f936f93c6bf52760ad510aa1ea3afcdd1ed37ec960",
+    "blueprint.svg": "28b445df0cca631274cdf13911bbe410b2cafea5764c850831205b0417a2e8c5",
+    "ledger.json": "6669c7aa69adad9a8b2f5e1bf345bf6c8a8af3dc6c26679e2285de32adac4d5a",
+    "perks.json": "6ed61d12af072979be2fbc965dd6527ca86f04155c0a66bf57d6592c13109b1d",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "2ac6ab0bc0eda6ce680b686c5d39cfa6dc2a5310238efa6276571dc1f30d4734",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "566cd87eb0b630e62988db82003f5a1894eaf3747901d9d912edbd9a50dbb244",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

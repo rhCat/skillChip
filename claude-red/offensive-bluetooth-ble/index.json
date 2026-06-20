@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-bluetooth-ble",
+  "skill_sha": "66875347bf36aa993efd34ec4ad4f281e82b3ad8e3459f2188518382054ad6f1",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "12cfe2bcdf29a871a3e81adbbb19120dcf24ad170c5ba582d1f4eba2897a8df2",
+    "blueprint.drawio": "c5a976f9d3c8053ea8fad1a6776520e18afb9229cfddea548604d563d42a7dc4",
+    "blueprint.json": "8a520071730d8752548bfed2f10b12e79cc399c3926dd33da4c533c7964d611a",
+    "blueprint.svg": "bf70582a6e564ba0491d1d949618ef2a527446bd2cb6600e55afac0fb70addad",
+    "ledger.json": "a92d06ac49189552bd8a776f93c1a7b31adcdbbef6f78449973d1711f563c0b5",
+    "perks.json": "b63d13c91b31acdf924f9c31b03a58e028fd136fac03a4a4c0d956ef35152f46",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "a8430375ae8ac2ba177ac37f6aea9c740b9c4b7d14b3568a1fe4341b78d2d6e8",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "46b1d69a6e6e578af1ee5d43a273a97250142d35ec7e08b30efe2badd2835ed6",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

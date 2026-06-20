@@ -1,0 +1,7 @@
+{
+  "_schema": "task-ledger TEMPLATE for offensive-advanced-redteam \u2014 set record_store.",
+  "skill": "offensive-advanced-redteam",
+  "perk": "brief",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {}
+}

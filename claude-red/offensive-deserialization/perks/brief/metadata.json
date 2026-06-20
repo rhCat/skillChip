@@ -1,0 +1,16 @@
+{
+  "perk": "brief",
+  "skill": "offensive-deserialization",
+  "description": "Render the Deserialization offensive-security methodology to brief.md (read-only).",
+  "rules": [
+    "read-only",
+    "emits a methodology brief; runs no attack tooling",
+    "for authorized testing / education only"
+  ],
+  "usage": "Set record_store. Output: brief.md.",
+  "limitation": "Renders static public methodology text; performs no scanning, exploitation, or network activity.",
+  "minimal_example": {
+    "perk": "brief",
+    "vars": {}
+  }
+}

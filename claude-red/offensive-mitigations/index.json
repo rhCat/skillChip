@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-mitigations",
+  "skill_sha": "2046f7a5864e1e11bdf0299b3df97cc4fbcf1c2859a20e4f338d88ad979d8e4f",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "0324fb8d32c6c19bdd9c626fe36c0733b7985158349443bdbd59c2e72a13174c",
+    "blueprint.drawio": "c6f0df73cbd43fd743267b2a2812f35d590338a40a64d1fb61bbc5195d562767",
+    "blueprint.json": "fa83846c2676cded07b4c3354dfcbaff2026d720051e48aa87261debd8e0abb9",
+    "blueprint.svg": "8b113815af4932d63805beedfbf9c73a80261151bbbc725e86bf342d4bbf1615",
+    "ledger.json": "308b8c5e68caf80d7bdcfec2981a948545973835129cf7bf7a0126573e95ce91",
+    "perks.json": "7c26c6731b8ea42e6042f3f8db88dc72f5957e3f726e75fafedb0bce9feb1ec1",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "b30dcecd5f243aef7cdfb204cb11b8b64917a4cc86b8f84af7fe7de714e8d5e2",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "cbd789c1bf8fd8110c511150169fc5b98e097a9419aa41647e35ced477b3a388",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}

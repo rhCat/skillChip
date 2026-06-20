@@ -1,0 +1,20 @@
+{
+  "skill": "offensive-business-logic",
+  "skill_sha": "7afc89c1528e7342bd99b1d9af3c2a1e702fac2847420ebf69389c8a196da8c3",
+  "file_count": 13,
+  "files": {
+    "LICENSE.txt": "f2ebf01e609ee09215fbe0334dc8a96e7474a186f07a73e24e983fa2462e0ff9",
+    "SKILL.md": "1426a300d1e9a0a6694cc14b5f99109e6a134d676dac2c8359d39d5577672c79",
+    "blueprint.drawio": "b8d1904e9141e771bd6b8df0f8c0e46614d5a2aa4cd95e6b564132476ecff5b4",
+    "blueprint.json": "c11edc68877552562cfd7d6c13d0f8f16a20477e8efaef818a1b6d3f7a717a20",
+    "blueprint.svg": "aacf46650d58314d546ad8cc8b2c45388baf586c957e0404c46bbcef6728832e",
+    "ledger.json": "701116816dfdf35f6ef63d624ec476f1c1848122d030825bf6a3be8bbe943e9d",
+    "perks.json": "7266ba566b0e6a83f896265d13041091a2fd4f233ddc05a03750c870395c9d24",
+    "perks/brief/manifesto.json": "b0358eadd273fc6002e277ff95a56295a09e094cc157ba96af97dbd6fc21abdc",
+    "perks/brief/metadata.json": "aa38233ef40ae4ca469b5ae31806077e890b6ed01368577c5f1c3409eeb7d0e5",
+    "perks/brief/src/contracts.json": "fdedd1d82ca890408f9a76ff638d10a37818661dda836e715ba47aa791b7b611",
+    "perks/brief/src/emit_brief.sh": "522cd7675855e515a0362afe444f8988f18795f48372f7c9ab84895f29f55be8",
+    "perks/brief/src/methodology.md": "4bd5fbf6bf70f98d0b11583e41d4d778044212df63576b31212edf34542779aa",
+    "perks/brief/test/case.json": "1c17a8d506c489a3a58a91b4367d459a6fb823822a3b79d889b2a4f0e2190b2e"
+  }
+}
