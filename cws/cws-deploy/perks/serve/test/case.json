@@ -1,0 +1,4 @@
+{
+  "_perk": "serve",
+  "skip": "needs a docker daemon — contract test covers compilation"
+}

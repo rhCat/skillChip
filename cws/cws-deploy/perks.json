@@ -1,0 +1,29 @@
+{
+  "skill": "cws-deploy",
+  "perks": [
+    {
+      "id": "serve",
+      "summary": "build the govd image (if absent) + (re)create + run the container, then wait for /health",
+      "destructive": true,
+      "tools": [
+        "deploy_serve"
+      ]
+    },
+    {
+      "id": "status",
+      "summary": "report the deployed govd container + its /health (read-only)",
+      "destructive": false,
+      "tools": [
+        "deploy_status"
+      ]
+    },
+    {
+      "id": "down",
+      "summary": "stop + remove the govd container (the data volume is preserved)",
+      "destructive": true,
+      "tools": [
+        "deploy_down"
+      ]
+    }
+  ]
+}

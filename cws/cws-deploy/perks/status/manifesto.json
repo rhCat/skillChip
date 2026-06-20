@@ -1,0 +1,23 @@
+{
+  "_perk": "status",
+  "sequence": [
+    "deploy_status"
+  ],
+  "tools": {
+    "deploy_status": {
+      "binary": "docker",
+      "params": {
+        "NAME": "${NAME}",
+        "PORT": "${PORT}"
+      }
+    }
+  },
+  "env": {
+    "NAME": "${NAME}",
+    "PORT": "${PORT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "docker"
+  ]
+}

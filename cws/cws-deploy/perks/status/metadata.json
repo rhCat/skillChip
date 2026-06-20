@@ -1,0 +1,15 @@
+{
+  "perk": "status",
+  "skill": "cws-deploy",
+  "description": "report the deployed govd container + its /health (read-only)",
+  "rules": [
+    "read-only — docker inspect + a /health GET, no mutation",
+    "status report to record_store"
+  ],
+  "usage": "Optional NAME (cyberware), PORT (5773). Output: status.json (container state + health + chip_sha).",
+  "limitation": "Reporting only. Needs a running Docker daemon.",
+  "minimal_example": {
+    "perk": "status",
+    "vars": {}
+  }
+}

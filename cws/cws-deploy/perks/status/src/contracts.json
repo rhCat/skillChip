@@ -1,0 +1,23 @@
+{
+  "tool": "deploy_status",
+  "inputs": {
+    "NAME": {
+      "type": "string",
+      "required": false
+    },
+    "PORT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "deploy_status_out": {
+      "path": "${RECORD_STORE}/status.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/status.json"
+  }
+}
