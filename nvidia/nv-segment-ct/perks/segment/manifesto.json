@@ -1,0 +1,1 @@
+{"_perk":"segment","sequence":["run_vista3d"],"tools":{"run_vista3d":{"binary":"python3","params":{"CT_VOLUME":"${CT_VOLUME}","LABEL_PROMPTS":"${LABEL_PROMPTS}"}}},"env":{"CT_VOLUME":"${CT_VOLUME}","LABEL_PROMPTS":"${LABEL_PROMPTS}","RECORD_STORE":"${record_store}"},"requires":["python3"]}

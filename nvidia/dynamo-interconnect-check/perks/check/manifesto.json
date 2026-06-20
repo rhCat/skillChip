@@ -1,0 +1,1 @@
+{"_perk":"check","sequence":["check_interconnect"],"tools":{"check_interconnect":{"binary":"python3","params":{"RECIPE_DIR":"${RECIPE_DIR}"}}},"env":{"RECIPE_DIR":"${RECIPE_DIR}","RECORD_STORE":"${record_store}"},"requires":["python3"]}

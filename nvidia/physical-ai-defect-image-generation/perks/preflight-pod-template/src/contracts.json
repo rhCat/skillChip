@@ -1,0 +1,19 @@
+{
+  "tool": "preflight_pod_template_port",
+  "inputs": {
+    "MIN_DSHM_GIB": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "pod_template_report": {
+      "path": "${RECORD_STORE}/pod_template_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pod_template_report.txt"
+  }
+}

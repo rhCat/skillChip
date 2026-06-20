@@ -1,0 +1,22 @@
+{
+  "perk": "generate",
+  "skill": "nv-generate-mr-brain",
+  "description": "stage configs + run NV-Generate-CTMR rflow-mr-brain GPU synthesis, summarize the NIfTI output",
+  "rules": [
+    "thin wrapper: inference/sampling/decoding are delegated to upstream scripts.diff_model_infer; do not reimplement",
+    "uses the documented entrypoint scripts/run_mr_brain.py; never substitute a handwritten command",
+    "writes generated volumes + result JSON under record_store; the wrapper creates --output-dir (no rm/mkdir/cleanup)",
+    "MODEL_CONFIG 'default' selects upstream defaults plus the CLI modality and random seed"
+  ],
+  "usage": "Set MODEL_CONFIG (override JSON or 'default'), OUTPUT_DIR, MODALITY, and NV_GENERATE_ROOT (cloned upstream repo). Output: result.json plus generated NIfTI volumes under OUTPUT_DIR.",
+  "limitation": "Thin wrapper over NVIDIA-Medtech/NV-Generate-CTMR scripts.diff_model_infer; do not modify upstream code. rflow-mr-brain is image-only (no paired segmentation masks). Output volumes are synthetic and not safe as production training data without independent review. Requires an NVIDIA GPU with >=16 GB VRAM; no CPU fallback. Not for clinical deployment, interpretation, autonomous diagnosis, or regulatory submission.",
+  "minimal_example": {
+    "perk": "generate",
+    "vars": {
+      "MODEL_CONFIG": "default",
+      "OUTPUT_DIR": "/tmp/mr_brain_out",
+      "MODALITY": "mri_t1",
+      "NV_GENERATE_ROOT": "/opt/NV-Generate-CTMR"
+    }
+  }
+}

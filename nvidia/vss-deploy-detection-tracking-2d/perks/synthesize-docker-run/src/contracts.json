@@ -1,0 +1,19 @@
+{
+  "tool": "synthesize_docker_run",
+  "inputs": {
+    "CONTAINER_NAME": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "docker_run": {
+      "path": "${RECORD_STORE}/docker-run.sh",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/docker-run.sh"
+  }
+}

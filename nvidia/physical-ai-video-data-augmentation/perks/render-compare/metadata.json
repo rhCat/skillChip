@@ -1,0 +1,22 @@
+{
+  "perk": "render-compare",
+  "skill": "physical-ai-video-data-augmentation",
+  "description": "Render a side-by-side comparison MP4 from a locally-staged VDA run: original input video left, augmented output right (read-only inputs).",
+  "rules": [
+    "read-only on inputs — reads <RUN_LOCAL_DIR>/input/<VIDEO>.mp4 and <RUN_LOCAL_DIR>/outputs/augmented/<VIDEO>_aug<N>/*.mp4",
+    "writes the hstack compare MP4 under <RUN_LOCAL_DIR>/display/; the porter mirrors the render summary to record_store",
+    "operates only on already-staged local artifacts — does not download from OSMO",
+    "AUG_INDEX selects which augmentation index to compare (default 0)",
+    "render summary (COMPARE_VIDEO/INPUT_VIDEO/AUGMENTED_VIDEO) lands under record_store"
+  ],
+  "usage": "Stage a run first (e.g. with stage_run_artifacts), then set RUN_LOCAL_DIR (staged run dir), DATASET, and VIDEO (video stem). Optional env: AUG_INDEX (default 0). Output: compare.txt.",
+  "limitation": "Requires ffmpeg and a fully-staged local run dir with both the input and augmented mp4 present; without them the porter degrades gracefully and records the failure. Rendering only — does not run augmentation, auto-labeling, or any OSMO download.",
+  "minimal_example": {
+    "perk": "render-compare",
+    "vars": {
+      "RUN_LOCAL_DIR": "/repo/media/vda/runs/run-1a2b3c4d",
+      "DATASET": "vda-demo",
+      "VIDEO": "clip"
+    }
+  }
+}

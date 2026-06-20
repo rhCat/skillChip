@@ -1,0 +1,19 @@
+{
+  "perk": "preflight-credentials",
+  "skill": "physical-ai-defect-image-generation",
+  "description": "Preflight the one credential every DIG flow needs — the OSMO credential hf-token that gates the gated Hugging Face downloads (models, datasets, USD assets, pretrained bundle); when HF_TOKEN is exported it also probes the gated Cosmos-AnomalyGen / Cosmos-Predict2 repos for read scope.",
+  "rules": [
+    "read-only by intent: lists OSMO credentials and (only if HF_TOKEN is exported and not --no-probe) makes outbound HF probes; will auto-set hf-token from HF_TOKEN if missing",
+    "no registry credential is required — paidf-* images are public on nvcr.io/nvidia/ and pull anonymously",
+    "set NO_PROBE=true in restricted-egress shells to skip the outbound HF probes",
+    "run once per conversation before the first submit (cache the verdict in memory)"
+  ],
+  "usage": "Optionally set NO_PROBE=true (restricted egress) and export HF_TOKEN. preflight_credentials writes its verdict to credentials_report.txt under record_store; the JSON line reports verified true/false. Requires the osmo CLI to reach the cluster — offline it records that and passes (verified=false).",
+  "limitation": "Authoritative verification requires the osmo CLI and OSMO API reachability; the HF scope probes require HF_TOKEN exported plus network egress to huggingface.co. Offline / no-osmo runs degrade to a non-authoritative report.",
+  "minimal_example": {
+    "perk": "preflight-credentials",
+    "vars": {
+      "NO_PROBE": "true"
+    }
+  }
+}

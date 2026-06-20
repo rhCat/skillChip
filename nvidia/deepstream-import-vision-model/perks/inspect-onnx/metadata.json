@@ -1,0 +1,18 @@
+{
+  "perk": "inspect-onnx",
+  "skill": "deepstream-import-vision-model",
+  "description": "inspect an ONNX model file — print inputs/outputs/opset/IR/producer, unique operators, validity, and a machine-parseable input_name/height/width summary",
+  "rules": [
+    "Read-only — never mutates the input ONNX file",
+    "The machine-parseable block emits exact lines (input_name:, height:, width:) that the engine-build phase greps; do not reword them",
+    "Dynamic spatial dims are reported as DYNAMIC (symbol=...) so callers know to set H/W manually in trtexec flags"
+  ],
+  "usage": "Set ONNX_FILE to the path of the .onnx model to inspect. Output: onnx-info.txt (human-readable report incl. the machine-parseable summary) and inspect-onnx.json (audit manifest with validity + report path).",
+  "limitation": "Requires the `onnx` python package to produce real shape/opset/operator data; without it the perk degrades gracefully (empty report, valid=false). Inspection only — it does not modify, simplify, or convert the model.",
+  "minimal_example": {
+    "perk": "inspect-onnx",
+    "vars": {
+      "ONNX_FILE": "models/yolov8n/model/yolov8n.onnx"
+    }
+  }
+}

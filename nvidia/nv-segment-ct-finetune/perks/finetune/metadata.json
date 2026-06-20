@@ -1,0 +1,22 @@
+{
+  "perk": "finetune",
+  "skill": "nv-segment-ct-finetune",
+  "description": "auto-configuring VISTA3D continual finetune of NV-Segment-CT on a CT NIfTI dataset (smoke/sanity/dataset)",
+  "rules": [
+    "destructive: trains/finetunes a model and writes checkpoints",
+    "thin wrapper around the upstream MONAI bundle run; do not replace it with handwritten training",
+    "do not patch files under bundle/ or upstream checkouts during normal use",
+    "monai==1.4.0 is required (1.5.x can crash the upstream finetune loss on boolean labels)",
+    "smoke proves wiring only (spleen_micro fixture); it is not a quality bar",
+    "writes output.json (schema-checked) plus checkpoints + generated configs under the output dir / bundle/configs"
+  ],
+  "usage": "Set DATASET (dataset/fixture dir) and optional FINETUNE_ARGS (extra CLI flags). A 'spleen_micro' dir auto-selects --smoke, a 'Task06_Lung' dir auto-selects --sanity, any other MSD-layout dir (imagesTr/ + labelsTr/) is finetuned. Output dir = RECORD_STORE. Output: output.json.",
+  "limitation": "Thin wrapper: training, validation, transforms, and checkpointing are delegated to the upstream bundle. The auto-derived plan is heuristic; caller --patch-size/--cache-rate/--epochs/--learning-rate win. The Task06 sanity recipe forces single-GPU; multi-GPU for other datasets needs host torchrun. Not for clinical deployment, interpretation, autonomous diagnosis, or regulatory submission.",
+  "minimal_example": {
+    "perk": "finetune",
+    "vars": {
+      "DATASET": "skills/nv-segment-ct-finetune/fixtures/spleen_micro",
+      "FINETUNE_ARGS": "--smoke --patch-size [64,64,64]"
+    }
+  }
+}

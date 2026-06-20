@@ -1,0 +1,13 @@
+{
+  "_perk": "preflight-credentials",
+  "requires": ["bash"],
+  "vars": {
+    "NO_PROBE": "true"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["credentials_report.txt"],
+    "nonempty": ["credentials_report.txt"],
+    "contains": { "credentials_report.txt": "osmo" }
+  }
+}

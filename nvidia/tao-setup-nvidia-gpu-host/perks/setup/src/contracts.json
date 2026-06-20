@@ -1,0 +1,23 @@
+{
+  "tool": "setup_nvidia_gpu_host",
+  "inputs": {
+    "BACKEND": {
+      "type": "string",
+      "required": true
+    },
+    "MODE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "setup_status_out": {
+      "path": "${RECORD_STORE}/setup-status.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/setup-status.txt"
+  }
+}

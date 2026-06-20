@@ -1,0 +1,23 @@
+{
+  "tool": "clean_engine_cache",
+  "inputs": {
+    "CACHE_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "DRY_RUN": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "clean_cache": {
+      "path": "${RECORD_STORE}/clean-cache.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/clean-cache.txt"
+  }
+}

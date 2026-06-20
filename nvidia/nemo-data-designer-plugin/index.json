@@ -1,0 +1,19 @@
+{
+  "skill": "nemo-data-designer-plugin",
+  "skill_sha": "d535c2e45b0fea0490f0eb6bf40d200af0f5a7d30348f5cd0cdd7a5190739672",
+  "file_count": 12,
+  "files": {
+    "SKILL.md": "6c7aaeffcfd1715573d4d57cb9172873af9a50d04b69767c33b15e92e9003585",
+    "blueprint.drawio": "2c1a60d3b7e9df83601a8fce3d6fbaca15f9d59ca74b37175cb9e1ee045ea464",
+    "blueprint.json": "cf0645bc72c2e8c509ec3b45e0b4a305e6edd728812465c23a1360e1a2f6c8c2",
+    "blueprint.svg": "98a62553a74dc375e07cd7a4c7f739a6a24524fcd25a282e906bced8dab9d00f",
+    "ledger.json": "2130e1c29fa898a8c23ca09ed32f5a79f3a80901f20f6a70f1bd7660c33d28d2",
+    "perks.json": "4f3dc08fc265d047c22d5835eb217d0bc6dced082c542aea19326b06fa94b536",
+    "perks/generate/manifesto.json": "f1cabc7869bcefdb8e7e893d77152e8af9d14a90efde6b71eddb7c89620e5db8",
+    "perks/generate/metadata.json": "f28b94786e46b07b42864b21f00498d77778f4ea36a27582512eaeb8cf9c6718",
+    "perks/generate/src/contracts.json": "5af94f569c5ff2c1e6e4084e03a95d043e37194dd6ca796fcad6b60c7a451562",
+    "perks/generate/src/get_person_object_schema.py": "8b9a051858af8f8cf971ddad53436c1704af99c792c9ba3bc0eda3b1a06b5507",
+    "perks/generate/src/get_person_object_schema.sh": "95db53ef549ff2936ed7bf63ac59bc672fa804e1b564757f3d25da032a455143",
+    "perks/generate/test/case.json": "a80a94ea83bc9dacf5b12a1c2f093baa9e6c9b485eba6a1deb0ea2390ab3155d"
+  }
+}

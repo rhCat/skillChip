@@ -1,0 +1,1 @@
+{"skill":"dali-dynamic-mode","perks":[{"id":"check","summary":"Static-lint a Python file for DALI dynamic-mode (ndd) anti-patterns and pipeline-mode leftovers (read-only)","destructive":false,"tools":["dali_check"]}]}

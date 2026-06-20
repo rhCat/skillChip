@@ -1,0 +1,26 @@
+{
+  "_perk": "cleanup-staging",
+  "destructive": true,
+  "sequence": [
+    "cleanup_staging"
+  ],
+  "tools": {
+    "cleanup_staging": {
+      "binary": "bash",
+      "params": {
+        "MODEL_NAME": "${MODEL_NAME}",
+        "CLEANUP_DRY_RUN": "${CLEANUP_DRY_RUN}",
+        "CLEANUP_ROOT": "${CLEANUP_ROOT}"
+      }
+    }
+  },
+  "env": {
+    "MODEL_NAME": "${MODEL_NAME}",
+    "CLEANUP_DRY_RUN": "${CLEANUP_DRY_RUN}",
+    "CLEANUP_ROOT": "${CLEANUP_ROOT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

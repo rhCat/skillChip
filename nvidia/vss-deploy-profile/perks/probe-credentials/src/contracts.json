@@ -1,0 +1,1 @@
+{"tool":"probe_credentials","inputs":{},"outputs":{"credentials_out":{"path":"${RECORD_STORE}/credentials.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/credentials.json"}}

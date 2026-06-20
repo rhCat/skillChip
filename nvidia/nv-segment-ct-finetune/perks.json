@@ -1,0 +1,13 @@
+{
+  "skill": "nv-segment-ct-finetune",
+  "perks": [
+    {
+      "id": "finetune",
+      "summary": "auto-configuring VISTA3D continual finetune of NV-Segment-CT on a CT NIfTI dataset (smoke/sanity/dataset)",
+      "destructive": true,
+      "tools": [
+        "run_finetune"
+      ]
+    }
+  ]
+}

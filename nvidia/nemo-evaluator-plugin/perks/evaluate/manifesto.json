@@ -1,0 +1,1 @@
+{"_perk":"evaluate","sequence":["nemo_evaluator_run"],"tools":{"nemo_evaluator_run":{"binary":"nemo","params":{"SPEC_FILE":"${SPEC_FILE}"}}},"env":{"SPEC_FILE":"${SPEC_FILE}","RECORD_STORE":"${record_store}"},"requires":["nemo"]}

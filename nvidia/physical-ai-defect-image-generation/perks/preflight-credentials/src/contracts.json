@@ -1,0 +1,19 @@
+{
+  "tool": "preflight_credentials_port",
+  "inputs": {
+    "NO_PROBE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "credentials_report": {
+      "path": "${RECORD_STORE}/credentials_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/credentials_report.txt"
+  }
+}

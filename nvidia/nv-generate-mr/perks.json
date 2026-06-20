@@ -1,0 +1,13 @@
+{
+  "skill": "nv-generate-mr",
+  "perks": [
+    {
+      "id": "generate",
+      "summary": "generate synthetic MR NIfTI volumes via NV-Generate-CTMR rflow-mr (GPU)",
+      "destructive": true,
+      "tools": [
+        "run_mr"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "_perk": "run-ct-image",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "MODEL_CONFIG": "${FIXTURE}/ct_image_config.json",
+    "NV_GENERATE_ROOT": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "result.json"
+    ],
+    "nonempty": [
+      "result.json"
+    ]
+  }
+}

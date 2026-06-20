@@ -1,0 +1,21 @@
+{
+  "perk": "ngc-list-files",
+  "skill": "deepstream-import-vision-model",
+  "description": "list the files in a public NVIDIA NGC model version (the NGC counterpart of hf_list_files) so the acquire phase knows what to download",
+  "rules": [
+    "Inputs are regex-validated (^[A-Za-z0-9._-]+$) to prevent URL escaping before the API call",
+    "NGC_TEAM may be the empty string for models with no team segment — the URL path is built accordingly",
+    "Uses HTTPS + TLSv1.2 with a bounded 30s timeout; the JSON response is parsed via the stdlib json module, not a shell pipe"
+  ],
+  "usage": "Set NGC_ORG, MODEL_NAME and NGC_VERSION (and optionally NGC_TEAM). Output: ngc-files.txt (one filename per line) and ngc-list-files.json (audit manifest with the file count).",
+  "limitation": "Needs outbound network access to api.ngc.nvidia.com for real data; offline it degrades gracefully to an empty file list. Public model versions only — no NGC auth/token handling is performed.",
+  "minimal_example": {
+    "perk": "ngc-list-files",
+    "vars": {
+      "NGC_ORG": "nvidia",
+      "NGC_TEAM": "tao",
+      "MODEL_NAME": "peoplenet",
+      "NGC_VERSION": "trainable_v2.6"
+    }
+  }
+}

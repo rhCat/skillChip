@@ -1,0 +1,39 @@
+{
+  "tool": "local_manifest",
+  "inputs": {
+    "VERSION": {
+      "type": "string",
+      "required": true
+    },
+    "MANIFEST": {
+      "type": "string",
+      "required": false
+    },
+    "CPNX_FILE": {
+      "type": "string",
+      "required": false
+    },
+    "CLNX_FILE": {
+      "type": "string",
+      "required": false
+    },
+    "STRATIX_FILE": {
+      "type": "string",
+      "required": false
+    },
+    "STRATEGY": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "flash_manifest": {
+      "path": "${RECORD_STORE}/manifest.yaml",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/manifest.yaml"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "model_name": "yolov8n",
+  "engine": "models/yolov8n/benchmarks/engines/yolov8n_dynamic_b256.engine",
+  "max_bs": 256,
+  "trtexec": {
+    "bs1":   {"qps": 220.5, "gpu_mean_ms": 4.53},
+    "bsmax": {"qps": 39.2,  "gpu_mean_ms": 103.7, "p99_ms": 105.1, "imgs_per_sec": 10035.2}
+  },
+  "peak_gpu_streams": 334,
+  "deepstream": {
+    "run1": {"streams": 334, "total_fps": 7850.0, "fps_per_stream": 23.5},
+    "run2": {"streams": 238, "total_fps": 7378.4, "fps_per_stream": 31.0}
+  }
+}

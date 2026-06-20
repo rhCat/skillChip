@@ -1,0 +1,1 @@
+{"skill":"nemotron-speech","perks":[{"id":"route","summary":"classify a Nemotron Speech (Riva) prompt to the right bundled reference (ASR/TTS/NMT)","destructive":false,"tools":["main"]}]}

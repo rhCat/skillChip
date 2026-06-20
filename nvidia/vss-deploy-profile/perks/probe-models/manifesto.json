@@ -1,0 +1,1 @@
+{"_perk":"probe-models","sequence":["probe_models"],"tools":{"probe_models":{"binary":"bash","params":{"BASE_URL":"${BASE_URL}","EXPECTED_MODEL":"${EXPECTED_MODEL}"}}},"env":{"BASE_URL":"${BASE_URL}","EXPECTED_MODEL":"${EXPECTED_MODEL}","RECORD_STORE":"${record_store}"},"requires":["bash"]}

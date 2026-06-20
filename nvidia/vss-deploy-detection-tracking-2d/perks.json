@@ -1,0 +1,59 @@
+{
+  "skill": "vss-deploy-detection-tracking-2d",
+  "perks": [
+    {
+      "id": "deploy",
+      "summary": "deploy + operate the RTVI-CV 2D detection/tracking microservice: resolve defaults, fetch NGC assets, configure + launch the perception container, add streams",
+      "destructive": true,
+      "tools": [
+        "load_defaults",
+        "fetch_resources",
+        "apply_in_container",
+        "start_app_in_container",
+        "add_streams"
+      ]
+    },
+    {
+      "id": "discover-streams",
+      "summary": "deterministically enumerate local video streams: scan $RESOURCES for any directory holding .mp4/.mkv, list them in stable sorted order, and cycle them into exactly STREAM_COUNT unique (id, url) pairs",
+      "tools": [
+        "discover_streams"
+      ]
+    },
+    {
+      "id": "render-box",
+      "summary": "render a perfectly-aligned fixed-width light-box step receipt (┌──title──┐ / │ row │ / └──┘) from body rows, the per-step output primitive of the deploy flow",
+      "tools": [
+        "render_box"
+      ]
+    },
+    {
+      "id": "collect-metrics",
+      "summary": "sample the running RTVI-CV /api/v1/metrics endpoint N times (plus nvidia-smi temp/power) and print averaged GPU/CPU/RAM + a per-stream FPS table; degrades to n/a + exit 0 when offline",
+      "tools": [
+        "collect_metrics"
+      ]
+    },
+    {
+      "id": "synthesize-docker-run",
+      "summary": "reconstruct the full multi-line `docker run …` command for an existing container from docker inspect (mounts, --gpus, --network, user-supplied -e env), with secrets redacted",
+      "tools": [
+        "synthesize_docker_run"
+      ]
+    },
+    {
+      "id": "check-container-gpu",
+      "summary": "verify CUDA / NVML access inside a running container via `nvidia-smi -L` over docker exec, detecting the silent stale-GPU-handle state before config-apply / app-launch",
+      "tools": [
+        "check_container_gpu"
+      ]
+    },
+    {
+      "id": "clean-cache",
+      "summary": "tidy the TRT engine cache directory: relocate any non-(*.engine|*.plan) file into <cache>/.quarantine/ so stray build artefacts stop polluting the cache; idempotent, never deletes",
+      "tools": [
+        "clean_engine_cache"
+      ]
+    }
+  ]
+}

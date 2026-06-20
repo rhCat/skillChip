@@ -1,0 +1,21 @@
+{
+  "perk": "gen-configs",
+  "skill": "physical-ai-video-data-augmentation",
+  "description": "Generate per-video Cosmos augmentation configs and a manifest from an input-video directory and a pipeline config dir (deterministic, read-only inputs).",
+  "rules": [
+    "read-only on inputs — discovers .mp4/.avi/.mkv under INPUT_DIR and reads CONFIG_DIR; never mutates either",
+    "deterministic: seeds via sha256 (random.seed(42)); same inputs yield the same configs + manifest",
+    "writes one rendered <video>_aug<N>.yaml per video x n_augmentations plus manifest.yaml under record_store/configs",
+    "CONFIG_DIR must provide workflow_config.yaml (or input_config.json/test_config.yaml) and the referenced base augmentation YAML",
+    "all output (configs + manifest + log) lands under record_store"
+  ],
+  "usage": "Set INPUT_DIR (dir of input videos) and CONFIG_DIR (pipeline config dir with workflow_config.yaml + augmentation/*.yaml). Optional OUTPUT_DIR (defaults to record_store/configs). Output: configs/manifest.yaml.",
+  "limitation": "Needs python3 with PyYAML and omegaconf installed; without omegaconf the porter degrades gracefully and writes an empty manifest. Config generation only — does not run augmentation, captioning, or any GPU/Cosmos inference.",
+  "minimal_example": {
+    "perk": "gen-configs",
+    "vars": {
+      "INPUT_DIR": "/srv/sdg/data/vda_inputs",
+      "CONFIG_DIR": "assets/configs"
+    }
+  }
+}

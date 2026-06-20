@@ -1,0 +1,5 @@
+{
+  "_comment": "Tiny image-from-mask request fixture for the run-ct-from-mask perk test.",
+  "mask_path": "label_mask.nii.gz",
+  "num_inference_steps": 30
+}

@@ -1,0 +1,1 @@
+{"_schema":"task-ledger TEMPLATE for tilegym-converting-cutile-to-julia — set perk, fill record_store + the vars the perk declares.","skill":"tilegym-converting-cutile-to-julia","perk":"check","record_store":"<absolute dir for outputs + run-ledger>","vars":{"JL_FILE":"<absolute path to the converted cuTile.jl Julia kernel file to validate>"}}

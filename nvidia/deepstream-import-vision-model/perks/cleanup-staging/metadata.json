@@ -1,0 +1,21 @@
+{
+  "perk": "cleanup-staging",
+  "skill": "deepstream-import-vision-model",
+  "description": "remove the scoped staging artifacts for a model (build/.venv_<name>, models/<name>/hf_model, models/<name>/onnx_export) after ONNX export — preserving the shared venv (destructive)",
+  "destructive": true,
+  "rules": [
+    "MODEL_NAME is regex-validated (^[A-Za-z0-9._-]+$) and '.'/'..' are rejected explicitly to prevent escaping the target dirs",
+    "Only candidate paths that resolve under ./build/ or ./models/ of the working root are removed — anything outside is skipped",
+    "Set CLEANUP_DRY_RUN=1 to preview the removals (the impl prints [dry-run] rm -rf ...) without deleting anything",
+    "Never removes the shared build/.venv_optimum — only the per-model build/.venv_<name>"
+  ],
+  "usage": "Set MODEL_NAME. The porter scopes the working root to ${RECORD_STORE}/workspace by default (override with CLEANUP_ROOT). Set CLEANUP_DRY_RUN=1 to preview. Output: cleanup-staging.json (audit manifest with removed/planned counts).",
+  "limitation": "Destructive: real runs delete the per-model staging dirs under the working root. It only ever touches build/ and models/ subpaths matching MODEL_NAME; it cannot remove arbitrary paths.",
+  "minimal_example": {
+    "perk": "cleanup-staging",
+    "vars": {
+      "MODEL_NAME": "yolov8n",
+      "CLEANUP_DRY_RUN": "1"
+    }
+  }
+}

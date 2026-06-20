@@ -1,0 +1,20 @@
+{
+  "perk": "prepare-assets",
+  "skill": "physical-ai-video-data-augmentation",
+  "description": "Pull the NVIDIA VDA demo videos from Hugging Face and flatten them into a single demo input directory for the default demo path.",
+  "rules": [
+    "only the VDA demo dataset (nvidia/video-data-augmentation-demo) is allowed unless ALLOW_NON_VDA_DEMO_DATASET=1 is set explicitly",
+    "clears previously flattened *.mp4 in DEMO_DIR; keeps other files intact; writes raw clips to <DEMO_DIR>_raw and flat copies to DEMO_DIR",
+    "rejects duplicate basenames across dataset subdirs — scope with HF_DEMO_DATASET_SUBDIR",
+    "never substitutes arbitrary web clips or placeholders for missing input",
+    "prepared-clip listing + upload hint land under record_store"
+  ],
+  "usage": "Set DEMO_DIR (target dir for flattened demo videos, e.g. /srv/sdg/data/vda_inputs). Optional env: HF_TOKEN (gated access), HF_DEMO_DATASET_REVISION, HF_DEMO_DATASET_SUBDIR. Output: prepared.txt.",
+  "limitation": "Needs network egress to huggingface.co plus curl and python3; gated weights require HF_TOKEN. Offline the porter degrades gracefully and records the failure. Pull/flatten only — does not upload to OSMO or run any augmentation.",
+  "minimal_example": {
+    "perk": "prepare-assets",
+    "vars": {
+      "DEMO_DIR": "/srv/sdg/data/vda_inputs"
+    }
+  }
+}

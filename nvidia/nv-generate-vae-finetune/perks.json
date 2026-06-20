@@ -1,0 +1,1 @@
+{"skill":"nv-generate-vae-finetune","perks":[{"id":"finetune","summary":"validate + stage configs then finetune the NV-Generate-CTMR MAISI VAE from a CT/MRI NIfTI datalist (CUDA GPU)","destructive":true,"tools":["run_vae_finetune"]}]}

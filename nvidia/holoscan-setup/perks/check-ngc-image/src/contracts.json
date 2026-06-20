@@ -1,0 +1,19 @@
+{
+  "tool": "check_ngc_image",
+  "inputs": {
+    "CUDA_TAG_SUFFIX": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "ngc_image_report": {
+      "path": "${RECORD_STORE}/ngc_image.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/ngc_image.txt"
+  }
+}

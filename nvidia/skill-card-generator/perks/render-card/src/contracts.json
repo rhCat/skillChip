@@ -1,0 +1,1 @@
+{"tool":"render_card","inputs":{"CONTEXT":{"type":"string","required":false}},"outputs":{"rendered_card":{"path":"${RECORD_STORE}/skill-card.md","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/skill-card.md"}}

@@ -1,0 +1,27 @@
+{
+  "tool": "hsb_phase_runner",
+  "inputs": {
+    "SSH_TARGET": {
+      "type": "string",
+      "required": true
+    },
+    "REMOTE_ROOT": {
+      "type": "string",
+      "required": true
+    },
+    "HSB_PLATFORM": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "hsb_setup_out": {
+      "path": "${RECORD_STORE}/hsb_setup.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/hsb_setup.json"
+  }
+}

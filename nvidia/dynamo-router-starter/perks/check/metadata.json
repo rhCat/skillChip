@@ -1,0 +1,19 @@
+{
+  "perk": "check",
+  "skill": "dynamo-router-starter",
+  "description": "smoke-test a Dynamo frontend: /v1/models + one chat completion (read-only)",
+  "rules": [
+    "read-only: only HTTP GET /v1/models and one POST /v1/chat/completions",
+    "only http/https base URLs are accepted (file:// and other schemes rejected)",
+    "polls /v1/models with retries; result JSON written to record_store"
+  ],
+  "usage": "Set BASE_URL (the Dynamo frontend, e.g. http://127.0.0.1:8000) and optional RETRIES. Output: router_health.json.",
+  "limitation": "Smoke test only, not a benchmark (one chat completion). KV-aware mode without worker KV-event publication degrades to approximate mode — this perk flags but does not fix worker config. Cross-mode latency claims need a separate benchmark run.",
+  "minimal_example": {
+    "perk": "check",
+    "vars": {
+      "BASE_URL": "http://127.0.0.1:8000",
+      "RETRIES": "5"
+    }
+  }
+}

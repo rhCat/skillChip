@@ -1,0 +1,19 @@
+{
+  "skill": "dynamo-recipe-runner",
+  "skill_sha": "2285d9947d477adffa0c189f9600ac76a7dd0b00edcce963746e5c6d436aa104",
+  "file_count": 12,
+  "files": {
+    "SKILL.md": "417c55186c52b2af3ebda21dd3f48540e69885d8358978a2661eff6e61c3ebe9",
+    "blueprint.drawio": "8099edcf4d977a4340cd851d252ae1f394721d27316ab9f784b37e084e554f65",
+    "blueprint.json": "1456c6b2728682c1cf33c6b628b94fa2bb6f0ae3f67e687e5fb7c2acb3b1e910",
+    "blueprint.svg": "87b969126152d10cd9d186097df887182b41045618fb6c3839353dfbb2926fdf",
+    "ledger.json": "3e2a74d2a926fa7130e4f10aab48cbaaebeb8f4e81a7c3b19c34181e21151df2",
+    "perks.json": "22268c6ec0bd681115552e24c5c0f10333fbf2f40eb57fc295c7e072226ef8de",
+    "perks/preflight/manifesto.json": "3e2fb5ab93955caa7981cd5578adc0e12dbcea464b9b617a15fe4f3c6c0371ee",
+    "perks/preflight/metadata.json": "35d1f8e56b1d7dce9e42e6f2d49cba148783fee11d26e61853a1db36afaafd91",
+    "perks/preflight/src/contracts.json": "c67e7e2b17ddd6edb144aecc7b80adaa7c80dfc9dc6cec4537555c6e6930023b",
+    "perks/preflight/src/recipe_tool.py": "9fb2ce89aa539eeb6f40474e617b4dad75ddb2a1f81e91276215cde604716e81",
+    "perks/preflight/src/recipe_tool.sh": "7d51b5fc221604edd5fdd9e554a1c15dfeadb1cfc4c3efc92e29b1c9415ec818",
+    "perks/preflight/test/case.json": "19a39e1b17b097cee1931057008733c0e7ff96655efaa681a815a70002657645"
+  }
+}

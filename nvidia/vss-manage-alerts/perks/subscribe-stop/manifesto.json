@@ -1,0 +1,1 @@
+{"_perk":"subscribe-stop","sequence":["subscribe_stop"],"tools":{"subscribe_stop":{"binary":"bash","params":{"HOST_IP":"${HOST_IP}","RULE_ID":"${RULE_ID}"}}},"env":{"HOST_IP":"${HOST_IP}","RULE_ID":"${RULE_ID}","RECORD_STORE":"${record_store}"},"requires":["bash","curl"]}

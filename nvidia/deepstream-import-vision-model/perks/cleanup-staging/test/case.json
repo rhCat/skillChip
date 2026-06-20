@@ -1,0 +1,6 @@
+{
+  "_perk": "cleanup-staging",
+  "requires": ["bash"],
+  "vars": {"MODEL_NAME": "yolov8n", "CLEANUP_DRY_RUN": "1"},
+  "expect": {"exit": 0, "outputs": ["cleanup-staging.json"], "nonempty": ["cleanup-staging.json"]}
+}

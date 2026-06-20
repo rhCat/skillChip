@@ -1,0 +1,31 @@
+{
+  "tool": "ngc_list_files",
+  "inputs": {
+    "NGC_ORG": {
+      "type": "string",
+      "required": true
+    },
+    "MODEL_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "NGC_VERSION": {
+      "type": "string",
+      "required": true
+    },
+    "NGC_TEAM": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "ngc_files_out": {
+      "path": "${RECORD_STORE}/ngc-list-files.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/ngc-list-files.json"
+  }
+}

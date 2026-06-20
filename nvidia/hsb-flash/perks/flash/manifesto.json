@@ -1,0 +1,26 @@
+{
+  "_perk": "flash",
+  "sequence": [
+    "make_manifest"
+  ],
+  "tools": {
+    "make_manifest": {
+      "binary": "python3",
+      "params": {
+        "VERSION": "${VERSION}",
+        "MANIFEST": "${MANIFEST}"
+      }
+    }
+  },
+  "env": {
+    "VERSION": "${VERSION}",
+    "MANIFEST": "${MANIFEST}",
+    "SSH_TARGET": "${SSH_TARGET}",
+    "REMOTE_ROOT": "${REMOTE_ROOT}",
+    "BOARD_TYPE": "${BOARD_TYPE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

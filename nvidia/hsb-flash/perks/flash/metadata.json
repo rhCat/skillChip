@@ -1,0 +1,24 @@
+{
+  "perk": "flash",
+  "skill": "hsb-flash",
+  "description": "Prepare the FPGA flash manifest and flash (upgrade/downgrade) an HSB Lattice board or VB1940 camera on a remote devkit (destructive)",
+  "rules": [
+    "DESTRUCTIVE: flashing permanently modifies FPGA firmware and can brick the device; never run automatically — only on explicit user invocation",
+    "NEVER mix board-type commands: program_lattice_cpnx100 is Lattice-only, program_leopard_cpnx100 is VB1940-only; the wrong tool can permanently brick the device",
+    "Confirm board type (lattice or vb1940) and current FPGA version before any flash command; refuse if the board type is ambiguous or mismatched",
+    "All program commands run inside the demo container over SSH (no sudo needed in the container); require explicit user confirmation before each flash step and after each power cycle",
+    "Lattice two-step flashing via gateway 2412 uses v2.0.0 with --force BEFORE the subcommand; newer releases take --force --accept-eula after the subcommand",
+    "make_manifest writes the version-matching manifest YAML under record_store; flash artifacts and interim repos are cleaned up after the run"
+  ],
+  "usage": "Set VERSION (target FPGA version, e.g. 2510), optionally MANIFEST (output filename), plus SSH_TARGET and REMOTE_ROOT for the remote devkit, and record_store. make_manifest fetches the manifest from NGC; the agent then flashes the board following the per-board procedure.",
+  "limitation": "After flashing to FPGA 2407, `hololink enumerate` cannot detect the board (incompatible enumeration format) — use `hololink --force fpga_version` instead. Lattice versions older than 2407 or between known versions (e.g. 2409) are unsupported; VB1940 supports only 2507+ (never 2407/2412). make_manifest needs NGC network access plus the requests and PyYAML Python packages; v2.0.0 has a different CLI flag ordering from newer releases.",
+  "minimal_example": {
+    "perk": "flash",
+    "vars": {
+      "VERSION": "2510",
+      "MANIFEST": "manifest.yaml",
+      "SSH_TARGET": "nvidia@192.168.1.50",
+      "REMOTE_ROOT": "/home/nvidia"
+    }
+  }
+}

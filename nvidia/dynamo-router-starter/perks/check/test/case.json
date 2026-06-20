@@ -1,0 +1,19 @@
+{
+  "_perk": "check",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "BASE_URL": "http://127.0.0.1:9",
+    "RETRIES": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "router_health.json"
+    ],
+    "nonempty": [
+      "router_health.json"
+    ]
+  }
+}

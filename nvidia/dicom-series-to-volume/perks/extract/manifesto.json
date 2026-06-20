@@ -1,0 +1,1 @@
+{"_perk":"extract","sequence":["series_to_volume"],"tools":{"series_to_volume":{"binary":"python3","params":{"DICOM_DIR":"${DICOM_DIR}"}}},"env":{"DICOM_DIR":"${DICOM_DIR}","RECORD_STORE":"${record_store}"},"requires":["python3"]}

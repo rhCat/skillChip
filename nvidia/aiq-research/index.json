@@ -1,0 +1,19 @@
+{
+  "skill": "aiq-research",
+  "skill_sha": "c24e344dacf8445ed33de071f826efbcbffcc83073cbb63785c103536a737f49",
+  "file_count": 12,
+  "files": {
+    "SKILL.md": "57c7a76ddabb11c4e5cf5cb48b63ffeafea25f1d9841bc085f818d8544e2b1d3",
+    "blueprint.drawio": "996eb0e7da582967d439f700e3af4740f8ddbaa780ba5935d82d32dad11fd278",
+    "blueprint.json": "f0acb41637cc1273c654d287da9479fb676ba11ab0e94c02fe33f0e855aadcce",
+    "blueprint.svg": "a8172dcab57c187162a6c2ea3d3b103e0994517cba42ace3812d03e9a52e3484",
+    "ledger.json": "fe1a58cfeef005e25dab3f1ee4d66a38d1d2df650d87c9dc274ed842d14ea436",
+    "perks.json": "671052d26e07a602eacd88b6fc945c5517772a5e9bc0f6d9865402c95e2b5474",
+    "perks/research/manifesto.json": "37f23b77b407e8b79f055231b17ec84fef1315614e8ee9ee2cd97c80528499cb",
+    "perks/research/metadata.json": "7d9cb561e538489d25b75435f2cc3542985660dca2ec6489999899f6c89e1d3b",
+    "perks/research/src/aiq.py": "8b993145c9bdb8ebdac8d677e0bb28c5ee5951fa0f5a4e8d86064bdf11eb0f48",
+    "perks/research/src/aiq.sh": "ea4b883f097da959405254398504641ea2bdf0b0dcf49adfb196c92b3aa7a11a",
+    "perks/research/src/contracts.json": "b2d988d19aba9d56a35b5dfd613779adae90f0fa27dd10c732a777e0da3cc270",
+    "perks/research/test/case.json": "5aa6d90966d50bb5cc9b4f530b3154c509c74a5774a44d2bdf2d90fd45a72369"
+  }
+}

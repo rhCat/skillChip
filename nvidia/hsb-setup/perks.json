@@ -1,0 +1,13 @@
+{
+  "skill": "hsb-setup",
+  "perks": [
+    {
+      "id": "setup",
+      "summary": "phased Holoscan Sensor Bridge bring-up: clone, configure host, build + run demo container, verify connectivity (destructive)",
+      "destructive": true,
+      "tools": [
+        "hsb_phase_runner"
+      ]
+    }
+  ]
+}

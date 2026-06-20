@@ -1,0 +1,8 @@
+{
+  "_comment": "Tiny config_infer override fixture for the preflight perk test.",
+  "num_output_samples": 1,
+  "body_region": ["abdomen"],
+  "anatomy_list": ["liver", "spleen"],
+  "output_size": [256, 256, 256],
+  "spacing": [1.5, 1.5, 1.5]
+}

@@ -1,0 +1,1 @@
+{"tool":"subscribe_stop","inputs":{"HOST_IP":{"type":"string","required":true},"RULE_ID":{"type":"string","required":true}},"outputs":{"subscribe_stop_out":{"path":"${RECORD_STORE}/subscribe_stop.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/subscribe_stop.json"}}

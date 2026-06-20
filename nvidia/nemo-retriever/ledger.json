@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for nemo-retriever — set perk, fill record_store + the vars the perk declares.",
+  "skill": "nemo-retriever",
+  "perk": "query",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "QUERY": "<Python regex (case-insensitive) to search across the corpus>",
+    "LANCEDB_URI": "<dir holding the LanceDB index built by `retriever ingest`, e.g. ./lancedb>"
+  }
+}

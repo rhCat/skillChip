@@ -1,0 +1,1 @@
+placeholder onnx fixture (not a real model); the inspect-onnx porter degrades gracefully when the onnx package is absent or the file is unparseable.

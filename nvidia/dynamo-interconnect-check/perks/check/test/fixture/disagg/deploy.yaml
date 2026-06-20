@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qwen-disagg-worker
+spec:
+  template:
+    spec:
+      containers:
+        - name: worker
+          image: nvcr.io/nim/example:disagg
+          env:
+            - name: UCX_TLS
+              value: "rc,cuda_ipc,cuda_copy"
+            - name: UCX_NET_DEVICES
+              value: "mlx5_0:1"
+            - name: NCCL_IB_HCA
+              value: "mlx5_0,mlx5_1"
+            - name: NCCL_IB_DISABLE
+              value: "0"

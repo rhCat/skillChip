@@ -1,0 +1,21 @@
+{
+  "perk": "troubleshoot",
+  "skill": "dynamo-troubleshoot",
+  "description": "collect a read-only Dynamo Kubernetes debug bundle (pods, events, jobs, PVCs, CR status; secrets scrubbed)",
+  "rules": [
+    "read-only: only kubectl get/describe/logs are run; the cluster is never mutated",
+    "never collects Kubernetes secrets",
+    "HF tokens, bearer tokens, and *_TOKEN/SECRET/PASSWORD/API_KEY values are redacted before anything is written to disk",
+    "remediation commands are returned to the operator, not executed",
+    "bundle + summary.json are written under record_store"
+  ],
+  "usage": "Set NAMESPACE (target namespace); optionally DEPLOYMENT_NAME to scope to one DynamoGraphDeployment. Output: summary.json (plus per-command .txt bundle files) under record_store.",
+  "limitation": "Read-only — never mutates the cluster; remediation is returned, not run. Will not collect secrets or print HF tokens, so auth failures may still need user-side inspection. Bundle size grows with deployment size; on very large namespaces, scope with DEPLOYMENT_NAME. Does not validate disagg transport — use dynamo-interconnect-check for that.",
+  "minimal_example": {
+    "perk": "troubleshoot",
+    "vars": {
+      "NAMESPACE": "dynamo-demo",
+      "DEPLOYMENT_NAME": "qwen-vllm-disagg"
+    }
+  }
+}

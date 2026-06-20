@@ -1,0 +1,22 @@
+{
+  "perk": "preflight-urls",
+  "skill": "physical-ai-defect-image-generation",
+  "description": "Preflight the DIG URL artifacts a given flow + usecase needs under DIG_URL_ROOT before a submit — e.g. models/pretrained, models/<usecase>, datasets/<usecase>/raw, datasets/pcb/assets (Day 1 real-photo alignment) — and report any that are missing so setup workflows can be submitted first.",
+  "rules": [
+    "read-only: runs 'osmo data list' on each required URL; downloads nothing",
+    "FLOW is 0|day0 / 1|day1 / finetune; USECASE is pcb|metal_surface|glass|<custom>; VARIANT real-alignment adds datasets/pcb/assets for Day 1 PCBA",
+    "DIG_URL_ROOT has NO silent default in this skill — elicit it from the user; the core's s3://osmo-workflows/dig fallback is only a placeholder",
+    "USE_PRETRAINED_CHECKPOINT (default true) gates models/<usecase>; USE_USD2ROI_DAY1 is equivalent to VARIANT=real-alignment",
+    "run before every submit; on a missing artifact, submit the relevant setup/setup_<case>.yaml + setup/setup_pretrained.yaml first — never download assets locally to work around it"
+  ],
+  "usage": "Set FLOW and USECASE (plus optional VARIANT, DIG_URL_ROOT, USE_PRETRAINED_CHECKPOINT, USE_USD2ROI_DAY1). preflight_urls writes the per-flow checklist + verdict to urls_report.txt under record_store; the JSON line reports verified true/false. Requires the osmo CLI; offline it records that and passes (verified=false).",
+  "limitation": "Authoritative verification requires the osmo CLI and OSMO storage reachability for 'osmo data list'; offline / no-osmo runs degrade to a non-authoritative report of the required artifact set. The artifacts themselves are populated by setup workflows that run remotely on OSMO.",
+  "minimal_example": {
+    "perk": "preflight-urls",
+    "vars": {
+      "FLOW": "0",
+      "USECASE": "pcb",
+      "DIG_URL_ROOT": "s3://osmo-workflows/dig"
+    }
+  }
+}

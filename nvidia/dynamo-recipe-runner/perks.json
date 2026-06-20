@@ -1,0 +1,1 @@
+{"skill":"dynamo-recipe-runner","perks":[{"id":"preflight","summary":"discover + validate an existing Dynamo Kubernetes recipe before apply (read-only, no kubectl)","destructive":false,"tools":["recipe_tool"]}]}

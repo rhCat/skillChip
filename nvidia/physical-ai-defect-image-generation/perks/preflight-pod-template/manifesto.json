@@ -1,0 +1,21 @@
+{
+  "_perk": "preflight-pod-template",
+  "sequence": [
+    "preflight_pod_template_port"
+  ],
+  "tools": {
+    "preflight_pod_template_port": {
+      "binary": "bash",
+      "params": {
+        "MIN_DSHM_GIB": "${MIN_DSHM_GIB}"
+      }
+    }
+  },
+  "env": {
+    "MIN_DSHM_GIB": "${MIN_DSHM_GIB}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

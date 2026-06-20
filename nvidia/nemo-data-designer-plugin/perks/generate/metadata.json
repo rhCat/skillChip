@@ -1,0 +1,18 @@
+{
+  "perk": "generate",
+  "skill": "nemo-data-designer-plugin",
+  "description": "inspect a locale's managed persona dataset schema (PII + synthetic-persona fields) for Data Designer person sampling",
+  "rules": [
+    "read-only — reads a local parquet schema, prints fields, writes nothing remote",
+    "PII fields are always included; synthetic-persona fields appear only with with_synthetic_personas=True",
+    "the locale dataset must already be downloaded under the managed-assets datasets path"
+  ],
+  "usage": "Set LOCALE (e.g. en_US). Output: person_schema.txt listing the PII and synthetic-persona fields available for that locale.",
+  "limitation": "Requires the data-designer Python package (Python >= 3.11) and pyarrow, plus the locale parquet already present under the managed-assets path. nemo data-designer is not installed by default; preview/generation steps may hit network/sandbox restrictions.",
+  "minimal_example": {
+    "perk": "generate",
+    "vars": {
+      "LOCALE": "en_US"
+    }
+  }
+}

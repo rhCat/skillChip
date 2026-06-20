@@ -1,0 +1,1 @@
+{"_perk":"check","requires":["python3"],"vars":{"JL_FILE":"${FIXTURE}/kernel.jl"},"expect":{"outputs":["validation.txt"]}}

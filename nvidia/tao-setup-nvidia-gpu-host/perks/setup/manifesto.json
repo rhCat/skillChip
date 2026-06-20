@@ -1,0 +1,23 @@
+{
+  "_perk": "setup",
+  "sequence": [
+    "setup_nvidia_gpu_host"
+  ],
+  "tools": {
+    "setup_nvidia_gpu_host": {
+      "binary": "bash",
+      "params": {
+        "BACKEND": "${BACKEND}",
+        "MODE": "${MODE}"
+      }
+    }
+  },
+  "env": {
+    "BACKEND": "${BACKEND}",
+    "MODE": "${MODE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

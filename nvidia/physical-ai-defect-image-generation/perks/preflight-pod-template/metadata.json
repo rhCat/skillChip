@@ -1,0 +1,19 @@
+{
+  "perk": "preflight-pod-template",
+  "skill": "physical-ai-defect-image-generation",
+  "description": "Preflight the OSMO POD_TEMPLATE for DIG: verify the nvoptix denoiser binary is hostPath-mounted at /usr/share/nvidia/nvoptix.bin and the dshm emptyDir (/dev/shm) is at least the minimum GiB, so Kit OptiX does not silently degrade to noisy path tracing and torchrun / IsaacSim buffers do not OOM on /dev/shm.",
+  "rules": [
+    "read-only: runs 'osmo config show POD_TEMPLATE' and parses it with jq; mutates nothing",
+    "verdict codes — 0 template OK, 1 visible-but-malformed (route to infra skill to patch), 2 HTTP 403 (ask user), 3 HTTP 409 (ConfigMap mode, runtime in-pod preflight is the safety net), 4 prerequisite missing",
+    "MIN_DSHM_GIB defaults to 16; pass 32 for the preferred size (Kit ray-tracer buffers + torchrun shared memory)",
+    "run once per conversation with cross-conversation memory caching"
+  ],
+  "usage": "Optionally set MIN_DSHM_GIB (default 16). preflight_pod_template writes its verdict to pod_template_report.txt under record_store; the JSON line reports verdict (the underlying exit-code class) and verified true/false. Requires the osmo CLI; offline it records prereq-missing (verdict 4) and passes.",
+  "limitation": "Authoritative verification requires the osmo CLI and read permission on POD_TEMPLATE; without those the verdict degrades (403 → ask user, 409 → ConfigMap mode, no-osmo → 4 prereq-missing). The actual pod is provisioned remotely on OSMO — this perk only inspects the template.",
+  "minimal_example": {
+    "perk": "preflight-pod-template",
+    "vars": {
+      "MIN_DSHM_GIB": "16"
+    }
+  }
+}

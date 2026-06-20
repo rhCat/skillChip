@@ -1,0 +1,23 @@
+{
+  "tool": "prepare_inference_spec",
+  "inputs": {
+    "RESULTS_DIR": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "best_model_json": {
+      "path": "${RECORD_STORE}/best_model.json",
+      "type": "file"
+    },
+    "best_model_inference_spec": {
+      "path": "${RECORD_STORE}/best_model_inference_spec.yaml",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/best_model.json"
+  }
+}

@@ -1,0 +1,1 @@
+{"_schema":"task-ledger TEMPLATE for nv-segment-ctmr — set perk, fill record_store + the vars the perk declares.","skill":"nv-segment-ctmr","perk":"segment","record_store":"<absolute dir for outputs + run-ledger>","vars":{"CT_OR_MR_VOLUME":"<absolute path to the input CT/MRI NIfTI (.nii/.nii.gz) volume>","MODALITY":"one of CT_BODY | MRI_BODY | MRI_BRAIN (default CT_BODY)"}}

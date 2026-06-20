@@ -1,0 +1,23 @@
+{
+  "_perk": "check",
+  "sequence": [
+    "check_router_health"
+  ],
+  "tools": {
+    "check_router_health": {
+      "binary": "python3",
+      "params": {
+        "BASE_URL": "${BASE_URL}",
+        "RETRIES": "${RETRIES}"
+      }
+    }
+  },
+  "env": {
+    "BASE_URL": "${BASE_URL}",
+    "RETRIES": "${RETRIES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "_comment": "Tiny CT image-only override fixture for the run-ct-image perk test.",
+  "dim": [256, 256, 256],
+  "spacing": [1.5, 1.5, 1.5],
+  "num_inference_steps": 30
+}

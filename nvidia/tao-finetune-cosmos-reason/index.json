@@ -1,0 +1,20 @@
+{
+  "skill": "tao-finetune-cosmos-reason",
+  "skill_sha": "e7529676c81aa52a398209e0692680ffbabf546aaa9bd07047dabb33f15b62e1",
+  "file_count": 13,
+  "files": {
+    "SKILL.md": "a25795cf82a3ca2347c78810d97ff9cd15d40c69de023d02fecccd31ebf8b8e2",
+    "blueprint.drawio": "5766215db1ab5952ac52da06f2ae511adfcd4f2cb7d477818f51e6d4b8567e53",
+    "blueprint.json": "8e0a2b25d5676ba42f85e7987dbf9b32b9750ac1ae2e21d818b49bc88e6d068c",
+    "blueprint.svg": "553f232ec86abe11f9de990677ec2d20af426aec20d18434fa9b280d5319c34b",
+    "ledger.json": "b45016b2c6834f5c406c7544b80ce262ab34cf22b3942771f2e91cdd9e8f36bd",
+    "perks.json": "8053679f01d7dddb2dd4cf8fdd3216a7feee14951d1c3b9d531c80bcfbc59313",
+    "perks/finetune/manifesto.json": "0264b4d0a7e56b8a37983964c6e1138caaf3205bbd0ae229fe21b28dd858d240",
+    "perks/finetune/metadata.json": "a1a8bda302122494e7bf7a3097f59d0958130cc357d1c609a5f5da3fbe07a3e1",
+    "perks/finetune/src/analyze_gaps.py": "cf78c84d83b797080bccefa59778e1c45a0852272297963a3a7c1d4c59f35cc5",
+    "perks/finetune/src/analyze_gaps.sh": "4ef87b882069e46527192d1e8db153deafb97a9e9c136129aeb91d7ec90e172c",
+    "perks/finetune/src/contracts.json": "92acb99f75b3c70f4e46eef704e6fe8e922306481a400d301bc14f7df929c30f",
+    "perks/finetune/test/case.json": "19fb7511a07b2efedfbcf404bcb8d26c3272b7b3e0ae69f975b04e46f3612790",
+    "perks/finetune/test/fixture/input.txt": "2f73349cfc4630255319c6c8dfc1b46a8996ace9d14d8e07563b165915918ec2"
+  }
+}

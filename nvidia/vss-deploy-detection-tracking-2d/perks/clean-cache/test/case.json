@@ -1,0 +1,19 @@
+{
+  "_perk": "clean-cache",
+  "requires": [
+    "bash"
+  ],
+  "vars": {
+    "CACHE_DIR": "${FIXTURE}",
+    "DRY_RUN": "1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "clean-cache.txt"
+    ],
+    "nonempty": [
+      "clean-cache.txt"
+    ]
+  }
+}

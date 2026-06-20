@@ -1,0 +1,6 @@
+{
+  "_perk": "inspect-onnx",
+  "requires": ["bash", "python3"],
+  "vars": {"ONNX_FILE": "${FIXTURE}/model.onnx"},
+  "expect": {"exit": 0, "outputs": ["inspect-onnx.json", "onnx-info.txt"], "nonempty": ["inspect-onnx.json"]}
+}

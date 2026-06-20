@@ -1,0 +1,25 @@
+{
+  "_perk": "finetune",
+  "sequence": [
+    "analyze_gaps"
+  ],
+  "tools": {
+    "analyze_gaps": {
+      "binary": "python3",
+      "params": {
+        "RESULTS_DIR": "${RESULTS_DIR}",
+        "KPI_ANN_PATH": "${KPI_ANN_PATH}",
+        "KPI_MEDIA_PATH": "${KPI_MEDIA_PATH}"
+      }
+    }
+  },
+  "env": {
+    "RESULTS_DIR": "${RESULTS_DIR}",
+    "KPI_ANN_PATH": "${KPI_ANN_PATH}",
+    "KPI_MEDIA_PATH": "${KPI_MEDIA_PATH}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

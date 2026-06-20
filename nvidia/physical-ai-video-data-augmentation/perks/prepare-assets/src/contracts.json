@@ -1,0 +1,19 @@
+{
+  "tool": "prepare_demo_assets",
+  "inputs": {
+    "DEMO_DIR": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "prepared": {
+      "path": "${RECORD_STORE}/prepared.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/prepared.txt"
+  }
+}

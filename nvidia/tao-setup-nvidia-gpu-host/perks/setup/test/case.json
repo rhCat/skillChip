@@ -1,0 +1,19 @@
+{
+  "_perk": "setup",
+  "requires": [
+    "bash"
+  ],
+  "vars": {
+    "BACKEND": "demo",
+    "MODE": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "setup-status.txt"
+    ],
+    "nonempty": [
+      "setup-status.txt"
+    ]
+  }
+}

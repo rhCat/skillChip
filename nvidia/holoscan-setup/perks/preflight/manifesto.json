@@ -1,0 +1,26 @@
+{
+  "_perk": "preflight",
+  "sequence": [
+    "check_conda",
+    "check_ngc_image"
+  ],
+  "tools": {
+    "check_conda": {
+      "binary": "bash",
+      "params": {}
+    },
+    "check_ngc_image": {
+      "binary": "bash",
+      "params": {
+        "CUDA_TAG_SUFFIX": "${CUDA_TAG_SUFFIX}"
+      }
+    }
+  },
+  "env": {
+    "CUDA_TAG_SUFFIX": "${CUDA_TAG_SUFFIX}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

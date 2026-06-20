@@ -1,0 +1,1 @@
+placeholder onnx fixture (not a real model); the static-batch-onnx porter degrades gracefully when onnx/numpy are absent or the file is unparseable.

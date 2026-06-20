@@ -1,0 +1,1 @@
+{"_perk":"route","sequence":["main"],"tools":{"main":{"binary":"python3","params":{"QUESTION":"${QUESTION}"}}},"env":{"QUESTION":"${QUESTION}","RECORD_STORE":"${record_store}"},"requires":["python3"]}

@@ -1,0 +1,1 @@
+{"_schema":"task-ledger TEMPLATE for dynamo-interconnect-check — set perk, fill record_store + the vars the perk declares.","skill":"dynamo-interconnect-check","perk":"check","record_store":"<absolute dir for outputs + run-ledger>","vars":{"RECIPE_DIR":"<recipe dir or deploy.yaml: recipes/<model>/<framework>/<mode>>"}}

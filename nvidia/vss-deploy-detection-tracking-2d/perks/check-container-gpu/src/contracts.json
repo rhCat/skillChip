@@ -1,0 +1,19 @@
+{
+  "tool": "check_container_gpu",
+  "inputs": {
+    "CONTAINER_NAME": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "gpu_probe": {
+      "path": "${RECORD_STORE}/gpu-probe.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/gpu-probe.txt"
+  }
+}

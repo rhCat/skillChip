@@ -1,0 +1,27 @@
+{
+  "tool": "preflight_urls_port",
+  "inputs": {
+    "FLOW": {
+      "type": "string",
+      "required": true
+    },
+    "USECASE": {
+      "type": "string",
+      "required": true
+    },
+    "VARIANT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "urls_report": {
+      "path": "${RECORD_STORE}/urls_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/urls_report.txt"
+  }
+}

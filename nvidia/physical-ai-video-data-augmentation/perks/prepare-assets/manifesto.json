@@ -1,0 +1,23 @@
+{
+  "_perk": "prepare-assets",
+  "sequence": [
+    "prepare_demo_assets"
+  ],
+  "tools": {
+    "prepare_demo_assets": {
+      "binary": "bash",
+      "params": {
+        "DEMO_DIR": "${DEMO_DIR}"
+      }
+    }
+  },
+  "env": {
+    "DEMO_DIR": "${DEMO_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3",
+    "curl"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "_perk": "generate",
+  "requires": ["python3"],
+  "vars": {
+    "DEFECT_PAIRS": "[[\"IC\",\"bridge\"],[\"passive_component\",\"missing\"]]",
+    "SPATIAL_DEPENDENCY": "free"
+  },
+  "expect": {
+    "outputs": ["defect_spec.jsonl"]
+  }
+}

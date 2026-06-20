@@ -1,0 +1,10 @@
+{
+  "_perk": "probe-credentials",
+  "requires": ["bash"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["credentials.json"],
+    "nonempty": ["credentials.json"]
+  }
+}

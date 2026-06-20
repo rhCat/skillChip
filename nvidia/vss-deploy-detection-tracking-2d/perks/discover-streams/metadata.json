@@ -1,0 +1,22 @@
+{
+  "perk": "discover-streams",
+  "skill": "vss-deploy-detection-tracking-2d",
+  "description": "deterministically enumerate local video streams for a use case: scan $RESOURCES for any directory containing .mp4/.mkv, list them in stable sorted order, and cycle them into exactly STREAM_COUNT unique (id, url) pairs",
+  "rules": [
+    "read-only — scans $RESOURCES (default /opt/storage/resources) for video files; writes nothing outside record_store",
+    "layout-agnostic: enumerates ALL dirs containing .mp4/.mkv, no hardcoded NGC leaf names — survives renamed/restructured resources",
+    "cycling rule: BATCH > video_count produces unique ids with a '_<i>' suffix so the REST /stream/add never rejects duplicate ids",
+    "USECASE must be one of warehouse-2d | warehouse-3d | smartcity-rtdetr | smartcity-gdino; STREAM_COUNT must be a positive integer",
+    "emits a JSON array of {id, url} objects to streams.json; degrades to [] when no video directory is found"
+  ],
+  "usage": "Set USECASE (the deployment use case) and STREAM_COUNT (number of streams to produce). Optionally point RESOURCES at the directory holding the extracted NGC videos. Output: streams.json (JSON array of {id, url} stream descriptors) under record_store.",
+  "limitation": "Resolves to [] when $RESOURCES holds no .mp4/.mkv files. When multiple video directories exist the underlying tool returns ambiguous (exit 3) and the array is empty — re-run after mounting a single resources dir.",
+  "minimal_example": {
+    "perk": "discover-streams",
+    "vars": {
+      "USECASE": "warehouse-2d",
+      "STREAM_COUNT": "4",
+      "RESOURCES": "/opt/storage/resources"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"_perk":"assess","sequence":["fetch_api_support"],"tools":{"fetch_api_support":{"binary":"python3","params":{"SOURCE_URL":"${SOURCE_URL}"}}},"env":{"SOURCE_URL":"${SOURCE_URL}","RECORD_STORE":"${record_store}"},"requires":["python3"]}

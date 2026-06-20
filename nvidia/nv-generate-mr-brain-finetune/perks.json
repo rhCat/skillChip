@@ -1,0 +1,1 @@
+{"skill":"nv-generate-mr-brain-finetune","perks":[{"id":"finetune","summary":"validate a MONAI datalist and finetune the NV-Generate-CTMR MR-brain diffusion UNet","destructive":true,"tools":["run_mr_brain_finetune"]}]}

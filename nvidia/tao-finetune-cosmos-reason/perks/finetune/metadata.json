@@ -1,0 +1,22 @@
+{
+  "perk": "finetune",
+  "skill": "tao-finetune-cosmos-reason",
+  "description": "SFT of Cosmos-Reason2-8B on video QA (FSDP) + DEFT gap analysis of eval results (destructive)",
+  "rules": [
+    "destructive: fine-tunes/trains a gated 8B model via FSDP — needs HF_TOKEN, docker + nvidia-container-toolkit, and multi-GPU (8x A100/H100 80GB recommended)",
+    "always start train specs from references/spec_template_train.yaml and apply overrides on the nested spec",
+    "keep train.train_policy.type = sft (dropping it flips cosmos-rl into RL mode); keep policy.model_max_length >= 40960",
+    "sample annotation JSON and require video_fps in each record before launching, else the SFT loader fails with 'video_fps'",
+    "gap analysis compares response vs gt by exact match after .lower().strip() — eval prompts must force short constrained answers"
+  ],
+  "usage": "Set RESULTS_DIR (cosmos-rl eval results.json dir), KPI_ANN_PATH (annotations JSON), KPI_MEDIA_PATH (media root). Output: gaps.parquet (FP/FN cases).",
+  "limitation": "Gap analysis uses brittle exact match: full-sentence responses over-report mismatches, so eval prompt design must constrain answers. Training itself requires HF_TOKEN for the gated nvidia/Cosmos-Reason2-8B repo, docker + nvidia-container-toolkit, and multi-GPU FSDP hardware.",
+  "minimal_example": {
+    "perk": "finetune",
+    "vars": {
+      "RESULTS_DIR": "/data/runs/eval_out",
+      "KPI_ANN_PATH": "/data/kpi/annotations.json",
+      "KPI_MEDIA_PATH": "/data/kpi/videos"
+    }
+  }
+}

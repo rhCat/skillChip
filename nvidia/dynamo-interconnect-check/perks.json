@@ -1,0 +1,1 @@
+{"skill":"dynamo-interconnect-check","perks":[{"id":"check","summary":"inspect NIXL/UCX/NCCL transport env vars on a Dynamo recipe (read-only)","destructive":false,"tools":["check_interconnect"]}]}

@@ -1,0 +1,20 @@
+{
+  "_perk": "finetune",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "DATALIST": "demo",
+    "DATA_BASE_DIR": "${FIXTURE}/input.txt",
+    "PREFLIGHT": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "result.json"
+    ],
+    "nonempty": [
+      "result.json"
+    ]
+  }
+}

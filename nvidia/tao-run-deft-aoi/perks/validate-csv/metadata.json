@@ -1,0 +1,21 @@
+{
+  "perk": "validate-csv",
+  "skill": "tao-run-deft-aoi",
+  "description": "validate an assembled ChangeNet training CSV before launching training (read-only preflight)",
+  "rules": [
+    "checks required columns (input_path, golden_path, label, object_name) and a non-empty body",
+    "resolves every input_path/golden_path on disk via TAO siamese layout images_dir/input_path/object_name_light.ext (or flat when object_name absent); any missing file is a hard stop",
+    "PASS-preserving label rule: label 'PASS' must stay verbatim; every other label must be lowercase+stripped",
+    "with VALIDATION_CSV set, diffs train vs validation on shared keys and hard-stops on any train/val leak",
+    "stdlib-only (no pandas); run between CSV assembly and the training docker invocation"
+  ],
+  "usage": "Set CSV (assembled training CSV), WORKSPACE_ROOT (relative paths resolve against it), and RECORD_STORE. Optional: VALIDATION_CSV (leakage check), LIGHT (default SolderLight), IMAGE_EXT (default .jpg). The full report is written to ${RECORD_STORE}/validation_report.txt; the core exits non-zero on any validation failure (captured in the report).",
+  "limitation": "Read-only schema/existence/leakage validation; does not assemble, fix, or train on the CSV. Requires the referenced images to be present on disk for a clean pass.",
+  "minimal_example": {
+    "perk": "validate-csv",
+    "vars": {
+      "CSV": "results/run_x/iter1/dataset/train_combined_iter1.csv",
+      "WORKSPACE_ROOT": "~/workspace"
+    }
+  }
+}

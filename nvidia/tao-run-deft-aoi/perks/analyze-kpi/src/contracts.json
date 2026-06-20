@@ -1,0 +1,35 @@
+{
+  "tool": "analyze_kpi",
+  "inputs": {
+    "INFER_CSV": {
+      "type": "string",
+      "required": true
+    },
+    "LABEL_COLUMN": {
+      "type": "string",
+      "required": false
+    },
+    "SCORE_COLUMN": {
+      "type": "string",
+      "required": false
+    },
+    "PASS_LABEL": {
+      "type": "string",
+      "required": false
+    },
+    "BINS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "summary": {
+      "path": "${RECORD_STORE}/kpi_analysis/summary.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/kpi_analysis/summary.txt"
+  }
+}

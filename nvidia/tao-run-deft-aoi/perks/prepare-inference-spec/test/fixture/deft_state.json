@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "kpi_target": "FAR < 10% at recall=100%",
+  "config": {
+    "specs_file": "/Users/ruihe/hunyuan/skillChip/tao-run-deft-aoi/perks/prepare-inference-spec/test/fixture/baseline_spec.yaml",
+    "backbone_weight_dir": "/Users/ruihe/hunyuan/skillChip/tao-run-deft-aoi/perks/prepare-inference-spec/test/fixture",
+    "images_dir": "/Users/ruihe/hunyuan/skillChip/tao-run-deft-aoi/perks/prepare-inference-spec/test/fixture/kpi/images"
+  },
+  "baseline": {"far_pct": 0.42, "threshold": 0.37, "best_ckpt_path": "/abs/baseline/train/model_best.pth"},
+  "iterations": {"iter1": {"far_pct": 0.08, "threshold": 0.55, "best_ckpt_path": "/abs/iter1/train/model_best.pth"}}
+}

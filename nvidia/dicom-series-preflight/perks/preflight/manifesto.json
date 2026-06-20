@@ -1,0 +1,1 @@
+{"_perk":"preflight","sequence":["preflight_series"],"tools":{"preflight_series":{"binary":"python3","params":{"DICOM_DIR":"${DICOM_DIR}"}}},"env":{"DICOM_DIR":"${DICOM_DIR}","RECORD_STORE":"${record_store}"},"requires":["python3"]}

@@ -1,0 +1,22 @@
+{
+  "perk": "setup",
+  "skill": "hsb-setup",
+  "description": "phased Holoscan Sensor Bridge bring-up: clone, configure host, build + run demo container, verify connectivity (destructive)",
+  "rules": [
+    "destructive: shells out to a remote devkit over SSH and applies privileged host/network changes",
+    "runs the mandatory token-budget preflight (Phase 0) before any remote command or devkit change",
+    "SSH_TARGET and REMOTE_ROOT are required; HSB_PLATFORM may be empty and is auto-detected from hardware",
+    "skip Phase 3 (native CLI build) for non-AGX-Thor platforms",
+    "each phase command runs through hsb_phase_runner.sh with timestamped logs under record_store"
+  ],
+  "usage": "Set SSH_TARGET (remote login), REMOTE_ROOT (remote repo dir), and optionally HSB_PLATFORM. Output: hsb_setup.json (audit) + per-phase logs.",
+  "limitation": "Has side effects: never runs automatically and only on explicit invocation. Requires SSH access to a powered, networked, properly-OS'd devkit, docker, and (often) sudo on the host. A successful ping to 192.168.0.2 confirms the control-plane path only — not enumeration or data-plane correctness.",
+  "minimal_example": {
+    "perk": "setup",
+    "vars": {
+      "SSH_TARGET": "nvidia@192.168.1.50",
+      "REMOTE_ROOT": "/home/nvidia",
+      "HSB_PLATFORM": "AGX Thor"
+    }
+  }
+}

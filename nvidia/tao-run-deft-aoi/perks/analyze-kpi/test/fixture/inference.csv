@@ -1,0 +1,9 @@
+label,siamese_score
+PASS,0.10
+PASS,0.22
+PASS,0.18
+bridge,0.81
+NG,0.93
+short,0.88
+PASS,0.15
+NG,0.77

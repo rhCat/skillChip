@@ -1,0 +1,1 @@
+{"skill":"nemo-evaluator-plugin","perks":[{"id":"evaluate","summary":"run a NeMo Evaluator spec against a running NeMo Platform via `nemo evaluator evaluate run`","destructive":true,"tools":["nemo_evaluator_run"]}]}

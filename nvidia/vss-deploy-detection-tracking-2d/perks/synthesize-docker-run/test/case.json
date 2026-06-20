@@ -1,0 +1,19 @@
+{
+  "_perk": "synthesize-docker-run",
+  "requires": [
+    "bash",
+    "python3"
+  ],
+  "vars": {
+    "CONTAINER_NAME": "rtvicv-perception-docker"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "docker-run.sh"
+    ],
+    "nonempty": [
+      "docker-run.sh"
+    ]
+  }
+}

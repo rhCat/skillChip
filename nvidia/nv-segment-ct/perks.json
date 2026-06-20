@@ -1,0 +1,1 @@
+{"skill":"nv-segment-ct","perks":[{"id":"segment","summary":"run VISTA3D CT segmentation on a NIfTI volume and record label-map evidence (local inference)","destructive":false,"tools":["run_vista3d"]}]}

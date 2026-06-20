@@ -1,0 +1,22 @@
+{
+  "_perk": "synthesize-docker-run",
+  "sequence": [
+    "synthesize_docker_run"
+  ],
+  "tools": {
+    "synthesize_docker_run": {
+      "binary": "bash",
+      "params": {
+        "CONTAINER_NAME": "${CONTAINER_NAME}"
+      }
+    }
+  },
+  "env": {
+    "CONTAINER_NAME": "${CONTAINER_NAME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

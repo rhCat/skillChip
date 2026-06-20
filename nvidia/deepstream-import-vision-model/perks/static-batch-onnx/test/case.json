@@ -1,0 +1,6 @@
+{
+  "_perk": "static-batch-onnx",
+  "requires": ["bash", "python3"],
+  "vars": {"SRC_ONNX": "${FIXTURE}/model.onnx", "BATCH_SIZE": "16"},
+  "expect": {"exit": 0, "outputs": ["static-batch-onnx.json"], "nonempty": ["static-batch-onnx.json"]}
+}

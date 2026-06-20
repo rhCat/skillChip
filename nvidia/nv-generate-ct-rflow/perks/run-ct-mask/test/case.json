@@ -1,0 +1,19 @@
+{
+  "_perk": "run-ct-mask",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "REQUEST_JSON": "${FIXTURE}/mask_request.json",
+    "NV_GENERATE_ROOT": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "result.json"
+    ],
+    "nonempty": [
+      "result.json"
+    ]
+  }
+}

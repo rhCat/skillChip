@@ -1,0 +1,13 @@
+{
+  "skill": "nv-generate-mr-brain",
+  "perks": [
+    {
+      "id": "generate",
+      "summary": "stage configs + run NV-Generate-CTMR rflow-mr-brain GPU synthesis, summarize the NIfTI output",
+      "destructive": true,
+      "tools": [
+        "run_mr_brain"
+      ]
+    }
+  ]
+}

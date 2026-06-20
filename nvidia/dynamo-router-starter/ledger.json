@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for dynamo-router-starter — set perk, fill record_store + the vars the perk declares.",
+  "skill": "dynamo-router-starter",
+  "perk": "check",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "BASE_URL": "<Dynamo frontend base URL, e.g. http://127.0.0.1:8000>",
+    "RETRIES": "<times to poll /v1/models before giving up, e.g. 5>"
+  }
+}

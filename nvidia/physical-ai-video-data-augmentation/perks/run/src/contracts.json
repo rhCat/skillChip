@@ -1,0 +1,19 @@
+{
+  "tool": "preflight_credentials",
+  "inputs": {
+    "WORKFLOW": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "preflight_out": {
+      "path": "${RECORD_STORE}/preflight.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/preflight.txt"
+  }
+}

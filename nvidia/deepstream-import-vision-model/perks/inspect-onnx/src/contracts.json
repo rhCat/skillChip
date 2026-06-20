@@ -1,0 +1,19 @@
+{
+  "tool": "inspect_onnx",
+  "inputs": {
+    "ONNX_FILE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "inspect_onnx_out": {
+      "path": "${RECORD_STORE}/inspect-onnx.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/inspect-onnx.json"
+  }
+}

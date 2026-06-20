@@ -1,0 +1,1 @@
+{"tool":"preflight_series","inputs":{"DICOM_DIR":{"type":"string","required":true}},"outputs":{"preflight_json":{"path":"${RECORD_STORE}/preflight.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/preflight.json"}}

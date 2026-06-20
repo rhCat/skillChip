@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for physical-ai-defect-image-generation — set perk, fill record_store + the vars the perk declares.",
+  "skill": "physical-ai-defect-image-generation",
+  "perk": "generate",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "DEFECT_PAIRS": "<JSON list of [material, defect] pairs, e.g. [[\"IC\",\"bridge\"],[\"passive_component\",\"missing\"]]>",
+    "SPATIAL_DEPENDENCY": "<AMP routing branch: free | text | cad (default free)>"
+  }
+}

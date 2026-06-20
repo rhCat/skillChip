@@ -1,0 +1,30 @@
+{
+  "skill": "holoscan-setup",
+  "perks": [
+    {
+      "id": "preflight",
+      "summary": "inspect the host for Holoscan install readiness: detect Conda and check the NGC container image (read-only)",
+      "destructive": false,
+      "tools": [
+        "check_conda",
+        "check_ngc_image"
+      ]
+    },
+    {
+      "id": "check-conda",
+      "summary": "detect Conda installs (even when off PATH) and report which envs import holoscan (read-only)",
+      "destructive": false,
+      "tools": [
+        "check_conda"
+      ]
+    },
+    {
+      "id": "check-ngc-image",
+      "summary": "check whether the NGC Holoscan container image for a CUDA tag suffix is already pulled (read-only)",
+      "destructive": false,
+      "tools": [
+        "check_ngc_image"
+      ]
+    }
+  ]
+}

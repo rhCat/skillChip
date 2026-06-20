@@ -1,0 +1,25 @@
+{
+  "_perk": "setup",
+  "sequence": [
+    "hsb_phase_runner"
+  ],
+  "tools": {
+    "hsb_phase_runner": {
+      "binary": "bash",
+      "params": {
+        "SSH_TARGET": "${SSH_TARGET}",
+        "REMOTE_ROOT": "${REMOTE_ROOT}",
+        "HSB_PLATFORM": "${HSB_PLATFORM}"
+      }
+    }
+  },
+  "env": {
+    "SSH_TARGET": "${SSH_TARGET}",
+    "REMOTE_ROOT": "${REMOTE_ROOT}",
+    "HSB_PLATFORM": "${HSB_PLATFORM}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

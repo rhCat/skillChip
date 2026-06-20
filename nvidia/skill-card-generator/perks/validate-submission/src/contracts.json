@@ -1,0 +1,1 @@
+{"tool":"validate_submission","inputs":{"CARD":{"type":"string","required":false}},"outputs":{"validation_report":{"path":"${RECORD_STORE}/validate_submission.txt","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/validate_submission.txt"}}

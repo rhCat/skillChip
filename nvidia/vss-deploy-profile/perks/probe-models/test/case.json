@@ -1,0 +1,13 @@
+{
+  "_perk": "probe-models",
+  "requires": ["bash"],
+  "vars": {
+    "BASE_URL": "http://127.0.0.1:1",
+    "EXPECTED_MODEL": ""
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["models.json"],
+    "nonempty": ["models.json"]
+  }
+}

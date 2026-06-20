@@ -1,0 +1,20 @@
+{
+  "skill": "nemo-evaluator-plugin",
+  "skill_sha": "fba78b42b295462a681aa1acff727fd043fd8cd72c0e84edbfade00e7bc79533",
+  "file_count": 13,
+  "files": {
+    "SKILL.md": "40032c6a1100f3de6bd1299def2f25851b3310e9d6e00e6771cb86eceeb0e640",
+    "blueprint.drawio": "356ca6695be53441cb0be985ec9ae5d8564f9fff02afff35d2734ad9609d6eec",
+    "blueprint.json": "644b991a35a26efa6f5ac1462ac3e47ccfac22760fa6ac3b345e7f98af43a39e",
+    "blueprint.svg": "d8728987880279da87dbc999115fe634f52279510448cdae5481df32e8580c2c",
+    "ledger.json": "6e61d8209291fa76eaea7252b6eb40a9f18dadb4c976e33e187d7feb14164c94",
+    "perks.json": "0d534215b9d410623ffb64bb747b8d7320563272f7e404887cb7fcec50280b7a",
+    "perks/evaluate/manifesto.json": "b4dbf889de823251319914f7f2588e7958a0d647283a78428112c54060dabdfd",
+    "perks/evaluate/metadata.json": "5913f65c645c48307991fcf6647b177546edd849160c0d97578afe5a13d48ec2",
+    "perks/evaluate/src/contracts.json": "abdd6e981dcdeaff9f8853dcf1c3dec35f1533d89b0ee5f701202c443257c2ba",
+    "perks/evaluate/src/generate_example_specs.py": "317b437eb99922a93090dd6776887967774ad2ce5d2b2e5a13cd86f96ea53d4d",
+    "perks/evaluate/src/nemo_evaluator_run.sh": "4dd6ac33037befca751f8b27aec5d634fc61e56dd26bc5f2f0bd09e754096c26",
+    "perks/evaluate/test/case.json": "b7f93d3e5eb46e23a51cc39a0adf537a4a24fb59a8c5b0cd84a557871f29c3ac",
+    "perks/evaluate/test/fixture/input.txt": "2f73349cfc4630255319c6c8dfc1b46a8996ace9d14d8e07563b165915918ec2"
+  }
+}

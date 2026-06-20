@@ -1,0 +1,1 @@
+{"tool":"fetch_api_support","inputs":{"SOURCE_URL":{"type":"string","required":true}},"outputs":{"api_support_manifest":{"path":"${RECORD_STORE}/api-support.md","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/api-support.md"}}

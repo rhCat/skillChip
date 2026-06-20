@@ -1,0 +1,20 @@
+{
+  "skill": "nv-reason-cxr",
+  "skill_sha": "a6d909a767322851f44970ef77974be947761899918f43a293075563411e40c9",
+  "file_count": 13,
+  "files": {
+    "SKILL.md": "a05a53e4919fbcbcf0b806c9380117677b60a92fadc2560b8ae2bf1a26fd1e40",
+    "blueprint.drawio": "8733f27c6d62ac7354ee427d785cca854caeff10a301ae2e2bd67ca5acdab4d0",
+    "blueprint.json": "d8f3b9fd7261e0cd386520e0b720025adb07d22a244f1bb32375c55e324d02fd",
+    "blueprint.svg": "17f418fe6fd1fc53a2bde3699841ed94aa5bf4d69652ff68e3c5cb4b0c085ea2",
+    "ledger.json": "ad346efdca5d26d27b8ac182524a5904ecf866b262032a9583f879bc123cc27a",
+    "perks.json": "368f5e0a279935f1c6c4d555fe14be194bb030a876bb0a21a90dbac911950e70",
+    "perks/reason/manifesto.json": "8d7755590fd4c3bc972ffde59a7b2f4573987eef7c143a75bc2584cd2f8d3171",
+    "perks/reason/metadata.json": "16c5accad1efa52fb1fe10625b842d06994c6967676d68dada66474f46552db5",
+    "perks/reason/src/contracts.json": "f3b33f250b25fed1cfebb2cc0098fbfb8b0aa81ffa587dfbd3ca2beebf4a1689",
+    "perks/reason/src/run_nv_reason_cxr.py": "8c5124a733e069e83bfa7b824553a5f0e39d727ed80d609165d88896bdc93d73",
+    "perks/reason/src/run_nv_reason_cxr.sh": "291fc3eb00e5a9abbf7a85d73f6792217bf9feb78683ef5eea06ee7f5f20ac62",
+    "perks/reason/test/case.json": "dccde272417c5fbca95c6f43793c23e77f61328a614bcd9d201bfc5376b1402d",
+    "perks/reason/test/fixture/synthetic_cxr_input.json": "7cb121e969161d99c932b4b99159d88b3c4394743d016cdd966ebd54078a8b15"
+  }
+}

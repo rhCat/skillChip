@@ -1,0 +1,19 @@
+{
+  "skill": "nv-segment-ctmr",
+  "skill_sha": "5d1646602d4fbc3116ef13e036aa31f79d2d75f90dead961be690cda45b5c686",
+  "file_count": 12,
+  "files": {
+    "SKILL.md": "c8fe674b6ef545ea1858b019f3ed9083317c80ea1d20765e64b3b62d83b8a89d",
+    "blueprint.drawio": "6bf955f604cbce068cfee237becc34353f5989853437bd9b038e4fde5ad44b42",
+    "blueprint.json": "9c787b5b95ec72041a56f91c4232760fc5d9b36ee78ff4dde95b6f4365e63b52",
+    "blueprint.svg": "a8e07ce6c0c9c38cfe4588616a7fc2dc0d1cd7c7ddc506fbac0ff87b649e40e2",
+    "ledger.json": "f84c1788b8291c7dc4df67204bf9ee01f1aa110e0a1da154cc42612201170425",
+    "perks.json": "b56e6a8aaccd20cfdc5d736a59b744820cb9920ffb8ad98df589062a3da46fa6",
+    "perks/segment/manifesto.json": "0bce8274902aa9d75f794862e2c61d2a3c9d893130ad9d59fab6addcf1141281",
+    "perks/segment/metadata.json": "9b0519f8c8dc0c41eb718d59a138ee2d24d27c97b4cb230795ae7bbaaeab0942",
+    "perks/segment/src/contracts.json": "54cac2b5a5c157c824082b34a50574c6b50705e228012a0bc66990949a2f6d9f",
+    "perks/segment/src/run_ctmr.py": "e3f45c888c9ce7bb0f266414d18f65e3d3c962b7cf8e4d54c13f84448f3450b0",
+    "perks/segment/src/run_ctmr.sh": "684162f3b203601003ccbe5314382fd3dd3ba7751eb8cb2295af396e4565f1b1",
+    "perks/segment/test/case.json": "0bddc614cad6982deb86b7e97322a547cefe2d7b6ca8088885e6e9cc05cb2bfb"
+  }
+}

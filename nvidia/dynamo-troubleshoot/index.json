@@ -1,0 +1,19 @@
+{
+  "skill": "dynamo-troubleshoot",
+  "skill_sha": "2c66fbf6fe7369fb860d98ed322f84f1a7cfde375834df64fb9178649ce8bb4c",
+  "file_count": 12,
+  "files": {
+    "SKILL.md": "be0dfd92ceb4498fa9a8ae30c7165c65f17acb34386d3b757983e03a1d37658e",
+    "blueprint.drawio": "5d1d0261786d0eec0b8ae484a5a3fecb665e510e06d6192785541c39ae19d2b9",
+    "blueprint.json": "3e18b86086f8fd8fd798e57c4772a22dd0e595eebfceeb5eccea318203786d66",
+    "blueprint.svg": "6d4b31b8348bc7da9400ae307144f3ba8dffee3d035c3e4645ffe9c531750e61",
+    "ledger.json": "5f1eac090ec6ffb05050729eb1ad1fa47cc721daf4d8c760b58d4b947522518c",
+    "perks.json": "8b62fce6b76b4fb50d7da7765ab6bc8b1fb8e392c024e55b3dc36b3bbcf77feb",
+    "perks/troubleshoot/manifesto.json": "c846889a429177f5b750c271fbd92d5f318fe8080022777e223229f27c222d3b",
+    "perks/troubleshoot/metadata.json": "a54fdcae038520256a7575bce3442d8741cf2bdf3b50560ff7d5ea1edceb2638",
+    "perks/troubleshoot/src/collect_dynamo_debug_bundle.py": "1200ebc7f11e107aeb443601827696456b0596581ce7075785d35d4e4cd09a6e",
+    "perks/troubleshoot/src/collect_dynamo_debug_bundle.sh": "43f238e204143fee582de46ca450f26daa82c580003011c8eb8237e3030a4450",
+    "perks/troubleshoot/src/contracts.json": "2ab9d2b9dae0118506124eea7af7e0cf0dbbbce8f8e3be29f9303106d6d2b99c",
+    "perks/troubleshoot/test/case.json": "36dab18b06b6e893492f1b42d1a4f8188271fa4966ece54f49c3063745f60183"
+  }
+}

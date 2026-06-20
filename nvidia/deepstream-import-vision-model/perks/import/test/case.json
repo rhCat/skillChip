@@ -1,0 +1,4 @@
+{
+  "_perk": "import",
+  "skip": "multi-step GPU/TensorRT/DeepStream pipeline: 7 of 8 sequenced tools (safetensors->onnx, trtexec/DeepStream benchmarks) need a CUDA GPU + TensorRT + DeepStream SDK and are vendored as nested helper scripts, not flat src/<tool>.sh \u2014 not offline-runnable through the governed channel"
+}

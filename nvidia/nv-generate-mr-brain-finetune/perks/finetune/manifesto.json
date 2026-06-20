@@ -1,0 +1,1 @@
+{"_perk":"finetune","sequence":["run_mr_brain_finetune"],"tools":{"run_mr_brain_finetune":{"binary":"python3","params":{"DATALIST":"${DATALIST}","DATA_BASE_DIR":"${DATA_BASE_DIR}","PREFLIGHT":"${PREFLIGHT}"}}},"env":{"DATALIST":"${DATALIST}","DATA_BASE_DIR":"${DATA_BASE_DIR}","PREFLIGHT":"${PREFLIGHT}","RECORD_STORE":"${record_store}"},"requires":["python3"]}

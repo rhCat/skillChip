@@ -1,0 +1,19 @@
+{
+  "perk": "pick-best-step",
+  "skill": "physical-ai-defect-image-generation",
+  "description": "Derive the best anomalygen inference step from a checkpoint tree: argmax avg nn_score among validated steps that have a saved iter_*.pt, falling back to the latest trained iter, then to the supplied fallback step.",
+  "rules": [
+    "read-only: walks the checkpoint filesystem, writes only best_step.txt under record_store",
+    "iter 0 (pre-training baseline) is never selected; validated steps without a matching saved iter_*.pt are skipped",
+    "case 1 (valid_kpi.csv tree) → peak avg nn_score; case 2 (trainer output, no validation) → latest trained iter; case 3 (shipped flat checkpoint) → fallback step"
+  ],
+  "usage": "Set CKPT_ROOT (the checkpoint root to scan) and optional FALLBACK_STEP (default 0). pick_best_step writes the chosen step to best_step.txt under record_store; the selection rationale is in best_step.txt.log.",
+  "limitation": "Selection quality depends on the checkpoint layout the OSMO anomalygen trainer produced (valid_kpi.csv tree + checkpoints/model/iter_*.pt). The latest-trained fallback (case 2) carries no per-step KPIs. The training that produces these checkpoints runs remotely on OSMO; this perk only inspects an already-materialised tree.",
+  "minimal_example": {
+    "perk": "pick-best-step",
+    "vars": {
+      "CKPT_ROOT": "./checkpoint",
+      "FALLBACK_STEP": "1000"
+    }
+  }
+}

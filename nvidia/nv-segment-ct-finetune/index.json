@@ -1,0 +1,20 @@
+{
+  "skill": "nv-segment-ct-finetune",
+  "skill_sha": "90583cd194a2cd7297151d268249f67950d57d69f1adcba620cdf0d9ce392296",
+  "file_count": 13,
+  "files": {
+    "SKILL.md": "96b00c1c172d4f556ab3062cea1f3fcc004a5fb3827dfa36df0d5353a5cfa392",
+    "blueprint.drawio": "030e8bb94e6567e610ac73cc39099afd4fdbfa0fee95911d0d85b7a980be8b47",
+    "blueprint.json": "e28b796231237a7d10c456291ae3f56b98497c46d1d1c18fe7fc0b0801af5e30",
+    "blueprint.svg": "09f1685179a6a3964776ee2641ec2601fd8d212298137f44b7dc484da402a4fb",
+    "ledger.json": "d0a7725395213aa6e1929969a5bc86115630098fa5d04fe545c6017128e1069f",
+    "perks.json": "ec548b9eb6730ab3aa3c2019eb3985ee44500a50dcec09c464b5ad4727f8d3e5",
+    "perks/finetune/manifesto.json": "3edea85e58fa9318c29e7e04090d417ce3cc22bd4d9305e67a9d257db112b678",
+    "perks/finetune/metadata.json": "1df406b972ea359c47395b5bfae886ef52bb60ff1fb4bf6b81180cd7abec4024",
+    "perks/finetune/src/contracts.json": "8d41b0eb640a295a4187662a9b6fe5d0932f6ead0646bbde2be33464c56bc6f9",
+    "perks/finetune/src/run_finetune.py": "e88dfa573d268fd69b61efbdd4c7400f25db9f230411461be9a0d5235259035e",
+    "perks/finetune/src/run_finetune.sh": "d576500e2075926f0c548632a41c90e54a1313fa2fa61aba76c41ab027c61392",
+    "perks/finetune/test/case.json": "ecdd457cdc535f673cf0ac2f15cb13771bfeb86f55cf3e1b9f8f8b8dc59d62aa",
+    "perks/finetune/test/fixture/input.txt": "2f73349cfc4630255319c6c8dfc1b46a8996ace9d14d8e07563b165915918ec2"
+  }
+}

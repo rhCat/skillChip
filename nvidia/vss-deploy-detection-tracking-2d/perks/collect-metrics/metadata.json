@@ -1,0 +1,24 @@
+{
+  "perk": "collect-metrics",
+  "skill": "vss-deploy-detection-tracking-2d",
+  "description": "sample the running RTVI-CV /api/v1/metrics endpoint N times (plus nvidia-smi temp/power) and print averaged GPU util / GPU memory / GPU temp / GPU power / CPU / RAM and a per-stream FPS table for the deploy summary",
+  "rules": [
+    "read-only — issues HTTP GETs against http://REST_HOST:REST_PORT/api/v1/metrics and reads nvidia-smi; mutates nothing",
+    "degrades gracefully — if the REST endpoint is unreachable on every sample it prints n/a averages + an 'unreachable' warning and still exits 0",
+    "falls back to parsing PERF lines from the deployment log when /api/v1/metrics reports stream-count=0 (typical for static-mode deploys)",
+    "REST_HOST defaults to localhost and REST_PORT to 9000; SAMPLES/INTERVAL/WARMUP control sampling cadence (a deploy summary uses 3 samples 5s apart after a 10s warmup)",
+    "emits eval-friendly markers (STREAM_FPS_TOTAL=, STREAM_FPS_AVG=, METRICS_OK) for the deploy-summary builder"
+  ],
+  "usage": "Optionally set REST_HOST / REST_PORT (the running RTVI-CV instance) and SAMPLES / INTERVAL / WARMUP (sampling cadence). Output: metrics.txt (the averaged metrics block) and metrics.json (per-stream FPS dump, when present) under record_store.",
+  "limitation": "Per-stream FPS and GPU/CPU/RAM averages require the RTVI-CV app to be running with ACTIVE streams and nvidia-smi available; offline or with no streams the block reports n/a / 'no active streams' but still exits 0. INTERVAL/WARMUP introduce real sleeps between samples.",
+  "minimal_example": {
+    "perk": "collect-metrics",
+    "vars": {
+      "REST_HOST": "localhost",
+      "REST_PORT": "9000",
+      "SAMPLES": "3",
+      "INTERVAL": "5",
+      "WARMUP": "10"
+    }
+  }
+}

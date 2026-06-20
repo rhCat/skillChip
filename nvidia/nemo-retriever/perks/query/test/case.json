@@ -1,0 +1,19 @@
+{
+  "_perk": "query",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "QUERY": "demo",
+    "LANCEDB_URI": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "grep_corpus.txt"
+    ],
+    "nonempty": [
+      "grep_corpus.txt"
+    ]
+  }
+}

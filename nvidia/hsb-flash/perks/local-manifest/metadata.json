@@ -1,0 +1,22 @@
+{
+  "perk": "local-manifest",
+  "skill": "hsb-flash",
+  "description": "Build an FPGA flash manifest YAML from LOCAL bit files (CPNX/CLNX/Stratix-10 rpd) by measuring size + MD5, instead of fetching from NGC",
+  "rules": [
+    "Offline and deterministic: reads the given local bit files, records their size and MD5, and writes the manifest YAML — no network access",
+    "The caller is trusted to ensure each bit file is correct for the target device; this perk does NOT validate device/bitstream compatibility",
+    "At least one of CPNX_FILE, CLNX_FILE, or STRATIX_FILE must be supplied; without one the core script errors and the porter writes an empty manifest",
+    "Producing a manifest is non-destructive; the destructive flash (program_lattice_cpnx100 / program_leopard_cpnx100 over SSH) is performed separately by the agent and is gated by the `flash` perk",
+    "If no STRATEGY is given, the default is sensor_bridge_100 when a Stratix file is present, otherwise sensor_bridge_10"
+  ],
+  "usage": "Set VERSION (component version, e.g. 2510), at least one local bit file path (CPNX_FILE / CLNX_FILE / STRATIX_FILE), optionally STRATEGY and MANIFEST (output filename), plus record_store. local_manifest measures each file and writes the manifest YAML for the local downloader to program a single FPGA.",
+  "limitation": "Requires the PyYAML Python package. Trusts the caller for device/bitstream correctness — no compatibility checks. Uses the v2.0.0 CLI; flag ordering differs from newer releases. Produces only the manifest; it does not download, verify against NGC, or flash anything.",
+  "minimal_example": {
+    "perk": "local-manifest",
+    "vars": {
+      "VERSION": "2510",
+      "CPNX_FILE": "${FIXTURE}",
+      "MANIFEST": "manifest.yaml"
+    }
+  }
+}

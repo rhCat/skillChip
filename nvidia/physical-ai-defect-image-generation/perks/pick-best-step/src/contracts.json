@@ -1,0 +1,23 @@
+{
+  "tool": "pick_best_step_port",
+  "inputs": {
+    "CKPT_ROOT": {
+      "type": "string",
+      "required": true
+    },
+    "FALLBACK_STEP": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "best_step": {
+      "path": "${RECORD_STORE}/best_step.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/best_step.txt"
+  }
+}

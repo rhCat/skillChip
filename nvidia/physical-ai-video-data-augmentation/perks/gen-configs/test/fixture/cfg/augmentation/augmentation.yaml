@@ -1,0 +1,9 @@
+data: []
+template_generation:
+  variables: {}
+captioning:
+  llm:
+    variables: {}
+cosmos:
+  parameters:
+    seed: 0

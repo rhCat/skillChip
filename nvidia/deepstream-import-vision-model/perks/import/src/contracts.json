@@ -1,0 +1,23 @@
+{
+  "tool": "hf_list_files",
+  "inputs": {
+    "HF_ORG": {
+      "type": "string",
+      "required": true
+    },
+    "MODEL_NAME": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "hf_files_out": {
+      "path": "${RECORD_STORE}/import.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/import.json"
+  }
+}

@@ -1,0 +1,1 @@
+{"skill":"dicom-metadata-extract","perks":[{"id":"extract","summary":"extract selected metadata from one DICOM file and flag standard-tag PHI presence (read-only)","destructive":false,"tools":["extract_metadata"]}]}

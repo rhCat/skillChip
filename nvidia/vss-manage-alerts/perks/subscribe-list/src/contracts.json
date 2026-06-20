@@ -1,0 +1,1 @@
+{"tool":"subscribe_list","inputs":{"HOST_IP":{"type":"string","required":true},"ALERT_TYPE":{"type":"string","required":false}},"outputs":{"subscribe_list_out":{"path":"${RECORD_STORE}/subscribe_list.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/subscribe_list.json"}}

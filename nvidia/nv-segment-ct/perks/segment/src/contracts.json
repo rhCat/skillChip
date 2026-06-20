@@ -1,0 +1,1 @@
+{"tool":"run_vista3d","inputs":{"CT_VOLUME":{"type":"string","required":true},"LABEL_PROMPTS":{"type":"string","required":false}},"outputs":{"result_json":{"path":"${RECORD_STORE}/result.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/result.json"}}

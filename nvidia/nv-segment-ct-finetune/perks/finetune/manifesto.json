@@ -1,0 +1,23 @@
+{
+  "_perk": "finetune",
+  "sequence": [
+    "run_finetune"
+  ],
+  "tools": {
+    "run_finetune": {
+      "binary": "python3",
+      "params": {
+        "DATASET": "${DATASET}",
+        "FINETUNE_ARGS": "${FINETUNE_ARGS}"
+      }
+    }
+  },
+  "env": {
+    "DATASET": "${DATASET}",
+    "FINETUNE_ARGS": "${FINETUNE_ARGS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

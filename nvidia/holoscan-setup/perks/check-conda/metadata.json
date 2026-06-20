@@ -1,0 +1,18 @@
+{
+  "perk": "check-conda",
+  "skill": "holoscan-setup",
+  "description": "detect Conda installs (even when off PATH) and report which envs import holoscan (read-only)",
+  "rules": [
+    "read-only — inspects host state only; never installs, creates envs, or mutates anything",
+    "searches PATH, common install dirs (~/miniconda3, ~/miniforge3, ~/anaconda3, ~/mambaforge, /opt/conda, ...), and shell rc files (.bashrc, .zshrc, .profile, ...)",
+    "for each detected install, lists envs and flags which envs' python can `import holoscan` (with version)",
+    "notes the lazy-init case where conda is installed but not on PATH in the current shell",
+    "writes its report under record_store"
+  ],
+  "usage": "Takes no inputs. Output: conda.txt — detected installs, env lists, and any holoscan-importing envs.",
+  "limitation": "Inspection only — does not install Conda, create environments, or install Holoscan. Conda packages are CUDA 13 only; CUDA 12 hosts must use container, apt, pip wheel, or source.",
+  "minimal_example": {
+    "perk": "check-conda",
+    "vars": {}
+  }
+}

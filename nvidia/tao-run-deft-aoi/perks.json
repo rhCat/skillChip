@@ -1,0 +1,45 @@
+{
+  "skill": "tao-run-deft-aoi",
+  "perks": [
+    {
+      "id": "run",
+      "summary": "init the DEFT AOI state, then run the train/retrain/mine/gate loop until the KPI target is met (destructive)",
+      "destructive": true,
+      "tools": [
+        "init_deft_state"
+      ]
+    },
+    {
+      "id": "analyze-kpi",
+      "summary": "sweep thresholds over a ChangeNet inference CSV and pick the FAR @ 100%-recall operating point (read-only)",
+      "destructive": false,
+      "tools": [
+        "analyze_kpi"
+      ]
+    },
+    {
+      "id": "validate-csv",
+      "summary": "validate an assembled ChangeNet training CSV (schema, on-disk paths, label case, train/val leakage) before training",
+      "destructive": false,
+      "tools": [
+        "validate_training_csv"
+      ]
+    },
+    {
+      "id": "prepare-pairs",
+      "summary": "build the ChangeNet (input, golden, label, object_name) CSV from paired NG/OK image directories",
+      "destructive": false,
+      "tools": [
+        "changenet_data_pair_prepare"
+      ]
+    },
+    {
+      "id": "prepare-inference-spec",
+      "summary": "render best_model.json + best_model_inference_spec.yaml from a finished run's deft_state.json",
+      "destructive": false,
+      "tools": [
+        "prepare_inference_spec"
+      ]
+    }
+  ]
+}

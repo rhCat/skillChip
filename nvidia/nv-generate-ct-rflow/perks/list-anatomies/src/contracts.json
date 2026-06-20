@@ -1,0 +1,1 @@
+{"tool":"list_anatomies","inputs":{"NV_GENERATE_ROOT":{"type":"string","required":true},"REGION":{"type":"string","required":false},"FILTER":{"type":"string","required":false},"CONTROLLABLE":{"type":"string","required":false}},"outputs":{"catalog":{"path":"${RECORD_STORE}/catalog.txt","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/catalog.txt"}}

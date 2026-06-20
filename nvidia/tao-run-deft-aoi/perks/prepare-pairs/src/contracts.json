@@ -1,0 +1,43 @@
+{
+  "tool": "changenet_data_pair_prepare",
+  "inputs": {
+    "INPUT_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "GOLDEN_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "LABEL": {
+      "type": "string",
+      "required": false
+    },
+    "IMAGES_DIR": {
+      "type": "string",
+      "required": false
+    },
+    "SUBDIR": {
+      "type": "string",
+      "required": false
+    },
+    "LIGHT": {
+      "type": "string",
+      "required": false
+    },
+    "IMAGE_EXT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "dataset_csv": {
+      "path": "${RECORD_STORE}/dataset.csv",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/dataset.csv"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "tool": "cleanup_staging",
+  "inputs": {
+    "MODEL_NAME": {
+      "type": "string",
+      "required": true
+    },
+    "CLEANUP_DRY_RUN": {
+      "type": "string",
+      "required": false
+    },
+    "CLEANUP_ROOT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "cleanup_staging_out": {
+      "path": "${RECORD_STORE}/cleanup-staging.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/cleanup-staging.json"
+  }
+}

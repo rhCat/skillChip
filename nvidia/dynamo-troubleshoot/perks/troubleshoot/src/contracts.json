@@ -1,0 +1,23 @@
+{
+  "tool": "collect_dynamo_debug_bundle",
+  "inputs": {
+    "NAMESPACE": {
+      "type": "string",
+      "required": true
+    },
+    "DEPLOYMENT_NAME": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "debug_bundle_summary": {
+      "path": "${RECORD_STORE}/summary.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/summary.json"
+  }
+}

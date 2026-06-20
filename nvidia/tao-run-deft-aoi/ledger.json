@@ -1,0 +1,13 @@
+{
+  "_schema": "task-ledger TEMPLATE for tao-run-deft-aoi — set perk, fill record_store + the vars the perk declares.",
+  "skill": "tao-run-deft-aoi",
+  "perk": "run",
+  "record_store": "<absolute dir for outputs + run-ledger (= the run's RESULTS_DIR)>",
+  "vars": {
+    "WORKSPACE": "<absolute workspace root: specs/, train/, kpi/, augmentation/>",
+    "KPI_TARGET": "<KPI gate, e.g. 'FAR < 10% at recall=100%'>",
+    "MAX_ITERATIONS": "<max retrain iterations, e.g. 3>",
+    "NUM_GPUS": "<GPUs for TAO training, e.g. 4>",
+    "NUM_EPOCHS": "<training epochs per stage, e.g. 20>"
+  }
+}

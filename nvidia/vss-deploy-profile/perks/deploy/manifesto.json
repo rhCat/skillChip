@@ -1,0 +1,1 @@
+{"_perk":"deploy","sequence":["deploy_profile"],"tools":{"deploy_profile":{"binary":"bash","params":{"REPO":"${REPO}","PROFILE":"${PROFILE}"}}},"env":{"REPO":"${REPO}","PROFILE":"${PROFILE}","RECORD_STORE":"${record_store}"},"requires":["bash","docker","python3"]}

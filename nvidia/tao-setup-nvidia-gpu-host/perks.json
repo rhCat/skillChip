@@ -1,0 +1,13 @@
+{
+  "skill": "tao-setup-nvidia-gpu-host",
+  "perks": [
+    {
+      "id": "setup",
+      "summary": "check (read-only) or install the TAO GPU host runtime — NVIDIA driver 580, CUDA 13.0, Container Toolkit 1.19.0, Docker",
+      "destructive": true,
+      "tools": [
+        "setup_nvidia_gpu_host"
+      ]
+    }
+  ]
+}

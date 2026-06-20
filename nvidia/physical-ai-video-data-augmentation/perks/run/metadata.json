@@ -1,0 +1,21 @@
+{
+  "perk": "run",
+  "skill": "physical-ai-video-data-augmentation",
+  "description": "Orchestrate the OSMO video-data-augmentation + auto-labeling workflow: credential/control-plane preflight then submit-time guard (gate before GPU submit).",
+  "rules": [
+    "destructive: deploys/repairs in-cluster NIMs, submits GPU workflows to OSMO, and writes OSMO credentials",
+    "preflight runs first; on USER_INPUT_REQUIRED stop and ask one concise unblock question",
+    "pre-submit guard must pass before any osmo workflow submit",
+    "derive storage_url from the active dataset/upload backend — never guess or default to stale s3://",
+    "never scale down or delete existing NIMs to free GPUs",
+    "all tool output (preflight + guard reports + run-ledger) lands under record_store"
+  ],
+  "usage": "Set WORKFLOW to one of assets/configs/osmo/{auto_labeling,augmentation_and_al,e2e,e2e_super_resolution}.yaml. Sequence: preflight_credentials -> pre_submit_guard. Optional env: NO_PROBE=1 (skip outbound probes), REFRESH=1 (force OSMO credential overwrite). Outputs: preflight.txt, pre_submit_guard.txt.",
+  "limitation": "Requires OSMO CLI logged in with a DATA credential profile, an ONLINE GPU pool, HF_TOKEN (gated Cosmos/SeedVR weights), optional NGC nvapi-* key, and network egress to nvcr.io/huggingface.co. pre_submit_guard.py needs PyYAML. Not for container-internal tuning-only questions.",
+  "minimal_example": {
+    "perk": "run",
+    "vars": {
+      "WORKFLOW": "assets/configs/osmo/augmentation_and_al.yaml"
+    }
+  }
+}

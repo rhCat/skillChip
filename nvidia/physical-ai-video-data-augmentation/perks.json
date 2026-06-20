@@ -1,0 +1,35 @@
+{
+  "skill": "physical-ai-video-data-augmentation",
+  "perks": [
+    {
+      "id": "run",
+      "summary": "preflight credentials/control-plane then run the submit-time guard before an OSMO VDA + auto-labeling GPU submit (destructive)",
+      "destructive": true,
+      "tools": [
+        "preflight_credentials",
+        "pre_submit_guard"
+      ]
+    },
+    {
+      "id": "gen-configs",
+      "summary": "generate per-video Cosmos augmentation configs + manifest from an input-video dir and a pipeline config dir (deterministic, read-only inputs)",
+      "tools": [
+        "generate_configs"
+      ]
+    },
+    {
+      "id": "prepare-assets",
+      "summary": "pull the NVIDIA VDA demo videos from Hugging Face and flatten them into one demo input directory",
+      "tools": [
+        "prepare_demo_assets"
+      ]
+    },
+    {
+      "id": "render-compare",
+      "summary": "render a side-by-side comparison MP4 (input vs augmented) from a locally-staged VDA run (read-only inputs)",
+      "tools": [
+        "render_side_by_side"
+      ]
+    }
+  ]
+}

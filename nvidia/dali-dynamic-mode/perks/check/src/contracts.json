@@ -1,0 +1,1 @@
+{"tool":"dali_check","inputs":{"SOURCE_FILE":{"type":"string","required":true}},"outputs":{"findings":{"path":"${RECORD_STORE}/findings.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/findings.json"}}

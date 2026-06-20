@@ -1,0 +1,56 @@
+{
+  "skill": "deepstream-import-vision-model",
+  "perks": [
+    {
+      "id": "import",
+      "summary": "import a HuggingFace/NGC detection model into a DeepStream pipeline — ONNX acquire, TRT engine build, nvinfer parser, benchmark + report (destructive)",
+      "destructive": true,
+      "tools": [
+        "hf_list_files",
+        "safetensors_to_onnx",
+        "inspect_onnx",
+        "benchmark_trtexec",
+        "ds_single_stream",
+        "benchmark_ds",
+        "generate_benchmark_charts",
+        "md_to_html_pdf"
+      ]
+    },
+    {
+      "id": "inspect-onnx",
+      "summary": "inspect an ONNX model file — report inputs/outputs/opset/IR/producer, unique operators, validity, and a machine-parseable input_name/height/width summary (read-only)",
+      "tools": [
+        "inspect_onnx"
+      ]
+    },
+    {
+      "id": "ngc-list-files",
+      "summary": "list the files in a public NVIDIA NGC model version (the NGC counterpart of hf_list_files) so the acquire phase knows what to download",
+      "tools": [
+        "ngc_list_files"
+      ]
+    },
+    {
+      "id": "static-batch-onnx",
+      "summary": "bake a fixed batch dimension into a batch-1 ONNX — patch input/output batch dims and internal Reshape nodes, writing a new static-batch ONNX",
+      "tools": [
+        "static_batch_onnx"
+      ]
+    },
+    {
+      "id": "benchmark-charts",
+      "summary": "render the 5 fixed benchmark PNG charts (trtexec BS=1-vs-MAX, GPU throughput, DS streams-vs-fps, trt-vs-ds, pipeline efficiency) from a benchmark_data.json",
+      "tools": [
+        "benchmark_charts"
+      ]
+    },
+    {
+      "id": "cleanup-staging",
+      "summary": "remove a model's scoped staging artifacts (build/.venv_<name>, models/<name>/hf_model, models/<name>/onnx_export) after ONNX export, preserving the shared venv (destructive; supports dry-run)",
+      "destructive": true,
+      "tools": [
+        "cleanup_staging"
+      ]
+    }
+  ]
+}

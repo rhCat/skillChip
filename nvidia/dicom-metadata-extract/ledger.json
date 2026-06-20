@@ -1,0 +1,1 @@
+{"_schema":"task-ledger TEMPLATE for dicom-metadata-extract — set perk, fill record_store + the vars the perk declares.","skill":"dicom-metadata-extract","perk":"extract","record_store":"<absolute dir for outputs + run-ledger>","vars":{"DICOM_PATH":"<absolute path to one DICOM (.dcm) file>"}}

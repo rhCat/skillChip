@@ -1,0 +1,21 @@
+{
+  "_perk": "check-container-gpu",
+  "sequence": [
+    "check_container_gpu"
+  ],
+  "tools": {
+    "check_container_gpu": {
+      "binary": "bash",
+      "params": {
+        "CONTAINER_NAME": "${CONTAINER_NAME}"
+      }
+    }
+  },
+  "env": {
+    "CONTAINER_NAME": "${CONTAINER_NAME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

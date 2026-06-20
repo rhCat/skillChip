@@ -1,0 +1,27 @@
+{
+  "tool": "static_batch_onnx",
+  "inputs": {
+    "SRC_ONNX": {
+      "type": "string",
+      "required": true
+    },
+    "BATCH_SIZE": {
+      "type": "string",
+      "required": true
+    },
+    "DST_ONNX": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "static_batch_out": {
+      "path": "${RECORD_STORE}/static-batch-onnx.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/static-batch-onnx.json"
+  }
+}

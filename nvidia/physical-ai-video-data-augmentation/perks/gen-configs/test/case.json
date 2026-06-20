@@ -1,0 +1,20 @@
+{
+  "_perk": "gen-configs",
+  "requires": [
+    "bash",
+    "python3"
+  ],
+  "vars": {
+    "INPUT_DIR": "${FIXTURE}/videos",
+    "CONFIG_DIR": "${FIXTURE}/cfg"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "configs/manifest.yaml"
+    ],
+    "nonempty": [
+      "configs/manifest.yaml"
+    ]
+  }
+}

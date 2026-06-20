@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for tao-setup-nvidia-gpu-host — set perk, fill record_store + the vars the perk declares.",
+  "skill": "tao-setup-nvidia-gpu-host",
+  "perk": "setup",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "BACKEND": "<GPU backend: docker | local-docker | kubernetes>",
+    "MODE": "<check-only (read-only probe) | install (mutates host, needs sudo + user approval)>"
+  }
+}

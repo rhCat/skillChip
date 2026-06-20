@@ -1,0 +1,20 @@
+{
+  "_perk": "setup",
+  "requires": [
+    "bash"
+  ],
+  "vars": {
+    "SSH_TARGET": "demo",
+    "REMOTE_ROOT": "demo",
+    "HSB_PLATFORM": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "hsb_setup.json"
+    ],
+    "nonempty": [
+      "hsb_setup.json"
+    ]
+  }
+}

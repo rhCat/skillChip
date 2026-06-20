@@ -1,0 +1,26 @@
+{
+  "_perk": "validate-csv",
+  "sequence": [
+    "validate_training_csv"
+  ],
+  "tools": {
+    "validate_training_csv": {
+      "binary": "python3",
+      "params": {
+        "CSV": "${CSV}",
+        "WORKSPACE_ROOT": "${WORKSPACE_ROOT}"
+      }
+    }
+  },
+  "env": {
+    "CSV": "${CSV}",
+    "WORKSPACE_ROOT": "${WORKSPACE_ROOT}",
+    "VALIDATION_CSV": "${VALIDATION_CSV}",
+    "LIGHT": "${LIGHT}",
+    "IMAGE_EXT": "${IMAGE_EXT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

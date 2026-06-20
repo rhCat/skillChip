@@ -1,0 +1,1 @@
+{"tool":"normalize_compose","inputs":{"RESOLVED":{"type":"string","required":true}},"outputs":{"normalize_out":{"path":"${RECORD_STORE}/normalize.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/normalize.json"}}

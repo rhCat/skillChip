@@ -1,0 +1,27 @@
+{
+  "tool": "render_side_by_side",
+  "inputs": {
+    "RUN_LOCAL_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "DATASET": {
+      "type": "string",
+      "required": true
+    },
+    "VIDEO": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "compare": {
+      "path": "${RECORD_STORE}/compare.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/compare.txt"
+  }
+}

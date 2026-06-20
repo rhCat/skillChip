@@ -1,0 +1,18 @@
+{
+  "_perk": "validate-submission",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "CARD": "${FIXTURE}/skill-card.md"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "validate_submission.txt"
+    ],
+    "nonempty": [
+      "validate_submission.txt"
+    ]
+  }
+}

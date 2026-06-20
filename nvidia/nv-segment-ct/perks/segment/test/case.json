@@ -1,0 +1,19 @@
+{
+  "_perk": "segment",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "CT_VOLUME": "demo",
+    "LABEL_PROMPTS": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "result.json"
+    ],
+    "nonempty": [
+      "result.json"
+    ]
+  }
+}

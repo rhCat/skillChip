@@ -1,0 +1,1 @@
+{"_schema":"task-ledger TEMPLATE for nemo-evaluator-plugin — set perk, fill record_store + the vars the perk declares.","skill":"nemo-evaluator-plugin","perk":"evaluate","record_store":"<absolute dir for outputs + run-ledger>","vars":{"SPEC_FILE":"<absolute path to the evaluation spec JSON (metrics + dataset + optional target)>"}}

@@ -1,0 +1,22 @@
+{
+  "_perk": "local-manifest",
+  "requires": [
+    "python3"
+  ],
+  "setup": [
+    "printf 'FAKE_CPNX_BITSTREAM' > ${FIXTURE}/cpnx.bit"
+  ],
+  "vars": {
+    "VERSION": "2510",
+    "CPNX_FILE": "${FIXTURE}/cpnx.bit"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "manifest.yaml"
+    ],
+    "nonempty": [
+      "manifest.yaml"
+    ]
+  }
+}

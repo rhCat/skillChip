@@ -1,0 +1,6 @@
+{
+  "_perk": "ngc-list-files",
+  "requires": ["bash", "python3"],
+  "vars": {"NGC_ORG": "nvidia", "NGC_TEAM": "tao", "MODEL_NAME": "peoplenet", "NGC_VERSION": "trainable_v2.6"},
+  "expect": {"exit": 0, "outputs": ["ngc-list-files.json", "ngc-files.txt"], "nonempty": ["ngc-list-files.json"]}
+}

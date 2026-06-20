@@ -1,0 +1,25 @@
+{
+  "_perk": "discover-streams",
+  "sequence": [
+    "discover_streams"
+  ],
+  "tools": {
+    "discover_streams": {
+      "binary": "bash",
+      "params": {
+        "USECASE": "${USECASE}",
+        "STREAM_COUNT": "${STREAM_COUNT}"
+      }
+    }
+  },
+  "env": {
+    "USECASE": "${USECASE}",
+    "STREAM_COUNT": "${STREAM_COUNT}",
+    "RESOURCES": "${RESOURCES}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

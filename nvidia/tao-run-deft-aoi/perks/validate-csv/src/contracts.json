@@ -1,0 +1,35 @@
+{
+  "tool": "validate_training_csv",
+  "inputs": {
+    "CSV": {
+      "type": "string",
+      "required": true
+    },
+    "WORKSPACE_ROOT": {
+      "type": "string",
+      "required": true
+    },
+    "VALIDATION_CSV": {
+      "type": "string",
+      "required": false
+    },
+    "LIGHT": {
+      "type": "string",
+      "required": false
+    },
+    "IMAGE_EXT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "report": {
+      "path": "${RECORD_STORE}/validation_report.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/validation_report.txt"
+  }
+}

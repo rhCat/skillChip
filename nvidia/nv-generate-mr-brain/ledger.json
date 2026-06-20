@@ -1,0 +1,12 @@
+{
+  "_schema": "task-ledger TEMPLATE for nv-generate-mr-brain — set perk, fill record_store + the vars the perk declares.",
+  "skill": "nv-generate-mr-brain",
+  "perk": "generate",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "MODEL_CONFIG": "<path to a model-config override JSON, or 'default' for upstream defaults>",
+    "OUTPUT_DIR": "<absolute dir for generated NIfTI volumes>",
+    "MODALITY": "<MR-brain modality name, e.g. mri_t1 / mri_t2 / mri_flair>",
+    "NV_GENERATE_ROOT": "<path to the cloned NVIDIA-Medtech/NV-Generate-CTMR upstream repo>"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "_perk": "import",
+  "sequence": [
+    "hf_list_files",
+    "safetensors_to_onnx",
+    "inspect_onnx",
+    "benchmark_trtexec",
+    "ds_single_stream",
+    "benchmark_ds",
+    "generate_benchmark_charts",
+    "md_to_html_pdf"
+  ],
+  "tools": {
+    "hf_list_files": {
+      "binary": "bash",
+      "params": {
+        "HF_ORG": "${HF_ORG}",
+        "MODEL_NAME": "${MODEL_NAME}"
+      }
+    }
+  },
+  "env": {
+    "HF_ORG": "${HF_ORG}",
+    "MODEL_NAME": "${MODEL_NAME}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

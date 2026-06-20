@@ -1,0 +1,20 @@
+{
+  "_perk": "notify",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "SLACK_BOT_TOKEN": "demo",
+    "SLACK_CHANNEL_ID": "demo",
+    "VST_ENDPOINT": "http://127.0.0.1:9"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "notify.json"
+    ],
+    "nonempty": [
+      "notify.json"
+    ]
+  }
+}

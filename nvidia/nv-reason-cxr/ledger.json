@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for nv-reason-cxr — set perk, fill record_store + the vars the perk declares.",
+  "skill": "nv-reason-cxr",
+  "perk": "reason",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "CXR_INPUT": "<absolute path to a PNG/JPEG chest X-ray, or a JSON fixture>",
+    "PROMPT": "<optional model prompt; default 'Find abnormalities and support devices.'>",
+    "BACKEND": "<optional: local | hf-space-api; default local>"
+  }
+}

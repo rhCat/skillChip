@@ -1,0 +1,12 @@
+{
+  "_perk": "render-notification",
+  "requires": ["python3"],
+  "vars": {
+    "INCIDENT": "${FIXTURE}/incident.json"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["render.json", "rendered.json"],
+    "nonempty": ["render.json", "rendered.json"]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "skill": "hsb-flash",
+  "perks": [
+    {
+      "id": "flash",
+      "summary": "prepare the FPGA flash manifest and flash an HSB Lattice board or VB1940 camera on a remote devkit (destructive)",
+      "destructive": true,
+      "tools": [
+        "make_manifest"
+      ]
+    },
+    {
+      "id": "local-manifest",
+      "summary": "build an FPGA flash manifest YAML from local bit files (CPNX/CLNX/Stratix-10) by measuring size + MD5, offline (no NGC fetch)",
+      "destructive": false,
+      "tools": [
+        "local_manifest"
+      ]
+    }
+  ]
+}

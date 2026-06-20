@@ -1,0 +1,1 @@
+{"skill":"nv-segment-ctmr","perks":[{"id":"segment","summary":"run NV-Segment-CTMR VISTA3D inference on a CT/MRI NIfTI volume and record label-map evidence","destructive":true,"tools":["run_ctmr"]}]}

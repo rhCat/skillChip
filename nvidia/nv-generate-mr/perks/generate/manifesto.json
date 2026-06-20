@@ -1,0 +1,25 @@
+{
+  "_perk": "generate",
+  "sequence": [
+    "run_mr"
+  ],
+  "tools": {
+    "run_mr": {
+      "binary": "python3",
+      "params": {
+        "MODEL_CONFIG": "${MODEL_CONFIG}",
+        "MODALITY": "${MODALITY}",
+        "RANDOM_SEED": "${RANDOM_SEED}"
+      }
+    }
+  },
+  "env": {
+    "MODEL_CONFIG": "${MODEL_CONFIG}",
+    "MODALITY": "${MODALITY}",
+    "RANDOM_SEED": "${RANDOM_SEED}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

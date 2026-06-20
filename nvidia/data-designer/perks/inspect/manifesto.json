@@ -1,0 +1,1 @@
+{"_perk":"inspect","sequence":["get_person_object_schema"],"tools":{"get_person_object_schema":{"binary":"python3","params":{"LOCALE":"${LOCALE}"}}},"env":{"LOCALE":"${LOCALE}","RECORD_STORE":"${record_store}"},"requires":["python3"]}

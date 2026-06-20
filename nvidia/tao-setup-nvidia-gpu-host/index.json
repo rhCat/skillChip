@@ -1,0 +1,19 @@
+{
+  "skill": "tao-setup-nvidia-gpu-host",
+  "skill_sha": "de93f351c77e885c3ac52ef8e671e1f191c6330e3648875862a329eea3a3c8c4",
+  "file_count": 12,
+  "files": {
+    "SKILL.md": "7f6689d5f2f050f8f5c496e78c8eef18b9c7c8b9f8b73edfc5c01e157d6e7cf1",
+    "blueprint.drawio": "1ab422df2aa12616a74b480d6902ada474ed97eee390efde89704d22d2c5d99b",
+    "blueprint.json": "171a09da004c6a3f16c3248756716e65c0bbfbf2ceee454de9268888ffbb0fd9",
+    "blueprint.svg": "185ee20c8d91647c2bc068f5334bded68d79bdd856f39201b90d842a5f6cdbed",
+    "ledger.json": "d87d36c7c35bedf25c41a84176ba91a75df28c70cca1879853b73319a0c7ba42",
+    "perks.json": "86fcaefde58fd6b6eb2db5f5116da743f8b9888edd25f59423affb09e509e2de",
+    "perks/setup/manifesto.json": "6bba2d44bed324237257868757a8eb0f6eabad9d421cb0b6bcc87150a5ee43d4",
+    "perks/setup/metadata.json": "02aa901274911867e504169c42593723b1b74c756c8f7d37f79c3472f992b452",
+    "perks/setup/src/contracts.json": "07fe0ebf8cfbf3bec5d59f85c52f0b945b111da2da835739bdd18474ef9bfe49",
+    "perks/setup/src/setup_nvidia_gpu_host.impl.sh": "d21cd509dfc504a3190602dccb62617e26a6280f69853030b3e1f64bc554c417",
+    "perks/setup/src/setup_nvidia_gpu_host.sh": "bab24b2e0f1774ff6bb293264ae0fea3a6aa4eb56432bc67c3fc107187b0f8cb",
+    "perks/setup/test/case.json": "a644cd01fc0ac843800539c6ae79f37dc459b6bc24f1a1d0382fec190ab559f1"
+  }
+}

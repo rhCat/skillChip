@@ -1,0 +1,19 @@
+{
+  "perk": "check-container-gpu",
+  "skill": "vss-deploy-detection-tracking-2d",
+  "description": "verify CUDA / NVML access inside a running container by probing `nvidia-smi -L` via docker exec — detects the silent stale-GPU-handle state (container still 'Up' in docker ps but NVML init fails) before a config-apply / app-launch so the deploy can steer to a fresh restart",
+  "rules": [
+    "read-only probe — runs `nvidia-smi -L` inside the container; submits no GPU work and mutates nothing",
+    "emits a parseable marker: GPU_OK <container> <gpu-line> when the GPU is visible, GPU_STALE <container> when NVML init failed",
+    "CONTAINER_NAME is required; degrades to a GPU_PROBE_SKIPPED note when docker / the container / the GPU is unavailable",
+    "fast (~0.5s) so it can gate the Step 3 container-reuse decision"
+  ],
+  "usage": "Set CONTAINER_NAME (the running perception container, e.g. rtvicv-perception-docker). Output: gpu-probe.txt (GPU_OK / GPU_STALE / GPU_PROBE_SKIPPED marker plus diagnostics) under record_store.",
+  "limitation": "Requires Docker, a running container of that name, and an NVIDIA GPU + driver visible inside it; without them the perk writes a GPU_PROBE_SKIPPED note and exits 0 rather than a real verdict.",
+  "minimal_example": {
+    "perk": "check-container-gpu",
+    "vars": {
+      "CONTAINER_NAME": "rtvicv-perception-docker"
+    }
+  }
+}

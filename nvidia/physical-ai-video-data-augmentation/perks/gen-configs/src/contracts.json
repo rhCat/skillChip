@@ -1,0 +1,23 @@
+{
+  "tool": "generate_configs",
+  "inputs": {
+    "INPUT_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "CONFIG_DIR": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "manifest": {
+      "path": "${RECORD_STORE}/configs/manifest.yaml",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/configs/manifest.yaml"
+  }
+}

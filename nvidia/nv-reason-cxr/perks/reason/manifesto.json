@@ -1,0 +1,25 @@
+{
+  "_perk": "reason",
+  "sequence": [
+    "run_nv_reason_cxr"
+  ],
+  "tools": {
+    "run_nv_reason_cxr": {
+      "binary": "python3",
+      "params": {
+        "CXR_INPUT": "${CXR_INPUT}",
+        "PROMPT": "${PROMPT}",
+        "BACKEND": "${BACKEND}"
+      }
+    }
+  },
+  "env": {
+    "CXR_INPUT": "${CXR_INPUT}",
+    "PROMPT": "${PROMPT}",
+    "BACKEND": "${BACKEND}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

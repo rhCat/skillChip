@@ -1,0 +1,14 @@
+{
+  "_perk": "subscribe-stop",
+  "requires": ["bash", "curl"],
+  "vars": {
+    "HOST_IP": "127.0.0.1",
+    "ALERT_BRIDGE_URL": "http://127.0.0.1:9",
+    "RULE_ID": "496aebd1-16d0-4123-81cf-10603e047d02"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["subscribe_stop.json"],
+    "nonempty": ["subscribe_stop.json"]
+  }
+}

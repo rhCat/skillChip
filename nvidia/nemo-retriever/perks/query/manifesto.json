@@ -1,0 +1,23 @@
+{
+  "_perk": "query",
+  "sequence": [
+    "grep_corpus"
+  ],
+  "tools": {
+    "grep_corpus": {
+      "binary": "python3",
+      "params": {
+        "QUERY": "${QUERY}",
+        "LANCEDB_URI": "${LANCEDB_URI}"
+      }
+    }
+  },
+  "env": {
+    "QUERY": "${QUERY}",
+    "LANCEDB_URI": "${LANCEDB_URI}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "tool": "run_nv_reason_cxr",
+  "inputs": {
+    "CXR_INPUT": {
+      "type": "string",
+      "required": true
+    },
+    "PROMPT": {
+      "type": "string",
+      "required": false
+    },
+    "BACKEND": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "result_json": {
+      "path": "${RECORD_STORE}/result.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/result.json"
+  }
+}

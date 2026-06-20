@@ -1,0 +1,11 @@
+services:
+  vss:
+    image: example/vss:latest
+    depends_on:
+      redis:
+        condition: service_started
+      otel-collector:
+        condition: service_started
+        required: false
+  redis:
+    image: redis:7

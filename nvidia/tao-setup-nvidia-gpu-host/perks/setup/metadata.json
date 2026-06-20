@@ -1,0 +1,21 @@
+{
+  "perk": "setup",
+  "skill": "tao-setup-nvidia-gpu-host",
+  "description": "check (read-only) or install the TAO GPU host runtime — NVIDIA driver 580, CUDA 13.0, Container Toolkit 1.19.0, Docker",
+  "rules": [
+    "--check-only is read-only — probes nvidia-smi, CUDA path, container-toolkit version, Docker NVIDIA runtime; works on any Linux distro",
+    "--install must be explicitly authorized by the user; never install silently",
+    "--install needs passwordless sudo/root and adds NVIDIA package repos, installs system packages, may restart Docker, and adds the invoking user to the docker group",
+    "--install automates debian-/rhel-/suse-family hosts; other distros get a clear error with manual-install steps",
+    "all output is recorded under record_store"
+  ],
+  "usage": "Set BACKEND (docker | local-docker | kubernetes) and MODE (check-only | install). Output: setup-status.txt.",
+  "limitation": "--check-only runs on any Linux distribution. --install automates only Ubuntu 22.04/24.04 + Debian 12 (apt), Fedora + RHEL/Rocky/AlmaLinux 9/10 (dnf), and openSUSE Leap / SLES 15 (zypper); requires sudo/root, internet access to NVIDIA package repos (and download.docker.com on rhel-family), and an x86_64 or aarch64 (sbsa) host. Arch/Alpine/Gentoo/NixOS/macOS and other families exit with manual-install guidance. New docker-group membership does not take effect in the current shell.",
+  "minimal_example": {
+    "perk": "setup",
+    "vars": {
+      "BACKEND": "docker",
+      "MODE": "check-only"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_perk": "clean-cache",
+  "sequence": [
+    "clean_engine_cache"
+  ],
+  "tools": {
+    "clean_engine_cache": {
+      "binary": "bash",
+      "params": {
+        "CACHE_DIR": "${CACHE_DIR}",
+        "DRY_RUN": "${DRY_RUN}"
+      }
+    }
+  },
+  "env": {
+    "CACHE_DIR": "${CACHE_DIR}",
+    "DRY_RUN": "${DRY_RUN}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

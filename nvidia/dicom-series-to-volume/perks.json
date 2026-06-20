@@ -1,0 +1,1 @@
+{"skill":"dicom-series-to-volume","perks":[{"id":"extract","summary":"convert one CT DICOM series folder to a HU NIfTI volume with affine + axcodes evidence","destructive":false,"tools":["series_to_volume"]}]}

@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for deepstream-import-vision-model — set perk, fill record_store + the vars the perk declares.",
+  "skill": "deepstream-import-vision-model",
+  "perk": "import",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "HF_ORG": "<HuggingFace org/owner of the source repo, e.g. onnx-community>",
+    "MODEL_NAME": "<model repo name / output model name, e.g. yolov8n>"
+  }
+}

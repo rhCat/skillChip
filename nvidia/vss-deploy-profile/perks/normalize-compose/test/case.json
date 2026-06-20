@@ -1,0 +1,13 @@
+{
+  "_perk": "normalize-compose",
+  "requires": ["bash", "python3"],
+  "vars": {
+    "RESOLVED": "${FIXTURE}/resolved.yml"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["normalize.json", "resolved.yml"],
+    "nonempty": ["normalize.json", "resolved.yml"],
+    "json": { "normalize.json": { "tool": "normalize_compose", "status": "ok" } }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "skill": "cupynumeric-migration-readiness",
+  "skill_sha": "8b64c34f6b74f96ddfbde482377a5022284832defce751ff183510510be641a3",
+  "file_count": 14,
+  "files": {
+    "SKILL.md": "c5196a6dd71483016f7f967cc49ec9004277b6041c480cce80ed80d37802278a",
+    "blueprint.drawio": "ee88b4eca70c1d3b8cea6d3df2c168d9605f984e973c987693382930195869f1",
+    "blueprint.json": "e229fc914ad2fc7a295f59d93e0d6101c6ca405586f256b369123170b5f37af9",
+    "blueprint.svg": "ff84a8bd289bdd3c7496ff7a2602b5a5356aa878ab61359bb07dd442b352073a",
+    "ledger.json": "367d279275c49c2b17f0820be90d8ded4a87a9cc0bc21ab91a540c200a11ad72",
+    "perks.json": "1110d05df8232d18e16e8778f5e2ed787f025740704b8482a8b2adc30e1f72a5",
+    "perks/assess/manifesto.json": "b985b211d6b14de65c7c2a413e1d112950f7a74fb05eef2b5e42401b297dec00",
+    "perks/assess/metadata.json": "6ebb9dc6485d6c34b516607e981f10390fa0cfd078044e61411db07ab9e9bfa8",
+    "perks/assess/src/contracts.json": "a547996d100c83b632370378272109c3a95d0c0df23ae966dae727c72635ad47",
+    "perks/assess/src/fetch_api_support.py": "7bbb70aefb67c4a578a1da5d689e4788157a0238c5c4efa27e7f127f2b592b78",
+    "perks/assess/src/fetch_api_support.sh": "de2161945f2dd20c44bd44b8e3b582388ca7f3a4fa4d5116368a74cd15b12449",
+    "perks/assess/src/test_fetch_api_support.py": "0bba68e023eddf9093461079d6ad1841a415b1bff8e73e0d9300ee2e52d4f334",
+    "perks/assess/test/case.json": "dc0fc535d45aa0761904ddc382fa796323f82290161b413aa15df7d1de1a5595",
+    "perks/assess/test/fixture/input.txt": "2f73349cfc4630255319c6c8dfc1b46a8996ace9d14d8e07563b165915918ec2"
+  }
+}

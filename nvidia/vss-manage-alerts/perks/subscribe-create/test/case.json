@@ -1,0 +1,18 @@
+{
+  "_perk": "subscribe-create",
+  "requires": ["bash", "curl", "python3"],
+  "vars": {
+    "HOST_IP": "127.0.0.1",
+    "ALERT_BRIDGE_URL": "http://127.0.0.1:9",
+    "LIVE_STREAM_URL": "rtsp://127.0.0.1/stream",
+    "ALERT_TYPE": "ppe_vest_violation",
+    "PROMPT": "flag anyone entering aisle 4 without a safety vest",
+    "SENSOR_ID": "2812768c-f21b-450e-a7be-2bbf406aaaa0",
+    "SENSOR_NAME": "warehouse-dock-1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["subscribe_create.json"],
+    "nonempty": ["subscribe_create.json"]
+  }
+}

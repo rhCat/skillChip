@@ -1,0 +1,25 @@
+{
+  "_perk": "research",
+  "sequence": [
+    "aiq"
+  ],
+  "tools": {
+    "aiq": {
+      "binary": "python3",
+      "params": {
+        "AIQ_QUERY": "${AIQ_QUERY}",
+        "AIQ_AGENT_TYPE": "${AIQ_AGENT_TYPE}",
+        "AIQ_SERVER_URL": "${AIQ_SERVER_URL}"
+      }
+    }
+  },
+  "env": {
+    "AIQ_QUERY": "${AIQ_QUERY}",
+    "AIQ_AGENT_TYPE": "${AIQ_AGENT_TYPE}",
+    "AIQ_SERVER_URL": "${AIQ_SERVER_URL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

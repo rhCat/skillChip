@@ -1,0 +1,1 @@
+{"_perk":"normalize-compose","sequence":["normalize_compose"],"tools":{"normalize_compose":{"binary":"bash","params":{"RESOLVED":"${RESOLVED}"}}},"env":{"RESOLVED":"${RESOLVED}","RECORD_STORE":"${record_store}"},"requires":["bash","python3"]}

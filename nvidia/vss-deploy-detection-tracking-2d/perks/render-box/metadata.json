@@ -1,0 +1,21 @@
+{
+  "perk": "render-box",
+  "skill": "vss-deploy-detection-tracking-2d",
+  "description": "render a perfectly-aligned fixed-width light-box step receipt: reads body rows from BODY_FILE (one row per line) and emits the boxed ┌──title──┐ / │ row │ / └──┘ receipt used by the deploy flow's per-step output contract",
+  "rules": [
+    "pure formatter — reads BODY_FILE (or an empty body when unset) and writes the rendered box to box.txt; no side effects",
+    "geometry is fixed: WIDTH columns wide (default 128); body rows longer than WIDTH-4 are truncated with '…' so the right border never breaks",
+    "TITLE is required and is centered in the top border; empty body lines render as empty box rows",
+    "deterministic given the same TITLE + BODY_FILE + WIDTH"
+  ],
+  "usage": "Set TITLE (the box header). Optionally set BODY_FILE (path to a file whose lines become box rows) and WIDTH (default 128). Output: box.txt (the rendered fixed-width box) under record_store.",
+  "limitation": "Body content beyond WIDTH-4 chars per line is truncated with an ellipsis; the helper deliberately refuses to wrap so a step receipt stays single-line-per-row.",
+  "minimal_example": {
+    "perk": "render-box",
+    "vars": {
+      "TITLE": "Container",
+      "BODY_FILE": "/tmp/step.txt",
+      "WIDTH": "128"
+    }
+  }
+}

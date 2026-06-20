@@ -1,0 +1,22 @@
+{
+  "perk": "deploy",
+  "skill": "vss-deploy-detection-tracking-2d",
+  "description": "deploy + operate the RTVI-CV 2D detection/tracking microservice (resolve defaults, fetch NGC assets, configure + launch the perception container, add streams) — destructive",
+  "rules": [
+    "destructive — runs Docker, pulls NGC images, launches a GPU perception app, and adds live streams; gated by `destructive: true`",
+    "run ONLY through executor.py — each step (load_defaults -> fetch_resources -> apply_in_container -> start_app_in_container -> add_streams) is recorded to the run-ledger as it runs",
+    "load_defaults (entry) is read-only host detection + YAML resolution; the destructive surface is the later fetch/apply/launch/stream steps",
+    "every step writes its artifacts under record_store; the entry step emits eval-safe KEY=VALUE deploy defaults to deploy-defaults.env",
+    "USECASE must be one of warehouse-2d | warehouse-3d | smartcity-rtdetr | smartcity-gdino"
+  ],
+  "usage": "Set USECASE (the deployment use case), CONTAINER_NAME (the perception container, default rtvicv-perception-docker), and STREAM_COUNT (number of streams to add). Output: deploy-defaults.env plus per-step logs under record_store.",
+  "limitation": "Requires the matching VSS profile / microservice deployable and reachable from the caller; needs Docker, an NVIDIA GPU, and valid NGC credentials (NGC_CLI_API_KEY / NVIDIA_API_KEY) for image and model pulls. NGC-hosted models and NIMs may be subject to rate-limits, GPU-memory requirements, and license restrictions. Concurrency, GPU memory, and storage limits depend on the host hardware and the profile's compose file.",
+  "minimal_example": {
+    "perk": "deploy",
+    "vars": {
+      "USECASE": "warehouse-2d",
+      "CONTAINER_NAME": "rtvicv-perception-docker",
+      "STREAM_COUNT": "4"
+    }
+  }
+}

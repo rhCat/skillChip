@@ -1,0 +1,26 @@
+{
+  "_perk": "render-box",
+  "sequence": [
+    "render_box"
+  ],
+  "tools": {
+    "render_box": {
+      "binary": "bash",
+      "params": {
+        "TITLE": "${TITLE}",
+        "BODY_FILE": "${BODY_FILE}",
+        "WIDTH": "${WIDTH}"
+      }
+    }
+  },
+  "env": {
+    "TITLE": "${TITLE}",
+    "BODY_FILE": "${BODY_FILE}",
+    "WIDTH": "${WIDTH}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

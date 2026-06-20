@@ -1,0 +1,22 @@
+{
+  "perk": "generate",
+  "skill": "physical-ai-defect-image-generation",
+  "description": "Orchestrate OSMO defect-image generation/augmentation/labeling for AOI datasets; renders the defect_spec.jsonl that anomaly-infer routes on.",
+  "rules": [
+    "destructive: feeds OSMO workflows that submit remotely, train/finetune, and may deploy a local NIM",
+    "run preflights first: preflight_credentials.sh, preflight_pod_template.sh, then preflight_urls.sh <flow> <usecase> [variant] before every submit",
+    "image_edit_model is always nvidia/Qwen-Image-Edit-NVPCB-OVSL2SL (Day 0); never the generic qwen-image-edit",
+    "dig_url_root has NO silent default — elicit it before any submit / osmo data upload (~80 GB+ lands there)",
+    "regenerate a fresh name stamp per submit; never download assets locally to work around a failure",
+    "DEFECT_PAIRS is a JSON list of [material, defect] pairs; SPATIAL_DEPENDENCY is one of free / text / cad"
+  ],
+  "usage": "Set DEFECT_PAIRS (JSON [material,defect] pairs) and optional SPATIAL_DEPENDENCY. render_defect_spec writes defect_spec.jsonl under RECORD_STORE — the AMP/SDG taxonomy the OSMO anomaly-infer stage routes on. The vendored preflight_*.sh + pick_best_step.sh helpers gate and select checkpoints for the OSMO submits this skill governs.",
+  "limitation": "All flows run on NVIDIA OSMO and require an OSMO credential (hf-token), a DIG-compliant POD_TEMPLATE (nvoptix mount + /dev/shm >= 16 GiB), GPUs, and (Day 0) a Qwen Image-Edit OVSL2SL endpoint. Per-defect spatial-dependency mixing is not supported by this fallback — ship a custom defect_spec.jsonl for that. The governed render step is local; submitting/training/deploying happen remotely on OSMO.",
+  "minimal_example": {
+    "perk": "generate",
+    "vars": {
+      "DEFECT_PAIRS": "[[\"IC\",\"bridge\"],[\"passive_component\",\"missing\"]]",
+      "SPATIAL_DEPENDENCY": "free"
+    }
+  }
+}

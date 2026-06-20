@@ -1,0 +1,29 @@
+{
+  "_perk": "preflight-urls",
+  "sequence": [
+    "preflight_urls_port"
+  ],
+  "tools": {
+    "preflight_urls_port": {
+      "binary": "bash",
+      "params": {
+        "FLOW": "${FLOW}",
+        "USECASE": "${USECASE}",
+        "VARIANT": "${VARIANT}",
+        "DIG_URL_ROOT": "${DIG_URL_ROOT}"
+      }
+    }
+  },
+  "env": {
+    "FLOW": "${FLOW}",
+    "USECASE": "${USECASE}",
+    "VARIANT": "${VARIANT}",
+    "DIG_URL_ROOT": "${DIG_URL_ROOT}",
+    "USE_PRETRAINED_CHECKPOINT": "${USE_PRETRAINED_CHECKPOINT}",
+    "USE_USD2ROI_DAY1": "${USE_USD2ROI_DAY1}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

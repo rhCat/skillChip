@@ -1,0 +1,28 @@
+{
+  "_perk": "ngc-list-files",
+  "sequence": [
+    "ngc_list_files"
+  ],
+  "tools": {
+    "ngc_list_files": {
+      "binary": "bash",
+      "params": {
+        "NGC_ORG": "${NGC_ORG}",
+        "MODEL_NAME": "${MODEL_NAME}",
+        "NGC_VERSION": "${NGC_VERSION}",
+        "NGC_TEAM": "${NGC_TEAM}"
+      }
+    }
+  },
+  "env": {
+    "NGC_ORG": "${NGC_ORG}",
+    "NGC_TEAM": "${NGC_TEAM}",
+    "MODEL_NAME": "${MODEL_NAME}",
+    "NGC_VERSION": "${NGC_VERSION}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

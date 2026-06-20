@@ -1,0 +1,4 @@
+{
+  "_perk": "deploy",
+  "skip": "5-step container deploy pipeline: fetch_resources/apply_in_container/start_app_in_container/add_streams require docker + an NVIDIA GPU host + NGC credentials and hard-fail without them \u2014 not offline-runnable through the governed channel"
+}

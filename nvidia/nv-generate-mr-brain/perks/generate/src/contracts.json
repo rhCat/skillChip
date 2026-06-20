@@ -1,0 +1,27 @@
+{
+  "tool": "run_mr_brain",
+  "inputs": {
+    "MODEL_CONFIG": {
+      "type": "string",
+      "required": true
+    },
+    "OUTPUT_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "MODALITY": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "result_json": {
+      "path": "${RECORD_STORE}/result.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/result.json"
+  }
+}

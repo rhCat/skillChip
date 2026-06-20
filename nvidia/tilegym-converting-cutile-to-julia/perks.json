@@ -1,0 +1,1 @@
+{"skill":"tilegym-converting-cutile-to-julia","perks":[{"id":"check","summary":"statically validate a cuTile.jl kernel for Python-to-Julia translation anti-patterns","destructive":false,"tools":["validate_cutile_jl"]}]}

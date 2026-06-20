@@ -1,0 +1,20 @@
+{
+  "skill": "nv-generate-mr-brain-finetune",
+  "skill_sha": "d14b646be09064beb8c63d91e9a5d7a464ca7047c8e7d2852818ce301db4e8e1",
+  "file_count": 13,
+  "files": {
+    "SKILL.md": "a119c85138dc8d63b6f8f0949da2dd81305ab866d05b3448c54796843ffa17fe",
+    "blueprint.drawio": "e5a56c8adfcc22074fe904c4e1eebddd0c5a9fc6d5a5b09ffd948298f103188d",
+    "blueprint.json": "44a690544872e85602ee0aa91b7dd02e594186e4834cd3ab2c921f236a153f6b",
+    "blueprint.svg": "3f75906c557321ab7fd9c80f4cee5eabc41b87812411d83e7ad4295e85d099ac",
+    "ledger.json": "36a654d5f938d510dff206e859b35eea27f54ff0d5b222b4f3251365cf7dc000",
+    "perks.json": "95d667e102caca2f9084a131ed823f4ac2f86b55898afb9ca97204502ddace1c",
+    "perks/finetune/manifesto.json": "230069df2f6332b614aa572ba55462c1fd686e090874453b32b7cc4bffd4be3c",
+    "perks/finetune/metadata.json": "b23ea56d0c8667598128e6960208ac0d09c6293dc9ab457d0b7ff810978cb961",
+    "perks/finetune/src/contracts.json": "bd1a30296eba30988b3ae1187b0a06c2a1ada7d97c5827e5e8fc04bb96dd8330",
+    "perks/finetune/src/run_mr_brain_finetune.py": "86e71b4b1ee4645cb73c701fac4bfc88c5b83d49103719338522d4f03d953066",
+    "perks/finetune/src/run_mr_brain_finetune.sh": "c14986c7be3d8210f59672e7d84ae24e0c3397f379080728c04b4c24e430e715",
+    "perks/finetune/test/case.json": "b1670dcde7a495581ea7717cc631ceddeb527d2c8166735013986b38a2ce070c",
+    "perks/finetune/test/fixture/input.txt": "2f73349cfc4630255319c6c8dfc1b46a8996ace9d14d8e07563b165915918ec2"
+  }
+}

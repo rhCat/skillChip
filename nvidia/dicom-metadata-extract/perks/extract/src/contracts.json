@@ -1,0 +1,1 @@
+{"tool":"extract_metadata","inputs":{"DICOM_PATH":{"type":"string","required":true}},"outputs":{"metadata_json":{"path":"${RECORD_STORE}/metadata.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/metadata.json"}}

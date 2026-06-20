@@ -1,0 +1,19 @@
+{
+  "_perk": "validate-csv",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "CSV": "${FIXTURE}/train.csv",
+    "WORKSPACE_ROOT": "${FIXTURE}"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "validation_report.txt"
+    ],
+    "nonempty": [
+      "validation_report.txt"
+    ]
+  }
+}

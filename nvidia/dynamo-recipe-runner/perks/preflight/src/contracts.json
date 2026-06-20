@@ -1,0 +1,1 @@
+{"tool":"recipe_tool","inputs":{"RECIPE_TARGET":{"type":"string","required":true}},"outputs":{"validate_report":{"path":"${RECORD_STORE}/validate.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/validate.json"}}

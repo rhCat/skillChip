@@ -1,0 +1,20 @@
+{
+  "perk": "synthesize-docker-run",
+  "skill": "vss-deploy-detection-tracking-2d",
+  "description": "reconstruct the full multi-line `docker run …` command for an existing container from `docker inspect` — volume mounts, --gpus, --network/--runtime, user-supplied -e env (image-baked env subtracted) — with secrets redacted, so deploy logs and Step 3 boxes show the real flags in effect",
+  "rules": [
+    "read-only — runs `docker inspect` (and `docker image inspect`); never starts, stops, or modifies the container",
+    "subtracts image-baked env so only user-supplied -e flags are shown; falls back to a curated allowlist when the image can't be inspected",
+    "redacts secrets (NGC_API_KEY, *PASSWORD*, *TOKEN*, *SECRET*, AUTHORIZATION, …) with ***REDACTED*** so the synthesized command is safe to land in an on-disk deploy log",
+    "CONTAINER_NAME is required; degrades to a placeholder note when docker or the container is unavailable",
+    "output is copy-paste-correct (shlex-quoted paths, backslash line continuation)"
+  ],
+  "usage": "Set CONTAINER_NAME (the existing perception container, e.g. rtvicv-perception-docker). Output: docker-run.sh (the synthesized multi-line `docker run` command) under record_store.",
+  "limitation": "Requires Docker and the named container to exist on the host; without them the perk writes a placeholder note and exits 0 rather than the real command line.",
+  "minimal_example": {
+    "perk": "synthesize-docker-run",
+    "vars": {
+      "CONTAINER_NAME": "rtvicv-perception-docker"
+    }
+  }
+}

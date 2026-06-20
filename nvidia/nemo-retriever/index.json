@@ -1,0 +1,26 @@
+{
+  "skill": "nemo-retriever",
+  "skill_sha": "187d05b97a92f11ec6d23c2f79afa6b4d6202022ee9f787a75f2439fa12a03f1",
+  "file_count": 19,
+  "files": {
+    "SKILL.md": "cebb166140599c9afb1c6404228462593953f8be81f33e7c86769dee783391b8",
+    "blueprint.drawio": "0c1ef401ba0c891ecb48abed4e6e48db7a6189adfb013203b90451877d41e7cb",
+    "blueprint.json": "f78bb9bfb5526356e73e0412cd106c90ef83da0795e0b801cf1ccb51a3eb6d85",
+    "blueprint.svg": "de690755fbb255d1ee49b7e4cbd4f96d85b6c262bfa284e5ddb87f1b07a7dfda",
+    "ledger.json": "cb981e2fd9a389d4bc26bd92a700409727bf30babb57f2ab0102b5d27e63de5b",
+    "perks.json": "e026b44dbc806ed960bb7d3a0a9c606616ffde39d8fb988f9d74e1629b4256bd",
+    "perks/fast-path/manifesto.json": "acbe98481ca318abfef4f63839a3e793385f0bf91fdf8e9ce3856046c579392b",
+    "perks/fast-path/metadata.json": "d396472a42456146a76b64209194c74b28d05b2ceeef49f53117e62c7e1442ce",
+    "perks/fast-path/src/contracts.json": "32db5389ed886bb912b8471c378d798352a77ece4f17bc68e447a29f44a09379",
+    "perks/fast-path/src/filename_fast_path.py": "6a24691665da402fac0c9e9403112a1cdbebb9cd4d6539550cdebd246dae0750",
+    "perks/fast-path/src/filename_fast_path.sh": "4f7586cb4649848cb2c11586b518daa92627f47d37ec928dd84ea77eacc26712",
+    "perks/fast-path/test/case.json": "dff6b1deb3a18ad4c5bbfe0fe17205f54f14abe576390ec30d36914b34a6f826",
+    "perks/query/manifesto.json": "ac74510fde4c02b3b9d02c1557068598d63c0a40b19868d231490512f787a8cd",
+    "perks/query/metadata.json": "6f2719fcc476ff55827affb2f84d793b3d40fc10047457d3c0ea31541623ebda",
+    "perks/query/src/contracts.json": "822b447b15b1d6cf96c2dc5a06834c3e60ed9da02e6ceadbd4ac7b5a36d08a07",
+    "perks/query/src/filename_fast_path.py": "6a24691665da402fac0c9e9403112a1cdbebb9cd4d6539550cdebd246dae0750",
+    "perks/query/src/grep_corpus.py": "9c653991be753ee602e459e1557feb006aeeb12440298c0821bdead118ee9638",
+    "perks/query/src/grep_corpus.sh": "4bc3a56dfbaabf8db1207c8b3c699f1c6b39dfaa32208a01d07de6c0ca524d82",
+    "perks/query/test/case.json": "b644268a4c7a19daab2fe764fc3870e40c723f5d1ba018f7a7e61f2da79a2747"
+  }
+}

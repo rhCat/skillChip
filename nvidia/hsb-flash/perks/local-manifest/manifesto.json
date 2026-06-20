@@ -1,0 +1,31 @@
+{
+  "_perk": "local-manifest",
+  "sequence": [
+    "local_manifest"
+  ],
+  "tools": {
+    "local_manifest": {
+      "binary": "python3",
+      "params": {
+        "VERSION": "${VERSION}",
+        "MANIFEST": "${MANIFEST}",
+        "CPNX_FILE": "${CPNX_FILE}",
+        "CLNX_FILE": "${CLNX_FILE}",
+        "STRATIX_FILE": "${STRATIX_FILE}",
+        "STRATEGY": "${STRATEGY}"
+      }
+    }
+  },
+  "env": {
+    "VERSION": "${VERSION}",
+    "MANIFEST": "${MANIFEST}",
+    "CPNX_FILE": "${CPNX_FILE}",
+    "CLNX_FILE": "${CLNX_FILE}",
+    "STRATIX_FILE": "${STRATIX_FILE}",
+    "STRATEGY": "${STRATEGY}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

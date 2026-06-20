@@ -1,0 +1,20 @@
+{
+  "_perk": "research",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "AIQ_QUERY": "demo",
+    "AIQ_AGENT_TYPE": "demo",
+    "AIQ_SERVER_URL": "http://127.0.0.1:9"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "report.json"
+    ],
+    "nonempty": [
+      "report.json"
+    ]
+  }
+}

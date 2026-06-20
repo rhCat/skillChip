@@ -1,0 +1,19 @@
+{
+  "_perk": "generate",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "CONFIG_INFER": "${FIXTURE}/input.txt",
+    "NV_GENERATE_ROOT": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "result.json"
+    ],
+    "nonempty": [
+      "result.json"
+    ]
+  }
+}

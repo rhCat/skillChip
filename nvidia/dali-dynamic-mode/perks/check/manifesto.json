@@ -1,0 +1,1 @@
+{"_perk":"check","sequence":["dali_check"],"tools":{"dali_check":{"binary":"python3","params":{"SOURCE_FILE":"${SOURCE_FILE}"}}},"env":{"SOURCE_FILE":"${SOURCE_FILE}","RECORD_STORE":"${record_store}"},"requires":["python3"]}

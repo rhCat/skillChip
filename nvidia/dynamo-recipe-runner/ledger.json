@@ -1,0 +1,1 @@
+{"_schema":"task-ledger TEMPLATE for dynamo-recipe-runner — set perk, fill record_store + the vars the perk declares.","skill":"dynamo-recipe-runner","perk":"preflight","record_store":"<absolute dir for outputs + run-ledger>","vars":{"RECIPE_TARGET":"recipe directory or YAML file to validate, relative to the Dynamo repo root (e.g. recipes/nemotron-3-super-fp8/sglang/agg)"}}

@@ -1,0 +1,15 @@
+{
+  "_perk": "preflight-urls",
+  "requires": ["bash"],
+  "vars": {
+    "FLOW": "0",
+    "USECASE": "pcb",
+    "DIG_URL_ROOT": "s3://osmo-workflows/dig"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["urls_report.txt"],
+    "nonempty": ["urls_report.txt"],
+    "contains": { "urls_report.txt": "osmo" }
+  }
+}

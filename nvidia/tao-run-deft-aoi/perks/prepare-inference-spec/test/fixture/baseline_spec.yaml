@@ -1,0 +1,16 @@
+encryption_key: tlt_encode
+task: classify
+model:
+  backbone:
+    pretrained_backbone_path: /model/backbone.pth
+  classify: {}
+dataset:
+  classify:
+    train_dataset: {}
+    validation_dataset: {}
+    batch_size: 16
+    augmentation_config:
+      augment: true
+train:
+  classify:
+    loss: ce

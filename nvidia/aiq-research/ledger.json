@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for aiq-research — set perk, fill record_store + the vars the perk declares.",
+  "skill": "aiq-research",
+  "perk": "research",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "AIQ_QUERY": "<the research question to send to the AI-Q backend>",
+    "AIQ_AGENT_TYPE": "<optional async agent type, e.g. shallow_researcher (default) or deep researcher>",
+    "AIQ_SERVER_URL": "<optional AI-Q base URL; defaults to http://localhost:8000>"
+  }
+}

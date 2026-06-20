@@ -1,0 +1,6 @@
+{
+  "_perk": "benchmark-charts",
+  "requires": ["bash", "python3"],
+  "vars": {"BENCHMARK_DATA": "${FIXTURE}/benchmark_data.json"},
+  "expect": {"exit": 0, "outputs": ["benchmark-charts.json"], "nonempty": ["benchmark-charts.json"]}
+}

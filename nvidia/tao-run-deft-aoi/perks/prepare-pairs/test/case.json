@@ -1,0 +1,19 @@
+{
+  "_perk": "prepare-pairs",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "INPUT_DIR": "${FIXTURE}/ng",
+    "GOLDEN_DIR": "${FIXTURE}/ok"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "dataset.csv"
+    ],
+    "nonempty": [
+      "dataset.csv"
+    ]
+  }
+}

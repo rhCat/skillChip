@@ -1,0 +1,1 @@
+{"_perk":"check","requires":["python3"],"vars":{"SOURCE_FILE":"${FIXTURE}/pipeline_to_convert.py"},"expect":{"outputs":["findings.json"]}}

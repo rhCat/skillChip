@@ -1,0 +1,26 @@
+{
+  "_perk": "render-compare",
+  "sequence": [
+    "render_side_by_side"
+  ],
+  "tools": {
+    "render_side_by_side": {
+      "binary": "bash",
+      "params": {
+        "RUN_LOCAL_DIR": "${RUN_LOCAL_DIR}",
+        "DATASET": "${DATASET}",
+        "VIDEO": "${VIDEO}"
+      }
+    }
+  },
+  "env": {
+    "RUN_LOCAL_DIR": "${RUN_LOCAL_DIR}",
+    "DATASET": "${DATASET}",
+    "VIDEO": "${VIDEO}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "ffmpeg"
+  ]
+}

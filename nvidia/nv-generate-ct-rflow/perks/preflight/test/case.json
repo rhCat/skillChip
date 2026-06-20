@@ -1,0 +1,19 @@
+{
+  "_perk": "preflight",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "CONFIG_INFER": "${FIXTURE}/config_infer.json",
+    "NV_GENERATE_ROOT": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "preflight.json"
+    ],
+    "nonempty": [
+      "preflight.json"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "load_defaults",
+  "inputs": {
+    "USECASE": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "deploy_defaults": {
+      "path": "${RECORD_STORE}/deploy-defaults.env",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/deploy-defaults.env"
+  }
+}

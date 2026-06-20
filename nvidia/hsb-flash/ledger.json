@@ -1,0 +1,13 @@
+{
+  "_schema": "task-ledger TEMPLATE for hsb-flash — set perk, fill record_store + the vars the perk declares.",
+  "skill": "hsb-flash",
+  "perk": "flash",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "VERSION": "<target FPGA version to flash to, e.g. 2510>",
+    "MANIFEST": "<output manifest filename, default manifest.yaml>",
+    "SSH_TARGET": "<remote devkit login, e.g. nvidia@192.168.1.50>",
+    "REMOTE_ROOT": "<remote working dir on the devkit, e.g. /home/nvidia>",
+    "BOARD_TYPE": "<board type: lattice or vb1940 — must be confirmed before flashing>"
+  }
+}

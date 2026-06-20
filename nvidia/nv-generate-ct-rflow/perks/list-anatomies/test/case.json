@@ -1,0 +1,19 @@
+{
+  "_perk": "list-anatomies",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "NV_GENERATE_ROOT": "${FIXTURE}",
+    "CONTROLLABLE": "1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "catalog.txt"
+    ],
+    "nonempty": [
+      "catalog.txt"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_perk": "fast-path",
+  "sequence": [
+    "filename_fast_path"
+  ],
+  "tools": {
+    "filename_fast_path": {
+      "binary": "python3",
+      "params": {
+        "QUERY": "${QUERY}",
+        "PDFS_DIR": "${PDFS_DIR}"
+      }
+    }
+  },
+  "env": {
+    "QUERY": "${QUERY}",
+    "PDFS_DIR": "${PDFS_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

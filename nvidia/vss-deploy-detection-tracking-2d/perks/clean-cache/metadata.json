@@ -1,0 +1,21 @@
+{
+  "perk": "clean-cache",
+  "skill": "vss-deploy-detection-tracking-2d",
+  "description": "tidy the TRT engine cache directory: relocate anything that is NOT a *.engine / *.plan file into <cache>/.quarantine/ so stray build artefacts stop polluting the cache; idempotent and never deletes outright",
+  "rules": [
+    "non-destructive of data — moves stray files into a sibling .quarantine/ subdir; the user reviews and deletes manually",
+    "allowlist: only *.engine and *.plan files (and the .quarantine dir) are left in place; everything else is relocated",
+    "idempotent — re-running with a clean cache reports 'cache is clean' and changes nothing",
+    "set DRY_RUN=1 to report WOULD_MOVE lines without touching any files",
+    "CACHE_DIR defaults inside the container to /opt/storage/engines; the perk requires it to be set explicitly"
+  ],
+  "usage": "Set CACHE_DIR (the TRT engine cache directory). Optionally set DRY_RUN=1 to preview without moving files. Output: clean-cache.txt (the CLEAN_CACHE report) under record_store.",
+  "limitation": "Only inspects the top level of CACHE_DIR (non-recursive); a non-quarantine subdirectory is relocated whole rather than recursed into. Fails with no output if CACHE_DIR does not exist.",
+  "minimal_example": {
+    "perk": "clean-cache",
+    "vars": {
+      "CACHE_DIR": "/opt/storage/engines",
+      "DRY_RUN": "1"
+    }
+  }
+}

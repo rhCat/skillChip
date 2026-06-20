@@ -1,0 +1,1 @@
+{"tool":"run_rflow_ct","inputs":{"CONFIG_INFER":{"type":"string","required":true},"NV_GENERATE_ROOT":{"type":"string","required":true}},"outputs":{"result_json":{"path":"${RECORD_STORE}/result.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/result.json"}}

@@ -1,0 +1,27 @@
+{
+  "tool": "aiq",
+  "inputs": {
+    "AIQ_QUERY": {
+      "type": "string",
+      "required": true
+    },
+    "AIQ_AGENT_TYPE": {
+      "type": "string",
+      "required": false
+    },
+    "AIQ_SERVER_URL": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "aiq_report": {
+      "path": "${RECORD_STORE}/report.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/report.json"
+  }
+}

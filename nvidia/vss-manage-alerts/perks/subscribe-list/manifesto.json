@@ -1,0 +1,1 @@
+{"_perk":"subscribe-list","sequence":["subscribe_list"],"tools":{"subscribe_list":{"binary":"bash","params":{"HOST_IP":"${HOST_IP}","ALERT_TYPE":"${ALERT_TYPE}"}}},"env":{"HOST_IP":"${HOST_IP}","ALERT_TYPE":"${ALERT_TYPE}","RECORD_STORE":"${record_store}"},"requires":["bash","curl"]}

@@ -1,0 +1,1 @@
+{"tool":"get_person_object_schema","inputs":{"LOCALE":{"type":"string","required":true}},"outputs":{"person_schema_out":{"path":"${RECORD_STORE}/person_schema.txt","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/person_schema.txt"}}

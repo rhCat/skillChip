@@ -1,0 +1,1 @@
+{"skill":"dynamo-troubleshoot","perks":[{"id":"troubleshoot","summary":"collect a read-only Dynamo Kubernetes debug bundle (pods, events, jobs, PVCs, CR status; secrets scrubbed)","destructive":false,"tools":["collect_dynamo_debug_bundle"]}]}

@@ -1,0 +1,1 @@
+{"_schema":"task-ledger TEMPLATE for dicom-series-preflight — set perk, fill record_store + the vars the perk declares.","skill":"dicom-series-preflight","perk":"preflight","record_store":"<absolute dir for outputs + run-ledger>","vars":{"DICOM_DIR":"absolute path to one DICOM series directory (one series per folder)"}}

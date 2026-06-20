@@ -1,0 +1,21 @@
+{
+  "_perk": "preflight-credentials",
+  "sequence": [
+    "preflight_credentials_port"
+  ],
+  "tools": {
+    "preflight_credentials_port": {
+      "binary": "bash",
+      "params": {
+        "NO_PROBE": "${NO_PROBE}"
+      }
+    }
+  },
+  "env": {
+    "NO_PROBE": "${NO_PROBE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

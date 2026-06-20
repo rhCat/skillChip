@@ -1,0 +1,1 @@
+{"_perk":"probe-credentials","sequence":["probe_credentials"],"tools":{"probe_credentials":{"binary":"bash","params":{}}},"env":{"RECORD_STORE":"${record_store}"},"requires":["bash"]}

@@ -1,0 +1,1 @@
+{"_schema":"task-ledger TEMPLATE for vss-deploy-profile — set perk, fill record_store + the vars the perk declares.","skill":"vss-deploy-profile","perk":"deploy","record_store":"<absolute dir for outputs + run-ledger>","vars":{"REPO":"<absolute path to the video-search-and-summarization checkout>","PROFILE":"<VSS profile: base | alerts | lvs | search | warehouse | edge>"}}

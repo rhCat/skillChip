@@ -1,0 +1,13 @@
+{
+  "skill": "aiq-research",
+  "perks": [
+    {
+      "id": "research",
+      "summary": "submit an async deep-research job to a reachable AI-Q backend, poll, and print the final report JSON",
+      "destructive": false,
+      "tools": [
+        "aiq"
+      ]
+    }
+  ]
+}

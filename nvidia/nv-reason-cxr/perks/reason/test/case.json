@@ -1,0 +1,8 @@
+{
+  "_perk": "reason",
+  "requires": ["python3"],
+  "vars": { "CXR_INPUT": "${FIXTURE}/synthetic_cxr_input.json" },
+  "expect": {
+    "outputs": ["result.json"]
+  }
+}

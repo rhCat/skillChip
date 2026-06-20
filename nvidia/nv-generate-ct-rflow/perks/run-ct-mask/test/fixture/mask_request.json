@@ -1,0 +1,5 @@
+{
+  "_comment": "Tiny mask request fixture for the run-ct-mask perk test.",
+  "num_output_samples": 1,
+  "controllable_anatomy_size": [["lung tumor", 0.5]]
+}

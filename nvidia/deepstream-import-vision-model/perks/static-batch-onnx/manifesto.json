@@ -1,0 +1,26 @@
+{
+  "_perk": "static-batch-onnx",
+  "sequence": [
+    "static_batch_onnx"
+  ],
+  "tools": {
+    "static_batch_onnx": {
+      "binary": "python3",
+      "params": {
+        "SRC_ONNX": "${SRC_ONNX}",
+        "BATCH_SIZE": "${BATCH_SIZE}",
+        "DST_ONNX": "${DST_ONNX}"
+      }
+    }
+  },
+  "env": {
+    "SRC_ONNX": "${SRC_ONNX}",
+    "BATCH_SIZE": "${BATCH_SIZE}",
+    "DST_ONNX": "${DST_ONNX}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "_perk": "prepare-inference-spec",
+  "sequence": [
+    "prepare_inference_spec"
+  ],
+  "tools": {
+    "prepare_inference_spec": {
+      "binary": "python3",
+      "params": {
+        "RESULTS_DIR": "${RESULTS_DIR}"
+      }
+    }
+  },
+  "env": {
+    "RESULTS_DIR": "${RESULTS_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

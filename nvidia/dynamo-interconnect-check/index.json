@@ -1,0 +1,20 @@
+{
+  "skill": "dynamo-interconnect-check",
+  "skill_sha": "6021590f203ea6246f5562b741b146e821889dc0ece79f263fe9a2b5e9061a45",
+  "file_count": 13,
+  "files": {
+    "SKILL.md": "66e75bfc72ed501db220751265f3b7319bf0591dd96085512ae652784a567d06",
+    "blueprint.drawio": "b915b1c8b1a5fc2df47d89a7e54fc7e30c7d64cc5226dbfe1df2aa9ddfa1cc92",
+    "blueprint.json": "6aa10ba87dc515dddb98144223663954d3dc609bdf2a2bbb2467c48ca0d4d6a8",
+    "blueprint.svg": "aac9f83956e89986e7f0bd247b2c6a58f51228ca44aa78efcc18a42c317e428c",
+    "ledger.json": "141883f56329bdb43dc59683ca78879bc0d3016640c4dbfbbbb4e957dbcc6bcf",
+    "perks.json": "e55a3775da31ebf5900517a6881c8096bc4811517ef88a6558b7b56f213a68e7",
+    "perks/check/manifesto.json": "88c83b9f394501a461a9811449bae754ef5e575e41da5c4cc03084f56355f72e",
+    "perks/check/metadata.json": "dcb22f3f865db912d3085822e7baa5b41e37869801146d91cb6577f43fa0d0d5",
+    "perks/check/src/check_interconnect.py": "1269a9b373c92207268ad3e5855f05eede78040e0cf508dd4961eee2e2b1c81d",
+    "perks/check/src/check_interconnect.sh": "55f9d76826ec58329cbe88b8550da98e1747452ff90e421fa47acd73edb86f55",
+    "perks/check/src/contracts.json": "32c0d6ecd3074490a1dc7724a2bb7518f25f07eb4403e5a57a9066760360ba15",
+    "perks/check/test/case.json": "d90406c45dfab724c20dda9215d06a2e964ebba41d97f4459c6bebbd9f600ffe",
+    "perks/check/test/fixture/disagg/deploy.yaml": "8dbe9acba3fa6b8fea80e7a2b60308bc04366bc1c9d0202325840a9a9f151db8"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_perk": "troubleshoot",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "NAMESPACE": "demo",
+    "DEPLOYMENT_NAME": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "summary.json"
+    ],
+    "nonempty": [
+      "summary.json"
+    ]
+  }
+}

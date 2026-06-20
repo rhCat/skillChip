@@ -1,0 +1,13 @@
+{
+  "skill": "tao-finetune-cosmos-reason",
+  "perks": [
+    {
+      "id": "finetune",
+      "summary": "SFT of Cosmos-Reason2-8B on video QA (FSDP) + DEFT gap analysis of eval results (destructive)",
+      "destructive": true,
+      "tools": [
+        "analyze_gaps"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "tool": "grep_corpus",
+  "inputs": {
+    "QUERY": {
+      "type": "string",
+      "required": true
+    },
+    "LANCEDB_URI": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "grep_corpus_out": {
+      "path": "${RECORD_STORE}/grep_corpus.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/grep_corpus.txt"
+  }
+}

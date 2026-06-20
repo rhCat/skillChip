@@ -1,0 +1,20 @@
+{
+  "perk": "reason",
+  "skill": "nv-reason-cxr",
+  "description": "run NV-Reason-CXR-3B chest X-ray reasoning (local Transformers, HF Space API, or mock) and emit structured JSON",
+  "rules": [
+    "thin wrapper — never reimplement model inference, image preprocessing, or decoding",
+    "output is engineering evidence only, not a diagnosis, clinical report, or triage decision",
+    "result JSON (stdout of the wrapper) is captured to record_store/result.json",
+    "local backend downloads multi-GB weights to the HF cache and expects CUDA; hf-space-api contacts the public HF Space; mock makes no model call",
+    "do not redirect the wrapper's stdout away from the captured artifact — callers read the JSON to verify the run"
+  ],
+  "usage": "Set CXR_INPUT (PNG/JPEG or JSON fixture). Optional PROMPT and BACKEND (local|hf-space-api). Export MOCK_NV_REASON_CXR=1 (or use a mock fixture) for a no-weights wiring check. Output: result.json.",
+  "limitation": "Thin wrapper; inference/preprocessing/decoding delegated to Transformers + NV-Reason-CXR-3B. Output is NOT a diagnosis, clinical report, treatment recommendation, or triage decision and must be reviewed by a qualified professional. The model may hallucinate findings, miss subtle abnormalities, or misread support devices. Mock mode is not a substitute for inference. The hf-space-api backend depends on public HF Space availability and schema. Not for clinical deployment, interpretation, autonomous diagnosis, treatment, or triage.",
+  "minimal_example": {
+    "perk": "reason",
+    "vars": {
+      "CXR_INPUT": "/abs/path/to/fixtures/synthetic_cxr_input.json"
+    }
+  }
+}

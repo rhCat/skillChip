@@ -1,0 +1,24 @@
+{
+  "_perk": "collect-metrics",
+  "requires": [
+    "bash",
+    "python3",
+    "curl"
+  ],
+  "vars": {
+    "REST_HOST": "localhost",
+    "REST_PORT": "9000",
+    "SAMPLES": "1",
+    "INTERVAL": "0",
+    "WARMUP": "0"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "metrics.txt"
+    ],
+    "nonempty": [
+      "metrics.txt"
+    ]
+  }
+}

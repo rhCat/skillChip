@@ -1,0 +1,1 @@
+{"tool":"render_notification","inputs":{"INCIDENT":{"type":"string","required":false}},"outputs":{"render_out":{"path":"${RECORD_STORE}/render.json","type":"file"},"rendered":{"path":"${RECORD_STORE}/rendered.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/render.json"}}

@@ -1,0 +1,21 @@
+{
+  "skill": "nemo-retriever",
+  "perks": [
+    {
+      "id": "query",
+      "summary": "case-insensitive keyword/regex search over the LanceDB corpus the retriever already built (read-only)",
+      "destructive": false,
+      "tools": [
+        "grep_corpus"
+      ]
+    },
+    {
+      "id": "fast-path",
+      "summary": "filename fast path: when the query literally names a PDF in the folder, extract+rank its pages by query-token frequency and emit a top-10 ranking + top page text (read-only)",
+      "destructive": false,
+      "tools": [
+        "filename_fast_path"
+      ]
+    }
+  ]
+}

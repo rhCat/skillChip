@@ -1,0 +1,10 @@
+augmentation:
+  config: augmentation/augmentation.yaml
+  n_augmentations: 1
+  variables:
+    weather:
+      sunny: 0.5
+      rainy: 0.5
+    time_of_day:
+      - day
+      - night

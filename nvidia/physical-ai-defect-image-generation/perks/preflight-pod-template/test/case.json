@@ -1,0 +1,13 @@
+{
+  "_perk": "preflight-pod-template",
+  "requires": ["bash"],
+  "vars": {
+    "MIN_DSHM_GIB": "16"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["pod_template_report.txt"],
+    "nonempty": ["pod_template_report.txt"],
+    "contains": { "pod_template_report.txt": "POD_TEMPLATE" }
+  }
+}

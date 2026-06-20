@@ -1,0 +1,20 @@
+{
+  "skill": "dali-dynamic-mode",
+  "skill_sha": "2924aaa04246de2d2a9bd16d84320dcbce835fff88c57bfac20b33a12873ab86",
+  "file_count": 13,
+  "files": {
+    "SKILL.md": "076bb2feb29faf47241320349c88ac02f533f621b97831d9d474fec261165076",
+    "blueprint.drawio": "0e68074f5e313ac40f75fe72fd6270f950df4c116e4e5a195532b8dcdc40cee8",
+    "blueprint.json": "a1836886429e53134f1acb7ce9b49e77851f6f879ce454a6d6faf2a6be4aa0d2",
+    "blueprint.svg": "f5c25e04169c7b7eb69baff75db1d839919911bca94abc8bfe1d71a1a13192e3",
+    "ledger.json": "318bb1bc20d5e73f81b5dde6df4b3c9ae6ae6f603bcf5148298aa551544b7921",
+    "perks.json": "fdaa5db8d92f7992b247517d5a19a2efede62e2e71162eade6d6d562f02ee51a",
+    "perks/check/manifesto.json": "d0bdb0116281da37d66ef8eff54eda1ed56c7fbf7441dd4eeabf56f4fe7666be",
+    "perks/check/metadata.json": "79ea97ddeed401f655f60ec20917b173a2eab61fe3d81e13ba4434bbaaa77bf5",
+    "perks/check/src/contracts.json": "b45fbaf1fb7e06fe4307e890993dd1dedd42fb5a554031909c907044186ea6b1",
+    "perks/check/src/dali_check.py": "32a8949dbcf3e0dc1b12c6550c5507eddc28e4b4929d45c755f5e954dcdb6111",
+    "perks/check/src/dali_check.sh": "b28e3ce06f9036e674d075126a912318ebe6c729e6931de177b982bdc1eefd55",
+    "perks/check/test/case.json": "d6de949c03b45359e8b00485f81eb46576402bbd2b2bee90495002252ad56069",
+    "perks/check/test/fixture/pipeline_to_convert.py": "509239b25d677b044758c3cdf797f37b0eddbbad197394e2b27b52d84d31bd08"
+  }
+}

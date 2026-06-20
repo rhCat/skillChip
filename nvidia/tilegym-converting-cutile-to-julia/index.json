@@ -1,0 +1,20 @@
+{
+  "skill": "tilegym-converting-cutile-to-julia",
+  "skill_sha": "16cc994a8532621133066881e361f5c1b40d1bc4c1742bb50eac9a7650839ba1",
+  "file_count": 13,
+  "files": {
+    "SKILL.md": "06fa42a23eed86d9d93e0aeb9dea9ac0a568af40986a2fcead43673606c39f4d",
+    "blueprint.drawio": "204fc9d1a42489fcb9f7c443c619a014cedbd77277c0afa4116dbc9659798eea",
+    "blueprint.json": "183a6937e4ea6a809f7f2e6219c747c57dee91f31503beca9ffd212ea16e3978",
+    "blueprint.svg": "7c0fa3b03cab5983bead1700f5edbc1b1f3b190ae4eed111c9a3c14e02115efa",
+    "ledger.json": "9358b1040c2757c41b74c349e811f35ec2e7a6d2704f30fbccadbef5a2f595fc",
+    "perks.json": "bc03bc6e736a5c739e70e44670d87b9d8a83bc2be61765dc6e9e05fd14279f77",
+    "perks/check/manifesto.json": "0eba0c21caea85e36a918de76a55e314d86d5fc9b2fe28ba35354cb24b78fa47",
+    "perks/check/metadata.json": "2a37891f3c5deb01182f4bd2c870cecb09db0f3bd3e6b5aea0f1ff8ac9a73272",
+    "perks/check/src/contracts.json": "0d65c83f794404289bb6dad63c09166545d724f378fc62fb1b7e18ccbd6c9bd8",
+    "perks/check/src/validate_cutile_jl.py": "c2d120b09eaefb5c91187e70ce4616fac709a3fcf82b492bb14042da1c71b955",
+    "perks/check/src/validate_cutile_jl.sh": "e4788c1ae0271c2edfb061422d3bf2a038bb4eda88118271a08588970a684d0a",
+    "perks/check/test/case.json": "05db62fb4b9d67be9b3b004e86c354604b5ac528164f0ec824384f53a3f61fb8",
+    "perks/check/test/fixture/kernel.jl": "f79f58668d3b7486a4d4f924db5c5bc87f22c3938c7eaef79cf0079043946f6a"
+  }
+}

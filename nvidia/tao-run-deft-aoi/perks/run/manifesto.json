@@ -1,0 +1,29 @@
+{
+  "_perk": "run",
+  "sequence": [
+    "init_deft_state"
+  ],
+  "tools": {
+    "init_deft_state": {
+      "binary": "python3",
+      "params": {
+        "WORKSPACE": "${WORKSPACE}",
+        "KPI_TARGET": "${KPI_TARGET}",
+        "MAX_ITERATIONS": "${MAX_ITERATIONS}",
+        "NUM_GPUS": "${NUM_GPUS}",
+        "NUM_EPOCHS": "${NUM_EPOCHS}"
+      }
+    }
+  },
+  "env": {
+    "WORKSPACE": "${WORKSPACE}",
+    "KPI_TARGET": "${KPI_TARGET}",
+    "MAX_ITERATIONS": "${MAX_ITERATIONS}",
+    "NUM_GPUS": "${NUM_GPUS}",
+    "NUM_EPOCHS": "${NUM_EPOCHS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

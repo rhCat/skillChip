@@ -1,0 +1,22 @@
+{
+  "_perk": "run",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "WORKSPACE": "demo",
+    "KPI_TARGET": "demo",
+    "MAX_ITERATIONS": "demo",
+    "NUM_GPUS": "demo",
+    "NUM_EPOCHS": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "deft_state.json"
+    ],
+    "nonempty": [
+      "deft_state.json"
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for nemo-data-designer-plugin — set perk, fill record_store + the vars the perk declares.",
+  "skill": "nemo-data-designer-plugin",
+  "perk": "generate",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "LOCALE": "<persona locale to inspect, e.g. en_US>"
+  }
+}

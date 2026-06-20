@@ -1,0 +1,19 @@
+{
+  "perk": "analyze-kpi",
+  "skill": "tao-run-deft-aoi",
+  "description": "sweep thresholds over a ChangeNet inference CSV and pick the FAR @ 100%-recall operating point (read-only)",
+  "rules": [
+    "prediction rule: score > threshold => NO_PASS; score <= threshold => PASS",
+    "ground-truth rule: any label other than the pass-label is treated as NO_PASS",
+    "FAR (False Alarm Rate) = FP / (FP + TN); all threshold candidates are evaluated on the whole dataset",
+    "stdlib-only metrics; plots are emitted only when matplotlib is installed (otherwise skipped, not fatal)"
+  ],
+  "usage": "Set INFER_CSV (path to the inference CSV with a label column and a score column) and RECORD_STORE. Optional: LABEL_COLUMN (default label), SCORE_COLUMN (default siamese_score), PASS_LABEL (default PASS), BINS (default 40). Writes ${RECORD_STORE}/kpi_analysis/{summary.txt, threshold_metrics.csv, best_f1_missed_no_pass_samples.csv} plus distribution/confusion plots.",
+  "limitation": "Read-only analysis of one inference CSV; does not run inference, training, or any container. The score column must be numeric and the label column present, or the analysis falls back to a placeholder summary.",
+  "minimal_example": {
+    "perk": "analyze-kpi",
+    "vars": {
+      "INFER_CSV": "results/run_x/baseline/inference/best_val/inference.csv"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "perk": "prepare-pairs",
+  "skill": "tao-run-deft-aoi",
+  "description": "build the ChangeNet (input, golden, label, object_name) CSV from paired NG/OK image directories",
+  "rules": [
+    "minimal mode (no IMAGES_DIR): writes a 3-column CSV (input_path, golden_path, label) with absolute paths",
+    "siamese mode (IMAGES_DIR set): writes the 14-column NV_PCB_Siamese CSV and copies images into images_dir/<subdir>_{ng,ok}/object_name_light.ext (converting to image-ext as needed)",
+    "label resolution: forced LABEL, else parsed from the 'NAME+label_NNNNN' filename pattern, else default NG",
+    "PASS-preserving label normalization: 'PASS' stays verbatim; every other label is lowercased+stripped",
+    "NG files with no matching golden are skipped and recorded in ingest_summary.json (siamese mode)"
+  ],
+  "usage": "Set INPUT_DIR (NG images), GOLDEN_DIR (OK images), and RECORD_STORE. Optional: LABEL, IMAGES_DIR (siamese staging tree), SUBDIR (default sdg), LIGHT (default SolderLight), IMAGE_EXT (default .jpg). Writes ${RECORD_STORE}/dataset.csv; siamese mode also stages images and emits ingest_summary.json.",
+  "limitation": "Image copying/conversion requires Pillow (PIL); minimal mode reads filenames only. NG and OK files are matched by identical filename across the two directories.",
+  "minimal_example": {
+    "perk": "prepare-pairs",
+    "vars": {
+      "INPUT_DIR": "augmentation/anomalygen/reconstructed_image",
+      "GOLDEN_DIR": "augmentation/anomalygen/original_image"
+    }
+  }
+}

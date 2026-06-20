@@ -1,0 +1,20 @@
+{
+  "skill_name": "demo-target-skill",
+  "skill_kind": "Agent",
+  "description_sentence": "A demonstration skill used to exercise deterministic card rendering offline.",
+  "usage_posture": "demonstration",
+  "owner": { "kind": "nvidia" },
+  "license_identifier": "Apache-2.0",
+  "use_case": "Render a governance skill card from a fixed context for testing.",
+  "deployment_geography": "Global",
+  "references": [
+    { "label": "Source", "url": "https://github.com/NVIDIA/skills" }
+  ],
+  "output": {
+    "types": ["Text"],
+    "format": "Markdown",
+    "parameters": "N/A",
+    "other_properties": "Deterministic render of a skill card."
+  },
+  "skill_version": "0.0.1"
+}

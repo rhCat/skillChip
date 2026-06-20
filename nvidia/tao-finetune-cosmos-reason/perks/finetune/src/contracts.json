@@ -1,0 +1,27 @@
+{
+  "tool": "analyze_gaps",
+  "inputs": {
+    "RESULTS_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "KPI_ANN_PATH": {
+      "type": "string",
+      "required": true
+    },
+    "KPI_MEDIA_PATH": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "gaps_parquet": {
+      "path": "${RECORD_STORE}/gaps.parquet",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/gaps.parquet"
+  }
+}

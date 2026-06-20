@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for hsb-setup — set perk, fill record_store + the vars the perk declares.",
+  "skill": "hsb-setup",
+  "perk": "setup",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "SSH_TARGET": "<remote devkit login, e.g. nvidia@192.168.1.50>",
+    "REMOTE_ROOT": "<remote working dir where the repo lives, e.g. /home/nvidia>",
+    "HSB_PLATFORM": "<platform hint: 'IGX Orin' / 'AGX Orin' / 'AGX Thor' / 'DGX Spark' (may be empty to auto-detect)>"
+  }
+}

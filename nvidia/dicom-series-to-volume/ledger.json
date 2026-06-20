@@ -1,0 +1,1 @@
+{"_schema":"task-ledger TEMPLATE for dicom-series-to-volume — set perk, fill record_store + the vars the perk declares.","skill":"dicom-series-to-volume","perk":"extract","record_store":"<absolute dir for outputs + run-ledger>","vars":{"DICOM_DIR":"<absolute path to a single-series CT DICOM directory>"}}

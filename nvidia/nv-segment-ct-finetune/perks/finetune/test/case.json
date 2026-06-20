@@ -1,0 +1,19 @@
+{
+  "_perk": "finetune",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "DATASET": "${FIXTURE}/input.txt",
+    "FINETUNE_ARGS": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "output.json"
+    ],
+    "nonempty": [
+      "output.json"
+    ]
+  }
+}

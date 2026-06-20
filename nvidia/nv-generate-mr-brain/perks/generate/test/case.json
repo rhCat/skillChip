@@ -1,0 +1,20 @@
+{
+  "_perk": "generate",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "MODEL_CONFIG": "${FIXTURE}/input.txt",
+    "OUTPUT_DIR": "${FIXTURE}/input.txt",
+    "MODALITY": "demo"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "result.json"
+    ],
+    "nonempty": [
+      "result.json"
+    ]
+  }
+}

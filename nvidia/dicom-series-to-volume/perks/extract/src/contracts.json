@@ -1,0 +1,1 @@
+{"tool":"series_to_volume","inputs":{"DICOM_DIR":{"type":"string","required":true}},"outputs":{"result_json":{"path":"${RECORD_STORE}/result.json","type":"file"},"nifti_volume":{"path":"${RECORD_STORE}/volume.nii.gz","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/result.json"}}

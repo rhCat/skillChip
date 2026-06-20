@@ -1,0 +1,22 @@
+{
+  "_perk": "inspect-onnx",
+  "sequence": [
+    "inspect_onnx"
+  ],
+  "tools": {
+    "inspect_onnx": {
+      "binary": "python3",
+      "params": {
+        "ONNX_FILE": "${ONNX_FILE}"
+      }
+    }
+  },
+  "env": {
+    "ONNX_FILE": "${ONNX_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

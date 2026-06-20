@@ -1,0 +1,19 @@
+{
+  "perk": "query",
+  "skill": "nemo-retriever",
+  "description": "case-insensitive keyword/regex search over the LanceDB corpus the retriever already built (read-only)",
+  "rules": [
+    "read-only: scans the existing LanceDB table, never re-extracts source documents and never mutates the index",
+    "pattern is a Python regex, matched case-insensitive across every indexed chunk (text/table/chart/image transcriptions)",
+    "results are capped (default --max-hits 50) and written under record_store"
+  ],
+  "usage": "Set QUERY (the regex/keyword) and LANCEDB_URI (the dir holding the index built by `retriever ingest`). Output: grep_corpus.txt (one `<pdf>:p<page>:<type>:  ...snippet...` line per hit, or NO_MATCH).",
+  "limitation": "Requires an index already built by the NeMo Retriever library (`retriever ingest`) and the retriever venv (lancedb + pandas) on PATH. Search-only over the indexed corpus — does not ingest, embed, re-rank, or run semantic vector query; that is the external `retriever` CLI which needs the NeMo Retriever install (and, for many input shapes, libreoffice/ffmpeg and optionally a NIM endpoint).",
+  "minimal_example": {
+    "perk": "query",
+    "vars": {
+      "QUERY": "mRNA-1273",
+      "LANCEDB_URI": "./lancedb"
+    }
+  }
+}

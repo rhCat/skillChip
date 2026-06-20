@@ -1,0 +1,21 @@
+{
+  "_perk": "discover-streams",
+  "requires": [
+    "bash",
+    "python3"
+  ],
+  "vars": {
+    "USECASE": "warehouse-2d",
+    "STREAM_COUNT": "4",
+    "RESOURCES": "${FIXTURE}"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "streams.json"
+    ],
+    "nonempty": [
+      "streams.json"
+    ]
+  }
+}

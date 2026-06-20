@@ -1,0 +1,19 @@
+{
+  "skill": "data-designer",
+  "skill_sha": "773a08533939a15f149df772fee2fc462d4ad678aa8b7c408030b28c3e3512fb",
+  "file_count": 12,
+  "files": {
+    "SKILL.md": "ea296effc377da9ae1f72fa69cf028ddb321045e0e1310ea0f113202b0c14a11",
+    "blueprint.drawio": "63ac1d7f24d822f018f32f33db2347686a6c60452bad640f409dd37f4f8e93c6",
+    "blueprint.json": "26e4a71ed16cdfe8b097017ee7e5d2a5810e7bd973827692d534a88cf824a47f",
+    "blueprint.svg": "d311fa0a584e3d29399546dfbc685a0a18c94dee33fa6fdce9af909a023fac8a",
+    "ledger.json": "ca3ad6bbc5130487e97caeaa3d289861f40c344868bb31815b85e0223d2a76ca",
+    "perks.json": "4857e243956c9e31be8c89a47e10c11c6d3d9ce1058c7efa650cb7b9835eb2ec",
+    "perks/inspect/manifesto.json": "b5ce141c45ee095c5f2f9fe6ce227e197581c528f65d7aa9e816b1a7a74087d7",
+    "perks/inspect/metadata.json": "311404be5f5d5ba7b16f4db3d6a4c7edde3786c9eae9ff8bd6493e50ba0f39f0",
+    "perks/inspect/src/contracts.json": "e1919d662c6437daa3950c5e01dc3e00ead3ea0dbeb95d08180bdf444dc5c257",
+    "perks/inspect/src/get_person_object_schema.py": "be1739329de63e2a56d52611053543a9ec38a227d610405ef987bdfb4809899b",
+    "perks/inspect/src/get_person_object_schema.sh": "e20707f9cdafc7c48101908a5d76083eb14f04cee75a72cd68179408502421d3",
+    "perks/inspect/test/case.json": "dad97208ebdd805c604de60408b099d5cc10dd5ab012e069693b919635a7f95c"
+  }
+}

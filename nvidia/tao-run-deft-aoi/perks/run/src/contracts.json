@@ -1,0 +1,35 @@
+{
+  "tool": "init_deft_state",
+  "inputs": {
+    "WORKSPACE": {
+      "type": "string",
+      "required": true
+    },
+    "KPI_TARGET": {
+      "type": "string",
+      "required": true
+    },
+    "MAX_ITERATIONS": {
+      "type": "string",
+      "required": true
+    },
+    "NUM_GPUS": {
+      "type": "string",
+      "required": true
+    },
+    "NUM_EPOCHS": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "deft_state": {
+      "path": "${RECORD_STORE}/deft_state.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/deft_state.json"
+  }
+}

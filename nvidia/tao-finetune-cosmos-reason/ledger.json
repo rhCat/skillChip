@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for tao-finetune-cosmos-reason — set perk, fill record_store + the vars the perk declares.",
+  "skill": "tao-finetune-cosmos-reason",
+  "perk": "finetune",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "RESULTS_DIR": "<dir holding cosmos-rl eval results.json (searched recursively)>",
+    "KPI_ANN_PATH": "<KPI annotations JSON (id -> video) to resolve media paths>",
+    "KPI_MEDIA_PATH": "<media root prepended to relative video paths>"
+  }
+}

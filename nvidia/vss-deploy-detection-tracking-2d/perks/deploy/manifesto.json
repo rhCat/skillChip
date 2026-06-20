@@ -1,0 +1,56 @@
+{
+  "_perk": "deploy",
+  "sequence": [
+    "load_defaults",
+    "fetch_resources",
+    "apply_in_container",
+    "start_app_in_container",
+    "add_streams"
+  ],
+  "tools": {
+    "load_defaults": {
+      "binary": "bash",
+      "params": {
+        "USECASE": "${USECASE}"
+      }
+    },
+    "fetch_resources": {
+      "binary": "bash",
+      "params": {
+        "USECASE": "${USECASE}"
+      }
+    },
+    "apply_in_container": {
+      "binary": "bash",
+      "params": {
+        "USECASE": "${USECASE}",
+        "CONTAINER_NAME": "${CONTAINER_NAME}"
+      }
+    },
+    "start_app_in_container": {
+      "binary": "bash",
+      "params": {
+        "USECASE": "${USECASE}",
+        "CONTAINER_NAME": "${CONTAINER_NAME}"
+      }
+    },
+    "add_streams": {
+      "binary": "bash",
+      "params": {
+        "USECASE": "${USECASE}",
+        "STREAM_COUNT": "${STREAM_COUNT}"
+      }
+    }
+  },
+  "env": {
+    "USECASE": "${USECASE}",
+    "CONTAINER_NAME": "${CONTAINER_NAME}",
+    "STREAM_COUNT": "${STREAM_COUNT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3",
+    "docker"
+  ]
+}

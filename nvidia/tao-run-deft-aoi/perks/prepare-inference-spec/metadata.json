@@ -1,0 +1,20 @@
+{
+  "perk": "prepare-inference-spec",
+  "skill": "tao-run-deft-aoi",
+  "description": "render the inference handoff (best_model.json + best_model_inference_spec.yaml) from a finished run's deft_state.json",
+  "rules": [
+    "picks the iteration (baseline or iterN) with the lowest far_pct from deft_state.json",
+    "best_model.json carries checkpoint, threshold, far_pct, iteration, backbone, images_dir, training_spec",
+    "best_model_inference_spec.yaml copies model+dataset architecture verbatim from the training spec so it matches the checkpoint; strips train/eval/export blocks and wires the KPI threshold as eval_margin",
+    "inference.checkpoint is the in-container mount /model/best.pth; the consumer mounts best_model.json.checkpoint there",
+    "never hand-edit either file — keeping them in sync is this operation's job"
+  ],
+  "usage": "Set RESULTS_DIR (a completed run dir containing deft_state.json whose config.specs_file points at the training spec) and RECORD_STORE. Writes ${RECORD_STORE}/best_model.json and ${RECORD_STORE}/best_model_inference_spec.yaml. The consumer fills only the inference CSV + images_dir overrides.",
+  "limitation": "Read-only handoff render; runs no inference. Requires deft_state.json to have at least one iteration with far_pct and a resolvable training spec, or it falls back to placeholder artifacts. Needs PyYAML.",
+  "minimal_example": {
+    "perk": "prepare-inference-spec",
+    "vars": {
+      "RESULTS_DIR": "results/run_20260514_143000"
+    }
+  }
+}

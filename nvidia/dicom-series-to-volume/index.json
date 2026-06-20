@@ -1,0 +1,20 @@
+{
+  "skill": "dicom-series-to-volume",
+  "skill_sha": "4f3dade0038c4462d0dc1af32da2aaf3d14e07ae13b499b3c817376dcde6788c",
+  "file_count": 13,
+  "files": {
+    "SKILL.md": "8d89779908814afc8fe8f730750f92ac03d1855be1382da9ece4f4c9f5a86aa1",
+    "blueprint.drawio": "552481d426ba58e2ccd80d5cd337937f4b7403999d230a4f36e14ba0e1e28645",
+    "blueprint.json": "8c7c35db514b25d3a8423e2c435fcdab54a4fab84b2b355085d6acce079d109d",
+    "blueprint.svg": "d1dd5d5689782d692489e6ec11b568a58ee411b33df03c4b4db5389b9b571ed7",
+    "ledger.json": "1a23c176bf67a99a89cff059664463447ee3f8c66dac98ad20633af653142667",
+    "perks.json": "c3cf8f2982c885b355288a24b164ceea46f6fc71f723a5f860fa651a5be1fe70",
+    "perks/extract/manifesto.json": "1a69cccffc3bcbd26fbe5660dfd9cce875cf3a45392877d0d8707e3ac746e5d6",
+    "perks/extract/metadata.json": "bc7cf92cf8c4f28fd45dc1d80d2c0cdf3aac4cbabee173c8b3ed6e55b36ae6a7",
+    "perks/extract/src/contracts.json": "0650632a9144cb9ca1c8ac921bf2448e67f0e41ecee8cac36135ae335c0bbec3",
+    "perks/extract/src/series_to_volume.py": "95481cd0e7e59abada7a97722011e58f8c44cc70b289330737f3ac39813aedf6",
+    "perks/extract/src/series_to_volume.sh": "0ee8e0a8de64ec9398604b5acfca0f3b7f9a120c03382b70cf072d813bfe078e",
+    "perks/extract/test/case.json": "998d4dc8f07a8669573c838d50afeec1f0e6bd12296c5475a9522538bee6aa94",
+    "perks/extract/test/fixture/input.txt": "2f73349cfc4630255319c6c8dfc1b46a8996ace9d14d8e07563b165915918ec2"
+  }
+}

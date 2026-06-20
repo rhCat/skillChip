@@ -1,0 +1,1 @@
+{"tool":"probe_models","inputs":{"BASE_URL":{"type":"string","required":true},"EXPECTED_MODEL":{"type":"string","required":false}},"outputs":{"models_out":{"path":"${RECORD_STORE}/models.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/models.json"}}

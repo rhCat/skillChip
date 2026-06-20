@@ -1,0 +1,18 @@
+{
+  "_perk": "assess",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "SOURCE_URL": "${FIXTURE}/input.txt"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "api-support.md"
+    ],
+    "nonempty": [
+      "api-support.md"
+    ]
+  }
+}

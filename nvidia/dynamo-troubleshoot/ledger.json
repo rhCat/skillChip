@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for dynamo-troubleshoot — set perk, fill record_store + the vars the perk declares.",
+  "skill": "dynamo-troubleshoot",
+  "perk": "troubleshoot",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "NAMESPACE": "<target Kubernetes namespace of the Dynamo deployment>",
+    "DEPLOYMENT_NAME": "<optional DynamoGraphDeployment name to scope the bundle; leave empty for whole namespace>"
+  }
+}

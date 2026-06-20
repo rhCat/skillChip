@@ -1,0 +1,19 @@
+{
+  "_perk": "fast-path",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "QUERY": "what is the total revenue for the year",
+    "PDFS_DIR": "demo-pdfs"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "filename_fast_path.txt"
+    ],
+    "nonempty": [
+      "filename_fast_path.txt"
+    ]
+  }
+}

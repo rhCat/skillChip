@@ -1,0 +1,29 @@
+{
+  "_perk": "render-compare",
+  "requires": [
+    "bash",
+    "ffmpeg"
+  ],
+  "setup": [
+    "mkdir -p input outputs/augmented/clip_aug0",
+    "ffmpeg -y -f lavfi -i testsrc=duration=1:size=64x64:rate=5 -pix_fmt yuv420p input/clip.mp4",
+    "ffmpeg -y -f lavfi -i testsrc=duration=1:size=64x64:rate=5 -pix_fmt yuv420p outputs/augmented/clip_aug0/output.mp4"
+  ],
+  "vars": {
+    "RUN_LOCAL_DIR": "${FIXTURE}",
+    "DATASET": "vda-demo",
+    "VIDEO": "clip"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "compare.txt"
+    ],
+    "nonempty": [
+      "compare.txt"
+    ],
+    "contains": {
+      "compare.txt": "COMPARE_VIDEO="
+    }
+  }
+}

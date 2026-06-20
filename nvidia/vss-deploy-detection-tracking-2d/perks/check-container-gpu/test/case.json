@@ -1,0 +1,18 @@
+{
+  "_perk": "check-container-gpu",
+  "requires": [
+    "bash"
+  ],
+  "vars": {
+    "CONTAINER_NAME": "rtvicv-perception-docker"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "gpu-probe.txt"
+    ],
+    "nonempty": [
+      "gpu-probe.txt"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "perk": "benchmark-charts",
+  "skill": "deepstream-import-vision-model",
+  "description": "render the 5 fixed benchmark PNG charts from a benchmark_data.json — trtexec BS=1 vs BS=MAX, GPU throughput, DS streams-vs-fps, trt-vs-ds, and pipeline efficiency",
+  "rules": [
+    "Exactly 5 charts with fixed filenames (chart_trtexec_bs1_vs_bsmax.png, chart_trtexec_throughput.png, chart_ds_streams_vs_fps.png, chart_trt_vs_ds.png, chart_efficiency.png) — the report HTML/PDF references these exact names; do not rename",
+    "trtexec imgs_per_sec must be > 0 — efficiency cannot be computed against a zero baseline and the chart step fails fast",
+    "Charts are rendered headless (matplotlib Agg backend) at 150 dpi"
+  ],
+  "usage": "Set BENCHMARK_DATA to the benchmark_data.json path (model_name, trtexec bs1/bsmax, peak_gpu_streams, deepstream run1/run2) and optionally CHART_DIR (defaults to ${RECORD_STORE}/charts). Output: the 5 chart_*.png files plus benchmark-charts.json (audit manifest with the chart count).",
+  "limitation": "Requires the `matplotlib` python package; without it the perk degrades gracefully (no PNGs, charts_written=0). The JSON must contain all required keys — partial data raises a KeyError that is logged and the run degrades.",
+  "minimal_example": {
+    "perk": "benchmark-charts",
+    "vars": {
+      "BENCHMARK_DATA": "models/yolov8n/reports/benchmark_data.json"
+    }
+  }
+}

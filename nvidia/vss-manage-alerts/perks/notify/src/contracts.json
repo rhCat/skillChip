@@ -1,0 +1,1 @@
+{"tool":"server","inputs":{"SLACK_BOT_TOKEN":{"type":"string","required":true},"SLACK_CHANNEL_ID":{"type":"string","required":true},"VST_ENDPOINT":{"type":"string","required":true}},"outputs":{"notify_out":{"path":"${RECORD_STORE}/notify.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/notify.json"}}

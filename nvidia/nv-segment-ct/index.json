@@ -1,0 +1,21 @@
+{
+  "skill": "nv-segment-ct",
+  "skill_sha": "506b5a1f037dc0807a38eaba798e1058e84f3006cc31c83904cf4bfe4e4348c8",
+  "file_count": 14,
+  "files": {
+    "SKILL.md": "bbc2c227fc6acc6909602a4fe1b12ed57269acf5572409e16eb41f65d7a2271f",
+    "blueprint.drawio": "4e78d3ad1809d5be42c33c85d98a6e726f3651f8f7047f2a48e812d0c72ae6a9",
+    "blueprint.json": "5d6f301e6063d8b4245d570cea15a5d16ae98a039963d792472030867084436f",
+    "blueprint.svg": "d162bc7819080081d4db7298bbf1b6c57a84dfc2d6f14ac41f06269feffa7549",
+    "ledger.json": "a9c7e28e033507efb2b8801b9b3d422817ed22cb5a0a460d3e01907bf17d7fc8",
+    "perks.json": "469c39749e65fa41e9e03f9bdf399a6205cf873245fefe7546ef04cdb6f6c6ff",
+    "perks/segment/manifesto.json": "db3f0c10c4a3e8d48b311d8d40f62ff056e539c5c8fcc0cad3ad1b0a67af8f38",
+    "perks/segment/metadata.json": "d8e29c7bdf849ba42043639b8b21b35ec1a9a5d3a64a3b6794b7827b64aebb84",
+    "perks/segment/src/contracts.json": "8ae37ec8464473c65dfeb90f313c1e6ab0391aaee39c2b8eb245fd2b8565dbc7",
+    "perks/segment/src/fetch_spleen_fixture.py": "e270af784123e2a2d09b3a03fef1126034536d24282d07be765ff5572ceb3c1e",
+    "perks/segment/src/generate_preflight_fixture.py": "13ea81edf0c56f2a64d7c5bfffa39fed7f2d0b72470eed9df63fe2f9758c1e84",
+    "perks/segment/src/run_vista3d.py": "79bbda116b8cfa70a4349d5582a53c37cee5eaaf329ae18ded5f39c1a4b9494a",
+    "perks/segment/src/run_vista3d.sh": "53f968ffe653d61f9f8c3023514764dd2de8da3a49288c864e758b6137b4b337",
+    "perks/segment/test/case.json": "83d478a19a52d44bd5f84d8e3d2d722e7330334e58bc7de5c4444a82ba63cf83"
+  }
+}

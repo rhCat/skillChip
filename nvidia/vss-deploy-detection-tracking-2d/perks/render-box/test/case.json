@@ -1,0 +1,21 @@
+{
+  "_perk": "render-box",
+  "requires": [
+    "bash",
+    "python3"
+  ],
+  "vars": {
+    "TITLE": "Container",
+    "BODY_FILE": "${FIXTURE}/body.txt",
+    "WIDTH": "128"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "box.txt"
+    ],
+    "nonempty": [
+      "box.txt"
+    ]
+  }
+}

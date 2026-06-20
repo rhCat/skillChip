@@ -1,0 +1,1 @@
+{"skill":"dicom-series-preflight","perks":[{"id":"preflight","summary":"header-only scan of one DICOM series folder; emits inventory/orientation/PHI findings + pass/warn/fail verdict (read-only)","destructive":false,"tools":["preflight_series"]}]}

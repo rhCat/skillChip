@@ -1,0 +1,20 @@
+{
+  "_perk": "prepare-inference-spec",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "RESULTS_DIR": "${FIXTURE}"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "best_model.json",
+      "best_model_inference_spec.yaml"
+    ],
+    "nonempty": [
+      "best_model.json",
+      "best_model_inference_spec.yaml"
+    ]
+  }
+}

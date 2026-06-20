@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for vss-deploy-detection-tracking-2d — set perk, fill record_store + the vars the perk declares.",
+  "skill": "vss-deploy-detection-tracking-2d",
+  "perk": "deploy",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "USECASE": "<deployment use case: warehouse-2d | warehouse-3d | smartcity-rtdetr | smartcity-gdino>",
+    "CONTAINER_NAME": "<perception container name, e.g. rtvicv-perception-docker>",
+    "STREAM_COUNT": "<number of streams to add, e.g. 4>"
+  }
+}

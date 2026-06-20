@@ -1,0 +1,19 @@
+{
+  "_perk": "deploy",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "REPO": "demo",
+    "PROFILE": "${FIXTURE}/input.txt"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "deploy.json"
+    ],
+    "nonempty": [
+      "deploy.json"
+    ]
+  }
+}

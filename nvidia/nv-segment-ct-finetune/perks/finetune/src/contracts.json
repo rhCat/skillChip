@@ -1,0 +1,23 @@
+{
+  "tool": "run_finetune",
+  "inputs": {
+    "DATASET": {
+      "type": "string",
+      "required": true
+    },
+    "FINETUNE_ARGS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "result_json": {
+      "path": "${RECORD_STORE}/output.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/output.json"
+  }
+}

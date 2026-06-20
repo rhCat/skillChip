@@ -1,0 +1,39 @@
+{
+  "tool": "collect_metrics",
+  "inputs": {
+    "REST_HOST": {
+      "type": "string",
+      "required": false
+    },
+    "REST_PORT": {
+      "type": "integer",
+      "required": false
+    },
+    "SAMPLES": {
+      "type": "integer",
+      "required": false
+    },
+    "INTERVAL": {
+      "type": "integer",
+      "required": false
+    },
+    "WARMUP": {
+      "type": "integer",
+      "required": false
+    }
+  },
+  "outputs": {
+    "metrics_text": {
+      "path": "${RECORD_STORE}/metrics.txt",
+      "type": "file"
+    },
+    "metrics_json": {
+      "path": "${RECORD_STORE}/metrics.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/metrics.txt"
+  }
+}

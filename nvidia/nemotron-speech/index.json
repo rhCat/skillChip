@@ -1,0 +1,19 @@
+{
+  "skill": "nemotron-speech",
+  "skill_sha": "1c9d972216e9eda5b4118f2c7e7c6c8871fcdea027a04feb7a3e696444801fe9",
+  "file_count": 12,
+  "files": {
+    "SKILL.md": "6dd1c0d332732d1ff04deebc835bb80375c2dcdb7642a075b481eba3c074bc8a",
+    "blueprint.drawio": "298790f3d5514f9b8fb9bc13c59de25e9265e208ba7bd1fa57026f6ece5191a6",
+    "blueprint.json": "341d59d850eaa534a42e32e386edcaf0c364d1ff3df2d3ab40d35de7e70d32e2",
+    "blueprint.svg": "025c448b0c8c2ad8705b22eb8af1c1f865a4b19dff40e2ee873e27e2f74bcb5a",
+    "ledger.json": "50d7da793ca476a94f374b89bb81ba7d9970bd8b98119a50920e5f88b73615e7",
+    "perks.json": "7bd30065bea4119a4072f272f0f8259f60b16dc31829f90ed4754550d9f11fab",
+    "perks/route/manifesto.json": "69edbafa30c7fa4820d87e3dcc26eda6cd1e9e0a253ad7c895978f721d7a9b5e",
+    "perks/route/metadata.json": "b933ad86575d129e3c0d66e0b3d6bffebdead39da5c328efc89f16baa450569b",
+    "perks/route/src/contracts.json": "ed9e612e858eb1b145ed055b50ff8151fbce5df180c32db59a2719ac74a84eaf",
+    "perks/route/src/main.py": "3b3eafe49531808d0dda60d105c0d7ad271e4a7399749adf6410275ca186a76d",
+    "perks/route/src/main.sh": "fee7d8c04e2b49029988d57cd9857db39c757843dd777da2cced1544dcbf699c",
+    "perks/route/test/case.json": "e1da5adfaa07edbd3a53e1f06b863d15922246e30141cdb517434528ba696c66"
+  }
+}

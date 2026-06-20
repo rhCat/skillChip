@@ -1,0 +1,14 @@
+{
+  "_perk": "pick-best-step",
+  "requires": ["bash"],
+  "vars": {
+    "CKPT_ROOT": "${FIXTURE}/ckpt",
+    "FALLBACK_STEP": "500"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["best_step.txt"],
+    "nonempty": ["best_step.txt"],
+    "contains": { "best_step.txt": "2000" }
+  }
+}

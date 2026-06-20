@@ -1,0 +1,33 @@
+{
+  "skill": "hsb-flash",
+  "skill_sha": "a56cd363aa6c98cb4d88184cc1ddbf9c109ee52dd71a40b7bf99830b61bd2785",
+  "file_count": 26,
+  "files": {
+    "SKILL.md": "c99ed7305c287e5ef9ab20959d5f9fcf0d38e2e1fce5e4a3bcdc10ad14e65162",
+    "blueprint.drawio": "c0fa9407ceb6738f8591643774dcf1cafa2e9a567787fa82e041b853c9596b16",
+    "blueprint.json": "aa5d728be0ef93c22b1a9e632706ae0135ca51dbb043dd6a8e22f0c876eb23c6",
+    "blueprint.svg": "248722a3139ff73ed093312bab63d11ac4edd87c365b5ced992ecd5dde96cec7",
+    "ledger.json": "14ea8dbd7c873d3d994c091e19d221d01ed5d131d866be94a0f1596611b63080",
+    "perks.json": "8d14cf7995d5cf34909e060e943603c3c8c566bbb163c8e6cc466854a80ffcb8",
+    "perks/flash/manifesto.json": "c1c05b80d73b0f0021011519f48e25ee8d19814087237181dae4379adc473ae4",
+    "perks/flash/metadata.json": "a89d65328b6a678ca2e332d9e7427197329f8158f553009b3d2b2967468b095b",
+    "perks/flash/src/contracts.json": "d66c9d2c5b29aad2580c7457df5687dbc4c3723fb72088514145b1cec829ee7e",
+    "perks/flash/src/make_manifest.sh": "334853bac1de093159da6294b2984b4bd5f48bee74b13f5f382704b62050fb68",
+    "perks/flash/src/scripts/v2.0.0/local_manifest.py": "5a4f57fe5faeaed4171fbf39644ac0d41227d29cd72ac1fb8a38d35786413251",
+    "perks/flash/src/scripts/v2.0.0/make_manifest.py": "6978eb2a3e33ec9aac9282a196acbe9ef33f1904e3861e2834c85da3897c44fb",
+    "perks/flash/src/scripts/v2.0.0/manifest-2407.yaml": "d42f91bc77b3e93341934f63bd142fc2a7f07288adce8348926eab6e72d19fd2",
+    "perks/flash/src/scripts/v2.0.0/manifest.yaml": "8345109f99ff8ba28e8e011b7da8ccb8deca233b70697819742ab643d4064c87",
+    "perks/flash/src/scripts/v2.3.0/manifest_leopard_cpnx100.yaml": "998c69fd0d6e7bff1cb0330da277a3f70f060b200e0f849495f281f0b9e0d36e",
+    "perks/flash/src/scripts/v2.3.1/manifest.yaml": "cfc148f49ae8393e49ff1c81e09a776f65bfde9da456f448ed7c94f01442711a",
+    "perks/flash/src/scripts/v2.3.1/manifest_leopard_cpnx100.yaml": "998c69fd0d6e7bff1cb0330da277a3f70f060b200e0f849495f281f0b9e0d36e",
+    "perks/flash/src/scripts/v2.5.0/manifest.yaml": "01678b302c1cd69f7fc92bb234440a354ea48ca8901633817f814d5b43ad267f",
+    "perks/flash/src/scripts/v2.5.0/manifest_leopard_cpnx100.yaml": "1c7255238bc398b3ba7646eea49a9695b070c6e5997d6e11dd02cca4f76f1918",
+    "perks/flash/test/case.json": "37578f5bae6acf2d81e94cdd6dde2b54c66835be5582c68e7eb1534fad65d6fb",
+    "perks/local-manifest/manifesto.json": "8faa3aa260e15b160abd11c50113f4f5c01e5982ece55a3f2592cd69618c8cf0",
+    "perks/local-manifest/metadata.json": "58ab0f0954e73f2c7205ce3cc359e518e4d26d1e602d48238947e23c0e18476a",
+    "perks/local-manifest/src/contracts.json": "198edbb5f6d570b0c261182d7ac7b9c6af5d2a8ccbe31f036222c2617dff26ab",
+    "perks/local-manifest/src/local_manifest.sh": "b3fd1cadf16ed5cbe362b1d181c47f45a632125b787dfcb39bfa60cb8bdfa13f",
+    "perks/local-manifest/src/scripts/v2.0.0/local_manifest.py": "5a4f57fe5faeaed4171fbf39644ac0d41227d29cd72ac1fb8a38d35786413251",
+    "perks/local-manifest/test/case.json": "705e67e9dde76931228d5071bab7d214094d97e931203e6181e287671a2769e0"
+  }
+}

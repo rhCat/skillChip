@@ -1,0 +1,25 @@
+{
+  "_perk": "analyze-kpi",
+  "sequence": [
+    "analyze_kpi"
+  ],
+  "tools": {
+    "analyze_kpi": {
+      "binary": "python3",
+      "params": {
+        "INFER_CSV": "${INFER_CSV}"
+      }
+    }
+  },
+  "env": {
+    "INFER_CSV": "${INFER_CSV}",
+    "LABEL_COLUMN": "${LABEL_COLUMN}",
+    "SCORE_COLUMN": "${SCORE_COLUMN}",
+    "PASS_LABEL": "${PASS_LABEL}",
+    "BINS": "${BINS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,1 @@
+{"_schema":"task-ledger TEMPLATE for dali-dynamic-mode — set perk, fill record_store + the vars the perk declares.","skill":"dali-dynamic-mode","perk":"check","record_store":"<absolute dir for outputs + run-ledger>","vars":{"SOURCE_FILE":"<absolute path to the .py file to scan for ndd / pipeline-mode issues>"}}

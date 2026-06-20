@@ -1,0 +1,1 @@
+{"_schema":"task-ledger TEMPLATE for skill-card-generator — set perk, fill record_store + the vars the perk declares.","skill":"skill-card-generator","perk":"generate","record_store":"<absolute dir for outputs + run-ledger>","vars":{"SKILL_DIR":"<absolute path to the target agent-skill directory containing SKILL.md/skill.md>"}}

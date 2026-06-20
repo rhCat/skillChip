@@ -1,0 +1,24 @@
+{
+  "perk": "import",
+  "skill": "deepstream-import-vision-model",
+  "description": "import a HuggingFace/NGC detection model into a DeepStream pipeline — ONNX acquire, TRT engine build, nvinfer parser, benchmark + report (destructive)",
+  "rules": [
+    "Object detection models only — reject classification/segmentation architectures from config.json before building anything",
+    "Engine naming is always {model}_dynamic_b{MAX_BS}.engine; never a bare model_dynamic.engine",
+    "Log filenames are fixed (trtexec_b1.log, trtexec_b${MAX_BS}.log, ds_s${N}_run1.log) — the report parser reads exact paths",
+    "Parser struct must be zero-initialized: NvDsInferObjectDetectionInfo obj = {};",
+    "Encoders x264enc/openh264enc are prohibited — use nvv4l2h264enc, else theoraenc+oggmux fallback, else skip video",
+    "Default video source is sample_720p.mp4 unless the user supplies DS_VIDEO",
+    "Reuse the shared build/.venv_optimum venv across models; never create per-model venvs",
+    "Report is emitted in all 3 formats (md/html/pdf) via report/md-to-html-pdf.py"
+  ],
+  "usage": "Set HF_ORG (HuggingFace org/owner) and MODEL_NAME (model repo / output name). The sequence acquires ONNX, builds the TRT engine, wires the nvinfer parser, benchmarks single + multi-stream, and renders the benchmark report. Output: import.json (audit + step manifest).",
+  "limitation": "Object detection models only — classification, segmentation, and other architectures fail fast. Requires an NVIDIA GPU + driver, the TensorRT/trtexec toolchain, and the DeepStream SDK (deepstream-app) on PATH; engine builds and benchmarks are not portable across TensorRT/DeepStream version mismatches. Model acquisition needs network access (HuggingFace/NGC) and the optimum/torch pip stack for SafeTensors export.",
+  "minimal_example": {
+    "perk": "import",
+    "vars": {
+      "HF_ORG": "onnx-community",
+      "MODEL_NAME": "yolov8n"
+    }
+  }
+}

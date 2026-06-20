@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for physical-ai-video-data-augmentation — set perk, fill record_store + the vars the perk declares.",
+  "skill": "physical-ai-video-data-augmentation",
+  "perk": "run",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "WORKFLOW": "<OSMO workflow YAML, e.g. assets/configs/osmo/augmentation_and_al.yaml (one of auto_labeling | augmentation_and_al | e2e | e2e_super_resolution)>"
+  }
+}

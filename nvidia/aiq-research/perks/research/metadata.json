@@ -1,0 +1,23 @@
+{
+  "perk": "research",
+  "skill": "aiq-research",
+  "description": "submit an async deep-research job to a reachable AI-Q backend, poll, and print the final report JSON",
+  "rules": [
+    "requires a reachable AI-Q Blueprint backend; does not deploy one",
+    "user query text is transmitted to AIQ_SERVER_URL — confirm the endpoint is trusted before sending sensitive data",
+    "non-local AIQ_SERVER_URL values must use https and be explicitly trusted by the user",
+    "does not collect or manage API keys / bearer tokens / cookies; credentials live in the backend environment",
+    "stops on failed jobs and surfaces the returned error; never retries a failed job automatically",
+    "report + audit line are written under record_store; citations and source URLs are kept intact"
+  ],
+  "usage": "Set AIQ_QUERY (the research question). Optionally set AIQ_AGENT_TYPE (default shallow_researcher) and AIQ_SERVER_URL (default http://localhost:8000). Output: report.json.",
+  "limitation": "Requires a running AI-Q backend; it does not deploy one. The public helper does not manage authentication tokens or cookies. Remote AIQ_SERVER_URL endpoints may log prompts, responses, and metadata. If the backend returns HTTP 500 or lacks async agents, the failure is reported rather than fabricating a research answer. Designed for AI-Q Blueprint 2.1.0 (major version must match).",
+  "minimal_example": {
+    "perk": "research",
+    "vars": {
+      "AIQ_QUERY": "Compare local AIQ deep research with a standard web search workflow",
+      "AIQ_AGENT_TYPE": "shallow_researcher",
+      "AIQ_SERVER_URL": "http://localhost:8000"
+    }
+  }
+}

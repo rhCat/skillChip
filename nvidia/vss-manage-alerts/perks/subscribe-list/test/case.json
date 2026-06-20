@@ -1,0 +1,14 @@
+{
+  "_perk": "subscribe-list",
+  "requires": ["bash", "curl"],
+  "vars": {
+    "HOST_IP": "127.0.0.1",
+    "ALERT_BRIDGE_URL": "http://127.0.0.1:9",
+    "ALERT_TYPE": "ppe_vest_violation"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["subscribe_list.json"],
+    "nonempty": ["subscribe_list.json"]
+  }
+}

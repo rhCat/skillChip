@@ -1,0 +1,25 @@
+{
+  "perk": "run",
+  "skill": "tao-run-deft-aoi",
+  "description": "init the DEFT AOI loop state, then run train/retrain/mine/gate iterations until the KPI target is met (destructive)",
+  "rules": [
+    "destructive: trains and retrains TAO Visual ChangeNet, runs docker --gpus all, gates deployment",
+    "exactly one user gate (Pre-Flight Summary) before any side-effecting step; autonomous after",
+    "disk is canonical: re-read deft_state.json + loop_log.jsonl before every stage; one log entry per stage",
+    "EA variant: ingests customer pre-generated NG/OK pairs (no inline AnomalyGen); synth + real share one k-NN, no SDG bypass",
+    "every stage writes absolute host paths under RESULTS_DIR/iter<N>/; reject paths outside the workspace",
+    "hard stops are never auto-retried (missing/empty pre-gen dirs, train/val leakage, silent-drop, AMP mismatch, CSV failure)"
+  ],
+  "usage": "Set WORKSPACE (specs/train/kpi/augmentation root), KPI_TARGET, MAX_ITERATIONS, NUM_GPUS, NUM_EPOCHS, and RECORD_STORE (the run's RESULTS_DIR). init_deft_state seeds deft_state.json; the loop then drives baseline -> RCA -> ingest -> mine -> retrain. Output: deft_state.json.",
+  "limitation": "Requires docker + nvidia-container-toolkit, NVIDIA GPU(s), and HF_TOKEN (NGC_API_KEY gates container pulls); not for standalone training, one-off inference, generic anomaly generation, or RCA-only analysis. AnomalyGen is not run inline — the customer pre-generates synthetic pairs out-of-band. The train container URI resolves from versions.yaml via TAO_SKILL_BANK_PATH.",
+  "minimal_example": {
+    "perk": "run",
+    "vars": {
+      "WORKSPACE": "~/workspace",
+      "KPI_TARGET": "FAR < 10% at recall=100%",
+      "MAX_ITERATIONS": "3",
+      "NUM_GPUS": "4",
+      "NUM_EPOCHS": "20"
+    }
+  }
+}

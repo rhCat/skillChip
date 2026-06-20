@@ -1,0 +1,1 @@
+{"_schema":"task-ledger TEMPLATE for nemotron-speech — set perk, fill record_store + the vars the perk declares.","skill":"nemotron-speech","perk":"route","record_store":"<absolute dir for outputs + run-ledger>","vars":{"QUESTION":"the user prompt to classify (e.g. 'Deploy a Parakeet ASR NIM')"}}

@@ -1,0 +1,23 @@
+{
+  "tool": "discover_streams",
+  "inputs": {
+    "USECASE": {
+      "type": "string",
+      "required": true
+    },
+    "STREAM_COUNT": {
+      "type": "integer",
+      "required": true
+    }
+  },
+  "outputs": {
+    "streams": {
+      "path": "${RECORD_STORE}/streams.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/streams.json"
+  }
+}

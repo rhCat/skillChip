@@ -1,0 +1,1 @@
+{"_perk":"route","requires":["python3"],"vars":{"QUESTION":"Deploy a Parakeet ASR NIM"},"expect":{"outputs":["route.json"]}}

@@ -1,0 +1,13 @@
+{
+  "skill": "nv-reason-cxr",
+  "perks": [
+    {
+      "id": "reason",
+      "summary": "run NV-Reason-CXR-3B chest X-ray reasoning (local Transformers, HF Space API, or mock) and emit structured JSON",
+      "destructive": true,
+      "tools": [
+        "run_nv_reason_cxr"
+      ]
+    }
+  ]
+}

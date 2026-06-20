@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for holoscan-setup — set perk, fill record_store + the vars the perk declares.",
+  "skill": "holoscan-setup",
+  "perk": "preflight",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "CUDA_TAG_SUFFIX": "<NGC image CUDA variant: cuda13 | cuda12-dgpu | cuda12-igpu>"
+  }
+}

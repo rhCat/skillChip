@@ -1,0 +1,1 @@
+{"_perk":"segment","sequence":["run_ctmr"],"tools":{"run_ctmr":{"binary":"python3","params":{"CT_OR_MR_VOLUME":"${CT_OR_MR_VOLUME}","MODALITY":"${MODALITY}"}}},"env":{"CT_OR_MR_VOLUME":"${CT_OR_MR_VOLUME}","MODALITY":"${MODALITY}","RECORD_STORE":"${record_store}"},"requires":["python3"]}

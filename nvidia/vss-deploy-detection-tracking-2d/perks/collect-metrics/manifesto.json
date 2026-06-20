@@ -1,0 +1,31 @@
+{
+  "_perk": "collect-metrics",
+  "sequence": [
+    "collect_metrics"
+  ],
+  "tools": {
+    "collect_metrics": {
+      "binary": "bash",
+      "params": {
+        "REST_HOST": "${REST_HOST}",
+        "REST_PORT": "${REST_PORT}",
+        "SAMPLES": "${SAMPLES}",
+        "INTERVAL": "${INTERVAL}",
+        "WARMUP": "${WARMUP}"
+      }
+    }
+  },
+  "env": {
+    "REST_HOST": "${REST_HOST}",
+    "REST_PORT": "${REST_PORT}",
+    "SAMPLES": "${SAMPLES}",
+    "INTERVAL": "${INTERVAL}",
+    "WARMUP": "${WARMUP}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3",
+    "curl"
+  ]
+}

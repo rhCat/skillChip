@@ -1,0 +1,20 @@
+{
+  "skill": "dicom-series-preflight",
+  "skill_sha": "ccc4fdec15a857e252fb65ea23f3dc215dafe8ae9c083f3b5baca2009c688c9d",
+  "file_count": 13,
+  "files": {
+    "SKILL.md": "3027250f7a74bed36af9b0bbbb9c864afb2ee56f1d53554eb53cab6a14999364",
+    "blueprint.drawio": "c2713c543cc722879776338082c20b1ca6a96a575267493a4caa31a7c8bccfff",
+    "blueprint.json": "1058d6d9d64c9a2f86d9697072cc07f81e5a3acf9b15fe9cc95fd532e8a88e96",
+    "blueprint.svg": "c738d329854acfa41fcb4cb2cbbb19d0f8300c7f873738e1c0c61c5cf030bcc4",
+    "ledger.json": "51f7bee8edfeb7567978120f37ee04db958b47abe5cee57c5ffe234ab7be6e10",
+    "perks.json": "9ed3aac77d5ebfc0095b32d5e1e4a826b82e31900f87e5aa1e8f4e169fec48f3",
+    "perks/preflight/manifesto.json": "46e946f9988b5d439239db02f160b2494b712a7e97127b6ccbb22259020d109c",
+    "perks/preflight/metadata.json": "1c2c4f3bf97e09b2584f82f31d090952854f848a0523775e0ab98a9d8e1a6934",
+    "perks/preflight/src/contracts.json": "fff4ddc23df971e3ec8cd9056855e2e1d720890dc04f8e03139ace1a4c6abbfe",
+    "perks/preflight/src/preflight_series.py": "778555bc2387268cd45e66b1bf40770bb4abc4045ac1442fca4db0646437b337",
+    "perks/preflight/src/preflight_series.sh": "02032e16b9e9f1459abdb2af7e5afd2187b880f72211289498aa54d1081f84e6",
+    "perks/preflight/test/case.json": "f2274329ea8e683d35f8aa7d72ba03f37ba96cf465b96b65134b51808b590ee3",
+    "perks/preflight/test/fixture/input.txt": "2f73349cfc4630255319c6c8dfc1b46a8996ace9d14d8e07563b165915918ec2"
+  }
+}

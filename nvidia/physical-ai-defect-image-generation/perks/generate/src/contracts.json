@@ -1,0 +1,19 @@
+{
+  "tool": "render_defect_spec",
+  "inputs": {
+    "DEFECT_PAIRS": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "defect_spec": {
+      "path": "${RECORD_STORE}/defect_spec.jsonl",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/defect_spec.jsonl"
+  }
+}

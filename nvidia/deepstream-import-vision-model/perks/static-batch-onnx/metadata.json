@@ -1,0 +1,19 @@
+{
+  "perk": "static-batch-onnx",
+  "skill": "deepstream-import-vision-model",
+  "description": "bake a fixed batch dimension into a batch-1 ONNX — patch input/output batch dims and internal Reshape nodes, writing a new static-batch ONNX",
+  "rules": [
+    "BATCH_SIZE must be a positive integer; the impl rejects zero/negative/non-numeric values",
+    "Reshape nodes whose first shape dim is 1 are rewritten to the target batch size so the static graph stays consistent",
+    "Source ONNX is never modified in place — the patched model is written to a separate destination path"
+  ],
+  "usage": "Set SRC_ONNX (batch-1 ONNX), BATCH_SIZE (positive int), and optionally DST_ONNX (defaults to ${RECORD_STORE}/model_b{BATCH_SIZE}.onnx). Output: the static-batch ONNX at the destination plus static-batch-onnx.json (audit manifest).",
+  "limitation": "Requires the `onnx` and `numpy` python packages to actually rewrite the graph; without them the perk degrades gracefully (no .onnx written, wrote_output=false). Assumes the source is a valid batch-1 ONNX with batch as dim[0].",
+  "minimal_example": {
+    "perk": "static-batch-onnx",
+    "vars": {
+      "SRC_ONNX": "models/yolox_nano/model/yolox_nano.onnx",
+      "BATCH_SIZE": "16"
+    }
+  }
+}

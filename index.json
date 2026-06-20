@@ -2,8 +2,13 @@
   "chip": "skillChip",
   "version": 1,
   "cartridge": false,
-  "count": 37,
+  "count": 75,
   "skills": [
+    {
+      "skill": "aiq-research",
+      "skill_sha": "c24e344dacf8445ed33de071f826efbcbffcc83073cbb63785c103536a737f49",
+      "file_count": 12
+    },
     {
       "skill": "alchemy",
       "skill_sha": "c372b7e8265fc19069c0b265963b9f3a1fb0e58fc538aa2825529282c0d1e5b7",
@@ -18,6 +23,11 @@
       "skill": "codebaseqc",
       "skill_sha": "2a9563d99eb0d740c5dafa95a69079a429e85f570cb8b7952467c1867d3c9321",
       "file_count": 21
+    },
+    {
+      "skill": "cupynumeric-migration-readiness",
+      "skill_sha": "8b64c34f6b74f96ddfbde482377a5022284832defce751ff183510510be641a3",
+      "file_count": 14
     },
     {
       "skill": "cws-addperk",
@@ -95,9 +105,19 @@
       "file_count": 52
     },
     {
+      "skill": "dali-dynamic-mode",
+      "skill_sha": "2924aaa04246de2d2a9bd16d84320dcbce835fff88c57bfac20b33a12873ab86",
+      "file_count": 13
+    },
+    {
       "skill": "data",
       "skill_sha": "9f3d45f219dc41a59a9a07bbb1e935e3f7553bc98575095ffdd970b53d563ec3",
       "file_count": 19
+    },
+    {
+      "skill": "data-designer",
+      "skill_sha": "773a08533939a15f149df772fee2fc462d4ad678aa8b7c408030b28c3e3512fb",
+      "file_count": 12
     },
     {
       "skill": "datadog",
@@ -105,9 +125,49 @@
       "file_count": 11
     },
     {
+      "skill": "deepstream-import-vision-model",
+      "skill_sha": "e668150f0476e64c8be90a4c2f3b6fa63107cc37285302d323badde8fba581c2",
+      "file_count": 69
+    },
+    {
+      "skill": "dicom-metadata-extract",
+      "skill_sha": "e9fd091c48fdd4c3b219a20beee6c1c0366b1d90652eb97d0250945b89472522",
+      "file_count": 15
+    },
+    {
+      "skill": "dicom-series-preflight",
+      "skill_sha": "ccc4fdec15a857e252fb65ea23f3dc215dafe8ae9c083f3b5baca2009c688c9d",
+      "file_count": 13
+    },
+    {
+      "skill": "dicom-series-to-volume",
+      "skill_sha": "4f3dade0038c4462d0dc1af32da2aaf3d14e07ae13b499b3c817376dcde6788c",
+      "file_count": 13
+    },
+    {
       "skill": "docker",
       "skill_sha": "dab2a1bc0f3b37e064abb54f651863e5969476e4b50192611f089c4e2db24459",
       "file_count": 16
+    },
+    {
+      "skill": "dynamo-interconnect-check",
+      "skill_sha": "6021590f203ea6246f5562b741b146e821889dc0ece79f263fe9a2b5e9061a45",
+      "file_count": 13
+    },
+    {
+      "skill": "dynamo-recipe-runner",
+      "skill_sha": "2285d9947d477adffa0c189f9600ac76a7dd0b00edcce963746e5c6d436aa104",
+      "file_count": 12
+    },
+    {
+      "skill": "dynamo-router-starter",
+      "skill_sha": "9f1782c6c23fd27e9b5ec009d485b02990523bcca97a3c2e1811ccade62b9ab4",
+      "file_count": 12
+    },
+    {
+      "skill": "dynamo-troubleshoot",
+      "skill_sha": "2c66fbf6fe7369fb860d98ed322f84f1a7cfde375834df64fb9178649ce8bb4c",
+      "file_count": 12
     },
     {
       "skill": "fs",
@@ -125,6 +185,21 @@
       "file_count": 15
     },
     {
+      "skill": "holoscan-setup",
+      "skill_sha": "8a690c586ba47bb178840bec2512b3dae3a81fd98909ac9d927d786c878cb574",
+      "file_count": 26
+    },
+    {
+      "skill": "hsb-flash",
+      "skill_sha": "a56cd363aa6c98cb4d88184cc1ddbf9c109ee52dd71a40b7bf99830b61bd2785",
+      "file_count": 26
+    },
+    {
+      "skill": "hsb-setup",
+      "skill_sha": "fcb8a8092b6cc7fd6a6b37e74e1bf876815348bb43d9e11a703eb859b1a3865a",
+      "file_count": 14
+    },
+    {
       "skill": "http",
       "skill_sha": "a80eb06b3a9dc85e13e7bf2e77cce8ac3c5f6e0bc58fb61fd9be76c7ae718de0",
       "file_count": 16
@@ -140,9 +215,74 @@
       "file_count": 21
     },
     {
+      "skill": "nemo-data-designer-plugin",
+      "skill_sha": "d535c2e45b0fea0490f0eb6bf40d200af0f5a7d30348f5cd0cdd7a5190739672",
+      "file_count": 12
+    },
+    {
+      "skill": "nemo-evaluator-plugin",
+      "skill_sha": "fba78b42b295462a681aa1acff727fd043fd8cd72c0e84edbfade00e7bc79533",
+      "file_count": 13
+    },
+    {
+      "skill": "nemo-retriever",
+      "skill_sha": "187d05b97a92f11ec6d23c2f79afa6b4d6202022ee9f787a75f2439fa12a03f1",
+      "file_count": 19
+    },
+    {
+      "skill": "nemotron-speech",
+      "skill_sha": "1c9d972216e9eda5b4118f2c7e7c6c8871fcdea027a04feb7a3e696444801fe9",
+      "file_count": 12
+    },
+    {
       "skill": "net",
       "skill_sha": "178d6abd022541fbaacb866907dd9357ca89a1109765a4071e78473f23ac5972",
       "file_count": 17
+    },
+    {
+      "skill": "nv-generate-ct-rflow",
+      "skill_sha": "0811a89203925a29ae1d20a6822b67a85ff66908b6ccc72e1065978e24f35f5b",
+      "file_count": 62
+    },
+    {
+      "skill": "nv-generate-mr",
+      "skill_sha": "8e5fc51b96d3cda535fd402060eb92e357973b1918441a7c26b4e9780ba4eb0f",
+      "file_count": 13
+    },
+    {
+      "skill": "nv-generate-mr-brain",
+      "skill_sha": "f37027614c65d0a8bac3d29377e474bae220545017c33246c827b85df9a5324a",
+      "file_count": 13
+    },
+    {
+      "skill": "nv-generate-mr-brain-finetune",
+      "skill_sha": "d14b646be09064beb8c63d91e9a5d7a464ca7047c8e7d2852818ce301db4e8e1",
+      "file_count": 13
+    },
+    {
+      "skill": "nv-generate-vae-finetune",
+      "skill_sha": "e10dc3600f4eb8839132317b359c05e2cd6049c73473dde1073ea329af1a4083",
+      "file_count": 13
+    },
+    {
+      "skill": "nv-reason-cxr",
+      "skill_sha": "a6d909a767322851f44970ef77974be947761899918f43a293075563411e40c9",
+      "file_count": 13
+    },
+    {
+      "skill": "nv-segment-ct",
+      "skill_sha": "506b5a1f037dc0807a38eaba798e1058e84f3006cc31c83904cf4bfe4e4348c8",
+      "file_count": 14
+    },
+    {
+      "skill": "nv-segment-ct-finetune",
+      "skill_sha": "90583cd194a2cd7297151d268249f67950d57d69f1adcba620cdf0d9ce392296",
+      "file_count": 13
+    },
+    {
+      "skill": "nv-segment-ctmr",
+      "skill_sha": "5d1646602d4fbc3116ef13e036aa31f79d2d75f90dead961be690cda45b5c686",
+      "file_count": 12
     },
     {
       "skill": "pdf",
@@ -153,6 +293,16 @@
       "skill": "pg_ops",
       "skill_sha": "692d6375c3ca60e612997c3ae54c05628f34938de8c70b63f41a522ab8887407",
       "file_count": 16
+    },
+    {
+      "skill": "physical-ai-defect-image-generation",
+      "skill_sha": "1ac184237a108155d98e1acb0bfa34fa8ccfb331481bfc95b5847ea42ecb2b69",
+      "file_count": 44
+    },
+    {
+      "skill": "physical-ai-video-data-augmentation",
+      "skill_sha": "0a08fad1b8b9a98196cb845b38b4a35ff4dc7ba6001d9419a2ac0e982d7a6116",
+      "file_count": 48
     },
     {
       "skill": "py_qc",
@@ -175,6 +325,11 @@
       "file_count": 18
     },
     {
+      "skill": "skill-card-generator",
+      "skill_sha": "6d2be38e5773e13c1cde3c59e5b0bb0b6d0ee33f0a2dc81a39f60d8ece7a69d9",
+      "file_count": 50
+    },
+    {
       "skill": "sqlite",
       "skill_sha": "f5e30a9b3753bf32a8cd0a9073e4c9c8dd4b48f86a5b53fb9009b711745b17c0",
       "file_count": 17
@@ -185,10 +340,45 @@
       "file_count": 16
     },
     {
+      "skill": "tao-finetune-cosmos-reason",
+      "skill_sha": "e7529676c81aa52a398209e0692680ffbabf546aaa9bd07047dabb33f15b62e1",
+      "file_count": 13
+    },
+    {
+      "skill": "tao-run-deft-aoi",
+      "skill_sha": "f6ecc87a0b0a9d88a2f5e59011a9ed9bf49fc65982c9c9f074e9ea54097ac9de",
+      "file_count": 50
+    },
+    {
+      "skill": "tao-setup-nvidia-gpu-host",
+      "skill_sha": "de93f351c77e885c3ac52ef8e671e1f191c6330e3648875862a329eea3a3c8c4",
+      "file_count": 12
+    },
+    {
       "skill": "terraform",
       "skill_sha": "5d54fa53a79fee7d128c6d15a8e5445240dfefd6e342b26d7d574616778ba522",
       "file_count": 18
+    },
+    {
+      "skill": "tilegym-converting-cutile-to-julia",
+      "skill_sha": "16cc994a8532621133066881e361f5c1b40d1bc4c1742bb50eac9a7650839ba1",
+      "file_count": 13
+    },
+    {
+      "skill": "vss-deploy-detection-tracking-2d",
+      "skill_sha": "05bf9bad5618efad86a7b32a70da72cf3557341e7d2c8559738c89606a80bea1",
+      "file_count": 78
+    },
+    {
+      "skill": "vss-deploy-profile",
+      "skill_sha": "ca6a3f66a475e4190dbba95c01495f20721750b5f5fe906d5b6cf96a399e2c6a",
+      "file_count": 34
+    },
+    {
+      "skill": "vss-manage-alerts",
+      "skill_sha": "a6ed04e76ff560464e68bbc42d179f38b0774ad101df9c3fdc07f455efd01ae0",
+      "file_count": 47
     }
   ],
-  "chip_sha": "05a1cc780de1e044c52347fcd7c92e204c91769be4741975e2bd1cd9d2926b44"
+  "chip_sha": "bae8ce91fda00f16e7f1afc8ac7b1580f373a66fe94ac50206341aea6458271c"
 }

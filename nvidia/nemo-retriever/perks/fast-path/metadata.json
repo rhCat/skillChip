@@ -1,0 +1,20 @@
+{
+  "perk": "fast-path",
+  "skill": "nemo-retriever",
+  "description": "filename fast path: when the query literally names a PDF in the folder, extract+rank its pages by query-token frequency and emit a top-10 ranking + top page text (read-only over the PDFs)",
+  "rules": [
+    "read-only: extracts page text from the named PDFs via the retriever's bundled pdfium stage, never mutates the PDFs or any index",
+    "only fires when the query string verbatim contains a PDF basename (stem >= 6 chars, with or without .pdf, case-insensitive); otherwise emits NO_MATCH",
+    "ranking is deterministic: pages scored by summed query-token occurrence count, top 10 returned 1-indexed, plus the top page's first 4000 chars",
+    "results are written under record_store"
+  ],
+  "usage": "Set QUERY (the user's question, which must literally contain a PDF basename for the fast path to fire) and PDFS_DIR (the folder of source PDFs). Output: filename_fast_path.txt — either NO_MATCH (no basename in query), NO_TEXT (matched but image-only PDFs), or a JSON {ranking:[{doc_id,page_number,rank}]} line followed by ---TOP_PAGE_TEXT--- and the top page's raw text.",
+  "limitation": "When a basename matches it invokes the NeMo Retriever `retriever pdf stage page-elements --method pdfium` extractor, which requires the NeMo Retriever venv on PATH; without it the extraction step degrades to empty output. The NO_MATCH path (no basename in the query) runs fully offline. Does not embed, vector-search, or re-rank — that is the external `retriever query` CLI.",
+  "minimal_example": {
+    "perk": "fast-path",
+    "vars": {
+      "QUERY": "summarize APPLE_2022_10K revenue",
+      "PDFS_DIR": "./pdfs"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "_perk": "benchmark-charts",
+  "sequence": [
+    "benchmark_charts"
+  ],
+  "tools": {
+    "benchmark_charts": {
+      "binary": "python3",
+      "params": {
+        "BENCHMARK_DATA": "${BENCHMARK_DATA}",
+        "CHART_DIR": "${CHART_DIR}"
+      }
+    }
+  },
+  "env": {
+    "BENCHMARK_DATA": "${BENCHMARK_DATA}",
+    "CHART_DIR": "${CHART_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

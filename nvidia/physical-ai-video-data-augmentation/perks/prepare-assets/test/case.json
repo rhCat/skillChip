@@ -1,0 +1,19 @@
+{
+  "_perk": "prepare-assets",
+  "requires": [
+    "bash",
+    "python3"
+  ],
+  "vars": {
+    "DEMO_DIR": "${FIXTURE}/vda_inputs"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "prepared.txt"
+    ],
+    "nonempty": [
+      "prepared.txt"
+    ]
+  }
+}

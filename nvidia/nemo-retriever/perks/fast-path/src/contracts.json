@@ -1,0 +1,23 @@
+{
+  "tool": "filename_fast_path",
+  "inputs": {
+    "QUERY": {
+      "type": "string",
+      "required": true
+    },
+    "PDFS_DIR": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "filename_fast_path_out": {
+      "path": "${RECORD_STORE}/filename_fast_path.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/filename_fast_path.txt"
+  }
+}

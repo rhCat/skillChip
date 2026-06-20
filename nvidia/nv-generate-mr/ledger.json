@@ -1,0 +1,11 @@
+{
+  "_schema": "task-ledger TEMPLATE for nv-generate-mr — set perk, fill record_store + the vars the perk declares.",
+  "skill": "nv-generate-mr",
+  "perk": "generate",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "MODEL_CONFIG": "<path to a model-config override JSON, or 'default' for upstream defaults>",
+    "MODALITY": "<MR modality: mri, mri_t1, mri_t2, or mri_flair>",
+    "RANDOM_SEED": "<integer random seed, e.g. 0>"
+  }
+}

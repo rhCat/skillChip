@@ -1,0 +1,1 @@
+{"tool":"check_interconnect","inputs":{"RECIPE_DIR":{"type":"string","required":true}},"outputs":{"interconnect_report":{"path":"${RECORD_STORE}/interconnect.json","type":"file"}},"checks":{"exit_zero":true,"output_exists":"${RECORD_STORE}/interconnect.json"}}

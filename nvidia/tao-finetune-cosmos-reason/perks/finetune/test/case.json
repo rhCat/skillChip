@@ -1,0 +1,20 @@
+{
+  "_perk": "finetune",
+  "requires": [
+    "python3"
+  ],
+  "vars": {
+    "RESULTS_DIR": "${FIXTURE}/input.txt",
+    "KPI_ANN_PATH": "${FIXTURE}/input.txt",
+    "KPI_MEDIA_PATH": "${FIXTURE}/input.txt"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "gaps.parquet"
+    ],
+    "nonempty": [
+      "gaps.parquet"
+    ]
+  }
+}

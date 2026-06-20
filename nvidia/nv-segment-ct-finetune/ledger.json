@@ -1,0 +1,10 @@
+{
+  "_schema": "task-ledger TEMPLATE for nv-segment-ct-finetune — set perk, fill record_store + the vars the perk declares.",
+  "skill": "nv-segment-ct-finetune",
+  "perk": "finetune",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "DATASET": "<dataset/fixture dir: 'spleen_micro' triggers --smoke, 'Task06_Lung' triggers --sanity, any other MSD-layout dir (imagesTr/ + labelsTr/) is finetuned>",
+    "FINETUNE_ARGS": "<optional extra CLI flags, e.g. '--smoke --patch-size [64,64,64]' or '--target-anatomy \"lung tumor\" --auto-seg --epochs 5'>"
+  }
+}

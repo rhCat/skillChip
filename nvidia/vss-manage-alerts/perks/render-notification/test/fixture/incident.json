@@ -1,0 +1,14 @@
+{
+  "Id": "incident-0001",
+  "place": {"name": "Warehouse Dock 1", "type": "warehouse"},
+  "category": "ppe_vest_violation",
+  "sensorId": "2812768c-f21b-450e-a7be-2bbf406aaaa0",
+  "timestamp": "2026-04-21T11:09:40.111515+00:00",
+  "end": "2026-04-21T11:10:10.111515+00:00",
+  "info": {
+    "verdict": "confirmed",
+    "reasoning": "A person is visible in aisle 4 without a high-visibility safety vest.",
+    "videoSource": "https://example.com/clip.mp4",
+    "prompt": "flag anyone entering aisle 4 without a safety vest"
+  }
+}

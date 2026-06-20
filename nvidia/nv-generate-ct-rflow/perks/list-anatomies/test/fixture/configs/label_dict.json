@@ -1,0 +1,10 @@
+{
+  "liver": 1,
+  "spleen": 3,
+  "pancreas": 4,
+  "left lung upper lobe": 28,
+  "lung tumor": 23,
+  "hepatic tumor": 26,
+  "body": 200,
+  "dummy0": 99
+}

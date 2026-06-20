@@ -1,0 +1,22 @@
+{
+  "perk": "generate",
+  "skill": "nv-generate-mr",
+  "description": "generate synthetic MR NIfTI volumes via NV-Generate-CTMR rflow-mr (GPU)",
+  "rules": [
+    "thin wrapper: inference, sampling, and decoding delegate entirely to upstream scripts.diff_model_infer — do not reimplement",
+    "use the documented entrypoint; never hand-write inference code or invent generate.sh/infer.py commands",
+    "do not modify code under $NV_GENERATE_ROOT or the repo-local fallback at .workbench_data/upstreams/NV-Generate-CTMR",
+    "MODALITY must be one of mri, mri_t1, mri_t2, mri_flair",
+    "outputs (NIfTI volumes + result JSON) are written under record_store; the wrapper creates its --output-dir"
+  ],
+  "usage": "Set MODEL_CONFIG (override JSON path or 'default'), MODALITY, and RANDOM_SEED. Requires NV_GENERATE_ROOT (clone of NV-Generate-CTMR) + downloaded rflow-mr weights + an NVIDIA GPU. Output: result.json (the wrapper summary) plus generated *.nii.gz volumes in record_store.",
+  "limitation": "Thin wrapper around NV-Generate-CTMR's scripts.diff_model_infer. rflow-mr is image-only — no paired segmentation masks. Needs an NVIDIA GPU with >=16 GB VRAM; no CPU fallback. Weights are NVIDIA Non-Commercial; outputs are synthetic and not safe as production training data without review. Not for clinical deployment, interpretation, autonomous diagnosis, or regulatory submission. For brain MRI use nv-generate-mr-brain.",
+  "minimal_example": {
+    "perk": "generate",
+    "vars": {
+      "MODEL_CONFIG": "default",
+      "MODALITY": "mri_t1",
+      "RANDOM_SEED": "0"
+    }
+  }
+}

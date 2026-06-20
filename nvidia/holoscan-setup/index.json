@@ -1,0 +1,33 @@
+{
+  "skill": "holoscan-setup",
+  "skill_sha": "8a690c586ba47bb178840bec2512b3dae3a81fd98909ac9d927d786c878cb574",
+  "file_count": 26,
+  "files": {
+    "SKILL.md": "bb5d1d2d4cf02c731a66b24387c55f0544b4f7f6be4e6f0c9790a7b907052e82",
+    "blueprint.drawio": "d17fc687ed34277df014def3b8f54398ef978c40db1373c079a9e4b9b56d84d6",
+    "blueprint.json": "46cea50551a344c881dfa02045ba16170457af28f01fa3a4512d254c4fd6df80",
+    "blueprint.svg": "19bac1fe1bda0653119fdcbcc158d8b1caf9e7f24f531403d5210bd3160fba52",
+    "ledger.json": "16630de130881bf2aa8b830d07e673d62462c48495b02d361f137ba39f86371a",
+    "perks.json": "512012105d1f1a39b13c96007390303ce0cf68e153ac42fa1ac78f49edd53dcf",
+    "perks/check-conda/manifesto.json": "66f68093a59ec161462a7783de6e75083f9fbf4474539c9d98b66f62dd48cfb4",
+    "perks/check-conda/metadata.json": "4b3516513e0cf4d5040204650c25155c583ae09d36fc002b19dd0e4084b02dc8",
+    "perks/check-conda/src/check_conda.impl.sh": "2977196a530cada99c89b9264fa93167e1376e012af27baf1f8b1ef1e230c6bc",
+    "perks/check-conda/src/check_conda.sh": "c22a627d002c9eb9721e1c02828184085a18cfa6679590e6614ddd7ae8295f64",
+    "perks/check-conda/src/contracts.json": "92acb3b2f1eb48e446d9a95214f1ea65e3da74de708d24dedd1f60e80a1c856c",
+    "perks/check-conda/test/case.json": "74aa1bf3908cd872c3917889ced29fd8aa17310ee3204abe756c02c60d0b77fd",
+    "perks/check-ngc-image/manifesto.json": "76946bf6dc6202b21fe5af90fb7899f2712da01fdee0495fb7836960ad0d0bfd",
+    "perks/check-ngc-image/metadata.json": "541554b9cb3a6fe00d159b2b7c88708502745ebdee9f7ed7c68f807344f5634e",
+    "perks/check-ngc-image/src/check_ngc_image.impl.sh": "48cb7375945eab1fa7d393500a9a06b726dc1d2441effcadf74f9b2afa8aeb54",
+    "perks/check-ngc-image/src/check_ngc_image.sh": "9c9c2de657a37819c65d7ac15c39bf7ffaee7925b27714a59bcc184ebc61f5cd",
+    "perks/check-ngc-image/src/contracts.json": "5af6bb31434d9f76a490a5cd6e0c736f7905c2fecbe1c0fee3bdd6110b73620e",
+    "perks/check-ngc-image/test/case.json": "c66057c3bfece79661a98a6bbaebf61d4eee3ce9a489b3e3ae49497cfe4a7063",
+    "perks/preflight/manifesto.json": "a581f28c4c7298daff35840ecc3205b0d8d53d35cdb2c0f512ac61e875430923",
+    "perks/preflight/metadata.json": "3b9e519148e86a946c1414e1ba8d01b6dee9a3eb99312a90e15ea846ab54c3c0",
+    "perks/preflight/src/check_conda.impl.sh": "2977196a530cada99c89b9264fa93167e1376e012af27baf1f8b1ef1e230c6bc",
+    "perks/preflight/src/check_conda.sh": "c22a627d002c9eb9721e1c02828184085a18cfa6679590e6614ddd7ae8295f64",
+    "perks/preflight/src/check_ngc_image.impl.sh": "48cb7375945eab1fa7d393500a9a06b726dc1d2441effcadf74f9b2afa8aeb54",
+    "perks/preflight/src/check_ngc_image.sh": "9c9c2de657a37819c65d7ac15c39bf7ffaee7925b27714a59bcc184ebc61f5cd",
+    "perks/preflight/src/contracts.json": "92acb3b2f1eb48e446d9a95214f1ea65e3da74de708d24dedd1f60e80a1c856c",
+    "perks/preflight/test/case.json": "f7c9b73962fb542436432df920705b7e2a3a04b2328b0c9103e0c3697a302caf"
+  }
+}

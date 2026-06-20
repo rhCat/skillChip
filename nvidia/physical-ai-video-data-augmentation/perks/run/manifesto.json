@@ -1,0 +1,31 @@
+{
+  "_perk": "run",
+  "sequence": [
+    "preflight_credentials",
+    "pre_submit_guard"
+  ],
+  "tools": {
+    "preflight_credentials": {
+      "binary": "bash",
+      "params": {
+        "WORKFLOW": "${WORKFLOW}"
+      }
+    },
+    "pre_submit_guard": {
+      "binary": "python3",
+      "params": {
+        "WORKFLOW": "${WORKFLOW}"
+      }
+    }
+  },
+  "env": {
+    "WORKFLOW": "${WORKFLOW}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3",
+    "osmo",
+    "curl"
+  ]
+}

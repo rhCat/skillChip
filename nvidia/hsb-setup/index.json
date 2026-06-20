@@ -1,0 +1,21 @@
+{
+  "skill": "hsb-setup",
+  "skill_sha": "fcb8a8092b6cc7fd6a6b37e74e1bf876815348bb43d9e11a703eb859b1a3865a",
+  "file_count": 14,
+  "files": {
+    "SKILL.md": "cacfb17978420f12aa4d7b6183b2b594d27b7f9d1a6ab07e0b375f4162c0554b",
+    "blueprint.drawio": "c83551b5bc417e256ca02ea755264d03615d264afb9da42f77012288635eb817",
+    "blueprint.json": "8389c9f5bf615a98566a7e74acdc1e41487033b8ad8a4ce7139d8675806dd39e",
+    "blueprint.svg": "dd187bdff69d2acbe61731f0e873e28727b7d0e16eba49f6b62389ce6b11e90e",
+    "ledger.json": "ca91c702f3e5767db29fc5341d7344fd570a33c18513146a7ddeea17a5623d31",
+    "perks.json": "989e1de4d8ce35eef5885cda0dafb3dda29266e14e1ff313e010d779eae8ec52",
+    "perks/setup/manifesto.json": "cd2e9d8052ca76d53ab82df3641ba2b6514ffdd4dc2adbb336b6ae50e0b3fd9b",
+    "perks/setup/metadata.json": "d9ce60c1975897dc36fb648139730e08074d19936287b21405fb7581fbfd2dd3",
+    "perks/setup/src/bashrc_hsb.sh": "63c54322dedb25cf6fa8f9f4e436c0fe197eaa8aa4befd9c4d8cd7062b99e154",
+    "perks/setup/src/contracts.json": "e7de1e2ea6c5434bb39af30b4222c3c25499db9a2d907b4c72ce32e31529b77f",
+    "perks/setup/src/hsb_phase_runner.impl.sh": "8d4d86ffdec21fe2f9e3bc12a70d41d91c98c3b56ee1866261ddebed84ec44a7",
+    "perks/setup/src/hsb_phase_runner.sh": "a6839bf446d4d4cc3cf0a2a92020d76766765a497b4773dbccf0b5d3d996aac6",
+    "perks/setup/src/set-hsb-env.sh": "a6f1c039e00cbfb2300f7368e2c51e60d48d05deffdbbdf4c65e8c1157d9731e",
+    "perks/setup/test/case.json": "598d512d524f1328c9a254db2ad78634257ffea9865fb9658db9943f3b5908b4"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "skill": "dynamo-router-starter",
+  "skill_sha": "9f1782c6c23fd27e9b5ec009d485b02990523bcca97a3c2e1811ccade62b9ab4",
+  "file_count": 12,
+  "files": {
+    "SKILL.md": "b0436985ab8ba143c383b91da46000a085b664bd9a2fc0979ed9a02b2d1018f4",
+    "blueprint.drawio": "75f1c706153927a361bb5764486cebc7d0fd239c013d4089cba886fad89e6df8",
+    "blueprint.json": "5657a961faa9eb7de88d0725377f2d7085647580a72926f37cae947cbfb4149c",
+    "blueprint.svg": "01a25d0c9d3ddabaaf927c3a481e1c037d460bd7991aba6f89ecce1a701dd9e7",
+    "ledger.json": "5ef8ee0c05918ef7d2f9756385b11e1669c133c8b5f9887bb2f60add0dad367c",
+    "perks.json": "9c0d173ca5f68e1492ef0b787c672cb08de774984842cc0aa6555b45dfb073d4",
+    "perks/check/manifesto.json": "0e04ac13ac91c0b702905c83d091c3c65b939b48dbf0726d285c80877a7c20a1",
+    "perks/check/metadata.json": "712fecef52fcd48370b764147523f810ee6b4561628e1ea70ccd9d70e0372e18",
+    "perks/check/src/check_router_health.py": "72321f4427461bfba497227d1e554c2ff83efbc39d4ed3f36f2c75c840410de2",
+    "perks/check/src/check_router_health.sh": "300a708b5e36599ea0eea5ed9c6ad9b46c786c7121371dda122dea53541daaaa",
+    "perks/check/src/contracts.json": "89c776167dd678eb0843739f03776cade9df580d74b20cace3cb8c015fc1dc1f",
+    "perks/check/test/case.json": "b71e12fad2bc6d50deef5944fc1954a046951e6bee730a95da7df099a0764c2e"
+  }
+}

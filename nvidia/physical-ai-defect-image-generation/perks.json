@@ -1,0 +1,45 @@
+{
+  "skill": "physical-ai-defect-image-generation",
+  "perks": [
+    {
+      "id": "generate",
+      "summary": "orchestrate OSMO defect-image generation/augmentation/labeling; render the anomaly-infer defect_spec.jsonl (feeds remote train/deploy)",
+      "destructive": true,
+      "tools": [
+        "render_defect_spec"
+      ]
+    },
+    {
+      "id": "preflight-credentials",
+      "summary": "preflight the OSMO credential hf-token every DIG flow needs (and probe the gated Cosmos HF repos for scope when HF_TOKEN is exported)",
+      "destructive": false,
+      "tools": [
+        "preflight_credentials_port"
+      ]
+    },
+    {
+      "id": "preflight-pod-template",
+      "summary": "verify the OSMO POD_TEMPLATE meets DIG requirements — nvoptix hostPath mount + /dev/shm >= 16 GiB",
+      "destructive": false,
+      "tools": [
+        "preflight_pod_template_port"
+      ]
+    },
+    {
+      "id": "preflight-urls",
+      "summary": "verify the DIG URL artifacts a given flow+usecase needs are present under DIG_URL_ROOT before a submit",
+      "destructive": false,
+      "tools": [
+        "preflight_urls_port"
+      ]
+    },
+    {
+      "id": "pick-best-step",
+      "summary": "derive the best anomalygen inference step from a checkpoint tree (argmax avg nn_score among validated steps with a saved iter_*.pt)",
+      "destructive": false,
+      "tools": [
+        "pick_best_step_port"
+      ]
+    }
+  ]
+}

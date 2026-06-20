@@ -1,0 +1,19 @@
+{
+  "perk": "preflight",
+  "skill": "holoscan-setup",
+  "description": "inspect the host for Holoscan install readiness: detect Conda and check the NGC container image (read-only)",
+  "rules": [
+    "read-only — inspects host state only; never pulls, installs, or mutates anything",
+    "check_conda searches PATH, common install dirs, and shell rc files; reports which envs import holoscan",
+    "check_ngc_image greps `docker images` for the clara-holoscan/holoscan image matching CUDA_TAG_SUFFIX (no pulls)",
+    "both tools write their reports under record_store"
+  ],
+  "usage": "Set CUDA_TAG_SUFFIX (one of cuda13 | cuda12-dgpu | cuda12-igpu, from the nvidia-smi CUDA Version). Outputs: conda.txt and ngc_image.txt.",
+  "limitation": "Inspection only — does not install Holoscan or delegate to an install method. check_ngc_image needs docker on PATH; without it the report notes the image is not found. Conda packages are CUDA 13 only; native installs cannot exceed the driver's reported CUDA Version (only containers use Forward Compatibility).",
+  "minimal_example": {
+    "perk": "preflight",
+    "vars": {
+      "CUDA_TAG_SUFFIX": "cuda13"
+    }
+  }
+}

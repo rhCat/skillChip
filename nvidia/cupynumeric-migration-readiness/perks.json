@@ -1,0 +1,1 @@
+{"skill":"cupynumeric-migration-readiness","perks":[{"id":"assess","summary":"Refresh the NumPy-vs-cuPyNumeric API-support manifest the pre-migration readiness assessment cross-references (read-only scrape)","destructive":false,"tools":["fetch_api_support"]}]}

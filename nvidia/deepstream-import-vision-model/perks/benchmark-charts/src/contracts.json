@@ -1,0 +1,23 @@
+{
+  "tool": "benchmark_charts",
+  "inputs": {
+    "BENCHMARK_DATA": {
+      "type": "string",
+      "required": true
+    },
+    "CHART_DIR": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "benchmark_charts_out": {
+      "path": "${RECORD_STORE}/benchmark-charts.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/benchmark-charts.json"
+  }
+}

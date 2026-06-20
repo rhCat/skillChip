@@ -1,0 +1,28 @@
+{
+  "_perk": "prepare-pairs",
+  "sequence": [
+    "changenet_data_pair_prepare"
+  ],
+  "tools": {
+    "changenet_data_pair_prepare": {
+      "binary": "python3",
+      "params": {
+        "INPUT_DIR": "${INPUT_DIR}",
+        "GOLDEN_DIR": "${GOLDEN_DIR}"
+      }
+    }
+  },
+  "env": {
+    "INPUT_DIR": "${INPUT_DIR}",
+    "GOLDEN_DIR": "${GOLDEN_DIR}",
+    "LABEL": "${LABEL}",
+    "IMAGES_DIR": "${IMAGES_DIR}",
+    "SUBDIR": "${SUBDIR}",
+    "LIGHT": "${LIGHT}",
+    "IMAGE_EXT": "${IMAGE_EXT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "tool": "check_conda",
+  "inputs": {},
+  "outputs": {
+    "conda_report": {
+      "path": "${RECORD_STORE}/conda.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/conda.txt"
+  }
+}

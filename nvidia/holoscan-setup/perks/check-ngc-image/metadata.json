@@ -1,0 +1,19 @@
+{
+  "perk": "check-ngc-image",
+  "skill": "holoscan-setup",
+  "description": "check whether the NGC Holoscan container image for a CUDA tag suffix is already pulled (read-only)",
+  "rules": [
+    "read-only — greps `docker images` for the clara-holoscan/holoscan image matching CUDA_TAG_SUFFIX; never pulls or runs anything",
+    "CUDA_TAG_SUFFIX is one of cuda13 | cuda12-dgpu | cuda12-igpu, derived from the nvidia-smi CUDA Version and GPU architecture",
+    "reports the matching image line if present, otherwise notes the image is not found for the variant",
+    "writes its report under record_store"
+  ],
+  "usage": "Set CUDA_TAG_SUFFIX (one of cuda13 | cuda12-dgpu | cuda12-igpu). Output: ngc_image.txt.",
+  "limitation": "Inspection only — does not pull the image or log in to NGC. Needs docker on PATH; without it (or when the image is not present) the report notes the image is not found. Trust this over a bare `docker images` since it scopes to the clara-holoscan/holoscan repository and CUDA variant.",
+  "minimal_example": {
+    "perk": "check-ngc-image",
+    "vars": {
+      "CUDA_TAG_SUFFIX": "cuda13"
+    }
+  }
+}

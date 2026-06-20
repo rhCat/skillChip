@@ -1,0 +1,13 @@
+{
+  "skill": "dynamo-router-starter",
+  "perks": [
+    {
+      "id": "check",
+      "summary": "smoke-test a Dynamo frontend: /v1/models + one chat completion (read-only)",
+      "destructive": false,
+      "tools": [
+        "check_router_health"
+      ]
+    }
+  ]
+}

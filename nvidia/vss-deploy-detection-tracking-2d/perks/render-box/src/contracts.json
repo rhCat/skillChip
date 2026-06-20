@@ -1,0 +1,27 @@
+{
+  "tool": "render_box",
+  "inputs": {
+    "TITLE": {
+      "type": "string",
+      "required": true
+    },
+    "BODY_FILE": {
+      "type": "string",
+      "required": false
+    },
+    "WIDTH": {
+      "type": "integer",
+      "required": false
+    }
+  },
+  "outputs": {
+    "box": {
+      "path": "${RECORD_STORE}/box.txt",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/box.txt"
+  }
+}

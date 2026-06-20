@@ -1,0 +1,1 @@
+{"_schema":"task-ledger TEMPLATE for data-designer — set perk, fill record_store + the vars the perk declares.","skill":"data-designer","perk":"inspect","record_store":"<absolute dir for outputs + run-ledger>","vars":{"LOCALE":"locale code whose managed persona dataset to inspect, e.g. en_US"}}

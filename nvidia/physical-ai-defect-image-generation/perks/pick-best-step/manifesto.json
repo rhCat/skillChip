@@ -1,0 +1,23 @@
+{
+  "_perk": "pick-best-step",
+  "sequence": [
+    "pick_best_step_port"
+  ],
+  "tools": {
+    "pick_best_step_port": {
+      "binary": "bash",
+      "params": {
+        "CKPT_ROOT": "${CKPT_ROOT}",
+        "FALLBACK_STEP": "${FALLBACK_STEP}"
+      }
+    }
+  },
+  "env": {
+    "CKPT_ROOT": "${CKPT_ROOT}",
+    "FALLBACK_STEP": "${FALLBACK_STEP}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}

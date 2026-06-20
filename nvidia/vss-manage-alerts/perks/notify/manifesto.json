@@ -1,0 +1,1 @@
+{"_perk":"notify","sequence":["server"],"tools":{"server":{"binary":"python3","params":{"SLACK_BOT_TOKEN":"${SLACK_BOT_TOKEN}","SLACK_CHANNEL_ID":"${SLACK_CHANNEL_ID}","VST_ENDPOINT":"${VST_ENDPOINT}"}}},"env":{"SLACK_BOT_TOKEN":"${SLACK_BOT_TOKEN}","SLACK_CHANNEL_ID":"${SLACK_CHANNEL_ID}","VST_ENDPOINT":"${VST_ENDPOINT}","RECORD_STORE":"${record_store}"},"requires":["python3"]}
