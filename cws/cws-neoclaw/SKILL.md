@@ -1,7 +1,7 @@
 ---
 skill: cws-neoclaw
 name: Neoclaw — operate a govd node
-perks: [discover, run]
+perks: [discover, run, status]
 ---
 
 # cws-neoclaw — the agent's governed handle to a govd node
@@ -30,18 +30,21 @@ the node's **non-root** identity (the executor's no-root gate). neoclaw carries 
 |---|---|---|
 | `discover` | `neoclaw_discover` | GET a node's `/health` + `/catalog` over HTTP — read-only / safe; portable (urllib only) |
 | `run` | `neoclaw_run` | forward a governed sub-claim to a node (`run_governed`) — the node blesses + oversees; verdict + ledger returned. Needs a registry matching the node's chip |
+| `status` | `neoclaw_status` | GET a node's `/health` — up/down + chip identity, a fast liveness probe — read-only / safe; portable (urllib only) |
 
 - **`discover`** — set `NODE_URL` (a govd base url, e.g. `http://127.0.0.1:5773`). Output: `discover.json`.
 - **`run`** — set `NODE_URL` + `SUB_LEDGER` (abs path to the sub-claim task-ledger) + optional `APPROVE`
   (space-separated rule ids for a destructive sub-claim). Output: `run.json`.
+- **`status`** — set `NODE_URL`. Output: `status.json` (up/down + node identity).
 
 ## How to use it
 Pick a perk, copy `ledger.json` → `task-ledger.json`, set its vars + `record_store`, then validate →
 compose → compile → oversight → executor.
 
 ## Scope / coming
-`discover` (read) + `run` (act) are the operate path. Still to come: `status` (node liveness rollup), and the
-node-side **receiving auth** (caller token + scope) so a *detached* node only accepts scoped, authenticated
-claims. Execution is caller-side until the **govd→exod** server-side dispatch lands; the non-root foundation is
-already in place (the executor refuses uid 0). Secrets stay node-side (resolved at the exod boundary, never in
-the agent's namespace); the agent only ever names handles, never values.
+`discover` + `status` (read) and `run` (act) are the operate path. Still to come: the node-side **receiving
+auth** (caller token + scope) so a *detached* node only accepts scoped, authenticated claims — front a public
+node with TLS via a proxy (Caddy) until then, or SSH-tunnel it. Execution is caller-side until the **govd→exod**
+server-side dispatch lands; the non-root foundation is already in place (the executor refuses uid 0). Secrets
+stay node-side (resolved at the exod boundary, never in the agent's namespace); the agent only ever names
+handles, never values.

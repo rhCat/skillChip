@@ -16,6 +16,14 @@
       "tools": [
         "neoclaw_run"
       ]
+    },
+    {
+      "id": "status",
+      "summary": "node liveness + identity probe — GET /health, report up/down + chip_sha/mode/runs (portable, read-only); a fast liveness check, lighter than discover",
+      "destructive": false,
+      "tools": [
+        "neoclaw_status"
+      ]
     }
   ]
 }
