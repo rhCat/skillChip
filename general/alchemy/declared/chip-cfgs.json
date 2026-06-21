@@ -1462,6 +1462,127 @@
       "exit"
     ]
   },
+  "cws/cws-neoclaw/perks/discover/src/neoclaw_discover.py": {
+    "edges": [
+      [
+        "stmt0",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "exit"
+    ]
+  },
+  "cws/cws-neoclaw/perks/run/src/neoclaw_run.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt3",
+      "stmt5",
+      "exit"
+    ]
+  },
+  "cws/cws-neoclaw/perks/status/src/neoclaw_status.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt4"
+      ],
+      [
+        "stmt4",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt7"
+      ],
+      [
+        "stmt7",
+        "stmt8"
+      ],
+      [
+        "stmt8",
+        "stmt10"
+      ],
+      [
+        "stmt10",
+        "stmt11"
+      ],
+      [
+        "stmt11",
+        "stmt14"
+      ],
+      [
+        "stmt14",
+        "stmt15"
+      ],
+      [
+        "stmt15",
+        "stmt17"
+      ],
+      [
+        "stmt17",
+        "stmt19"
+      ],
+      [
+        "stmt19",
+        "stmt20"
+      ],
+      [
+        "stmt20",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt4",
+      "stmt5",
+      "stmt7",
+      "stmt8",
+      "stmt10",
+      "stmt11",
+      "stmt14",
+      "stmt15",
+      "stmt17",
+      "stmt19",
+      "stmt20",
+      "exit"
+    ]
+  },
   "cws/cws-observe/perks/redeem/src/cws_observe_redeem.py": {
     "edges": [
       [
