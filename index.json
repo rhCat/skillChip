@@ -2,7 +2,7 @@
   "chip": "skillChip",
   "version": 1,
   "cartridge": false,
-  "count": 219,
+  "count": 220,
   "skills": [
     {
       "skill": "aiq-research",
@@ -118,6 +118,11 @@
       "skill": "cws-mutate",
       "skill_sha": "8f7311310427e0117c52f9afa137f85e5c0dc4c281a43f1135d183cd65e7a3c7",
       "file_count": 32
+    },
+    {
+      "skill": "cws-neoclaw",
+      "skill_sha": "8130d172308ca103d0fb5515a2241d4a78e5a8c1473e58964aaa6f9ca813d556",
+      "file_count": 22
     },
     {
       "skill": "cws-observe",
@@ -1100,5 +1105,5 @@
       "file_count": 39
     }
   ],
-  "chip_sha": "2e336bec487955e1c53a4633a8da72ec75d22aaa7a045608959e155e7153d81c"
+  "chip_sha": "26176b573d9e9aaa351aed322dbf92591d8729e704eeac0bf6c24b4a524b5467"
 }
