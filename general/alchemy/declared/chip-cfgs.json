@@ -2985,6 +2985,48 @@
       "exit"
     ]
   },
+  "cws/cws-settle-sim/perks/credits/src/settle_credits.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt4"
+      ],
+      [
+        "stmt4",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "stmt7"
+      ],
+      [
+        "stmt7",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt4",
+      "stmt6",
+      "stmt7",
+      "exit"
+    ]
+  },
   "cws/cws-settle-sim/perks/dispute/src/settle_dispute.py": {
     "edges": [
       [
@@ -3106,6 +3148,48 @@
       "exit"
     ]
   },
+  "cws/cws-settle-sim/perks/pricer/src/settle_pricer.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt4"
+      ],
+      [
+        "stmt4",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "stmt7"
+      ],
+      [
+        "stmt7",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt4",
+      "stmt6",
+      "stmt7",
+      "exit"
+    ]
+  },
   "cws/cws-settle-sim/perks/quote/src/settle_quote.py": {
     "edges": [
       [
@@ -3140,6 +3224,48 @@
       "stmt3",
       "stmt5",
       "stmt6",
+      "exit"
+    ]
+  },
+  "cws/cws-settle-sim/perks/rail/src/settle_rail.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt4"
+      ],
+      [
+        "stmt4",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "stmt7"
+      ],
+      [
+        "stmt7",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt4",
+      "stmt6",
+      "stmt7",
       "exit"
     ]
   },
