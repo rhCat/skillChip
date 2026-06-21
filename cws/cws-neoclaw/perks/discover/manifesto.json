@@ -1,0 +1,21 @@
+{
+  "_perk": "discover",
+  "sequence": [
+    "neoclaw_discover"
+  ],
+  "tools": {
+    "neoclaw_discover": {
+      "binary": "python3",
+      "params": {
+        "NODE_URL": "${NODE_URL}"
+      }
+    }
+  },
+  "env": {
+    "NODE_URL": "${NODE_URL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

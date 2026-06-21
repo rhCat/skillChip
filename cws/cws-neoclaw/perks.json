@@ -1,0 +1,29 @@
+{
+  "skill": "cws-neoclaw",
+  "perks": [
+    {
+      "id": "discover",
+      "summary": "discover a govd node — GET /health + /catalog over HTTP (portable, read-only); reports node identity (chip_sha/mode/runs) + the governed catalog",
+      "destructive": false,
+      "tools": [
+        "neoclaw_discover"
+      ]
+    },
+    {
+      "id": "run",
+      "summary": "forward a governed claim to a node — submit a sub-claim (run_governed), the node blesses + oversees every step (faithful non-root execution), returns the verdict + ledger pointer; destructive sub-claims push_back until APPROVE",
+      "destructive": false,
+      "tools": [
+        "neoclaw_run"
+      ]
+    },
+    {
+      "id": "status",
+      "summary": "node liveness + identity probe — GET /health, report up/down + chip_sha/mode/runs (portable, read-only); a fast liveness check, lighter than discover",
+      "destructive": false,
+      "tools": [
+        "neoclaw_status"
+      ]
+    }
+  ]
+}

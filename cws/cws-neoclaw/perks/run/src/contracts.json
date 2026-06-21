@@ -1,0 +1,27 @@
+{
+  "tool": "neoclaw_run",
+  "inputs": {
+    "NODE_URL": {
+      "type": "string",
+      "required": true
+    },
+    "SUB_LEDGER": {
+      "type": "string",
+      "required": true
+    },
+    "APPROVE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "run_out": {
+      "path": "${RECORD_STORE}/run.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/run.json"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "neoclaw_status",
+  "inputs": {
+    "NODE_URL": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "status_out": {
+      "path": "${RECORD_STORE}/status.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/status.json"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_perk": "status",
+  "sequence": [
+    "neoclaw_status"
+  ],
+  "tools": {
+    "neoclaw_status": {
+      "binary": "python3",
+      "params": {
+        "NODE_URL": "${NODE_URL}"
+      }
+    }
+  },
+  "env": {
+    "NODE_URL": "${NODE_URL}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "tool": "neoclaw_discover",
+  "inputs": {
+    "NODE_URL": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "discover_out": {
+      "path": "${RECORD_STORE}/discover.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/discover.json"
+  }
+}

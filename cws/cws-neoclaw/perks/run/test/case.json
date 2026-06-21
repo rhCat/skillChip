@@ -1,0 +1,4 @@
+{
+  "_perk": "run",
+  "skip": "needs a reachable govd node + a sub-claim task-ledger — authenticity + selfmonitor cover the structure; live run is proven by a governed run against a real node"
+}

@@ -1,0 +1,18 @@
+{
+  "perk": "status",
+  "skill": "cws-neoclaw",
+  "description": "node liveness + identity probe — GET a node's /health; report up/down + chip_sha/mode/runs (portable, read-only)",
+  "rules": [
+    "read-only — one HTTP GET (/health), no mutation",
+    "pure urllib: no local cyberware dependency; a fast liveness check, lighter than discover (no catalog)",
+    "report to record_store"
+  ],
+  "usage": "Set NODE_URL (the node's govd base url). Output: status.json — up/down + node identity (service/mode/chip_sha/runs). Exit 0 iff the node is up.",
+  "limitation": "Needs a reachable govd node. Reporting only.",
+  "minimal_example": {
+    "perk": "status",
+    "vars": {
+      "NODE_URL": "http://127.0.0.1:5773"
+    }
+  }
+}
