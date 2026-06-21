@@ -1,0 +1,9 @@
+{
+  "_schema": "task-ledger TEMPLATE for cws-neoclaw — set perk, fill record_store + the vars the perk's manifesto declares.",
+  "skill": "cws-neoclaw",
+  "perk": "discover",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "NODE_URL": "http://127.0.0.1:5773"
+  }
+}

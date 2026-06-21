@@ -1,0 +1,13 @@
+{
+  "skill": "cws-neoclaw",
+  "perks": [
+    {
+      "id": "discover",
+      "summary": "discover a govd node — GET /health + /catalog over HTTP (portable, read-only); reports node identity (chip_sha/mode/runs) + the governed catalog",
+      "destructive": false,
+      "tools": [
+        "neoclaw_discover"
+      ]
+    }
+  ]
+}

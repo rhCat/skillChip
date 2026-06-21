@@ -1,0 +1,18 @@
+{
+  "perk": "discover",
+  "skill": "cws-neoclaw",
+  "description": "discover a govd NODE — GET its /health + /catalog over HTTP (read-only, portable)",
+  "rules": [
+    "read-only — two HTTP GETs (/health, /catalog), no mutation",
+    "pure urllib: no local cyberware dependency, so any agent can point neoclaw at any node by URL",
+    "report (node identity + governed catalog) to record_store"
+  ],
+  "usage": "Set NODE_URL (the node's govd base url, e.g. http://127.0.0.1:5773). Output: discover.json — node health (service/mode/chip_sha/runs) + the governed catalog (skills it serves). Exit 0 iff reachable AND a catalog returned; an unreachable node writes the report and exits non-zero.",
+  "limitation": "Needs a reachable govd node. Reporting only — no claim, no run.",
+  "minimal_example": {
+    "perk": "discover",
+    "vars": {
+      "NODE_URL": "http://127.0.0.1:5773"
+    }
+  }
+}

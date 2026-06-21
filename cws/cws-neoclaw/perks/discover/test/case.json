@@ -1,0 +1,4 @@
+{
+  "_perk": "discover",
+  "skip": "needs a reachable govd node — authenticity + selfmonitor cover the structure; live discover is proven by a governed run against a real node"
+}

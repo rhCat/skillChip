@@ -2,7 +2,7 @@
   "chip": "skillChip",
   "version": 1,
   "cartridge": false,
-  "count": 37,
+  "count": 38,
   "skills": [
     {
       "skill": "alchemy",
@@ -63,6 +63,11 @@
       "skill": "cws-mutate",
       "skill_sha": "8f7311310427e0117c52f9afa137f85e5c0dc4c281a43f1135d183cd65e7a3c7",
       "file_count": 32
+    },
+    {
+      "skill": "cws-neoclaw",
+      "skill_sha": "7b399872c9edb9c77b8877a4d5253d3ce1af1763314431b77da7b9cea356b817",
+      "file_count": 10
     },
     {
       "skill": "cws-observe",
@@ -190,5 +195,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "36ce99e3b76e559f21fea913b5ed1e23aad1e62b8840af9b1af0b1e4ceb9dc89"
+  "chip_sha": "92bae2c482bfa24dca853441f6eaf90acb1bc06b6372cf286982bfe3cf9074f8"
 }
