@@ -1,0 +1,21 @@
+{
+  "_perk": "pricer",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "pricer.json"
+    ],
+    "contains": {
+      "pricer.json": [
+        "\"ok\": true",
+        "\"itemized_subtotal_exact\": true",
+        "\"total_exact\": true",
+        "\"tool_fee_applied\": true",
+        "\"float_ban_clean\": true"
+      ]
+    }
+  }
+}

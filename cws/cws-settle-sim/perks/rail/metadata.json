@@ -1,0 +1,5 @@
+{
+  "perk": "rail",
+  "summary": "settle-time tax rail (rails.py, #113) — platform tax collected at SETTLE, never an agent action / hidden portal; split into visible substrate/author/marketplace lines (skim refused), StripeRail inert until keyed, collect_run_tax zero-sum + idempotent",
+  "destructive": false
+}

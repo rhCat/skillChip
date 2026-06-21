@@ -1,0 +1,14 @@
+{
+  "tool": "settle_pricer",
+  "inputs": {},
+  "outputs": {
+    "pricer_out": {
+      "path": "${RECORD_STORE}/pricer.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/pricer.json"
+  }
+}

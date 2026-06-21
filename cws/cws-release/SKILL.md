@@ -30,6 +30,7 @@ pinned root + the publisher's offline key.
 | `timeanchor` | P3-T07 | **TSA time anchors** — a high-value receipt is settlement-eligible only with a TSA token that **verifies offline** against the receipt digest; absence, a tampered token, or a token bound to a different receipt block settlement. |
 | `citrinitas` | P3-T09 | **Citrinitas publish gate** — verified-tier admission requires the [`alchemy`](../../general/alchemy/SKILL.md) verbs (extract + conserve + classify + concord). A seeded **conservation defect**, **unnamed shape**, or **CFG mismatch** each **blocks** publish with its named reason, and **chip-wide concord** passes for every modeled porter. |
 
-## Coming (the rest of the M4 cone)
-The Citrinitas publish gate (P3-T09) depends on the `alchemy` validator (concordance, P3-T08), which is not
-built yet — that validator is the remaining gate before M4 / SV-4 fully closes.
+## Status — M4 / SV-4 closed
+The Citrinitas publish gate (P3-T09) gates verified-tier admission on the
+[`alchemy`](../../general/alchemy/SKILL.md) validator (concordance, P3-T08), which is built — closing
+**M4 / SV-4** end to end.

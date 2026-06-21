@@ -1,0 +1,5 @@
+{
+  "perk": "credits",
+  "summary": "credit usage-billing (credits.py, #116) — prepaid balance + per-call DEBITS not per-call card fees; top-up credits, each priced run debits zero-sum, balance draws down, a tax over the balance is REFUSED (the gate), debits idempotent per plan_sha",
+  "destructive": false
+}

@@ -1,9 +1,9 @@
 {
   "skill": "cws-redteam-sw",
-  "skill_sha": "7d1f7c9b045a089b6ebcd0abf7bd8b24afb180f20a7a053aa246c309fe2da7f4",
+  "skill_sha": "f0260882dfb4fd61000ec40ac768478603e4272b622fd1e84e5aa6c4baf1e7fa",
   "file_count": 40,
   "files": {
-    "SKILL.md": "a643b825d3bf8749df6b2d37381b0f3fe176979ca160b03e27d30ed85d75e38a",
+    "SKILL.md": "eb4ff4fcff9b22dc220b03c5a5da1e5d94fdff8f1cca3c902c7fcf7c95abe3b9",
     "blueprint.json": "c9c88820e3cc4769fb9b138203a23a987bade21012d91e32a47cbebd27efcc24",
     "ledger.json": "3d3c0673151735f6be2ba7c1c36008adab453f515a6b166740165b1c2334524a",
     "perks.json": "52be4b0f50372d56687dd3c5cd2b454214acbc62b1cf99e74a720833e2b56ed9",

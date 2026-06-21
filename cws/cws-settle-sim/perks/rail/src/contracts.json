@@ -1,0 +1,14 @@
+{
+  "tool": "settle_rail",
+  "inputs": {},
+  "outputs": {
+    "rail_out": {
+      "path": "${RECORD_STORE}/rail.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/rail.json"
+  }
+}

@@ -1,14 +1,16 @@
 ---
 skill: cws-settle-sim
 name: Settlement simulator (the money's lifecycle)
-perks: [floatban, zerosum, quote, settle, manipulate, dispute, simulate, capstone]
+perks: [floatban, zerosum, quote, settle, manipulate, dispute, simulate, capstone, pricer, rail, credits]
 ---
 
 # cws-settle-sim — the SV-6 settlement validator (M6, "the work pays for the work")
 
 cws-settle-sim grades the settlement substrate (`infra/settle/`) — the money's lifecycle from type to ledger
-to quote to engine. It is built **incrementally** alongside the P6 cone (as `cws-release` was grown through
-P3): each perk validates one money-cone task against its acceptance, on REAL runs.
+to quote to engine, and onward through the pre-run **pricer**, the settle-time **tax rail**, and **credit**
+usage-billing (the Hermes usage-pricing layer). It is built **incrementally** alongside the P6 cone (as
+`cws-release` was grown through P3): each perk validates one money-cone capability against its acceptance, on
+REAL runs.
 
 ## Perks
 | perk | task | what |
@@ -21,6 +23,9 @@ P3): each perk validates one money-cone task against its acceptance, on REAL run
 | `dispute` | P6-T12 | **dispute lifecycle** — bond → **m-of-n WebAuthn** resolution (reusing the P3 approval artifact) → clawback from holdback (upheld) or bond forfeit (rejected) + reputation delta, all ledgered & zero-sum; <m approvals or a tampered approval does not resolve. |
 | `simulate` | P6-T18 | **the authoring** — storm + manipulate + dispute together: zero-sum exact, index drift <2% @ 20% adversarial, dispute lifecycle complete. |
 | `capstone` | P6-T21 | **the ladder closes** — cyberware's real redeemed milestones settle as internal-credit bounties (zero-sum), seed the first FMV index, and the plan's completion is a **dual-signed, TSA-anchored** receipt that verifies **offline end-to-end**. |
+| `pricer` | price.py (#110) | **plan pricer** — `price_plan` prices a governed run from its **value-free PLAN, before it runs**: context tokens (SKILL.md + blueprint + perk metadata) + output tokens × model rate + tool fee + marketplace %. The itemized subtotal and the total **sum exactly** (Money, scale-4); a seeded `tool_fee` flows into the total; freeform pricing differs from contract pricing; `infra/settle` stays float-clean. |
+| `rail` | rails.py (#113) | **settle-time tax rail** — the platform tax is collected **at settle, never as an agent action and never from a hidden portal**: `charge_from_price` splits into substrate / skill-author / marketplace as **visible lines** that re-sum to the total (an over-total split is **refused** — no skim); `LedgerRail`/`StripeRail`/`CreditRail` are pluggable, `StripeRail` stays **inert until keyed**, and `collect_run_tax` settles zero-sum and is **idempotent** per `plan_sha`. |
+| `credits` | credits.py (#116) | **credit usage-billing** — a prepaid balance + per-call **debits**, not per-call card fees: a top-up credits the balance, each priced run **debits** its usage tax as a zero-sum posting set, the balance **draws down**, and a run whose tax **exceeds** the balance is **refused** (the structural gate); debits are **idempotent** per `plan_sha`. |
 
 ## Scope / residuals (stated honestly)
 The two value-integrity guards above — **per-quote escrow** and the **spent-quote idempotency guard** — were
@@ -32,6 +37,8 @@ scale-4 quantization neutralizes and the float-ban lint keeps `infra/settle` lit
 `release_holdback` has no dispute-window timer or auth yet (it stays balanced and cannot exceed the held
 amount) — the timed/authorized release is downstream P6 work.
 
-## Coming (the rest of the M6 cone)
-`storm` / `manipulate` / `dispute` (P6-T18, the formal authoring) and the downstream P6 market tasks. These
-close **SV-6 — the ladder's top rung**.
+## Status — the cone is closed
+The P6 settlement cone is closed: `simulate` (P6-T18, the formal authoring of storm + manipulate + dispute)
+and `capstone` (P6-T21) redeemed **SV-6 — the ladder's top rung**. The `pricer` / `rail` / `credits` perks
+extend the validated surface to the Hermes usage-pricing layer (pre-run pricing, the settle-time tax rail,
+and credit billing) added on top of the formal cone.
