@@ -14,11 +14,13 @@ goes silently no-op. The pass is *"the boundary held — it failed the attack on
 
 > **Honest scope — this is the SOFTWARE tier, NOT the SV-3 kernel gate.** SV-3 ("execution becomes a
 > *kernel*-enforced boundary") demands the ≥12-behavior corpus refuse with the software scan DISABLED, over
-> an `exod` daemon + sandbox (bwrap/seccomp/cgroups) that **does not exist in the repo yet**. That skill is
-> the kernel `cws-redteam` (P2-T08), redeemable only after the `exod` subject is built. `cws-redteam-sw`
-> is named distinctly and **redeems nothing in the P2 cone** — every P2 task is `validated_by: cws-redteam`,
-> so a same-named pass would falsely close M3 against a boundary that isn't there. This is the legitimate
-> precursor that extends into the kernel corpus once `exod` lands.
+> the `exod` daemon + sandbox (bwrap/seccomp/cgroups). That subject is now built (`infra/exec/exod.py`,
+> `infra/exec/sandbox.py`), and the kernel skill `cws-redteam` (P2-T08) drives the corpus through it —
+> **M3 / SV-3 reaches 9/10** on this hardware, the one residual being the microVM perf budget that needs
+> `/dev/kvm` (see `cws-bench`), not a missing subject. `cws-redteam-sw` is still named distinctly and
+> **redeems nothing in the P2 cone** — every P2 task is `validated_by: cws-redteam`, so a same-named pass
+> would falsely close M3 — and remains the software-tier precursor that runs the same attacks against
+> today's in-process gates.
 
 ## Perks
 | perk | tool | attack → boundary that must refuse |

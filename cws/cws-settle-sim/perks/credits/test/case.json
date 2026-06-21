@@ -1,0 +1,22 @@
+{
+  "_perk": "credits",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "credits.json"
+    ],
+    "contains": {
+      "credits.json": [
+        "\"ok\": true",
+        "\"topup_credits_balance\": true",
+        "\"debited\": true",
+        "\"balance_drawn_down\": true",
+        "\"over_balance_refused\": true",
+        "\"zero_sum\": true"
+      ]
+    }
+  }
+}

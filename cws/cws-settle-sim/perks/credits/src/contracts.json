@@ -1,0 +1,14 @@
+{
+  "tool": "settle_credits",
+  "inputs": {},
+  "outputs": {
+    "credits_out": {
+      "path": "${RECORD_STORE}/credits.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/credits.json"
+  }
+}

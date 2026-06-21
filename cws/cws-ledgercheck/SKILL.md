@@ -33,18 +33,22 @@ provenance hash, an ordering gap). A nonzero exit means the chain is broken. LOG
 | `verify` | `cws_ledgerverify` | recompute a Ledger-v2 prev-chain (tamper/transplant/deletion-evident) or check a structural run-ledger — read-only / safe |
 | `anchor` | `cws_ledgeranchor` | build + run the independent Go chain verifier; prove it reproduces `verify_chain` over a corpus (needs `go`) |
 | `torture` | `cws_torture` | N concurrent `durable_append` writers must serialize into ONE valid chain, zero lost — destructive (spawns processes + writes a chain) |
+| `erasure` | `cws_erasure` | crypto-shredding erasure drill (P1-T07) — destroy a DEK, the chain still verifies, subject fields unrecoverable — read-only / safe |
+| `checkpoint` | `cws_checkpoint` | Merkle-checkpoint drill (P1-T03) — window-bounded cold-verify + forged-checkpoint audit — read-only / safe |
 
 - **`verify`** — set `TARGET_LEDGER` (a v2 chain — JSONL/list/`{entries}` — or a `run-ledger.json`).
   Optional `EXPECT_RUN_ID`/`EXPECT_PLAN_SHA` (out-of-band) certify non-transplant; `LEDGER_ALLOW_LEGACY`
   opts into auditing a v1 chain. Output: `ledgercheck.json`.
 - **`anchor`** — set `CHAIN_CORPUS` (named v2 chains with `expect_ok`). Output: `anchor.json`.
 
-## Scope (buildable now vs the full SV-2 surface)
+## Scope (the SV-2 surface)
 `verify` recomputes the cryptographic `seq`/`prev` chain of **Ledger-v2** (P1-T01) and `anchor` provides
 the external Go cold-verify (P1-T04). Without an out-of-band expected origin the chain is proven only
 internally consistent — a chain re-linked under a new genesis would verify clean — which the signed Go
-anchor closes. The `torture` (N concurrent governed writers) and `crashloop` (kill-9 at write offsets)
-perks, and Merkle-checkpoint verification, arrive with durability (P1-T02 / P1-T09).
+anchor closes. Durability is built: `torture` (N concurrent governed writers serialize into ONE valid
+chain), `checkpoint` (Merkle-checkpoint window-bounded cold-verify + forged-checkpoint audit, P1-T03), and
+`erasure` (crypto-shredding — a destroyed DEK leaves the chain verifying with subject fields unrecoverable,
+P1-T07).
 
 ## How to use it
 Pick `verify`, copy `ledger.json` → `task-ledger.json`, set `TARGET_LEDGER` + `record_store`, then

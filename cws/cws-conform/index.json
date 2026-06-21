@@ -1,9 +1,9 @@
 {
   "skill": "cws-conform",
-  "skill_sha": "6230b8bf3df0a695c69105dcb933ac3d058d13fefb09cfbade6e3ec906882b5d",
+  "skill_sha": "a43e0ac469f6f5c62f1048b094d71b65277ffea642d34415ef76d2a39d02b66e",
   "file_count": 75,
   "files": {
-    "SKILL.md": "17d94ddf876d135f780078d44df629a822b46a647d2bc95c22aaeb2117a1238a",
+    "SKILL.md": "f405bb90757af11199f0904b44fc2e63f0068334f1cf27fb9134a722d68c272d",
     "blueprint.drawio": "05c303e3f9834dd8e9968e1b18136bfea78ff296edee9fcbb234cff857ce6448",
     "blueprint.json": "f7dfa5b5eafb5cae5f5038d1b848aece5b36b1cec502b3c518d7d65f89cafe5f",
     "blueprint.svg": "5a6982f192bc04fa2072c7aa71d78d33de1512d1a5ca3411349f92227513dcb4",

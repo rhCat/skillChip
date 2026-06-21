@@ -1,9 +1,9 @@
 {
   "skill": "cws-modelcheck",
-  "skill_sha": "39b4db255c1a3f5cf30e7d4ee055142922883cbbe35fdffd9a882f3f21f894b6",
+  "skill_sha": "cb9b6431e1167c36711c1e5e7ba53ec23558c2ce9011e2cbc187f306b4d2022b",
   "file_count": 46,
   "files": {
-    "SKILL.md": "0766315308126bcfc23849d0c0c6ffabad4c47ce8a16ff1815579dd9364f6c02",
+    "SKILL.md": "77955291206ad24c03066d2a5d27ede1ec19e8dc350619f02970171763daa0ee",
     "blueprint.drawio": "d15cec7716a0589224724cd8a0e070c5a188837e5aba2203f152104696bc838f",
     "blueprint.json": "c5379c48ab32a94ab7b692f59758f8f7f3846a8b8cdf806eec4a6d5dbbca52c3",
     "blueprint.svg": "bc0b9f71ec5d8ad1d9f7e6244a374cab4c3042c5564cd711d61a2ddecc62220b",

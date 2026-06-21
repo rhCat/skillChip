@@ -1,0 +1,23 @@
+{
+  "_perk": "rail",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "rail.json"
+    ],
+    "contains": {
+      "rail.json": [
+        "\"ok\": true",
+        "\"split_balances\": true",
+        "\"marketplace_is_a_visible_line\": true",
+        "\"skim_refused\": true",
+        "\"stripe_inert_until_keyed\": true",
+        "\"collect_run_tax_settles\": true",
+        "\"zero_sum\": true"
+      ]
+    }
+  }
+}

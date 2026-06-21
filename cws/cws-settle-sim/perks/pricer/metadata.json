@@ -1,0 +1,5 @@
+{
+  "perk": "pricer",
+  "summary": "plan pricer (price.py, #110) — price a governed run from its value-free PLAN before it runs; itemized subtotal + total sum exact, seeded tool_fee flows through, infra/settle float-clean",
+  "destructive": false
+}

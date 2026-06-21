@@ -31,6 +31,9 @@ executor run-ledger.
 | `crosslang` | `cws_crosslang` | diff the independent Go verifier vs canonical.py+sign.py over the corpus — the external anchor (P0-T08) — needs the go toolchain |
 | `digestlint` | `cws_digestlint` | prove every JSON-object hash routes through `cwp.canonical`, not ad-hoc `json.dumps` — the digest-cutover gate (P0-T04 / F1 / P0-V03) — read-only / safe |
 | `interop` | `cws_interop` | prove cwp ↔ cosign/sigstore DSSE interop at the Ed25519ph layer, both directions (P0-T03) — needs openssl≥3.4 + go |
+| `schemas` | `cws_schemas` | validate the CWP message corpus against the 2020-12 JSON Schemas (P0-T05) — 100% valid + negatives rejected — read-only / safe |
+| `keystore` | `cws_keystore` | KeyStore seam contract (P0-T15) — file + PKCS#11-stub backends pass one suite; `seam_real` + HSM non-export — read-only / safe |
+| `labeling` | `cws_labeling` | truth-in-labeling doc lint (P0-T16) — no enforcement claim without a criterion-id reference — read-only / safe |
 | `reprobuild` | `cws_reprobuild` | reproducible engine build baseline (P0-T13 / M1 / P0-V11) — builds the Go anchor twice in isolated caches (two independent builders), asserts **byte-identical** digests; `diffoscope: empty` is proven by the sha256 match (and confirmed by diffoscope where installed); a flipped byte must break the match — needs the go toolchain |
 
 - **`repin`** — set `TARGET_CHIP` (a chip dir: skill dirs each with a `perks.json`). Output: `repin.json`.
@@ -40,12 +43,13 @@ executor run-ledger.
 - **`doclint`** — set `SPEC` (a `.md`) + optional `MIN_NORMATIVE` / `REQUIRE`. Output: `doclint.json`. This
   is what redeems the P0 spec tranche (`spec/keys.md`, `privacy.md`, `time.md`, `inflight.md`, …).
 
-## Scope (buildable now vs the full SV-1 surface)
+## Scope (the SV-1 surface)
 `repin` is the canonical re-pin under the current sha256 scheme; `doclint` is the structural spec lint
-(plan P0-V10) — both compose tooling that exists today (`infra/tool/skill_index`; a Markdown parse). The
-remaining cws-conform perks need infra still to be built: `vectors` (replay the >=250 golden-vector corpus
-through `infra/cwp`) and `crosslang` (diff the verdict stream against the independent Go verifier, the
-V-EXT external anchor) land with `spec/vectors/`, `infra/cwp/`, and the Go verifier (plan P0).
+(P0-V10). The full P0 surface is built: `vectors` replays the golden-vector corpus through `infra/cwp`,
+`crosslang` diffs the verdict stream against the independent Go verifier (the V-EXT external anchor),
+`schemas` validates the message corpus against the 2020-12 JSON Schemas, `keystore` contracts the KeyStore
+seam (file + PKCS#11 stub), `labeling` is the truth-in-labeling doc lint, and `reprobuild` proves the
+byte-identical engine build. `crosslang` / `interop` / `reprobuild` need the Go toolchain; the rest are pure.
 
 ## How to use it
 Pick `repin`, copy `ledger.json` → `task-ledger.json`, set `TARGET_CHIP` + `record_store`, then validate

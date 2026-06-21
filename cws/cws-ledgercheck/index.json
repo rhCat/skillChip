@@ -1,9 +1,9 @@
 {
   "skill": "cws-ledgercheck",
-  "skill_sha": "64b437c480a4fe2cebbbac9e423bdaa512dd63c8ffe1db940c3c3b07581c4254",
+  "skill_sha": "699a339026d5175441c754a85f4ea53ea053f75873dc5b99d474feb20cf9cc7a",
   "file_count": 38,
   "files": {
-    "SKILL.md": "416a0225588d8ced1c5e0e3fc497d901a61a83d3fe62b32167e26aa73ddefbd9",
+    "SKILL.md": "9e72358438e7f3b1440f208243bc004de552bcc8d687386bcf28d27f9a062dcf",
     "blueprint.drawio": "1fdebb79ad36d8ba6f100d0ee9fc6206951a828962716f0107a6b1fb870e5559",
     "blueprint.json": "b4b01f5dd65b83cf9d995a8efa9c0b7520d7eaa3f4d409482d636291620b8c41",
     "blueprint.svg": "141454389fa46bac937a0b4c914a33d18935f56d4604f9c167fe8a092898f196",
