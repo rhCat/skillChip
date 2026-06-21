@@ -1,7 +1,7 @@
 ---
 skill: cws-neoclaw
 name: Neoclaw — operate a govd node
-perks: [discover]
+perks: [discover, run]
 ---
 
 # cws-neoclaw — the agent's governed handle to a govd node
@@ -20,19 +20,28 @@ a reachable node returns its identity (which **chip_sha** it runs — so you kno
 governed catalog. A non-zero exit means the node is down / unreachable — an honest "not operable" signal, with
 the reason recorded. LOGS TO CHECK: that line + `discover.json` + the executor run-ledger.
 
+`run` → `run.json` `{node, target:"skill/perk", decision, plan_sha, ledger, ok}`: the node's verdict on a
+forwarded sub-claim plus a pointer to the run's ledger. `decision` is `allow` (ran), `push_back` (destructive —
+re-submit with `APPROVE`), or `reject`. The node BLESSES + grants every step; the porters run faithfully under
+the node's **non-root** identity (the executor's no-root gate). neoclaw carries the verdict, never the task data.
+
 ## Perks
 | perk | tool | nature |
 |---|---|---|
-| `discover` | `neoclaw_discover` | GET a node's `/health` + `/catalog` over HTTP — read-only / safe; needs a reachable node |
+| `discover` | `neoclaw_discover` | GET a node's `/health` + `/catalog` over HTTP — read-only / safe; portable (urllib only) |
+| `run` | `neoclaw_run` | forward a governed sub-claim to a node (`run_governed`) — the node blesses + oversees; verdict + ledger returned. Needs a registry matching the node's chip |
 
 - **`discover`** — set `NODE_URL` (a govd base url, e.g. `http://127.0.0.1:5773`). Output: `discover.json`.
+- **`run`** — set `NODE_URL` + `SUB_LEDGER` (abs path to the sub-claim task-ledger) + optional `APPROVE`
+  (space-separated rule ids for a destructive sub-claim). Output: `run.json`.
 
 ## How to use it
-Pick a perk, copy `ledger.json` → `task-ledger.json`, set `NODE_URL` + `record_store`, then validate →
+Pick a perk, copy `ledger.json` → `task-ledger.json`, set its vars + `record_store`, then validate →
 compose → compile → oversight → executor.
 
 ## Scope / coming
-`discover` is the read path (operate-by-knowing). The act path — `run` (submit a governed claim to the node)
-and `status` (node health/liveness) — comes next, and lands on the node-side **receiving auth** (caller token +
-scope) so a detached node only accepts scoped, authenticated claims. Secrets stay node-side (resolved at the
-exod boundary, never in the agent's namespace); the agent only ever names handles, never values.
+`discover` (read) + `run` (act) are the operate path. Still to come: `status` (node liveness rollup), and the
+node-side **receiving auth** (caller token + scope) so a *detached* node only accepts scoped, authenticated
+claims. Execution is caller-side until the **govd→exod** server-side dispatch lands; the non-root foundation is
+already in place (the executor refuses uid 0). Secrets stay node-side (resolved at the exod boundary, never in
+the agent's namespace); the agent only ever names handles, never values.

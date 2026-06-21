@@ -66,8 +66,8 @@
     },
     {
       "skill": "cws-neoclaw",
-      "skill_sha": "7b399872c9edb9c77b8877a4d5253d3ce1af1763314431b77da7b9cea356b817",
-      "file_count": 10
+      "skill_sha": "4ed2e342edcae7f80d6c80c4146a6986a07793564fdf21dbbf213012c5d87e00",
+      "file_count": 16
     },
     {
       "skill": "cws-observe",
@@ -195,5 +195,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "92bae2c482bfa24dca853441f6eaf90acb1bc06b6372cf286982bfe3cf9074f8"
+  "chip_sha": "8bfdab055ada9201c3350ef4b425c4564a7a5a27496446eeb9e9e84c11302cd8"
 }

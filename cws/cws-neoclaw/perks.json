@@ -8,6 +8,14 @@
       "tools": [
         "neoclaw_discover"
       ]
+    },
+    {
+      "id": "run",
+      "summary": "forward a governed claim to a node — submit a sub-claim (run_governed), the node blesses + oversees every step (faithful non-root execution), returns the verdict + ledger pointer; destructive sub-claims push_back until APPROVE",
+      "destructive": false,
+      "tools": [
+        "neoclaw_run"
+      ]
     }
   ]
 }

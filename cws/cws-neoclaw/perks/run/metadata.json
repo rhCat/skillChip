@@ -1,0 +1,20 @@
+{
+  "perk": "run",
+  "skill": "cws-neoclaw",
+  "description": "forward a governed claim to a node — submit a sub-claim to the node's govd, run it under the node's per-step oversight, return the verdict + ledger pointer",
+  "rules": [
+    "the agent only KNOWs + NAMES the claim; the node's govd governs (bless / push_back / refuse) and grants every step",
+    "execution is faithful under the node's non-root identity (the executor's no-root gate) — never root",
+    "a destructive sub-claim push_backs until APPROVE waives the named rule; the verdict + ledger pointer are recorded, never the task data"
+  ],
+  "usage": "Set NODE_URL (the node's govd base url) + SUB_LEDGER (abs path to the sub-claim task-ledger: skill/perk/vars/record_store) + optional APPROVE (space-separated rule ids). Output: run.json — node, target skill/perk, decision, plan_sha, ledger url, ok.",
+  "limitation": "Needs a reachable node + a registry matching the node's blessed chip. Drives infra.govern.govd_client (run_governed) — not portable like discover. Execution is caller-side until govd→exod server-side dispatch lands.",
+  "minimal_example": {
+    "perk": "run",
+    "vars": {
+      "NODE_URL": "http://127.0.0.1:5773",
+      "SUB_LEDGER": "/abs/path/to/sub-claim.json",
+      "APPROVE": ""
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "_perk": "run",
+  "sequence": [
+    "neoclaw_run"
+  ],
+  "tools": {
+    "neoclaw_run": {
+      "binary": "python3",
+      "params": {
+        "NODE_URL": "${NODE_URL}",
+        "SUB_LEDGER": "${SUB_LEDGER}",
+        "APPROVE": "${APPROVE}"
+      }
+    }
+  },
+  "env": {
+    "NODE_URL": "${NODE_URL}",
+    "SUB_LEDGER": "${SUB_LEDGER}",
+    "APPROVE": "${APPROVE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}
