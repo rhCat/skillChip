@@ -26,7 +26,7 @@
     },
     {
       "skill": "cws-bench",
-      "skill_sha": "75aaa86590806cbf2d0eb6fd5092f53416e785326f5be5a5356c180d2425c543",
+      "skill_sha": "7520e35e9ead4ab519cf57711310e8cf4e85bb099e55ae040b78debd55b2504c",
       "file_count": 28
     },
     {
@@ -195,5 +195,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "00c83b8961f16584132819f33de4bcbde81524e9703129e226c27d613aea4415"
+  "chip_sha": "7a9ae2facb0465245b79e844df9b3b47ff5a3f2906212bc90a2d00a5112ff41c"
 }

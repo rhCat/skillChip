@@ -54,9 +54,11 @@ def main() -> int:
     store = os.environ["RECORD_STORE"].rstrip("/")
     os.makedirs(store, exist_ok=True)
     out = os.path.join(store, "bench.json")
-    env = dict(os.environ, GOVD_RECORD_ROOT=tempfile.mkdtemp(prefix="sse-bench-"),
-               GOVD_MONITOR_TOKEN="admin", GOVD_SSE_INTERVAL="0.2")
+    # measure at govd's SHIPPED default interval (1.0s) — not a faster test value — so the budget covers
+    # what actually ships; push latency is then bounded by interval + serialize overhead (~1.05s < 1500ms).
+    env = dict(os.environ, GOVD_RECORD_ROOT=tempfile.mkdtemp(prefix="sse-bench-"), GOVD_MONITOR_TOKEN="admin")
     env.pop("GOVD_PRINCIPALS", None)
+    env.pop("GOVD_SSE_INTERVAL", None)
     proc = subprocess.Popen([sys.executable, "-m", "infra.govern.govd", "--mode", "local", "--port", str(PORT)],
                             cwd=_root, env=env)
     resp = None

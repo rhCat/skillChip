@@ -1,6 +1,6 @@
 {
   "skill": "cws-bench",
-  "skill_sha": "75aaa86590806cbf2d0eb6fd5092f53416e785326f5be5a5356c180d2425c543",
+  "skill_sha": "7520e35e9ead4ab519cf57711310e8cf4e85bb099e55ae040b78debd55b2504c",
   "file_count": 28,
   "files": {
     "SKILL.md": "c5cccf68ce05f709ef6a540d939d09d0e79b7827e7c26550aec84592ef612736",
@@ -27,7 +27,7 @@
     "perks/org-isolation/test/case.json": "6bcb525ee950da970bbb3b4bdd4470723a303307b9ab49827f3d56957269af99",
     "perks/sse-latency/manifesto.json": "711834df0b228a047283905ca581780a79de63b52415dcf5cc1778fb3f7ec455",
     "perks/sse-latency/metadata.json": "b803a050aaafcc89ed737f83dcd301fc2bf9537987d973075307f4191f08cc4c",
-    "perks/sse-latency/src/bench_sse_latency.py": "3dcff894dcb9309909ee2487f0d175470936bf64bed34f426a560b52e30c4474",
+    "perks/sse-latency/src/bench_sse_latency.py": "e6ab881417b6b02228b6726dac728c00ae80af170f21323cb0f3c1ed73ea7eea",
     "perks/sse-latency/src/bench_sse_latency.sh": "862bff0e45c09f0ac166040bae2ca37b17268040d149a225542ad0462fca30a6",
     "perks/sse-latency/src/contracts.json": "8ed16fa9840645bcf9cc49b1ae2febdfa7a9523b386e0fe29acffb671189e76b",
     "perks/sse-latency/test/case.json": "3793fc37a5602383b2b8fc3d031b610ce0dcc93b28f723cc913189d74e189982"
