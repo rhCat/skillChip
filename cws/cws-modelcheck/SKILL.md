@@ -1,7 +1,7 @@
 ---
 skill: cws-modelcheck
 name: Model Check
-perks: [check, corpus, prove, saga, algebra, workflow]
+perks: [check, corpus, prove, saga, algebra, workflow, settlement]
 ---
 
 # cws-modelcheck — Model Check (SV-5 precursor)

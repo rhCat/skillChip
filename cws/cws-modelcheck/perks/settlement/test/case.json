@@ -1,0 +1,9 @@
+{
+  "_perk": "settlement",
+  "requires": ["python3", "apalache-mc"],
+  "vars": {},
+  "expect": {
+    "outputs": ["settlement.json"],
+    "contains": {"settlement.json": ["\"ok\": true", "\"empirical_plus_symbolic_pass\": true", "\"money_mutants_fail\": true"]}
+  }
+}

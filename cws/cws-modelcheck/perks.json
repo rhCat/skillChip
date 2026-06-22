@@ -48,6 +48,14 @@
       "tools": [
         "cws_workflow"
       ]
+    },
+    {
+      "id": "settlement",
+      "summary": "model-check the settlement lifecycle (P4-T06) \u2014 TLC + Apalache pass; 3 money mutants each caught",
+      "destructive": false,
+      "tools": [
+        "cws_settlement"
+      ]
     }
   ]
 }

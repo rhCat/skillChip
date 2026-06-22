@@ -1,0 +1,7 @@
+{
+  "_perk": "settlement",
+  "sequence": ["cws_settlement"],
+  "tools": {"cws_settlement": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}

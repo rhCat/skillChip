@@ -1,0 +1,5 @@
+{
+  "perk": "settlement",
+  "summary": "model-check the settlement lifecycle (P4-T06) — empirical TLC + symbolic Apalache pass; 3 money mutants (settle-before-validate / double-settle / strand-escrow) each caught",
+  "destructive": false
+}

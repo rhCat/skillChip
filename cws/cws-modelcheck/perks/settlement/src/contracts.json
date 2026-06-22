@@ -1,0 +1,6 @@
+{
+  "tool": "cws_settlement",
+  "inputs": {},
+  "outputs": {"settlement_out": {"path": "${RECORD_STORE}/settlement.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/settlement.json"}
+}
