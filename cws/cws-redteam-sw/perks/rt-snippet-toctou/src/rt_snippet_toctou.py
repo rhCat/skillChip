@@ -52,8 +52,15 @@ def main() -> int:
     porter = os.path.join(src, "tool.sh")
     open(porter, "w").write("#!/usr/bin/env bash\necho ok\n")
     digest = hashlib.sha256(open(porter, "rb").read()).hexdigest()
-    open(os.path.join(sb, "chip", "sk", "index.json"), "w").write(
-        json.dumps({"files": {"perks/pk/src/tool.sh": digest}}))
+    # P1-T06: the executor derives the step set from the perk's manifesto sequence (the blessed plan), not
+    # the script's --list, and AUTHENTICATES the manifesto against its blessed sha — so a faithful mock ships
+    # the manifesto AND blesses its sha in index.json. (Without it the run fails CLOSED: no declared step,
+    # nothing executes — a held boundary, but not THIS attack's oracle.)
+    mbody = json.dumps({"sequence": ["tool"]}).encode()
+    open(os.path.join(sb, "chip", "sk", "perks", "pk", "manifesto.json"), "wb").write(mbody)
+    open(os.path.join(sb, "chip", "sk", "index.json"), "w").write(json.dumps({"files": {
+        "perks/pk/src/tool.sh": digest,
+        "perks/pk/manifesto.json": hashlib.sha256(mbody).hexdigest()}}))
     rec = os.path.join(sb, "rec")
     script = os.path.join(sb, "run.sh")
     open(script, "w").write(SCRIPT.replace("__SNIP__", shlex.quote(src)).replace("__REC__", shlex.quote(rec)))
@@ -65,11 +72,20 @@ def main() -> int:
     led = os.path.join(rec, "run-ledger.json")
     recorded = os.path.isfile(led) and any(r.get("event") == "snippet_refused"
                                            for r in json.load(open(led)).get("runs", []))
-    held = clean_accepted and refused and recorded
-    json.dump({"perk": "rt-snippet-toctou", "attack": "mutate a perk porter after blessing",
-               "boundary": "infra.govern.snippetverify via executor (exit 8, SV-2 software boundary)",
+    # P1-T06 variant — the manifesto-decouple attack: swap the sibling manifesto so the step->tool map names
+    # a tool NOT in the blessed set (snippet-verify would then look for the wrong file, silently no-op) while
+    # the wrapper still runs the (already-mutated) porter. The executor authenticates the manifesto against
+    # its blessed sha, so the swap yields no declared steps and the tampered porter NEVER runs.
+    open(porter, "w").write('#!/usr/bin/env bash\necho INJECTED_VIA_MANIFEST_SWAP\n')
+    open(os.path.join(sb, "chip", "sk", "perks", "pk", "manifesto.json"), "w").write(
+        json.dumps({"sequence": ["renamed_so_snippet_check_misses"]}))
+    swap = _exec(script, "1")
+    swap_refused = swap.returncode != 0 and "INJECTED_VIA_MANIFEST_SWAP" not in swap.stdout
+    held = clean_accepted and refused and recorded and swap_refused
+    json.dump({"perk": "rt-snippet-toctou", "attack": "mutate a perk porter after blessing (+ manifest swap)",
+               "boundary": "infra.govern.snippetverify + plan_steps manifest auth via executor (SV-2)",
                "clean_accepted": clean_accepted, "refused": refused, "refusal_recorded": recorded,
-               "boundary_held": held}, open(out, "w"), indent=2)
+               "manifest_swap_refused": swap_refused, "boundary_held": held}, open(out, "w"), indent=2)
     print(json.dumps({"tool": "rt_snippet_toctou", "status": "held" if held else "BREACH", "report": out}))
     return 0 if held else 1
 

@@ -4,6 +4,7 @@
 Software-tier red-team (SV-1/SV-2). The clean first run is accepted (oracle: it takes the .bk snapshot);
 a post-snapshot edit must be refused (exit 4) with a tamper_refused event recorded. Exit 0 iff held."""
 from __future__ import annotations
+import hashlib
 import json
 import os
 import shlex
@@ -22,9 +23,10 @@ if os.path.isdir(os.path.join(_root, "infra", "govern")):
 
 SCRIPT = r'''#!/usr/bin/env bash
 set -uo pipefail
+SNIP=__SNIP__
 RECORD_STORE=__REC__
 mkdir -p "$RECORD_STORE"
-step1() { echo "[step 1] s1"; echo ok > "$RECORD_STORE/m.txt"; }
+step1() { echo "[step 1] s1"; bash "$SNIP/s1.sh" || exit $?; }
 case "${1:-}" in
   --list) printf "1\ts1\n" ;;
   --step) shift; "step${1:?step}" ;;
@@ -44,9 +46,21 @@ def main() -> int:
     out = os.path.join(store, "redteam.json")
     os.makedirs(store, exist_ok=True)
     sb = tempfile.mkdtemp(prefix="rt-tamper-")
+    # P1-T06: a faithful compiled script is backed by a perk dir whose manifesto is blessed in index.json
+    # (the executor authenticates it before declaring steps). The clean-run oracle needs a REAL step to run,
+    # so build the perk closure; the attack edits run.sh, which the tamper-check catches before step derivation.
+    src = os.path.join(sb, "chip", "sk", "perks", "pk", "src")
+    os.makedirs(src)
+    porter = os.path.join(src, "s1.sh")
+    open(porter, "w").write("#!/usr/bin/env bash\necho ok\n")
+    mbody = json.dumps({"sequence": ["s1"]}).encode()
+    open(os.path.join(sb, "chip", "sk", "perks", "pk", "manifesto.json"), "wb").write(mbody)
+    open(os.path.join(sb, "chip", "sk", "index.json"), "w").write(json.dumps({"files": {
+        "perks/pk/src/s1.sh": hashlib.sha256(open(porter, "rb").read()).hexdigest(),
+        "perks/pk/manifesto.json": hashlib.sha256(mbody).hexdigest()}}))
     rec = os.path.join(sb, "rec")
     script = os.path.join(sb, "run.sh")
-    open(script, "w").write(SCRIPT.replace("__REC__", shlex.quote(rec)))
+    open(script, "w").write(SCRIPT.replace("__SNIP__", shlex.quote(src)).replace("__REC__", shlex.quote(rec)))
     clean = _exec(script)
     clean_accepted = clean.returncode == 0
     open(script, "a").write("\n# adversarial edit after snapshot\n")

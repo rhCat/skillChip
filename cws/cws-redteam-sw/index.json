@@ -1,6 +1,6 @@
 {
   "skill": "cws-redteam-sw",
-  "skill_sha": "f0260882dfb4fd61000ec40ac768478603e4272b622fd1e84e5aa6c4baf1e7fa",
+  "skill_sha": "42401e5490cf8e4812c7a52e19f5bb4df905eaba6305d4d8e730ed82a8f1f028",
   "file_count": 40,
   "files": {
     "SKILL.md": "eb4ff4fcff9b22dc220b03c5a5da1e5d94fdff8f1cca3c902c7fcf7c95abe3b9",
@@ -34,13 +34,13 @@
     "perks/rt-snippet-toctou/manifesto.json": "c4fa585b3700663f684f93ef5c89b0582c6e8f2d02d2b9555993e6db0dabc4b3",
     "perks/rt-snippet-toctou/metadata.json": "7e5669634d6db9f90c570a12f0df98f0dc8f66f8f8f71a3dd09b0d98860ce215",
     "perks/rt-snippet-toctou/src/contracts.json": "1ba01f435627cf02b5af72997ee908193cbc087005917d34a25a155f5e484391",
-    "perks/rt-snippet-toctou/src/rt_snippet_toctou.py": "13ec2edbeea01296557ecefbe515c891e8a0ca4feefb579ce50616cb6cde6515",
+    "perks/rt-snippet-toctou/src/rt_snippet_toctou.py": "38be1bf5f51f00ca0e2b5f85543724a33f7be79f985165aa694ec2017878a471",
     "perks/rt-snippet-toctou/src/rt_snippet_toctou.sh": "c7f89a6294e6d4ff444d4b76dde84e21d5da3ff507f177ca6def20f04aa039ea",
     "perks/rt-snippet-toctou/test/case.json": "2f7a99a2809c9e95cebe9aaeffc7a47668638e4c0c62df83be5783d95eef4683",
     "perks/rt-tamper-script/manifesto.json": "f63a15aeb97af4a2be39ff7d61a487c7e34e0acfb4ef4c52adeb1b16f9981e63",
     "perks/rt-tamper-script/metadata.json": "885d7278d970fc5a54ccbd1600cb67a789ce6b2c5fca8075240f16d435ce57e5",
     "perks/rt-tamper-script/src/contracts.json": "e597bb435037172824573ead2a0f9e378d818e2ebac300e22cc5834818b11057",
-    "perks/rt-tamper-script/src/rt_tamper_script.py": "4ff1bde0a8e443819e87b00f75bc9cb6d58c47a8c4496b3c65316721bc79ae8a",
+    "perks/rt-tamper-script/src/rt_tamper_script.py": "6e1739b3dafcb92e3ac3105406754a77e76d0bbc1bca4a0ec29ad058cf8bfd5a",
     "perks/rt-tamper-script/src/rt_tamper_script.sh": "bdded33b2f57ebbd27f485b44b5ee46aebd00e0405e5253e21be901d9a08f542",
     "perks/rt-tamper-script/test/case.json": "d6aa153b362f8031a53c102743d0f53bb433aa5cd1f46782e3b26ffc266a3d2f"
   }
