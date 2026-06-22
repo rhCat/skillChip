@@ -1,0 +1,7 @@
+{
+  "_perk": "escrow-expiry",
+  "sequence": ["settle_escrow_expiry"],
+  "tools": {"settle_escrow_expiry": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}

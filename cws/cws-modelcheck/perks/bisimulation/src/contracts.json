@@ -1,0 +1,6 @@
+{
+  "tool": "cws_bisimulation",
+  "inputs": {},
+  "outputs": {"bisim_out": {"path": "${RECORD_STORE}/bisimulation.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/bisimulation.json"}
+}

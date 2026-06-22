@@ -1,0 +1,5 @@
+{
+  "perk": "escrow-expiry",
+  "summary": "escrow liveness (P6-T03) — every escrow carries expires_at; a sweep auto-refunds stalled escrow at expiry; no escrow older than its bound holds value; balanced + globally zero-sum + idempotent",
+  "destructive": false
+}

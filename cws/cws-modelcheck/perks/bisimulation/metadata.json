@@ -1,0 +1,5 @@
+{
+  "perk": "bisimulation",
+  "summary": "code\u2194blueprint bisimulation (P6-T07) \u2014 the implemented settlement lifecycle maps transition-for-transition onto settlement.blueprint.json; a seeded extra transition breaks it",
+  "destructive": false
+}

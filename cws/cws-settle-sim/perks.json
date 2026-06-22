@@ -112,6 +112,14 @@
       "tools": [
         "settle_reputation"
       ]
+    },
+    {
+      "id": "escrow-expiry",
+      "summary": "escrow liveness (P6-T03) \u2014 expires_at + auto-refund sweep; no stale escrow; zero-sum + idempotent",
+      "destructive": false,
+      "tools": [
+        "settle_escrow_expiry"
+      ]
     }
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "tool": "settle_escrow_expiry",
+  "inputs": {},
+  "outputs": {"escrow_expiry_out": {"path": "${RECORD_STORE}/escrow_expiry.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/escrow_expiry.json"}
+}

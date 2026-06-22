@@ -56,6 +56,14 @@
       "tools": [
         "cws_settlement"
       ]
+    },
+    {
+      "id": "bisimulation",
+      "summary": "code\u2194blueprint bisimulation (P6-T07) \u2014 implemented settlement lifecycle == settlement.blueprint.json; seeded extra transition fails",
+      "destructive": false,
+      "tools": [
+        "cws_bisimulation"
+      ]
     }
   ]
 }

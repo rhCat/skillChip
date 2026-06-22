@@ -1,0 +1,6 @@
+{
+  "_perk": "escrow-expiry",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {"outputs": ["escrow_expiry.json"], "contains": {"escrow_expiry.json": ["\"ok\": true", "\"no_stale_escrow_after_sweep\": true"]}}
+}

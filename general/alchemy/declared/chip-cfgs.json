@@ -1222,6 +1222,48 @@
       "exit"
     ]
   },
+  "cws/cws-modelcheck/perks/bisimulation/src/cws_bisimulation.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt4"
+      ],
+      [
+        "stmt4",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "stmt7"
+      ],
+      [
+        "stmt7",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt4",
+      "stmt6",
+      "stmt7",
+      "exit"
+    ]
+  },
   "cws/cws-modelcheck/perks/check/src/cws_check.py": {
     "edges": [
       [
@@ -3198,6 +3240,43 @@
     ]
   },
   "cws/cws-settle-sim/perks/dispute/src/settle_dispute.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "exit"
+    ]
+  },
+  "cws/cws-settle-sim/perks/escrow-expiry/src/settle_escrow_expiry.py": {
     "edges": [
       [
         "stmt0",

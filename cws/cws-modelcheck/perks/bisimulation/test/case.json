@@ -1,0 +1,6 @@
+{
+  "_perk": "bisimulation",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {"outputs": ["bisimulation.json"], "contains": {"bisimulation.json": ["\"ok\": true", "\"bisimilar\": true", "\"seeded_extra_transition_fails\": true"]}}
+}
