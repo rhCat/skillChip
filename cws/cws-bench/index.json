@@ -1,17 +1,23 @@
 {
   "skill": "cws-bench",
-  "skill_sha": "fd97b0ce879e11d9a058bec8f31f4a6a84fa07aa543c25cbb82b38058e3f59e0",
-  "file_count": 10,
+  "skill_sha": "d8fe5abf12b90662a856411072747581b393bad9c0814ae0c699c5695a74d077",
+  "file_count": 16,
   "files": {
-    "SKILL.md": "69404c94217d1e6f1bded0f8878c3374858ba72c342b67d0f1cca278a947fb42",
+    "SKILL.md": "e83a6806bf3518462f4fe299ddaf11c25a9aded40df07be432559d1bf1a5a3ee",
     "blueprint.json": "5ffe1c7d358abd9d13f48737689ff08ebdcf303334d35a38deae685f4c4eb8fc",
     "ledger.json": "fd8ac5a2f96f6492895cd49aa5857512b859c697fc00b75e6969987628754cac",
-    "perks.json": "27d3c4ed84abe5e275a64d7357bac740c35b180f9c3175ea331a8850fc6fc460",
+    "perks.json": "52033a82bb9990fc3003c963db9c2911efac4be7eb3c0bfc340f2671606980aa",
     "perks/bwrap-overhead/manifesto.json": "a38f62fea2b16fc082a8e485cb186c6bf1766a6f492a4d3988180a257a435e7a",
     "perks/bwrap-overhead/metadata.json": "6dedcb2d3c3ceeb36ad423e4e1b99eae36363d29b3305a91cefcf65b229fc267",
     "perks/bwrap-overhead/src/bench_bwrap_overhead.py": "d7583bdb3b0cb187a06d46706e53c47a1a59ed5a3f6d23466b7f8f2a8288ada6",
     "perks/bwrap-overhead/src/bench_bwrap_overhead.sh": "9a075b3b4afe53c4636db2734c46cf51f1b519c7136cb1a68c50df03f0817f2a",
     "perks/bwrap-overhead/src/contracts.json": "db3daa8baaf3c7ea28bf2effecd88ad2d1717df4c3da1400e84a2445f79d04cb",
-    "perks/bwrap-overhead/test/case.json": "64072c164dad1447844298ab14a4a0cd60c2e1fca3b98408f73ef642a0a56717"
+    "perks/bwrap-overhead/test/case.json": "64072c164dad1447844298ab14a4a0cd60c2e1fca3b98408f73ef642a0a56717",
+    "perks/microvm-overhead/manifesto.json": "c3d8628a603b1d9f5a20986e307aa709236a93b5748ae126b530f81f38976380",
+    "perks/microvm-overhead/metadata.json": "c44b79c9fbf4ac87f295779dfaf19d92086062c7461baf153e12f54ef1271483",
+    "perks/microvm-overhead/src/bench_microvm_overhead.py": "823e45ff1e26b40317862d87cc9a5c5b126c5371e15fe70804b988d8591e93ff",
+    "perks/microvm-overhead/src/bench_microvm_overhead.sh": "7f339f96a3053f8dcbd2cf5e934cc8ccaab677793bc768527f31a6ec5806e013",
+    "perks/microvm-overhead/src/contracts.json": "df1aaf834fd7f932a2ea6a2a39091b2ad2c0b1ef488b6c52381c8ff18605be70",
+    "perks/microvm-overhead/test/case.json": "2495e60d716b745f333381631cfad02727948df5f77c4d84efdc5e5778976b2e"
   }
 }

@@ -82,7 +82,9 @@ def main() -> int:
     tpath = os.path.join(swarm, f"{task_id}.json")
     if not os.path.isfile(tpath):
         return refuse(f"no such task in swarm: {task_id}")
-    validator = json.load(open(tpath)).get("validated_by")
+    task = json.load(open(tpath))
+    validator = task.get("validated_by")
+    validated_perk = task.get("validated_perk")
 
     if not os.path.isfile(run_ledger_path):
         return refuse(f"run-ledger not found: {run_ledger_path}")
@@ -100,6 +102,21 @@ def main() -> int:
             ran_skill = json.load(open(sib)).get("skill")
     if validator and ran_skill and ran_skill != validator:
         return refuse(f"evidence is from '{ran_skill}', but {task_id} is validated_by '{validator}'")
+
+    # bind to the validator's PERK too when the task pins one. A multi-perk validator (e.g. cws-bench ships
+    # BOTH a /dev/kvm-gated `microvm-overhead` and a kvm-free `bwrap-overhead`) would otherwise let the wrong
+    # perk's clean run redeem the task — closing a microVM budget with no microVM ever booted. The perk is
+    # recorded in the govd ledger; an executor ledger carries it in the sibling task-ledger.json. Fail CLOSED:
+    # a pinned perk with no perk in the evidence is refused.
+    if validated_perk:
+        ran_perk = evidence.get("perk") if "events" in evidence else None
+        if ran_perk is None:
+            sib = os.path.join(os.path.dirname(os.path.abspath(run_ledger_path)), "task-ledger.json")
+            if os.path.isfile(sib):
+                ran_perk = json.load(open(sib)).get("perk")
+        if ran_perk != validated_perk:
+            return refuse(f"evidence is from perk '{ran_perk}', but {task_id} requires "
+                          f"validated_perk '{validated_perk}'")
 
     # Decision-4 migration: redemptions append to the NEW canonical chain (major 2), NEVER to frozen v1.
     # Standard swarm: done-ledger.json (frozen v1) + a sibling done-ledger-v2.json. A path NOT named

@@ -1,0 +1,19 @@
+{
+  "_perk": "microvm-overhead",
+  "requires": [
+    "python3",
+    "firecracker"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "bench.json"
+    ],
+    "contains": {
+      "bench.json": [
+        "\"within\": true",
+        "\"backend\": \"microvm\""
+      ]
+    }
+  }
+}

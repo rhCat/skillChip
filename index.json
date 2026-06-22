@@ -11,7 +11,7 @@
     },
     {
       "skill": "alchemy",
-      "skill_sha": "4255abf4089a8ace654d8491c35d1b8e1cc84ab71fc8d82cb7f2312b501a6be7",
+      "skill_sha": "6dc1c3bff950f6ccd0e6a312bf869d28dd760d3fb1bcaa4936b10e98db1f1008",
       "file_count": 36
     },
     {
@@ -81,8 +81,8 @@
     },
     {
       "skill": "cws-bench",
-      "skill_sha": "fd97b0ce879e11d9a058bec8f31f4a6a84fa07aa543c25cbb82b38058e3f59e0",
-      "file_count": 10
+      "skill_sha": "d8fe5abf12b90662a856411072747581b393bad9c0814ae0c699c5695a74d077",
+      "file_count": 16
     },
     {
       "skill": "cws-chaos",
@@ -126,7 +126,7 @@
     },
     {
       "skill": "cws-observe",
-      "skill_sha": "d29d742cf9670881685885997e5441635c78aa6c945ee3c3c94457d3fdd98762",
+      "skill_sha": "121d964e2bea91219c1cc0f99c101b91ecd7a6b416c9fb6de0772d6a387b7233",
       "file_count": 26
     },
     {
@@ -1105,5 +1105,5 @@
       "file_count": 39
     }
   ],
-  "chip_sha": "85adb608c6fd4b8b8d84211195ef8c9843bf05b5912a46bf389a7839e1b37cab"
+  "chip_sha": "ee5d1837542b870bd1babad5179023c21c7794d7de9b9cfa34ee578e492b7f56"
 }

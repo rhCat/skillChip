@@ -8,6 +8,14 @@
       "tools": [
         "bench_bwrap_overhead"
       ]
+    },
+    {
+      "id": "microvm-overhead",
+      "summary": "time a real Firecracker microVM cold boot (<=1500ms) + warm snapshot-resume (<=250ms) through /dev/kvm (P2-T09 microVM budget); skipped/raises without hardware virtualization, never faked",
+      "destructive": false,
+      "tools": [
+        "bench_microvm_overhead"
+      ]
     }
   ]
 }
