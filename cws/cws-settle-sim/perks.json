@@ -96,6 +96,22 @@
       "tools": [
         "settle_reward_verify"
       ]
+    },
+    {
+      "id": "markets",
+      "summary": "bounty + reverse auction (P6-T10) \u2014 one validated winner (losers untouched); lowest qualified bid clears below posted",
+      "destructive": false,
+      "tools": [
+        "settle_markets"
+      ]
+    },
+    {
+      "id": "reputation",
+      "summary": "principal reputation (P6-T13) \u2014 scores reproducible from public ledger + signed; /rep privacy-gated",
+      "destructive": false,
+      "tools": [
+        "settle_reputation"
+      ]
     }
   ]
 }

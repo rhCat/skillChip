@@ -1,0 +1,5 @@
+{
+  "perk": "reputation",
+  "summary": "principal reputation (P6-T13) — per-principal scores recomputable from public ledger data alone + signed; /rep privacy-gated (counterparty detail vs aggregate-only)",
+  "destructive": false
+}

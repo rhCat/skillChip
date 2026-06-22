@@ -1,7 +1,7 @@
 ---
 skill: cws-settle-sim
 name: Settlement simulator (the money's lifecycle)
-perks: [floatban, zerosum, quote, settle, manipulate, dispute, simulate, capstone, pricer, rail, credits, reward-verify]
+perks: [floatban, zerosum, quote, settle, manipulate, dispute, simulate, capstone, pricer, rail, credits, reward-verify, markets, reputation]
 ---
 
 # cws-settle-sim — the SV-6 settlement validator (M6, "the work pays for the work")
@@ -26,6 +26,9 @@ REAL runs.
 | `pricer` | price.py (#110) | **plan pricer** — `price_plan` prices a governed run from its **value-free PLAN, before it runs**: context tokens (SKILL.md + blueprint + perk metadata) + output tokens × model rate + tool fee + marketplace %. The itemized subtotal and the total **sum exactly** (Money, scale-4); a seeded `tool_fee` flows into the total; freeform pricing differs from contract pricing; `infra/settle` stays float-clean. |
 | `rail` | rails.py (#113) | **settle-time tax rail** — the platform tax is collected **at settle, never as an agent action and never from a hidden portal**: `charge_from_price` splits into substrate / skill-author / marketplace as **visible lines** that re-sum to the total (an over-total split is **refused** — no skim); `LedgerRail`/`StripeRail`/`CreditRail` are pluggable, `StripeRail` stays **inert until keyed**, and `collect_run_tax` settles zero-sum and is **idempotent** per `plan_sha`. |
 | `credits` | credits.py (#116) | **credit usage-billing** — a prepaid balance + per-call **debits**, not per-call card fees: a top-up credits the balance, each priced run **debits** its usage tax as a zero-sum posting set, the balance **draws down**, and a run whose tax **exceeds** the balance is **refused** (the structural gate); debits are **idempotent** per `plan_sha`. |
+| `reward-verify` | P6-T06 | **money↔work cross-check** — `infra/settle/reward_verify.py` proves the MONEY trail (settlement posting sets) and the WORK trail (dual-signed, validation:pass, quote-bound receipts) are a clean **bijection**: a settlement with no authorizing receipt (`money_without_work`), an authorized receipt never paid (`work_without_money`), or a double-settled quote is flagged — on top of chain + per-record + global zero-sum. |
+| `markets` | P6-T10 | **bounty + reverse auction** — a bounty pays **exactly one** validated winner (losers' balances untouched, prize escrow drained to zero, globally zero-sum; refunds the poster when none validate); a **reverse auction** clears at the **lowest qualified** bid at/below the posted ceiling, strictly **below posted** under competition. |
+| `reputation` | P6-T13 | **principal reputation** — `infra/settle/reputation.py` computes per-principal scores + a public FMV point from **public ledger data alone** (a third party recomputes them byte-for-byte), Ed25519-**signed** (a tamper breaks it); the `/rep` view is **privacy-gated** — an authenticated counterparty sees per-principal detail, everyone else gets aggregates only. |
 
 ## Scope / residuals (stated honestly)
 The two value-integrity guards above — **per-quote escrow** and the **spent-quote idempotency guard** — were

@@ -1,0 +1,9 @@
+{
+  "_perk": "markets",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "outputs": ["markets.json"],
+    "contains": {"markets.json": ["\"ok\": true", "\"bounty_one_winner\": true", "\"auction_clears_below_posted\": true"]}
+  }
+}

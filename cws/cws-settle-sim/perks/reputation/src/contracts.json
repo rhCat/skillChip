@@ -1,0 +1,6 @@
+{
+  "tool": "settle_reputation",
+  "inputs": {},
+  "outputs": {"reputation_out": {"path": "${RECORD_STORE}/reputation.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/reputation.json"}
+}

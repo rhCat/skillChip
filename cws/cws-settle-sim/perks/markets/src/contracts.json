@@ -1,0 +1,6 @@
+{
+  "tool": "settle_markets",
+  "inputs": {},
+  "outputs": {"markets_out": {"path": "${RECORD_STORE}/markets.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/markets.json"}
+}

@@ -1,0 +1,5 @@
+{
+  "perk": "markets",
+  "summary": "bounty + reverse auction (P6-T10) — exactly one validated bounty winner, losers untouched; reverse auction clears at the lowest qualified bid below posted; all balanced + globally zero-sum",
+  "destructive": false
+}

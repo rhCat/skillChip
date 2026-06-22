@@ -1,0 +1,7 @@
+{
+  "_perk": "reputation",
+  "sequence": ["settle_reputation"],
+  "tools": {"settle_reputation": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}

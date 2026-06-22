@@ -3281,6 +3281,43 @@
       "exit"
     ]
   },
+  "cws/cws-settle-sim/perks/markets/src/settle_markets.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "exit"
+    ]
+  },
   "cws/cws-settle-sim/perks/pricer/src/settle_pricer.py": {
     "edges": [
       [
@@ -3399,6 +3436,43 @@
       "stmt4",
       "stmt6",
       "stmt7",
+      "exit"
+    ]
+  },
+  "cws/cws-settle-sim/perks/reputation/src/settle_reputation.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt6",
       "exit"
     ]
   },

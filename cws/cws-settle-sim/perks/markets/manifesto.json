@@ -1,0 +1,7 @@
+{
+  "_perk": "markets",
+  "sequence": ["settle_markets"],
+  "tools": {"settle_markets": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}

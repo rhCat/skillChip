@@ -1,0 +1,9 @@
+{
+  "_perk": "reputation",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "outputs": ["reputation.json"],
+    "contains": {"reputation.json": ["\"ok\": true", "\"third_party_reproducible\": true", "\"rep_privacy\": true"]}
+  }
+}
