@@ -6,7 +6,7 @@
   "skills": [
     {
       "skill": "alchemy",
-      "skill_sha": "b4dac8dc71c362a95e0721deb13d1233147556831239a5de20cf6ecde0fd1a86",
+      "skill_sha": "cd9cb0b184abd9ce1f362ac3e6228bca7166b977a8ded867053185cf24079d96",
       "file_count": 36
     },
     {
@@ -26,8 +26,8 @@
     },
     {
       "skill": "cws-bench",
-      "skill_sha": "d8fe5abf12b90662a856411072747581b393bad9c0814ae0c699c5695a74d077",
-      "file_count": 16
+      "skill_sha": "351e9774f7be3d4809cefd7b2207d92e40e0ed7d55f0e62b0e8b4c1cb70f0278",
+      "file_count": 22
     },
     {
       "skill": "cws-chaos",
@@ -61,8 +61,8 @@
     },
     {
       "skill": "cws-mutate",
-      "skill_sha": "8f7311310427e0117c52f9afa137f85e5c0dc4c281a43f1135d183cd65e7a3c7",
-      "file_count": 32
+      "skill_sha": "dee22acb885698156763d5fe22c7274440bc19aefb0c4f726217140a26545f3d",
+      "file_count": 38
     },
     {
       "skill": "cws-neoclaw",
@@ -195,5 +195,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "555faddf156e91ea7d982322c711c9ff211ebb897cd5e990fae932a7b1e4a9af"
+  "chip_sha": "6488bfc425728e0a92188be5a23a95e0af71837ac021321969b5cb3c8f96aa88"
 }

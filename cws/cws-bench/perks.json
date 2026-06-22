@@ -16,6 +16,14 @@
       "tools": [
         "bench_microvm_overhead"
       ]
+    },
+    {
+      "id": "org-isolation",
+      "summary": "multi-tenant org isolation (P5-T03) \u2014 org\u2192principals\u2192SPIFFE; per-org roots; revocation; cross-org matrix refused",
+      "destructive": false,
+      "tools": [
+        "bench_org_isolation"
+      ]
     }
   ]
 }

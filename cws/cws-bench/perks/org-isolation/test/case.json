@@ -1,0 +1,6 @@
+{
+  "_perk": "org-isolation",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {"outputs": ["org_isolation.json"], "contains": {"org_isolation.json": ["\"ok\": true", "\"cross_org_refused\": true", "\"endpoint_matrix_isolated\": true", "\"revocation\": true"]}}
+}

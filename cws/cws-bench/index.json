@@ -1,12 +1,12 @@
 {
   "skill": "cws-bench",
-  "skill_sha": "d8fe5abf12b90662a856411072747581b393bad9c0814ae0c699c5695a74d077",
-  "file_count": 16,
+  "skill_sha": "351e9774f7be3d4809cefd7b2207d92e40e0ed7d55f0e62b0e8b4c1cb70f0278",
+  "file_count": 22,
   "files": {
-    "SKILL.md": "e83a6806bf3518462f4fe299ddaf11c25a9aded40df07be432559d1bf1a5a3ee",
+    "SKILL.md": "4b7f86966eec59e604a209280f736f32287a9a490331cdeb4f5ef331ded1f8b8",
     "blueprint.json": "5ffe1c7d358abd9d13f48737689ff08ebdcf303334d35a38deae685f4c4eb8fc",
     "ledger.json": "fd8ac5a2f96f6492895cd49aa5857512b859c697fc00b75e6969987628754cac",
-    "perks.json": "52033a82bb9990fc3003c963db9c2911efac4be7eb3c0bfc340f2671606980aa",
+    "perks.json": "fb011971ecdf534e9b32c189aeb300bb71002d2ccbb6984b636ef437437bc13c",
     "perks/bwrap-overhead/manifesto.json": "a38f62fea2b16fc082a8e485cb186c6bf1766a6f492a4d3988180a257a435e7a",
     "perks/bwrap-overhead/metadata.json": "6dedcb2d3c3ceeb36ad423e4e1b99eae36363d29b3305a91cefcf65b229fc267",
     "perks/bwrap-overhead/src/bench_bwrap_overhead.py": "d7583bdb3b0cb187a06d46706e53c47a1a59ed5a3f6d23466b7f8f2a8288ada6",
@@ -18,6 +18,12 @@
     "perks/microvm-overhead/src/bench_microvm_overhead.py": "823e45ff1e26b40317862d87cc9a5c5b126c5371e15fe70804b988d8591e93ff",
     "perks/microvm-overhead/src/bench_microvm_overhead.sh": "7f339f96a3053f8dcbd2cf5e934cc8ccaab677793bc768527f31a6ec5806e013",
     "perks/microvm-overhead/src/contracts.json": "df1aaf834fd7f932a2ea6a2a39091b2ad2c0b1ef488b6c52381c8ff18605be70",
-    "perks/microvm-overhead/test/case.json": "2495e60d716b745f333381631cfad02727948df5f77c4d84efdc5e5778976b2e"
+    "perks/microvm-overhead/test/case.json": "2495e60d716b745f333381631cfad02727948df5f77c4d84efdc5e5778976b2e",
+    "perks/org-isolation/manifesto.json": "942b8482076a193b132c321a918f03951a8df20e0ba8511a409720fd06e5ec9f",
+    "perks/org-isolation/metadata.json": "736c6a616e0b5f84f2a88ccf5e20640bab02723c5ded125124eb7fd097a49ad0",
+    "perks/org-isolation/src/bench_org_isolation.py": "2fcb932b90d6ff93955389377d90088a5f27774dc0913dc4fb4a22b7ad82ddc1",
+    "perks/org-isolation/src/bench_org_isolation.sh": "a8b340e29129ad85122f54b39ac0329673c81bb830f0224e56a821e84d306cd9",
+    "perks/org-isolation/src/contracts.json": "af3bc5f7252b2284e208318a25439ed1db098902afcc11b03760c3f349215412",
+    "perks/org-isolation/test/case.json": "6bcb525ee950da970bbb3b4bdd4470723a303307b9ab49827f3d56957269af99"
   }
 }

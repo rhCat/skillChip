@@ -32,6 +32,14 @@
       "tools": [
         "cws_grantverify"
       ]
+    },
+    {
+      "id": "mut-emitter",
+      "summary": "mutation-test the workflow->TLA+ emitter (P4-T07) \u2014 mutate infra/cwp/tla_emit.py vs the golden slice; emitter_mutation_score >=0.90",
+      "destructive": false,
+      "tools": [
+        "cws_mut_emitter"
+      ]
     }
   ]
 }

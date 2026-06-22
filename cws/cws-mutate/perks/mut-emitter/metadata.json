@@ -1,0 +1,5 @@
+{
+  "perk": "mut-emitter",
+  "summary": "mutation-test the workflow->TLA+ emitter (P4-T07) \u2014 mutate infra/cwp/tla_emit.py, run the golden-output slice; emitter_mutation_score must be >=0.90",
+  "destructive": false
+}

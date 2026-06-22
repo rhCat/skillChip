@@ -1,0 +1,6 @@
+{
+  "tool": "cws_mut_emitter",
+  "inputs": {"PROJECT_DIR": {"type": "string", "required": true}, "THRESHOLD": {"type": "string", "required": false}, "MAX_MUTANTS": {"type": "string", "required": false}},
+  "outputs": {"mutate_out": {"path": "${RECORD_STORE}/mutate.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/mutate.json"}
+}

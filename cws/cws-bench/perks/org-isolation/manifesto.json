@@ -1,0 +1,7 @@
+{
+  "_perk": "org-isolation",
+  "sequence": ["bench_org_isolation"],
+  "tools": {"bench_org_isolation": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}

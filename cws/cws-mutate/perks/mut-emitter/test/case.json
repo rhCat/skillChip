@@ -1,0 +1,7 @@
+{
+  "_perk": "mut-emitter",
+  "skip": "pinned to the live repo target (infra/cwp/tla_emit.py); proven by the governed drive (emitter_mutation_score >=0.90) + python3 -m pytest tests/test_tla_emit.py in the suite",
+  "requires": ["python3"],
+  "vars": {"PROJECT_DIR": "<repo root>", "THRESHOLD": "0.90"},
+  "expect": {"outputs": ["mutate.json"], "contains": {"mutate.json": ["\"mutation_score\""]}}
+}

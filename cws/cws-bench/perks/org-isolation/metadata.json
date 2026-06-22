@@ -1,0 +1,5 @@
+{
+  "perk": "org-isolation",
+  "summary": "multi-tenant org isolation (P5-T03) \u2014 org\u2192principals\u2192SPIFFE; per-org record roots; revocation; every cross-org access-matrix cell refused",
+  "destructive": false
+}

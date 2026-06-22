@@ -1,7 +1,7 @@
 ---
 skill: cws-mutate
 name: Mutation Testing
-perks: [mutate, mut-chain-verifier, mut-snippet-verify, mut-grant-verify]
+perks: [mutate, mut-chain-verifier, mut-snippet-verify, mut-grant-verify, mut-emitter]
 ---
 
 # cws-mutate — Mutation Testing (V-MUT)
