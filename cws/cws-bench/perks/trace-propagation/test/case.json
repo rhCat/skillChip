@@ -1,0 +1,6 @@
+{
+  "_perk": "trace-propagation",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {"outputs": ["trace.json"], "contains": {"trace.json": ["\"retrievable\": true", "\"trace_consistent\": true", "\"intoto_ok\": true"]}}
+}

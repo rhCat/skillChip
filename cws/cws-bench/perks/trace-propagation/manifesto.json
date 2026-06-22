@@ -1,0 +1,7 @@
+{
+  "_perk": "trace-propagation",
+  "sequence": ["bench_trace_propagation"],
+  "tools": {"bench_trace_propagation": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}", "TRACE_PORT": "${TRACE_PORT}"},
+  "requires": ["python3"]
+}

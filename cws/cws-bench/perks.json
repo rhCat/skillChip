@@ -32,6 +32,14 @@
       "tools": [
         "bench_sse_latency"
       ]
+    },
+    {
+      "id": "trace-propagation",
+      "summary": "P5-T05 \u2014 W3C traceparent across planes + in-toto provenance: a governed run carries one trace id claim\u2192grant\u2192step; the cross-plane trace + the cyberware/run@v1 attestation are retrievable by run_id",
+      "destructive": false,
+      "tools": [
+        "bench_trace_propagation"
+      ]
     }
   ]
 }

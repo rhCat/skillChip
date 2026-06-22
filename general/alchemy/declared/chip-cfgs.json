@@ -286,6 +286,18 @@
       "exit"
     ]
   },
+  "cws/cws-bench/perks/trace-propagation/src/bench_trace_propagation.py": {
+    "edges": [
+      [
+        "stmt0",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "exit"
+    ]
+  },
   "cws/cws-chaos/perks/crash/src/chaos_crash.py": {
     "edges": [
       [

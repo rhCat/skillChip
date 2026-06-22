@@ -1,0 +1,6 @@
+{
+  "tool": "bench_trace_propagation",
+  "inputs": {"TRACE_PORT": {"type": "string", "required": false}},
+  "outputs": {"trace_out": {"path": "${RECORD_STORE}/trace.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/trace.json"}
+}

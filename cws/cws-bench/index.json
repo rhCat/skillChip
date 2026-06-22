@@ -1,12 +1,12 @@
 {
   "skill": "cws-bench",
-  "skill_sha": "7520e35e9ead4ab519cf57711310e8cf4e85bb099e55ae040b78debd55b2504c",
-  "file_count": 28,
+  "skill_sha": "97ab24624e4e6aa27bd76e2e60057f31902e5e821291fbbe7dd3d7b581889c95",
+  "file_count": 34,
   "files": {
-    "SKILL.md": "c5cccf68ce05f709ef6a540d939d09d0e79b7827e7c26550aec84592ef612736",
+    "SKILL.md": "21815d73658ca2279ccb6178185d56e46f7445aebf0c1c76ff37410d997f19f9",
     "blueprint.json": "5ffe1c7d358abd9d13f48737689ff08ebdcf303334d35a38deae685f4c4eb8fc",
     "ledger.json": "fd8ac5a2f96f6492895cd49aa5857512b859c697fc00b75e6969987628754cac",
-    "perks.json": "24690f2b2870a48a5c039c68f9027bf616157ef22d6e4489444416b9df6c3f50",
+    "perks.json": "feb0d211d242e81f9b3d60d9176e4263b30853175633b21b625f5eb1db1f536a",
     "perks/bwrap-overhead/manifesto.json": "a38f62fea2b16fc082a8e485cb186c6bf1766a6f492a4d3988180a257a435e7a",
     "perks/bwrap-overhead/metadata.json": "6dedcb2d3c3ceeb36ad423e4e1b99eae36363d29b3305a91cefcf65b229fc267",
     "perks/bwrap-overhead/src/bench_bwrap_overhead.py": "d7583bdb3b0cb187a06d46706e53c47a1a59ed5a3f6d23466b7f8f2a8288ada6",
@@ -30,6 +30,12 @@
     "perks/sse-latency/src/bench_sse_latency.py": "e6ab881417b6b02228b6726dac728c00ae80af170f21323cb0f3c1ed73ea7eea",
     "perks/sse-latency/src/bench_sse_latency.sh": "862bff0e45c09f0ac166040bae2ca37b17268040d149a225542ad0462fca30a6",
     "perks/sse-latency/src/contracts.json": "8ed16fa9840645bcf9cc49b1ae2febdfa7a9523b386e0fe29acffb671189e76b",
-    "perks/sse-latency/test/case.json": "3793fc37a5602383b2b8fc3d031b610ce0dcc93b28f723cc913189d74e189982"
+    "perks/sse-latency/test/case.json": "3793fc37a5602383b2b8fc3d031b610ce0dcc93b28f723cc913189d74e189982",
+    "perks/trace-propagation/manifesto.json": "899c54224f58d47700562db0d05fbdd773615a1fb5baba01445aba15f16216a4",
+    "perks/trace-propagation/metadata.json": "8d23445ae054d3cb714a645f234c77d6d86efc31d4a5f91cff2773f8d63b12fb",
+    "perks/trace-propagation/src/bench_trace_propagation.py": "8a72f510b905aad848e91c42dbe8474fc21547f59ba7360590e37ad21db5ab58",
+    "perks/trace-propagation/src/bench_trace_propagation.sh": "df1ae41cab010a553d6ca02feb13e0210d6ec16bc292df61e8bfb8ee7c6fc0b3",
+    "perks/trace-propagation/src/contracts.json": "f0b4aca937150a7c0f0bc59ac09e8bcb5a8a7f07f4957dd3681321c74c8cc193",
+    "perks/trace-propagation/test/case.json": "59b537c6a5571b3e74a7aaaccd1378f7c390fc0c2b41851facad5888eceb2fde"
   }
 }
