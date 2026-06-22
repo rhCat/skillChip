@@ -1,0 +1,7 @@
+{
+  "_perk": "sse-latency",
+  "sequence": ["bench_sse_latency"],
+  "tools": {"bench_sse_latency": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}", "BUDGET_MS": "${BUDGET_MS}", "SSE_PORT": "${SSE_PORT}"},
+  "requires": ["python3"]
+}

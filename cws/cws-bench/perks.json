@@ -24,6 +24,14 @@
       "tools": [
         "bench_org_isolation"
       ]
+    },
+    {
+      "id": "sse-latency",
+      "summary": "P5-T02 \u2014 dashboard SSE push replaces the 1.5s poll: end-to-end push latency from a recorded decision to the streamed event (budget <=1500ms) + bounded per-push payload (pagination caps it)",
+      "destructive": false,
+      "tools": [
+        "bench_sse_latency"
+      ]
     }
   ]
 }

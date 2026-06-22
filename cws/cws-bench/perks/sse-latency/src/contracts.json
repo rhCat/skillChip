@@ -1,0 +1,6 @@
+{
+  "tool": "bench_sse_latency",
+  "inputs": {"BUDGET_MS": {"type": "string", "required": false}, "SSE_PORT": {"type": "string", "required": false}},
+  "outputs": {"bench_out": {"path": "${RECORD_STORE}/bench.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/bench.json"}
+}

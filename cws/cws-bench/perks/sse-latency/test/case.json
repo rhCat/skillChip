@@ -1,0 +1,6 @@
+{
+  "_perk": "sse-latency",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {"outputs": ["bench.json"], "contains": {"bench.json": ["\"within\": true", "\"page_bounded\": true"]}}
+}

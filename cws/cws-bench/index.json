@@ -1,12 +1,12 @@
 {
   "skill": "cws-bench",
-  "skill_sha": "351e9774f7be3d4809cefd7b2207d92e40e0ed7d55f0e62b0e8b4c1cb70f0278",
-  "file_count": 22,
+  "skill_sha": "75aaa86590806cbf2d0eb6fd5092f53416e785326f5be5a5356c180d2425c543",
+  "file_count": 28,
   "files": {
-    "SKILL.md": "4b7f86966eec59e604a209280f736f32287a9a490331cdeb4f5ef331ded1f8b8",
+    "SKILL.md": "c5cccf68ce05f709ef6a540d939d09d0e79b7827e7c26550aec84592ef612736",
     "blueprint.json": "5ffe1c7d358abd9d13f48737689ff08ebdcf303334d35a38deae685f4c4eb8fc",
     "ledger.json": "fd8ac5a2f96f6492895cd49aa5857512b859c697fc00b75e6969987628754cac",
-    "perks.json": "fb011971ecdf534e9b32c189aeb300bb71002d2ccbb6984b636ef437437bc13c",
+    "perks.json": "24690f2b2870a48a5c039c68f9027bf616157ef22d6e4489444416b9df6c3f50",
     "perks/bwrap-overhead/manifesto.json": "a38f62fea2b16fc082a8e485cb186c6bf1766a6f492a4d3988180a257a435e7a",
     "perks/bwrap-overhead/metadata.json": "6dedcb2d3c3ceeb36ad423e4e1b99eae36363d29b3305a91cefcf65b229fc267",
     "perks/bwrap-overhead/src/bench_bwrap_overhead.py": "d7583bdb3b0cb187a06d46706e53c47a1a59ed5a3f6d23466b7f8f2a8288ada6",
@@ -24,6 +24,12 @@
     "perks/org-isolation/src/bench_org_isolation.py": "2fcb932b90d6ff93955389377d90088a5f27774dc0913dc4fb4a22b7ad82ddc1",
     "perks/org-isolation/src/bench_org_isolation.sh": "a8b340e29129ad85122f54b39ac0329673c81bb830f0224e56a821e84d306cd9",
     "perks/org-isolation/src/contracts.json": "af3bc5f7252b2284e208318a25439ed1db098902afcc11b03760c3f349215412",
-    "perks/org-isolation/test/case.json": "6bcb525ee950da970bbb3b4bdd4470723a303307b9ab49827f3d56957269af99"
+    "perks/org-isolation/test/case.json": "6bcb525ee950da970bbb3b4bdd4470723a303307b9ab49827f3d56957269af99",
+    "perks/sse-latency/manifesto.json": "711834df0b228a047283905ca581780a79de63b52415dcf5cc1778fb3f7ec455",
+    "perks/sse-latency/metadata.json": "b803a050aaafcc89ed737f83dcd301fc2bf9537987d973075307f4191f08cc4c",
+    "perks/sse-latency/src/bench_sse_latency.py": "3dcff894dcb9309909ee2487f0d175470936bf64bed34f426a560b52e30c4474",
+    "perks/sse-latency/src/bench_sse_latency.sh": "862bff0e45c09f0ac166040bae2ca37b17268040d149a225542ad0462fca30a6",
+    "perks/sse-latency/src/contracts.json": "8ed16fa9840645bcf9cc49b1ae2febdfa7a9523b386e0fe29acffb671189e76b",
+    "perks/sse-latency/test/case.json": "3793fc37a5602383b2b8fc3d031b610ce0dcc93b28f723cc913189d74e189982"
   }
 }

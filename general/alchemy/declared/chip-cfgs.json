@@ -249,6 +249,43 @@
       "exit"
     ]
   },
+  "cws/cws-bench/perks/sse-latency/src/bench_sse_latency.py": {
+    "edges": [
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "stmt10"
+      ],
+      [
+        "stmt10",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "stmt10",
+      "exit"
+    ]
+  },
   "cws/cws-chaos/perks/crash/src/chaos_crash.py": {
     "edges": [
       [

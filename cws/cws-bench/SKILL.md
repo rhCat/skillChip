@@ -1,7 +1,7 @@
 ---
 skill: cws-bench
 name: Sandbox + channel overhead meter
-perks: [bwrap-overhead, microvm-overhead, org-isolation]
+perks: [bwrap-overhead, microvm-overhead, org-isolation, sse-latency]
 ---
 
 # cws-bench — Sandbox + channel overhead meter (V-BENCH, P2-T09)
