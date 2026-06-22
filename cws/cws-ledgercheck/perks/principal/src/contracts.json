@@ -1,0 +1,6 @@
+{
+  "tool": "cws_principal",
+  "inputs": {},
+  "outputs": {"principal_out": {"path": "${RECORD_STORE}/principal.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/principal.json"}
+}

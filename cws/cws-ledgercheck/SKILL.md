@@ -1,7 +1,7 @@
 ---
 skill: cws-ledgercheck
 name: Ledger Integrity
-perks: [verify, anchor, torture, erasure, checkpoint]
+perks: [verify, anchor, torture, erasure, checkpoint, principal]
 ---
 
 # cws-ledgercheck — Ledger Integrity (SV-2)

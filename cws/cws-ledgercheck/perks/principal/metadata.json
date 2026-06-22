@@ -1,0 +1,5 @@
+{
+  "perk": "principal",
+  "summary": "govd principal auth boundary (P1-T08) \u2014 missing/wrong Bearer rejected (401); token-bucket burst then throttle (429); token value never stored; every provenance record carries its principal",
+  "destructive": false
+}

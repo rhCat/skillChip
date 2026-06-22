@@ -1,0 +1,6 @@
+{
+  "_perk": "principal",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {"outputs": ["principal.json"], "contains": {"principal.json": ["\"ok\": true", "\"no_token_rejected_401\": true", "\"burst_then_throttle_429\": true", "\"every_record_carries_principal\": true"]}}
+}

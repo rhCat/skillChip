@@ -1133,6 +1133,43 @@
       "exit"
     ]
   },
+  "cws/cws-ledgercheck/perks/principal/src/cws_principal.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "exit"
+    ]
+  },
   "cws/cws-ledgercheck/perks/torture/src/cws_torture.py": {
     "edges": [
       [

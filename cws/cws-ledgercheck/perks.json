@@ -40,6 +40,14 @@
       "tools": [
         "cws_checkpoint"
       ]
+    },
+    {
+      "id": "principal",
+      "summary": "govd principal auth boundary (P1-T08) \u2014 Bearer 401 / token-bucket 429 / every record carries principal",
+      "destructive": false,
+      "tools": [
+        "cws_principal"
+      ]
     }
   ]
 }
