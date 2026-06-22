@@ -1,7 +1,7 @@
 ---
 skill: cws-bench
 name: Sandbox + channel overhead meter
-perks: [bwrap-overhead]
+perks: [bwrap-overhead, microvm-overhead]
 ---
 
 # cws-bench — Sandbox + channel overhead meter (V-BENCH, P2-T09)
@@ -11,26 +11,38 @@ meters** (P2-T07), never the agent's stopwatch. The doctrine: *the meter that bi
 isolated principal signed.*
 
 ## Perks
-| perk | budget | measurable here |
+| perk | budget | measurable where |
 |---|---|---|
-| `bwrap-overhead` | per-step bwrap overhead **p95 ≤ 100 ms** | ✅ — drives N benign steps through exod into the bwrap SandboxProfile and reads exod's signed `meter.wall_ms` for each (measured p95 ≈ 4 ms, well within budget) |
+| `bwrap-overhead` | per-step bwrap overhead **p95 ≤ 100 ms** | ✅ any Linux+bwrap host — drives N benign steps through exod into the bwrap SandboxProfile and reads exod's signed `meter.wall_ms` for each (measured p95 ≈ 4 ms, well within budget) |
+| `microvm-overhead` | microVM **cold ≤ 1500 ms** + **warm ≤ 250 ms** | ✅ a `/dev/kvm`-capable Linux host — boots a real Firecracker microVM and times cold boot + warm snapshot-resume; skips (within:None) / raises elsewhere, never faked |
 
 `bwrap-overhead` writes `bench.json` (`{backend, n, p50, p95, max, budget_ms, within}`) and exits **0 iff
 `within` is true**. Set `N` (default 30) to widen the sample. The measurement logic is `infra/exec/bench.py`.
 
-## Honest scope — the microVM budgets are NOT measurable without /dev/kvm
-P2-T09 also names microVM budgets (`microvm_cold_ms ≤ 1500`, `microvm_warm_ms ≤ 250`). A microVM backend
-(Firecracker / cloud-hypervisor) needs `/dev/kvm` + nested virtualization, which **Docker Desktop on macOS
-does not provide** (confirmed: no `/dev/kvm`, 0 virt-capable CPUs). `infra/exec/bench.bench_microvm()`
-therefore reports `skipped` — the budget is left **honestly unmet, never faked**. This skill ships only the
-budget it can measure; the microVM branch waits for a KVM-capable Linux host. Consequently cws-bench can
-validate **P2-T07** (exod-attested meters, via the bwrap overhead) but **P2-T09's full acceptance is not met
-here** — M3/SV-3 reaches 9/10, not 10/10, on this hardware.
+## The microVM budget — a REAL boot through /dev/kvm, never faked
+P2-T09 also names microVM budgets (`microvm_cold_ms ≤ 1500`, `microvm_warm_ms ≤ 250`). `microvm-overhead`
+measures them for real where hardware virtualization exists:
+
+- **cold** — a fresh Firecracker process boots a pinned kernel (`firecracker-ci/v1.12 vmlinux-5.10.233`,
+  sha256-verified) + a tiny runtime-built busybox rootfs; the timer stops when the guest's `/init` prints a
+  **per-run random marker** (`CWS_BOOT_OK_<rand>`) on ttyS0. A process spawn, a sleep, or a stale log cannot
+  produce that marker — it appears only if KVM ran the kernel to userspace and pid1 executed.
+- **warm** — the VM is paused and Full-snapshotted; a **fresh** Firecracker process does
+  `PUT /snapshot/load {resume_vm:true}` and the timer (started at the load call — the canonical FC resume
+  cost) stops on the resumed guest's marker. Firecracker enforces the fresh-process invariant (a snapshot
+  loads only on a virgin VM).
+
+Where there is no `/dev/kvm` (macOS dev box: confirmed no `/dev/kvm`, 0 virt-capable CPUs; the plain compute
+CI image) `bench_microvm()` returns `skipped` (within:None) and the perk exits non-zero — the budget is left
+**honestly unmet, never fabricated**. The closing measurement runs on a GitHub-hosted `ubuntu-latest` runner
+(nested KVM, `sudo chmod 666 /dev/kvm`) via `.github/workflows/bench-microvm.yml`, which drives this perk
+through govd and emits the run-ledger `cws-observe/redeem` consumes to close **M3/SV-3 → 10/10**.
 
 ## Platform
-Every perk needs Linux + bubblewrap (`test/case.json requires [python3, bwrap]`), so it SKIPS on the macOS
-dev box / the plain compute CI image and RUNS in the exec image (`infra/exec/Dockerfile.exec`).
+`bwrap-overhead` needs Linux + bubblewrap; `microvm-overhead` needs Linux + `/dev/kvm` + the `firecracker`
+binary (`test/case.json requires [python3, firecracker]`). Both SKIP on the macOS dev box / the plain compute
+CI image and RUN where their backend exists (the exec image for bwrap; the hosted KVM runner for microVM).
 
 ## How to use it
-Pick `bwrap-overhead` (no inputs beyond optional `N`). Drive it through govd **inside the exec image** to
-produce the run-ledger `cws-observe/redeem` reads for P2-T07.
+Drive `bwrap-overhead` (optional `N`) through govd **inside the exec image** for P2-T07. Drive
+`microvm-overhead` through govd **on a `/dev/kvm` host** for P2-T09 — the run-ledger feeds `cws-observe/redeem`.

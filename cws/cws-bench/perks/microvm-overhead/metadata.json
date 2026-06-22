@@ -1,0 +1,5 @@
+{
+  "perk": "microvm-overhead",
+  "summary": "time a real microVM cold boot (<=1500ms) + warm snapshot-restore (<=250ms) through /dev/kvm; skipped (honestly unmet) without hardware virtualization",
+  "destructive": false
+}
