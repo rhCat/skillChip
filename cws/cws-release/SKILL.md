@@ -1,7 +1,7 @@
 ---
 skill: cws-release
 name: Release transparency
-perks: [sign, transparency, engine, publish, revoke, manifestlint, approval, inflight, feedtiers, keyrotate, receipts, timeanchor, citrinitas]
+perks: [sign, transparency, engine, publish, revoke, manifestlint, approval, inflight, feedtiers, keyrotate, receipts, timeanchor, citrinitas, security-doorbell]
 ---
 
 # cws-release — Release transparency (V-EXT, the M4 / SV-4 layer)

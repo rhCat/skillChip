@@ -1,0 +1,7 @@
+{
+  "_perk": "security-doorbell",
+  "sequence": ["cws_release_security_doorbell"],
+  "tools": {"cws_release_security_doorbell": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}

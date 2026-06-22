@@ -1,0 +1,6 @@
+{
+  "_perk": "security-doorbell",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {"outputs": ["doorbell.json"], "contains": {"doorbell.json": ["\"ok\": true", "\"contact\": true", "\"key\": true", "\"ack_sla\": true"]}}
+}

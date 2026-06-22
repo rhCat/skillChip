@@ -1,0 +1,6 @@
+{
+  "tool": "cws_release_security_doorbell",
+  "inputs": {},
+  "outputs": {"doorbell_out": {"path": "${RECORD_STORE}/doorbell.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/doorbell.json"}
+}

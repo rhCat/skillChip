@@ -104,6 +104,14 @@
       "tools": [
         "cws_release_transparency"
       ]
+    },
+    {
+      "id": "security-doorbell",
+      "summary": "P3-T16 SECURITY.md doorbell (M12) \u2014 the repo SECURITY.md must name a contact, an encrypted-reporting key/mechanism, and an acknowledgement SLA",
+      "destructive": false,
+      "tools": [
+        "cws_release_security_doorbell"
+      ]
     }
   ]
 }
