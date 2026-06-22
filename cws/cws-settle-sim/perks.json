@@ -11,7 +11,7 @@
     },
     {
       "id": "credits",
-      "summary": "credit usage-billing (credits.py, #116) — prepaid balance + per-call DEBITS; top-up credits, each priced run debits zero-sum, balance draws down, a tax over the balance is REFUSED, idempotent per plan_sha",
+      "summary": "credit usage-billing (credits.py, #116) \u2014 prepaid balance + per-call DEBITS; top-up credits, each priced run debits zero-sum, balance draws down, a tax over the balance is REFUSED, idempotent per plan_sha",
       "destructive": false,
       "tools": [
         "settle_credits"
@@ -43,7 +43,7 @@
     },
     {
       "id": "pricer",
-      "summary": "plan pricer (price.py, #110) — price a governed run from its value-free PLAN before it runs; itemized subtotal + total sum exact, seeded tool_fee flows through, infra/settle float-clean",
+      "summary": "plan pricer (price.py, #110) \u2014 price a governed run from its value-free PLAN before it runs; itemized subtotal + total sum exact, seeded tool_fee flows through, infra/settle float-clean",
       "destructive": false,
       "tools": [
         "settle_pricer"
@@ -59,7 +59,7 @@
     },
     {
       "id": "rail",
-      "summary": "settle-time tax rail (rails.py, #113) — platform tax collected at SETTLE, never an agent action / hidden portal; split into visible substrate/author/marketplace lines (skim refused), StripeRail inert until keyed, collect_run_tax zero-sum + idempotent",
+      "summary": "settle-time tax rail (rails.py, #113) \u2014 platform tax collected at SETTLE, never an agent action / hidden portal; split into visible substrate/author/marketplace lines (skim refused), StripeRail inert until keyed, collect_run_tax zero-sum + idempotent",
       "destructive": false,
       "tools": [
         "settle_rail"
@@ -87,6 +87,14 @@
       "destructive": false,
       "tools": [
         "settle_zerosum"
+      ]
+    },
+    {
+      "id": "reward-verify",
+      "summary": "money\u2194work cross-check (P6-T06) \u2014 settlements bijective with dual-signed quote-bound receipts; flags money_without_work + work_without_money",
+      "destructive": false,
+      "tools": [
+        "settle_reward_verify"
       ]
     }
   ]

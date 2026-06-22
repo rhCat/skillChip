@@ -1,0 +1,5 @@
+{
+  "perk": "reward-verify",
+  "summary": "money↔work cross-check (P6-T06) — settlement posting sets bijective with dual-signed quote-bound receipts; flags money_without_work + work_without_money; chain + per-record + global zero-sum",
+  "destructive": false
+}

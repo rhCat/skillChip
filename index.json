@@ -6,7 +6,7 @@
   "skills": [
     {
       "skill": "alchemy",
-      "skill_sha": "6dc1c3bff950f6ccd0e6a312bf869d28dd760d3fb1bcaa4936b10e98db1f1008",
+      "skill_sha": "1278b1e384b0172e079d75ef4f82c28d650bed3fcee8b50c076fa1b138ab25a8",
       "file_count": 36
     },
     {
@@ -96,8 +96,8 @@
     },
     {
       "skill": "cws-settle-sim",
-      "skill_sha": "44a5dec01ccae99f012957e3226399bcc34a091c617201b66028af0066237691",
-      "file_count": 70
+      "skill_sha": "58516d1bda0313bc7afb1d583b4b14f2d157b38630344969b66f704fd37492a1",
+      "file_count": 76
     },
     {
       "skill": "data",
@@ -195,5 +195,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "848914cd7c0108c74d80a22100c46fb54deb1555cd04f2652f70ccace9bddd33"
+  "chip_sha": "d0861aec1ce091e9b91f7b2187d37e0b8230c50bcef938478f8d591e0e794791"
 }

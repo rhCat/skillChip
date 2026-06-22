@@ -1,0 +1,19 @@
+{
+  "_perk": "reward-verify",
+  "requires": [
+    "python3"
+  ],
+  "vars": {},
+  "expect": {
+    "outputs": [
+      "reward_verify.json"
+    ],
+    "contains": {
+      "reward_verify.json": [
+        "\"ok\": true",
+        "\"money_without_work_caught\": true",
+        "\"work_without_money_caught\": true"
+      ]
+    }
+  }
+}

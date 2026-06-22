@@ -3402,6 +3402,43 @@
       "exit"
     ]
   },
+  "cws/cws-settle-sim/perks/reward-verify/src/settle_reward_verify.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "exit"
+    ]
+  },
   "cws/cws-settle-sim/perks/settle/src/settle_engine.py": {
     "edges": [
       [

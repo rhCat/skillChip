@@ -1,0 +1,14 @@
+{
+  "tool": "settle_reward_verify",
+  "inputs": {},
+  "outputs": {
+    "reward_verify_out": {
+      "path": "${RECORD_STORE}/reward_verify.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/reward_verify.json"
+  }
+}
