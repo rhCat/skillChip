@@ -1,0 +1,5 @@
+{
+  "perk": "rt-govd-executor",
+  "summary": "govd-as-executor (P2-T12) \u2014 agent posts intent, govd runs the step server-side under a non-root uid; secret resolved step-side; only STATUS returns (no output, no secret); the cognition holds no limb",
+  "destructive": false
+}

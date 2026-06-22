@@ -1,0 +1,6 @@
+{
+  "tool": "rt_secret_isolation",
+  "inputs": {},
+  "outputs": {"secret_isolation_out": {"path": "${RECORD_STORE}/secret_isolation.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/secret_isolation.json"}
+}

@@ -1,0 +1,5 @@
+{
+  "perk": "rt-secret-isolation",
+  "summary": "double-blind secret boundary (P2-T05) \u2014 agent holds ZERO secret bytes during a credentialed run (secret injected step-side only); both backends one get() contract; leak caught; *_FILE deprecated",
+  "destructive": false
+}

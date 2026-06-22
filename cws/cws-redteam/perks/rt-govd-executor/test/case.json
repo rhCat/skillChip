@@ -1,0 +1,6 @@
+{
+  "_perk": "rt-govd-executor",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {"outputs": ["govd_executor.json"], "contains": {"govd_executor.json": ["\"ok\": true", "\"agent_holds_no_limb\": true", "\"info_only_return\": true", "\"faithful_uid\": true"]}}
+}

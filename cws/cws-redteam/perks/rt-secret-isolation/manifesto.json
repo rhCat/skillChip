@@ -1,0 +1,7 @@
+{
+  "_perk": "rt-secret-isolation",
+  "sequence": ["rt_secret_isolation"],
+  "tools": {"rt_secret_isolation": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}

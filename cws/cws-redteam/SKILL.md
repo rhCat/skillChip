@@ -1,7 +1,7 @@
 ---
 skill: cws-redteam
 name: Kernel red-team corpus
-perks: [rt-fs-escape, rt-write-rofs, rt-write-outside, rt-net-egress, rt-sysrq-reboot, rt-proc-sys-write, rt-mount, rt-device-raw, rt-forged-status, rt-grant-replay, rt-grant-expired, rt-grant-wrong-run, rt-grant-forged, rt-no-capability, rt-cap-mismatch, rt-ungoverned-banner]
+perks: [rt-fs-escape, rt-write-rofs, rt-write-outside, rt-net-egress, rt-sysrq-reboot, rt-proc-sys-write, rt-mount, rt-device-raw, rt-forged-status, rt-grant-replay, rt-grant-expired, rt-grant-wrong-run, rt-grant-forged, rt-no-capability, rt-cap-mismatch, rt-ungoverned-banner, rt-secret-isolation, rt-govd-executor]
 ---
 
 # cws-redteam — Kernel red-team corpus (V-RED, the M3 / SV-3 gate)

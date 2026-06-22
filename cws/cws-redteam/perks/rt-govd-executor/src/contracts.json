@@ -1,0 +1,6 @@
+{
+  "tool": "rt_govd_executor",
+  "inputs": {},
+  "outputs": {"govd_executor_out": {"path": "${RECORD_STORE}/govd_executor.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/govd_executor.json"}
+}

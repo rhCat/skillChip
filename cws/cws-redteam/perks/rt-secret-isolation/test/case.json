@@ -1,0 +1,6 @@
+{
+  "_perk": "rt-secret-isolation",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {"outputs": ["secret_isolation.json"], "contains": {"secret_isolation.json": ["\"ok\": true", "\"agent_zero_secret_bytes\": true", "\"both_backends_one_contract\": true", "\"leak_caught\": true"]}}
+}

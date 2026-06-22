@@ -128,6 +128,22 @@
       "tools": [
         "rt_ungoverned_banner"
       ]
+    },
+    {
+      "id": "rt-secret-isolation",
+      "summary": "double-blind secret boundary (P2-T05) \u2014 agent zero secret bytes; step-side injection; both backends one contract; leak caught",
+      "destructive": false,
+      "tools": [
+        "rt_secret_isolation"
+      ]
+    },
+    {
+      "id": "rt-govd-executor",
+      "summary": "govd-as-executor (P2-T12) \u2014 agent holds no limb; server-side non-root exec; step-side secret; info-only return",
+      "destructive": false,
+      "tools": [
+        "rt_govd_executor"
+      ]
     }
   ]
 }

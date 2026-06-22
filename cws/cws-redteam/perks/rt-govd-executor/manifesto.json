@@ -1,0 +1,7 @@
+{
+  "_perk": "rt-govd-executor",
+  "sequence": ["rt_govd_executor"],
+  "tools": {"rt_govd_executor": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}

@@ -2207,6 +2207,43 @@
       "exit"
     ]
   },
+  "cws/cws-redteam/perks/rt-govd-executor/src/rt_govd_executor.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "exit"
+    ]
+  },
   "cws/cws-redteam/perks/rt-grant-expired/src/rt_grant_expired.py": {
     "edges": [
       [
@@ -2540,6 +2577,43 @@
       "stmt4",
       "stmt6",
       "stmt7",
+      "exit"
+    ]
+  },
+  "cws/cws-redteam/perks/rt-secret-isolation/src/rt_secret_isolation.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt6",
       "exit"
     ]
   },
