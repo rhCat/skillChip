@@ -1,0 +1,6 @@
+{
+  "_perk": "settle-throughput",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {"outputs": ["throughput.json"], "contains": {"throughput.json": ["\"within\": true", "\"tps_ok\": true", "\"p95_ok\": true", "\"resume_ok\": true"]}}
+}

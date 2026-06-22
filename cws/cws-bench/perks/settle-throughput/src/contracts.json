@@ -1,0 +1,6 @@
+{
+  "tool": "bench_settle_throughput",
+  "inputs": {"N_SETS": {"type": "string", "required": false}, "BATCH": {"type": "string", "required": false}},
+  "outputs": {"bench_out": {"path": "${RECORD_STORE}/throughput.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/throughput.json"}
+}

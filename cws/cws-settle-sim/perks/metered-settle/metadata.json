@@ -1,0 +1,5 @@
+{
+  "perk": "metered-settle",
+  "summary": "P6-T08 \u2014 exod-attested meters become settleable: provider-receipt capture + reconciliation (pass-through reimbursement, clamped floor/cap); mismatch unsettleable; absent receipt \u2192 attested-count fallback; un-attested meter refused",
+  "destructive": false
+}

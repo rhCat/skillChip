@@ -120,6 +120,14 @@
       "tools": [
         "settle_escrow_expiry"
       ]
+    },
+    {
+      "id": "metered-settle",
+      "summary": "P6-T08 \u2014 exod-attested meters become settleable: provider-receipt capture + reconciliation (pass-through reimbursement, clamped); mismatch unsettleable; absent receipt -> attested-count fallback; un-attested refused",
+      "destructive": false,
+      "tools": [
+        "settle_metered"
+      ]
     }
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "tool": "settle_metered",
+  "inputs": {},
+  "outputs": {"metered_out": {"path": "${RECORD_STORE}/metered.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/metered.json"}
+}

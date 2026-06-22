@@ -1,0 +1,7 @@
+{
+  "_perk": "settle-throughput",
+  "sequence": ["bench_settle_throughput"],
+  "tools": {"bench_settle_throughput": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}", "N_SETS": "${N_SETS}", "BATCH": "${BATCH}"},
+  "requires": ["python3"]
+}

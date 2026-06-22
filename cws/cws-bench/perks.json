@@ -40,6 +40,14 @@
       "tools": [
         "bench_trace_propagation"
       ]
+    },
+    {
+      "id": "settle-throughput",
+      "summary": "P6-T16 \u2014 single-writer-per-currency group-commit throughput + O(accounts) checkpoint-resume: tps>=200, per-batch p95<=250ms, resume-verify<=2s (representative)",
+      "destructive": false,
+      "tools": [
+        "bench_settle_throughput"
+      ]
     }
   ]
 }

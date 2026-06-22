@@ -1,0 +1,5 @@
+{
+  "perk": "settle-throughput",
+  "summary": "P6-T16 \u2014 single-writer-per-currency group-commit throughput + O(accounts) checkpoint-resume: tps>=200, per-batch p95<=250ms, resume-verify<=2s (a representative measurement of the group-commit/resume primitives)",
+  "destructive": false
+}

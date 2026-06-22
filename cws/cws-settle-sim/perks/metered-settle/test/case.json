@@ -1,0 +1,6 @@
+{
+  "_perk": "metered-settle",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {"outputs": ["metered.json"], "contains": {"metered.json": ["\"ok\": true", "\"receipt_settles\": true", "\"mismatch_refused\": true", "\"attested_required\": true"]}}
+}
