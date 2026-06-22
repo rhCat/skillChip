@@ -1,7 +1,7 @@
 ---
 skill: cws-settle-sim
 name: Settlement simulator (the money's lifecycle)
-perks: [floatban, zerosum, quote, settle, manipulate, dispute, simulate, capstone, pricer, rail, credits, reward-verify, markets, reputation, escrow-expiry, metered-settle]
+perks: [floatban, zerosum, quote, settle, manipulate, dispute, simulate, capstone, pricer, rail, credits, reward-verify, markets, reputation, escrow-expiry, metered-settle, self-bounty]
 ---
 
 # cws-settle-sim — the SV-6 settlement validator (M6, "the work pays for the work")

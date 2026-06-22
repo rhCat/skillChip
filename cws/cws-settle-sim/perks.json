@@ -128,6 +128,14 @@
       "tools": [
         "settle_metered"
       ]
+    },
+    {
+      "id": "self-bounty",
+      "summary": "P6-T20 (M12) \u2014 cyberware's security program through its OWN reward ledger: vuln classes are bounties, a validated disclosure pays the external researcher through the ledger, unclaimed refunds the sponsor; conserved",
+      "destructive": false,
+      "tools": [
+        "settle_selfbounty"
+      ]
     }
   ]
 }

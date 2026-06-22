@@ -1,0 +1,6 @@
+{
+  "_perk": "self-bounty",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {"outputs": ["selfbounty.json"], "contains": {"selfbounty.json": ["\"ok\": true", "\"researcher_paid\": true", "\"no_winner_refunds\": true", "\"conserved\": true"]}}
+}
