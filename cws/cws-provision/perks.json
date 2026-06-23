@@ -1,0 +1,16 @@
+{
+  "skill": "cws-provision",
+  "perks": [
+    {
+      "id": "up",
+      "summary": "bring a node up as a cyberware fleet member: base deps + Docker + Tailscale (overlay join) + always-on syscontrol (enable + Restart=always)",
+      "destructive": true,
+      "tools": [
+        "provision_base",
+        "provision_docker",
+        "provision_tailscale",
+        "provision_syscontrol"
+      ]
+    }
+  ]
+}

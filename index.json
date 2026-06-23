@@ -2,7 +2,7 @@
   "chip": "skillChip",
   "version": 1,
   "cartridge": false,
-  "count": 38,
+  "count": 39,
   "skills": [
     {
       "skill": "alchemy",
@@ -78,6 +78,11 @@
       "skill": "cws-pm",
       "skill_sha": "604f82a759ecc19860ab6b27fe3dfbb40d022af5a85ece439ebd41ad065fdaea",
       "file_count": 11
+    },
+    {
+      "skill": "cws-provision",
+      "skill_sha": "c002bde92f2b913e89bbc03432819b36a8399f1d01752a34e2fc77c381347ddd",
+      "file_count": 12
     },
     {
       "skill": "cws-redteam",
@@ -195,5 +200,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "c52e376489414b40333b61230aa2d8bbc7d1a9ab1ac4848069c76fd520975fab"
+  "chip_sha": "10ddf2cefdc30c71614957068a2485d3e4f17cd93507690f363d3d28db271de8"
 }

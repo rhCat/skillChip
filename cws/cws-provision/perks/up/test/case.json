@@ -1,0 +1,21 @@
+{
+  "_perk": "up",
+  "vars": {
+    "DRY_RUN": "1"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": [
+      "${RECORD}/provision_base.json",
+      "${RECORD}/provision_docker.json",
+      "${RECORD}/provision_tailscale.json",
+      "${RECORD}/provision_syscontrol.json"
+    ],
+    "json": {
+      "${RECORD}/provision_syscontrol.json": {
+        "status": "dry-run",
+        "dry_run": true
+      }
+    }
+  }
+}

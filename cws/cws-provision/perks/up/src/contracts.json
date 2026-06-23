@@ -1,0 +1,47 @@
+{
+  "tool": "provision_syscontrol",
+  "inputs": {
+    "DRY_RUN": {
+      "type": "string",
+      "required": false
+    },
+    "CW_USER": {
+      "type": "string",
+      "required": false
+    },
+    "CW_ETC": {
+      "type": "string",
+      "required": false
+    },
+    "TS_AUTHKEY_FILE": {
+      "type": "string",
+      "required": false
+    },
+    "TS_HOSTNAME": {
+      "type": "string",
+      "required": false
+    },
+    "ENABLE_SERVICES": {
+      "type": "string",
+      "required": false
+    },
+    "AGENT_EXEC": {
+      "type": "string",
+      "required": false
+    },
+    "AGENT_USER": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "provision_report": {
+      "path": "${RECORD_STORE}/provision_syscontrol.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/provision_syscontrol.json"
+  }
+}

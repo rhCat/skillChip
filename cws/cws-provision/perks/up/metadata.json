@@ -1,0 +1,22 @@
+{
+  "perk": "up",
+  "skill": "cws-provision",
+  "description": "Bring a fresh Linux/Lightsail node up as a cyberware fleet member in one governed run: base deps, Docker, Tailscale (overlay join), and the always-on syscontrol (enable + Restart=always so services survive reboot). Each step is a governed porter recorded to the run-ledger.",
+  "rules": [
+    "Operator-run with sudo — the porters install packages, write systemd units, and enable services (NOT a confined nobody run).",
+    "DRY_RUN=1 plans only: every porter prints what it WOULD run and emits JSON without touching the host. The self-test runs this path.",
+    "The Tailscale auth key is read from TS_AUTHKEY_FILE (a *_FILE pointer), never a plaintext var and never logged. Use a non-ephemeral key for an always-on node.",
+    "Idempotent: a present Docker / Tailscale / enabled service is reported, not reinstalled."
+  ],
+  "usage": "Set record_store + any vars; plan with DRY_RUN=1, then run for real on the node as a sudo-capable user.",
+  "limitation": "Needs a Debian/Ubuntu host (apt) + systemd + sudo. Real execution cannot run hermetically in CI — the self-test covers the DRY_RUN plan path through the governed channel.",
+  "minimal_example": {
+    "perk": "up",
+    "vars": {
+      "DRY_RUN": "1",
+      "TS_HOSTNAME": "cyberware-runner",
+      "TS_AUTHKEY_FILE": "/etc/cyberware/ts-authkey",
+      "AGENT_EXEC": "/opt/cyberware-agent/run-agent.sh"
+    }
+  }
+}

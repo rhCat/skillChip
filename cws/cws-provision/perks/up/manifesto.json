@@ -1,0 +1,56 @@
+{
+  "_perk": "up",
+  "sequence": [
+    "provision_base",
+    "provision_docker",
+    "provision_tailscale",
+    "provision_syscontrol"
+  ],
+  "tools": {
+    "provision_base": {
+      "binary": "bash",
+      "params": {
+        "DRY_RUN": "${DRY_RUN}",
+        "CW_USER": "${CW_USER}",
+        "CW_ETC": "${CW_ETC}"
+      }
+    },
+    "provision_docker": {
+      "binary": "bash",
+      "params": {
+        "DRY_RUN": "${DRY_RUN}"
+      }
+    },
+    "provision_tailscale": {
+      "binary": "bash",
+      "params": {
+        "DRY_RUN": "${DRY_RUN}",
+        "TS_AUTHKEY_FILE": "${TS_AUTHKEY_FILE}",
+        "TS_HOSTNAME": "${TS_HOSTNAME}"
+      }
+    },
+    "provision_syscontrol": {
+      "binary": "bash",
+      "params": {
+        "DRY_RUN": "${DRY_RUN}",
+        "ENABLE_SERVICES": "${ENABLE_SERVICES}",
+        "AGENT_EXEC": "${AGENT_EXEC}",
+        "AGENT_USER": "${AGENT_USER}"
+      }
+    }
+  },
+  "env": {
+    "DRY_RUN": "${DRY_RUN}",
+    "CW_USER": "${CW_USER}",
+    "CW_ETC": "${CW_ETC}",
+    "TS_AUTHKEY_FILE": "${TS_AUTHKEY_FILE}",
+    "TS_HOSTNAME": "${TS_HOSTNAME}",
+    "ENABLE_SERVICES": "${ENABLE_SERVICES}",
+    "AGENT_EXEC": "${AGENT_EXEC}",
+    "AGENT_USER": "${AGENT_USER}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash"
+  ]
+}
