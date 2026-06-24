@@ -1,0 +1,11 @@
+{
+  "skill": "sys",
+  "perks": [
+    {
+      "id": "stat",
+      "summary": "governed host metrics — CPU %, load average, memory, uptime, cores (value-free node pulse for the fleet monitor); real /proc/stat on Linux, honest load-per-core estimate on macOS",
+      "destructive": false,
+      "tools": ["sys_stat"]
+    }
+  ]
+}

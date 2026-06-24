@@ -4942,6 +4942,53 @@
       "exit"
     ]
   },
+  "general/sys/perks/stat/src/sys_stat.py": {
+    "edges": [
+      [
+        "stmt1",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt4"
+      ],
+      [
+        "stmt4",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "stmt7"
+      ],
+      [
+        "stmt7",
+        "stmt8"
+      ],
+      [
+        "stmt8",
+        "stmt9"
+      ],
+      [
+        "stmt9",
+        "stmt10"
+      ],
+      [
+        "stmt10",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt1",
+      "stmt3",
+      "stmt4",
+      "stmt6",
+      "stmt7",
+      "stmt8",
+      "stmt9",
+      "stmt10",
+      "exit"
+    ]
+  },
   "llm/llm-extract/perks/payment-gate/src/llm_payment_gate.py": {
     "edges": [
       [

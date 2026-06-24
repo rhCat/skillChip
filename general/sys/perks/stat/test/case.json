@@ -1,0 +1,11 @@
+{
+  "_perk": "stat",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "outputs": ["stat.json"],
+    "contains": {
+      "stat.json": ["\"ok\": true", "\"cpu_percent\":", "\"cores\":", "\"loadavg\":"]
+    }
+  }
+}

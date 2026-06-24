@@ -2,11 +2,11 @@
   "chip": "skillChip",
   "version": 1,
   "cartridge": false,
-  "count": 40,
+  "count": 41,
   "skills": [
     {
       "skill": "alchemy",
-      "skill_sha": "cd3427386f176d9e8544385211dcd2f53d7cd552053913d6214ec175618d7b44",
+      "skill_sha": "61937a87c3a3bb2e449ed497bab42516dc77e53166690d8f3a6e43f4f6725f55",
       "file_count": 36
     },
     {
@@ -200,10 +200,15 @@
       "file_count": 16
     },
     {
+      "skill": "sys",
+      "skill_sha": "7f4e92ce0f06dae4546f9a780b499c9566fd5d9c34b05892afefd8b85b92114e",
+      "file_count": 9
+    },
+    {
       "skill": "terraform",
       "skill_sha": "5d54fa53a79fee7d128c6d15a8e5445240dfefd6e342b26d7d574616778ba522",
       "file_count": 18
     }
   ],
-  "chip_sha": "158146e1e62bb356bf7c244bac29657e50051402efab75e8eab8a7c3e2b38f79"
+  "chip_sha": "8195dd5a7a8f5c8971a378ddfe0b6e711289e8ef4b0b0ac49748fc202de9e82e"
 }

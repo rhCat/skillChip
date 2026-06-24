@@ -1,0 +1,16 @@
+{
+  "skill": "sys",
+  "skill_sha": "7f4e92ce0f06dae4546f9a780b499c9566fd5d9c34b05892afefd8b85b92114e",
+  "file_count": 9,
+  "files": {
+    "SKILL.md": "c75263c14c5e74407cd5cbf02d09e1b44c328ffc1e4492c05ca64599dd384155",
+    "blueprint.json": "797f37cc662d33044e04ccce234ebab7c8549c8152cdf029bdb8949954b17ccd",
+    "perks.json": "2c2a5a971b0c508135d46745b87390f4caa6a182dd75c9c5302551c28bc1429d",
+    "perks/stat/manifesto.json": "9ba393a2cd374d0a705934594526d57fa6553ac5d79ac3775f13922dc0f86111",
+    "perks/stat/metadata.json": "0aea78c439039d83e29eed32c4e3a18e975b9026d2e27f33873b04f4badca54a",
+    "perks/stat/src/contracts.json": "7be05edea6793d4d70e44a871142883ef5106276050bddae2c9e02e6d73b42e5",
+    "perks/stat/src/sys_stat.py": "0001de68f61250719a611a94f00403a68cb8513197d111fa27df8135800babad",
+    "perks/stat/src/sys_stat.sh": "e35bde96a70627764f390c48c77d6d06f91e499e3a9bc487d7baa53dcc0ec758",
+    "perks/stat/test/case.json": "9597be270422be894a29c6526a41715ee1648ab766428f4356559155bd8f419a"
+  }
+}

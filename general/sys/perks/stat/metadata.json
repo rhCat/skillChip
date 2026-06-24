@@ -1,0 +1,5 @@
+{
+  "perk": "stat",
+  "summary": "governed host metrics — CPU %, load average, memory, uptime, cores. Real /proc/stat on Linux; honest load-per-core estimate on macOS. Value-free node pulse for the fleet monitor",
+  "destructive": false
+}
