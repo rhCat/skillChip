@@ -1,0 +1,17 @@
+{
+  "skill": "llm-extract",
+  "skill_sha": "c86a41867c283b17f7e956b20b76e595850201f7c03bff2f17fb7f77e5690b11",
+  "file_count": 10,
+  "files": {
+    "SKILL.md": "6ddc21669c85e92e1d18e6aeb7c9d7bf801b3d77ba54c17a5db76d44b3334b0e",
+    "blueprint.json": "3299e325ebdf23e4577b78207a0ca36e3ee0e083069e4056ef3ed9436c4fa6b7",
+    "model.json": "b0230581ea05f9933520a23b9c7933bd990833355b3896348e72a796dd3963cf",
+    "perks.json": "7d645f8dc087fe76704ac3094abfff8f6180020047a90ba8a15cd0bd4c2a204b",
+    "perks/payment-gate/manifesto.json": "6273ed16df5293a15c80f5a676cc7ed57b0cb8047527ede87a56ffe05ec46ae6",
+    "perks/payment-gate/metadata.json": "928ec5c296080008a8cfe5187c606bd9d7e19aa4e7eec72e81bc89f7735633ec",
+    "perks/payment-gate/src/contracts.json": "ee628ac412d6642435cf6fb0361b85d751d093dbf6c5109d7bb82447c55a3dc9",
+    "perks/payment-gate/src/llm_payment_gate.py": "fd422e90106012d36d4fde85094ee2889dd7fc59f5e39e90c77a6cd74c59e79d",
+    "perks/payment-gate/src/llm_payment_gate.sh": "9ed321db811e1e472f36b50e371f225f0046fd0f1158b7ca815fcbeb38c1f881",
+    "perks/payment-gate/test/case.json": "6e9488e4e23de41678c4ae03bc690814dba8b6df0170d0c769beaecd0c0dc0da"
+  }
+}

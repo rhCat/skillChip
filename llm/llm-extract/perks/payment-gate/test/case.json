@@ -1,0 +1,19 @@
+{
+  "_perk": "payment-gate",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "outputs": ["gate.json"],
+    "contains": {
+      "gate.json": [
+        "\"ok\": true",
+        "\"contract_discriminates\": true",
+        "\"pass_pays_work\": true",
+        "\"fail_refunds_initiator\": true",
+        "\"penalty_policy_exact\": true",
+        "\"idempotent\": true",
+        "\"declared_contract_discriminates\": true"
+      ]
+    }
+  }
+}

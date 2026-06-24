@@ -1,0 +1,6 @@
+{
+  "tool": "llm_payment_gate",
+  "inputs": {},
+  "outputs": {"gate_out": {"path": "${RECORD_STORE}/gate.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/gate.json"}
+}

@@ -4882,5 +4882,37 @@
       "stmt13",
       "exit"
     ]
+  },
+  "llm/llm-extract/perks/payment-gate/src/llm_payment_gate.py": {
+    "edges": [
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt7"
+      ],
+      [
+        "stmt7",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt5",
+      "stmt7",
+      "exit"
+    ]
   }
 }

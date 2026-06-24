@@ -1,0 +1,11 @@
+{
+  "skill": "llm-extract",
+  "perks": [
+    {
+      "id": "payment-gate",
+      "summary": "P6-T09 schema-validation payment gate — the meter measures effort, the declared output contract decides whether effort was work; schema-fail pays the publisher zero + refunds the initiator, yet still pays the provider passthrough + govd fee (zero-sum, idempotent)",
+      "destructive": false,
+      "tools": ["llm_payment_gate"]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "perk": "payment-gate",
+  "summary": "P6-T09 schema-validation payment gate — proves intelligence settlement (pass pays work; fail pays publisher zero + refunds initiator, yet still pays passthrough + govd fee; penalty exact; zero-sum; idempotent) and that the skill's declared output contract discriminates work from mere effort",
+  "destructive": false
+}

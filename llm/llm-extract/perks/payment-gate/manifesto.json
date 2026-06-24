@@ -1,0 +1,7 @@
+{
+  "_perk": "payment-gate",
+  "sequence": ["llm_payment_gate"],
+  "tools": {"llm_payment_gate": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}

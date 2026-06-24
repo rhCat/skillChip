@@ -1,0 +1,20 @@
+{
+  "skill": "llm-extract",
+  "model_class": "extraction",
+  "model": {
+    "tier": "small",
+    "rate": {"in_per_1k": "0.50", "out_per_1k": "1.50"}
+  },
+  "io": {
+    "input": {"document": "str", "schema": "dict"},
+    "output_contract": {
+      "required": ["fields", "confidence"],
+      "types": {"fields": "dict", "confidence": "number"}
+    }
+  },
+  "validation_refund": {"refund_weight": 100, "penalty_weight": 0},
+  "samples": {
+    "pass": {"fields": {"invoice_no": "A-1004", "total": "42.00"}, "confidence": 0.91},
+    "fail": {"fields": {"invoice_no": "A-1004"}}
+  }
+}

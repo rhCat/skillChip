@@ -2,11 +2,11 @@
   "chip": "skillChip",
   "version": 1,
   "cartridge": false,
-  "count": 39,
+  "count": 40,
   "skills": [
     {
       "skill": "alchemy",
-      "skill_sha": "d3d0a3e98894be2f8d99594414d2f596754646a7351273716277595bf856986d",
+      "skill_sha": "ae243cbb4e67c5e6e10a181955fb611e2efa96c7b49bdd2c540dd4cf6e4d0bf0",
       "file_count": 36
     },
     {
@@ -145,6 +145,11 @@
       "file_count": 21
     },
     {
+      "skill": "llm-extract",
+      "skill_sha": "c86a41867c283b17f7e956b20b76e595850201f7c03bff2f17fb7f77e5690b11",
+      "file_count": 10
+    },
+    {
       "skill": "markdown",
       "skill_sha": "d7ce0c56621784af884bc1a35402bb83df4a376e3c03f3c29bbc08f5fe0edb0f",
       "file_count": 21
@@ -200,5 +205,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "c101bb958b5f7babdee4816048e16615ef19b47e29909b75565646eb0ebc4087"
+  "chip_sha": "dba2970507774fecd77a9a49810070717224e23215232d37360f6a14ba295b63"
 }
