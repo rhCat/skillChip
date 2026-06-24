@@ -3588,6 +3588,48 @@
       "exit"
     ]
   },
+  "cws/cws-settle-sim/perks/adapter/src/settle_adapter.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt4"
+      ],
+      [
+        "stmt4",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "stmt7"
+      ],
+      [
+        "stmt7",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt4",
+      "stmt6",
+      "stmt7",
+      "exit"
+    ]
+  },
   "cws/cws-settle-sim/perks/capstone/src/settle_capstone.py": {
     "edges": [
       [

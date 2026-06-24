@@ -1,141 +1,149 @@
 {
-  "skill": "cws-settle-sim",
-  "perks": [
-    {
-      "id": "capstone",
-      "summary": "SV-6 capstone (P6-T21) \u2014 real redeemed milestones settle as bounties (zero-sum); FMV seeded; plan-completion receipt verifies offline. THE LADDER CLOSES",
-      "destructive": false,
-      "tools": [
-        "settle_capstone"
-      ]
-    },
-    {
-      "id": "credits",
-      "summary": "credit usage-billing (credits.py, #116) \u2014 prepaid balance + per-call DEBITS; top-up credits, each priced run debits zero-sum, balance draws down, a tax over the balance is REFUSED, idempotent per plan_sha",
-      "destructive": false,
-      "tools": [
-        "settle_credits"
-      ]
-    },
-    {
-      "id": "dispute",
-      "summary": "dispute lifecycle (P6-T12) \u2014 bond + m-of-n WebAuthn resolution + clawback/forfeit + reputation, all ledgered & zero-sum",
-      "destructive": false,
-      "tools": [
-        "settle_dispute"
-      ]
-    },
-    {
-      "id": "floatban",
-      "summary": "Money type + float-ban (P6-T01) \u2014 scale-4 HALF_EVEN, float refused, splits exact; 0 float intrusions in infra/settle",
-      "destructive": false,
-      "tools": [
-        "settle_floatban"
-      ]
-    },
-    {
-      "id": "manipulate",
-      "summary": "FMV manipulation resistance (P6-T11) \u2014 20% adversarial volume moves the trimmed control-capped median <2%; sub-admission provisional; sybils collapsed",
-      "destructive": false,
-      "tools": [
-        "settle_manipulate"
-      ]
-    },
-    {
-      "id": "pricer",
-      "summary": "plan pricer (price.py, #110) \u2014 price a governed run from its value-free PLAN before it runs; itemized subtotal + total sum exact, seeded tool_fee flows through, infra/settle float-clean",
-      "destructive": false,
-      "tools": [
-        "settle_pricer"
-      ]
-    },
-    {
-      "id": "quote",
-      "summary": "signed funded quote (P6-T04) \u2014 plan-bound DSSE quote, breakdown sums exact; priced grant needs a funded quote; tampered/unfunded/plan-mismatch refused",
-      "destructive": false,
-      "tools": [
-        "settle_quote"
-      ]
-    },
-    {
-      "id": "rail",
-      "summary": "settle-time tax rail (rails.py, #113) \u2014 platform tax collected at SETTLE, never an agent action / hidden portal; split into visible substrate/author/marketplace lines (skim refused), StripeRail inert until keyed, collect_run_tax zero-sum + idempotent",
-      "destructive": false,
-      "tools": [
-        "settle_rail"
-      ]
-    },
-    {
-      "id": "settle",
-      "summary": "settlement engine (P6-T05) \u2014 dual-sig+validation:pass+quote-bound \u2192 atomic balanced settle, escrow zeroed; mutant receipts (sig stripped / verdict flipped / unbound) rejected",
-      "destructive": false,
-      "tools": [
-        "settle_engine"
-      ]
-    },
-    {
-      "id": "simulate",
-      "summary": "the cws-settle-sim authoring (P6-T18) \u2014 storm + manipulate + dispute: zero_sum_exact, index_drift<2%, dispute_lifecycle_complete",
-      "destructive": false,
-      "tools": [
-        "settle_simulate"
-      ]
-    },
-    {
-      "id": "zerosum",
-      "summary": "reward ledger double-entry (P6-T02) \u2014 every posting set balanced; 10k storm globally zero-sum; escrow zero at terminal; balance-root checkpoints",
-      "destructive": false,
-      "tools": [
-        "settle_zerosum"
-      ]
-    },
-    {
-      "id": "reward-verify",
-      "summary": "money\u2194work cross-check (P6-T06) \u2014 settlements bijective with dual-signed quote-bound receipts; flags money_without_work + work_without_money",
-      "destructive": false,
-      "tools": [
-        "settle_reward_verify"
-      ]
-    },
-    {
-      "id": "markets",
-      "summary": "bounty + reverse auction (P6-T10) \u2014 one validated winner (losers untouched); lowest qualified bid clears below posted",
-      "destructive": false,
-      "tools": [
-        "settle_markets"
-      ]
-    },
-    {
-      "id": "reputation",
-      "summary": "principal reputation (P6-T13) \u2014 scores reproducible from public ledger + signed; /rep privacy-gated",
-      "destructive": false,
-      "tools": [
-        "settle_reputation"
-      ]
-    },
-    {
-      "id": "escrow-expiry",
-      "summary": "escrow liveness (P6-T03) \u2014 expires_at + auto-refund sweep; no stale escrow; zero-sum + idempotent",
-      "destructive": false,
-      "tools": [
-        "settle_escrow_expiry"
-      ]
-    },
-    {
-      "id": "metered-settle",
-      "summary": "P6-T08 \u2014 exod-attested meters become settleable: provider-receipt capture + reconciliation (pass-through reimbursement, clamped); mismatch unsettleable; absent receipt -> attested-count fallback; un-attested refused",
-      "destructive": false,
-      "tools": [
-        "settle_metered"
-      ]
-    },
-    {
-      "id": "self-bounty",
-      "summary": "P6-T20 (M12) \u2014 cyberware's security program through its OWN reward ledger: vuln classes are bounties, a validated disclosure pays the external researcher through the ledger, unclaimed refunds the sponsor; conserved",
-      "destructive": false,
-      "tools": [
-        "settle_selfbounty"
-      ]
-    }
-  ]
+    "skill": "cws-settle-sim",
+    "perks": [
+        {
+            "id": "capstone",
+            "summary": "SV-6 capstone (P6-T21) — real redeemed milestones settle as bounties (zero-sum); FMV seeded; plan-completion receipt verifies offline. THE LADDER CLOSES",
+            "destructive": false,
+            "tools": [
+                "settle_capstone"
+            ]
+        },
+        {
+            "id": "credits",
+            "summary": "credit usage-billing (credits.py, #116) — prepaid balance + per-call DEBITS; top-up credits, each priced run debits zero-sum, balance draws down, a tax over the balance is REFUSED, idempotent per plan_sha",
+            "destructive": false,
+            "tools": [
+                "settle_credits"
+            ]
+        },
+        {
+            "id": "dispute",
+            "summary": "dispute lifecycle (P6-T12) — bond + m-of-n WebAuthn resolution + clawback/forfeit + reputation, all ledgered & zero-sum",
+            "destructive": false,
+            "tools": [
+                "settle_dispute"
+            ]
+        },
+        {
+            "id": "floatban",
+            "summary": "Money type + float-ban (P6-T01) — scale-4 HALF_EVEN, float refused, splits exact; 0 float intrusions in infra/settle",
+            "destructive": false,
+            "tools": [
+                "settle_floatban"
+            ]
+        },
+        {
+            "id": "manipulate",
+            "summary": "FMV manipulation resistance (P6-T11) — 20% adversarial volume moves the trimmed control-capped median <2%; sub-admission provisional; sybils collapsed",
+            "destructive": false,
+            "tools": [
+                "settle_manipulate"
+            ]
+        },
+        {
+            "id": "pricer",
+            "summary": "plan pricer (price.py, #110) — price a governed run from its value-free PLAN before it runs; itemized subtotal + total sum exact, seeded tool_fee flows through, infra/settle float-clean",
+            "destructive": false,
+            "tools": [
+                "settle_pricer"
+            ]
+        },
+        {
+            "id": "quote",
+            "summary": "signed funded quote (P6-T04) — plan-bound DSSE quote, breakdown sums exact; priced grant needs a funded quote; tampered/unfunded/plan-mismatch refused",
+            "destructive": false,
+            "tools": [
+                "settle_quote"
+            ]
+        },
+        {
+            "id": "rail",
+            "summary": "settle-time tax rail (rails.py, #113) — platform tax collected at SETTLE, never an agent action / hidden portal; split into visible substrate/author/marketplace lines (skim refused), StripeRail inert until keyed, collect_run_tax zero-sum + idempotent",
+            "destructive": false,
+            "tools": [
+                "settle_rail"
+            ]
+        },
+        {
+            "id": "settle",
+            "summary": "settlement engine (P6-T05) — dual-sig+validation:pass+quote-bound → atomic balanced settle, escrow zeroed; mutant receipts (sig stripped / verdict flipped / unbound) rejected",
+            "destructive": false,
+            "tools": [
+                "settle_engine"
+            ]
+        },
+        {
+            "id": "simulate",
+            "summary": "the cws-settle-sim authoring (P6-T18) — storm + manipulate + dispute: zero_sum_exact, index_drift<2%, dispute_lifecycle_complete",
+            "destructive": false,
+            "tools": [
+                "settle_simulate"
+            ]
+        },
+        {
+            "id": "zerosum",
+            "summary": "reward ledger double-entry (P6-T02) — every posting set balanced; 10k storm globally zero-sum; escrow zero at terminal; balance-root checkpoints",
+            "destructive": false,
+            "tools": [
+                "settle_zerosum"
+            ]
+        },
+        {
+            "id": "reward-verify",
+            "summary": "money↔work cross-check (P6-T06) — settlements bijective with dual-signed quote-bound receipts; flags money_without_work + work_without_money",
+            "destructive": false,
+            "tools": [
+                "settle_reward_verify"
+            ]
+        },
+        {
+            "id": "markets",
+            "summary": "bounty + reverse auction (P6-T10) — one validated winner (losers untouched); lowest qualified bid clears below posted",
+            "destructive": false,
+            "tools": [
+                "settle_markets"
+            ]
+        },
+        {
+            "id": "reputation",
+            "summary": "principal reputation (P6-T13) — scores reproducible from public ledger + signed; /rep privacy-gated",
+            "destructive": false,
+            "tools": [
+                "settle_reputation"
+            ]
+        },
+        {
+            "id": "escrow-expiry",
+            "summary": "escrow liveness (P6-T03) — expires_at + auto-refund sweep; no stale escrow; zero-sum + idempotent",
+            "destructive": false,
+            "tools": [
+                "settle_escrow_expiry"
+            ]
+        },
+        {
+            "id": "metered-settle",
+            "summary": "P6-T08 — exod-attested meters become settleable: provider-receipt capture + reconciliation (pass-through reimbursement, clamped); mismatch unsettleable; absent receipt -> attested-count fallback; un-attested refused",
+            "destructive": false,
+            "tools": [
+                "settle_metered"
+            ]
+        },
+        {
+            "id": "self-bounty",
+            "summary": "P6-T20 (M12) — cyberware's security program through its OWN reward ledger: vuln classes are bounties, a validated disclosure pays the external researcher through the ledger, unclaimed refunds the sponsor; conserved",
+            "destructive": false,
+            "tools": [
+                "settle_selfbounty"
+            ]
+        },
+        {
+            "id": "adapter",
+            "summary": "SettlementAdapter seam (P6-T14) — one idempotent fund/payout interface; InternalCreditsAdapter (zero-sum reward-ledger) + StripeAdapter (Payment Intents + Connect, inert-until-keyed); ledger↔sandbox reconcile exact to 0.0001 across 1k payouts; 10k duplicate-delivery storm, 0 idempotency violations",
+            "destructive": false,
+            "tools": [
+                "settle_adapter"
+            ]
+        }
+    ]
 }

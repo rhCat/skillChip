@@ -1,0 +1,6 @@
+{
+  "tool": "settle_adapter",
+  "inputs": {},
+  "outputs": {"adapter_out": {"path": "${RECORD_STORE}/adapter.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/adapter.json"}
+}

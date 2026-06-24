@@ -1,0 +1,5 @@
+{
+  "perk": "adapter",
+  "summary": "SettlementAdapter seam (P6-T14) — one idempotent fund/payout/status interface, two interchangeable backends (internal zero-sum credits + inert-until-keyed Stripe); hermetic selftest proves interface conformance, zero-sum, exact ledger↔sandbox reconcile, and a duplicate-delivery storm with 0 violations",
+  "destructive": false
+}
