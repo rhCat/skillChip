@@ -6,7 +6,7 @@
   "skills": [
     {
       "skill": "alchemy",
-      "skill_sha": "ae243cbb4e67c5e6e10a181955fb611e2efa96c7b49bdd2c540dd4cf6e4d0bf0",
+      "skill_sha": "27189a1bb8fa05b5960987212c293c391367463c25bbd7ec5e4f11c33a46b520",
       "file_count": 36
     },
     {
@@ -26,8 +26,8 @@
     },
     {
       "skill": "cws-bench",
-      "skill_sha": "ed41b8773c13021ad7863e9cc62d4d87f4e7fc28cc9764332b47add98fcb6fc5",
-      "file_count": 40
+      "skill_sha": "27a598384cd8bf64d98c179a1eb128d6577984e411540e4cc35e421a8ec49f23",
+      "file_count": 46
     },
     {
       "skill": "cws-chaos",
@@ -205,5 +205,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "dba2970507774fecd77a9a49810070717224e23215232d37360f6a14ba295b63"
+  "chip_sha": "34c00dd7e6205dab9812e739cd77cf0877be417809f0b5521ec7898302b8c475"
 }

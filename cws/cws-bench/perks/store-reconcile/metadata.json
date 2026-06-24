@@ -1,0 +1,5 @@
+{
+  "perk": "store-reconcile",
+  "summary": "P5-T01 — Store behind a StoreBackend interface (sqlite-WAL + psycopg/Postgres-15) passing ONE identical contract suite; the chained JSONL is the artifact of record + a continuous reconciler: zero divergence across a soak, injected divergence alarms within one cycle",
+  "destructive": false
+}

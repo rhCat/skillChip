@@ -448,6 +448,23 @@
       "exit"
     ]
   },
+  "cws/cws-bench/perks/store-reconcile/src/bench_store_reconcile.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt1"
+      ],
+      [
+        "stmt1",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt1",
+      "exit"
+    ]
+  },
   "cws/cws-bench/perks/trace-propagation/src/bench_trace_propagation.py": {
     "edges": [
       [

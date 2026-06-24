@@ -1,0 +1,17 @@
+{
+  "_perk": "store-reconcile",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "outputs": ["reconcile.json"],
+    "contains": {
+      "reconcile.json": [
+        "\"within\": true",
+        "\"sqlite_ok\": true",
+        "\"soak_zero_divergence\": true",
+        "\"injected_divergence_caught\": true",
+        "\"cycles_to_alarm\": 1"
+      ]
+    }
+  }
+}

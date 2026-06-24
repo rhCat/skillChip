@@ -48,6 +48,14 @@
       "tools": [
         "bench_settle_throughput"
       ]
+    },
+    {
+      "id": "store-reconcile",
+      "summary": "P5-T01 \u2014 Store behind a StoreBackend interface (sqlite-WAL + psycopg/Postgres-15) passing ONE identical contract suite; chained JSONL = artifact of record + a continuous reconciler: zero divergence across a soak, injected divergence alarms within one cycle",
+      "destructive": false,
+      "tools": [
+        "bench_store_reconcile"
+      ]
     }
   ]
 }

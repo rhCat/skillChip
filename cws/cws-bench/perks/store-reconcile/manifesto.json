@@ -1,0 +1,7 @@
+{
+  "_perk": "store-reconcile",
+  "sequence": ["bench_store_reconcile"],
+  "tools": {"bench_store_reconcile": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}
