@@ -1,0 +1,5 @@
+{
+  "perk": "rt-gvisor-tier",
+  "summary": "P2-T04 community-tier seam: gVisor (runsc) renders the SAME confinement as bwrap behind one driver (never weaker), and the community tier cannot request secrets (schema + runtime). Exit 0 iff held. Live corpus under each backend is host-gated (bwrap/runsc); the rendering + tier are proven everywhere",
+  "destructive": false
+}

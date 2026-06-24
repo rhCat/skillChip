@@ -1,0 +1,7 @@
+{
+  "_perk": "rt-gvisor-tier",
+  "sequence": ["rt_gvisor_tier"],
+  "tools": {"rt_gvisor_tier": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}

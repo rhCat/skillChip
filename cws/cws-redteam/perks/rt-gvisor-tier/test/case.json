@@ -1,0 +1,16 @@
+{
+  "_perk": "rt-gvisor-tier",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "outputs": ["redteam.json"],
+    "contains": {
+      "redteam.json": [
+        "\"held\": true",
+        "\"seam_parity\": true",
+        "\"gvisor_no_weaken\": true",
+        "\"no_secrets_tier\": true"
+      ]
+    }
+  }
+}

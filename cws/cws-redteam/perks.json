@@ -144,6 +144,14 @@
       "tools": [
         "rt_govd_executor"
       ]
+    },
+    {
+      "id": "rt-gvisor-tier",
+      "summary": "P2-T04 community tier \u2014 gVisor (runsc) renders the SAME confinement as bwrap behind one driver (never weaker); the community tier cannot request secrets (schema + runtime). Rendering + tier proven everywhere; live corpus under each backend host-gated",
+      "destructive": false,
+      "tools": [
+        "rt_gvisor_tier"
+      ]
     }
   ]
 }
