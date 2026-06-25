@@ -1,7 +1,7 @@
 ---
 skill: cws-chaos
 name: Chaos drills (partition, crash, settle-atomicity)
-perks: [drill, partition, crash, settlecrash]
+perks: [drill, partition, crash, settlecrash, failover]
 ---
 
 # cws-chaos — fault-injection drills (V-CHAOS, M3/M9)
@@ -18,6 +18,7 @@ conserved through a crash.
 | `crash` | P2-T10 | **crash-exod** — exod dies mid-step: the orphan sandbox is **reaped**, the step records an **error** (never a false pass), and the run is **resumable**. (The real cgroup-kill reap is exercised by the exec-image sandbox tests; this drill asserts the recovery bookkeeping.) |
 | `settlecrash` | P6-T17 | **settle-engine crash atomicity** — a crash mid-posting-set is **all-or-nothing** (one record = one append = one fsync; a torn tail is dropped on recovery, never a partial set), recovery **replays exactly once** (the spent-quote guard), and **conservation holds through the crash** (the recovered ledger is zero-sum). |
 | `drill` | P2-T10 | all three drills together — the comprehensive V-CHAOS run. |
+| `failover` | P5-T04 | **active-passive govd + advisory-lock lease** — exactly one active writer over the shared store, arbitrated by a durable, time-bounded **lease** (`backend.try_acquire_lease`/renew/release, atomic + mutually exclusive). **`split_brain`**: the lease can't be co-held, and the mirror's single-writer **gate** refuses any shared write attempted without it (a partitioned ex-active is fenced; the attempt is recorded). **`failover_drill`**: the active dies, the standby acquires past the lease TTL and a re-sent step is idempotent — **zero duplicate grants, zero lost step_results**. **`no_orphaned_run`**: the interrupted run is intact on the artifact of record and the index reconciles to zero divergence. Hermetic — two in-process instances over one shared sqlite, a deterministic clock. |
 
 The core is `infra/chaos.py`; the partition + crash drills are pure stdlib (run in CI), the settle-crash drill
 needs openssl (ed25519ph).

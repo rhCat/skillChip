@@ -1,0 +1,5 @@
+{
+  "perk": "failover",
+  "summary": "P5-T04 active-passive govd over a single-writer advisory-lock lease — split_brain (the lease is mutually exclusive; a partitioned second writer's shared-store appends are gated + recorded), failover_drill (active dies, standby acquires past the TTL, re-sent step idempotent: zero duplicate grants + zero lost step_results), no_orphaned_run (interrupted run intact + index reconciles to zero divergence), lease_lifecycle (acquire/renew/expiry-handoff/fence/release)",
+  "destructive": false
+}

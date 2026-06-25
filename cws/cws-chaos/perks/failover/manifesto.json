@@ -1,0 +1,7 @@
+{
+  "_perk": "failover",
+  "sequence": ["ha_failover"],
+  "tools": {"ha_failover": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}

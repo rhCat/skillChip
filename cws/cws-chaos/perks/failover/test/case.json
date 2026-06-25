@@ -1,0 +1,17 @@
+{
+  "_perk": "failover",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "outputs": ["failover.json"],
+    "contains": {
+      "failover.json": [
+        "\"ok\": true",
+        "\"split_brain\": true",
+        "\"failover_drill\": true",
+        "\"no_orphaned_run\": true",
+        "\"lease_lifecycle\": true"
+      ]
+    }
+  }
+}

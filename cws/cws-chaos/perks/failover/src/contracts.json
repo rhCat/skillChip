@@ -1,0 +1,6 @@
+{
+  "tool": "ha_failover",
+  "inputs": {},
+  "outputs": {"failover_out": {"path": "${RECORD_STORE}/failover.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/failover.json"}
+}

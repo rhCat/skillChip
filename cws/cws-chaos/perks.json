@@ -32,6 +32,14 @@
       "tools": [
         "chaos_settlecrash"
       ]
+    },
+    {
+      "id": "failover",
+      "summary": "P5-T04 active-passive govd + advisory-lock lease — split_brain (mutually-exclusive lease; partitioned second writer gated + recorded), failover_drill (active dies, standby acquires past TTL, idempotent resume: zero dup grants + zero lost step_results), no_orphaned_run (interrupted run intact + index reconciles to zero divergence), lease_lifecycle",
+      "destructive": false,
+      "tools": [
+        "ha_failover"
+      ]
     }
   ]
 }
