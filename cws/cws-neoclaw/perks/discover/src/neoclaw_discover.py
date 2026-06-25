@@ -22,23 +22,22 @@ def _get_json(url: str, timeout: int = 8):
 
 
 def main() -> int:
-    node = os.environ.get("NODE_URL", "").rstrip("/")
+    # LOOK FOR THE GOVD: an explicit NODE_URL targets a specific node; else fall back to $GOVD_URL (the
+    # operator's configured node), else the local node. So the skill discovers the govd instead of demanding a
+    # hardcoded address — the real fleet node binds its tailnet IP, not loopback.
+    node = (os.environ.get("NODE_URL") or os.environ.get("GOVD_URL") or "http://127.0.0.1:5773").rstrip("/")
     store = os.environ["RECORD_STORE"].rstrip("/")
     os.makedirs(store, exist_ok=True)
     out = os.path.join(store, "discover.json")
-
-    if not node:
-        rec = {"tool": "neoclaw_discover", "ok": False, "error": "NODE_URL is required"}
-        with open(out, "w") as f:
-            json.dump(rec, f, indent=2)
-        print(json.dumps(rec))
-        return 2
 
     rec = {"tool": "neoclaw_discover", "node": node, "reachable": False, "ok": False}
     try:
         health = _get_json(node + "/health")
         rec["reachable"] = True
-        rec["health"] = {k: health.get(k) for k in ("service", "mode", "chip_sha", "runs")}
+        # identity + EXECUTION MODE: `exec_mode`/`exod_attached` say whether this is a govd+exod body (delegated,
+        # the limb runs steps node-side) or a cooperative anchor (caller-side) — so the agent operates it right.
+        rec["health"] = {k: health.get(k) for k in
+                         ("service", "mode", "chip_sha", "runs", "exec_mode", "exod_attached")}
         catalog = _get_json(node + "/catalog")
         skills = catalog.get("skills", [])
         rec["skills"] = sorted(s.get("skill") for s in skills if s.get("skill"))

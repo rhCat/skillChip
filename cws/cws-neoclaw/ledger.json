@@ -1,5 +1,6 @@
 {
   "_schema": "task-ledger TEMPLATE for cws-neoclaw — set perk, fill record_store + the vars the perk's manifesto declares.",
+  "_node_url": "NODE_URL is the govd node's base url: your LOCAL node (http://127.0.0.1:5773) or a FLEET node's address (its tailnet IP:5773, from your fleet config — NOT loopback). If you omit it the porter falls back to $GOVD_URL, else the local node.",
   "skill": "cws-neoclaw",
   "perk": "discover",
   "record_store": "<absolute dir for outputs + run-ledger>",

@@ -7,7 +7,7 @@
     "pure urllib: no local cyberware dependency, so any agent can point neoclaw at any node by URL",
     "report (node identity + governed catalog) to record_store"
   ],
-  "usage": "Set NODE_URL (the node's govd base url, e.g. http://127.0.0.1:5773). Output: discover.json — node health (service/mode/chip_sha/runs) + the governed catalog (skills it serves). Exit 0 iff reachable AND a catalog returned; an unreachable node writes the report and exits non-zero.",
+  "usage": "Looks for the govd: set NODE_URL to target a node (your local node, or a FLEET node — its tailnet IP:5773 from your fleet config, NOT loopback); if unset it falls back to $GOVD_URL, else the local node http://127.0.0.1:5773. Output: discover.json — node health (service/mode/chip_sha/runs + exec_mode/exod_attached: a govd+exod body or a cooperative anchor?) + the governed catalog. Exit 0 iff reachable AND a catalog returned.",
   "limitation": "Needs a reachable govd node. Reporting only — no claim, no run.",
   "minimal_example": {
     "perk": "discover",

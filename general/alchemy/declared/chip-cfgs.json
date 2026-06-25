@@ -1987,42 +1987,26 @@
       ],
       [
         "stmt5",
-        "stmt7"
-      ],
-      [
-        "stmt7",
         "stmt8"
       ],
       [
         "stmt8",
-        "stmt10"
+        "stmt9"
       ],
       [
-        "stmt10",
+        "stmt9",
         "stmt11"
       ],
       [
         "stmt11",
+        "stmt13"
+      ],
+      [
+        "stmt13",
         "stmt14"
       ],
       [
         "stmt14",
-        "stmt15"
-      ],
-      [
-        "stmt15",
-        "stmt17"
-      ],
-      [
-        "stmt17",
-        "stmt19"
-      ],
-      [
-        "stmt19",
-        "stmt20"
-      ],
-      [
-        "stmt20",
         "exit"
       ]
     ],
@@ -2033,15 +2017,11 @@
       "stmt3",
       "stmt4",
       "stmt5",
-      "stmt7",
       "stmt8",
-      "stmt10",
+      "stmt9",
       "stmt11",
+      "stmt13",
       "stmt14",
-      "stmt15",
-      "stmt17",
-      "stmt19",
-      "stmt20",
       "exit"
     ]
   },

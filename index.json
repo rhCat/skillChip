@@ -6,7 +6,7 @@
   "skills": [
     {
       "skill": "alchemy",
-      "skill_sha": "f97479d59b74b86ea9c0bfc0f4e9fbb680fd0ffb6424a6dd989456d7f64e33c4",
+      "skill_sha": "ac7e9466e60c9210552659f580a934907416a2fa973c9bbb253fdfec11079fe6",
       "file_count": 36
     },
     {
@@ -66,7 +66,7 @@
     },
     {
       "skill": "cws-neoclaw",
-      "skill_sha": "8130d172308ca103d0fb5515a2241d4a78e5a8c1473e58964aaa6f9ca813d556",
+      "skill_sha": "5e68cbcad8175887df8ade7dbdd6351083e54d2acca49ab0186164f7ed718d70",
       "file_count": 22
     },
     {
@@ -210,5 +210,5 @@
       "file_count": 18
     }
   ],
-  "chip_sha": "cb0b2f973295d45f206b2c7db4f21155450daa4c520657eeed6133a42818de43"
+  "chip_sha": "d00821b1dc475addbc89d66b1cf7e945cf1029923071b28b69924eef7228d525"
 }

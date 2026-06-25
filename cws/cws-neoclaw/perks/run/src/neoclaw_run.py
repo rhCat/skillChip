@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """neoclaw_run — forward a governed CLAIM to a node and run it under the node's oversight.
 
-The agent NAMES a sub-claim (a task-ledger: skill / perk / vars / record_store) and a NODE_URL; neoclaw submits
-it to that node's govd through the governed run flow (`infra.govern.govd_client` / `run_governed`): the node
-BLESSES the plan, GRANTS each step over its oversight channel, and the porters execute faithfully under the
-node's non-root identity (the executor's no-root gate). neoclaw reports the node's VERDICT + a pointer to the
-run's ledger — never the task data. A destructive sub-claim push_backs until APPROVE waives the named rule.
+The agent NAMES a sub-claim (a task-ledger: skill / perk / vars / record_store); neoclaw LOOKS FOR THE GOVD
+(explicit NODE_URL, else $GOVD_URL, else the local node) and submits the claim to that node's govd. neoclaw
+probes the node's `/health` for its `exec_mode` and drives the matching client flow: a **cooperative** anchor
+runs the steps caller-side (`run_governed`); a **delegated body** (govd+exod) has its own exod run each step
+CONFINED + signed server-side (`run_delegated`, via `--delegated`) — the agent runs nothing. Either way the
+node BLESSES the plan and GRANTS each step; neoclaw reports the node's VERDICT + a pointer to the run's ledger,
+never the task data. A destructive sub-claim push_backs until APPROVE waives the named rule.
 
 Unlike `discover` (pure urllib, portable), `run` drives the cyberware client (registry verification + the
 per-step oversight handshake), so it needs the cyberware install + a registry matching the node's blessed chip.
@@ -15,6 +17,8 @@ import json
 import os
 import subprocess
 import sys
+import urllib.error
+import urllib.request
 
 
 def _find_root(start):
@@ -26,8 +30,20 @@ def _find_root(start):
     return None
 
 
+def _node_exec_mode(node: str) -> str:
+    """Probe the node's /health for its execution mode: 'delegated' (govd+exod — the node's limb runs steps) or
+    'cooperative' (caller-side). An unreachable/old node defaults to cooperative; the run itself surfaces any
+    real reachability error."""
+    try:
+        with urllib.request.urlopen(node + "/health", timeout=6) as r:  # noqa: S310 (operator node URL)
+            return (json.loads(r.read().decode()) or {}).get("exec_mode") or "cooperative"
+    except (urllib.error.URLError, urllib.error.HTTPError, OSError, ValueError):
+        return "cooperative"
+
+
 def main() -> int:
-    node = os.environ.get("NODE_URL", "").rstrip("/")
+    # LOOK FOR THE GOVD: explicit NODE_URL, else $GOVD_URL (the configured node), else the local node.
+    node = (os.environ.get("NODE_URL") or os.environ.get("GOVD_URL") or "http://127.0.0.1:5773").rstrip("/")
     sub = os.environ.get("SUB_LEDGER", "")
     approve = os.environ.get("APPROVE", "").split()
     store = os.environ["RECORD_STORE"].rstrip("/")
@@ -42,8 +58,8 @@ def main() -> int:
                           "decision": rec.get("decision"), "error": rec.get("error")}))
         return code
 
-    if not node or not sub:
-        return _emit({"tool": "neoclaw_run", "ok": False, "error": "NODE_URL and SUB_LEDGER are required"}, 2)
+    if not sub:
+        return _emit({"tool": "neoclaw_run", "ok": False, "error": "SUB_LEDGER is required"}, 2)
     if not os.path.isfile(sub):
         return _emit({"tool": "neoclaw_run", "ok": False, "error": f"SUB_LEDGER not found: {sub}"}, 2)
 
@@ -54,7 +70,12 @@ def main() -> int:
 
     claim = json.load(open(sub))
     target = f"{claim.get('skill')}/{claim.get('perk')}"
+    # ADJUST TO GOVD+EXOD: a delegated body runs each step via its own exod (server-side, signed); drive that
+    # flow (--delegated) so the run actually executes. A cooperative anchor runs the steps caller-side.
+    exec_mode = _node_exec_mode(node)
     cmd = [sys.executable, "-m", "infra.govern.govd_client", "--url", node, "--ledger", sub]
+    if exec_mode == "delegated":
+        cmd.append("--delegated")
     for rule in approve:
         cmd += ["--approve", rule]
     proc = subprocess.run(cmd, capture_output=True, text=True, env=dict(os.environ, PYTHONPATH=root))
@@ -63,9 +84,10 @@ def main() -> int:
         verdict = json.loads(proc.stdout.strip() or "{}")
     except ValueError:
         verdict = {}
-    rec = {"tool": "neoclaw_run", "node": node, "target": target, "client_exit": proc.returncode,
-           "decision": verdict.get("decision"), "plan_sha": verdict.get("plan_sha"),
-           "ledger": verdict.get("ledger"), "verdict_error": verdict.get("error")}
+    rec = {"tool": "neoclaw_run", "node": node, "target": target, "exec_mode": exec_mode,
+           "client_exit": proc.returncode, "decision": verdict.get("decision"),
+           "plan_sha": verdict.get("plan_sha"), "ledger": verdict.get("ledger"),
+           "verdict_error": verdict.get("error")}
     rec["ok"] = proc.returncode == 0 and verdict.get("decision") == "allow" and not verdict.get("error")
     if not rec["ok"]:
         rec["error"] = verdict.get("error") or (proc.stderr or proc.stdout)[-800:]

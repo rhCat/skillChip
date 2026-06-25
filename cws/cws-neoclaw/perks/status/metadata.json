@@ -7,7 +7,7 @@
     "pure urllib: no local cyberware dependency; a fast liveness check, lighter than discover (no catalog)",
     "report to record_store"
   ],
-  "usage": "Set NODE_URL (the node's govd base url). Output: status.json — up/down + node identity (service/mode/chip_sha/runs). Exit 0 iff the node is up.",
+  "usage": "Looks for the govd: set NODE_URL to target a node (local, or a FLEET node's tailnet address — not loopback); if unset it falls back to $GOVD_URL, else the local node http://127.0.0.1:5773. Output: status.json — up/down + node identity (service/mode/chip_sha/runs) + exec_mode/exod_attached (govd+exod body or cooperative anchor?). Exit 0 iff the node is up.",
   "limitation": "Needs a reachable govd node. Reporting only.",
   "minimal_example": {
     "perk": "status",

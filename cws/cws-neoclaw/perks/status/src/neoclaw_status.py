@@ -12,24 +12,21 @@ import urllib.request
 
 
 def main() -> int:
-    node = os.environ.get("NODE_URL", "").rstrip("/")
+    # LOOK FOR THE GOVD: explicit NODE_URL, else $GOVD_URL (the configured node), else the local node — discover
+    # the govd rather than demand a hardcoded address (the fleet node binds its tailnet IP, not loopback).
+    node = (os.environ.get("NODE_URL") or os.environ.get("GOVD_URL") or "http://127.0.0.1:5773").rstrip("/")
     store = os.environ["RECORD_STORE"].rstrip("/")
     os.makedirs(store, exist_ok=True)
     out = os.path.join(store, "status.json")
-
-    if not node:
-        rec = {"tool": "neoclaw_status", "up": False, "error": "NODE_URL is required"}
-        with open(out, "w") as f:
-            json.dump(rec, f, indent=2)
-        print(json.dumps(rec))
-        return 2
 
     rec = {"tool": "neoclaw_status", "node": node, "up": False}
     try:
         with urllib.request.urlopen(node + "/health", timeout=6) as r:  # noqa: S310 (operator node URL)
             health = json.loads(r.read().decode())
         rec["up"] = True
-        rec["health"] = {k: health.get(k) for k in ("service", "mode", "chip_sha", "runs")}
+        # include exec_mode/exod_attached — is this a govd+exod body (delegated) or a cooperative anchor?
+        rec["health"] = {k: health.get(k) for k in
+                         ("service", "mode", "chip_sha", "runs", "exec_mode", "exod_attached")}
     except (urllib.error.URLError, urllib.error.HTTPError, OSError, ValueError) as e:
         rec["error"] = str(e)
 
