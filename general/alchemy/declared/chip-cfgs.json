@@ -3573,6 +3573,73 @@
       "exit"
     ]
   },
+  "cws/cws-release/perks/tierwire/src/tier_wire.py": {
+    "edges": [
+      [
+        "stmt1",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt4"
+      ],
+      [
+        "stmt4",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "stmt7"
+      ],
+      [
+        "stmt7",
+        "stmt8"
+      ],
+      [
+        "stmt8",
+        "stmt9"
+      ],
+      [
+        "stmt9",
+        "stmt10"
+      ],
+      [
+        "stmt10",
+        "stmt11"
+      ],
+      [
+        "stmt11",
+        "stmt12"
+      ],
+      [
+        "stmt12",
+        "stmt14"
+      ],
+      [
+        "stmt14",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt1",
+      "stmt2",
+      "stmt3",
+      "stmt4",
+      "stmt6",
+      "stmt7",
+      "stmt8",
+      "stmt9",
+      "stmt10",
+      "stmt11",
+      "stmt12",
+      "stmt14",
+      "exit"
+    ]
+  },
   "cws/cws-release/perks/timeanchor/src/cws_release_timeanchor.py": {
     "edges": [
       [

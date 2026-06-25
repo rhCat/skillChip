@@ -1,0 +1,6 @@
+{
+  "tool": "tier_wire",
+  "inputs": {},
+  "outputs": {"tierwire_out": {"path": "${RECORD_STORE}/tierwire.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/tierwire.json"}
+}

@@ -1,0 +1,18 @@
+{
+  "_perk": "tierwire",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "outputs": ["tierwire.json"],
+    "contains": {
+      "tierwire.json": [
+        "\"ok\": true",
+        "\"tier_maps\": true",
+        "\"monotone_floor\": true",
+        "\"tier_enforced_at_grant\": true",
+        "\"community_no_secrets_schema_and_runtime\": true",
+        "\"perk_tier_flows_to_grant\": true"
+      ]
+    }
+  }
+}

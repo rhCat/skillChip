@@ -1,0 +1,7 @@
+{
+  "_perk": "tierwire",
+  "sequence": ["tier_wire"],
+  "tools": {"tier_wire": {"binary": "python3", "params": {}}},
+  "env": {"RECORD_STORE": "${record_store}"},
+  "requires": ["python3"]
+}

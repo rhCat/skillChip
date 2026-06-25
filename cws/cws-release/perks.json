@@ -10,6 +10,15 @@
       ]
     },
     {
+      "id": "tierwire",
+      "summary": "P3-T11 tier wiring to P2 sandbox profiles \u2014 the grant's sandbox_tier selects the confinement backend (community->gVisor/runsc, core/verified->bwrap) as a MONOTONE floor over the operator --backend, enforced at the grant via exod.run_step; a perk's declared tier flows perks.json->govd->grant->catalog; community no-secrets floor holds at schema + runtime",
+      "destructive": false,
+      "tier": "core",
+      "tools": [
+        "tier_wire"
+      ]
+    },
+    {
       "id": "citrinitas",
       "summary": "Citrinitas publish gate (P3-T09) \u2014 verified-tier admission via alchemy extract+conserve+classify+concord; seeded triple-block + chip-wide concord",
       "destructive": false,

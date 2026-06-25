@@ -1,7 +1,7 @@
 ---
 skill: cws-release
 name: Release transparency
-perks: [sign, transparency, engine, publish, revoke, manifestlint, approval, inflight, feedtiers, keyrotate, receipts, timeanchor, citrinitas, security-doorbell]
+perks: [sign, transparency, engine, publish, revoke, manifestlint, approval, tierwire, inflight, feedtiers, keyrotate, receipts, timeanchor, citrinitas, security-doorbell]
 ---
 
 # cws-release — Release transparency (V-EXT, the M4 / SV-4 layer)
@@ -23,6 +23,7 @@ pinned root + the publisher's offline key.
 | `revoke` | P3-T03 | **signed revocation feed** — a monotonic, publisher-signed `{seq, expires, revoked[]}` names what must no longer run. A revoked artifact is refused; a feed older than `max_age` is **`feed_stale`** and **fails closed** (a consumer that cannot refresh stops trusting it — this bounds revocation latency); a replayed older feed is **`rollback`**; a forged feed is **`bad_signature`**. |
 | `manifestlint` | P3-T10 | **publish-time manifest lint** — what a perk actually does must match what it declares. Extracts the binaries its porter scripts invoke, the egress they reach, and the capabilities it grants, and refuses to publish on any drift: **undeclared binary**, **undeclared egress**, or **capability mismatch** — catching 100% of these (how a benign-looking skill smuggles a binary, a callback host, or a writable path). |
 | `approval` | P3-T04 | **WebAuthn approval for destructive grants** — the challenge is `sha256(JCS(doc))`, binding a hardware approval to one canonical doc; verified **fully offline** from the stored assertion + COSE key (no live authenticator). A different doc, a flipped signature, a cleared User-Verified bit, or a wrong origin are each refused, and a destructive grant without a verified approval does not proceed. |
+| `tierwire` | P3-T11 | **tier wiring to P2 sandbox profiles** — a grant's `sandbox_tier` (the perk's catalog tier) selects the confinement **backend**: `community` (untrusted marketplace) demands the **gVisor/runsc** box, `core`/`verified` run in **bwrap**. The operator `--backend` is a **floor** the tier may only ratchet **up** (community forces runsc even under a bwrap floor; a core grant on a runsc-floored host is **never** downgraded), and a required backend that can't enforce on the host **refuses (fail-closed)**. The tier flows `perks.json → govd → grant → discovery catalog`, and the **community no-secrets floor** holds at schema + runtime. Enforced at the grant in `exod.run_step`. |
 | `inflight` | P3-T13 | **revocation-in-flight** — the in-flight runner consults the signed feed at each step boundary; an ordinary revocation lets the in-progress step finish then refuses the next (boundary halt), a **critical** revocation aborts the in-progress step immediately (one step sooner). |
 | `feedtiers` | P3-T12 | **feed availability tiers + grace** — through a feed outage, read-only proceeds to **grace-2** while **destructive refuses**; past grace-2 everything fails closed; a forged feed refuses at every tier; presenting a fresh feed re-converges with no ledger surgery. |
 | `keyrotate` | P3-T06 | **key-rotation drill** — a **cross-signed** rotation record (old + new keys); during the overlap a grant from either key verifies; once the old key is revoked an old-key grant is refused while the new key still works. |
