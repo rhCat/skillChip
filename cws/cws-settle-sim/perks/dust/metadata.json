@@ -1,0 +1,5 @@
+{
+  "perk": "dust",
+  "summary": "P6-T15 adapter-boundary rounding + dust account — banker's rounding scale-4<->cents, the sub-cent residue posts to dust:adapter:<id> in the same balanced entry, 100k FX-boundary settlements stay globally zero-sum INCLUDING dust, and the monthly sweep is balanced + Ed25519-signed (a tampered sweep is caught)",
+  "destructive": false
+}

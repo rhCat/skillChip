@@ -1,0 +1,6 @@
+{
+  "tool": "settle_dust",
+  "inputs": {},
+  "outputs": {"dust_out": {"path": "${RECORD_STORE}/dust.json", "type": "file"}},
+  "checks": {"exit_zero": true, "output_exists": "${RECORD_STORE}/dust.json"}
+}

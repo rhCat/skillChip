@@ -1,0 +1,18 @@
+{
+  "_perk": "dust",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "outputs": ["dust.json"],
+    "contains": {
+      "dust.json": [
+        "\"ok\": true",
+        "\"bankers_rounding\": true",
+        "\"boundary_balanced\": true",
+        "\"storm_zero_sum_incl_dust\": true",
+        "\"signed_sweep\": true",
+        "\"tamper_caught\": true"
+      ]
+    }
+  }
+}
