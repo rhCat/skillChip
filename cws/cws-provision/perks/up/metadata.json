@@ -14,7 +14,7 @@
     "perk": "up",
     "vars": {
       "DRY_RUN": "1",
-      "TS_HOSTNAME": "cyberware-runner",
+      "TS_HOSTNAME": "cyberware-node",
       "TS_AUTHKEY_FILE": "/etc/cyberware/ts-authkey",
       "AGENT_EXEC": "/opt/cyberware-agent/run-agent.sh"
     }
