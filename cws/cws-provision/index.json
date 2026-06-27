@@ -1,6 +1,6 @@
 {
   "skill": "cws-provision",
-  "skill_sha": "c002bde92f2b913e89bbc03432819b36a8399f1d01752a34e2fc77c381347ddd",
+  "skill_sha": "24b65ff00c14638fbc2a4048bbc799668e55231a6b5f2cf9a4e3847e3e783be3",
   "file_count": 12,
   "files": {
     "SKILL.md": "e961ba24ff6545672f00ad6be2dda58968f05c0872226a15569ab423f01573e0",
@@ -8,7 +8,7 @@
     "ledger.json": "f2922634546033f817ec9801d07bb9d9e02ce901bea465ceb7c996a4fce53e99",
     "perks.json": "871cdd1496f7d9c2664bca18387e334a865d652eff2a1ac2fd4cb2dbb080a8df",
     "perks/up/manifesto.json": "374a0698c1cefe913f76693f57e8f30bdbf83a1e74c20dfaa1f33a55b8f796f0",
-    "perks/up/metadata.json": "729a32d27827c17d9abfc52f1a2ea555c2f7885c6aea388446114581033b2405",
+    "perks/up/metadata.json": "5b9b7a9659d3172b7e3b72cb42519c82023fad6102b9af37907ce9a7db272630",
     "perks/up/src/contracts.json": "c0537dfff4552c8b3158329913a1d01d1fbfe0e46d00bd7551633756fe81bca4",
     "perks/up/src/provision_base.sh": "17dd8d0965dfb043d99c82ee9b3513fd6d005202b1e61cf75d993eafe6395c0c",
     "perks/up/src/provision_docker.sh": "d2a41f85cc0ab5b81af3a51f5c3d8daceb0a2818256170f00543ecdd4d137bca",
