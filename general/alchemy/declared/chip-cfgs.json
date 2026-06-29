@@ -1319,6 +1319,77 @@
       "exit"
     ]
   },
+  "cws/cws-fleet/perks/deploy/src/fleet_deploy.py": {
+    "edges": [
+      [
+        "stmt1",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt5"
+      ],
+      [
+        "stmt5",
+        "stmt6"
+      ],
+      [
+        "stmt6",
+        "stmt8"
+      ],
+      [
+        "stmt8",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt1",
+      "stmt3",
+      "stmt5",
+      "stmt6",
+      "stmt8",
+      "exit"
+    ]
+  },
+  "cws/cws-fleet/perks/down/src/fleet_down.py": {
+    "edges": [
+      [
+        "stmt0",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "exit"
+    ]
+  },
+  "cws/cws-fleet/perks/status/src/fleet_status.py": {
+    "edges": [
+      [
+        "stmt0",
+        "stmt2"
+      ],
+      [
+        "stmt2",
+        "stmt3"
+      ],
+      [
+        "stmt3",
+        "stmt4"
+      ],
+      [
+        "stmt4",
+        "exit"
+      ]
+    ],
+    "states": [
+      "stmt0",
+      "stmt2",
+      "stmt3",
+      "stmt4",
+      "exit"
+    ]
+  },
   "cws/cws-ledgercheck/perks/anchor/src/cws_ledgeranchor.py": {
     "edges": [
       [

@@ -1,11 +1,11 @@
 {
   "skill": "alchemy",
-  "skill_sha": "ac7e9466e60c9210552659f580a934907416a2fa973c9bbb253fdfec11079fe6",
+  "skill_sha": "a9ddad555345ba08f15a10bb991d2f13263d03d92e4080911ce19ad57c32ff61",
   "file_count": 36,
   "files": {
     "SKILL.md": "0716d62d02221ecc7de607b83731fb1ebe38a0b260d019738eee05fa02a39598",
     "blueprint.json": "610ae87f952338c51781624d83c9665b21c6e78d107300401e0c9e3b32e1fa31",
-    "declared/chip-cfgs.json": "027cb2354bcd09043744db46d58891650dcbbfb236a906c1f5fa0390402adbf6",
+    "declared/chip-cfgs.json": "60f7ddf993a1a1563af63d08e814bcf5273e3edf40252d105fe269453c6ec327",
     "deps.lock": "9ea14c4cd49e004d75130fd743668880641dcc33f5ca956c72d7c0d784b24a10",
     "ledger.json": "17a428d553222758a6de53a10a33bc1757fbe3b487a91120a811334eaa6eda67",
     "perks.json": "a1e235296b499553411bef1ca44be695aaeffc2f2eeb9aca6e53b0b42a3d2b62",
