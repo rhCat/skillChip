@@ -1,0 +1,23 @@
+{
+  "skill": "cws-fleet",
+  "perks": [
+    {
+      "id": "status",
+      "summary": "report the fleet roster + each body's container state + /health (read-only, value-free)",
+      "destructive": false,
+      "tools": ["fleet_status"]
+    },
+    {
+      "id": "deploy",
+      "summary": "compose a least-privilege subset chip + spin a SCOPED, strictly-lower-tier governed body for a subagent; register it (anti-rogue containment, fail-closed)",
+      "destructive": true,
+      "tools": ["fleet_deploy"]
+    },
+    {
+      "id": "down",
+      "summary": "stop + remove a deployed body container and deregister it (the durable ledger mirror is preserved)",
+      "destructive": true,
+      "tools": ["fleet_down"]
+    }
+  ]
+}

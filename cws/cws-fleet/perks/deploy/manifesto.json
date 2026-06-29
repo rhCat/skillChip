@@ -1,0 +1,49 @@
+{
+  "_perk": "deploy",
+  "sequence": ["fleet_deploy"],
+  "tools": {
+    "fleet_deploy": {
+      "binary": "python3",
+      "params": {
+        "MODE": "${MODE}",
+        "SKILLS": "${SKILLS}",
+        "SKILL_DIR": "${SKILL_DIR}",
+        "NODE_NAME": "${NODE_NAME}",
+        "CHILD_TIER": "${CHILD_TIER}",
+        "PARENT_FLEET_TIER": "${PARENT_FLEET_TIER}",
+        "PARENT_CHIP_DIR": "${PARENT_CHIP_DIR}",
+        "ACL_SKILLS": "${ACL_SKILLS}",
+        "PRINCIPAL_ID": "${PRINCIPAL_ID}",
+        "TOKEN_FILE": "${TOKEN_FILE}",
+        "MONITOR_TOKEN_FILE": "${MONITOR_TOKEN_FILE}",
+        "PORT": "${PORT}",
+        "IMAGE": "${IMAGE}",
+        "ROLE": "${ROLE}",
+        "MAX_TIER": "${MAX_TIER}",
+        "FLEET_FILE": "${FLEET_FILE}",
+        "CYBERWARE_ROOT": "${CYBERWARE_ROOT}"
+      }
+    }
+  },
+  "env": {
+    "MODE": "${MODE}",
+    "SKILLS": "${SKILLS}",
+    "SKILL_DIR": "${SKILL_DIR}",
+    "NODE_NAME": "${NODE_NAME}",
+    "CHILD_TIER": "${CHILD_TIER}",
+    "PARENT_FLEET_TIER": "${PARENT_FLEET_TIER}",
+    "PARENT_CHIP_DIR": "${PARENT_CHIP_DIR}",
+    "ACL_SKILLS": "${ACL_SKILLS}",
+    "PRINCIPAL_ID": "${PRINCIPAL_ID}",
+    "TOKEN_FILE": "${TOKEN_FILE}",
+    "MONITOR_TOKEN_FILE": "${MONITOR_TOKEN_FILE}",
+    "PORT": "${PORT}",
+    "IMAGE": "${IMAGE}",
+    "ROLE": "${ROLE}",
+    "MAX_TIER": "${MAX_TIER}",
+    "FLEET_FILE": "${FLEET_FILE}",
+    "CYBERWARE_ROOT": "${CYBERWARE_ROOT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": ["python3", "docker"]
+}

@@ -1,0 +1,14 @@
+{
+  "tool": "fleet_down",
+  "inputs": {
+    "NODE_NAME": {"type": "string", "required": true},
+    "FLEET_FILE": {"type": "string", "required": false}
+  },
+  "outputs": {
+    "fleet_down_out": {"path": "${RECORD_STORE}/down.json", "type": "file"}
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/down.json"
+  }
+}

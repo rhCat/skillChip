@@ -1,0 +1,29 @@
+{
+  "skill": "cws-fleet",
+  "skill_sha": "270e8861c4c7e8f7b9944348fc78ab4f3f54c2820b8a8fa82f8222d23f0c9642",
+  "file_count": 22,
+  "files": {
+    "SKILL.md": "164a83e02ce56d2f2080453ee20daa7292a4f21fdc3f8e105a8a2a0e08425fa4",
+    "blueprint.json": "0eca5b7713f7e2277e9af995f950e757a54ab6354978e8e1e6904cb8ba3ae980",
+    "ledger.json": "31a90fb4d052bd91d08610cfb5fe46962f5d1b37cd37fbde93f400e2a75e93e5",
+    "perks.json": "bcb08da046804a9137592bbc6e7d34aee30c1a4179117cef65ac94f4345c0b92",
+    "perks/deploy/manifesto.json": "24dfc78265e7256d89946f0efcdd0ff4584799d550836f5276c737a53a8f8f29",
+    "perks/deploy/metadata.json": "59e957206605c05b5656486d7ec4d4b2a547c8a0657b91a2fd92f1835e1f21b9",
+    "perks/deploy/src/contracts.json": "6e89cf945a6e15322582389bd9131d43e4cc7dae17fac1df0c166f4f6e345a6a",
+    "perks/deploy/src/fleet_deploy.py": "f74cd25e4b47b6695d5f443916fb8c02ed624de240f6c2461b55726cbceb672e",
+    "perks/deploy/src/fleet_deploy.sh": "cfbc1b8a89508d2004400c5421e9db97cce9618c5ac67d247fc249869e440e39",
+    "perks/deploy/test/case.json": "49d5778612830711dd287122fd09973c2154871366e2b2f0ee3b8a23ac364773",
+    "perks/down/manifesto.json": "01c16efb8cfdc893e72c4beb2dea1a49ea0aad0c3f8f05548d3fc2794f1b9ffd",
+    "perks/down/metadata.json": "6f9119d2a6361b0bdc41afdb28b15a5906b072daef7bef92e8c6cac704304cbe",
+    "perks/down/src/contracts.json": "684bc9e81fc3e8ce15b8750b7dc10939e8d85c1159278e9e989d024bec5a8cd2",
+    "perks/down/src/fleet_down.py": "7ffd1618fc57fd7c6e9aaeff1451e427b5dd7a72a63dbc44d71c02c3f75cbb31",
+    "perks/down/src/fleet_down.sh": "80d90f19cf3c721e084854b2e29293e836c3a746b5f7a6a81e4cf1480e6b4796",
+    "perks/down/test/case.json": "acb038ab5ed536720c3a3bf02117ae0d538e292c7473ba3a56e03f095646f7bf",
+    "perks/status/manifesto.json": "072083ce505ca14a4dfbcd8d0c5c5951eba9fd4b35d9b1cbe1d32775b3bc4c26",
+    "perks/status/metadata.json": "c1622114d956056f0b3068c1cb760a2c74b3c7607db1fc8c4866c2dc3901b1ad",
+    "perks/status/src/contracts.json": "b50f7061fb4a91b2728f1207752b575d66bf4c06c4b6ada7f7372567d718e3e8",
+    "perks/status/src/fleet_status.py": "88b2580f9c6c1bca093d3d3485046a3eae855be61086bff6c8ae1220ff29df9a",
+    "perks/status/src/fleet_status.sh": "eb3160d943aa413a582a56eed7cb4a62aab312ff4bcf102fdaac9fd328a5eaa5",
+    "perks/status/test/case.json": "d1e65299758df3d40292ca4442fde8be55677bb960cb00fd5ae77360f91cc7b0"
+  }
+}

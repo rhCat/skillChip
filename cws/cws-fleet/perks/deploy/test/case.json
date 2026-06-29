@@ -1,0 +1,4 @@
+{
+  "_perk": "deploy",
+  "skip": "needs a docker daemon + a docker-capable cooperative host — the contract test covers compilation; the tier-containment core is unit-tested in tests/test_fleet_containment.py"
+}

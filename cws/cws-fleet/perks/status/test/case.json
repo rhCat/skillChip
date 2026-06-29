@@ -1,0 +1,4 @@
+{
+  "_perk": "status",
+  "skip": "reads docker + each node's /health — the contract test covers compilation; the roster-read path is unit-tested in tests/test_fleet_containment.py"
+}

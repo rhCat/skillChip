@@ -1,0 +1,16 @@
+{
+  "perk": "down",
+  "skill": "cws-fleet",
+  "description": "Stop + remove a deployed body container and deregister its roster row. The durable fleet-ledgers mirror is preserved — the governance domain is ephemeral, its provenance is not. Idempotent: a body already gone is still a success.",
+  "rules": [
+    "docker stop + rm WITHOUT -f (oversight-clean, mirrors cws-deploy:down)",
+    "deregisters by name from ~/.cyberware/fleet.json atomically — config write only, never the repo",
+    "never deletes the durable run mirror — provenance outlives the container"
+  ],
+  "usage": "NODE_NAME (the container/roster name). Optional FLEET_FILE. Output: ${RECORD_STORE}/down.json.",
+  "limitation": "Needs a running Docker daemon to remove the container.",
+  "minimal_example": {
+    "perk": "down",
+    "vars": {"NODE_NAME": "scribe"}
+  }
+}

@@ -2,7 +2,7 @@
   "chip": "skillChip",
   "version": 2,
   "cartridge": false,
-  "count": 41,
+  "count": 42,
   "skills": [
     {
       "skill": "cws:cws-addperk",
@@ -39,6 +39,12 @@
       "namespace": "cws",
       "skill_sha": "7b3fb068de70284b0fbad7f3dabe20c0489504fcb65c0c5ba374543c568f1bd8",
       "file_count": 19
+    },
+    {
+      "skill": "cws:cws-fleet",
+      "namespace": "cws",
+      "skill_sha": "270e8861c4c7e8f7b9944348fc78ab4f3f54c2820b8a8fa82f8222d23f0c9642",
+      "file_count": 22
     },
     {
       "skill": "cws:cws-ledgercheck",
@@ -251,5 +257,5 @@
       "file_count": 10
     }
   ],
-  "chip_sha": "86742403073c4250c575efd2efd5e5b03eab4e4a18aa204c40dc05cac86f656f"
+  "chip_sha": "586d629d6cd03715a46efd5e0a93372cbc84d069538d1264f64872cb340c11ad"
 }

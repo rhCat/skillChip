@@ -1,0 +1,16 @@
+{
+  "_perk": "down",
+  "sequence": ["fleet_down"],
+  "tools": {
+    "fleet_down": {
+      "binary": "python3",
+      "params": {"NODE_NAME": "${NODE_NAME}", "FLEET_FILE": "${FLEET_FILE}"}
+    }
+  },
+  "env": {
+    "NODE_NAME": "${NODE_NAME}",
+    "FLEET_FILE": "${FLEET_FILE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": ["python3", "docker"]
+}

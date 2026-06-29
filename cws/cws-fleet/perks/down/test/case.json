@@ -1,0 +1,4 @@
+{
+  "_perk": "down",
+  "skip": "needs a docker daemon — the contract test covers compilation; the deregister path is unit-tested in tests/test_fleet_containment.py"
+}

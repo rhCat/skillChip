@@ -1,0 +1,29 @@
+{
+  "tool": "fleet_deploy",
+  "inputs": {
+    "MODE": {"type": "string", "required": false},
+    "SKILLS": {"type": "string", "required": false},
+    "SKILL_DIR": {"type": "string", "required": false},
+    "NODE_NAME": {"type": "string", "required": true},
+    "CHILD_TIER": {"type": "string", "required": true},
+    "PARENT_FLEET_TIER": {"type": "string", "required": true},
+    "PARENT_CHIP_DIR": {"type": "string", "required": true},
+    "ACL_SKILLS": {"type": "string", "required": true},
+    "TOKEN_FILE": {"type": "string", "required": true},
+    "PRINCIPAL_ID": {"type": "string", "required": false},
+    "MONITOR_TOKEN_FILE": {"type": "string", "required": false},
+    "PORT": {"type": "string", "required": false},
+    "IMAGE": {"type": "string", "required": false},
+    "ROLE": {"type": "string", "required": false},
+    "MAX_TIER": {"type": "string", "required": false},
+    "FLEET_FILE": {"type": "string", "required": false},
+    "CYBERWARE_ROOT": {"type": "string", "required": false}
+  },
+  "outputs": {
+    "fleet_deploy_out": {"path": "${RECORD_STORE}/deploy.json", "type": "file"}
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/deploy.json"
+  }
+}

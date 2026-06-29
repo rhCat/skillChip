@@ -1,0 +1,17 @@
+{
+  "_schema": "task-ledger TEMPLATE for cws-fleet — set perk, fill record_store + the vars the perk declares. status: FLEET_FILE (optional). deploy: the vars below (MODE=compose|mount). down: NODE_NAME (+ optional FLEET_FILE).",
+  "skill": "cws-fleet",
+  "perk": "deploy",
+  "record_store": "<absolute dir for outputs + run-ledger>",
+  "vars": {
+    "MODE": "compose",
+    "SKILLS": "fs http",
+    "NODE_NAME": "scribe",
+    "CHILD_TIER": "subagent",
+    "PARENT_FLEET_TIER": "mothership",
+    "PARENT_CHIP_DIR": "skillChip",
+    "ACL_SKILLS": "fs http",
+    "TOKEN_FILE": "~/.cyberware/scribe.token",
+    "PORT": "5779"
+  }
+}

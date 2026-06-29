@@ -1,0 +1,16 @@
+{
+  "perk": "status",
+  "skill": "cws-fleet",
+  "description": "Read-only fleet overview: the roster (~/.cyberware/fleet.json) plus each body's docker container state and /health. Value-free — node metadata only, no secrets or tokens. Tolerates an absent docker daemon and unreachable nodes (a read-only view never fails closed).",
+  "rules": [
+    "read-only: never starts/stops a container, never writes the roster",
+    "value-free output: names, roles, tiers, fleet_tiers, chip_sha, run counts — never tokens or user data",
+    "a missing docker daemon or unreachable node degrades to container='absent'/health=null, never an error"
+  ],
+  "usage": "Optional FLEET_FILE (defaults to ~/.cyberware/fleet.json). Output: ${RECORD_STORE}/status.json (per-node roster + container state + /health).",
+  "limitation": "Container state needs docker; without it every node reports container='absent' (still succeeds). /health needs network reachability to each node.",
+  "minimal_example": {
+    "perk": "status",
+    "vars": {"FLEET_FILE": "~/.cyberware/fleet.json"}
+  }
+}
