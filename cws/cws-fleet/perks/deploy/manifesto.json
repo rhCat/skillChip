@@ -20,6 +20,7 @@
         "IMAGE": "${IMAGE}",
         "ROLE": "${ROLE}",
         "MAX_TIER": "${MAX_TIER}",
+        "CONFINE": "${CONFINE}",
         "FLEET_FILE": "${FLEET_FILE}",
         "CYBERWARE_ROOT": "${CYBERWARE_ROOT}"
       }
@@ -41,6 +42,7 @@
     "IMAGE": "${IMAGE}",
     "ROLE": "${ROLE}",
     "MAX_TIER": "${MAX_TIER}",
+    "CONFINE": "${CONFINE}",
     "FLEET_FILE": "${FLEET_FILE}",
     "CYBERWARE_ROOT": "${CYBERWARE_ROOT}",
     "RECORD_STORE": "${record_store}"

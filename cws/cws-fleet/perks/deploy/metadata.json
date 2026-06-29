@@ -1,17 +1,18 @@
 {
   "perk": "deploy",
   "skill": "cws-fleet",
-  "description": "Compose a least-privilege subset chip (cartridge), mint a scoped principal, and spin a govd+exod body container for a subagent — registered to the fleet at a STRICTLY-lower fleet_tier than the deploying node. The anti-rogue path: a confined subagent cannot self-spawn a body, and this perk refuses any upward/sideways spawn or any chip/ACL that exceeds the parent's, fail-closed BEFORE any docker run.",
+  "description": "Give a subagent a SCOPED GOVERNANCE DOMAIN: compose a least-privilege subset chip (cartridge), mint a scoped principal, and spin its OWN govd governing its claims against that chip + a per-actor ACL — registered to the fleet at a STRICTLY-lower fleet_tier than the deploying node. In-scope claims get a blessed value-free plan; out-of-scope claims are denied (acl_skill_denied). This bounds the subagent's GOVERNED surface so it can't go rogue through the governed channel. It is NOT, by itself, an OS sandbox: a cooperative body governs decisions while the subagent executes client-side; set CONFINE=1 to REQUIRE a delegated+exod body (hard execution confinement). The body's exec_mode/exod_attached are always recorded.",
   "rules": [
     "child fleet_tier must rank and be STRICTLY deeper than PARENT_FLEET_TIER (mothership>edge>subagent>…) — else reject fleet_tier_not_strictly_lower / fleet_tier_unknown",
-    "the child chip and the ACL skill set must each be a SUBSET of the parent chip — else reject acl_not_subset / chip_not_subset / acl_exceeds_chip",
-    "bearer/monitor tokens arrive ONLY as *_FILE pointers; only their sha256 is persisted (never a plaintext var, never the run-ledger)",
+    "CONTENT-identity subset: every child skill must equal a PARENT skill by skill_sha (not by leaf name), and the ACL ⊆ child ⊆ parent — else reject acl_not_subset / chip_not_subset / acl_exceeds_chip. A trojaned or foreign same-name skill cannot ride along (this is what makes MODE=mount safe)",
+    "bearer token via *_FILE → only its sha256 is persisted; the monitor token is written 0600 inside the mounted dir and read container-side — NEVER on the host docker argv, never the run-ledger",
+    "NODE_NAME/PORT are validated before use as docker args (no argument injection)",
     "the body runs with --entrypoint bypass + a wrapped {\"principals\":{...}} registry (the image entrypoint would otherwise mint agent-1 and clobber GOVD_PRINCIPALS)",
-    "on /health timeout the half-started container is stopped+removed and nothing is registered (no ghost row)",
+    "on /health timeout or CONFINE-unmet the container is stopped+removed (removal VERIFIED, not fire-and-forget) and nothing is registered (no ghost row)",
     "registration writes only the operator's ~/.cyberware roster, atomically — never the repo"
   ],
-  "usage": "MODE=compose (subset PARENT_CHIP_DIR to the SKILLS list via cartridge) or MODE=mount (use a ready SKILL_DIR as-is, cartridge-verified). Required: NODE_NAME, CHILD_TIER, PARENT_FLEET_TIER, PARENT_CHIP_DIR, ACL_SKILLS, TOKEN_FILE (pointer). Optional: SKILLS|SKILL_DIR, PRINCIPAL_ID, MONITOR_TOKEN_FILE, PORT, IMAGE, ROLE, MAX_TIER, FLEET_FILE, CYBERWARE_ROOT. Output: ${RECORD_STORE}/deploy.json (the value-free deploy/refusal record).",
-  "limitation": "Needs a running Docker daemon on a docker-capable cooperative host (a confined/exod body has no docker — the perk is inert there by design). Needs the cyberware repo importable for `python3 -m infra.tool.cartridge` (CYBERWARE_ROOT or the run cwd).",
+  "usage": "MODE=compose (subset PARENT_CHIP_DIR to the SKILLS list via cartridge) or MODE=mount (a ready SKILL_DIR, cartridge-verified AND content-bound to the parent by skill_sha). Required: NODE_NAME, CHILD_TIER, PARENT_FLEET_TIER, ACL_SKILLS, TOKEN_FILE (pointer). Optional: PARENT_CHIP_DIR (defaults to the node's own chip), SKILLS|SKILL_DIR, PRINCIPAL_ID, MONITOR_TOKEN_FILE, PORT, IMAGE, ROLE, MAX_TIER, CONFINE, FLEET_FILE, CYBERWARE_ROOT. Output: ${RECORD_STORE}/deploy.json (records exec_mode/exod_attached/confined + the value-free deploy/refusal record).",
+  "limitation": "Needs a running Docker daemon on a docker-capable cooperative host. CONFINE=1 (hard exod execution confinement) needs a body image that boots exod AND honors deployment-provided GOVD_PRINCIPALS (#191+); the default/stale local image yields a cooperative governance-only body (confined=false, recorded). Needs the cyberware repo importable for `python3 -m infra.tool.cartridge` (CYBERWARE_ROOT or the run cwd). PARENT_CHIP_DIR is currently trusted as supplied — pass the deployer's real chip (binding it to the node's signed descriptor is a v-next hardening).",
   "minimal_example": {
     "perk": "deploy",
     "vars": {

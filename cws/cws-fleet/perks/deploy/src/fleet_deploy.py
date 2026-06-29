@@ -1,20 +1,29 @@
 #!/usr/bin/env python3
-"""fleet_deploy — spin a SCOPED, CONTAINED governed body for a subagent, then register it to the fleet.
+"""fleet_deploy — give a subagent a SCOPED GOVERNANCE DOMAIN, then register it to the fleet.
 
-The anti-rogue core. A confined body (exod) has no docker/host privilege, so a subagent can never
-self-spawn a body — this perk is the ONLY path to one, and it enforces, fail-closed and BEFORE any
-`docker run`, that the child sits at a STRICTLY-lower fleet_tier than its parent and that its chip + ACL
-are a SUBSET of the parent's. Because this file's bytes are pinned by skill_sha (folded into chip_sha),
-the containment check is tamper-evident: weakening it breaks verify_chip before govd will serve the skill.
+What this provides (and what it does NOT). The deploy spins the subagent its OWN govd, governing its
+claims against a least-privilege chip + a per-actor ACL: in-scope claims get a blessed value-free plan,
+out-of-scope claims are denied (`acl_skill_denied`). That bounds the subagent's GOVERNED surface — what it
+can be blessed to do through the governed channel — so it cannot go rogue THROUGH that channel. It is the
+per-subagent governance domain made concrete. It is NOT, by itself, an OS sandbox: a cooperative body
+governs decisions while the subagent still executes steps client-side. For hard EXECUTION confinement, the
+body must run delegated + exod (a stronger, separately-provisioned mode); this perk records the body's
+`exec_mode`/`exod_attached` so the confinement status is explicit and auditable, never assumed.
 
-Value-free: the bearer/monitor tokens arrive only as *_FILE pointers; only their sha256 (never the value)
-lands in the registry, and nothing token-shaped reaches the run-ledger. govd governs the decision; the
-operating agent's cooperative-mode porter runs docker; exod never receives docker.
+The containment gates (fail-closed, BEFORE any `docker run`): the child must sit STRICTLY lower than its
+parent on the fleet hierarchy, and its chip + ACL must be a CONTENT-IDENTICAL subset of the parent's —
+every child skill must equal a parent skill by `skill_sha`, so a trojaned or foreign same-name skill
+cannot ride along. Because this file's bytes are pinned by skill_sha (folded into chip_sha), the check is
+tamper-evident: weakening it breaks verify_chip before govd will serve the skill.
+
+Value-free: bearer/monitor tokens arrive only as *_FILE pointers; only their sha256 (the bearer) or a
+0600 in-container file (the monitor token) is used — never a plaintext host argv, never the run-ledger.
 """
 from __future__ import annotations
 import hashlib
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -23,6 +32,7 @@ import urllib.request
 
 _FLEET_RANK = {"mothership": 1, "edge": 2, "subagent": 3}   # fleet HIERARCHY; lower = higher authority
                                                             # (mirrors infra.govern.fleetd._FLEET_RANK)
+_NAME_RE = re.compile(r"^[a-zA-Z0-9][a-zA-Z0-9_.-]{0,62}$")  # docker container-name charset (no arg injection)
 
 
 def fleet_rank(ft):
@@ -38,24 +48,30 @@ def fleet_rank(ft):
     return int(s) if (s.isdigit() and int(s) > 0) else None
 
 
-def check_containment(parent_ft, child_ft, acl_skills, parent_set, child_set):
+def check_containment(parent_ft, child_ft, acl_leaves, parent_skills, child_skills):
     """The PURE, fail-closed containment decision (unit-tested independently of docker). Returns
-    (ok, reason). The *_set args are sets of skill leaves. Check order = reason precedence:
+    (ok, reason). parent_skills / child_skills are lists of {"leaf": <name>, "sha": <skill_sha>}; acl_leaves
+    is a list of leaf names the child principal may invoke. Check order = reason precedence:
       1. both tiers must rank, and the child must be STRICTLY deeper than the parent (no upward/sideways);
-      2. the requested ACL must be a subset of the PARENT's catalog (can't grant what the parent lacks);
-      3. the CHILD chip must be a subset of the parent's catalog (compose/mount can't smuggle extra skills);
-      4. the ACL must be a subset of the CHILD chip (can't grant a skill the body doesn't even carry)."""
+      2. the requested ACL leaves must be a subset of the PARENT's leaves (can't grant what the parent lacks);
+      3. EVERY child skill must equal a PARENT skill by CONTENT (skill_sha) — not by leaf name. This is the
+         load-bearing gate: it defeats a trojaned same-leaf clone and a foreign-namespace skill, and it holds
+         across the bare<->namespaced boundary (a verbatim compose copies the parent's skill_sha);
+      4. the ACL leaves must be a subset of the CHILD's leaves (can't grant a skill the body doesn't carry)."""
     pr, cr = fleet_rank(parent_ft), fleet_rank(child_ft)
     if pr is None or cr is None:
         return (False, "fleet_tier_unknown")
     if not cr > pr:
         return (False, "fleet_tier_not_strictly_lower")
-    acl, parent, child = set(acl_skills), set(parent_set), set(child_set)
-    if not acl <= parent:
+    parent_leaves = {s["leaf"] for s in parent_skills}
+    parent_shas = {s["sha"] for s in parent_skills if s.get("sha")}
+    child_leaves = {s["leaf"] for s in child_skills}
+    acl = set(acl_leaves)
+    if not acl <= parent_leaves:
         return (False, "acl_not_subset")
-    if not child <= parent:
-        return (False, "chip_not_subset")
-    if not acl <= child:
+    if not (child_skills and all(s.get("sha") and s["sha"] in parent_shas for s in child_skills)):
+        return (False, "chip_not_subset")        # every child skill must be a verbatim parent skill (by sha)
+    if not acl <= child_leaves:
         return (False, "acl_exceeds_chip")
     return (True, None)
 
@@ -65,27 +81,39 @@ def _leaves(val):
     return [s for s in (val or "").replace(",", " ").split() if s]
 
 
-def _chip_leaves(chip_dir):
-    """The set of skill leaves a chip offers, from its root index.json manifest. No/!manifest -> empty set
-    (fail-closed: an unverifiable chip satisfies no subset check)."""
+def _chip_skills(chip_dir):
+    """Each skill a chip declares in its root index.json manifest, as {"id": ns:name, "leaf": name,
+    "sha": skill_sha}. No/!manifest -> [] (fail-closed: an unverifiable chip satisfies no subset check)."""
     idx = os.path.join(chip_dir, "index.json")
     if not os.path.isfile(idx):
-        return set()
+        return []
     try:
         d = json.load(open(idx))
     except Exception:
-        return set()
-    out = set()
+        return []
+    out = []
     for s in (d.get("skills") or []):
         sid = str(s.get("skill") or "")
-        leaf = sid.split(":")[-1] if ":" in sid else sid
-        if leaf:
-            out.add(leaf)
+        if sid:
+            out.append({"id": sid, "leaf": sid.split(":")[-1], "sha": s.get("skill_sha")})
     return out
 
 
 def _run(cmd, **kw):
     return subprocess.run(cmd, capture_output=True, text=True, **kw)
+
+
+def _teardown(name, log):
+    """stop + rm a container, then VERIFY it is actually gone (no fire-and-forget leak). Returns True iff
+    removed; on a stubborn container, escalate to rm -f and re-check. Logged, never raises."""
+    _run(["docker", "stop", name]); _run(["docker", "rm", name])
+    if _run(["docker", "inspect", name]).returncode != 0:
+        return True
+    _run(["docker", "rm", "-f", name])                         # escalate once
+    gone = _run(["docker", "inspect", name]).returncode != 0
+    if log and not gone:
+        log.write(f"WARNING: container {name} still present after stop+rm+rm-f\n")
+    return gone
 
 
 def _refuse(out, reason, **detail):
@@ -126,7 +154,10 @@ def main() -> int:
     node_name = os.environ.get("NODE_NAME") or ""
     child_tier = os.environ.get("CHILD_TIER")
     parent_ft = os.environ.get("PARENT_FLEET_TIER")
-    parent_chip = os.path.expanduser(os.environ.get("PARENT_CHIP_DIR") or "")
+    # the parent chip defaults to the deploying node's OWN chip (least surprising + can't grant beyond it);
+    # an explicit PARENT_CHIP_DIR is honored but, per metadata, MUST be the deployer's real chip (residual).
+    parent_chip = os.path.expanduser(os.environ.get("PARENT_CHIP_DIR")
+                                     or os.environ.get("CYBERWARE_SKILLCHIP") or "skillChip")
     acl_skills = _leaves(os.environ.get("ACL_SKILLS"))
     principal_id = os.environ.get("PRINCIPAL_ID") or "child-1"
     token_file = os.environ.get("TOKEN_FILE")
@@ -135,18 +166,22 @@ def main() -> int:
     image = os.environ.get("IMAGE") or "cyberware-body:local"
     role = os.environ.get("ROLE") or "body"
     max_tier = os.environ.get("MAX_TIER") or None
+    confine = (os.environ.get("CONFINE") or "").strip().lower() in ("1", "true", "yes")
     fleet_file = os.environ.get("FLEET_FILE") or "~/.cyberware/fleet.json"
     cwd = os.environ.get("CYBERWARE_ROOT") or os.getcwd()    # where `python3 -m infra.tool.*` resolves
 
-    # ── required inputs ──
-    if not node_name:
-        return _refuse(out, "node_name_required")
+    # ── required + well-formed inputs (validate before any value is used as a docker arg) ──
+    if not _NAME_RE.match(node_name):
+        return _refuse(out, "bad_node_name", node_name=node_name)
+    if not str(port).isdigit():
+        return _refuse(out, "bad_port", port=port)
     if not parent_chip or not os.path.isdir(parent_chip):
         return _refuse(out, "parent_chip_dir_required")
     if not token_file or not os.path.isfile(os.path.expanduser(token_file)):
         return _refuse(out, "token_file_required")
 
-    parent_set = _chip_leaves(parent_chip)
+    parent_skills = _chip_skills(parent_chip)
+    parent_leaves = {s["leaf"] for s in parent_skills}
 
     # ── cheap containment gates BEFORE building/spawning anything ──
     pr, cr = fleet_rank(parent_ft), fleet_rank(child_tier)
@@ -154,8 +189,8 @@ def main() -> int:
         return _refuse(out, "fleet_tier_unknown", parent_fleet_tier=parent_ft, child_tier=child_tier)
     if not cr > pr:
         return _refuse(out, "fleet_tier_not_strictly_lower", parent_fleet_tier=parent_ft, child_tier=child_tier)
-    if not set(acl_skills) <= parent_set:
-        return _refuse(out, "acl_not_subset", acl=sorted(acl_skills), parent_skills=sorted(parent_set))
+    if not set(acl_skills) <= parent_leaves:
+        return _refuse(out, "acl_not_subset", acl=sorted(acl_skills), parent_skills=sorted(parent_leaves))
 
     # ── build / select the least-privilege child chip ──
     child_chip = os.path.join(store, "child-chip")
@@ -164,7 +199,7 @@ def main() -> int:
         if not sources:
             return _refuse(out, "skills_required_for_compose")
         # subset the PARENT chip down to EXACTLY the named skills (cartridge compile = least-privilege).
-        # A skill not present in the parent, or an unauthentic source, makes cartridge raise -> non-zero.
+        # cartridge copies each skill verbatim FROM the parent, so the child's skill_sha == the parent's.
         r = _run([sys.executable, "-m", "infra.tool.cartridge", "--compile", *sources, "--out", child_chip],
                  cwd=cwd, env={**os.environ, "CYBERWARE_SKILLCHIP": parent_chip})
         log.write(r.stdout + r.stderr)
@@ -174,7 +209,8 @@ def main() -> int:
         skill_dir = os.path.expanduser(os.environ.get("SKILL_DIR") or "")
         if not skill_dir or not os.path.isdir(skill_dir):
             return _refuse(out, "skill_dir_required_for_mount")
-        # cartridge --verify exits 0 regardless and reports {ok}; trust the dir only when ok is true.
+        # cartridge --verify checks the dir is INTERNALLY authentic; the parent-binding (every skill_sha is
+        # the parent's) is enforced by check_containment below — a self-consistent foreign dir does NOT pass.
         v = _run([sys.executable, "-m", "infra.tool.cartridge", "--verify", skill_dir], cwd=cwd)
         log.write(v.stdout + v.stderr)
         try:
@@ -187,13 +223,14 @@ def main() -> int:
     else:
         return _refuse(out, "bad_mode", mode=mode)
 
-    child_set = _chip_leaves(child_chip)
+    child_skills = _chip_skills(child_chip)
 
-    # ── AUTHORITATIVE containment re-check against the REAL child chip ──
-    ok, reason = check_containment(parent_ft, child_tier, acl_skills, parent_set, child_set)
+    # ── AUTHORITATIVE containment re-check: content-identity subset against the REAL child chip ──
+    ok, reason = check_containment(parent_ft, child_tier, acl_skills, parent_skills, child_skills)
     if not ok:
         return _refuse(out, reason, parent_fleet_tier=parent_ft, child_tier=child_tier,
-                       child_skills=sorted(child_set), parent_skills=sorted(parent_set))
+                       child_skills=sorted(s["leaf"] for s in child_skills),
+                       parent_skills=sorted(parent_leaves))
 
     # ── mint the scoped principal registry (WRAPPED format; only the token's sha is persisted) ──
     tok_sha = hashlib.sha256(open(os.path.expanduser(token_file)).read().strip().encode()).hexdigest()
@@ -205,42 +242,58 @@ def main() -> int:
     json.dump({"principals": {principal_id: {"token_sha": tok_sha, "rate": 30, "burst": 60, "acl": acl}}},
               open(os.path.join(rundir, "principals.json"), "w"), indent=2)
     json.dump({"mode": "remote"}, open(os.path.join(rundir, "govd.json"), "w"), indent=2)
-    monitor_token = ""
-    if monitor_token_file and os.path.isfile(os.path.expanduser(monitor_token_file)):
-        monitor_token = open(os.path.expanduser(monitor_token_file)).read().strip()
 
-    # ── spin the body (entrypoint BYPASS: the image entrypoint would mint agent-1 + clobber GOVD_PRINCIPALS) ──
-    _run(["docker", "stop", node_name]); _run(["docker", "rm", node_name])   # clear any stale container (no -f: oversight-clean)
+    # the monitor token NEVER goes on the host argv (ps/proc leak). Write it 0600 inside the mounted
+    # ro rundir and read it container-side; the host docker argv carries only the cat command.
+    mt_in = None
+    if monitor_token_file and os.path.isfile(os.path.expanduser(monitor_token_file)):
+        mtp = os.path.join(rundir, "monitor.token")
+        with open(mtp, "w") as fh:
+            fh.write(open(os.path.expanduser(monitor_token_file)).read().strip())
+        os.chmod(mtp, 0o600)
+        mt_in = "/etc/cyberware/monitor.token"
+
+    # ── spin the body (entrypoint BYPASS via sh -c: the image entrypoint would mint agent-1 + clobber
+    #    GOVD_PRINCIPALS; we honor the mounted scoped registry instead) ──
+    _teardown(node_name, log)                                  # clear any stale container by this name
+    govd = "python3 -m infra.govern.govd --config /etc/cyberware/govd.json --mode remote --port 5773"
+    script = (f'GOVD_MONITOR_TOKEN="$(cat {mt_in})" exec {govd}' if mt_in else f'exec {govd}')
     docker_cmd = ["docker", "run", "-d", "--name", node_name,
                   "-p", f"127.0.0.1:{port}:5773",
                   "-v", f"{os.path.abspath(child_chip)}:/app/skillChip:ro",
                   "-v", f"{os.path.abspath(rundir)}:/etc/cyberware:ro",
                   "-e", "GOVD_CONFIG=/etc/cyberware/govd.json",
                   "-e", "GOVD_PRINCIPALS=/etc/cyberware/principals.json",
-                  "-e", "CYBERWARE_SKILLCHIP=/app/skillChip", "-w", "/app"]
-    if monitor_token:
-        docker_cmd += ["-e", f"GOVD_MONITOR_TOKEN={monitor_token}"]
-    docker_cmd += ["--entrypoint", "python3", image, "-m", "infra.govern.govd",
-                   "--config", "/etc/cyberware/govd.json", "--mode", "remote", "--port", "5773"]
+                  "-e", "CYBERWARE_SKILLCHIP=/app/skillChip", "-w", "/app",
+                  "--entrypoint", "sh", image, "-c", script]
     r = _run(docker_cmd)
     log.write(r.stdout + r.stderr)
     if r.returncode != 0:
-        _run(["docker", "stop", node_name]); _run(["docker", "rm", node_name])
+        _teardown(node_name, log)
         return _refuse(out, "docker_run_failed", detail=r.stderr.strip()[:400])
 
-    # ── wait for /health; on timeout, tear down — no ghost row ──
+    # ── wait for /health; capture the body's exec_mode/exod_attached (confinement status, recorded) ──
     url = f"http://127.0.0.1:{port}"
-    health, chip_sha = "down", None
+    health, chip_sha, exec_mode, exod_attached = "down", None, None, None
     for _ in range(20):
         try:
             with urllib.request.urlopen(url + "/health", timeout=3) as resp:
-                health, chip_sha = "ok", json.loads(resp.read()).get("chip_sha")
-                break
+                h = json.loads(resp.read())
+            health, chip_sha = "ok", h.get("chip_sha")
+            exec_mode, exod_attached = h.get("exec_mode"), h.get("exod_attached")
+            break
         except Exception:
             time.sleep(2)
     if health != "ok":
-        _run(["docker", "stop", node_name]); _run(["docker", "rm", node_name])
-        return _refuse(out, "health_timeout", note="container stopped+removed; nothing registered", port=port)
+        ok_gone = _teardown(node_name, log)
+        return _refuse(out, "health_timeout", port=port,
+                       note=("container stopped+removed; nothing registered" if ok_gone
+                             else "WARNING: container may be leaked — stop+rm did not confirm removal"))
+    # if the caller REQUIRES execution confinement, the body must come up delegated + exod-attached
+    if confine and not (exec_mode == "delegated" and exod_attached):
+        _teardown(node_name, log)
+        return _refuse(out, "body_not_confined", exec_mode=exec_mode, exod_attached=exod_attached,
+                       note="CONFINE was requested but the body is not delegated+exod; torn down")
 
     # ── register to the roster (config write, atomic) ──
     registered = True
@@ -254,12 +307,15 @@ def main() -> int:
 
     rec = {"tool": "fleet_deploy", "status": "ok", "container": node_name, "fleet_tier": child_tier,
            "parent_fleet_tier": parent_ft, "port": int(port), "url": url, "chip_sha": chip_sha,
-           "principal": principal_id, "acl_skills": acl_skills, "skills": sorted(child_set),
+           "exec_mode": exec_mode, "exod_attached": exod_attached, "confined": bool(exod_attached),
+           "principal": principal_id, "acl_skills": acl_skills,
+           "skills": sorted(s["leaf"] for s in child_skills),
            "health": "ok", "registered": registered, "dashboard": url + "/",
            "log": os.path.join(store, "deploy.log")}
     json.dump(rec, open(out, "w"), indent=2)
     print(json.dumps({"tool": "fleet_deploy", "status": "ok", "container": node_name,
-                      "fleet_tier": child_tier, "url": url, "skills": sorted(child_set)}))
+                      "fleet_tier": child_tier, "url": url, "exec_mode": exec_mode,
+                      "skills": sorted(s["leaf"] for s in child_skills)}))
     return 0
 
 

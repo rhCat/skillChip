@@ -43,7 +43,7 @@
     {
       "skill": "cws:cws-fleet",
       "namespace": "cws",
-      "skill_sha": "270e8861c4c7e8f7b9944348fc78ab4f3f54c2820b8a8fa82f8222d23f0c9642",
+      "skill_sha": "b83f4756fb5b09d2e91645e8a763ee1fe555af70cb785f9c61562907fe5033bd",
       "file_count": 22
     },
     {
@@ -257,5 +257,5 @@
       "file_count": 10
     }
   ],
-  "chip_sha": "586d629d6cd03715a46efd5e0a93372cbc84d069538d1264f64872cb340c11ad"
+  "chip_sha": "334a1ad6a2206308a5dbf854cee6c00c67de0649b5f5d9477c393fa435980af8"
 }

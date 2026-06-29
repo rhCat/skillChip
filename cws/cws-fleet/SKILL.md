@@ -4,33 +4,42 @@ name: Cyberware Fleet
 perks: [status, deploy, down]
 ---
 
-# cws-fleet — govern the fleet, contain the subagents
+# cws-fleet — govern the fleet, scope the subagents
 
-Fleet management as a governed skill: see the fleet at a glance, and **deploy a scoped, contained governed
-body for a subagent** so it cannot go rogue.
+Fleet management as a governed skill: see the fleet at a glance, and **deploy a scoped governance domain
+for a subagent** so it cannot go rogue *through the governed channel*.
 
-## The anti-rogue property
+## What deploy gives a subagent (and what it does not)
 
-A confined body (`exod`, delegated mode) has **no docker, no host socket, no `CAP_SYS_ADMIN`** — so a
-subagent **cannot self-spawn** a body. The **only** path to a governed body is `cws-fleet:deploy`, and that
-perk, fail-closed and **before any `docker run`**:
+`cws-fleet:deploy` spins the subagent its **own govd**, governing its claims against a least-privilege
+chip + a per-actor ACL: in-scope claims get a blessed value-free plan, out-of-scope claims are denied
+(`acl_skill_denied`). That bounds the subagent's **governed surface** — what it can be blessed to do — so
+it can't go rogue through that channel. This is the per-subagent governance domain made concrete.
 
-1. refuses any spawn that is not **strictly lower** on the fleet hierarchy than the deploying node
-   (mothership → edge → subagent → … — a node contains only *below* itself, never sideways or up); and
-2. refuses any child whose **chip or ACL is not a subset** of the parent's — least-privilege by
-   construction: the body carries exactly the named skills and the principal may invoke only those.
+It is **not, by itself, an OS sandbox**: a *cooperative* body governs decisions while the subagent still
+executes steps client-side. For hard **execution confinement** (the subagent runs nothing itself, only
+delegates to `exod`), pass `CONFINE=1` to require a *delegated + exod* body. The body's
+`exec_mode`/`exod_attached` are always recorded in `deploy.json`, so the confinement status is explicit,
+never assumed.
 
-Because the containment check lives in a porter that is **blessed by hash** (`skill_sha`, folded into
-`chip_sha`), weakening it is tamper-evident: `verify_chip` rejects it before govd will serve the skill.
-govd governs the *decision*; the operating agent's cooperative-mode porter runs docker; `exod` never gets
-docker. Privilege stays out of cyberware; the hierarchy is a real boundary, not a label.
+## The containment gates (fail-closed, before any `docker run`)
+
+1. **Strict descent** — the child must sit *strictly lower* on the fleet hierarchy than the deploying node
+   (mothership → edge → subagent → … — a node scopes only *below* itself, never sideways or up).
+2. **Content-identical subset** — *every* child skill must equal a parent skill **by `skill_sha`** (not by
+   leaf name), and the ACL ⊆ child ⊆ parent. A **trojaned or foreign same-name skill cannot ride along** —
+   this is what makes `MODE=mount` safe.
+
+Because the check lives in a porter **blessed by hash** (`skill_sha`, folded into `chip_sha`), weakening it
+is tamper-evident: `verify_chip` rejects it before govd will serve the skill. govd governs the *decision*;
+the operating agent's cooperative-mode porter runs docker; `exod` (delegated mode) never gets docker.
 
 ## Perks
 
 | perk | what it does |
 |------|--------------|
 | `status` | read-only fleet overview — the roster + each body's container state + `/health` (value-free) |
-| `deploy` | compose a least-privilege subset chip (cartridge), mint a scoped principal, spin a strictly-lower-tier govd+exod body, register it |
+| `deploy` | compose a least-privilege subset chip (cartridge), mint a scoped principal, spin the subagent its own strictly-lower-tier govd (cooperative by default; `CONFINE=1` for delegated+exod), register it |
 | `down` | stop + remove a body container and deregister it (the durable ledger mirror — its provenance — is preserved) |
 
 ## deploy — scoping a subagent body
