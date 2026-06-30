@@ -1,6 +1,6 @@
 {
   "skill": "hatch-pet",
-  "skill_sha": "3c82f5310dd1b4c6e0593a03adf899ac8a58b5afe816033730bbdeb7e2f6abe6",
+  "skill_sha": "de3e212a5f3441704d4cf0cfc9ea05cd55bf38c223ddd45c3d00f34edb4a5e21",
   "file_count": 204,
   "files": {
     "LICENSE.txt": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9",
@@ -31,7 +31,7 @@
     "perks/derive-running-left/src/derive_running_left_from_running_right.py": "b3fc9b4a160ba39803a84ea61b7c4729ff8dc9e92bbc9399246350bffa04681f",
     "perks/derive-running-left/test/case.json": "5afbf2bb21342c31e922a6a57b074830ddaa57c4ad401d4f1b2248ccb98fa26b",
     "perks/derive-running-left/test/fixture/run/decoded/running-right.png": "15505e8ccd9ec0238523e46eb7bc2aaa55ef7a86bc5e84f60bc6e7fa648a8cf5",
-    "perks/derive-running-left/test/fixture/run/imagegen-jobs.json": "144cda95ab8f81e0e67c8f59183bc9dba8d3ce878657f51f61da81d46a80dba6",
+    "perks/derive-running-left/test/fixture/run/imagegen-jobs.json": "3636f291380dd8f33179a94c1b7443f8fa7bae5ea142c28e1bee4b24350dad18",
     "perks/derive-running-left/test/fixture/run/pet_request.json": "5d2273b82b48ad20c58c998ab9ea9e180fd00cae4276686a7faef4092dbc0baa",
     "perks/derive-running-left/test/fixture/run/prompts/base-pet.md": "9083fc88e1dbc12e7800a5097559555ac9e4b093b26554ae537aa7e02c74c688",
     "perks/derive-running-left/test/fixture/run/prompts/row-retries/failed.md": "b9d6aa64ee7f1ace3ecf8be2a579f48effff8ae4a08eff40c464e44862598388",

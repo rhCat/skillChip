@@ -1,6 +1,6 @@
 {
   "skill": "alchemy",
-  "skill_sha": "6dc1c3bff950f6ccd0e6a312bf869d28dd760d3fb1bcaa4936b10e98db1f1008",
+  "skill_sha": "c1e8dedae38b5e01941daf58f2b1d7f7a404023321ed8718cbfec6cfc2de515e",
   "file_count": 36,
   "files": {
     "SKILL.md": "0716d62d02221ecc7de607b83731fb1ebe38a0b260d019738eee05fa02a39598",
@@ -14,30 +14,30 @@
     "perks/classify/src/alchemy_classify.py": "e9c7e0f1bbdab23e985a47f278c2a90faa3e9333cf18128b40207aec6f21efb1",
     "perks/classify/src/alchemy_classify.sh": "ce211858f17952e03d5b30c9a306144727cb10f3eab65cf01733154f2641bdfe",
     "perks/classify/src/contracts.json": "b49549ee3f10ec20bee4fdc7f0d268a24d73b18c708f70c0acbd8e8bc709ce60",
-    "perks/classify/test/case.json": "ffc1ffc14cc626cdf9ec507263f7fd766f32ceee1efe28ddef1de149e78ddb5f",
+    "perks/classify/test/case.json": "687b3fbfcfd6ff28156aace836b4e5f3c93f7e4f9943514cce49b5971399f88f",
     "perks/concord/manifesto.json": "b2d38139a865446dadae68148f1a66d5fb2729175396e1fa751ffe4709e22ac0",
     "perks/concord/metadata.json": "bc42be837594272a528e2fd8a83b706733bc4bfeb664cd524383909584cd783c",
     "perks/concord/src/alchemy_concord.py": "765fa57a53bf8a0a5648f3acd3591acabeac0957656583e5932ce383910ead14",
     "perks/concord/src/alchemy_concord.sh": "b8f6a93524989fbabc410cf7183d84366fdd50bf9db1ab925645f3950bdd660c",
     "perks/concord/src/contracts.json": "c361a8c43215d1d2da293f6a841b53c168f9a78fa60ada1c7154b4d6693eb4f9",
-    "perks/concord/test/case.json": "7a640bcb5210a87daaf6ecdac5e71491199060dfc0ef057fba60246dfe83ae0d",
+    "perks/concord/test/case.json": "2a9fcf716bcf39f128cb7561f584b2950048f20e5f07ed38d7cecc665c14c0a2",
     "perks/conserve/manifesto.json": "fae1f0a5b004b59578ee68580af52cc092fefbe5a402d4cf988846af978886d4",
     "perks/conserve/metadata.json": "305b6f54809ce750793ff3d94e6d4e47b4329d744850ccffdcb59d7e89577c72",
     "perks/conserve/src/alchemy_conserve.py": "090457205212dddcdf5337396947b78c43e2d0185d79dcc718b187e2a4b2912c",
     "perks/conserve/src/alchemy_conserve.sh": "7ffb025f6d8a8ab7ce19c89bd24faa976394b149b0f03b1296a465ba448c4d8c",
     "perks/conserve/src/contracts.json": "a71d01dad37e5bc7eb2564fc8fcba6be1d541ef46a5fbe02f9779a8ac878613d",
-    "perks/conserve/test/case.json": "17b9387899ee98ffd0cf01039219a6e092ad3528ec715e717fbec20fec21622d",
+    "perks/conserve/test/case.json": "acfbb756c10d5e7339071134743eaf6c0becf0229aac93ab5b49404aa11767fb",
     "perks/extract/manifesto.json": "f7eef3ae3002c1ea122ec072d3d94ac7899c358095ac5b55a43ad2ced3eced75",
     "perks/extract/metadata.json": "5da3add4b9318396b515bea55e59fb5b2d9163c24fdb0450fe2a1e6c759658eb",
     "perks/extract/src/alchemy_extract.py": "9fe8fd1f79f158dc612b0198cde5a7654d7e5b5e05d70aecff102014d7b6b257",
     "perks/extract/src/alchemy_extract.sh": "702ddf26a9c8e5b90ce434d1075bae814d867c65d4528cb84615be5f5ce25335",
     "perks/extract/src/contracts.json": "8522d96fbcc15787960031a05c91ec4029e4d3e307d5ab6c2369bb1e2acd321f",
-    "perks/extract/test/case.json": "2f305ccfd36b119784879f25fc48c2030ec168417b9108e519e93a1ee661ad8d",
+    "perks/extract/test/case.json": "90730a37c7136b9d64e3aa4e9d380cc88f1a358f4dfb8814c0ffa175361dfcc9",
     "perks/lineage/manifesto.json": "2a63c04790cdf145c368d6d8dbe1335ae8e681db0e7c7f39a937e07a1521708a",
     "perks/lineage/metadata.json": "b9b212e302d7a6b7d2c4f200b61b43669579b07917b5f7add5d506a63da71267",
     "perks/lineage/src/alchemy_lineage.py": "10fac72bfa4439efff3341394b5d268998136ce7d51f0d09a79fb29647d580af",
     "perks/lineage/src/alchemy_lineage.sh": "394004c09d5ea440f59455e09fe6e727d238ea0c422d0f1a85ba0b23341734f4",
     "perks/lineage/src/contracts.json": "51e00330cced20127481295456a18776182fef2a271b7b1c15666d6007163ead",
-    "perks/lineage/test/case.json": "e1c20cc834ffb63207d8f89bf9faa708846f4c64601e93fdeffb831015d7c26c"
+    "perks/lineage/test/case.json": "14bd1f8d13a9c4e52f30ef804f33ded980eb4f867970b6676b580e58e0ca8940"
   }
 }
