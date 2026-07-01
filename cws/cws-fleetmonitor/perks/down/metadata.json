@@ -1,0 +1,16 @@
+{
+  "perk": "down",
+  "skill": "cws-fleetmonitor",
+  "description": "Stop + unregister the supervised fleet-monitor dashboard and remove the rendered artifacts (launcher, watchdog, unit). The durable mirror is PRESERVED \u2014 teardown is about the service, not the recorded history.",
+  "rules": [
+    "bootout/disable the unit + its watchdog, then remove the rendered files",
+    "MIRROR_DIR (the recorded history) is never touched",
+    "KEEP_SCRIPTS=1 leaves the rendered launcher/watchdog on disk (unit removed only)"
+  ],
+  "usage": "All vars optional. LABEL, FLEET_HOME, KEEP_SCRIPTS. Output: ${RECORD_STORE}/down.json.",
+  "limitation": "Removes the LOCAL control host's service only.",
+  "minimal_example": {
+    "perk": "down",
+    "vars": {}
+  }
+}

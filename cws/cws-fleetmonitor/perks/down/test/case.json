@@ -1,0 +1,4 @@
+{
+  "_perk": "down",
+  "skip": "unloads a launchd/systemd unit \u2014 compile-only in CI"
+}

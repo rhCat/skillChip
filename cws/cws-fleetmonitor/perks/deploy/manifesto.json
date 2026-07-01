@@ -1,0 +1,42 @@
+{
+  "_perk": "deploy",
+  "sequence": [
+    "fleetmon_deploy"
+  ],
+  "tools": {
+    "fleetmon_deploy": {
+      "binary": "bash",
+      "params": {
+        "PORT": "${PORT}",
+        "HOST_BIND": "${HOST_BIND}",
+        "PYTHON": "${PYTHON}",
+        "CYBERWARE_ROOT": "${CYBERWARE_ROOT}",
+        "FLEET_CONFIG": "${FLEET_CONFIG}",
+        "MIRROR_DIR": "${MIRROR_DIR}",
+        "MIRROR_INTERVAL": "${MIRROR_INTERVAL}",
+        "HEARTBEAT_NODE": "${HEARTBEAT_NODE}",
+        "LABEL": "${LABEL}",
+        "FLEET_HOME": "${FLEET_HOME}",
+        "LOG_DIR": "${LOG_DIR}"
+      }
+    }
+  },
+  "env": {
+    "PORT": "${PORT}",
+    "HOST_BIND": "${HOST_BIND}",
+    "PYTHON": "${PYTHON}",
+    "CYBERWARE_ROOT": "${CYBERWARE_ROOT}",
+    "FLEET_CONFIG": "${FLEET_CONFIG}",
+    "MIRROR_DIR": "${MIRROR_DIR}",
+    "MIRROR_INTERVAL": "${MIRROR_INTERVAL}",
+    "HEARTBEAT_NODE": "${HEARTBEAT_NODE}",
+    "LABEL": "${LABEL}",
+    "FLEET_HOME": "${FLEET_HOME}",
+    "LOG_DIR": "${LOG_DIR}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

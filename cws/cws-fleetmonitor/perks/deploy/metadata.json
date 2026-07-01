@@ -1,0 +1,22 @@
+{
+  "perk": "deploy",
+  "skill": "cws-fleetmonitor",
+  "description": "Stand up the fleet-monitor dashboard (fleetdash) as a SUPERVISED, self-healing service: render a launcher, a freeze-watchdog, and an OS-native supervision unit (launchd on macOS / systemd --user on Linux) from parameters, into the operator's own deployment dir, then load them. Auto-restart on death AND on a wedged mirror loop (the watchdog kicks it when the durable mirror stops advancing). Every knob is a var with a default; nothing about the host/topology is baked in.",
+  "rules": [
+    "renders ONLY into the operator's deployment dirs (FLEET_HOME, ~/Library/LaunchAgents or ~/.config/systemd/user) + LOG_DIR \u2014 never the repo",
+    "a non-loopback HOST_BIND is served only with the dashboard's explicit FLEETDASH_ALLOW_OPEN ack \u2014 the tailnet + deny-by-default ACLs are the gate",
+    "HOST_BIND=auto resolves THIS host's tailnet IP (never hardcoded); falls back to 127.0.0.1, never fail-open",
+    "HEARTBEAT_NODE defaults to the FIRST node in FLEET_CONFIG (never hardcoded) \u2014 its mirror mtime is the loop's liveness signal",
+    "idempotent: clears any stale listener on PORT and re-bootstraps the unit"
+  ],
+  "usage": "All vars optional. Common: HOST_BIND (auto->tailnet), PORT (8787), MIRROR_INTERVAL (15), FLEET_CONFIG, CYBERWARE_ROOT, PYTHON, LABEL, HEARTBEAT_NODE. Output: ${RECORD_STORE}/deploy.json.",
+  "limitation": "Needs macOS (launchd) or Linux (systemd --user). The dashboard is a CENTRAL control-host process (one per fleet). Requires the cyberware checkout importable at CYBERWARE_ROOT. Binding a routable interface exposes a monitor-token read proxy \u2014 gate PORT with tailnet ACLs.",
+  "minimal_example": {
+    "perk": "deploy",
+    "vars": {
+      "HOST_BIND": "auto",
+      "PORT": "8787",
+      "MIRROR_INTERVAL": "15"
+    }
+  }
+}

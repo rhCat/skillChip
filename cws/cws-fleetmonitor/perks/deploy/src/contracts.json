@@ -1,0 +1,59 @@
+{
+  "tool": "fleetmon_deploy",
+  "inputs": {
+    "PORT": {
+      "type": "string",
+      "required": false
+    },
+    "HOST_BIND": {
+      "type": "string",
+      "required": false
+    },
+    "PYTHON": {
+      "type": "string",
+      "required": false
+    },
+    "CYBERWARE_ROOT": {
+      "type": "string",
+      "required": false
+    },
+    "FLEET_CONFIG": {
+      "type": "string",
+      "required": false
+    },
+    "MIRROR_DIR": {
+      "type": "string",
+      "required": false
+    },
+    "MIRROR_INTERVAL": {
+      "type": "string",
+      "required": false
+    },
+    "HEARTBEAT_NODE": {
+      "type": "string",
+      "required": false
+    },
+    "LABEL": {
+      "type": "string",
+      "required": false
+    },
+    "FLEET_HOME": {
+      "type": "string",
+      "required": false
+    },
+    "LOG_DIR": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "fleetmon_deploy_out": {
+      "path": "${RECORD_STORE}/deploy.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/deploy.json"
+  }
+}

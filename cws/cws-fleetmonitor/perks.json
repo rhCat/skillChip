@@ -1,0 +1,29 @@
+{
+  "skill": "cws-fleetmonitor",
+  "perks": [
+    {
+      "id": "status",
+      "summary": "report the fleet-monitor dashboard's supervision + serving + snapshot-freshness (read-only, value-free)",
+      "destructive": false,
+      "tools": [
+        "fleetmon_status"
+      ]
+    },
+    {
+      "id": "deploy",
+      "summary": "render + load a SUPERVISED, self-healing fleetdash service (launchd/systemd) from parameters \u2014 auto-restart on death AND on a wedged mirror loop",
+      "destructive": true,
+      "tools": [
+        "fleetmon_deploy"
+      ]
+    },
+    {
+      "id": "down",
+      "summary": "stop + unregister the fleetdash service and remove the rendered artifacts (durable mirror preserved)",
+      "destructive": true,
+      "tools": [
+        "fleetmon_down"
+      ]
+    }
+  ]
+}
