@@ -1,0 +1,4 @@
+{
+  "_perk": "deploy",
+  "skip": "renders launchd/systemd units + loads a service \u2014 contract test covers compilation; live supervision is host-specific ops"
+}

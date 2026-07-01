@@ -1,0 +1,4 @@
+{
+  "_perk": "status",
+  "skip": "probes a launchd/systemd unit + the live port \u2014 compile-only in CI"
+}

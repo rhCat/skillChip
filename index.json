@@ -2,7 +2,7 @@
   "chip": "skillChip",
   "version": 2,
   "cartridge": false,
-  "count": 220,
+  "count": 221,
   "skills": [
     {
       "skill": "aiq-research",
@@ -183,6 +183,12 @@
       "namespace": null,
       "skill_sha": "44a5dec01ccae99f012957e3226399bcc34a091c617201b66028af0066237691",
       "file_count": 70
+    },
+    {
+      "skill": "cws:cws-fleetmonitor",
+      "namespace": "cws",
+      "skill_sha": "356dc00d1a06ef82897135f00a653d00421acb2b23f3526572291a863bba9eee",
+      "file_count": 18
     },
     {
       "skill": "dali-dynamic-mode",
@@ -1325,5 +1331,5 @@
       "file_count": 39
     }
   ],
-  "chip_sha": "c5d05ebe2a78ea0e87066e6afb3ac04a5c4f70fd1cc6254af98f29bf4a8c30db"
+  "chip_sha": "bde155995e3b8e153a0eac2221814e6ef89027991930ec3c020ee7628e411242"
 }

@@ -1,0 +1,25 @@
+{
+  "skill": "cws-fleetmonitor",
+  "skill_sha": "356dc00d1a06ef82897135f00a653d00421acb2b23f3526572291a863bba9eee",
+  "file_count": 18,
+  "files": {
+    "SKILL.md": "8a17511dc802e38a8e136e75264c096259038a654cb7c78bb21825bb2a1ca785",
+    "blueprint.json": "d1e213156efa690481e5f16c186f9f3a5ea95b6e1d6914bfdd36ba11fd142460",
+    "perks.json": "ec18075c710f469f1dfbea613aecfbe90fa4c0fa666065810bb38f6e825e0c12",
+    "perks/deploy/manifesto.json": "6e0ab9cf4619bdd953ba043b03f91222bb70ad699b86662ec9410070d5136ca8",
+    "perks/deploy/metadata.json": "7991614b31f3393377e21b5d373b58cf1fb0136a706aea69f8a5cb61b986e196",
+    "perks/deploy/src/contracts.json": "7e521123ab5414f9252b832dfec354f391bea462c2bdbc13286391f03852ba6b",
+    "perks/deploy/src/fleetmon_deploy.sh": "71df3a53e90c3c5efdebdcdbf6771cd3723f69c4b1ecbda1f3071ec1f73980dc",
+    "perks/deploy/test/case.json": "10f321dbe28dad74214cc327558ae81adc9a269bc38f2290fe8b10e833fda56f",
+    "perks/down/manifesto.json": "66a769985229e04d3033820f9eeb54da8a761651cecd8d5368ac98f656c0fde7",
+    "perks/down/metadata.json": "db43e603e002a39979074684a0c6254a5d1ed7aa45a5abc961681b3b09bded3a",
+    "perks/down/src/contracts.json": "b2b9dee5e1abcb29995f0d32fa5935346aa9fb4da5b5ab6c6b118b3d35a35d36",
+    "perks/down/src/fleetmon_down.sh": "bbf6d3eaed31ca7b70f9a277cfccfed5c2ce92d2cd0e111d83ac6f48cc3ae3f9",
+    "perks/down/test/case.json": "2571c98c84d8949493d6a1c8d68bfa1c3dd3a235bba3f970c5b4f295413e65af",
+    "perks/status/manifesto.json": "3a04c6b591b887ec867a2ccf326a36628ab6f8f0302f9fe57a3330ef1a140719",
+    "perks/status/metadata.json": "4d4fc363e61d8c3359a2f75d554a7e18a70d305d7a7e2cd629e277ecedac352b",
+    "perks/status/src/contracts.json": "5c0910eba596f4d75678520fde430ee2474cff43567cc341fe875033faacd885",
+    "perks/status/src/fleetmon_status.sh": "0657205a99d4d90ff62df048799824cb9637bda9d9cb43230cfed6eee3236be2",
+    "perks/status/test/case.json": "ce23e166029dd9482781180a907427829df0ab00b3753e93a89164ad64a24fbd"
+  }
+}

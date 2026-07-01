@@ -1,0 +1,27 @@
+{
+  "tool": "fleetmon_down",
+  "inputs": {
+    "LABEL": {
+      "type": "string",
+      "required": false
+    },
+    "FLEET_HOME": {
+      "type": "string",
+      "required": false
+    },
+    "KEEP_SCRIPTS": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "fleetmon_down_out": {
+      "path": "${RECORD_STORE}/down.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/down.json"
+  }
+}
