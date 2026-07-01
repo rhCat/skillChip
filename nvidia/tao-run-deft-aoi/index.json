@@ -1,6 +1,6 @@
 {
   "skill": "tao-run-deft-aoi",
-  "skill_sha": "f6ecc87a0b0a9d88a2f5e59011a9ed9bf49fc65982c9c9f074e9ea54097ac9de",
+  "skill_sha": "98066a5f7b7e3d181a691694b476cd837d1ee1f838c4226e10d354b72bc26555",
   "file_count": 50,
   "files": {
     "SKILL.md": "d126c1eb8d218d18fa601ab0edc1b1294cd96d158ee480e7cc0231f08de92663",
@@ -23,7 +23,7 @@
     "perks/prepare-inference-spec/src/prepare_inference_spec.sh": "0e8b6355d24e8566026add0b63966ecab4b901f85dd6f9d8d82a65f0235f640b",
     "perks/prepare-inference-spec/test/case.json": "d65e2d0091410a073e7de4d8ceeafcd197022c65f2973650e7531432437f5606",
     "perks/prepare-inference-spec/test/fixture/baseline_spec.yaml": "bdb3a9b4156c174ffe2d0bf9477fc8daa4ba44ea1b3441ef380b8d4399818876",
-    "perks/prepare-inference-spec/test/fixture/deft_state.json": "240d4b4b5eb0990570e84e68c12d5862bea759639c6df84d094000bce4b22c88",
+    "perks/prepare-inference-spec/test/fixture/deft_state.json": "6eb8a5f2921f7193a8cb62e825f13cbaa4bbaf8d867c645b43dbc929ecc3c3c7",
     "perks/prepare-pairs/manifesto.json": "a684fb42092c32d9d268c14dd299b1caef8009e04fa8c794b3a206978227c0c5",
     "perks/prepare-pairs/metadata.json": "a06bd726c29bae95715aef18f52c91fc4e6f4a0bf785c7eb7c4f315b08d2aa8c",
     "perks/prepare-pairs/src/changenet_data_pair_prepare.py": "7c692e1a0e2565a9432f669947dfcdad6f4e7d9d6682e62f1040914b3ca3fd61",

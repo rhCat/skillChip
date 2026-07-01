@@ -1,6 +1,6 @@
 {
   "skill": "cws-release",
-  "skill_sha": "0f28b0e38dc4289391b4ea2eb7ff767ef11f96bb6d917aac28ff1361fddd3dc0",
+  "skill_sha": "fc00752a6c7b9eb385ece6bb6eee4fe730a682f36beb9bbc58291a0c992a4f0e",
   "file_count": 82,
   "files": {
     "SKILL.md": "ef78fd87f0d6afd7bdc07271505b4e82e1d66ab16a136919ddb75ceedd3d62d2",
@@ -18,7 +18,7 @@
     "perks/citrinitas/src/contracts.json": "58f2747a1a25333a6b4247df524787a6d3db5179bab734392e6fa4c46b82c327",
     "perks/citrinitas/src/cws_release_citrinitas.py": "ad41692c29710537f189cfb9ac0bf531b587382c28f111dbd8800e3e953ba6e8",
     "perks/citrinitas/src/cws_release_citrinitas.sh": "8cd1f82c3816c76b6fdf5100a00f7352108e274eaa3aeaf74812c1812f97eb1f",
-    "perks/citrinitas/test/case.json": "dc29f67af095e523f665087a63bd20adafd9271757680dd2def36c02b30b18e1",
+    "perks/citrinitas/test/case.json": "aef4105c30ff9b32680e07cf09a53781f7b439c565b8f02dda8e8ce3183c0d9b",
     "perks/engine/manifesto.json": "0c5ea4a8848ed9d54c6cbe8730ae2c320a306ce2d2c8be9f9cc0f8fbee282552",
     "perks/engine/metadata.json": "bfb3af98ffa4245da1bf7d22bd43d050349af4f7b851e0994addabc05b045d46",
     "perks/engine/src/contracts.json": "fd144b496faa5755361449f5e0cd8c7617ae2f573d08c3172c6651f1ef0e69ea",
