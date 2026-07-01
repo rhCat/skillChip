@@ -1,0 +1,35 @@
+{
+  "_perk": "status",
+  "sequence": [
+    "fleetmon_status"
+  ],
+  "tools": {
+    "fleetmon_status": {
+      "binary": "bash",
+      "params": {
+        "LABEL": "${LABEL}",
+        "PORT": "${PORT}",
+        "HOST_BIND": "${HOST_BIND}",
+        "MIRROR_DIR": "${MIRROR_DIR}",
+        "HEARTBEAT_NODE": "${HEARTBEAT_NODE}",
+        "MIRROR_INTERVAL": "${MIRROR_INTERVAL}",
+        "FLEET_CONFIG": "${FLEET_CONFIG}"
+      }
+    }
+  },
+  "env": {
+    "LABEL": "${LABEL}",
+    "PORT": "${PORT}",
+    "HOST_BIND": "${HOST_BIND}",
+    "MIRROR_DIR": "${MIRROR_DIR}",
+    "HEARTBEAT_NODE": "${HEARTBEAT_NODE}",
+    "MIRROR_INTERVAL": "${MIRROR_INTERVAL}",
+    "FLEET_CONFIG": "${FLEET_CONFIG}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3",
+    "curl"
+  ]
+}

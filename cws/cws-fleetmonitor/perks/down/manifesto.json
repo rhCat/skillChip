@@ -1,0 +1,26 @@
+{
+  "_perk": "down",
+  "sequence": [
+    "fleetmon_down"
+  ],
+  "tools": {
+    "fleetmon_down": {
+      "binary": "bash",
+      "params": {
+        "LABEL": "${LABEL}",
+        "FLEET_HOME": "${FLEET_HOME}",
+        "KEEP_SCRIPTS": "${KEEP_SCRIPTS}"
+      }
+    }
+  },
+  "env": {
+    "LABEL": "${LABEL}",
+    "FLEET_HOME": "${FLEET_HOME}",
+    "KEEP_SCRIPTS": "${KEEP_SCRIPTS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "python3"
+  ]
+}

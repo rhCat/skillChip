@@ -1,0 +1,58 @@
+{
+  "$schema": "lpp/v0.2.0",
+  "id": "cws-fleetmonitor",
+  "name": "Cyberware Fleet Monitor",
+  "description": "Deploy + supervise the cross-node fleet dashboard (fleetdash) as a self-healing service, and report its health. Perk-agnostic lifecycle (ready -> prepared -> verified -> executed); the perk supplies the concrete, contract-bound how.",
+  "entry_state": "ready",
+  "states": {
+    "ready": {
+      "description": "task-ledger submitted, nothing run"
+    },
+    "prepared": {
+      "description": "inputs validated \u2014 required vars present, runtime + store reachable"
+    },
+    "verified": {
+      "description": "the plan is contract-bound \u2014 tool sequence resolves and its contract is in place"
+    },
+    "executed": {
+      "description": "the perk's tool sequence ran ONLY via executor.py \u2014 recorded to the run-ledger as it runs"
+    }
+  },
+  "terminal_states": {
+    "executed": {}
+  },
+  "gates": {
+    "g_prepared": {
+      "type": "expression",
+      "expression": "inputs_present /\\ store_writable",
+      "description": "inputs + store validated"
+    },
+    "g_verified": {
+      "type": "expression",
+      "expression": "sequence_resolves /\\ contract_present",
+      "description": "tool sequence + contract bound"
+    },
+    "g_executed": {
+      "type": "expression",
+      "expression": "executed_via_executor",
+      "description": "ran only through the recording executor"
+    }
+  },
+  "transitions": [
+    {
+      "from": "ready",
+      "to": "prepared",
+      "gate": "g_prepared"
+    },
+    {
+      "from": "prepared",
+      "to": "verified",
+      "gate": "g_verified"
+    },
+    {
+      "from": "verified",
+      "to": "executed",
+      "gate": "g_executed"
+    }
+  ]
+}

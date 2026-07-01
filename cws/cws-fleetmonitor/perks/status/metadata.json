@@ -1,0 +1,17 @@
+{
+  "perk": "status",
+  "skill": "cws-fleetmonitor",
+  "description": "Read-only health of the fleet-monitor dashboard: is the supervised service loaded, is the port serving the dashboard (identified by a marker, not any 200), and is the background mirror loop FRESH (not silently wedged, and not never-started). The check always succeeds (exit 0); the verdict is the record \u2014 a frozen-but-alive OR never-started loop both read as not-fresh. Value-free; no mutation.",
+  "rules": [
+    "read-only \u2014 never starts/stops anything",
+    "snapshot_fresh compares the heartbeat node's mirror mtime against MIRROR_INTERVAL*6+30s; a missing/never-written heartbeat reads no_heartbeat (NOT fresh) so a from-startup wedge is caught",
+    "serving requires a fleetdash-identifying marker in the response, not merely any HTTP 200",
+    "the check itself always exits 0 (it succeeded in checking); health is the record: healthy/supervisor_loaded/serving/snapshot_fresh in status.json"
+  ],
+  "usage": "All vars optional. LABEL, PORT, HOST_BIND (auto->tailnet), MIRROR_DIR, HEARTBEAT_NODE, MIRROR_INTERVAL. Output: ${RECORD_STORE}/status.json.",
+  "limitation": "Reports on the LOCAL control host's service. HEARTBEAT_NODE must match a real roster node for the freshness check.",
+  "minimal_example": {
+    "perk": "status",
+    "vars": {}
+  }
+}
