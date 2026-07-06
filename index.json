@@ -373,7 +373,7 @@
     {
       "skill": "cws:cws-conform",
       "namespace": "cws",
-      "skill_sha": "1a6486cf62b09a13d366ec5640d138be3050043ab0e220b3134dda70f2dd00aa",
+      "skill_sha": "87c2eedaa7b9504c4a36cc4e79868c8c300aa5b71b85efcddd3b49268213f37f",
       "file_count": 83
     },
     {
@@ -421,7 +421,7 @@
     {
       "skill": "cws:cws-observe",
       "namespace": "cws",
-      "skill_sha": "79631b37d4c7e299e44988188731b3e2ee043c9449db8ab5791c78ec3078efc4",
+      "skill_sha": "c8de99d584305af2b059e2287771286030a8e5dbfd8fdb0411565cc48fbce632",
       "file_count": 32
     },
     {
@@ -1343,5 +1343,5 @@
       "file_count": 21
     }
   ],
-  "chip_sha": "6ac7e07a5e0f7eae5bf05b9c4e6e41fcb804372529a1860f073682673e3bc2a3"
+  "chip_sha": "47e03d82d16ff318116d421b93a874e5d27d88e009adb15c8d68669e17097986"
 }
