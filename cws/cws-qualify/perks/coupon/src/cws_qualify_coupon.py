@@ -134,15 +134,18 @@ def main() -> int:
     if os.path.isfile(q_ledger_path):
         led = json.load(open(q_ledger_path))
     else:
+        # ORIGIN-BOUND genesis so cws-ledgercheck/verify (verify_chain) re-verifies the Q-ledger:
+        # a Q-record chain has no governed execution behind it, so it roots at generation-zero.
         led = {"chain": "q-ledger", "schema": ledger.CURRENT_MAJOR,
-               "entries": [{"type": "genesis", "schema": ledger.CURRENT_MAJOR, "prev": "0" * 64}]}
+               "entries": [ledger.genesis("q-ledger",
+                           hashlib.sha256(b"cws-qualify/coupon:generation-zero").hexdigest())]}
     entries = led.setdefault("entries", [])
     schema = led.get("schema", ledger.CURRENT_MAJOR)
-    entry = {"seq": len(entries) + 1, "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-             "lot": lot, "rung": rung, "scope": scope, "coupons": y["coupons"],
-             "first_pass": y["first_pass"], "scrap": y["scrap"], "attempts_mean": y["attempts_mean"],
-             "verdict": "pass", "evidence_sha": evidence_sha, "prev": ledger.head_of(entries, schema)}
-    entries.append(entry)
+    record = {"ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+              "lot": lot, "rung": rung, "scope": scope, "coupons": y["coupons"],
+              "first_pass": y["first_pass"], "scrap": y["scrap"], "attempts_mean": y["attempts_mean"],
+              "verdict": "pass", "evidence_sha": evidence_sha}
+    entry = ledger.append(entries, record, schema)   # sets seq (genesis 0 -> 1..N) + prev-hash digest
     os.makedirs(os.path.dirname(os.path.abspath(q_ledger_path)), exist_ok=True)
     ledger.write_object_atomic(q_ledger_path, led)
 
