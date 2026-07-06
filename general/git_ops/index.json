@@ -1,14 +1,14 @@
 {
   "skill": "git_ops",
-  "skill_sha": "e19544acc43c1ff1713acd63ed94dc082b2b41c1a89bc90987b0ed30743c0dc5",
-  "file_count": 16,
+  "skill_sha": "0392fd50fc29b9fb2d5e8392ff6dc8edc70cd41c9f56a4fa9a94199bb1ba1c48",
+  "file_count": 21,
   "files": {
-    "SKILL.md": "b588be3cb56c52ba81026b6ecc439bb5e3e6e103eb61e9d474cc35999ffb2bdb",
+    "SKILL.md": "baf376380c1d045cdb3eb98e44db49653af59bdadac54fad9455b5b1166a97b2",
     "blueprint.drawio": "034b4f5bd21d0a4c4dc06e48476034b7d8f63224fa9918fc8ad23e1f3b08f4a6",
     "blueprint.json": "91a5c5d6d022fe2dfc813c07bfd6c471f3b65d4403b7a806283247424fc5b856",
     "blueprint.svg": "5d30362ad11848539568f8ef8a95349d57e7f3184e85d169f102bc5048145a9a",
     "ledger.json": "3df323c1c3919600a43c884857d6b15b4099cce350c1dce6eb16e3b68868b5e8",
-    "perks.json": "f59fc126321d64809561d795527aaf7c15eab248f8d8e9eaa456cce3ed86f561",
+    "perks.json": "45ec75cba77f86ee0d59cee9fa6724ef21953dfad21dc625f862377a40389bcd",
     "perks/snapshot/manifesto.json": "dc7be5517aca617d16de8916d8a40c951a2229bd2265284053ff461b8fd9aa88",
     "perks/snapshot/metadata.json": "d5b4541a7ade623649661f9e532b7bf2a23f970e9c5a8b02a8e9551c45fb380c",
     "perks/snapshot/src/contracts.json": "efaaf2eea7a87fede42d6207c4059414dbc6caf26b457bffb217b4830b925d46",
@@ -18,6 +18,11 @@
     "perks/status/metadata.json": "60890284eb751ff60c0c2a3733a9600719fe10d91c88517866a56f3ce9783d2d",
     "perks/status/src/contracts.json": "d72ffc8cd782506dcd727e658fbfe72f89da78df49424017805b0472824acd7d",
     "perks/status/src/git_status.sh": "e15c3ecee7cd679e7573de2427fc1dec621f98b0c9115cb22cef64e6403bff58",
-    "perks/status/test/case.json": "c5caefe476816634875a457d99a807a643551e05f34ac267555dc9a53872ffe9"
+    "perks/status/test/case.json": "c5caefe476816634875a457d99a807a643551e05f34ac267555dc9a53872ffe9",
+    "perks/verify/manifesto.json": "321feea895d5a432a5b7120ad7bbfb51e38296eccc8c8aa2026e12756203d6d4",
+    "perks/verify/metadata.json": "55c9a570910ca5ea8ef6d26a0c56106029d96bee410271b72f456dce36d18731",
+    "perks/verify/src/contracts.json": "52482baea978fe2f556f02808e9ea44900ddd0892727b2caabe36904c6616b84",
+    "perks/verify/src/git_verify.sh": "34c9964cebaf2678b2cb36ff1ca24f8fff548674000ee8506ed8c91e3a521ce4",
+    "perks/verify/test/case.json": "6b7a8f050d2ac162c3e33149f336dac415d31ebe0478625bb900fbe8cca516d3"
   }
 }
