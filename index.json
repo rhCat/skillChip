@@ -433,7 +433,7 @@
     {
       "skill": "cws:cws-qualify",
       "namespace": "cws",
-      "skill_sha": "262c1d96141369650dacdfd6cd812746eb743971a0dc34b276b876d2c5f81c50",
+      "skill_sha": "986a834bc18548fd270d8d11aeabdf4a0d7d5f1cc77616e8216c6866f841e0ee",
       "file_count": 21
     },
     {
@@ -1343,5 +1343,5 @@
       "file_count": 21
     }
   ],
-  "chip_sha": "47e03d82d16ff318116d421b93a874e5d27d88e009adb15c8d68669e17097986"
+  "chip_sha": "73d9696f3f940da7be3a3b663fd7c855e098ca963ac84a3707e5d53dfbbaffa5"
 }

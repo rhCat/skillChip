@@ -1,6 +1,6 @@
 {
   "skill": "cws-qualify",
-  "skill_sha": "262c1d96141369650dacdfd6cd812746eb743971a0dc34b276b876d2c5f81c50",
+  "skill_sha": "986a834bc18548fd270d8d11aeabdf4a0d7d5f1cc77616e8216c6866f841e0ee",
   "file_count": 21,
   "files": {
     "SKILL.md": "94676f65279532b29b717f4652bb8ab57b7d583841a009a287e46d62f6b03330",
@@ -10,7 +10,7 @@
     "perks/coupon/manifesto.json": "86d9414b3c7cb86ce29ac73916ff27f4043b0cb64bdc8b1647f396982ade2456",
     "perks/coupon/metadata.json": "733386e110e80da02981498dd4f26fe52b0bc4a3c9f5eba7e870f5c8d0185e2f",
     "perks/coupon/src/contracts.json": "8e08ef252f85e1a3f4009a01a892d6113c8308ac02d6f9b435929dcaf55605d9",
-    "perks/coupon/src/cws_qualify_coupon.py": "272cb1da0c9e791d70b9bf45ee809fad20793e66c5782112d1ca6f45862927ba",
+    "perks/coupon/src/cws_qualify_coupon.py": "f2102f80d119f0a510d0bb5a4920cf5546eca8e2df45628ee163df7038173432",
     "perks/coupon/src/cws_qualify_coupon.sh": "ca33633e7454b8969bf0acb77f0d87e0d167742e83b406ad39d7961d4e425c88",
     "perks/coupon/test/case.json": "93787f4ee6a7e80723b17565717e0cb964a3dac0421f256cf46d52d658f15b2f",
     "perks/coupon/test/fixture/coupons.json": "96bd369bbfdb84bbb636b7110a21507be7386bd15c8ff81e398dfa4db216ae64",
