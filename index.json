@@ -1331,9 +1331,5 @@
       "file_count": 39
     }
   ],
-<<<<<<< HEAD
-  "chip_sha": "ede251d4013e0066e7b3a8caeb4e432d55477d126ceab10a00b21b2249fad8c5"
-=======
-  "chip_sha": "5a56413fa20ebacefc096398fcdbb316e7c04472195138e7f97af823a73fdeb9"
->>>>>>> origin/main
+  "chip_sha": "8988bfd0bc404591ac353c553cdab59fef5926e3b6f5653e7f32497bd7d991cb"
 }
