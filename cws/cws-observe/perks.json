@@ -16,6 +16,14 @@
       "tools": [
         "cws_observe_redeem"
       ]
+    },
+    {
+      "id": "attest",
+      "summary": "record an ATTRIBUTED human testimony (grade: testimony) into a tamper-evident attest-ledger — for evidence a governed run cannot manufacture; never anonymous, does not verify the claim",
+      "destructive": false,
+      "tools": [
+        "cws_observe_attest"
+      ]
     }
   ]
 }

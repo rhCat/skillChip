@@ -1,7 +1,7 @@
 ---
 skill: cws-observe
 name: Project Observer
-perks: [status, redeem]
+perks: [status, redeem, attest]
 ---
 
 # cws-observe — Project Observer
@@ -22,6 +22,12 @@ to the validators (`cws-*`) and to a tamper-evident **done-ledger**.
   no refusal event) — appending a `prev`-hash-chained entry `{seq, ts, task_id, validator, verdict,
   evidence_sha, prev}`. A flipped verdict breaks the chain, which `status` reports as `done_ledger_chain:
   broken`. The done-ledger guards itself the same way the run-ledger does.
+- **`attest`** records an **attributed human testimony** — evidence a governed run *cannot* manufacture
+  (an outsider completing a quickstart from public docs, a witnessed milestone). Where `redeem` demands a
+  governed run, `attest` demands **attribution**: it requires `ATTESTED_BY` (fail-closed on anonymity) and
+  appends a `prev`-hash-chained entry `{seq, ts, claim, attested_by, grade, evidence_sha, prev}` to the
+  attest-ledger. It records *who said what*, attributably and tamper-evidently; it does **not** verify the
+  claim's truth — that is the honest boundary of `grade: testimony`.
 
 This closes the loop the rest of the chip opens: the validators grade artifacts, `redeem` turns a passing
 governed run into a redemption, and `status` reports progress no one can lie about — the same `quis

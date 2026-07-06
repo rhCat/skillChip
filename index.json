@@ -151,8 +151,8 @@
     {
       "skill": "cws-observe",
       "namespace": null,
-      "skill_sha": "121d964e2bea91219c1cc0f99c101b91ecd7a6b416c9fb6de0772d6a387b7233",
-      "file_count": 26
+      "skill_sha": "79631b37d4c7e299e44988188731b3e2ee043c9449db8ab5791c78ec3078efc4",
+      "file_count": 32
     },
     {
       "skill": "cws-pm",
@@ -1331,5 +1331,5 @@
       "file_count": 39
     }
   ],
-  "chip_sha": "8988bfd0bc404591ac353c553cdab59fef5926e3b6f5653e7f32497bd7d991cb"
+  "chip_sha": "91ad89c900fff0ca8799f99ff04e3f7980c4781732563c8d1b2418b38f15d22c"
 }
