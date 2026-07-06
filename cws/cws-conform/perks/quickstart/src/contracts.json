@@ -1,0 +1,14 @@
+{
+  "tool": "cws_quickstart",
+  "inputs": {
+    "DOC": { "type": "string", "required": true },
+    "CATALOG": { "type": "string", "required": false }
+  },
+  "outputs": {
+    "quickstart_out": { "path": "${RECORD_STORE}/quickstart.json", "type": "file" }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/quickstart.json"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "_perk": "quickstart",
+  "sequence": ["cws_quickstart"],
+  "tools": {
+    "cws_quickstart": { "binary": "python3", "params": { "DOC": "${DOC}" } }
+  },
+  "env": {
+    "DOC": "${DOC}",
+    "CATALOG": "${CATALOG}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": ["python3"]
+}

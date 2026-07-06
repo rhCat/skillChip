@@ -1,0 +1,10 @@
+{
+  "_perk": "quickstart",
+  "requires": ["python3"],
+  "vars": { "DOC": "${FIXTURE}/quickstart.md", "CATALOG": "${FIXTURE}/catalog.json" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["quickstart.json"],
+    "json": { "quickstart.json": { "status": "ok", "resolves": true } }
+  }
+}

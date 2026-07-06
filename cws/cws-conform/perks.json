@@ -80,6 +80,14 @@
       "tools": [
         "cws_vectors"
       ]
+    },
+    {
+      "id": "quickstart",
+      "summary": "conformance check: a quickstart DOC must document a REAL, RUNNABLE governed claim \u2014 extract its claim block and resolve skill+perk against a CATALOG (a dry replay; exit code IS the verdict)",
+      "destructive": false,
+      "tools": [
+        "cws_quickstart"
+      ]
     }
   ]
 }
