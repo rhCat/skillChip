@@ -1,6 +1,6 @@
 {
   "skill": "cws-ledgercheck",
-  "skill_sha": "18e08f974b36cfa6bcf3893136056b1c61043ea5ea0d6861d2ec492dde551673",
+  "skill_sha": "df196ec6566f82e25531c50002198c9a8936aa7048b558576d04edbf8435d5d9",
   "file_count": 46,
   "files": {
     "SKILL.md": "32b2e959c859825b75e9873e1993d17baaefdd65d36fa05fa0d20441dd091191",
@@ -30,7 +30,7 @@
     "perks/erasure/test/case.json": "97719b081eb4027ab5f96bf36a26888433124aa58954792ae14e0023a9b6a036",
     "perks/lotquery/manifesto.json": "93e71eb0e3a06235ae9feeec37cf7321391dcd25080823eaf32d47b301fddeff",
     "perks/lotquery/metadata.json": "c32ac4ad5b40e74baa9e78944a8e745308070add63f8576e35cb6739c8b241cd",
-    "perks/lotquery/src/contracts.json": "02bdbb3654030f3445c0f5bafab094b390b1af8b4ad28ea6e3d981e41cdf9842",
+    "perks/lotquery/src/contracts.json": "c469358809f7b388f8755c04739f064749011e9c1f67b87d3a4d5777b9f01006",
     "perks/lotquery/src/cws_lotquery.py": "0bc171fa7896c43254a1d3c48d1fe9a58d5ffa1798e76c80cce923ae133ae7d6",
     "perks/lotquery/src/cws_lotquery.sh": "37af17512e0d17a649a71d007678a0440d789b7daa5a2f10a1cc2c753263e8f0",
     "perks/lotquery/test/case.json": "8f2fd639b871b12fb102e5be63cda673ad4e53c3a3d4fd0a915e8cd12febd6df",

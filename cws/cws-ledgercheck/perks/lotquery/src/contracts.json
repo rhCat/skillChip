@@ -1,6 +1,12 @@
 {
   "tool": "cws_lotquery",
-  "inputs": {},
+  "inputs": {
+    "LEDGER_DB": {"type": "string", "required": true},
+    "GROUP_BY": {"type": "string", "required": false},
+    "LOT": {"type": "string", "required": false},
+    "SINCE": {"type": "string", "required": false},
+    "LIMIT": {"type": "string", "required": false}
+  },
   "outputs": {
     "lotquery_out": {
       "path": "${RECORD_STORE}/lotquery.json",
