@@ -1,0 +1,10 @@
+{
+  "_perk": "drilldrift",
+  "requires": ["python3"],
+  "vars": {},
+  "expect": {
+    "exit": 0,
+    "outputs": ["drilldrift.json"],
+    "json": { "drilldrift.json": { "ok": true, "legs": { "seeded": "alarmed", "benign": "clean" } } }
+  }
+}

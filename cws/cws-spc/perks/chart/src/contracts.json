@@ -1,0 +1,13 @@
+{
+  "tool": "cws_spc_chart",
+  "inputs": {
+    "SERIES": { "type": "string", "required": true },
+    "ENVELOPE": { "type": "string", "required": false },
+    "SIGMA_K": { "type": "string", "required": false },
+    "BASELINE_N": { "type": "string", "required": false }
+  },
+  "outputs": {
+    "spc_out": { "path": "${RECORD_STORE}/spc.json", "type": "file" }
+  },
+  "checks": { "exit_zero": true, "output_exists": "${RECORD_STORE}/spc.json" }
+}

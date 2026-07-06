@@ -1,0 +1,13 @@
+{
+  "tool": "cws_spc_drilldrift",
+  "inputs": {
+    "SEEDED": { "type": "string", "required": false },
+    "BENIGN": { "type": "string", "required": false },
+    "ENVELOPE": { "type": "string", "required": false },
+    "SIGMA_K": { "type": "string", "required": false }
+  },
+  "outputs": {
+    "drill_out": { "path": "${RECORD_STORE}/drilldrift.json", "type": "file" }
+  },
+  "checks": { "exit_zero": true, "output_exists": "${RECORD_STORE}/drilldrift.json" }
+}

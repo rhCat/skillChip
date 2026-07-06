@@ -1,0 +1,28 @@
+{
+  "skill": "cws-spc",
+  "skill_sha": "10b173fb010bc53997b1be845eaf8693f4300fc47d2a7b67625f61c85306c0b5",
+  "file_count": 21,
+  "files": {
+    "SKILL.md": "d5b31db10f0fec2693f2e4569b38bd8f8a4ed79e42970b60243f4767561ea09d",
+    "blueprint.json": "9adfa336e85904f9184fb10167b051cf4082b23e4d6605c300fbafba31554a5e",
+    "ledger.json": "0ed0231bed2cbbd67d334e0de09b37dcbd927a0262bdccee6de4993edb3168c9",
+    "perks.json": "50de9806232ca9a88089c868e511c085b25f8e30a7e12faf866a75020223b1d4",
+    "perks/chart/manifesto.json": "31561b6b52c5acea58d67f8fa593b47fae6f40b5c5d3d9392bcec85b9c97652a",
+    "perks/chart/metadata.json": "53415049957b956c4e46fe95e9018c85baf6404c44e7679a242fb6b9007418cc",
+    "perks/chart/src/contracts.json": "a9332778669947bad844a839f023d72c65fa6b159114167d283061f2a08bac4a",
+    "perks/chart/src/cws_spc_chart.py": "2518564119669cc412a4513dfb3c4dcfc7bdc390d5a3d458b655f799c65a4236",
+    "perks/chart/src/cws_spc_chart.sh": "3b9ee76d03389feae3b5b57573b2647689dbbd8870617b9403c0f48814efd89e",
+    "perks/chart/test/case.json": "32b226a661836a8c4bf664194745223a58f88981b32d329add092633d3400744",
+    "perks/chart/test/fixture/envelope.json": "66f566b4a10545621e9320354f7d1e6b69d73cf889fa9ae6cf77172e72a011b3",
+    "perks/chart/test/fixture/series.json": "6cf9ac6941bf5e0fd3563cb10e45894c2f3e013236b5db8dd0a1451627b4ebdc",
+    "perks/drilldrift/manifesto.json": "175b927d7ce2d63f444236f561ddc1a439ee9d8f5b84ef208741433189b4bbca",
+    "perks/drilldrift/metadata.json": "870581b26a1c6107ceefda891b4917a6d56d9d814d241c9e0dc33f4c4438d8f9",
+    "perks/drilldrift/src/contracts.json": "6084317139c8ebd331a8baf8bbbea25fb6faf561d463bda97d10700c998a9322",
+    "perks/drilldrift/src/cws_spc_drilldrift.py": "61c409dd58304d9e8773e6e9b41fb72901b604a0dfc6ca36843c2d36869d02c2",
+    "perks/drilldrift/src/cws_spc_drilldrift.sh": "8d0ce73a32747c6ae96864cf3932f64f226074303d250acd1a21f0098ce0e726",
+    "perks/drilldrift/test/case.json": "71e6e83a9021ffaae29967d4cf8c5b27afa27ed25713449ef501cfb23b303e61",
+    "perks/drilldrift/test/fixture/benign.json": "6cf9ac6941bf5e0fd3563cb10e45894c2f3e013236b5db8dd0a1451627b4ebdc",
+    "perks/drilldrift/test/fixture/envelope.json": "66f566b4a10545621e9320354f7d1e6b69d73cf889fa9ae6cf77172e72a011b3",
+    "perks/drilldrift/test/fixture/seeded.json": "ce5047df756fe2ffe039c18a55642f7f3a2372fbbc177636187691852b3721ce"
+  }
+}

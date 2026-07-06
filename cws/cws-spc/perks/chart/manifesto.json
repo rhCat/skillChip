@@ -1,0 +1,11 @@
+{
+  "_perk": "chart",
+  "sequence": ["cws_spc_chart"],
+  "tools": { "cws_spc_chart": { "binary": "python3", "params": { "SERIES": "${SERIES}" } } },
+  "env": {
+    "SERIES": "${SERIES}", "ENVELOPE": "${ENVELOPE}",
+    "SIGMA_K": "${SIGMA_K}", "BASELINE_N": "${BASELINE_N}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": ["python3"]
+}
