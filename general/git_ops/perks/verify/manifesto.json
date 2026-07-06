@@ -1,0 +1,22 @@
+{
+  "_perk": "verify",
+  "sequence": [
+    "git_verify"
+  ],
+  "tools": {
+    "git_verify": {
+      "binary": "git",
+      "params": {
+        "REPO_DIR": "${REPO_DIR}"
+      }
+    }
+  },
+  "env": {
+    "REPO_DIR": "${REPO_DIR}",
+    "REQUIRE": "${REQUIRE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "git"
+  ]
+}

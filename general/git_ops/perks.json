@@ -16,6 +16,14 @@
       "tools": [
         "git_status"
       ]
+    },
+    {
+      "id": "verify",
+      "summary": "validator: assert a repo has git history and/or a wired remote (read-only; the exit code IS the verdict)",
+      "destructive": false,
+      "tools": [
+        "git_verify"
+      ]
     }
   ]
 }
