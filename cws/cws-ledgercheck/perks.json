@@ -40,6 +40,14 @@
       "tools": [
         "cws_checkpoint"
       ]
+    },
+    {
+      "id": "lotquery",
+      "summary": "query the per-node ledger store by LOT (plan_sha-keyed, read-only) \u2014 per-lot runs/verdicts/step-yield roll-up; sqlite path or postgres DSN",
+      "destructive": false,
+      "tools": [
+        "cws_lotquery"
+      ]
     }
   ]
 }
