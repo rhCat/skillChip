@@ -8,6 +8,14 @@
       "tools": [
         "ci_github_actions"
       ]
+    },
+    {
+      "id": "gate",
+      "summary": "freshness validator: MODEL files must be >= (newest git commit) the SURFACE they track; a stale model fails (read-only; exit code IS the verdict)",
+      "destructive": false,
+      "tools": [
+        "ci_gate"
+      ]
     }
   ]
 }

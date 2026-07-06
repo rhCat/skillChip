@@ -1,0 +1,21 @@
+{
+  "_perk": "gate",
+  "requires": ["git", "bash"],
+  "setup": [
+    "git init -q .",
+    "git config user.email t@t",
+    "git config user.name t",
+    "git config commit.gpgsign false",
+    "mkdir -p src",
+    "echo 'x=1' > src/surface.py",
+    "git add -A && git commit -q -m surface",
+    "echo '{}' > model.blueprint.json",
+    "git add -A && git commit -q -m model"
+  ],
+  "vars": { "PROJECT_DIR": "${FIXTURE}", "MODEL_GLOB": "*.blueprint.json", "SURFACE_GLOB": "src" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["gate.json"],
+    "json": { "gate.json": { "stale": false, "status": "ok" } }
+  }
+}

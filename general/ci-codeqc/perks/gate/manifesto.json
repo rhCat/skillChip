@@ -1,0 +1,26 @@
+{
+  "_perk": "gate",
+  "sequence": [
+    "ci_gate"
+  ],
+  "tools": {
+    "ci_gate": {
+      "binary": "bash",
+      "params": {
+        "PROJECT_DIR": "${PROJECT_DIR}",
+        "MODEL_GLOB": "${MODEL_GLOB}",
+        "SURFACE_GLOB": "${SURFACE_GLOB}"
+      }
+    }
+  },
+  "env": {
+    "PROJECT_DIR": "${PROJECT_DIR}",
+    "MODEL_GLOB": "${MODEL_GLOB}",
+    "SURFACE_GLOB": "${SURFACE_GLOB}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "bash",
+    "git"
+  ]
+}
