@@ -1,0 +1,26 @@
+{
+  "_perk": "double",
+  "sequence": [
+    "cws_backup_double"
+  ],
+  "tools": {
+    "cws_backup_double": {
+      "binary": "python3",
+      "params": {
+        "NAS_DIR": "${NAS_DIR}"
+      }
+    }
+  },
+  "env": {
+    "NAS_DIR": "${NAS_DIR}",
+    "SCOPE": "${SCOPE}",
+    "LEDGER_DB": "${LEDGER_DB}",
+    "CONTAINER": "${CONTAINER}",
+    "DB_IN_CONTAINER": "${DB_IN_CONTAINER}",
+    "SRC_DIRS": "${SRC_DIRS}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

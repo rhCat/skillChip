@@ -1,0 +1,7 @@
+{
+  "_schema": "task-ledger for cws-backup - double the node's governed history at the NAS; set record_store + NAS_DIR (the mounted share carrying the .cyberware-backup-target sentinel).",
+  "skill": "cws-backup",
+  "perk": "double",
+  "record_store": "<absolute dir for outputs + the run-ledger>",
+  "vars": { "NAS_DIR": "<mounted backup share dir>", "SCOPE": "<node name; default hostname>" }
+}
