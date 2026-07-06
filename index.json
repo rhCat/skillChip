@@ -355,8 +355,8 @@
     {
       "skill": "git_ops",
       "namespace": null,
-      "skill_sha": "e19544acc43c1ff1713acd63ed94dc082b2b41c1a89bc90987b0ed30743c0dc5",
-      "file_count": 16
+      "skill_sha": "0392fd50fc29b9fb2d5e8392ff6dc8edc70cd41c9f56a4fa9a94199bb1ba1c48",
+      "file_count": 21
     },
     {
       "skill": "harden-pyenv",
@@ -1331,5 +1331,5 @@
       "file_count": 39
     }
   ],
-  "chip_sha": "bde155995e3b8e153a0eac2221814e6ef89027991930ec3c020ee7628e411242"
+  "chip_sha": "5a56413fa20ebacefc096398fcdbb316e7c04472195138e7f97af823a73fdeb9"
 }

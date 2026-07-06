@@ -1,0 +1,23 @@
+{
+  "tool": "git_verify",
+  "inputs": {
+    "REPO_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "REQUIRE": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "git_verify_out": {
+      "path": "${RECORD_STORE}/git_verify.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/git_verify.json"
+  }
+}

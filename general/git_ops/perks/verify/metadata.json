@@ -1,0 +1,18 @@
+{
+  "perk": "verify",
+  "skill": "git_ops",
+  "description": "validator: assert a repo has git history and/or a wired remote (read-only)",
+  "rules": [
+    "read-only",
+    "the gate IS the exit code: 0 iff REQUIRE is satisfied, else 1"
+  ],
+  "usage": "Set REPO_DIR (+ optional REQUIRE = history | remote | history+remote, default history+remote). Output: git_verify.json.",
+  "limitation": "Checks presence of history / a wired remote only - not remote reachability, push access, or content.",
+  "minimal_example": {
+    "perk": "verify",
+    "vars": {
+      "REPO_DIR": "/path/to/repo",
+      "REQUIRE": "history+remote"
+    }
+  }
+}
