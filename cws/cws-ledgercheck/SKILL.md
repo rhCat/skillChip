@@ -1,7 +1,7 @@
 ---
 skill: cws-ledgercheck
 name: Ledger Integrity
-perks: [verify, anchor, torture, erasure, checkpoint]
+perks: [verify, anchor, torture, erasure, checkpoint, lotquery]
 ---
 
 # cws-ledgercheck — Ledger Integrity (SV-2)
@@ -35,11 +35,18 @@ provenance hash, an ordering gap). A nonzero exit means the chain is broken. LOG
 | `torture` | `cws_torture` | N concurrent `durable_append` writers must serialize into ONE valid chain, zero lost — destructive (spawns processes + writes a chain) |
 | `erasure` | `cws_erasure` | crypto-shredding erasure drill (P1-T07) — destroy a DEK, the chain still verifies, subject fields unrecoverable — read-only / safe |
 | `checkpoint` | `cws_checkpoint` | Merkle-checkpoint drill (P1-T03) — window-bounded cold-verify + forged-checkpoint audit — read-only / safe |
+| `lotquery` | `cws_lotquery` | query the node's ledger store by LOT — per-lot runs/verdicts/step-yield roll-up over `idx_origin`/`idx_decision`/`idx_record` — read-only / safe |
 
 - **`verify`** — set `TARGET_LEDGER` (a v2 chain — JSONL/list/`{entries}` — or a `run-ledger.json`).
   Optional `EXPECT_RUN_ID`/`EXPECT_PLAN_SHA` (out-of-band) certify non-transplant; `LEDGER_ALLOW_LEGACY`
   opts into auditing a v1 chain. Output: `ledgercheck.json`.
 - **`anchor`** — set `CHAIN_CORPUS` (named v2 chains with `expect_ok`). Output: `anchor.json`.
+- **`lotquery`** — set `LEDGER_DB` (the store's `index.sqlite` path, or a `postgresql://` DSN if an
+  operator wired a shared warehouse — same SQL, backend-agnostic). Optional `GROUP_BY`
+  (`plan_sha`|`skill`|`perk`|`principal`, default `plan_sha` — the blessed plan is the lot identity),
+  `LOT` (exact-or-prefix filter on the key), `SINCE` (ISO-8601), `LIMIT` (default 50). Strictly
+  read-only (sqlite opened `mode=ro`). Output: `lotquery.json` with per-lot
+  `{runs, decisions, steps{ok,fail}, runs_all_ok, skills, perks, principals, first_ts, last_ts}`.
 
 ## Scope (the SV-2 surface)
 `verify` recomputes the cryptographic `seq`/`prev` chain of **Ledger-v2** (P1-T01) and `anchor` provides

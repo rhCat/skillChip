@@ -1,0 +1,14 @@
+{
+  "tool": "cws_lotquery",
+  "inputs": {},
+  "outputs": {
+    "lotquery_out": {
+      "path": "${RECORD_STORE}/lotquery.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/lotquery.json"
+  }
+}

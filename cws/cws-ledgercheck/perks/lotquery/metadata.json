@@ -1,0 +1,5 @@
+{
+  "perk": "lotquery",
+  "summary": "query the per-node ledger store by LOT (plan_sha-keyed, read-only) — per-lot runs/verdicts/step-yield roll-up; sqlite path or postgres DSN, backend-agnostic",
+  "destructive": false
+}

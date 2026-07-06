@@ -1,0 +1,9 @@
+{
+  "_perk": "lotquery",
+  "requires": ["python3"],
+  "vars": {"LEDGER_DB": "${FIXTURE}/index.sqlite"},
+  "expect": {
+    "outputs": ["lotquery.json"],
+    "contains": {"lotquery.json": ["\"verdict\": \"ok\"", "\"backend\": \"sqlite\"", "\"lots\": 2", "\"runs_all_ok\": 2"]}
+  }
+}
