@@ -1,0 +1,17 @@
+{
+  "skill": "cws-spc",
+  "perks": [
+    {
+      "id": "chart",
+      "summary": "control chart over calibrated detector envelopes - center line + UCL/LCL at k sigma, drift alarm on breach (exit code IS the verdict)",
+      "destructive": false,
+      "tools": ["cws_spc_chart"]
+    },
+    {
+      "id": "drilldrift",
+      "summary": "the SPC oracle drill - a seeded regression must ALARM and a benign series must stay CLEAN; both poles or the drill fails (P0.5 acceptance)",
+      "destructive": false,
+      "tools": ["cws_spc_drilldrift"]
+    }
+  ]
+}

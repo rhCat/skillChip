@@ -1,0 +1,11 @@
+{
+  "_perk": "drilldrift",
+  "sequence": ["cws_spc_drilldrift"],
+  "tools": { "cws_spc_drilldrift": { "binary": "python3", "params": {} } },
+  "env": {
+    "SEEDED": "${SEEDED}", "BENIGN": "${BENIGN}",
+    "ENVELOPE": "${ENVELOPE}", "SIGMA_K": "${SIGMA_K}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": ["python3"]
+}

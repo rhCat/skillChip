@@ -1,0 +1,12 @@
+{
+  "perk": "drilldrift",
+  "skill": "cws-spc",
+  "description": "the SPC oracle drill (P0.5 acceptance): the drift alarm must FIRE on a seeded regression AND stay SILENT on a benign series - both poles or the drill fails",
+  "rules": [
+    "runs vars-free on the bundled fixtures (SEEDED/BENIGN/ENVELOPE override for a custom drill)",
+    "exit 0 iff the seeded series alarms and the benign series stays clean"
+  ],
+  "usage": "Claim with no vars for the bundled drill. Optional SEEDED/BENIGN/ENVELOPE/SIGMA_K. Output: drilldrift.json.",
+  "limitation": "Proves the alarm discriminates on the drill corpus; it does not calibrate real detector envelopes.",
+  "minimal_example": { "perk": "drilldrift", "vars": {} }
+}

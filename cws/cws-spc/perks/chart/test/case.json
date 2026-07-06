@@ -1,0 +1,10 @@
+{
+  "_perk": "chart",
+  "requires": ["python3"],
+  "vars": { "SERIES": "${FIXTURE}/series.json", "ENVELOPE": "${FIXTURE}/envelope.json" },
+  "expect": {
+    "exit": 0,
+    "outputs": ["spc.json"],
+    "json": { "spc.json": { "status": "ok", "detectors": 1, "alarms": [] } }
+  }
+}

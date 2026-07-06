@@ -1,0 +1,13 @@
+{
+  "perk": "chart",
+  "skill": "cws-spc",
+  "description": "control chart over calibrated detector envelopes: per-detector center line + UCL/LCL at SIGMA_K sigma, 3-sigma-style drift alarm on any breach (the exit code IS the verdict)",
+  "rules": [
+    "read-only over the series; writes only the spc.json chart artifact",
+    "a CALIBRATED envelope wins; absent one, the first BASELINE_N points self-calibrate (recorded as source: baseline, honestly distinct)",
+    "exit 0 in-control, 1 drift alarm"
+  ],
+  "usage": "Set SERIES ({detector: [values]} JSON). Optional ENVELOPE ({detector: {mean, sigma}}), SIGMA_K (default 3), BASELINE_N (default 8). Output: spc.json.",
+  "limitation": "Breach rule only (points beyond the limits) - no run-rules (trend/oscillation) yet; envelope quality is the caller's calibration.",
+  "minimal_example": { "perk": "chart", "vars": { "SERIES": "fa_per_kfn.json", "ENVELOPE": "envelope.json" } }
+}

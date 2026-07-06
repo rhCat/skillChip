@@ -1,0 +1,7 @@
+{
+  "_schema": "task-ledger for cws-spc - control charts over calibrated detector envelopes; set record_store (+ SERIES/ENVELOPE for chart; drilldrift runs vars-free).",
+  "skill": "cws-spc",
+  "perk": "chart",
+  "record_store": "<absolute dir for outputs + the run-ledger>",
+  "vars": { "SERIES": "<path to {detector: [values]} JSON>", "ENVELOPE": "<optional {detector: {mean, sigma}} JSON>" }
+}
