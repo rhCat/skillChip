@@ -56,18 +56,19 @@ def main() -> int:
     if os.path.isfile(ledger_path):
         led = json.load(open(ledger_path))
     else:
+        # a native testimony chain, ORIGIN-BOUND so cws-ledgercheck/verify (verify_chain) re-verifies it:
+        # a testimony has no governed execution behind it, so it roots at generation-zero, the trust axiom.
         led = {"chain": "attest-ledger", "schema": ledger.CURRENT_MAJOR,
-               "entries": [{"type": "genesis", "schema": ledger.CURRENT_MAJOR, "prev": "0" * 64}]}
+               "entries": [ledger.genesis("attest-ledger",
+                           hashlib.sha256(b"cws-observe/attest:generation-zero").hexdigest())]}
 
     entries = led.setdefault("entries", [])
     schema = led.get("schema", ledger.CURRENT_MAJOR)
-    prev = ledger.head_of(entries, schema)
     # the testimony content is what is bound: tampering the claim, the attributor, or the grade breaks it
     evidence_sha = hashlib.sha256(f"{claim}\x00{attested_by}\x00{grade}".encode("utf-8")).hexdigest()
-    entry = {"seq": len(entries) + 1, "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-             "claim": claim, "attested_by": attested_by, "grade": grade,
-             "evidence_sha": evidence_sha, "prev": prev}
-    entries.append(entry)
+    record = {"ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+              "claim": claim, "attested_by": attested_by, "grade": grade, "evidence_sha": evidence_sha}
+    entry = ledger.append(entries, record, schema)   # sets seq (genesis 0 -> 1..N) + prev-hash digest
     os.makedirs(os.path.dirname(os.path.abspath(ledger_path)), exist_ok=True)
     ledger.write_object_atomic(ledger_path, led)               # crash-atomic snapshot (dogfoods P1-T02)
 

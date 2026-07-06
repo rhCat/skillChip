@@ -1,6 +1,6 @@
 {
   "skill": "cws-conform",
-  "skill_sha": "1a6486cf62b09a13d366ec5640d138be3050043ab0e220b3134dda70f2dd00aa",
+  "skill_sha": "87c2eedaa7b9504c4a36cc4e79868c8c300aa5b71b85efcddd3b49268213f37f",
   "file_count": 83,
   "files": {
     "SKILL.md": "8c9cdbf1c5d08d05e9e20c0a334cbe2f452e121361132e3666974d64ca774780",
@@ -54,7 +54,7 @@
     "perks/quickstart/manifesto.json": "5b81d8e56751626d91d29242dfb0df155d88e9f2175a8342498796d737f1f208",
     "perks/quickstart/metadata.json": "e5052bd957b8d440fd7b07334764ef13f8379329867261142de71f8ccff7080a",
     "perks/quickstart/src/contracts.json": "3b89e30ef412ae85e03a711f0a2db7526921714c50fe533c0a0596a75213d5bc",
-    "perks/quickstart/src/cws_quickstart.py": "801c209eee64681cf15f4976658d257f6060efaf2a9274efa7c657b921be4a63",
+    "perks/quickstart/src/cws_quickstart.py": "71e80199d5b36adc83c23f9bb038853fa2147c5540f376981b0847835e7d89ef",
     "perks/quickstart/src/cws_quickstart.sh": "81bad22703ece75d3b329e346e1457ed9765760c541f0df86e4d2e61c48d331d",
     "perks/quickstart/test/case.json": "5c1c8f2c82c6b897218901c74cb75d79f71c6013e68a85179432fdf9914cf4aa",
     "perks/quickstart/test/fixture/catalog.json": "f972f52abe837b20efd7f8828279e62d68345b156d82fbe8a5ec5b92b2713b15",

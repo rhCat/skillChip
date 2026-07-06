@@ -1,6 +1,6 @@
 {
   "skill": "cws-observe",
-  "skill_sha": "79631b37d4c7e299e44988188731b3e2ee043c9449db8ab5791c78ec3078efc4",
+  "skill_sha": "c8de99d584305af2b059e2287771286030a8e5dbfd8fdb0411565cc48fbce632",
   "file_count": 32,
   "files": {
     "SKILL.md": "cafb959295bfc850252985516c9e6a678206a202d24f2254fee2a0fe2f63e00c",
@@ -12,7 +12,7 @@
     "perks/attest/manifesto.json": "f97f9d053666065fb6ddc15ef213ee7e7461149f42a2ba5c4fad0d6c5c74f99e",
     "perks/attest/metadata.json": "27ca8f0cf6289b855fe64dc182c316bf05c51824220cbaaf54e395520f00fcf8",
     "perks/attest/src/contracts.json": "0f13715bca1897d414779610ceffc195e1aec30d9f460d1fcfa8643a3e9c01c3",
-    "perks/attest/src/cws_observe_attest.py": "716528dadd97d99af9d265048ed3a6a4c79a392c1de131ec6085f5a6fcf1a1b2",
+    "perks/attest/src/cws_observe_attest.py": "fe66838edf245cb196106581b67846fa80617147622bef4b7e1107d17b02749f",
     "perks/attest/src/cws_observe_attest.sh": "f33338332127c9f9319be1be9e2c633fd2b4acb9106ec1e3ab0d28ac95d2b3d4",
     "perks/attest/test/case.json": "d03b97e0d881ffb939a548191ec9bdd8ea7157cde823d6a898813e217f63f7b5",
     "perks/redeem/manifesto.json": "339ca40c9ca45d57135556648ff58a48685f3e3f31a81ccdee638ec52471bafd",

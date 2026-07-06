@@ -70,8 +70,16 @@ def main() -> int:
 
     resolves = None
     cat_path = os.environ.get("CATALOG", "")
-    if cat_path and os.path.isfile(cat_path):
-        idx = _catalog_index(json.load(open(cat_path)))
+    if cat_path:   # CATALOG set -> it MUST be a readable, valid catalog (fail-closed, no silent skip)
+        if not os.path.isfile(cat_path):
+            return emit({"tool": "cws_quickstart", "status": "fail",
+                         "reason": f"CATALOG set but not a file: {cat_path}"}, 1)
+        try:
+            cat = json.load(open(cat_path))
+        except Exception as e:
+            return emit({"tool": "cws_quickstart", "status": "fail",
+                         "reason": f"CATALOG is not valid JSON: {e}"}, 1)
+        idx = _catalog_index(cat)
         s, p = claim.get("skill"), claim.get("perk")
         resolves = s in idx and p in idx.get(s, set())
         result["resolves"] = resolves
