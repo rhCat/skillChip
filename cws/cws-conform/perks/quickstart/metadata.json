@@ -1,0 +1,13 @@
+{
+  "perk": "quickstart",
+  "skill": "cws-conform",
+  "description": "conformance check: a quickstart DOC must document a REAL, RUNNABLE governed claim — extract its claim block and (with a CATALOG) resolve skill+perk against the catalog (a dry replay)",
+  "rules": [
+    "the doc must contain exactly ONE governed claim block (fenced json naming skill + perk)",
+    "with a CATALOG, the claim's skill+perk must RESOLVE (a documented claim against a nonexistent/renamed skill fails)",
+    "DRY replay: proves the claim would run (shape + resolution); it does NOT fire it (live end-to-end needs a govd session)"
+  ],
+  "usage": "Set DOC (the quickstart markdown). Optional CATALOG (a /catalog JSON) to resolve the claim. Output: quickstart.json.",
+  "limitation": "Validates shape + catalog resolution only; a live fire of the documented claim is out of a confined step's reach (needs a govd token/session).",
+  "minimal_example": { "perk": "quickstart", "vars": { "DOC": "quickstart.md", "CATALOG": "catalog.json" } }
+}

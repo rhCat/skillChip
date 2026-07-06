@@ -1,0 +1,2 @@
+{ "skills": [ { "skill": "fs", "perks": [ { "perk": "find_large" }, { "perk": "archive" } ] },
+              { "skill": "git_ops", "perks": [ { "perk": "status" } ] } ] }
