@@ -1,0 +1,25 @@
+{
+  "_perk": "attest",
+  "sequence": [
+    "cws_observe_attest"
+  ],
+  "tools": {
+    "cws_observe_attest": {
+      "binary": "python3",
+      "params": {
+        "CLAIM": "${CLAIM}",
+        "ATTESTED_BY": "${ATTESTED_BY}"
+      }
+    }
+  },
+  "env": {
+    "CLAIM": "${CLAIM}",
+    "ATTESTED_BY": "${ATTESTED_BY}",
+    "GRADE": "${GRADE}",
+    "ATTEST_LEDGER": "${ATTEST_LEDGER}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

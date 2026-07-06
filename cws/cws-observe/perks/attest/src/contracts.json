@@ -1,0 +1,31 @@
+{
+  "tool": "cws_observe_attest",
+  "inputs": {
+    "CLAIM": {
+      "type": "string",
+      "required": true
+    },
+    "ATTESTED_BY": {
+      "type": "string",
+      "required": true
+    },
+    "GRADE": {
+      "type": "string",
+      "required": false
+    },
+    "ATTEST_LEDGER": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "attest_out": {
+      "path": "${RECORD_STORE}/attest.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/attest.json"
+  }
+}

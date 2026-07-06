@@ -1,0 +1,20 @@
+{
+  "perk": "attest",
+  "skill": "cws-observe",
+  "description": "record an ATTRIBUTED human testimony into a tamper-evident attest-ledger (grade: testimony) — records who witnessed what, never anonymously; does not verify the claim's truth",
+  "rules": [
+    "a testimony is never anonymous — ATTESTED_BY is required, fail-closed",
+    "records attribution, does NOT verify the claim (that is the honest boundary of testimony vs redeem's governed-run evidence)",
+    "prev-hash chained (infra.cwp.ledger) — editing the claim or attributor breaks the chain, which cws-ledgercheck/verify reports"
+  ],
+  "usage": "Set CLAIM (the statement) + ATTESTED_BY (the attributor). Optional GRADE (default 'testimony'), ATTEST_LEDGER (default RECORD_STORE/attest-ledger.json). Output: attest.json + the appended chain.",
+  "limitation": "Records the testimony attributably; it cannot and does not verify that the claim is true.",
+  "minimal_example": {
+    "perk": "attest",
+    "vars": {
+      "CLAIM": "an outsider completed one governed run in under 1h from public docs alone",
+      "ATTESTED_BY": "QP",
+      "GRADE": "testimony"
+    }
+  }
+}
