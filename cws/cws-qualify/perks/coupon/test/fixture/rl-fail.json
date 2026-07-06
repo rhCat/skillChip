@@ -1,0 +1,1 @@
+{ "script": "run.sh", "runs": [ { "step": "1", "status": "fail", "exit": 1 } ] }

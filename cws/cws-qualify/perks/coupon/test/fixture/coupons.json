@@ -1,0 +1,4 @@
+{ "coupons": [
+  { "coupon_id": "c1-fs-find", "skill": "fs", "perk": "find_large", "attempts": ["rl-pass.json"] },
+  { "coupon_id": "c2-git-status", "skill": "git_ops", "perk": "status", "attempts": ["rl-fail.json", "rl-pass.json"] }
+] }

@@ -1,0 +1,28 @@
+{
+  "skill": "cws-qualify",
+  "skill_sha": "262c1d96141369650dacdfd6cd812746eb743971a0dc34b276b876d2c5f81c50",
+  "file_count": 21,
+  "files": {
+    "SKILL.md": "94676f65279532b29b717f4652bb8ab57b7d583841a009a287e46d62f6b03330",
+    "blueprint.json": "2470de447389e0a46253a47b2914fbfa3615e7f5ef8ea36f2e98a5728643ce98",
+    "ledger.json": "25110196336a2f8e076b0af8a9ddbe9c4786b1e0467d183c31f77d0fa7cfba34",
+    "perks.json": "c8353fe6b6c97644560fcdaad08d0ded640ce82d77df9ead5c156cae99b8760b",
+    "perks/coupon/manifesto.json": "86d9414b3c7cb86ce29ac73916ff27f4043b0cb64bdc8b1647f396982ade2456",
+    "perks/coupon/metadata.json": "733386e110e80da02981498dd4f26fe52b0bc4a3c9f5eba7e870f5c8d0185e2f",
+    "perks/coupon/src/contracts.json": "8e08ef252f85e1a3f4009a01a892d6113c8308ac02d6f9b435929dcaf55605d9",
+    "perks/coupon/src/cws_qualify_coupon.py": "272cb1da0c9e791d70b9bf45ee809fad20793e66c5782112d1ca6f45862927ba",
+    "perks/coupon/src/cws_qualify_coupon.sh": "ca33633e7454b8969bf0acb77f0d87e0d167742e83b406ad39d7961d4e425c88",
+    "perks/coupon/test/case.json": "93787f4ee6a7e80723b17565717e0cb964a3dac0421f256cf46d52d658f15b2f",
+    "perks/coupon/test/fixture/coupons.json": "96bd369bbfdb84bbb636b7110a21507be7386bd15c8ff81e398dfa4db216ae64",
+    "perks/coupon/test/fixture/rl-fail.json": "d3b38d876d98226fdacd78dbd87dfe5b7af6c21cd9edeed358da95bc221ebc01",
+    "perks/coupon/test/fixture/rl-pass.json": "7ebea208fee3ff45e972a623b7dbfc9accf5f91da7617190110049245383d8a5",
+    "perks/examine/manifesto.json": "037092962b3240f08b8dac340875ecbd48c7e77e2644314c13337a9d27b93a21",
+    "perks/examine/metadata.json": "c26d6e4cc08262e59514547cdcdefccd045ff99854898356a037ca94cf06d3b2",
+    "perks/examine/src/contracts.json": "67efa9196908daa551ece24006ba9b96c6b231e3fdf42e11c5ee27dd752a90a3",
+    "perks/examine/src/cws_qualify_examine.py": "ef6b75188b219f23cc7784dcf7224a1b3df8659469c5344b59f6defc645c9891",
+    "perks/examine/src/cws_qualify_examine.sh": "9cc0d46113e81def618ce3a68cbeff2f7484fc5a24bab872fc9c460062002638",
+    "perks/examine/test/case.json": "a6ca345555143bcf269c977449f4df74d53469f64e4c59ac0c0bfe782c578f61",
+    "perks/examine/test/fixture/lineage.json": "a7d0c05bfacf975b9c808760d7b299457532f2ba3ebb33cd9d1309ccfd489794",
+    "perks/examine/test/fixture/q-ledger.json": "ccb510e4caf15e8c41396a876995ef9b8470c98d31edfc1b1982d43360e0f963"
+  }
+}

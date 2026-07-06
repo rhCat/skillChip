@@ -1,0 +1,7 @@
+{
+  "_schema": "task-ledger for cws-qualify - the Q-ladder: measure a lot's coupon yield into a Q-record (coupon) or gate the examiner rung (examine); set record_store + the perk's vars.",
+  "skill": "cws-qualify",
+  "perk": "coupon",
+  "record_store": "<absolute dir for outputs + the run-ledger>",
+  "vars": { "PERFORMER_LOT": "<lot hash>", "COUPONS": "<coupon manifest path>", "RUNG": "executor", "SCOPE": "general:fs,general:git_ops" }
+}

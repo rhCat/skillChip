@@ -1,0 +1,7 @@
+{ "chain": "q-ledger", "schema": 2, "entries": [
+  { "type": "genesis", "schema": 2, "prev": "0000000000000000000000000000000000000000000000000000000000000000" },
+  { "seq": 2, "ts": "2026-07-01T00:00:00Z", "lot": "lotA", "rung": "composer", "scope": "general:fs,general:git_ops",
+    "coupons": 4, "first_pass": 1.0, "scrap": 0.0, "attempts_mean": 1.0, "verdict": "pass",
+    "evidence_sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "prev": "0000000000000000000000000000000000000000000000000000000000000000" }
+] }
