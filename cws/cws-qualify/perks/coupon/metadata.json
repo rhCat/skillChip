@@ -1,0 +1,13 @@
+{
+  "perk": "coupon",
+  "skill": "cws-qualify",
+  "description": "grade a performer lot's coupon run from governed run-ledger EVIDENCE (yield is measured, never self-reported) and append a passing Q-record keyed by lot hash to the prev-hash-chained Q-ledger",
+  "rules": [
+    "the lot is the EXAMINEE: it ran the coupons through the channel elsewhere; this perk only measures the evidence",
+    "yield = first-pass rate, scrap rate, mean attempts-to-pass; qualification: scrap == 0 AND first_pass >= MIN_FIRST_PASS (fail-closed)",
+    "a passing yield appends {lot, rung, scope, yield, evidence_sha, prev} to the Q-ledger (infra.cwp.ledger chain) — the record a grant cross-references (Q2: scope granted = scope earned)"
+  ],
+  "usage": "Set PERFORMER_LOT (the lot hash) + COUPONS (manifest: [{coupon_id, skill, perk, attempts: [run-ledger paths]}]). Optional RUNG (default executor), SCOPE, MIN_FIRST_PASS (default 0.8), Q_LEDGER. Output: coupon.json.",
+  "limitation": "Iteration economy is measured in attempts; the settle-side cost linkage (per-coupon spend) is not read yet.",
+  "minimal_example": { "perk": "coupon", "vars": { "PERFORMER_LOT": "<lot-sha>", "COUPONS": "coupons.json", "RUNG": "executor", "SCOPE": "general:fs,general:git_ops" } }
+}

@@ -1,0 +1,16 @@
+{
+  "_perk": "examine",
+  "requires": ["python3"],
+  "vars": {
+    "PERFORMER_LOT": "lotA",
+    "PRODUCER_LOT": "lotB",
+    "Q_LEDGER": "${FIXTURE}/q-ledger.json",
+    "LINEAGE": "${FIXTURE}/lineage.json",
+    "SCOPE": "general:fs"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["examine.json"],
+    "json": { "examine.json": { "verdict": "pass" } }
+  }
+}

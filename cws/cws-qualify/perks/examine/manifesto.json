@@ -1,0 +1,11 @@
+{
+  "_perk": "examine",
+  "sequence": ["cws_qualify_examine"],
+  "tools": { "cws_qualify_examine": { "binary": "python3", "params": { "PERFORMER_LOT": "${PERFORMER_LOT}", "PRODUCER_LOT": "${PRODUCER_LOT}" } } },
+  "env": {
+    "PERFORMER_LOT": "${PERFORMER_LOT}", "PRODUCER_LOT": "${PRODUCER_LOT}",
+    "Q_LEDGER": "${Q_LEDGER}", "LINEAGE": "${LINEAGE}", "SCOPE": "${SCOPE}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": ["python3"]
+}

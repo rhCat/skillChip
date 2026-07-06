@@ -1,0 +1,20 @@
+{
+  "_perk": "coupon",
+  "requires": ["python3"],
+  "vars": {
+    "PERFORMER_LOT": "lot-sonnet-48-testfixture",
+    "COUPONS": "${FIXTURE}/coupons.json",
+    "RUNG": "executor",
+    "SCOPE": "general:fs,general:git_ops",
+    "MIN_FIRST_PASS": "0.5",
+    "Q_LEDGER": "${RECORD}/q-ledger.json"
+  },
+  "expect": {
+    "exit": 0,
+    "outputs": ["coupon.json", "${RECORD}/q-ledger.json"],
+    "contains": {
+      "coupon.json": ["\"verdict\": \"pass\"", "\"lot\": \"lot-sonnet-48-testfixture\""],
+      "${RECORD}/q-ledger.json": ["\"chain\": \"q-ledger\"", "\"rung\": \"executor\"", "\"verdict\": \"pass\""]
+    }
+  }
+}

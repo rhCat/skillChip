@@ -1,0 +1,14 @@
+{
+  "tool": "cws_qualify_examine",
+  "inputs": {
+    "PERFORMER_LOT": { "type": "string", "required": true },
+    "PRODUCER_LOT": { "type": "string", "required": true },
+    "Q_LEDGER": { "type": "string", "required": true },
+    "LINEAGE": { "type": "string", "required": true },
+    "SCOPE": { "type": "string", "required": false }
+  },
+  "outputs": {
+    "examine_out": { "path": "${RECORD_STORE}/examine.json", "type": "file" }
+  },
+  "checks": { "exit_zero": true, "output_exists": "${RECORD_STORE}/examine.json" }
+}

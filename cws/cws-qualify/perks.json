@@ -1,0 +1,17 @@
+{
+  "skill": "cws-qualify",
+  "perks": [
+    {
+      "id": "coupon",
+      "summary": "grade a lot's coupon run from governed run-ledger evidence (yield measured, never self-reported) -> a passing Q-record keyed by lot hash on the chained Q-ledger (Q1)",
+      "destructive": false,
+      "tools": ["cws_qualify_coupon"]
+    },
+    {
+      "id": "examine",
+      "summary": "the examiner-rung gate: earned Q-record (composer+, scope-covering) AND lineage independence from the producer (H6); exit code IS the verdict (Q3)",
+      "destructive": false,
+      "tools": ["cws_qualify_examine"]
+    }
+  ]
+}

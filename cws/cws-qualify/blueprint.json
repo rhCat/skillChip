@@ -1,0 +1,29 @@
+{
+  "$schema": "lpp/v0.2.0",
+  "id": "cws-qualify",
+  "name": "Q-Ladder Qualification",
+  "description": "The Q-ladder: a lot EARNS standing - coupon yield measured from governed evidence into a chained Q-record (coupon), and the examiner rung gated on earned standing + lineage independence (examine). Perk-agnostic lifecycle (ready -> prepared -> verified -> executed); the perk supplies the concrete, contract-bound how. LOOK OUT FOR coupon.json / examine.json + the Q-ledger; LOGS TO CHECK: the per-tool JSON line + the executor run-ledger.",
+  "entry_state": "ready",
+  "states": {
+    "ready": { "description": "task-ledger submitted, nothing run" },
+    "prepared": { "description": "inputs validated - required vars present, runtime + store reachable" },
+    "verified": { "description": "the plan is contract-bound - the perk's tool sequence resolves and its contract (I/O + checks) is in place" },
+    "executed": { "description": "the perk's tool sequence ran ONLY via executor.py - each step recorded to the run-ledger AS it runs" }
+  },
+  "terminal_states": { "executed": {} },
+  "gates": {
+    "g_prepared": { "type": "expression", "expression": "inputs_present /\\ store_writable", "description": "inputs + store validated" },
+    "g_verified": { "type": "expression", "expression": "sequence_resolved /\\ contracts_present", "description": "the task is contract-bound" },
+    "g_governed": { "type": "expression", "expression": "governed_run /\\ contract_checks_pass", "description": "ran ONLY through executor.py; contract enforced" }
+  },
+  "actions": {
+    "a_prepare": { "type": "compute", "compute_unit": "validator:check_inputs", "description": "validator confirms required vars + writable record_store + reachable runtime" },
+    "a_verify": { "type": "compute", "compute_unit": "validator:check_contract", "description": "confirm the perk's sequence + contracts are bound" },
+    "a_execute": { "type": "compute", "compute_unit": "perk:sequence", "description": "run the perk's tool sequence via executor.py - recording each step to the run-ledger as it runs" }
+  },
+  "transitions": [
+    { "from": "ready", "to": "prepared", "trigger": "PREPARE", "action": "a_prepare", "gate": "g_prepared" },
+    { "from": "prepared", "to": "verified", "trigger": "VERIFY", "action": "a_verify", "gate": "g_verified" },
+    { "from": "verified", "to": "executed", "trigger": "EXECUTE", "action": "a_execute", "gate": "g_governed" }
+  ]
+}

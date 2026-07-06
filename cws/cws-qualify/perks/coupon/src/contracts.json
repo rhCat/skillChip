@@ -1,0 +1,15 @@
+{
+  "tool": "cws_qualify_coupon",
+  "inputs": {
+    "PERFORMER_LOT": { "type": "string", "required": true },
+    "COUPONS": { "type": "string", "required": true },
+    "RUNG": { "type": "string", "required": false },
+    "SCOPE": { "type": "string", "required": false },
+    "MIN_FIRST_PASS": { "type": "string", "required": false },
+    "Q_LEDGER": { "type": "string", "required": false }
+  },
+  "outputs": {
+    "coupon_out": { "path": "${RECORD_STORE}/coupon.json", "type": "file" }
+  },
+  "checks": { "exit_zero": true, "output_exists": "${RECORD_STORE}/coupon.json" }
+}

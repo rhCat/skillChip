@@ -1,0 +1,13 @@
+{
+  "perk": "examine",
+  "skill": "cws-qualify",
+  "description": "the examiner-rung gate: an EARNED passing Q-record (composer+) covering the scope AND lineage independence from the producer whose work would be examined (H6 - the second lineage is constitutional)",
+  "rules": [
+    "standing is earned, never asserted: no Q-record, uncovered scope -> refused",
+    "lineage independence, fail-closed: self-examination, shared ancestry line, or an UNKNOWN lineage all refuse",
+    "the exit code IS the verdict"
+  ],
+  "usage": "Set PERFORMER_LOT + PRODUCER_LOT + Q_LEDGER (the chained Q-record store) + LINEAGE ({lot: [parent lots]} map). Optional SCOPE. Output: examine.json.",
+  "limitation": "Checks ancestor/descendant lines from the LINEAGE map; full lineage diversity (diverse double-build) is P5.3's, not this gate's.",
+  "minimal_example": { "perk": "examine", "vars": { "PERFORMER_LOT": "<lot-a>", "PRODUCER_LOT": "<lot-b>", "Q_LEDGER": "q-ledger.json", "LINEAGE": "lineage.json", "SCOPE": "general:fs" } }
+}
