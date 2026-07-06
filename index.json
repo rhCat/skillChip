@@ -361,7 +361,7 @@
     {
       "skill": "cws:cws-backup",
       "namespace": "cws",
-      "skill_sha": "192eb7a2b8a0621ced207e45a25cd68ae91fc4cda27d94a7172916c707ada7f6",
+      "skill_sha": "8d24c5b77f876b44b902f62a49e780190b8d8f69f588b6c52b0b37a075f60b3f",
       "file_count": 14
     },
     {
@@ -1349,5 +1349,5 @@
       "file_count": 21
     }
   ],
-  "chip_sha": "c88267d2439d8231e32185879f0a202a5d7e0a5f0cdaa3c2d665ee5ccdb93ec0"
+  "chip_sha": "1a7b19214c04c79b3609e5871d604f996d80e029c45db98be1228abf80973ed6"
 }

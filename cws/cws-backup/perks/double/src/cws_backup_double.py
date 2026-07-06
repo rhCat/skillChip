@@ -133,8 +133,10 @@ def main() -> int:
     try:
         snap, db_src = snapshot_db(staging)
         plan = collect(src_dirs, snap)
-    except RuntimeError as e:
-        return refuse(str(e))
+    except Exception as e:
+        # fail-closed WITH the reason on record — e.g. a missing docker binary in a scheduler's
+        # bare PATH surfaces as a named refusal in backup.json, never a bare stack trace
+        return refuse(f"{type(e).__name__}: {e}")
 
     dest_root = os.path.join(nas, scope, stamp)
     manifest, bad, total = {}, [], 0
