@@ -55,8 +55,8 @@
     {
       "skill": "ci-codeqc",
       "namespace": null,
-      "skill_sha": "e3c4fb4aef18127aef3cc96a4636e9a1d42f58c711cdbc772d4663bc2e9d0998",
-      "file_count": 11
+      "skill_sha": "1b66d0431a946d2b1cef80dc4e1f1aeb906c13181071ce403d3fd7173830499f",
+      "file_count": 16
     },
     {
       "skill": "citation-management",
@@ -1331,5 +1331,5 @@
       "file_count": 39
     }
   ],
-  "chip_sha": "5a56413fa20ebacefc096398fcdbb316e7c04472195138e7f97af823a73fdeb9"
+  "chip_sha": "8988bfd0bc404591ac353c553cdab59fef5926e3b6f5653e7f32497bd7d991cb"
 }

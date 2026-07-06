@@ -1,0 +1,19 @@
+{
+  "perk": "gate",
+  "skill": "ci-codeqc",
+  "description": "freshness validator: MODEL files must be at least as new (newest git commit) as the SURFACE files they track; a stale model fails the gate (read-only)",
+  "rules": [
+    "read-only over git history",
+    "the gate IS the exit code: 0 iff the model is current, 1 if the surface changed after it"
+  ],
+  "usage": "Set PROJECT_DIR (+ optional MODEL_GLOB [default *.blueprint.json], SURFACE_GLOB [default infra/govern]). The H0 rule: self-blueprints must be >= the last enforcement-surface commit. Output: gate.json.",
+  "limitation": "Compares newest-commit timestamps only - not semantic staleness; both globs are git pathspecs over tracked files.",
+  "minimal_example": {
+    "perk": "gate",
+    "vars": {
+      "PROJECT_DIR": "/path/to/repo",
+      "MODEL_GLOB": "*.blueprint.json",
+      "SURFACE_GLOB": "infra/govern"
+    }
+  }
+}
