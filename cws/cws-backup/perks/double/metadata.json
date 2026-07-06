@@ -1,0 +1,5 @@
+{
+  "perk": "double",
+  "summary": "double the node's governed history at the NAS — WAL-safe db snapshot + fleet chain mirror, read-back sha-verified, chained backup-ledger on the share; sentinel-guarded against an unmounted share",
+  "destructive": false
+}

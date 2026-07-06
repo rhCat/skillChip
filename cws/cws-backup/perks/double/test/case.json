@@ -1,0 +1,17 @@
+{
+  "_perk": "double",
+  "requires": ["python3"],
+  "setup": [
+    "mkdir -p ${RECORD}/nas && touch ${RECORD}/nas/.cyberware-backup-target"
+  ],
+  "vars": {
+    "NAS_DIR": "${RECORD}/nas",
+    "LEDGER_DB": "${FIXTURE}/index.sqlite",
+    "SRC_DIRS": "${FIXTURE}/mirror",
+    "SCOPE": "testnode"
+  },
+  "expect": {
+    "outputs": ["backup.json"],
+    "contains": {"backup.json": ["\"verdict\": \"ok\"", "\"verified\": true", "\"files\": 3", "\"seq\": 1"]}
+  }
+}

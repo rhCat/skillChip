@@ -1,0 +1,21 @@
+{
+  "tool": "cws_backup_double",
+  "inputs": {
+    "NAS_DIR": {"type": "string", "required": true},
+    "SCOPE": {"type": "string", "required": false},
+    "LEDGER_DB": {"type": "string", "required": false},
+    "CONTAINER": {"type": "string", "required": false},
+    "DB_IN_CONTAINER": {"type": "string", "required": false},
+    "SRC_DIRS": {"type": "string", "required": false}
+  },
+  "outputs": {
+    "backup_out": {
+      "path": "${RECORD_STORE}/backup.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/backup.json"
+  }
+}

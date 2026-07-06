@@ -1,0 +1,21 @@
+{
+  "skill": "cws-backup",
+  "skill_sha": "192eb7a2b8a0621ced207e45a25cd68ae91fc4cda27d94a7172916c707ada7f6",
+  "file_count": 14,
+  "files": {
+    "SKILL.md": "e451f4a935101a06756cd1aeb27dc9097a676f7fd9f3444871b82fd687c7f6f9",
+    "blueprint.json": "fc7a9cf329fd1bb14fa20ef9adbc76db54f53328179d46315d343d36dba18a3a",
+    "ledger.json": "f191d90f4cc5a66976a543a768b66bea472b1f49d5eec1a8f405cb11ee5a95cd",
+    "perks.json": "3e639c3a783d716283e827026c13ca456d0e48b058e888fc007d74a28bbe28d2",
+    "perks/double/manifesto.json": "6658d0ab8ef949b6c1c3db745dcdc957847baf96f401b6d08c66975198494422",
+    "perks/double/metadata.json": "123a25473a0b7cd4fba6131adfeaab3da6cd5d47b415887b87810e992e17fd94",
+    "perks/double/src/contracts.json": "38120db627ed6dcf285fe98aa1e44ea74eac8ca25fbdc246f3d70f8a7e9ec6db",
+    "perks/double/src/cws_backup_double.py": "8ed5478664d552a55caf7a4f493c1542f16997dad5bf74a0b93ccfd2ccf76a13",
+    "perks/double/src/cws_backup_double.sh": "60d7bce8c1a39c1299094dbf5adf038042841afe71e00b0750f2a0e40b9c169b",
+    "perks/double/test/case.json": "556fa3141438514844428e93c56c8227c6a3eb268c178a9dcd1e37ee44c37feb",
+    "perks/double/test/fixture/index.sqlite": "8d3f62736b42f21f540b2861f4d9afefe596727e0afb839e8d951df57556ff8f",
+    "perks/double/test/fixture/make_fixture.py": "058a48f5d1669e2db3b061ae4add8525d07e925070fb8bdd20398dbc2b43d6ef",
+    "perks/double/test/fixture/mirror/node-a/chain.jsonl": "f50f62722d8b935ef51798af44f16d2347d233ca87652176df14595fd7bc47eb",
+    "perks/double/test/fixture/mirror/node-b/chain.jsonl": "f5f2b51345b152289bb9df3d0421f83a89e62ef934059922d9a1142e5c840638"
+  }
+}
