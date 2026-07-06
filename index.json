@@ -397,7 +397,7 @@
     {
       "skill": "cws:cws-ledgercheck",
       "namespace": "cws",
-      "skill_sha": "df196ec6566f82e25531c50002198c9a8936aa7048b558576d04edbf8435d5d9",
+      "skill_sha": "1119e033e378953ae808b71a61229f10fd84bd3f1bddd7758c6e226ba261e166",
       "file_count": 46
     },
     {
@@ -1343,5 +1343,5 @@
       "file_count": 21
     }
   ],
-  "chip_sha": "b21d638e3e5cf0112a7fee44913fc50f9072a237213729f715d6f975c9521838"
+  "chip_sha": "48f817e4c232ac3ba8079fe67aede8a965b286c0e677e4a953f13101e05bdd0b"
 }

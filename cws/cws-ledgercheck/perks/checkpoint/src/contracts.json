@@ -1,6 +1,15 @@
 {
   "tool": "cws_checkpoint",
-  "inputs": {},
+  "inputs": {
+    "N": {
+      "type": "string",
+      "required": false
+    },
+    "INTERVAL": {
+      "type": "string",
+      "required": false
+    }
+  },
   "outputs": {
     "checkpoint_out": {
       "path": "${RECORD_STORE}/checkpoint.json",
