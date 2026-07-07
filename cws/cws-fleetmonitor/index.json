@@ -1,6 +1,6 @@
 {
   "skill": "cws-fleetmonitor",
-  "skill_sha": "356dc00d1a06ef82897135f00a653d00421acb2b23f3526572291a863bba9eee",
+  "skill_sha": "185cbcf57f2642c9aceb2cf9d57807247f5b46ae73d9ce5c63f8f411248856b7",
   "file_count": 18,
   "files": {
     "SKILL.md": "8a17511dc802e38a8e136e75264c096259038a654cb7c78bb21825bb2a1ca785",
@@ -19,7 +19,7 @@
     "perks/status/manifesto.json": "3a04c6b591b887ec867a2ccf326a36628ab6f8f0302f9fe57a3330ef1a140719",
     "perks/status/metadata.json": "4d4fc363e61d8c3359a2f75d554a7e18a70d305d7a7e2cd629e277ecedac352b",
     "perks/status/src/contracts.json": "5c0910eba596f4d75678520fde430ee2474cff43567cc341fe875033faacd885",
-    "perks/status/src/fleetmon_status.sh": "0657205a99d4d90ff62df048799824cb9637bda9d9cb43230cfed6eee3236be2",
+    "perks/status/src/fleetmon_status.sh": "e49149b702c7fc2785029bf20fab85a12157236f844741f09435b07ff7183750",
     "perks/status/test/case.json": "ce23e166029dd9482781180a907427829df0ab00b3753e93a89164ad64a24fbd"
   }
 }

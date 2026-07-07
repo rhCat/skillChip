@@ -49,7 +49,10 @@ fi
 
 # serving? require a fleetdash-identifying marker so any 200-responder isn't mistaken for the dashboard
 serving="no"
-curl -fsS -m5 "http://${HOST_BIND}:${PORT}/" 2>/dev/null | grep -qiE 'central mirror|cyberware .* fleet' && serving="yes"
+# capture-then-grep, NOT `curl | grep -q`: under pipefail, grep -q's first-match exit SIGPIPEs
+# curl on any page bigger than one pipe buffer and the pipeline reads FAILED on a real match
+page="$(curl -fsS -m5 "http://${HOST_BIND}:${PORT}/" 2>/dev/null || true)"
+grep -qiE 'central mirror|cyberware .* fleet' <<<"$page" && serving="yes"
 
 # snapshot freshness: no heartbeat node OR no mark file => NOT fresh (a never-started/wedged loop must not read healthy).
 # fleetdash writes the mirror dir through _safe (non [A-Za-z0-9_-] -> _), so sanitize the node the same way for the path.
