@@ -1,0 +1,11 @@
+{
+  "skill": "cws-audit",
+  "perks": [
+    {
+      "id": "digest",
+      "summary": "render the node's governed history as a HUMAN audit digest — activity, refusals, destructive approvals, failed steps (drill-down keys), backup chain re-verified; read-only",
+      "destructive": false,
+      "tools": ["cws_audit_digest"]
+    }
+  ]
+}
