@@ -403,7 +403,7 @@
     {
       "skill": "cws:cws-fleetmonitor",
       "namespace": "cws",
-      "skill_sha": "356dc00d1a06ef82897135f00a653d00421acb2b23f3526572291a863bba9eee",
+      "skill_sha": "185cbcf57f2642c9aceb2cf9d57807247f5b46ae73d9ce5c63f8f411248856b7",
       "file_count": 18
     },
     {
@@ -1355,5 +1355,5 @@
       "file_count": 21
     }
   ],
-  "chip_sha": "fc5e054f5c7cbd4cb2fcfb9912d19f30ee5ee83556f034a17984c6adc8b8dfed"
+  "chip_sha": "fad85290a13e49909bec0884e888c96430611655d927837f7fdc995dfb2b391b"
 }
