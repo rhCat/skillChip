@@ -2,7 +2,7 @@
   "chip": "skillChip",
   "version": 2,
   "cartridge": false,
-  "count": 224,
+  "count": 225,
   "skills": [
     {
       "skill": "claude-red:offensive-active-directory",
@@ -357,6 +357,12 @@
       "namespace": "cws",
       "skill_sha": "6bc037f41c7073f23c62c3e5780cd6b8b15ee393b5b5c17f82c3ea56ada09d35",
       "file_count": 20
+    },
+    {
+      "skill": "cws:cws-audit",
+      "namespace": "cws",
+      "skill_sha": "72e29f50cef24f99c1606f0c1814d51e31e90cb6bb92739e0f10cdc47c31d8ec",
+      "file_count": 13
     },
     {
       "skill": "cws:cws-backup",
@@ -1349,5 +1355,5 @@
       "file_count": 21
     }
   ],
-  "chip_sha": "1a7b19214c04c79b3609e5871d604f996d80e029c45db98be1228abf80973ed6"
+  "chip_sha": "fc5e054f5c7cbd4cb2fcfb9912d19f30ee5ee83556f034a17984c6adc8b8dfed"
 }

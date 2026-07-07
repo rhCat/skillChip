@@ -1,0 +1,7 @@
+{
+  "_schema": "task-ledger for cws-audit - digest a store-index SNAPSHOT (never the live WAL file) into a human audit report; set record_store + LEDGER_DB.",
+  "skill": "cws-audit",
+  "perk": "digest",
+  "record_store": "<absolute dir for outputs + the run-ledger>",
+  "vars": { "LEDGER_DB": "<snapshot of index.sqlite>", "BACKUP_LEDGER": "<optional backup-ledger.json>", "SINCE": "<optional ISO-8601>" }
+}

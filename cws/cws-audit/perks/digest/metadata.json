@@ -1,0 +1,5 @@
+{
+  "perk": "digest",
+  "summary": "render the node's governed history as a HUMAN audit digest (audit.md + audit.json) — activity, refusals/rejections, destructive approvals, failed steps with drill-down keys, backup chain re-verified; read-only",
+  "destructive": false
+}

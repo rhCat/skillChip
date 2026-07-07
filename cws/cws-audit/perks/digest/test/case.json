@@ -1,0 +1,16 @@
+{
+  "_perk": "digest",
+  "requires": ["python3"],
+  "vars": {
+    "LEDGER_DB": "${FIXTURE}/index.sqlite",
+    "BACKUP_LEDGER": "${FIXTURE}/backup-ledger.json",
+    "SCOPE": "fixture-node"
+  },
+  "expect": {
+    "outputs": ["audit.md", "audit.json"],
+    "contains": {
+      "audit.md": ["# Governed-run audit digest — fixture-node", "**reject**", "**tamper_refused**", "Chain: **VERIFIED**", "Destructive approvals"],
+      "audit.json": ["\"verdict\": \"ok\"", "\"reject\": 1"]
+    }
+  }
+}

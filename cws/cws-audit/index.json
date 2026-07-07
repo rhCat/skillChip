@@ -1,0 +1,20 @@
+{
+  "skill": "cws-audit",
+  "skill_sha": "72e29f50cef24f99c1606f0c1814d51e31e90cb6bb92739e0f10cdc47c31d8ec",
+  "file_count": 13,
+  "files": {
+    "SKILL.md": "b4f2cdea4ae71d5c8bf00ee85fdf252494fd3267ce9a257c283c5abb74fbac31",
+    "blueprint.json": "b76db2cda1fcd0d02cafa1c14074c5f780d1fbd65417cf8aaa17a58586472762",
+    "ledger.json": "1fce775eb65af97f40f9d096adaf6cd335e66d161355cd400944a95c5ec587ff",
+    "perks.json": "15260134a3544a3108b8407992de26ed1974c3bcae0edc0b7af660cd4154a679",
+    "perks/digest/manifesto.json": "3e6866269dd4a08db8f507e61915c164a934b99549de907078781b9de8e7a692",
+    "perks/digest/metadata.json": "65cf90a39c590ccb5d232d7dc0f6addf1b0f1c5e75f5bc2bf7951a7bc042c91c",
+    "perks/digest/src/contracts.json": "d1f5a6ef41e73db53151d185e818ed30a0896c4c2642425c5f9221a4721d62f4",
+    "perks/digest/src/cws_audit_digest.py": "42162f8d4492c630f4980b9aba5841947ea5771375d63fe3d4c10c5015e3ece3",
+    "perks/digest/src/cws_audit_digest.sh": "a4d59fac4eeff8d7ce8ee6aa846cb535a4a33b8f454d23d694d23961a83d4219",
+    "perks/digest/test/case.json": "d7670d19bec5ba690e317a55b2071602f9cfdc8e15ff6b8038ebba6fbf374b0a",
+    "perks/digest/test/fixture/backup-ledger.json": "9a05de116275673d4002c802aa8935b57f4f165568a796ab74c45203cce67765",
+    "perks/digest/test/fixture/index.sqlite": "196d2bfd32f8efeb89ab97bfa745d07555afec8ad43a9b2c292dd47e460d24b2",
+    "perks/digest/test/fixture/make_fixture.py": "a2688583cc34380c38a1480fbe6ed71e633515a2dd920c39322214fc6d42a0d3"
+  }
+}

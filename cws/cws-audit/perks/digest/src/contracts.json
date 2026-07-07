@@ -1,0 +1,19 @@
+{
+  "tool": "cws_audit_digest",
+  "inputs": {
+    "LEDGER_DB": {"type": "string", "required": true},
+    "SINCE": {"type": "string", "required": false},
+    "UNTIL": {"type": "string", "required": false},
+    "BACKUP_LEDGER": {"type": "string", "required": false},
+    "SCOPE": {"type": "string", "required": false},
+    "TOP": {"type": "string", "required": false}
+  },
+  "outputs": {
+    "audit_json": { "path": "${RECORD_STORE}/audit.json", "type": "file" },
+    "audit_md":   { "path": "${RECORD_STORE}/audit.md",   "type": "file" }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/audit.md"
+  }
+}

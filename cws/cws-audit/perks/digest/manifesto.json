@@ -1,0 +1,15 @@
+{
+  "_perk": "digest",
+  "sequence": ["cws_audit_digest"],
+  "tools": { "cws_audit_digest": { "binary": "python3", "params": { "LEDGER_DB": "${LEDGER_DB}" } } },
+  "env": {
+    "LEDGER_DB": "${LEDGER_DB}",
+    "SINCE": "${SINCE}",
+    "UNTIL": "${UNTIL}",
+    "BACKUP_LEDGER": "${BACKUP_LEDGER}",
+    "SCOPE": "${SCOPE}",
+    "TOP": "${TOP}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": ["python3"]
+}

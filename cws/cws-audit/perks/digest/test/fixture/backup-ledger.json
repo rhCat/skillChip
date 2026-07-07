@@ -1,0 +1,25 @@
+{
+  "chain": "backup-ledger",
+  "schema": 2,
+  "entries": [
+    {
+      "type": "genesis",
+      "schema": 2,
+      "seq": 0,
+      "run_id": "backup-ledger",
+      "plan_sha": "cebd6df850e500100b350d275df41cfccfc8540d129a4e3c2cd4b6ca0cf9fd8d",
+      "prev": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "ts": "2026-07-05T03:30:00Z",
+      "stamp": "2026-07-05T033000Z",
+      "scope": "fixture",
+      "files": 3,
+      "bytes": 1234,
+      "manifest_sha": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "db": "fixture",
+      "seq": 1,
+      "prev": "3a7ac285dbf2295d0b9b0bddf388cd99eb730ad4388106c8a5c4b79ca0cc4d2b"
+    }
+  ]
+}
