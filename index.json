@@ -115,7 +115,7 @@
     {
       "skill": "general:alchemy",
       "namespace": "general",
-      "skill_sha": "a9ddad555345ba08f15a10bb991d2f13263d03d92e4080911ce19ad57c32ff61",
+      "skill_sha": "3e15e825350be3ff37e62643b310523613c9368980b659ce1c28a29dc262b879",
       "file_count": 36
     },
     {
@@ -263,5 +263,5 @@
       "file_count": 10
     }
   ],
-  "chip_sha": "0172353e48995327c7ca74ea625ecfbef70c47a08692a010b7b5227dd1bb58fa"
+  "chip_sha": "4fac91e210c94367b93b015cb2cdc2faa274bb6dec6521e3bb90822bfa1f2965"
 }
