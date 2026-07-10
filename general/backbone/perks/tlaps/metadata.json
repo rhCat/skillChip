@@ -1,0 +1,18 @@
+{
+  "perk": "tlaps",
+  "skill": "backbone",
+  "description": "Generate the TLAPS proof spec and discharge it with tlapm (layer 3: AXIOMATIC certificate)",
+  "rules": [
+    "read-only on the target \u2014 writes only the structured report into RECORD_STORE",
+    "fail-closed: a missing prover binary is status=fail (missing_tool), never a silent skip or pass",
+    "deterministic structured JSON out \u2014 the report IS the certificate the ledger records"
+  ],
+  "usage": "Set TARGET_BLUEPRINT; optional TLAPM_TIMEOUT (default 240s). Output: backbone_tlaps.json {status,obligations,error}; proof artifacts under tlaps_work/.",
+  "limitation": "Discharges the TypeInvariant induction (Init + per-transition + stutter). Encodes the module-vs-filename generator gotcha; never name a transition t_next (lemma collision with Next).",
+  "minimal_example": {
+    "perk": "tlaps",
+    "vars": {
+      "TARGET_BLUEPRINT": "<target_blueprint>"
+    }
+  }
+}

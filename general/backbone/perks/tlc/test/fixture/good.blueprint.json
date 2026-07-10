@@ -1,0 +1,19 @@
+{
+  "$schema": "lpp/v0.2.0",
+  "id": "backbone_fixture_good",
+  "name": "Backbone fixture — minimal sound blueprint",
+  "version": "0.1.0",
+  "description": "Two-state machine used to prove the backbone preflight layers on a known-good input.",
+  "context_schema": { "properties": { "ran": { "type": "boolean", "default": false } } },
+  "states": {
+    "idle": { "name": "Idle", "description": "awaiting run" },
+    "done": { "name": "Done", "description": "finished" }
+  },
+  "transitions": [
+    { "id": "t_go", "from": "idle", "to": "done", "on_event": "RUN", "actions": ["a_mark"] }
+  ],
+  "gates": {},
+  "actions": { "a_mark": { "type": "set", "target": "ran", "value": true } },
+  "entry_state": "idle",
+  "terminal_states": { "done": { "description": "complete", "output_schema": { "ran": { "type": "boolean", "non_null": true } } } }
+}

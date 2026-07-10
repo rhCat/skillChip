@@ -1,0 +1,23 @@
+{
+  "tool": "bb_tlc",
+  "inputs": {
+    "TARGET_BLUEPRINT": {
+      "type": "string",
+      "required": true
+    },
+    "TLC_TIMEOUT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "bb_tlc_out": {
+      "path": "${RECORD_STORE}/backbone_tlc.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/backbone_tlc.json"
+  }
+}

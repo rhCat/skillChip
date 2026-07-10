@@ -1,0 +1,28 @@
+{
+  "_perk": "preflight",
+  "sequence": [
+    "bb_preflight"
+  ],
+  "tools": {
+    "bb_preflight": {
+      "binary": "python3",
+      "params": {
+        "TARGET_DIR": "${TARGET_DIR}",
+        "TLC_TIMEOUT": "${TLC_TIMEOUT}",
+        "TLAPM_TIMEOUT": "${TLAPM_TIMEOUT}"
+      }
+    }
+  },
+  "env": {
+    "TARGET_DIR": "${TARGET_DIR}",
+    "TLC_TIMEOUT": "${TLC_TIMEOUT}",
+    "TLAPM_TIMEOUT": "${TLAPM_TIMEOUT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "tlc",
+    "java",
+    "tlapm"
+  ]
+}

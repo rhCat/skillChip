@@ -1,0 +1,19 @@
+{
+  "tool": "bb_validate",
+  "inputs": {
+    "TARGET_BLUEPRINT": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "bb_validate_out": {
+      "path": "${RECORD_STORE}/backbone_validate.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/backbone_validate.json"
+  }
+}

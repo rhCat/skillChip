@@ -2,8 +2,14 @@
   "chip": "skillChip",
   "version": 2,
   "cartridge": false,
-  "count": 225,
+  "count": 226,
   "skills": [
+    {
+      "skill": "backbone",
+      "namespace": null,
+      "skill_sha": "3f21162cecf5f88e0a06fc17286a9d9fe5d2cee11fe75fd06adb7f6fba768b73",
+      "file_count": 32
+    },
     {
       "skill": "claude-red:offensive-active-directory",
       "namespace": "claude-red",
@@ -1355,5 +1361,5 @@
       "file_count": 21
     }
   ],
-  "chip_sha": "fad85290a13e49909bec0884e888c96430611655d927837f7fdc995dfb2b391b"
+  "chip_sha": "7d5311d24aa97f0beb21683bad281727e832733f641f1bd52b5935f4d0f48ef6"
 }

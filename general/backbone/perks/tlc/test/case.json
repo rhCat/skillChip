@@ -1,0 +1,24 @@
+{
+  "_perk": "tlc",
+  "requires": [
+    "python3",
+    "tlc",
+    "java"
+  ],
+  "requires_cmd": [
+    "python3 -c 'import lpp'"
+  ],
+  "vars": {
+    "TARGET_BLUEPRINT": "${FIXTURE}/good.blueprint.json"
+  },
+  "expect": {
+    "outputs": [
+      "backbone_tlc.json"
+    ],
+    "contains": {
+      "backbone_tlc.json": [
+        "\"status\": \"ok\""
+      ]
+    }
+  }
+}

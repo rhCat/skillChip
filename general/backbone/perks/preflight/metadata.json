@@ -1,0 +1,18 @@
+{
+  "perk": "preflight",
+  "skill": "backbone",
+  "description": "The full backbone matrix over a directory: every lpp blueprint must pass validate + TLC + TLAPS",
+  "rules": [
+    "read-only on the target \u2014 writes only the structured report into RECORD_STORE",
+    "fail-closed: a missing prover binary is status=fail (missing_tool), never a silent skip or pass",
+    "deterministic structured JSON out \u2014 the report IS the certificate the ledger records"
+  ],
+  "usage": "Set TARGET_DIR (searched recursively for lpp/v0.2.0 blueprints); optional TLC_TIMEOUT/TLAPM_TIMEOUT. Output: backbone_preflight.json with per-file matrix + summary; status=ok only on a full green matrix.",
+  "limitation": "Empty discovery is a FAIL (a preflight that checked nothing must not read as a pass). Same abstraction bounds as the tlc/tlaps perks.",
+  "minimal_example": {
+    "perk": "preflight",
+    "vars": {
+      "TARGET_DIR": "<target_dir>"
+    }
+  }
+}
