@@ -2,7 +2,7 @@
   "chip": "skillChip",
   "version": 2,
   "cartridge": false,
-  "count": 42,
+  "count": 43,
   "skills": [
     {
       "skill": "cws:cws-addperk",
@@ -117,6 +117,12 @@
       "namespace": "general",
       "skill_sha": "a9ddad555345ba08f15a10bb991d2f13263d03d92e4080911ce19ad57c32ff61",
       "file_count": 36
+    },
+    {
+      "skill": "general:backbone",
+      "namespace": "general",
+      "skill_sha": "3f21162cecf5f88e0a06fc17286a9d9fe5d2cee11fe75fd06adb7f6fba768b73",
+      "file_count": 32
     },
     {
       "skill": "general:ci-codeqc",
@@ -257,5 +263,5 @@
       "file_count": 10
     }
   ],
-  "chip_sha": "88572fa161c22339dee44468cf54384fb1fc7ad9901fa916506883708dcb5e01"
+  "chip_sha": "0172353e48995327c7ca74ea625ecfbef70c47a08692a010b7b5227dd1bb58fa"
 }

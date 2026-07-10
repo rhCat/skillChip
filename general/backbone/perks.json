@@ -1,0 +1,37 @@
+{
+  "skill": "backbone",
+  "perks": [
+    {
+      "id": "validate",
+      "summary": "L++ schema/load validation \u2014 layer 1",
+      "destructive": false,
+      "tools": [
+        "bb_validate"
+      ]
+    },
+    {
+      "id": "tlc",
+      "summary": "TLA+ generation + TLC model check \u2014 layer 2 (EMPIRICAL)",
+      "destructive": false,
+      "tools": [
+        "bb_tlc"
+      ]
+    },
+    {
+      "id": "tlaps",
+      "summary": "TLAPS proof generation + tlapm discharge \u2014 layer 3 (AXIOMATIC)",
+      "destructive": false,
+      "tools": [
+        "bb_tlaps"
+      ]
+    },
+    {
+      "id": "preflight",
+      "summary": "full matrix over a blueprint dir: validate + TLC + TLAPS, all-green or fail",
+      "destructive": false,
+      "tools": [
+        "bb_preflight"
+      ]
+    }
+  ]
+}

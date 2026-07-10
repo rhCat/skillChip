@@ -1,0 +1,23 @@
+{
+  "tool": "bb_tlaps",
+  "inputs": {
+    "TARGET_BLUEPRINT": {
+      "type": "string",
+      "required": true
+    },
+    "TLAPM_TIMEOUT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "bb_tlaps_out": {
+      "path": "${RECORD_STORE}/backbone_tlaps.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/backbone_tlaps.json"
+  }
+}

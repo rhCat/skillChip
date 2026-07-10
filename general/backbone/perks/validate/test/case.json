@@ -1,0 +1,22 @@
+{
+  "_perk": "validate",
+  "requires": [
+    "python3"
+  ],
+  "requires_cmd": [
+    "python3 -c 'import lpp'"
+  ],
+  "vars": {
+    "TARGET_BLUEPRINT": "${FIXTURE}/good.blueprint.json"
+  },
+  "expect": {
+    "outputs": [
+      "backbone_validate.json"
+    ],
+    "contains": {
+      "backbone_validate.json": [
+        "\"status\": \"ok\""
+      ]
+    }
+  }
+}

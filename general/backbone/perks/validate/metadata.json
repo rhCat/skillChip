@@ -1,0 +1,18 @@
+{
+  "perk": "validate",
+  "skill": "backbone",
+  "description": "L++ schema/load validation of a blueprint (layer 1 of the backbone preflight)",
+  "rules": [
+    "read-only on the target \u2014 writes only the structured report into RECORD_STORE",
+    "fail-closed: a missing prover binary is status=fail (missing_tool), never a silent skip or pass",
+    "deterministic structured JSON out \u2014 the report IS the certificate the ledger records"
+  ],
+  "usage": "Set TARGET_BLUEPRINT (path to a lpp/v0.2.0 blueprint JSON). Output: backbone_validate.json {status,id,error}.",
+  "limitation": "Schema/load level only \u2014 run tlc + tlaps perks (or preflight) for the solver layers.",
+  "minimal_example": {
+    "perk": "validate",
+    "vars": {
+      "TARGET_BLUEPRINT": "<target_blueprint>"
+    }
+  }
+}
