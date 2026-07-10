@@ -1,0 +1,18 @@
+{
+  "perk": "tlc",
+  "skill": "backbone",
+  "description": "Generate TLA+ from the blueprint and model-check with TLC (layer 2: EMPIRICAL certificate)",
+  "rules": [
+    "read-only on the target \u2014 writes only the structured report into RECORD_STORE",
+    "fail-closed: a missing prover binary is status=fail (missing_tool), never a silent skip or pass",
+    "deterministic structured JSON out \u2014 the report IS the certificate the ledger records"
+  ],
+  "usage": "Set TARGET_BLUEPRINT; optional TLC_TIMEOUT (default 120s). Output: backbone_tlc.json {status,detail,error}.",
+  "limitation": "Bounded model check of the state skeleton with values abstracted (computes frame-preserving, context inits NULL): proves gate NULL-safety + transition well-formedness, not data-level invariants.",
+  "minimal_example": {
+    "perk": "tlc",
+    "vars": {
+      "TARGET_BLUEPRINT": "<target_blueprint>"
+    }
+  }
+}

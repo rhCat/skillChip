@@ -1,0 +1,21 @@
+{
+  "_perk": "validate",
+  "sequence": [
+    "bb_validate"
+  ],
+  "tools": {
+    "bb_validate": {
+      "binary": "python3",
+      "params": {
+        "TARGET_BLUEPRINT": "${TARGET_BLUEPRINT}"
+      }
+    }
+  },
+  "env": {
+    "TARGET_BLUEPRINT": "${TARGET_BLUEPRINT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3"
+  ]
+}

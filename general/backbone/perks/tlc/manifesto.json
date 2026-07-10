@@ -1,0 +1,25 @@
+{
+  "_perk": "tlc",
+  "sequence": [
+    "bb_tlc"
+  ],
+  "tools": {
+    "bb_tlc": {
+      "binary": "python3",
+      "params": {
+        "TARGET_BLUEPRINT": "${TARGET_BLUEPRINT}",
+        "TLC_TIMEOUT": "${TLC_TIMEOUT}"
+      }
+    }
+  },
+  "env": {
+    "TARGET_BLUEPRINT": "${TARGET_BLUEPRINT}",
+    "TLC_TIMEOUT": "${TLC_TIMEOUT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": [
+    "python3",
+    "tlc",
+    "java"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "_perk": "preflight",
+  "requires": [
+    "python3",
+    "tlc",
+    "java",
+    "tlapm"
+  ],
+  "requires_cmd": [
+    "python3 -c 'import lpp'"
+  ],
+  "vars": {
+    "TARGET_DIR": "${FIXTURE}"
+  },
+  "expect": {
+    "outputs": [
+      "backbone_preflight.json"
+    ],
+    "contains": {
+      "backbone_preflight.json": [
+        "\"status\": \"ok\"",
+        "\"pass\": 1"
+      ]
+    }
+  }
+}

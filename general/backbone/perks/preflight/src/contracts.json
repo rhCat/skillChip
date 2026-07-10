@@ -1,0 +1,27 @@
+{
+  "tool": "bb_preflight",
+  "inputs": {
+    "TARGET_DIR": {
+      "type": "string",
+      "required": true
+    },
+    "TLC_TIMEOUT": {
+      "type": "string",
+      "required": false
+    },
+    "TLAPM_TIMEOUT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "bb_preflight_out": {
+      "path": "${RECORD_STORE}/backbone_preflight.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/backbone_preflight.json"
+  }
+}
