@@ -1,0 +1,20 @@
+{
+  "perk": "run",
+  "skill": "toolgate",
+  "description": "the headless agent's terminal \u2014 run one command line, confined, behind an un-liftable destructive floor that self-tests before every run",
+  "rules": [
+    "NEVER run outside the confined sandbox \u2014 the floor is defense-in-depth; confinement (no network, dropped privileges, only the cargo workspace bound rw) is the guarantee",
+    "the floor is a PURE predicate (hermes_floor.sh) in blessed chip code \u2014 the agent supplies var VALUES only and no agent-side permission mode can lift it",
+    "step 1 (hermes_floor_check) classifies the pinned case table and refuses the run if the floor misclassifies ANY case \u2014 fail closed, before CMD is even looked at",
+    "the floor fails toward blocking: quotes are stripped before matching, so a benign command that merely CONTAINS a destructive string (echo \"rm -rf /\") is refused",
+    "WORKDIR must resolve inside the cargo workspace \u2014 cwd escapes are refused"
+  ],
+  "usage": "Set CMD (the command line). Optional WORKDIR (defaults to the cargo workspace root) and OUT (capture path, defaults to exec.out). Output: floor_report.json (the floor's self-test proof), exec.out (captured stdout+stderr), and a JSON status line per tool.",
+  "limitation": "The floor is a conservative denylist, not a shell parser \u2014 it blocks the classic irrecoverables (recursive rm of absolute/home/workspace paths, mkfs, dd-to-device, fork bombs, writes to system dirs) and accepts false positives to stay simple. A determined bypass is stopped by confinement, not by this table.",
+  "minimal_example": {
+    "perk": "run",
+    "vars": {
+      "CMD": "python3 build.py --check"
+    }
+  }
+}

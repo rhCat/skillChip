@@ -1,0 +1,23 @@
+{
+  "_perk": "exec",
+  "requires": [
+    "bash"
+  ],
+  "vars": {
+    "TOOL": "terminal",
+    "ARGS_DIGEST": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "TARGET": "shell"
+  },
+  "expect": {
+    "outputs": [
+      "claim.json"
+    ],
+    "json": {
+      "claim.json": {
+        "tool": "hermes_claim",
+        "effect": "exec",
+        "claimed_tool": "terminal"
+      }
+    }
+  }
+}

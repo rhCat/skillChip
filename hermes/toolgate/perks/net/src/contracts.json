@@ -1,0 +1,27 @@
+{
+  "tool": "hermes_claim",
+  "inputs": {
+    "TOOL": {
+      "type": "string",
+      "required": true
+    },
+    "ARGS_DIGEST": {
+      "type": "string",
+      "required": true
+    },
+    "TARGET": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "outputs": {
+    "claim": {
+      "path": "${RECORD_STORE}/claim.json",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/claim.json"
+  }
+}

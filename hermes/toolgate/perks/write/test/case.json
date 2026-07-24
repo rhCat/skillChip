@@ -1,0 +1,23 @@
+{
+  "_perk": "write",
+  "requires": [
+    "bash"
+  ],
+  "vars": {
+    "TOOL": "write_file",
+    "ARGS_DIGEST": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "TARGET": "path:workzone"
+  },
+  "expect": {
+    "outputs": [
+      "claim.json"
+    ],
+    "json": {
+      "claim.json": {
+        "tool": "hermes_claim",
+        "effect": "write",
+        "claimed_tool": "write_file"
+      }
+    }
+  }
+}

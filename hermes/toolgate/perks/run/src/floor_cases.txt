@@ -1,0 +1,34 @@
+# floor_cases.txt — the PINNED floor case table: expected<TAB>command.
+# hermes_floor_check classifies every line with floor_verdict and EXECUTES NONE of them.
+# The table is part of the perk's hashed src closure, so the proof cannot drift from the floor.
+# The first three block cases are the 2026-07-22 incident commands — the gap that started this.
+block	rm -rf $HOME
+block	rm -fr /etc
+block	bash -c "rm -rf $HOME"
+block	rm -rf /
+block	rm -rf ~
+block	rm -r /var/log
+block	rm -rf ${HOME}/anything
+block	rm -rf $RECORD_STORE
+block	rm -rf $WORKDIR/build
+block	sudo rm -rf /usr/local
+block	rm -rf .
+block	rm -rf *
+block	cd /tmp && rm -rf /opt/data
+block	mkfs.ext4 /dev/sda1
+block	dd if=/dev/zero of=/dev/sda bs=1M
+block	echo x > /dev/nvme0n1
+block	:(){ :|:& };:
+block	echo pwned > /etc/passwd
+allow	echo hello
+allow	rm -rf build
+allow	rm -rf ./node_modules
+allow	rm old.log tmp.txt
+allow	make clean && rm -rf dist
+allow	git clean -fdx
+allow	dd if=in.img of=out.img bs=4k
+allow	ls -la /etc
+allow	cat /etc/hosts > hosts.copy
+allow	grep -r pattern /usr/share/doc
+allow	python3 train.py --rm-cache
+allow	tar -xzf release.tar.gz && ./configure --prefix=$PWD/out

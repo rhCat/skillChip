@@ -1,0 +1,31 @@
+{
+  "tool": "hermes_exec",
+  "inputs": {
+    "CMD": {
+      "type": "string",
+      "required": true
+    },
+    "WORKDIR": {
+      "type": "string",
+      "required": false
+    },
+    "OUT": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "outputs": {
+    "floor_report": {
+      "path": "${RECORD_STORE}/floor_report.json",
+      "type": "file"
+    },
+    "exec_out": {
+      "path": "${RECORD_STORE}/exec.out",
+      "type": "file"
+    }
+  },
+  "checks": {
+    "exit_zero": true,
+    "output_exists": "${RECORD_STORE}/exec.out"
+  }
+}
