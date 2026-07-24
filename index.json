@@ -2,7 +2,7 @@
   "chip": "skillChip",
   "version": 2,
   "cartridge": false,
-  "count": 226,
+  "count": 227,
   "skills": [
     {
       "skill": "claude-red:offensive-active-directory",
@@ -615,6 +615,12 @@
       "namespace": "general",
       "skill_sha": "5d54fa53a79fee7d128c6d15a8e5445240dfefd6e342b26d7d574616778ba522",
       "file_count": 18
+    },
+    {
+      "skill": "hermes:toolgate",
+      "namespace": "hermes",
+      "skill_sha": "8bca21693512eb4edaa11d5efc72fb1b71a14470a4fc6b0a135cec62d7b14f14",
+      "file_count": 42
     },
     {
       "skill": "kdense:arbor",
@@ -1361,5 +1367,5 @@
       "file_count": 21
     }
   ],
-  "chip_sha": "31b2816fda61a57ef5d7ae7d9cb5c8ec8d44685abc01ea84a97c792c410e2956"
+  "chip_sha": "cace881f8861a6be61b6755ab7d883a30694def480888f801de492dcbac3ada8"
 }

@@ -1,0 +1,23 @@
+{
+  "_perk": "read",
+  "sequence": [
+    "hermes_claim"
+  ],
+  "tools": {
+    "hermes_claim": {
+      "binary": "bash",
+      "params": {
+        "TOOL": "${TOOL}",
+        "ARGS_DIGEST": "${ARGS_DIGEST}",
+        "TARGET": "${TARGET}"
+      }
+    }
+  },
+  "env": {
+    "TOOL": "${TOOL}",
+    "ARGS_DIGEST": "${ARGS_DIGEST}",
+    "TARGET": "${TARGET}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": []
+}

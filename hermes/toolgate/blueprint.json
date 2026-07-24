@@ -1,0 +1,108 @@
+{
+  "$schema": "lpp/v0.2.0",
+  "id": "toolgate",
+  "name": "Hermes Toolgate",
+  "description": "The headless agent's terminal as a GOVERNED confined action: one command line, run only inside the exod sandbox, behind an un-liftable destructive floor. The floor is a pure predicate in blessed chip code; it self-tests against a pinned case table before every run and fails closed. LOOK OUT FOR each tool's structured JSON; LOGS TO CHECK: floor_report.json + exec.out + the executor run-ledger.",
+  "entry_state": "ready",
+  "states": {
+    "ready": {
+      "description": "task-ledger submitted, nothing run"
+    },
+    "prepared": {
+      "description": "inputs validated — CMD present, record_store writable"
+    },
+    "floored": {
+      "description": "the floor proved itself (pinned case table classified clean) AND allowed this CMD; WORKDIR resolves inside the cargo workspace"
+    },
+    "executed": {
+      "description": "CMD ran confined via the governed channel; stdout+stderr captured to the cargo workspace"
+    }
+  },
+  "terminal_states": {
+    "executed": {}
+  },
+  "gates": {
+    "g_prepared": {
+      "type": "expression",
+      "expression": "inputs_present /\\ store_writable",
+      "description": "inputs + store validated"
+    },
+    "g_floored": {
+      "type": "expression",
+      "expression": "floor_selftest_clean /\\ floor_allows_cmd /\\ workdir_bound",
+      "description": "the floor is proven, the command is allowed, the cwd is inside the workspace"
+    },
+    "g_confined": {
+      "type": "expression",
+      "expression": "confined_runtime /\\ governed_run",
+      "description": "ran ONLY inside the exod sandbox, ONLY through executor.py"
+    }
+  },
+  "actions": {
+    "a_prepare": {
+      "type": "compute",
+      "compute_unit": "validator:check_inputs",
+      "description": "validator confirms CMD + writable record_store"
+    },
+    "a_floor": {
+      "type": "compute",
+      "compute_unit": "tool:hermes_floor_check",
+      "description": "classify the pinned case table with the pure predicate (executes nothing); then floor_verdict(CMD) must allow"
+    },
+    "a_execute": {
+      "type": "compute",
+      "compute_unit": "tool:hermes_exec",
+      "description": "run CMD confined, cwd bound to the cargo workspace, output captured to $OUT"
+    }
+  },
+  "transitions": [
+    {
+      "from": "ready",
+      "to": "prepared",
+      "trigger": "PREPARE",
+      "action": "a_prepare",
+      "gate": "g_prepared"
+    },
+    {
+      "from": "prepared",
+      "to": "floored",
+      "trigger": "FLOOR",
+      "action": "a_floor",
+      "gate": "g_floored"
+    },
+    {
+      "from": "floored",
+      "to": "executed",
+      "trigger": "EXECUTE",
+      "action": "a_execute",
+      "gate": "g_confined"
+    }
+  ],
+  "safety_invariants": [
+    {
+      "name": "floor_before_exec",
+      "expression": "state /= 'executed' \\/ floor_allows_cmd",
+      "description": "GUARDRAIL: CMD executes ONLY after floor_verdict allows it — the floor lives in blessed (hash-verified) chip code; the agent supplies var VALUES only, so no agent-side permission mode can lift it."
+    },
+    {
+      "name": "floor_proves_itself_first",
+      "expression": "state /= 'executed' \\/ floor_selftest_clean",
+      "description": "GUARDRAIL: a floor that misclassifies ANY pinned case refuses the run — fail closed, before the agent's CMD is even looked at."
+    },
+    {
+      "name": "pure_predicate_floor",
+      "expression": "TRUE",
+      "description": "STRUCTURAL: the floor predicate (hermes_floor.sh) contains NO execution path — a floor test can never run a command. Enforced by construction + review, recorded here after the 2026-07-22 incident (a floor gap was tested by running the executor unsandboxed)."
+    },
+    {
+      "name": "workspace_bound",
+      "expression": "state /= 'executed' \\/ workdir_bound",
+      "description": "GUARDRAIL: WORKDIR resolves inside the cargo workspace — cwd escapes are refused."
+    },
+    {
+      "name": "confinement_primary",
+      "expression": "state /= 'executed' \\/ confined_runtime",
+      "description": "GUARDRAIL: the snippet runs ONLY inside the exod sandbox (no network, dropped privileges, only the cargo workspace bound rw). The floor is defense-in-depth; confinement is the guarantee."
+    }
+  ]
+}

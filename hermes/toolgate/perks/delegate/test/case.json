@@ -1,0 +1,23 @@
+{
+  "_perk": "delegate",
+  "requires": [
+    "bash"
+  ],
+  "vars": {
+    "TOOL": "delegate_task",
+    "ARGS_DIGEST": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "TARGET": "delegate_task"
+  },
+  "expect": {
+    "outputs": [
+      "claim.json"
+    ],
+    "json": {
+      "claim.json": {
+        "tool": "hermes_claim",
+        "effect": "delegate",
+        "claimed_tool": "delegate_task"
+      }
+    }
+  }
+}

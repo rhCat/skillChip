@@ -1,0 +1,14 @@
+{
+  "_schema": "task-ledger TEMPLATE for toolgate — set perk, fill record_store + the vars the perk's manifesto declares. The LLM outputs ONLY these fields.",
+  "skill": "hermes:toolgate",
+  "perk": "run",
+  "record_store": "<absolute dir for outputs + run-ledger — the cargo workspace root under exod>",
+  "vars": {
+    "CMD": "<perk=run: the command line to run — the floor sees it before bash does>",
+    "WORKDIR": "<perk=run: cwd for the command; MUST resolve inside the cargo workspace; defaults to record_store>",
+    "OUT": "<perk=run: capture path for stdout+stderr; defaults to record_store/exec.out>",
+    "TOOL": "<claim perks: the claimed tool NAME (never values)>",
+    "ARGS_DIGEST": "<claim perks: sha256 of the canonical args JSON>",
+    "TARGET": "<claim perks: coarse class label — path:<root> / host:<name> / shell / net>"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "perk": "delegate",
+  "skill": "toolgate",
+  "description": "effect-class claim: spawning a subagent (delegate_task) \u2014 destructive, verdict-only",
+  "rules": [
+    "verdict-only: govd decides; Hermes executes its own handler on allow \u2014 exod never runs the claimed tool",
+    "value-free: TOOL is a name, ARGS_DIGEST a sha256, TARGET a coarse class label \u2014 argument values and secrets never cross the wire",
+    "destructive perks resolve through push_back -> human approval; 'selfmod' additionally must never be ACL-loosened"
+  ],
+  "usage": "Claimed by the Hermes govern_gate for every tool call it classifies as 'delegate'. Vars: TOOL, ARGS_DIGEST, TARGET.",
+  "limitation": "Records the claim; enforcement is the govd verdict plus Hermes' own gate chokepoint. This perk cannot observe or stop the tool itself.",
+  "minimal_example": {
+    "perk": "delegate",
+    "vars": {
+      "TOOL": "delegate_task",
+      "ARGS_DIGEST": "<sha256-of-args>",
+      "TARGET": "delegate_task"
+    }
+  }
+}

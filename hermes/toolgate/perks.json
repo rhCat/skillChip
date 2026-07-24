@@ -1,0 +1,62 @@
+{
+  "skill": "toolgate",
+  "perks": [
+    {
+      "id": "read",
+      "summary": "claim a read-only tool call (verdict-only)",
+      "destructive": false,
+      "tools": [
+        "hermes_claim"
+      ]
+    },
+    {
+      "id": "write",
+      "summary": "claim a local-mutation tool call (verdict-only)",
+      "destructive": true,
+      "tools": [
+        "hermes_claim"
+      ]
+    },
+    {
+      "id": "exec",
+      "summary": "claim an arbitrary-code tool call (verdict-only)",
+      "destructive": true,
+      "tools": [
+        "hermes_claim"
+      ]
+    },
+    {
+      "id": "net",
+      "summary": "claim an egress tool call (verdict-only)",
+      "destructive": true,
+      "tools": [
+        "hermes_claim"
+      ]
+    },
+    {
+      "id": "delegate",
+      "summary": "claim a subagent spawn (verdict-only)",
+      "destructive": true,
+      "tools": [
+        "hermes_claim"
+      ]
+    },
+    {
+      "id": "selfmod",
+      "summary": "claim a gate-self-modifying call (always destructive, never ACL-loosened)",
+      "destructive": true,
+      "tools": [
+        "hermes_claim"
+      ]
+    },
+    {
+      "id": "run",
+      "summary": "run one command line confined, behind the self-testing destructive floor",
+      "destructive": true,
+      "tools": [
+        "hermes_floor_check",
+        "hermes_exec"
+      ]
+    }
+  ]
+}

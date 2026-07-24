@@ -1,0 +1,30 @@
+{
+  "_perk": "run",
+  "_note": "CMD is deliberately BENIGN \u2014 the floor's block cases are proven by hermes_floor_check (step 1) against the pinned table, as pure classification. A destructive CMD must never appear here: the test harness is not the sandbox.",
+  "requires": [
+    "bash"
+  ],
+  "vars": {
+    "CMD": "echo hermes-exec-ok"
+  },
+  "expect": {
+    "outputs": [
+      "floor_report.json",
+      "exec.out"
+    ],
+    "contains": {
+      "exec.out": "hermes-exec-ok",
+      "floor_report.json": [
+        "\"fails\": 0",
+        "{\"cmd\": \"rm -rf $HOME\", \"want\": \"block\", \"got\": \"block\", \"ok\": true}",
+        "{\"cmd\": \"rm -fr /etc\", \"want\": \"block\", \"got\": \"block\", \"ok\": true}"
+      ]
+    },
+    "json": {
+      "floor_report.json": {
+        "tool": "hermes_floor_check",
+        "fails": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "_perk": "run",
+  "sequence": [
+    "hermes_floor_check",
+    "hermes_exec"
+  ],
+  "tools": {
+    "hermes_floor_check": {
+      "binary": "bash",
+      "params": {}
+    },
+    "hermes_exec": {
+      "binary": "bash",
+      "params": {
+        "CMD": "${CMD}"
+      }
+    }
+  },
+  "env": {
+    "CMD": "${CMD}",
+    "WORKDIR": "${WORKDIR}",
+    "OUT": "${OUT}",
+    "RECORD_STORE": "${record_store}"
+  },
+  "requires": []
+}
